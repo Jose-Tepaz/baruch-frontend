@@ -1,0 +1,51 @@
+import { getCategories } from "@/services/categories";
+import Link from "next/link";
+
+
+
+export const Category1 = async () => {
+    const categories = await getCategories();
+    console.log(categories);
+    if (categories.length === 0) return null;
+   
+    return (
+        <>
+            <div className="space30"></div>
+            <div className="category1">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-7 m-auto">
+                            <div className="heading1 text-center space-margin60">
+                                <h5>Category</h5>
+                                <div className="space16" />
+                                <h2 className="text-anime-style-3">Select The Home That Suits You</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    {categories.map((category: any, index: number) => (
+                        <div className="row" key={index}>
+                            <div className="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration={800}>
+                                <div className="category-boxarea">
+                                    <div className="img1">
+                                        <img src={category.image} alt={category.name} />
+                                    </div>
+                                    <div className="text">
+                                        <Link href={`/categories/${category.slug}`}>{category.name}</Link>
+                                        <div className="space16" />
+                                        <p>{category.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+
+                </div>
+            </div>
+        </>
+    );
+}
+
+
+
+export default Category1;

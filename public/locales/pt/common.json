@@ -1,0 +1,13 @@
+{
+  "welcome": "Bem-vindo ao Housa",
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "contact": "Contato"
+  },
+  "buttons": {
+    "login": "Entrar",
+    "register": "Registrar",
+    "search": "Buscar"
+  }
+} 
