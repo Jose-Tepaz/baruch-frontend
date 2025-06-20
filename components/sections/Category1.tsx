@@ -27,9 +27,15 @@ export const Category1 = async () => {
                         <div className="row" key={index}>
                             <div className="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration={800}>
                                 <div className="category-boxarea">
-                                    <div className="img1">
-                                        <img src={category.image} alt={category.name} />
-                                    </div>
+
+                                    {category.image ? (
+                                        <div className="img1">
+                                            <img src={category.image} alt={category.name} />
+                                        </div>
+                                    ) : (
+                                        <div style={{ height: '60px', backgroundColor: '#eaeaea' }} />
+                                    )}
+
                                     <div className="text">
                                         <Link href={`/categories/${category.slug}`}>{category.name}</Link>
                                         <div className="space16" />

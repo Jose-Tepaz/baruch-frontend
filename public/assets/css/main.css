@@ -29,8 +29,8 @@ Table of contents
     22. 404 Error
     23. Footer
 ==============*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 a,
 a:hover {
     text-decoration: none;
@@ -69,6 +69,21 @@ textarea {
 img {
     max-width: 100%;
     max-height: 100%;
+}
+
+.property-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #eaeaea;
+    height: 500px;
+    justify-content: flex-end!important;
+}
+
+.card-body-property {
+    background: #ffffff;
+    background: linear-gradient(177deg, rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, 0.5) 49%, rgba(0, 0, 0, 1) 100%);
+    z-index: 10!important;
 }
 
 .space6 {
@@ -267,7 +282,6 @@ img {
     0% {
         transform: scale(1);
     }
-
     100% {
         transform: scale(1.1);
     }
@@ -286,7 +300,6 @@ img {
     0% {
         transform: rotate(0);
     }
-
     100% {
         transform: rotate(-1000deg);
     }
@@ -305,7 +318,6 @@ img {
     0% {
         transform: translateY(0);
     }
-
     100% {
         transform: translateY(30px);
     }
@@ -323,7 +335,6 @@ img {
     0% {
         transform: translateX(0);
     }
-
     100% {
         transform: translateX(50px);
     }
@@ -341,7 +352,6 @@ img {
     0% {
         transform: translateY(0);
     }
-
     100% {
         transform: translateY(60px);
     }
@@ -359,7 +369,6 @@ img {
     0% {
         transform: translateY(0);
     }
-
     100% {
         transform: translateY(40px);
     }
@@ -377,7 +386,6 @@ img {
     0% {
         transform: translateY(0);
     }
-
     100% {
         transform: translateY(50px);
     }
@@ -395,7 +403,6 @@ img {
     0% {
         padding-left: 0px;
     }
-
     100% {
         padding-left: 50px;
     }
@@ -415,7 +422,6 @@ img {
         -webkit-transform: translate3d(0, -50px, 0);
         transform: translate3d(0, -50px, 0);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: none;
@@ -428,7 +434,6 @@ img {
         -webkit-transform: translate3d(0, -50px, 0);
         transform: translate3d(0, -50px, 0);
     }
-
     100% {
         opacity: 1;
         -webkit-transform: none;
@@ -441,7 +446,6 @@ img {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
         opacity: 1;
     }
-
     100% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
         opacity: 0;
@@ -460,7 +464,6 @@ img {
     0% {
         transform: translateX(0);
     }
-
     100% {
         transform: translatex(-100%);
     }
@@ -470,7 +473,6 @@ img {
     0% {
         transform: translateX(-100%);
     }
-
     100% {
         transform: translatex(0);
     }
@@ -592,6 +594,7 @@ img {
     --ztc-family-font2: "Inter", serif;
 }
 
+
 /*
 ============================
 Name:  Housa - Real Esate Template
@@ -602,28 +605,73 @@ Author URI: https://themeforest.net/user/alithemes/portfolio
 Location:
 ============================
 */
+
+
 /*============= HEDAER CSS AREA ===============*/
+
+
 /*============= HERO CSS AREA ===============*/
+
+
 /*============= MOBILE-MENU CSS AREA ===============*/
+
+
 /*============= ABOUT CSS AREA ===============*/
+
+
 /*============= SERVICE CSS AREA ===============*/
+
+
 /*============= WORK CSS AREA ===============*/
+
+
 /*============= TESTIMONIAL CSS AREA ===============*/
+
+
 /*============= BLOG CSS AREA ===============*/
+
+
 /*============= CONTACT CSS AREA ===============*/
+
+
 /*============= TEAM CSS AREA ===============*/
+
+
 /*============= FAQ CSS AREA ===============*/
+
+
 /*============= CASE CSS AREA ===============*/
+
+
 /*============= CTA CSS AREA ===============*/
+
+
 /*============= OTHERS CSS AREA ===============*/
+
+
 /*============= LISTING CSS AREA ===============*/
+
+
 /*============= CATEGORY CSS AREA ===============*/
+
+
 /*============= ITEMS CSS AREA ===============*/
+
+
 /*============= PROPERTIES CSS AREA ===============*/
+
+
 /*============= PROPERTIES_LOCATION CSS AREA ===============*/
+
+
 /*============= PROJECT CSS AREA ===============*/
+
+
 /*============= FOOTER CSS AREA ===============*/
+
+
 /*============= COMMON CSS AREA ===============*/
+
 .heading1 h5 {
     color: var(--ztc-text-text-4);
     font-family: var(--ztc-family-font1);
@@ -766,7 +814,6 @@ Location:
     z-index: 1;
 }
 
-
 .vl-btn1::after {
     position: absolute;
     content: "";
@@ -824,7 +871,7 @@ Location:
     width: 100%;
 }
 
- .is-secondary { 
+.is-secondary {
     background-color: var(--ztc-bg-bg-1);
     color: var(--ztc-text-text-2);
 }
@@ -926,7 +973,9 @@ Location:
     transform-origin: left;
 }
 
+
 /*============= COMMON CSS AREA ENDS ===============*/
+
 .sp1 {
     padding: 30px 0 30px;
 }
@@ -1091,7 +1140,9 @@ Location:
     }
 }
 
+
 /*============= ABOUT CSS AREA ===============*/
+
 .about1-section-area {
     position: relative;
     z-index: 1;
@@ -1459,8 +1510,12 @@ Location:
     transition: all 0.4s;
 }
 
+
 /*============= ABOUT CSS AREA ENDS ===============*/
+
+
 /*============= SERVICE CSS AREA ===============*/
+
 .service2 {
     position: relative;
     z-index: 1;
@@ -1664,8 +1719,12 @@ Location:
     line-height: 26px;
 }
 
+
 /*============= SERVICE CSS AREA ENDS===============*/
+
+
 /*============= HERO CSS AREA ===============*/
+
 .hero1-section-area {
     position: relative;
     z-index: 1;
@@ -2165,7 +2224,6 @@ Location:
 }
 
 .hero4-slider-sectionarea .hero4-slider-area .hero2-header p {
-
     overflow: hidden;
     transition: transform 1400ms ease, opacity 1400ms ease;
     transform: translateX(-800px);
@@ -3049,8 +3107,12 @@ Location:
     margin-top: 0;
 }
 
+
 /*============= HERO CSS AREA ===============*/
+
+
 /*============= MOBILE MENU CSS AREA ===============*/
+
 .vl-header-action-item {
     float: right;
     border: 1px solid var(--ztc-text-text-2);
@@ -3594,8 +3656,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     transition: 0.3s;
 }
 
+
 /*============= MOBILE MENU CSS AREA ===============*/
+
+
 /*============= BLOG CSS AREA ===============*/
+
 .vl-blog-1-area {
     position: relative;
     z-index: 1;
@@ -4987,8 +5053,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     text-align: center;
 }
 
+
 /*============= BLOG CSS AREA ENDS ===============*/
+
+
 /*============= FOOTER CSS AREA ===============*/
+
 .footer-cta-bg-area {
     position: relative;
     z-index: 1;
@@ -6000,10 +6070,18 @@ only screen and (min-width: 768px) and (max-width: 991px),
     }
 }
 
+
 /*============= FOOTER CSS AREA ===============*/
+
+
 /*============= HEADER CSS AREA ===============*/
+
+
 /*============= HEADER CSS AREA ENDS ===============*/
+
+
 /*============= HEADER CSS AREA ENDS ===============*/
+
 .homepage1-body .vl-transparent-header {
     position: absolute;
     top: 0;
@@ -7750,7 +7828,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
         opacity: 0;
         transform: translateY(-100%);
     }
-
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -7761,8 +7838,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     animation: vlfadeInDown 1s ease-out forwards;
 }
 
+
 /*============= HEADER CSS AREA ENDS ===============*/
+
+
 /*============= WORK CSS AREA ===============*/
+
 .privacy-policy-area {
     position: relative;
     z-index: 1;
@@ -7950,8 +8031,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     line-height: 16px;
 }
 
+
 /*============= WORK CSS AREA ===============*/
+
+
 /*============= OTHERS CSS AREA STARTS ===============*/
+
 .preloader {
     position: fixed;
     top: 0;
@@ -8000,7 +8085,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
     0% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(360deg);
     }
@@ -8098,8 +8182,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     transform: translateY(0);
 }
 
+
 /*============= OTHERS CSS AREA ENDS ===============*/
+
+
 /*============= FILTER CSS AREA STARTS ===============*/
+
 .others-section-area {
     background: var(--ztc-bg-bg-1);
     padding: 32px 16px;
@@ -8179,7 +8267,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .others-section-area .property-tab-section .filter-group {
-
     position: relative;
 }
 
@@ -8739,8 +8826,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     margin-top: 0;
 }
 
+
 /*============= FILTER CSS AREA ENDS ===============*/
+
+
 /*============= STEP CSS AREA STARTS ===============*/
+
 .step1 {
     position: relative;
     z-index: 1;
@@ -8846,8 +8937,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     transition: all 0.4s;
 }
 
+
 /*============= STEP CSS AREA ENDS ===============*/
+
+
 /*============= GALLERY CSS AREA ENDS ===============*/
+
 .galley4-section-area {
     position: relative;
     z-index: 1;
@@ -8909,8 +9004,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     border-radius: 8px;
 }
 
+
 /*============= GALLERY CSS AREA ENDS ===============*/
+
+
 /*============= PRICING CSS AREA STARTS ===============*/
+
 .pricing1 {
     position: relative;
     z-index: 1;
@@ -9040,8 +9139,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     text-align: center;
 }
 
+
 /*============= PRICING CSS AREA ENDS ===============*/
+
+
 /*============= MISSION CSS AREA STARTS ===============*/
+
 .miision1 {
     position: relative;
     z-index: 1;
@@ -9196,8 +9299,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     border-radius: 16px;
 }
 
+
 /*============= MISSION CSS AREA ENDS ===============*/
+
+
 /*============= HEADER SEARCH CSS AREA STARTS ===============*/
+
 .header-search-container form input {
     outline: none;
     border: none;
@@ -9318,8 +9425,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     visibility: visible;
 }
 
+
 /*============= HEADER SEARCH CSS AREA ENDS ===============*/
+
+
 /*============= SIDEBAR CSS AREA STARTS ===============*/
+
 .header-site-icon .slide-bar.slide-bar1 {
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: var(--ztc-bg-bg-3);
@@ -9449,8 +9560,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     padding-left: 12px;
 }
 
+
 /*============= SIDECAR CSS AREA ENDS ===============*/
+
+
 /*============= DASHBOARD CSS AREA STARTS ===============*/
+
 .dashboard-section-area {
     position: relative;
     z-index: 1;
@@ -11288,7 +11403,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 @media (min-width: 1400px) {
-
     .container,
     .container-lg,
     .container-md,
@@ -11299,7 +11413,9 @@ only screen and (min-width: 768px) and (max-width: 991px),
     }
 }
 
+
 /*============= TEAM CSS AREA ===============*/
+
 .team1 {
     position: relative;
     z-index: 1;
@@ -11905,8 +12021,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     transition: all 0.4s;
 }
 
+
 /*============= TEAM CSS AREA STARTS ===============*/
+
+
 /*============= FAQ CSS AREA ===============*/
+
 .faq-inner-section-area {
     position: relative;
     z-index: 1;
@@ -12051,8 +12171,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     }
 }
 
+
 /*============= FAQ CSS AREA ===============*/
+
+
 /*============= CONTACT CSS AREA ===============*/
+
 .contact-inner {
     position: relative;
     z-index: 1;
@@ -12289,8 +12413,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     height: 440px;
 }
 
+
 /*============= CONTACT CSS AREA ENDS===============*/
+
+
 /*============= CTA CSS AREA ===============*/
+
 .cta2-section-area {
     background: var(--ztc-bg-bg-3);
     padding: 60px;
@@ -12690,8 +12818,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     opacity: 80%;
 }
 
+
 /*============= CTA CSS AREA ENDS===============*/
+
+
 /*============= TESTIMONIAL CSS AREA ===============*/
+
 .testimonials-2 {
     position: relative;
     z-index: 1;
@@ -12723,7 +12855,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-
     .testimonials-2 .left .swiper-button-next,
     .testimonials-2 .left .swiper-button-prev {
         top: 110%;
@@ -12731,7 +12862,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 @media (max-width: 767px) {
-
     .testimonials-2 .left .swiper-button-next,
     .testimonials-2 .left .swiper-button-prev {
         top: 110%;
@@ -12907,7 +13037,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
     .testimonials-2 .map-testimonial {
         width: 100%;
     }
-
     .testimonials-2 .map-testimonial img {
         width: 100%;
     }
@@ -13537,8 +13666,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     color: #ffa800;
 }
 
+
 /*============= TESTIMONIAL CSS AREA ENDS ===============*/
+
+
 /*============= CASE STUDY CSS AREA ENDS ===============*/
+
 .case1 {
     position: relative;
     z-index: 1;
@@ -13620,8 +13753,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     border-radius: 8px;
 }
 
+
 /*============= CASE STUDY CSS AREA ENDS ===============*/
+
+
 /*============= PROPERTIES CSS AREA ===============*/
+
 .property1 {
     position: relative;
     z-index: 1;
@@ -15386,7 +15523,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
         display: block;
         text-align: center;
     }
-
     .properties3-section-area .property-heading .btn-area1 {
         margin-top: 20px;
     }
@@ -15397,7 +15533,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
         display: block;
         text-align: center;
     }
-
     .properties3-section-area .property-heading .btn-area1 {
         margin-top: 20px;
     }
@@ -15933,7 +16068,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
     .s-properties4 .s-porpeties-video {
         padding: 100px 0 0 0;
     }
-
     .s-properties4 .s-porpeties-video .filter-group.jsx-b75506a1a1036751 input.jsx-b75506a1a1036751 {
         width: 100%;
         min-width: 220px;
@@ -15986,7 +16120,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
     font-size: var(--ztc-font-size-font-s30);
     margin: 0 8px 0 0;
 }
-
 
 .s-properties4 .s-porpeties-video .wd-search-form {
     background-color: var(--ztc-bg-bg-1);
@@ -20841,8 +20974,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     object-fit: cover;
 }
 
+
 /*============= PROPERTIES CSS AREA ENDS ===============*/
+
+
 /*============= CATEGORY CSS AREA ===============*/
+
 .category1 {
     position: relative;
     z-index: 1;
@@ -21071,8 +21208,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     transition: all 0.4s;
 }
 
+
 /*============= CATEGORY CSS AREA ===============*/
+
+
 /*============= PROPERTIES_LOCATION CSS AREA ===============*/
+
 .p-location1 {
     position: relative;
     z-index: 1;
@@ -21433,8 +21574,12 @@ only screen and (min-width: 768px) and (max-width: 991px),
     top: 0;
 }
 
+
 /*============= PROPERTIES_LOCATION CSS AREA ===============*/
+
+
 /*============= LISTING CSS AREA ===============*/
+
 .listing1 {
     position: relative;
     z-index: 1;
@@ -21758,11 +21903,13 @@ a.text-primary {
     .w-lg-75 {
         width: 75% !important;
     }
-
     .w-lg-25 {
         width: 25% !important;
     }
 }
 
+
 /*============= LISTING CSS AREA ===============*/
+
+
 /*# sourceMappingURL=main.css.map */
