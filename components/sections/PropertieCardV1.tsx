@@ -1,4 +1,8 @@
 // components/sections/PropertieCardV1.tsx
+'use client'
+
+import Link from 'next/link'
+import { useState } from 'react'
 
 type PropertyCardProps = {
     title: string
@@ -7,7 +11,7 @@ type PropertyCardProps = {
     imageUrl: string
     isNew?: boolean
     isForRent?: boolean
-    url: string // Añadido prop para la URL
+    url: string
   }
   
   export default function PropertieCardV1({
@@ -15,29 +19,40 @@ type PropertyCardProps = {
     address,
     price,
     imageUrl,
-    isNew = true,
-    isForRent = true,
+    isNew = false,
+    isForRent = false,
     url
   }: PropertyCardProps) {
+    const [isHovered, setIsHovered] = useState(false)
+
+    // Validación de seguridad para la URL
+    const sanitizedUrl = url && typeof url === 'string' ? url.replace(/[^a-zA-Z0-9-_]/g, '') : ''
+    
+    // Validación de precio
+    const formattedPrice = typeof price === 'number' && !isNaN(price) ? price : 0
+    
+    // Validación de imagen
+    const safeImageUrl = imageUrl && typeof imageUrl === 'string' ? imageUrl : ''
+
     return (
-      <a href={url} className="text-decoration-none">
+      <Link href={`/property-details/${sanitizedUrl}`} className="text-decoration-none">
         <div className="property-card border-0 shadow-sm rounded-4 overflow-hidden d-flex flex-column justify-content-between">
-          <div className="position-absolute h-100 w-100 z-1">
-          {imageUrl ? (
+          <div className="position-relative h-100 w-100">
+          {safeImageUrl ? (
             <img
-              src={imageUrl}
-              className="card-img-top h-100 w-100 object-fit-cover z-1"
-              alt={title}
+              src={safeImageUrl}
+              className="card-img-top h-100 w-100 object-fit-cover"
+              alt={title || 'Property image'}
               style={{ 
                 height: '300px', 
                 objectFit: 'cover', 
                 borderRadius: '10px', 
                 border: '1px solid #eaeaea',
                 transition: 'transform 0.3s ease',
-                transform: 'scale(1)'
+                transform: isHovered ? 'scale(1.05)' : 'scale(1)'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-              onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
             />
           ) : (
             <div style={{ height: '300px', backgroundColor: '#eaeaea', borderRadius: '10px', border: '1px solid #eaeaea' }} />
@@ -49,14 +64,14 @@ type PropertyCardProps = {
             </div>
           </div>
           <div className="card-body-property text-white h-100 z-3 h-auto p-4">
-            <h5 className="card-title text-uppercase fw-bold">{title}</h5>
+            <h5 className="card-title text-uppercase fw-bold">{title || 'Property'}</h5>
             <p className="card-text mb-2">
               <i className="bi bi-geo-alt-fill me-1 text-white"></i>
-              {address}
+              {address || 'Address not available'}
             </p>
             <div className="d-flex justify-content-between align-items-center">
               <span className="fw-bold fs-5">
-                ${price}
+                ${formattedPrice.toLocaleString()}
                 <span className="text-muted fs-6">/month</span>
               </span>
               <span className="btn btn-outline-light rounded-circle p-0 border-0" style={{ width: '32px', height: '32px' }}>
@@ -67,6 +82,6 @@ type PropertyCardProps = {
             </div>
           </div>
         </div>
-      </a>
+      </Link>
     )
   }

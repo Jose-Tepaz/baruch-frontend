@@ -22,10 +22,12 @@ export const Category1 = async () => {
                             </div>
                         </div>
                     </div>
-
-                    {categories.map((category: any, index: number) => (
-                        <div className="row" key={index}>
-                            <div className="col-lg-4 col-md-6" data-aos="zoom-in-up" data-aos-duration={800}>
+<div className="row">
+    <div className="row gap-1 justify-content-center">
+    {categories.map((category: any, index: number) => (
+                        <div className="col-lg-3" key={index}>
+                            <Link href={`/categories/${category.slug}`}>
+                            <div className="row" data-aos="zoom-in-up" data-aos-duration={800}>
                                 <div className="category-boxarea">
 
                                     {category.image ? (
@@ -43,8 +45,13 @@ export const Category1 = async () => {
                                     </div>
                                 </div>
                             </div>
+                            </Link>
+                            
                         </div>
                     ))}
+    </div>
+</div>
+                    
 
                 </div>
             </div>

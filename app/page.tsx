@@ -27,10 +27,8 @@ export default async function Home() {
                 <Hero2 />
                 <SearchBox />
                 <About2 />
-                
-                <Property1 />
-                <Category1 />
                 <PropertyList1 properties={properties} />
+                <Category1 />
                 <Testimonial1 />
                
             </Layout>

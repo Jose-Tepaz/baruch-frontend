@@ -29,8 +29,10 @@ export function getProperties() {
           image,
           slug,
           status,
-          category
+          category,
+          
         }
       })
+      
     })
 }

@@ -18,98 +18,11 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                 <nav className="vl-mobile-menu-active">
                                     <ul>
                                         <li className="has-dropdown">
-                                            <Link href="#">
-                                                Home
-                                                <span>
-                                                    <i className="fa-solid fa-angle-down d-lg-inline d-none" />
-                                                </span>
-                                            </Link>
-                                            <div className="vl-mega-menu">
-                                                <div className="vl-home-menu">
-                                                    <div className="row gx-3 row-cols-1 row-cols-md-1 row-cols-lg-4">
-                                                        <div className="col">
-                                                            <div className="vl-home-thumb">
-                                                                <div className="img1">
-                                                                    <img src="/assets/img/all-images/demo/demo-img1.png" alt="housa" />
-                                                                </div>
-                                                                <Link href="/">Housa - Homepage 01</Link>
-                                                                <div className="btn-area1">
-                                                                    <Link href="/" className="vl-btn1">
-                                                                        View Demo
-                                                                        <span className="arrow1 ms-2">
-                                                                            <i className="fa-solid fa-arrow-right" />
-                                                                        </span>
-                                                                        <span className="arrow2 ms-2">
-                                                                            <i className="fa-solid fa-arrow-right" />
-                                                                        </span>
-                                                                    </Link>
-                                                                </div>
-                                                                <div className="space20 d-lg-none d-block" />
-                                                            </div>
-                                                        </div>
-                                                        <div className="col">
-                                                            <div className="vl-home-thumb">
-                                                                <div className="img1">
-                                                                    <img src="/assets/img/all-images/demo/demo-img2.png" alt="housa" />
-                                                                </div>
-                                                                <Link href="/index2">Housa - Homepage 02</Link>
-                                                                <div className="btn-area1">
-                                                                    <Link href="/index2" className="vl-btn1">
-                                                                        View Demo
-                                                                        <span className="arrow1 ms-2">
-                                                                            <i className="fa-solid fa-arrow-right" />
-                                                                        </span>
-                                                                        <span className="arrow2 ms-2">
-                                                                            <i className="fa-solid fa-arrow-right" />
-                                                                        </span>
-                                                                    </Link>
-                                                                </div>
-                                                                <div className="space20 d-lg-none d-block" />
-                                                            </div>
-                                                        </div>
-                                                        <div className="col ">
-                                                            <div className="vl-home-thumb">
-                                                                <div className="img1">
-                                                                    <img src="/assets/img/all-images/demo/demo-img3.png" alt="housa" />
-                                                                </div>
-                                                                <Link href="/index3">Housa - Homepage 03</Link>
-                                                                <div className="btn-area1">
-                                                                    <Link href="/index3" className="vl-btn1">
-                                                                        View Demo
-                                                                        <span className="arrow1 ms-2">
-                                                                            <i className="fa-solid fa-arrow-right" />
-                                                                        </span>
-                                                                        <span className="arrow2 ms-2">
-                                                                            <i className="fa-solid fa-arrow-right" />
-                                                                        </span>
-                                                                    </Link>
-                                                                </div>
-                                                                <div className="space20 d-lg-none d-block" />
-                                                            </div>
-                                                        </div>
-                                                        <div className="col ">
-                                                            <div className="vl-home-thumb">
-                                                                <div className="img1">
-                                                                    <img src="/assets/img/all-images/demo/demo-img4.png" alt="housa" />
-                                                                </div>
-                                                                <Link href="/index4">Housa - Homepage 04</Link>
-                                                                <div className="btn-area1">
-                                                                    <Link href="/index4" className="vl-btn1">
-                                                                        View Demo
-                                                                        <span className="arrow1 ms-2">
-                                                                            <i className="fa-solid fa-arrow-right" />
-                                                                        </span>
-                                                                        <span className="arrow2 ms-2">
-                                                                            <i className="fa-solid fa-arrow-right" />
-                                                                        </span>
-                                                                    </Link>
-                                                                </div>
-                                                                <div className="space20 d-lg-none d-block" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <Link href="/">Home</Link>
+                                          
+                                        </li>
+                                        <li>
+                                            <Link href="/properties">Properties</Link>
                                         </li>
                                         <li className="has-dropdown">
                                             <Link href="#">
