@@ -30,6 +30,17 @@ Table of contents
     23. Footer
 ==============*/
 
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Libre Baskerville', serif;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 a,
 a:hover {
@@ -82,8 +93,27 @@ img {
 
 .card-body-property {
     background: #ffffff;
-    background: linear-gradient(177deg, rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, 0.5) 49%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(177deg, rgb(0 0 0 / 2%) 10%, rgb(0 0 0 / 62%) 30%, rgba(0, 0, 0, 1) 100%);
     z-index: 10!important;
+}
+
+.wrapp-img-card-properties {
+    position: absolute;
+    height: 100%;
+}
+
+.container-large {
+    width: 100%;
+    max-width: 1376px;
+    margin: auto;
+}
+
+.padding-global {
+    padding: 0px 32px;
+}
+
+.padding-section-medium {
+    padding: 92px 0px;
 }
 
 .space6 {
@@ -809,7 +839,7 @@ Location:
     overflow: hidden;
     background-color: var(--ztc-bg-bg-3);
     transition: all 0.4s;
-    border-radius: 70px;
+    border-radius: 8px;
     position: relative;
     z-index: 1;
 }
@@ -823,7 +853,7 @@ Location:
     transition: all 0.4s;
     background: var(--ztc-bg-bg-2);
     width: 10px;
-    border-radius: 70px;
+    border-radius: 8px;
     z-index: -1;
     visibility: hidden;
     opacity: 0;
@@ -1800,7 +1830,10 @@ Location:
     position: relative;
     z-index: 1;
     overflow: hidden;
-    padding: 430px 0 0 0;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
 @media (max-width: 767px) {
@@ -6409,7 +6442,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
     overflow: hidden;
     background-color: var(--ztc-bg-bg-3);
     transition: all 0.4s;
-    border-radius: 70px;
+    border-radius: 8px;
     position: relative;
     z-index: 1;
 }
@@ -6824,7 +6857,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
     overflow: hidden;
     background-color: var(--ztc-bg-bg-3);
     transition: all 0.4s;
-    border-radius: 70px;
+    border-radius: 8px;
     position: relative;
     z-index: 1;
 }
@@ -6838,7 +6871,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
     transition: all 0.4s;
     background: var(--ztc-bg-bg-2);
     width: 10px;
-    border-radius: 70px;
+    border-radius: 8px;
     z-index: -1;
     visibility: hidden;
     opacity: 0;
@@ -7281,7 +7314,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
     overflow: hidden;
     background-color: var(--ztc-bg-bg-3);
     transition: all 0.4s;
-    border-radius: 70px;
+    border-radius: 8px;
     position: relative;
     z-index: 1;
 }
@@ -7295,7 +7328,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
     transition: all 0.4s;
     background: var(--ztc-bg-bg-2);
     width: 10px;
-    border-radius: 70px;
+    border-radius: 8px;
     z-index: -1;
     visibility: hidden;
     opacity: 0;
@@ -7719,7 +7752,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
     overflow: hidden;
     background-color: var(--ztc-bg-bg-3);
     transition: all 0.4s;
-    border-radius: 70px;
+    border-radius: 8px;
     position: relative;
     z-index: 1;
 }
@@ -7733,7 +7766,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
     transition: all 0.4s;
     background: var(--ztc-bg-bg-2);
     width: 10px;
-    border-radius: 70px;
+    border-radius: 8px;
     z-index: -1;
     visibility: hidden;
     opacity: 0;
@@ -8052,9 +8085,9 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 .loading-container,
 .loading {
-    height: 120px;
+    height: 200px;
     position: relative;
-    width: 120px;
+    width: 200px;
     border-radius: 100%;
 }
 
@@ -20980,11 +21013,14 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 /*============= CATEGORY CSS AREA ===============*/
 
+.category-section_home {
+    background: var(--ztc-bg-bg-3);
+}
+
 .category1 {
     position: relative;
     z-index: 1;
     overflow: hidden;
-    background: var(--ztc-bg-bg-1);
     margin: 0 auto;
     max-width: 1376px;
     border-radius: 30px;

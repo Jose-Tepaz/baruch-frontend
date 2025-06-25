@@ -37,14 +37,18 @@ type PropertyCardProps = {
     return (
       <Link href={`/property-details/${sanitizedUrl}`} className="text-decoration-none">
         <div className="property-card border-0 shadow-sm rounded-4 overflow-hidden d-flex flex-column justify-content-between">
-          <div className="position-relative h-100 w-100">
+          <div className="position-absolute top-0 start-0 p-3 d-flex gap-2">
+              {isForRent && <span className="badge bg-light text-dark px-3 py-2">For Rent</span>}
+              {isNew && <span className="badge bg-dark text-white px-3 py-2">New</span>}
+          </div>
+          <div className="wrapp-img-card-properties">
           {safeImageUrl ? (
             <img
               src={safeImageUrl}
               className="card-img-top h-100 w-100 object-fit-cover"
               alt={title || 'Property image'}
               style={{ 
-                height: '300px', 
+                height: '350px', 
                 objectFit: 'cover', 
                 borderRadius: '10px', 
                 border: '1px solid #eaeaea',
@@ -55,16 +59,11 @@ type PropertyCardProps = {
               onMouseLeave={() => setIsHovered(false)}
             />
           ) : (
-            <div style={{ height: '300px', backgroundColor: '#eaeaea', borderRadius: '10px', border: '1px solid #eaeaea' }} />
+            <div style={{ height: '100%', backgroundColor: '#eaeaea', borderRadius: '10px', border: '1px solid #eaeaea' }} />
           )}
-            
-            <div className="position-absolute top-0 start-0 p-3 d-flex gap-2">
-              {isForRent && <span className="badge bg-light text-dark px-3 py-2">For Rent</span>}
-              {isNew && <span className="badge bg-dark text-white px-3 py-2">New</span>}
-            </div>
           </div>
           <div className="card-body-property text-white h-100 z-3 h-auto p-4">
-            <h5 className="card-title text-uppercase fw-bold">{title || 'Property'}</h5>
+            <h3 className="">{title || 'Property'}</h3>
             <p className="card-text mb-2">
               <i className="bi bi-geo-alt-fill me-1 text-white"></i>
               {address || 'Address not available'}
@@ -72,7 +71,7 @@ type PropertyCardProps = {
             <div className="d-flex justify-content-between align-items-center">
               <span className="fw-bold fs-5">
                 ${formattedPrice.toLocaleString()}
-                <span className="text-muted fs-6">/month</span>
+                <span className="fs-6 ">/month</span>
               </span>
               <span className="btn btn-outline-light rounded-circle p-0 border-0" style={{ width: '32px', height: '32px' }}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" fill="currentColor" className="bi bi-arrow-up-right-circle" viewBox="0 0 16 16">

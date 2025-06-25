@@ -10,17 +10,27 @@ import "/public/assets/css/plugins/sidebar.css";
 import "/public/assets/css/plugins/slick-slider.css";
 import "/public/assets/css/plugins/swiper-slider.css";
 import "/public/assets/css/main.css";
+import "/public/assets/css/custom-fonts.css";
 
 import StoreProvider from "@/features/StoreProvider";
 import I18nProvider from "@/components/I18nProvider";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+//import { Inter } from "next/font/google";
+import { Work_Sans, Libre_Baskerville } from 'next/font/google';
 
-const inter = Inter({
-    weight: ["300", "400", "500", "600", "700", "800", "900"],
-    subsets: ["latin"],
-    // variable: "--ztc-family-font1",
-    display: "swap",
+const workSans = Work_Sans({
+    weight: ['300', '400', '500', '600', '700'],
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-work-sans',
+});
+
+const libreBaskerville = Libre_Baskerville({
+    weight: ['400', '700'],
+    style: ['normal', 'italic'],
+    subsets: ['latin'],
+    display: 'swap', 
+    variable: '--font-libre-baskerville',
 });
 
 export const metadata: Metadata = {
@@ -48,7 +58,8 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="es">
-            <body className={`${inter.className} homepage1-body body1`}>
+           
+            <body className={`${workSans.variable} ${libreBaskerville.variable} ${workSans.className} homepage1-body body1`}>
                 <I18nProvider>
                     <StoreProvider>
                         {children}

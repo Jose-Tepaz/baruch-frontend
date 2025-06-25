@@ -10,7 +10,7 @@ const Hero2 = async () => {
             <div
                 className="hero2-section-area"
                 style={{
-                    backgroundImage: "url(assets/img/all-images/hero/hero-img2.png)",
+                    backgroundImage: "url(assets/img/all-images/hero/hero-img.webp)",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
@@ -18,10 +18,10 @@ const Hero2 = async () => {
             >
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6">
+                        <div className="row ">
                             <div className="hero-heading heading1">
-                                <h1 className="text-anime-style-3">{Title}</h1>
-                                <h2 className="text-anime-style-3 text-white">In costa del Sol Spain</h2>
+                                <h1 className="text-anime-style-3 heading-style-h1 ">{Title}</h1>
+                                <h3 className="text-anime-style-3 text-white size-32">In costa del Sol Spain</h3>
                               <div className="d-flex justify-content-start align-items-center gap-4 mt-4">
                                 <div className="">
                                 

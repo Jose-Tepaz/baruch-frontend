@@ -10,15 +10,19 @@ export const Category1 = async () => {
    
     return (
         <>
-            <div className="space30"></div>
-            <div className="category1">
+            <div className="space60"></div>
+            <div className="category-section_home">
+                <div className="global-padding">
+                <div className="space60"></div>
+                    <div className="container-large">
+                    <div className="category1">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-7 m-auto">
                             <div className="heading1 text-center space-margin60">
                                 <h5>Category</h5>
                                 <div className="space16" />
-                                <h2 className="text-anime-style-3">Select The Home That Suits You</h2>
+                                <h3 className="text-anime-style-3 text-white ">Select The Home That Suits You</h3>
                             </div>
                         </div>
                     </div>
@@ -38,10 +42,10 @@ export const Category1 = async () => {
                                         <div style={{ height: '60px', backgroundColor: '#eaeaea' }} />
                                     )}
 
-                                    <div className="text">
-                                        <Link href={`/categories/${category.slug}`}>{category.name}</Link>
+                                    <div className="text ">
+                                        <Link href={`/categories/${category.slug}`} className="text-white">{category.name}</Link>
                                         <div className="space16" />
-                                        <p>{category.description}</p>
+                                        <p className="text-white">{category.description}</p>
                                     </div>
                                 </div>
                             </div>
@@ -55,6 +59,12 @@ export const Category1 = async () => {
 
                 </div>
             </div>
+            <div className="space60"></div>
+                    </div>
+                </div>
+
+            </div>
+            
         </>
     );
 }

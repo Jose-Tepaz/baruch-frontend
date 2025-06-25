@@ -22,10 +22,10 @@ const About2 = async () => {
                     <div className="row align-items-center">
                         <div className="col-lg-4">
                             <div className="heading1">
-                                <h5>About Company</h5>
+                                <h5 className="text-color-black-blue">About Company</h5>
                                 <div className="space16" />
                                 <h2 className="text-anime-style-3">{Title}</h2>
-                                <p>{Sub_title}</p>
+                                <h3>{Sub_title}</h3>
                                 <div className="space50" />
                                 <div className="img1 image-anime reveal">
                                     <img src={img_1} alt="housa" />

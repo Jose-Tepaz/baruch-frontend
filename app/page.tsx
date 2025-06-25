@@ -9,11 +9,12 @@ import Category1 from "@/components/sections/Category1";
 import Properties1 from "@/components/sections/Properties1";
 import PropertyLocation1 from "@/components/sections/PropertyLocation1";
 import Team1 from "@/components/sections/Team1";
-import Testimonial1 from "@/components/sections/Testimonial1";
+import Testimonial2 from "@/components/sections/Testimonial2";
 import Property1 from "@/components/sections/property1";
 import Blog1 from "@/components/sections/Blog1";
 import { getProperties } from "@/services/properties";
 import PropertyList1 from "@/components/sections/PropertieList1";
+import About3 from "@/components/sections/About3";
 
 
 
@@ -29,7 +30,8 @@ export default async function Home() {
                 <About2 />
                 <PropertyList1 properties={properties} />
                 <Category1 />
-                <Testimonial1 />
+                <About3/>
+                <Testimonial2 />
                
             </Layout>
             

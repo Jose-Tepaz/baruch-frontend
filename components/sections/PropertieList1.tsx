@@ -7,8 +7,9 @@ export default function PropertyList1({ properties }: { properties: any[] }) {
         <div className="row">
             <div className="col-lg-7 m-auto d-flex justify-content-center align-items-center">
                 <div className="heading1">
-                    <h2>Our Properties</h2>
-                    <p>Discover Our Latest Properties</p>
+                <p className='text-align-center'>Our Properties</p>
+                    <h3 className='text-align-center'>Discover Our Latest Properties</h3>
+                    
                 </div>
             </div>
         </div>

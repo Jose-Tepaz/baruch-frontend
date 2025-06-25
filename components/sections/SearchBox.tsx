@@ -314,15 +314,20 @@ export default function SearchBox() {
                     transition: max-height 0.5s ease-in;
                 }
             `}</style>
+
+<div className="space30"></div>
             <div className="others-section-area container-home1">
+            
                 <div className="container-fluid">
+                
                     <div className="row">
+                    
                         <div className="col-lg-12">
                             <div className="property-tab-section b-bg1">
                                 <form onSubmit={handleSearch}>
                                     <div className="tab-content1">
-                                        <div className="filters mb-2">
-                                            <h2 className="fw-bold">Find your dream property</h2>
+                                        <div className="filters mb-2 is-center">
+                                            <h3 className="text-align-center size-32">Find your dream property</h3>
                                         </div>
                                         <div className="filters z-1 position-relative">
                                             <div className="d-flex flex-lg-nowrap flex-wrap gap-2 justify-content-between w-100">
