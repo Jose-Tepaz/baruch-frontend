@@ -64,7 +64,7 @@ export default function Testimonial2() {
                                                         </ul>
                                                     </div>
                                                     <div className="space20" />
-                                                    <p className="testimonial-text">"Housa made our home-buying experience smooth and stress-free. Highly recommend their services!"</p>
+                                                    <p className="testimonial-text">"Baruch made our home-buying experience smooth and stress-free. Highly recommend their services!"</p>
                                                     <div className="space32" />
                                                     <div className="profile-quito">
                                                         <div className="profile">
@@ -111,7 +111,7 @@ export default function Testimonial2() {
                                                         </ul>
                                                     </div>
                                                     <div className="space20" />
-                                                    <p className="testimonial-text">"Housa made our home-buying experience smooth and stress-free. Highly recommend their services!"</p>
+                                                    <p className="testimonial-text">"Baruch made our home-buying experience smooth and stress-free. Highly recommend their services!"</p>
                                                     <div className="space32" />
                                                     <div className="profile-quito">
                                                         <div className="profile">
@@ -158,7 +158,7 @@ export default function Testimonial2() {
                                                         </ul>
                                                     </div>
                                                     <div className="space20" />
-                                                    <p className="testimonial-text">"Housa made our home-buying experience smooth and stress-free. Highly recommend their services!"</p>
+                                                        <p className="testimonial-text">"Baruch made our home-buying experience smooth and stress-free. Highly recommend their services!"</p>
                                                     <div className="space32" />
                                                     <div className="profile-quito">
                                                         <div className="profile">

@@ -6121,8 +6121,9 @@ only screen and (min-width: 768px) and (max-width: 991px),
     left: 0;
     right: 0;
     z-index: 99;
-    padding: 20px 24px 16px;
-    background: var(--ztc-bg-bg-1);
+    padding: 8px 24px 3px 24px;
+    background: #ffffff;
+    backdrop-filter: blur(10px);
     margin: 32px auto 0 auto;
     max-width: 1376px;
     border-radius: 80px;

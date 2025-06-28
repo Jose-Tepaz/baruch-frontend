@@ -89,22 +89,22 @@ export default function Footer1() {
                             <div className="col-lg col-md-4">
                                 <div className="space30 d-lg-none d-block" />
                                 <div className="footer-widget-area foot-padding2">
-                                    <h3>Near Place</h3>
+                                    <h3>Categories</h3>
                                     <ul>
                                         <li>
-                                            <Link href="#">Barcelona </Link>
+                                            <Link href="#">Residential</Link>
                                         </li>
                                         <li>
-                                            <Link href="#">Valencia</Link>
+                                            <Link href="#">Commercial</Link>
                                         </li>
                                         <li>
-                                            <Link href="#">Los Angeles</Link>
+                                            <Link href="#">Land</Link>
                                         </li>
                                         <li>
-                                            <Link href="#">New York</Link>
+                                            <Link href="#">Investment</Link>
                                         </li>
                                         <li>
-                                            <Link href="#">Marbella</Link>
+                                            <Link href="#">Rental</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -148,7 +148,7 @@ export default function Footer1() {
                                                         strokeLinejoin="round"
                                                     />
                                                 </svg>
-                                                Housa@gmailcom
+                                                baruch@gmailcom
                                             </Link>
                                         </li>
                                         <li>
@@ -186,7 +186,7 @@ export default function Footer1() {
                         <div className="space24" />
                         <div className="col-lg-12">
                             <div className="copyright-area">
-                                <p>© 2025 Housa, Inc. All Rights Reserved.</p>
+                                <p>© 2025 Baruch Real Estate All Rights Reserved.</p>
                                 <ul>
                                     <li>
                                         <Link href="/privacy-policy">Privacy Policy</Link>

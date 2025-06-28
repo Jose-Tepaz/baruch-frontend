@@ -43,7 +43,7 @@ export const Category1 = async () => {
                                     )}
 
                                     <div className="text ">
-                                        <Link href={`/categories/${category.slug}`} className="text-white">{category.name}</Link>
+                                        <h5 className="text-white">{category.name}</h5>
                                         <div className="space16" />
                                         <p className="text-white">{category.description}</p>
                                     </div>

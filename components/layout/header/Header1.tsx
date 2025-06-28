@@ -21,9 +21,16 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                             <Link href="/">Home</Link>
                                           
                                         </li>
-                                        <li>
-                                            <Link href="/properties">Properties</Link>
-                                        </li>
+                                            <li>
+                                                <Link href="/properties">Properties</Link>
+                                            </li>
+                                            <li>
+                                                <Link href="/properties">About Us</Link>
+                                            </li>
+                                            <li>
+                                                <Link href="/properties">Services</Link>
+                                            </li>
+                                        {/*
                                         <li className="has-dropdown">
                                             <Link href="#">
                                                 Pages
@@ -155,6 +162,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                                 </li>
                                             </ul>
                                         </li>
+                                        */}
                                     </ul>
                                 </nav>
                             </div>
@@ -163,7 +171,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                             <div className="vl-hero-btn d-none d-lg-block text-end">
                                 <div className="btn-area1 mt-0">
                                     <Link href="/add-property" className="vl-btn1 mt-0">
-                                        Add Listing
+                                    Get in touch
                                         <span className="arrow1 ms-2">
                                             <i className="fa-solid fa-arrow-right" />
                                         </span>
