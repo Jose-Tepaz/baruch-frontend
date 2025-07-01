@@ -1,3 +1,5 @@
+"use client";
+
 import PropertyFilterStatic from "@/components/elements/property-filter-static";
 import PropertieCardV1 from "@/components/sections/PropertieCardV1";
 

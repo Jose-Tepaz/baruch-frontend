@@ -1,4 +1,4 @@
-import Layout from "@/components/layout/Layout"
+import SimpleLayout from "@/components/layout/SimpleLayout"
 import { getProperties, getPropertiesByCategory } from "@/services/properties"
 import InnerHeader from "@/components/layout/InnerHeader";
 import { getCategories } from "@/services/categories";
@@ -92,7 +92,7 @@ export default async function PropertiesPage({ searchParams }: PropertiesPagePro
     console.log('Filter params:', { category, status, keyword, city, state, amenities });
     
     return (
-        <Layout>
+        <SimpleLayout>
             <InnerHeader title="Our Properties" currentpage="Our Properties" />
             <div className="space30" />
             
@@ -101,7 +101,7 @@ export default async function PropertiesPage({ searchParams }: PropertiesPagePro
                 categories={categories}
                 searchParams={searchParams}
             />
-        </Layout>
+        </SimpleLayout>
     )
 }
 
