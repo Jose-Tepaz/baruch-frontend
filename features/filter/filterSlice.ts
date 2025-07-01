@@ -11,6 +11,7 @@ interface PropertyFilter {
   state: string // Added state field
   status: string // Added status field
   propertyType: string
+  category: string // Added category field
   bedrooms: RangeFilter
   bathrooms: RangeFilter
   garages: RangeFilter // Added garages field
@@ -40,6 +41,7 @@ const initialState: FilterState = {
     state: "", // Added state with empty default
     status: "", // Added status with empty default
     propertyType: "",
+    category: "", // Added category with empty default
     bedrooms: {
       min: 0,
       max: 10,
@@ -98,6 +100,10 @@ export const filterSlice = createSlice({
     addPropertyType: (state, action: PayloadAction<string>) => {
       state.propertyFilter.propertyType = action.payload
     },
+    addCategory: (state, action: PayloadAction<string>) => {
+      // Added category reducer
+      state.propertyFilter.category = action.payload
+    },
     addBedrooms: (state, action: PayloadAction<RangeFilter>) => {
       state.propertyFilter.bedrooms = action.payload
     },
@@ -149,6 +155,7 @@ export const {
   addState, // Export new state action
   addStatus, // Export new status action
   addPropertyType,
+  addCategory, // Export new category action
   addBedrooms,
   addBathrooms,
   addGarages, // Export new garages action

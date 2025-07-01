@@ -1,9 +1,17 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import propertyData from "@/data/property.json";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { getCategories } from "@/services/categories";
+
+interface Category {
+    id?: number;
+    name: string;
+    slug: string;
+    description?: string;
+    image?: string;
+}
 
 interface Property {
     id: number;
@@ -16,56 +24,49 @@ interface Property {
     // ... other properties
 }
 
+
+// Categorías de fallback en caso de que la API no esté disponible
+const fallbackCategories: Category[] = [
+    { name: "Houses", slug: "houses", description: "Single family houses" },
+    { name: "Apartments", slug: "apartments", description: "Apartment units" },
+    { name: "Condos", slug: "condos", description: "Condominiums" },
+    { name: "Villas", slug: "villas", description: "Luxury villas" },
+    { name: "Townhouses", slug: "townhouses", description: "Townhouses" },
+    { name: "Penthouses", slug: "penthouses", description: "Luxury penthouses" },
+    { name: "Lofts", slug: "lofts", description: "Industrial lofts" },
+    { name: "Cottages", slug: "cottages", description: "Cozy cottages" },
+];
+
+
+
 export default function SearchBox() {
     const router = useRouter();
     const [selectedAmenities, setSelectedAmenities] = useState<string[]>([]);
     const [showAdvanced, setShowAdvanced] = useState(false);
+    const [categories, setCategories] = useState<Category[]>(fallbackCategories);
+    const [loadingCategories, setLoadingCategories] = useState(true);
+    const [apiError, setApiError] = useState(false);
 
-    // Filter properties based on search criteria
-    const filterProperties = (criteria: {
-        keyword?: string;
-        status?: string;
-        propertyType?: string;
-        city?: string;
-        state?: string;
-        amenities: string[];
-    }) => {
-        return propertyData.filter((property: Property) => {
-            // Check keyword
-            if (criteria.keyword && !property.keyword.toLowerCase().includes(criteria.keyword.toLowerCase())) {
-                return false;
+    // Cargar categorías desde la API
+    useEffect(() => {
+        const loadCategories = async () => {
+            try {
+                setLoadingCategories(true);
+                setApiError(false);
+                const categoriesData = await getCategories();
+                setCategories(categoriesData);
+            } catch (error) {
+                console.error('Error cargando categorías:', error);
+                setApiError(true);
+                // Usar categorías de fallback
+                setCategories(fallbackCategories);
+            } finally {
+                setLoadingCategories(false);
             }
+        };
 
-            // Check status
-            if (criteria.status && property.status !== criteria.status) {
-                return false;
-            }
-
-            // Check property type
-            if (criteria.propertyType && property.type !== criteria.propertyType) {
-                return false;
-            }
-
-            // Check city
-            if (criteria.city && property.city !== criteria.city) {
-                return false;
-            }
-
-            // Check state
-            if (criteria.state && property.state !== criteria.state) {
-                return false;
-            }
-
-            // Check amenities - property must have ALL selected amenities
-            if (criteria.amenities.length > 0) {
-                return criteria.amenities.every(amenity =>
-                    property.amenities.includes(amenity)
-                );
-            }
-
-            return true;
-        });
-    };
+        loadCategories();
+    }, []);
 
     // Handle amenity selection
     const handleAmenityChange = (amenity: string) => {
@@ -78,23 +79,13 @@ export default function SearchBox() {
         });
     };
 
-    // Get unique amenities from property data
-    const amenities = Array.from(
-        new Set(
-            propertyData.reduce<string[]>((acc, property) => {
-                return [...acc, ...property.amenities];
-            }, [])
-        )
-    ).sort();
-
-    // Get unique property types from property data
-    const propertyTypes = Array.from(new Set(propertyData.map(property => property.type))).sort();
-
-    // Get unique states from property data
-    const states = Array.from(new Set(propertyData.map(property => property.state))).sort();
-
-    // Get unique cities from property data
-    const cities = Array.from(new Set(propertyData.map(property => property.city))).sort();
+    // Get unique amenities from property data (usando datos estáticos por ahora)
+    const amenities = [
+        "Air Conditioning", "Parking", "Swimming Pool", "Garden", "Wifi", 
+        "Elevator", "Intercom", "Furnishing", "Cable TV", "Balcony", 
+        "Pet Friendly", "Fireplace", "Heating", "Garage", "Disabled Access", 
+        "Gym", "Sauna", "Outdoor Shower", "Barbeque", "Lawn"
+    ].sort();
 
     // Handle form submission
     const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
@@ -106,7 +97,7 @@ export default function SearchBox() {
         const searchCriteria = {
             keyword: formData.get("keyword") as string,
             status: formData.get("status") as string,
-            propertyType: formData.get("propertyType") as string,
+            category: formData.get("propertyType") as string, // Cambiado de propertyType a category
             city: formData.get("city") as string,
             state: formData.get("state") as string,
             amenities: selectedAmenities
@@ -128,8 +119,8 @@ export default function SearchBox() {
             }
         });
 
-        // Navigate to search results page with query parameters
-        router.push(`/search-results?${params.toString()}`);
+        // Navigate to properties page with query parameters
+        router.push(`/properties?${params.toString()}`);
     };
 
     return (
@@ -313,6 +304,16 @@ export default function SearchBox() {
                     max-height: 500px;
                     transition: max-height 0.5s ease-in;
                 }
+
+                .api-error-notice {
+                    background-color: #fff3cd;
+                    border: 1px solid #ffeaa7;
+                    color: #856404;
+                    padding: 8px 12px;
+                    border-radius: 4px;
+                    font-size: 12px;
+                    margin-bottom: 10px;
+                }
             `}</style>
 
 <div className="space30"></div>
@@ -324,6 +325,7 @@ export default function SearchBox() {
                     
                         <div className="col-lg-12">
                             <div className="property-tab-section b-bg1">
+                               
                                 <form onSubmit={handleSearch}>
                                     <div className="tab-content1">
                                         <div className="filters mb-2 is-center">
@@ -347,11 +349,14 @@ export default function SearchBox() {
 
                                                 <div className="filter-group">
                                                     {/* <label>Types</label> */}
-                                                    <select name="propertyType">
-                                                        <option value="">All Types</option>
-                                                        {propertyTypes.map((type, index) => (
-                                                            <option key={index} value={type}>
-                                                                {type}
+                                                    <select name="propertyType" disabled={loadingCategories}>
+                                                        <option value="">
+                                                            
+                                                            {loadingCategories ? "Loading categories..." : "All Types"}
+                                                        </option>
+                                                        {categories.map((category: Category) => (
+                                                            <option key={category.slug} value={category.slug}>
+                                                                {category.name}
                                                             </option>
                                                         ))}
                                                     </select>
@@ -361,11 +366,24 @@ export default function SearchBox() {
                                                     {/* <label>City</label> */}
                                                     <select name="city">
                                                         <option value="">All Cities</option>
-                                                        {cities.map((city, index) => (
-                                                            <option key={index} value={city}>
-                                                                {city}
-                                                            </option>
-                                                        ))}
+                                                        <option value="los-angeles">Los Angeles</option>
+                                                        <option value="new-york">New York</option>
+                                                        <option value="miami">Miami</option>
+                                                        <option value="austin">Austin</option>
+                                                        <option value="chicago">Chicago</option>
+                                                        <option value="atlanta">Atlanta</option>
+                                                        <option value="denver">Denver</option>
+                                                        <option value="seattle">Seattle</option>
+                                                        <option value="nashville">Nashville</option>
+                                                        <option value="newark">Newark</option>
+                                                        <option value="dallas">Dallas</option>
+                                                        <option value="bridgaport">Bridgaport</option>
+                                                        <option value="aspen">Aspen</option>
+                                                        <option value="boston">Boston</option>
+                                                        <option value="phoenix">Phoenix</option>
+                                                        <option value="portland">Portland</option>
+                                                        <option value="san-diego">San Diego</option>
+                                                        <option value="bozeman">Bozeman</option>
                                                     </select>
                                                 </div>
 
@@ -373,11 +391,20 @@ export default function SearchBox() {
                                                     {/* <label>State</label> */}
                                                     <select name="state">
                                                         <option value="">All States</option>
-                                                        {states.map((state, index) => (
-                                                            <option key={index} value={state}>
-                                                                {state}
-                                                            </option>
-                                                        ))}
+                                                        <option value="california">California</option>
+                                                        <option value="new-york">New York</option>
+                                                        <option value="florida">Florida</option>
+                                                        <option value="texas">Texas</option>
+                                                        <option value="illinois">Illinois</option>
+                                                        <option value="georgia">Georgia</option>
+                                                        <option value="colorado">Colorado</option>
+                                                        <option value="washington">Washington</option>
+                                                        <option value="tennessee">Tennessee</option>
+                                                        <option value="new-jersey">New Jersey</option>
+                                                        <option value="arizona">Arizona</option>
+                                                        <option value="massachusetts">Massachusetts</option>
+                                                        <option value="oregon">Oregon</option>
+                                                        <option value="montana">Montana</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -427,7 +454,7 @@ export default function SearchBox() {
                                                             <path d="M6.17071 18C6.58254 16.8348 7.69378 16 9 16C10.3062 16 11.4175 16.8348 11.8293 18H22V20H11.8293C11.4175 21.1652 10.3062 22 9 22C7.69378 22 6.58254 21.1652 6.17071 20H2V18H6.17071ZM12.1707 11C12.5825 9.83481 13.6938 9 15 9C16.3062 9 17.4175 9.83481 17.8293 11H22V13H17.8293C17.4175 14.1652 16.3062 15 15 15C13.6938 15 12.5825 14.1652 12.1707 13H2V11H12.1707ZM6.17071 4C6.58254 2.83481 7.69378 2 9 2C10.3062 2 11.4175 2.83481 11.8293 4H22V6H11.8293C11.4175 7.16519 10.3062 8 9 8C7.69378 8 6.58254 7.16519 6.17071 6H2V4H6.17071Z" />
                                                         </svg>
                                                     </span>
-                                                    <Link href="/sidebar-grid" className="text-decoration-none text-primary ms-2">
+                                                    <Link href="/properties" className="text-decoration-none text-primary ms-2">
                                                         Show all properties
                                                     </Link>
                                                 </div>

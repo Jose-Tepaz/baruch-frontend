@@ -1,51 +1,107 @@
-import PropertyFilter from "@/components/elements/property-filter"
-import PropertieCardV1 from "@/components/sections/PropertieCardV1"
 import Layout from "@/components/layout/Layout"
-import { getProperties } from "@/services/properties"
+import { getProperties, getPropertiesByCategory } from "@/services/properties"
 import InnerHeader from "@/components/layout/InnerHeader";
+import { getCategories } from "@/services/categories";
+import PropertiesContent from "@/components/pages/PropertiesContent";
 
+interface PropertiesPageProps {
+    searchParams: {
+        category?: string;
+        status?: string;
+        keyword?: string;
+        city?: string;
+        state?: string;
+        amenities?: string | string[];
+    };
+}
 
-export default async function PropertiesPage() {
-    const properties = await getProperties();
-    console.log(properties)
+export default async function PropertiesPage({ searchParams }: PropertiesPageProps) {
+    const { category, status, keyword, city, state, amenities } = searchParams;
+    
+    // Obtener datos del servidor con manejo de errores
+    let properties = [];
+    let categories = [];
+    
+    try {
+        // Obtener propiedades según el filtro
+        if (category) {
+            properties = await getPropertiesByCategory(category);
+        } else {
+            properties = await getProperties({ categorySlug: '' });
+        }
+        
+        // Filtrar propiedades localmente por otros criterios si es necesario
+        if (properties && (status || keyword || city || state || amenities)) {
+            properties = properties.filter((property: any) => {
+                // Filtrar por status
+                if (status && property.status !== status) {
+                    return false;
+                }
+                
+                // Filtrar por keyword (en título o descripción)
+                if (keyword) {
+                    const searchTerm = keyword.toLowerCase();
+                    const title = property.title?.toLowerCase() || '';
+                    const description = property.description?.toLowerCase() || '';
+                    if (!title.includes(searchTerm) && !description.includes(searchTerm)) {
+                        return false;
+                    }
+                }
+                
+                // Filtrar por city
+                if (city && property.city !== city) {
+                    return false;
+                }
+                
+                // Filtrar por state
+                if (state && property.state !== state) {
+                    return false;
+                }
+                
+                // Filtrar por amenities
+                if (amenities) {
+                    const amenityArray = Array.isArray(amenities) ? amenities : [amenities];
+                    if (amenityArray.length > 0) {
+                        const propertyAmenities = property.amenities || [];
+                        const hasAllAmenities = amenityArray.every(amenity => 
+                            propertyAmenities.includes(amenity)
+                        );
+                        if (!hasAllAmenities) {
+                            return false;
+                        }
+                    }
+                }
+                
+                return true;
+            });
+        }
+    } catch (error) {
+        console.error('Error loading properties:', error);
+        properties = [];
+    }
+    
+    try {
+        categories = await getCategories();
+    } catch (error) {
+        console.error('Error loading categories:', error);
+        categories = [];
+    }
+    
+    console.log('Properties loaded:', properties?.length || 0, 'properties');
+    console.log('Categories loaded:', categories?.length || 0, 'categories');
+    console.log('Filter params:', { category, status, keyword, city, state, amenities });
+    
     return (
         <Layout>
             <InnerHeader title="Our Properties" currentpage="Our Properties" />
-           <div className="space30" />
-           
-            <div className="property-inner-section-find ">
-                <div className="container">
-                <div className="row">
-                {/* Sidebar con filtros */}
-                <div className="col-lg-3">
-                  <PropertyFilter />
-                </div>
-
-                {/* Lista de propiedades */}
-
-                <div className="col-lg-9">
-                    <div className="row g-4">
-                        {properties?.map((property: any) => (
-                            <div key={property.slug} className="col-md-6 col-lg-4">
-                                <PropertieCardV1
-                                    title={property.title}
-                                    address={property.address}
-                                    price={property.price}
-                                    imageUrl={property.image}
-                                    url={property.slug}
-                                    isNew={property.status === 'new'}
-                                    isForRent={property.status === 'rent'}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-                </div>
+            <div className="space30" />
             
-        </div>
-
+            <PropertiesContent 
+                initialProperties={properties}
+                categories={categories}
+                searchParams={searchParams}
+            />
         </Layout>
-        )
+    )
 }
 

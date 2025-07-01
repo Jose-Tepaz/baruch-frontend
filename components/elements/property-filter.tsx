@@ -1,31 +1,22 @@
 "use client";
 
-import { addAmenity, addCity, addKeyword, addPropertyType, addState, addStatus, resetFilters } from "@/features/filter/filterSlice";
+import { addAmenity, addKeyword, addStatus, addPropertyType, resetFilters } from "@/features/filter/filterSlice";
 import { clearAmenityFilters, toggleAmenityCheck } from "@/features/property/propertySlice";
 import type { RootState } from "@/features/store";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import React from "react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useReducer } from "react";
 
 // Define interfaces for our data structures
-interface PropertyType {
+interface Category {
     id?: number;
     name: string;
-    value?: string;
-}
-
-interface City {
-    id?: number;
-    name: string;
-    value?: string;
-}
-
-interface State {
-    id?: number;
-    name: string;
-    value?: string;
+    slug: string;
+    description?: string;
+    image?: string;
 }
 
 interface Status {
@@ -83,50 +74,16 @@ function usePropertyFilter() {
     };
 }
 
-export default function PropertyFilter() {
+export default function PropertyFilter({ categories }: { categories: Category[] }) {
     const dispatch = useDispatch();
+    const router = useRouter();
+    const searchParams = useSearchParams();
     const { propertyFilter } = useSelector((state: RootState) => state.filter);
     const propertyState = useSelector((state: RootState) => state.property);
     const properties = propertyState.properties || [];
 
-    // Get unique property types from actual properties
-    const propertyTypes: PropertyType[] = React.useMemo(() => {
-        const uniqueTypes = new Set(properties.map(property => property.type));
-        return Array.from(uniqueTypes)
-            .filter(type => type) // Remove any null/undefined values
-            .sort() // Sort alphabetically
-            .map((type, index) => ({
-                id: index + 1,
-                name: type,
-                value: type
-            }));
-    }, [properties]);
-
-    // Get unique cities from actual properties
-    const cities: City[] = React.useMemo(() => {
-        const uniqueCities = new Set(properties.map(property => property.city));
-        return Array.from(uniqueCities)
-            .filter(city => city) // Remove any null/undefined values
-            .sort() // Sort alphabetically
-            .map((city, index) => ({
-                id: index + 1,
-                name: city,
-                value: city
-            }));
-    }, [properties]);
-
-    // Get unique states from actual properties
-    const states: State[] = React.useMemo(() => {
-        const uniqueStates = new Set(properties.map(property => property.state));
-        return Array.from(uniqueStates)
-            .filter(state => state) // Remove any null/undefined values
-            .sort() // Sort alphabetically
-            .map((state, index) => ({
-                id: index + 1,
-                name: state,
-                value: state
-            }));
-    }, [properties]);
+    // Estado para manejar la hidratación
+    const [isHydrated, setIsHydrated] = useState(false);
 
     // Get unique statuses from actual properties
     const statuses: Status[] = React.useMemo(() => {
@@ -163,6 +120,57 @@ export default function PropertyFilter() {
     // Use reducer for filter state
     const { state: filterState, actions: filterActions } = usePropertyFilter();
 
+    // Marcar como hidratado después del primer render
+    useEffect(() => {
+        setIsHydrated(true);
+        
+        // Inicializar filtros desde los parámetros de la URL
+        const category = searchParams.get('category');
+        const status = searchParams.get('status');
+        const keyword = searchParams.get('keyword');
+        
+        if (category) {
+            dispatch(addPropertyType(category));
+        }
+        if (status) {
+            dispatch(addStatus(status));
+        }
+        if (keyword) {
+            dispatch(addKeyword(keyword));
+            filterActions.setKeyword(keyword);
+        }
+    }, [searchParams, dispatch, filterActions]);
+
+    // Función para actualizar la URL con los filtros
+    const updateURL = (newFilters: { category?: string; status?: string; keyword?: string }) => {
+        if (!isHydrated) return; // No actualizar URL hasta que esté hidratado
+        
+        const params = new URLSearchParams(searchParams.toString());
+        
+        // Actualizar o remover parámetros
+        if (newFilters.category) {
+            params.set('category', newFilters.category);
+        } else {
+            params.delete('category');
+        }
+        
+        if (newFilters.status) {
+            params.set('status', newFilters.status);
+        } else {
+            params.delete('status');
+        }
+        
+        if (newFilters.keyword) {
+            params.set('keyword', newFilters.keyword);
+        } else {
+            params.delete('keyword');
+        }
+        
+        // Navegar a la nueva URL
+        const newURL = params.toString() ? `?${params.toString()}` : '';
+        router.push(`/properties${newURL}`);
+    };
+
     useEffect(() => {
         if (filterState.keyword !== (propertyFilter.keyword || "")) {
             filterActions.setKeyword(propertyFilter.keyword || "");
@@ -170,24 +178,22 @@ export default function PropertyFilter() {
     }, [propertyFilter, filterState]);
 
     const handleKeywordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        filterActions.setKeyword(e.target.value);
-        dispatch(addKeyword(e.target.value));
-    };
-
-    const handleCityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        dispatch(addCity(e.target.value));
-    };
-
-    const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        dispatch(addState(e.target.value));
-    };
-
-    const handleStatusChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        dispatch(addStatus(e.target.value));
+        const keyword = e.target.value;
+        filterActions.setKeyword(keyword);
+        dispatch(addKeyword(keyword));
+        updateURL({ keyword });
     };
 
     const handlePropertyTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        dispatch(addPropertyType(e.target.value));
+        const category = e.target.value;
+        dispatch(addPropertyType(category));
+        updateURL({ category });
+    };
+
+    const handleStatusChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const status = e.target.value;
+        dispatch(addStatus(status));
+        updateURL({ status });
     };
 
     const handleAmenityToggle = (amenityId: number, amenityValue: string) => {
@@ -199,6 +205,10 @@ export default function PropertyFilter() {
         dispatch(resetFilters());
         dispatch(clearAmenityFilters());
         filterActions.reset();
+        // Limpiar URL
+        if (isHydrated) {
+            router.push('/properties');
+        }
     };
 
     // Handle form submission
@@ -303,23 +313,6 @@ export default function PropertyFilter() {
                     font-size: 14px;
                 }
 
-                .advance-btn {
-                    background: #d9d9d9;
-                    border: 0;
-                    color: #1B1B1B;
-                    padding: 8px 20px;
-                    border-radius: 80px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                }
-
-                .advance-btn:hover {
-                    background: var(--ztc-bg-bg-3);
-                    color: white;
-                }
-
                 .amenity-item {
                     display: flex;
                     align-items: center;
@@ -345,8 +338,31 @@ export default function PropertyFilter() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="input-area filter-group mb-0">
-                                    <input className="mb-0" type="text" placeholder="Types keyword" value={filterState.keyword} onChange={handleKeywordChange} />
+                                    <input 
+                                        className="mb-0" 
+                                        type="text" 
+                                        placeholder="Types keyword" 
+                                        value={filterState.keyword} 
+                                        onChange={handleKeywordChange} 
+                                    />
                                 </div>
+
+                                <div className="input-area filter-group">
+                                    <select 
+                                        name="propertyType" 
+                                        className="nice-select" 
+                                        onChange={handlePropertyTypeChange} 
+                                        value={propertyFilter.propertyType}
+                                    >
+                                        <option value="">All Types</option>
+                                        {categories.map((category) => (
+                                            <option key={category.slug} value={category.slug}>
+                                                {category.name}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+
                                 <div className="input-area filter-group">
                                     <select name="status" className="nice-select" onChange={handleStatusChange} value={propertyFilter.status}>
                                         <option value="">All Status</option>
@@ -357,43 +373,8 @@ export default function PropertyFilter() {
                                         ))}
                                     </select>
                                 </div>
-
-                                <div className="input-area filter-group">
-                                    <select name="propertyType" className="nice-select" onChange={handlePropertyTypeChange} value={propertyFilter.propertyType}>
-                                        <option value="">All Types</option>
-                                        {propertyTypes.map((type) => (
-                                            <option key={type.id} value={type.value || type.name}>
-                                                {type.name}
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
-
-                                <div className="input-area filter-group">
-                                    <select name="state" className="nice-select" onChange={handleStateChange} value={propertyFilter.state}>
-                                        <option value="">All States</option>
-                                        {states.map((state) => (
-                                            <option key={state.id} value={state.value || state.name}>
-                                                {state.name}
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
-
-                                <div className="input-area filter-group m-0">
-                                    <select className="country-area" onChange={handleCityChange} value={propertyFilter.city}>
-                                        <option value="">All Cities</option>
-                                        {cities.map((city) => (
-                                            <option key={city.id} value={city.value || city.name}>
-                                                {city.name}
-                                            </option>
-                                        ))}
-                                    </select>
-                                </div>
                             </div>
                         </div>
-
-
 
                         <div className="amenities-section mt-4">
                             <h5>Amenities</h5>
@@ -414,7 +395,6 @@ export default function PropertyFilter() {
                                 ))}
                             </div>
                         </div>
-
 
                         <div className="space32" />
                         <button type="submit" className="vl-btn1">
