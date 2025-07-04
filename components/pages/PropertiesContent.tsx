@@ -24,6 +24,7 @@ interface Property {
     city?: string;
     state?: string;
     amenities?: string[];
+    documentId: string;
 }
 
 interface PropertiesContentProps {
@@ -65,7 +66,7 @@ export default function PropertiesContent({
                                             address={property.address}
                                             price={property.price}
                                             imageUrl={property.image}
-                                            url={property.slug}
+                                            documentId={property.documentId}
                                             isNew={property.status === 'new'}
                                             isForRent={property.status === 'rent'}
                                         />

@@ -1,7 +1,28 @@
 import Link from "next/link";
 import ContactSeller from "@/components/elements/ContactSeller";
+import Properties1Details from "@/components/sections/Properties1Details";
+import PropertyDetails from "@/components/sections/PropertyDetails";
 
-export default function PropertyInner({ block_extend }: any) {
+import Map from "@/components/elements/MapComponent";
+
+interface Property {
+    title: string;
+    description: string;
+    price: number;
+    address: string;
+    bedrooms: number;
+    bathrooms: number;
+    parking_spaces: number;
+    main_image: string;
+    gallery: string[];
+    category: any;
+    is_new: boolean;
+    slug: string;
+    documentId: string;
+}
+
+export default function PropertyInner({ block_extend, property }: { block_extend: string, property: Property }) {
+    console.log(property);
     return (
         <>
             {/*===== PROPERTY AREA STARTS =======*/}
@@ -180,12 +201,16 @@ export default function PropertyInner({ block_extend }: any) {
                                     </div>
                                     <div className="col-lg-9">
                                         <div className="property-widget-sidebar">
-                                            <div className="img1">
-                                                <img src="/assets/img/all-images/properties/property-img25.png" alt="housa" />
-                                            </div>
+
+                                           
                                             <div className="space40" />
+                                           
+
                                             <div className="padding-side">
-                                                <h3>About This Property</h3>
+                                               
+                                            <PropertyDetails property={property} />
+                                               
+                                                
                                                 <div className="space24" />
                                                 <p>This stunning Apartment is located in the heart of Woodland, offering the perfect blend of modern comfort and timeless elegance. Designed for both functionality and style, this property features spacious rooms, high-quality finishes, and an inviting atmosphere that feels like home. Whether you're looking for a peaceful retreat or a prime investment opportunity, this property is a must-see.</p>
                                                 <div className="space30" />

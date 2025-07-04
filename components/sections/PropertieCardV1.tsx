@@ -10,7 +10,7 @@ type PropertyCardProps = {
     imageUrl: string
     isNew?: boolean
     isForRent?: boolean
-    url: string
+    documentId: string
   }
   
   export default function PropertieCardV1({
@@ -20,10 +20,10 @@ type PropertyCardProps = {
     imageUrl,
     isNew = false,
     isForRent = false,
-    url
+    documentId
   }: PropertyCardProps) {
     // Validación de seguridad para la URL
-    const sanitizedUrl = url && typeof url === 'string' ? url.replace(/[^a-zA-Z0-9-_]/g, '') : ''
+    //const sanitizedUrl = documentId && typeof documentId === 'string' ? documentId.replace(/[^a-zA-Z0-9-_]/g, '') : ''
     
     // Validación de precio
     const formattedPrice = typeof price === 'number' && !isNaN(price) ? price : 0
@@ -41,7 +41,8 @@ type PropertyCardProps = {
             transform: scale(1.05);
           }
         `}</style>
-        <Link href={`/property-details/${sanitizedUrl}`} className="text-decoration-none">
+          {console.log(price)}
+        <Link href={`/property/${documentId}`} className="text-decoration-none">
           <div className="property-card property-card-hover border-0 shadow-sm rounded-4 overflow-hidden d-flex flex-column justify-content-between">
             <div className="position-absolute top-0 start-0 p-3 d-flex gap-2">
                 {isForRent && <span className="badge bg-light text-dark px-3 py-2">For Rent</span>}

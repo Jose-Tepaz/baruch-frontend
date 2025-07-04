@@ -14,6 +14,7 @@ interface PropertyData {
     url: string
   }
   slug: string
+  documentId: string
   status: string
   category: any
   type?: string
@@ -40,6 +41,7 @@ export function getPropertiesByCategory(categorySlug: string) {
       return res.data.map((property: PropertyData) => {
         const {
           id,
+          documentId,
           title,
           description,
           price,
@@ -58,6 +60,7 @@ export function getPropertiesByCategory(categorySlug: string) {
 
         return {
           id,
+          documentId,
           title,
           description,
           price,
@@ -88,6 +91,7 @@ export function getProperties( filter: getPropertiesFilter = {}) {
       return res.data.map((property: PropertyData) => {
         const {
           id,
+          documentId,
           title,
           description,
           price,
@@ -102,6 +106,7 @@ export function getProperties( filter: getPropertiesFilter = {}) {
 
         return {
           id,
+          documentId,
           title,
           description,
           price,
@@ -114,5 +119,61 @@ export function getProperties( filter: getPropertiesFilter = {}) {
         }
       })
       
+    })
+}
+
+
+
+// Función para obtener una propiedad específica por documentId
+export function getPropertyByDocumentId(documentId: string) {
+  const queryString = `properties/${documentId}?populate=*`
+  
+  return query(queryString)
+    .then(res => {
+      if (!res.data) {
+        return null
+      }
+      
+      const property = res.data
+      const {
+        id,
+        documentId: propDocumentId,
+        title,
+        description,
+        price,
+        address,
+        bedrooms,
+        bathrooms,
+        parking_spaces,
+        lot_area,
+        built_area,
+        main_image: rawMainImage,
+        gallery: rawGallery,
+        slug,
+        category,
+        is_new
+      } = property
+
+      const main_image = rawMainImage ? `${STRAPI_HOST}${rawMainImage.url}` : ''
+      const gallery = rawGallery ? rawGallery.map((img: any) => `${STRAPI_HOST}${img.url}`) : []
+
+      return {
+        id,
+        documentId: propDocumentId,
+        title,
+        description,
+        price,
+        address,
+        bedrooms,
+        bathrooms,
+        parking_spaces,
+        lot_area,
+        built_area,
+        main_image,
+        gallery,
+        slug,
+        category,
+        is_new
+      }
     })
 }
