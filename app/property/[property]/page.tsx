@@ -16,13 +16,8 @@ export default async function PropertyPage({ params }: { params: { property: str
     return (
         <>
             <Layout>
-                <InnerHeader title={propertyData?.title} currentpage={propertyData?.title} />
-              
                 <Properties2Details property={propertyData} />
-               
                 <PropertyInner property={propertyData} />
-                <div className="space30"></div>
-                <PropertyBottom property={propertyData} />
                 <div className="space30"></div>
             </Layout>
         </>

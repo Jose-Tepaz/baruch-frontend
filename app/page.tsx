@@ -15,7 +15,7 @@ import Blog1 from "@/components/sections/Blog1";
 import { getProperties } from "@/services/properties";
 import PropertyList1 from "@/components/sections/PropertieList1";
 import About3 from "@/components/sections/About3";
-
+import imgLandscape from "@/public/assets/img/all-images/home/img-home.webp"
 
 
 
@@ -31,6 +31,7 @@ export default async function Home() {
                 <PropertyList1 properties={properties} />
                 <Category1 />
                 <About3/>
+                <img src={imgLandscape.src} alt="baruch" style={{width: '100%', height: 'auto'}} />
                 <Testimonial2 />
                
             </Layout>

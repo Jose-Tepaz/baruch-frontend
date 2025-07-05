@@ -18,6 +18,7 @@ export function getProperties(
             address,
             main_image: rawimage,
             slug,
+            documentId,
             status,
             category
           } = property
@@ -32,6 +33,7 @@ export function getProperties(
             address,
             image,
             slug,
+            documentId,
             status,
             category
           }

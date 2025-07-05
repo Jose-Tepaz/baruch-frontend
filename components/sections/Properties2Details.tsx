@@ -13,11 +13,13 @@ interface Property {
 
 export default function Properties2Details({ property }: { property: Property }) {
     const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
-    console.log(property.gallery);
+  
     return (
         <>
             {/*===== PROPERTIES AREA STARTS =======*/}
+            
             <div className="properties2-others sp1">
+                <div className="space100"></div>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12">

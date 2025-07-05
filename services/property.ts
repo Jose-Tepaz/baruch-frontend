@@ -29,7 +29,8 @@ const getPropertyById = async (documentId: string) => {
             gallery,
             slug,
             category,
-            is_new
+            is_new,
+            Map_link
         } = property
         
         // Procesar las imágenes
@@ -52,12 +53,15 @@ const getPropertyById = async (documentId: string) => {
             gallery: processedGallery,
             slug,
             category,
-            is_new
+            is_new,
+            Map_link
         }
+        
     } catch (error) {
         console.error('Error al obtener la propiedad:', error)
         return null
     }
+    
 }
 
 export default getPropertyById

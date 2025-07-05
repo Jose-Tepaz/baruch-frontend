@@ -11,6 +11,11 @@
     --ztc-family-font2: "Libre Baskerville", serif !important;
 }
 
+.heading-style-h1 {
+    font-family: "Libre Baskerville", serif !important;
+    font-style: italic!important;
+}
+
 
 /* Aplicar las nuevas fuentes a elementos específicos */
 

@@ -33,7 +33,8 @@ export default async function CategoryPage(
                         address={property.address}
                         price={property.price}
                         imageUrl={property.image}
-                        url={property.slug}
+                        documentId={property.documentId}
+                        
                         isNew={property.status === 'new'}
                         isForRent={property.status === 'rent'}
                     />

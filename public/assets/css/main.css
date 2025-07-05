@@ -82,6 +82,30 @@ img {
     max-height: 100%;
 }
 
+.size-20 {
+    font-size: 20px;
+}
+
+.size-32 {
+    font-size: 32px;
+}
+
+.text-color-cream {
+    color: #D7CCC3!important;
+}
+
+.text-color-black {
+    color: #000000!important;
+}
+
+.text-color-gray {
+    color: #808080!important;
+}
+
+.text-color-blue {
+    color: #203644!important;
+}
+
 .property-card {
     position: relative;
     overflow: hidden;
@@ -116,7 +140,11 @@ img {
     padding: 92px 0px;
 }
 
-.space6 {
+.bg-blue {
+    background-color: var(--ztc-bg-bg-3);
+}
+
+s .space6 {
     height: 6px;
 }
 
@@ -1467,6 +1495,9 @@ Location:
 
 .about3-section-area .about-heading {
     padding: 0 0 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 @media (max-width: 767px) {
@@ -18464,9 +18495,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .property-inner-section-find .property-widget-sidebar {
     position: relative;
     z-index: 1;
-    background: var(--ztc-bg-bg-1);
-    border-radius: 16px;
-    padding: 24px 20px;
     margin: 0 0 0 30px;
 }
 
@@ -20283,7 +20311,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .properties2-others .all-galler-images .big-img img {
-    height: 800px;
+    height: 600px;
     width: 100%;
     object-fit: cover;
     border-radius: 16px;
