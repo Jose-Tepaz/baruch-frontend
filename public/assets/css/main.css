@@ -106,6 +106,14 @@ img {
     color: #203644!important;
 }
 
+.text-align-center {
+    text-align: center!important;
+}
+
+.text-align-left {
+    text-align: left!important;
+}
+
 .property-card {
     position: relative;
     overflow: hidden;
@@ -5121,15 +5129,50 @@ only screen and (min-width: 768px) and (max-width: 991px),
 /*============= BLOG CSS AREA ENDS ===============*/
 
 
+/*============= ABOUT CSS AREA ===============*/
+
+.about-hero-section {
+    width: 100%;
+    padding-top: 100px;
+}
+
+.wrapper-about-hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+}
+
+.about-hero-content {
+    padding-top: 100px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    gap: 16px;
+}
+
+
 /*============= FOOTER CSS AREA ===============*/
+
+.wrapper-footer {
+    margin-top: 350px;
+    position: relative;
+    background: var(--ztc-bg-bg-3);
+}
 
 .footer-cta-bg-area {
     position: relative;
     z-index: 1;
-    overflow: hidden;
-    background: var(--ztc-bg-bg-1);
+    background: var(--ztc-bg-bg-3);
     padding: 60px 32px 0 32px;
-    border-radius: 30px;
+    border-radius: 30px 30px 0px 0px;
     margin: 0 auto;
     max-width: 1376px;
 }
@@ -5141,9 +5184,18 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .footer-cta-bg-area .cta1-section-area {
-    background: var(--ztc-bg-bg-3);
+    background: var(--ztc-bg-bg-1);
     padding: 60px 0 60px;
     border-radius: 30px;
+    position: absolute;
+    left: auto;
+    right: auto;
+    top: -280px;
+    bottom: auto;
+    margin-bottom: auto;
+    margin-top: 0px;
+    width: 90%;
+    max-width: 1350px;
 }
 
 @media (max-width: 767px) {

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LanguageSelector from "@/components/elements/LanguageSelector";
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any) {
     return (
@@ -25,7 +26,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                                 <Link href="/properties">Properties</Link>
                                             </li>
                                             <li>
-                                                <Link href="/properties">About Us</Link>
+                                                <Link href="/about-us">About Us</Link>
                                             </li>
                                             <li>
                                                 <Link href="/properties">Services</Link>
@@ -169,22 +170,28 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                         </div>
                         <div className="col-lg-2 col-md-6 col-6">
                             <div className="vl-hero-btn d-none d-lg-block text-end">
-                                <div className="btn-area1 mt-0">
-                                    <Link href="/add-property" className="vl-btn1 mt-0">
-                                    Get in touch
-                                        <span className="arrow1 ms-2">
-                                            <i className="fa-solid fa-arrow-right" />
-                                        </span>
-                                        <span className="arrow2 ms-2">
-                                            <i className="fa-solid fa-arrow-right" />
-                                        </span>
-                                    </Link>
+                                <div className="d-flex align-items-center justify-content-end gap-3">
+                                    <LanguageSelector />
+                                    <div className="btn-area1 mt-0" style={{width: '20px', minWidth: '200px', display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}}>
+                                        <Link href="/add-property" className="vl-btn1 mt-0">
+                                        Get in touch
+                                            <span className="arrow1 ms-2">
+                                                <i className="fa-solid fa-arrow-right" />
+                                            </span>
+                                            <span className="arrow2 ms-2">
+                                                <i className="fa-solid fa-arrow-right" />
+                                            </span>
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                             <div className="vl-header-action-item d-block d-lg-none">
-                                <button type="button" className="vl-offcanvas-toggle px-1">
-                                    <i className="fa-solid fa-bars-staggered" />
-                                </button>
+                                <div className="d-flex align-items-center gap-2">
+                                    <LanguageSelector />
+                                    <button type="button" className="vl-offcanvas-toggle px-1">
+                                        <i className="fa-solid fa-bars-staggered" />
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

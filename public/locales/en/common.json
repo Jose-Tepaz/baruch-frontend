@@ -1,13 +1,26 @@
 {
-  "welcome": "Welcome to Housa",
-  "navigation": {
-    "home": "Home",
-    "about": "About",
-    "contact": "Contact"
-  },
-  "buttons": {
-    "login": "Login",
-    "register": "Register",
-    "search": "Search"
-  }
-} 
+    "welcome": "Welcome to Housa",
+    "navigation": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "buttons": {
+        "login": "Login",
+        "register": "Register",
+        "search": "Search",
+        "seeProperties": "See Properties"
+    },
+    "about": {
+        "company": "About Company",
+        "hero": {
+            "title": "Your Trusted Partner for Costa del Sol Property",
+
+            "description": "Dreaming of life under the sun, surrounded by stunning landscapes, rich culture, and a warm, welcoming community? At Baruch Real Estate, we do more than help you buy or sell property, we help you build the life you've always imagined on the Costa del Sol."
+        }
+    },
+    "language": {
+        "selectLanguage": "Select Language",
+        "currentLanguage": "Current Language"
+    }
+}

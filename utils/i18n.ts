@@ -8,9 +8,14 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    lng: 'es', // Idioma por defecto
     fallbackLng: 'es',
     debug: process.env.NODE_ENV === 'development',
     supportedLngs: ['es', 'en', 'fr', 'de', 'it', 'pt'],
+    
+    // Namespace por defecto
+    defaultNS: 'common',
+    ns: ['common'],
     
     interpolation: {
       escapeValue: false,
@@ -19,6 +24,9 @@ i18n
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
+
+    // Asegurar que las traducciones se carguen inmediatamente
+    initImmediate: false,
   });
 
 export default i18n; 
