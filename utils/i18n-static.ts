@@ -1,6 +1,5 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 
 // Importar traducciones estáticas
 import esCommon from '../public/locales/es/common.json';
@@ -31,35 +30,33 @@ const resources = {
   },
 };
 
-i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    lng: 'es', // Idioma por defecto
-    fallbackLng: 'es',
-    debug: process.env.NODE_ENV === 'development',
+// Crear una instancia específica para el servidor
+const createI18nInstance = () => {
+  const instance = i18n.createInstance();
+  
+  instance
+    .use(initReactI18next)
+    .init({
+      lng: 'es',
+      fallbackLng: 'es',
+      debug: false,
+      resources,
+      defaultNS: 'common',
+      ns: ['common'],
+      interpolation: {
+        escapeValue: false,
+      },
+      react: {
+        useSuspense: false,
+      },
+      initImmediate: false,
+    });
     
-    // Recursos estáticos
-    resources,
-    
-    // Namespace por defecto
-    defaultNS: 'common',
-    ns: ['common'],
-    
-    interpolation: {
-      escapeValue: false,
-    },
+  return instance;
+};
 
-    // Opciones para mejorar la carga
-    load: 'languageOnly',
-    cleanCode: true,
-    
-    // Detección de idioma
-    detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      lookupLocalStorage: 'i18nextLng',
-      caches: ['localStorage'],
-    },
-  });
+// Instancia para el servidor
+const serverI18n = createI18nInstance();
 
-export default i18n; 
+export default serverI18n;
+export { createI18nInstance, resources }; 

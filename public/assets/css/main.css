@@ -90,6 +90,41 @@ img {
     font-size: 32px;
 }
 
+.text-size-large {
+    font-size: 20px;
+    line-height: 1.2em;
+}
+
+.text-size-medium {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+
+.text-size-small {
+    font-size: 16px;
+    line-height: 1.2em;
+}
+
+.text-weight-bold {
+    font-weight: 700!important;
+}
+
+.text-weight-medium {
+    font-weight: 500!important;
+}
+
+.text-weight-normal {
+    font-weight: 400!important;
+}
+
+.text-weight-light {
+    font-weight: 300!important;
+}
+
+.text-color-white {
+    color: #fff!important;
+}
+
 .text-color-cream {
     color: #D7CCC3!important;
 }
@@ -145,7 +180,7 @@ img {
 }
 
 .padding-section-medium {
-    padding: 92px 0px;
+    padding: 62px 0px!important;
 }
 
 .bg-blue {
@@ -940,6 +975,10 @@ Location:
 .is-secondary {
     background-color: var(--ztc-bg-bg-1);
     color: var(--ztc-text-text-2);
+}
+
+.padding-global {
+    padding: 32px 0;
 }
 
 .pagination-area ul {
@@ -8385,6 +8424,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 .others-section-area .property-tab-section .filter-group {
     position: relative;
+    width: 100%;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -8490,7 +8530,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .others-section-area .property-tab-section .nice-select {
-    min-width: 248px;
+    width: 100%;
     padding: 18px 21px !important;
     border: none;
     outline: none;
@@ -9267,10 +9307,20 @@ only screen and (min-width: 768px) and (max-width: 991px),
     z-index: 1;
     overflow: hidden;
     border-radius: 40px;
-    background: var(--ztc-bg-bg-1);
-    padding: 60px 32px;
     margin: 0 auto;
     max-width: 1376px;
+}
+
+.wrapp-content-mission {
+    display: flex;
+    align-items: stretch;
+    gap: 32px;
+}
+
+.wrapp-card-mission {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
 }
 
 @media (max-width: 767px) {
@@ -9295,8 +9345,6 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .miision1 .mission-heading {
     border-radius: 30px;
     background: #f1f2f3;
-    padding: 32px;
-    margin: 0 0 0 40px;
 }
 
 @media (max-width: 767px) {
@@ -9326,13 +9374,16 @@ only screen and (min-width: 768px) and (max-width: 991px),
     text-transform: capitalize;
 }
 
+.section-choose {
+    background: var(--ztc-bg-bg-3);
+    border-radius: 40px;
+}
+
 .choose1 {
     position: relative;
     z-index: 1;
     overflow: hidden;
     border-radius: 40px;
-    background: var(--ztc-bg-bg-1);
-    padding: 60px 32px;
     margin: 0 auto;
     max-width: 1376px;
 }
@@ -16178,7 +16229,8 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .s-properties4 .s-porpeties-video .others-section-area .property-tab-section .nice-select {
-    min-width: 220px;
+    width: 100% !important;
+    min-width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -17620,7 +17672,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .property-inner-section-find .heading1 .tabs-btn .filter-group .nice-select {
-    width: 200px;
+    width: 100%;
     padding: 18px 14px !important;
     border: none;
     outline: none;

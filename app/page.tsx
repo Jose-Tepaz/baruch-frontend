@@ -13,6 +13,8 @@ import Testimonial2 from "@/components/sections/Testimonial2";
 import Property1 from "@/components/sections/property1";
 import Blog1 from "@/components/sections/Blog1";
 import { getProperties } from "@/services/properties";
+import { getCategories } from "@/services/categories";
+import { getPropertyStatuses } from "@/services/property-status";
 import PropertyList1 from "@/components/sections/PropertieList1";
 import About3 from "@/components/sections/About3";
 import imgLandscape from "@/public/assets/img/all-images/home/img-home.webp"
@@ -20,13 +22,27 @@ import imgLandscape from "@/public/assets/img/all-images/home/img-home.webp"
 
 
 export default async function Home() {
-    const properties = await getProperties();
-    console.log(properties);
+    // Cargar datos en paralelo en el servidor
+    const [properties, categories, propertyStatuses] = await Promise.all([
+        getProperties(),
+        getCategories(),
+        getPropertyStatuses()
+    ]);
+    
+    console.log('=== Home Page Data Debug ===');
+    console.log('Properties:', properties.length, 'items');
+    console.log('Categories:', categories.length, 'items');
+    console.log('Property Statuses:', propertyStatuses.length, 'items');
+    console.log('Sample property status:', properties[3]?.propertyStatus);
+    
     return (
         <>
             <Layout>
                 <Hero2 />
-                <SearchBox />
+                <SearchBox 
+                    categories={categories}
+                    propertyStatuses={propertyStatuses}
+                />
                 <About2 />
                 <PropertyList1 properties={properties} />
                 <Category1 />

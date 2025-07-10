@@ -17,6 +17,27 @@
             "title": "Tu Socio de Confianza para Propiedades en Costa del Sol",
 
             "description": "¿Sueñas con una vida bajo el sol, rodeado de paisajes impresionantes, rica cultura y una comunidad cálida y acogedora? En Baruch Real Estate, hacemos más que ayudarte a comprar o vender propiedades, te ayudamos a construir la vida que siempre has imaginado en la Costa del Sol."
+        },
+        "others3": {
+            "subtitle": "Misión y Visión",
+            "title": "Servicios de Inmobiliario Personalizados en la Costa del Sol",
+            "forbuyers": "Para Compradores",
+            "forbuyersDescription": {
+                "list1": "Búsquedas de propiedades personalizadas adaptadas a tu estilo de vida y objetivos",
+                "list2": "Asesoría experta en barrios locales, escuelas y comunidades",
+                "list3": "Visitas sin complicaciones y recomendaciones personalizadas",
+                "list4": "Negociación para obtener el mejor precio",
+                "list5": "Abogados en la empresa para soporte legal",
+                "list6": "Socios financieros para garantizar una transacción sin problemas"
+            },
+            "forseellers": "Para Vendedores",
+            "forseellersDescription": {
+                "list1": "Valuaciones de propiedades precisas basadas en datos del mercado",
+                "list2": "Marketing premium con fotografía profesional y descripciones convincentes",
+                "list3": "Exposición a compradores locales e internacionales",
+                "list4": "Expertise en negociación para maximizar tu precio de venta",
+                "list5": "Soporte completo desde la publicación hasta el cierre"
+            }
         }
     },
     "language": {

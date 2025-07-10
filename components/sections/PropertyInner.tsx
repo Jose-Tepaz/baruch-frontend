@@ -19,6 +19,7 @@ interface Property {
     slug: string;
     documentId: string;
     Map_link: string;
+    propertyStatus: string;
 }
 
 export default function PropertyInner({ block_extend, property }: { block_extend: string, property: Property }) {

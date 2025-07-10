@@ -13,7 +13,6 @@ import "/public/assets/css/main.css";
 import "/public/assets/css/custom-fonts.css";
 
 import StoreProvider from "@/features/StoreProvider";
-import I18nProvider from "@/components/I18nProvider";
 import type { Metadata } from "next";
 //import { Inter } from "next/font/google";
 import { Work_Sans, Libre_Baskerville } from 'next/font/google';
@@ -60,11 +59,9 @@ export default function RootLayout({
         <html lang="es">
            
             <body className={`${workSans.variable} ${libreBaskerville.variable} ${workSans.className} homepage1-body body1`}>
-                <I18nProvider>
-                    <StoreProvider>
-                        {children}
-                    </StoreProvider>
-                </I18nProvider>
+                <StoreProvider>
+                    {children}
+                </StoreProvider>
             </body>
         </html>
     );

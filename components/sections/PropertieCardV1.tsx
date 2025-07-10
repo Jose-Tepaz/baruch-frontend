@@ -9,7 +9,7 @@ type PropertyCardProps = {
     price: number
     imageUrl: string
     isNew?: boolean
-    isForRent?: boolean
+    propertyStatus?: string
     documentId: string
   }
   
@@ -19,8 +19,8 @@ type PropertyCardProps = {
     price,
     imageUrl,
     isNew = false,
-    isForRent = false,
-    documentId
+    propertyStatus,
+    documentId,
   }: PropertyCardProps) {
     // Validación de seguridad para la URL
     //const sanitizedUrl = documentId && typeof documentId === 'string' ? documentId.replace(/[^a-zA-Z0-9-_]/g, '') : ''
@@ -30,7 +30,7 @@ type PropertyCardProps = {
     
     // Validación de imagen
     const safeImageUrl = imageUrl && typeof imageUrl === 'string' ? imageUrl : ''
-
+    
     return (
       <>
         <style jsx>{`
@@ -40,14 +40,16 @@ type PropertyCardProps = {
           .property-card-hover:hover img {
             transform: scale(1.05);
           }
+          
         `}</style>
-          {console.log(price)}
+       
         <Link href={`/property/${documentId}`} className="text-decoration-none">
           <div className="property-card property-card-hover border-0 shadow-sm rounded-4 overflow-hidden d-flex flex-column justify-content-between">
-            <div className="position-absolute top-0 start-0 p-3 d-flex gap-2">
-                {isForRent && <span className="badge bg-light text-dark px-3 py-2">For Rent</span>}
-                {isNew && <span className="badge bg-dark text-white px-3 py-2">New</span>}
+          <div className="position-absolute top-0 start-0 p-3 d-flex gap-2 z-3" style={{zIndex: 10}}>
+                {propertyStatus && <span className="badge bg-light text-dark px-3 py-2">{propertyStatus}</span>}
+                {isNew && <span className="badge bg-dark text-white px-3 py-2">Nuevo</span>}
             </div>
+            
             <div className="wrapp-img-card-properties">
             {safeImageUrl ? (
               <img

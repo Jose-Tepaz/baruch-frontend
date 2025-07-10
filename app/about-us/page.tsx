@@ -7,20 +7,25 @@ import Others3 from "@/components/sections/Others3";
 import Team1 from "@/components/sections/Team1";
 import Testimonial1 from "@/components/sections/Testimonial1";
 import Property1 from "@/components/sections/property1";
+import PropertyList1 from "@/components/sections/PropertieList1";
+import { getProperties } from "@/services/properties";
 
-export default function Home() {
+export default async function Home() {
+    const properties = await getProperties();
+    
     return (
         <>
             <Layout>
                 
                 <AboutHero />
-                <About1 />
+               <div className="space30"></div>
                 <Others3 />
                 <Others4 />
-                <Property1 />
+                <PropertyList1 properties={properties} />
+                
                 <div className="space30"></div>
                 <Team1 />
-                <Testimonial1 />
+                
                 <div className="space30"></div>
             </Layout>
         </>

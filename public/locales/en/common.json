@@ -17,6 +17,27 @@
             "title": "Your Trusted Partner for Costa del Sol Property",
 
             "description": "Dreaming of life under the sun, surrounded by stunning landscapes, rich culture, and a warm, welcoming community? At Baruch Real Estate, we do more than help you buy or sell property, we help you build the life you've always imagined on the Costa del Sol."
+        },
+        "others3": {
+            "subtitle": "Mission & Vision",
+            "title": "Tailored Real Estate Services on the Costa del Sol",
+            "forbuyers": "For Buyers",
+            "forbuyersDescription": {
+                "list1": "Personalized property searches tailored to your lifestyle and goals",
+                "list2": "Expert guidance on local neighborhoods, schools, and communities",
+                "list3": "Hassle-free viewings and curated recommendations",
+                "list4": "Skilled negotiation to get you the best deal",
+                "list5": "Trusted lawyers in-house for legal support",
+                "list6": "Financial partners to ensure a smooth transaction"
+            },
+            "forseellers": "For Sellers",
+            "forseellersDescription": {
+                "list1": "Accurate property valuations based on real market data",
+                "list2": "Premium marketing with professional photography and compelling descriptions",
+                "list3": "Exposure to both local and international buyers",
+                "list4": "Negotiation expertise to maximize your sale price",
+                "list5": "Full support from listing to closing"
+            }
         }
     },
     "language": {

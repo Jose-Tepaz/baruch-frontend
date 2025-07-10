@@ -11,6 +11,12 @@ interface Category {
     image?: string;
 }
 
+interface PropertyStatus {
+    id: number;
+    documentId: string;
+    Title: string;
+}
+
 interface Property {
     id: number;
     title: string;
@@ -19,6 +25,7 @@ interface Property {
     image: string;
     slug: string;
     status: string;
+    propertyStatus?: string;
     category?: any;
     type?: string;
     city?: string;
@@ -30,9 +37,10 @@ interface Property {
 interface PropertiesContentProps {
     initialProperties: Property[];
     categories: Category[];
+    propertyStatuses?: PropertyStatus[];
     searchParams: {
         category?: string;
-        status?: string;
+        property_status?: string;
         keyword?: string;
         city?: string;
         state?: string;
@@ -43,6 +51,7 @@ interface PropertiesContentProps {
 export default function PropertiesContent({ 
     initialProperties, 
     categories, 
+    propertyStatuses = [],
     searchParams 
 }: PropertiesContentProps) {
 
@@ -52,7 +61,10 @@ export default function PropertiesContent({
                 <div className="row">
                     {/* Sidebar con filtros */}
                     <div className="col-lg-3">
-                        <PropertyFilterStatic categories={categories} />
+                        <PropertyFilterStatic 
+                            categories={categories} 
+                            propertyStatuses={propertyStatuses}
+                        />
                     </div>
 
                     {/* Lista de propiedades */}
@@ -67,8 +79,8 @@ export default function PropertiesContent({
                                             price={property.price}
                                             imageUrl={property.image}
                                             documentId={property.documentId}
+                                            propertyStatus={property.propertyStatus || property.status}
                                             isNew={property.status === 'new'}
-                                            isForRent={property.status === 'rent'}
                                         />
                                     </div>
                                 ))}

@@ -2,12 +2,13 @@ import SimpleLayout from "@/components/layout/SimpleLayout"
 import { getProperties, getPropertiesByCategory } from "@/services/properties"
 import InnerHeader from "@/components/layout/InnerHeader";
 import { getCategories } from "@/services/categories";
+import { getPropertyStatuses } from "@/services/property-status";
 import PropertiesContent from "@/components/pages/PropertiesContent";
 
 interface PropertiesPageProps {
     searchParams: {
         category?: string;
-        status?: string;
+        property_status?: string;
         keyword?: string;
         city?: string;
         state?: string;
@@ -16,25 +17,36 @@ interface PropertiesPageProps {
 }
 
 export default async function PropertiesPage({ searchParams }: PropertiesPageProps) {
-    const { category, status, keyword, city, state, amenities } = searchParams;
+    const { category, property_status, keyword, city, state, amenities } = searchParams;
     
     // Obtener datos del servidor con manejo de errores
     let properties = [];
     let categories = [];
+    let propertyStatuses: any[] = [];
     
     try {
         // Obtener propiedades según el filtro
         if (category) {
-            properties = await getPropertiesByCategory(category);
+            properties = await getPropertiesByCategory(category, property_status);
         } else {
-            properties = await getProperties({ categorySlug: '' });
+            // Solo pasar los filtros que tienen valor
+            const filters: any = {};
+            if (property_status && property_status.trim() !== '') {
+                filters.propertyStatus = property_status;
+            }
+            
+            console.log('=== Properties Page DEBUG ===');
+            console.log('Search params:', searchParams);
+            console.log('Filters to pass:', filters);
+            
+            properties = await getProperties(filters);
         }
         
         // Filtrar propiedades localmente por otros criterios si es necesario
-        if (properties && (status || keyword || city || state || amenities)) {
+        if (properties && (property_status || keyword || city || state || amenities)) {
             properties = properties.filter((property: any) => {
-                // Filtrar por status
-                if (status && property.status !== status) {
+                // Filtrar por property_status
+                if (property_status && property.propertyStatus !== property_status) {
                     return false;
                 }
                 
@@ -86,10 +98,15 @@ export default async function PropertiesPage({ searchParams }: PropertiesPagePro
         console.error('Error loading categories:', error);
         categories = [];
     }
+
+    try {
+        propertyStatuses = await getPropertyStatuses();
+    } catch (error) {
+        console.error('Error loading property statuses:', error);
+        propertyStatuses = [];
+    }
     
-    console.log('Properties loaded:', properties?.length || 0, 'properties');
-    console.log('Categories loaded:', categories?.length || 0, 'categories');
-    console.log('Filter params:', { category, status, keyword, city, state, amenities });
+    
     
     return (
         <SimpleLayout>
@@ -99,6 +116,7 @@ export default async function PropertiesPage({ searchParams }: PropertiesPagePro
             <PropertiesContent 
                 initialProperties={properties}
                 categories={categories}
+                propertyStatuses={propertyStatuses}
                 searchParams={searchParams}
             />
         </SimpleLayout>

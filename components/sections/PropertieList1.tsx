@@ -38,19 +38,26 @@ export default function PropertyList1({ properties }: { properties: any[] }) {
               },
             }}
           >
-            {properties.map(property => (
-              <SwiperSlide key={property.id}>
-                <PropertyListSlide
-                  title={property.title}
-                  address={property.address}
-                  price={property.price}
-                  imageUrl={property.image}
-                  isNew={true}
-                  isForRent={true}
-                  documentId={property.documentId}
-                />
-              </SwiperSlide>
-            ))}
+            {properties.map(property => {
+              console.log('=== PropertieList1 DEBUG ===');
+              console.log('Property data:', property);
+              console.log('propertyStatus being passed:', property.propertyStatus);
+              
+              return (
+                <SwiperSlide key={property.id}>
+                  <PropertyListSlide
+                    title={property.title}
+                    address={property.address}
+                    price={property.price}
+                    imageUrl={property.image}
+                    isNew={property.is_new}
+                    propertyStatus={property.propertyStatus}
+                    documentId={property.documentId}
+                  
+                  />
+                </SwiperSlide>
+              )
+            })}
           </Swiper>
         </div>
     </section>

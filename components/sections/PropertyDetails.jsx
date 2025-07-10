@@ -3,7 +3,7 @@ import "@/public/assets/css/propertyDetails.css";
 import Link from "next/link";
 
 export default function PropertyDetails({ property }) {
-    console.log(property);
+    console.log(property.propertyStatus);
     
     // Formatear el precio con separadores de miles
     const formatPrice = (price) => {
@@ -18,7 +18,7 @@ export default function PropertyDetails({ property }) {
                             <div className="d-flex flex-column gap-2">
                                 {/* Etiqueta de estado */}
                                 <div className="property-status-tag">
-                                <span className="status-badge for-sale">En Venta</span>
+                                <span className="status-badge for-sale">{property.propertyStatus}</span>
                                 </div>
                                 {/* Título principal */}
                                 <h1 className="text-anime-style-3 heading-style-h1">{property.title}</h1>
@@ -32,7 +32,7 @@ export default function PropertyDetails({ property }) {
                                  <div className="property-features">
                                     <div className="feature-item">
                                         <i className="fas fa-expand-arrows-alt"></i>
-                                        <span>{property.area || '2150'} sqft</span>
+                                        <span>{property.built_area.toLocaleString()  || '2150'} sqft</span>
                                     </div>
                                     <div className="feature-item">
                                         <i className="fas fa-bed"></i>

@@ -34,9 +34,8 @@ export default async function CategoryPage(
                         price={property.price}
                         imageUrl={property.image}
                         documentId={property.documentId}
-                        
-                        isNew={property.status === 'new'}
-                        isForRent={property.status === 'rent'}
+                        propertyStatus={property.propertyStatus}
+                        isNew={property.is_new}
                     />
                 </div>
             ))}
