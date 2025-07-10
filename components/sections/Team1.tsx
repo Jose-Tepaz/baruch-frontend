@@ -10,7 +10,7 @@ export default function Team1() {
                             <div className="heading1 text-center space-margin60">
                                 <h5>Our Team Member</h5>
                                 <div className="space16" />
-                                <h2 className="text-anime-style-3">Meet The Expert Behind Housa</h2>
+                                <h2 className="text-anime-style-3">Meet The Expert Behind Baruch</h2>
                             </div>
                         </div>
                     </div>
