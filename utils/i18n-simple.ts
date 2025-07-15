@@ -1,5 +1,6 @@
 // Sistema de traducción simple con reactividad - sin errores de hidratación
 import { useEffect, useState } from 'react';
+import { getCurrentLocale, updateCurrentLocale } from './get-current-locale';
 import esCommon from '../public/locales/es/common.json';
 import enCommon from '../public/locales/en/common.json';
 import frCommon from '../public/locales/fr/common.json';
@@ -16,40 +17,97 @@ export const translations = {
   pt: { common: ptCommon },
 };
 
-export type Language = keyof typeof translations;
+export type Language = 'es' | 'en' | 'fr' | 'de' | 'it' | 'pt';
 
-let currentLanguage: Language = 'es';
-const listeners = new Set<() => void>();
+let currentLanguage: Language = 'en';
+let changeListeners: (() => void)[] = [];
 
-// Función para notificar cambios
-function notifyLanguageChange() {
-  listeners.forEach(listener => listener());
-}
-
-export function getCurrentLanguage(): Language {
-  return currentLanguage;
-}
-
-export function setLanguage(lang: Language): void {
-  if (currentLanguage !== lang) {
-    currentLanguage = lang;
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('language', lang);
+// Función para detectar idioma desde URL
+function detectLanguageFromURL(): Language {
+  if (typeof window === 'undefined') return 'en';
+  
+  const pathname = window.location.pathname;
+  
+  // Si la URL es solo "/" o no tiene código de idioma, es inglés (por defecto)
+  if (pathname === '/' || !pathname.match(/^\/[a-z]{2}(\/|$)/)) {
+    return 'en';
+  }
+  
+  const localeMatch = pathname.match(/^\/([a-z]{2})(\/|$)/);
+  
+  if (localeMatch) {
+    const locale = localeMatch[1] as Language;
+    const supportedLocales: Language[] = ['en', 'es', 'fr', 'de', 'it', 'pt'];
+    
+    if (supportedLocales.includes(locale)) {
+      return locale;
     }
-    notifyLanguageChange();
+  }
+  
+  return 'en'; // Fallback a inglés
+}
+
+// Inicializar idioma desde URL o localStorage
+if (typeof window !== 'undefined') {
+  const urlLanguage = detectLanguageFromURL();
+  if (urlLanguage) {
+    currentLanguage = urlLanguage;
+  } else {
+    const savedLanguage = localStorage.getItem('language') as Language;
+    if (savedLanguage && translations[savedLanguage]) {
+      currentLanguage = savedLanguage;
+    }
   }
 }
 
-// Función para suscribirse a cambios de idioma
-export function subscribeToLanguageChange(callback: () => void): () => void {
-  listeners.add(callback);
-  return () => listeners.delete(callback);
+export function getCurrentLanguage(): Language {
+  if (typeof window !== 'undefined') {
+    // Verificar primero la URL
+    const urlLanguage = detectLanguageFromURL();
+    console.log('=== getCurrentLanguage: URL language detected:', urlLanguage);
+    console.log('=== getCurrentLanguage: Current language before:', currentLanguage);
+    
+    if (urlLanguage && urlLanguage !== currentLanguage) {
+      console.log('=== getCurrentLanguage: Updating language from URL:', urlLanguage);
+      setLanguage(urlLanguage);
+    }
+    
+    console.log('=== getCurrentLanguage: Final language:', currentLanguage);
+  }
+  
+  return currentLanguage;
+}
+
+export function setLanguage(lang: Language) {
+  if (currentLanguage !== lang) {
+    currentLanguage = lang;
+    updateCurrentLocale(lang);
+    
+    // Guardar en localStorage
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.setItem('language', lang);
+      } catch (error) {
+        console.warn('Error saving language:', error);
+      }
+    }
+    
+    // Notificar a los listeners
+    changeListeners.forEach(listener => listener());
+  }
+}
+
+export function subscribeToLanguageChange(listener: () => void): () => void {
+  changeListeners.push(listener);
+  return () => {
+    changeListeners = changeListeners.filter(l => l !== listener);
+  };
 }
 
 export function t(key: string, namespace = 'common'): string {
   try {
     const keys = key.split('.');
-    let value: any = translations[currentLanguage]?.[namespace as keyof typeof translations['es']] || translations.es[namespace as keyof typeof translations['es']];
+    let value: any = translations[currentLanguage]?.[namespace as keyof typeof translations['en']] || translations.en[namespace as keyof typeof translations['en']];
     
     for (const k of keys) {
       value = value?.[k];
@@ -59,9 +117,9 @@ export function t(key: string, namespace = 'common'): string {
       return value;
     }
     
-    // Fallback al español
-    if (currentLanguage !== 'es') {
-      let fallbackValue: any = translations.es[namespace as keyof typeof translations['es']];
+    // Fallback al inglés
+    if (currentLanguage !== 'en') {
+      let fallbackValue: any = translations.en[namespace as keyof typeof translations['en']];
       for (const k of keys) {
         fallbackValue = fallbackValue?.[k];
       }
@@ -79,18 +137,17 @@ export function t(key: string, namespace = 'common'): string {
 
 export function useTranslation(namespace = 'common') {
   const [, forceUpdate] = useState({});
-  const [language, setLanguageState] = useState<Language>('es'); // Siempre español inicialmente
+  const [language, setLanguageState] = useState<Language>('en');
   const [isHydrated, setIsHydrated] = useState(false);
   
   useEffect(() => {
     // Marcar como hidratado
     setIsHydrated(true);
     
-    // Cargar idioma guardado solo después de la hidratación
-    const savedLanguage = localStorage.getItem('language') as Language;
-    if (savedLanguage && translations[savedLanguage]) {
-      currentLanguage = savedLanguage;
-      setLanguageState(savedLanguage);
+    // Detectar idioma desde URL o localStorage
+    const detectedLanguage = getCurrentLanguage();
+    if (detectedLanguage !== language) {
+      setLanguageState(detectedLanguage);
       forceUpdate({});
     }
     
@@ -100,13 +157,27 @@ export function useTranslation(namespace = 'common') {
       forceUpdate({});
     });
     
-    return unsubscribe;
+    // Detectar cambios en la URL
+    const handleLocationChange = () => {
+      const newLanguage = detectLanguageFromURL();
+      if (newLanguage !== currentLanguage) {
+        setLanguage(newLanguage);
+      }
+    };
+    
+    // Escuchar cambios en la URL
+    window.addEventListener('popstate', handleLocationChange);
+    
+    return () => {
+      unsubscribe();
+      window.removeEventListener('popstate', handleLocationChange);
+    };
   }, []);
   
   return {
     t: (key: string) => t(key, namespace),
     i18n: {
-      language: isHydrated ? language : 'es', // Usar español hasta que se hidrate
+      language: isHydrated ? language : 'en',
       changeLanguage: (lang: Language) => {
         setLanguage(lang);
         setLanguageState(lang);

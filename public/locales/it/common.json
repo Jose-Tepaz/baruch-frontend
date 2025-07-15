@@ -1,26 +1,55 @@
 {
-    "welcome": "Benvenuto su Housa",
+    "welcome": "Benvenuto a Housa",
     "navigation": {
-        "home": "Home",
+        "home": "Casa",
         "about": "Chi siamo",
-        "contact": "Contatti"
+        "contact": "Contatto"
     },
     "buttons": {
         "login": "Accedi",
         "register": "Registrati",
         "search": "Cerca",
-        "seeProperties": "Vedi proprietà"
+        "seeProperties": "Vedi Proprietà"
+    },
+    "common": {
+        "loading": "Caricamento..."
+    },
+    "properties": {
+        "title": "Le Nostre Proprietà",
+        "discover_latest": "Scopri le Nostre Ultime Proprietà",
+        "no_properties": "Nessuna proprietà disponibile"
     },
     "about": {
-        "company": "Chi siamo",
+        "company": "Informazioni sull'azienda",
         "hero": {
-            "title": "Il tuo partner fidato per Proprietà Costa del Sol",
-
-            "description": "Sognate una vita sotto il sole, circondati da paesaggi mozzafiato, ricca cultura e una comunità calorosa e accogliente? Presso Baruch Real Estate, facciamo di più che aiutarvi a comprare o vendere proprietà, vi aiutiamo a costruire la vita che avete sempre immaginato sulla Costa del Sol."
+            "title": "Il tuo partner di fiducia per le proprietà della Costa del Sol",
+            "description": "Sogni di una vita sotto il sole, circondato da paesaggi mozzafiato, cultura ricca e una comunità calda e accogliente? Da Baruch Real Estate, facciamo di più che aiutarti a comprare o vendere proprietà, ti aiutiamo a costruire la vita che hai sempre immaginato sulla Costa del Sol."
+        },
+        "others3": {
+            "subtitle": "Missione e Visione",
+            "title": "Servizi immobiliari su misura sulla Costa del Sol",
+            "forbuyers": "Per gli acquirenti",
+            "forbuyersDescription": {
+                "list1": "Ricerche di proprietà personalizzate adatte al tuo stile di vita e ai tuoi obiettivi",
+                "list2": "Guida esperta sui quartieri locali, scuole e comunità",
+                "list3": "Visite senza problemi e raccomandazioni curate",
+                "list4": "Negoziazione esperta per ottenere il miglior affare",
+                "list5": "Avvocati fidati in casa per il supporto legale",
+                "list6": "Partner finanziari per garantire una transazione fluida"
+            },
+            "forseellers": "Per i venditori",
+            "forseellersDescription": {
+                "list1": "Valutazioni di proprietà accurate basate su dati di mercato reali",
+                "list2": "Marketing premium con fotografia professionale e descrizioni convincenti",
+                "list3": "Esposizione agli acquirenti locali e internazionali",
+                "list4": "Esperienza di negoziazione per massimizzare il tuo prezzo di vendita",
+                "list5": "Supporto completo dalla quotazione alla chiusura"
+            }
         }
     },
     "language": {
         "selectLanguage": "Seleziona lingua",
-        "currentLanguage": "Lingua attuale"
+        "currentLanguage": "Lingua attuale",
+        "changing": "Cambio della lingua in"
     }
 }

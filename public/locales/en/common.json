@@ -11,6 +11,14 @@
         "search": "Search",
         "seeProperties": "See Properties"
     },
+    "common": {
+        "loading": "Loading..."
+    },
+    "properties": {
+        "title": "Our Properties",
+        "discover_latest": "Discover Our Latest Properties",
+        "no_properties": "No properties available"
+    },
     "about": {
         "company": "About Company",
         "hero": {
@@ -42,6 +50,7 @@
     },
     "language": {
         "selectLanguage": "Select Language",
-        "currentLanguage": "Current Language"
+        "currentLanguage": "Current Language",
+        "changing": "Changing language to"
     }
 }

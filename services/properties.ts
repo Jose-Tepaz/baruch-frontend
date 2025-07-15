@@ -1,6 +1,7 @@
 // services/properties.ts
 import { stringify } from 'querystring'
 import { query } from './strapi'
+import { getLocaleWithFallback } from '@/utils/get-current-locale'
 const { STRAPI_HOST } = process.env
 
 interface PropertyStatus {
@@ -9,9 +10,7 @@ interface PropertyStatus {
   Title: string
 }
 
-
-
-  // Definir la interfaz para la propiedad
+// Definir la interfaz para la propiedad
 interface PropertyData {
   id: number
   title: string
@@ -31,12 +30,10 @@ interface PropertyData {
   amenities?: string[]
 }
 
-
-
-
 export type getPropertiesFilter = {
   categorySlug?: string
   propertyStatus?: string
+  locale?: string
   [key: string]: any
 }
 
@@ -44,8 +41,12 @@ export type getPropertiesFilter = {
 ///properties?populate[main_image][fields][0]=url&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&filters[category][slug][$contains]=apartaments 
 
 // Función para obtener propiedades filtradas por categoría
-export function getPropertiesByCategory(categorySlug: string, propertyStatus?: string) { //properties?populate[main_image][fields][0]=url&
+export function getPropertiesByCategory(categorySlug: string, propertyStatus?: string, locale?: string) {
+  const currentLocale = getLocaleWithFallback(locale)
   let qs = 'properties?populate[main_image][fields][0]=url&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&pagination[limit]=100'
+
+  // Agregar parámetro locale
+  qs += `&locale=${encodeURIComponent(currentLocale)}`
 
   if (categorySlug) {
     qs += `&filters[category][slug][$eq]=${encodeURIComponent(categorySlug)}`
@@ -57,6 +58,7 @@ export function getPropertiesByCategory(categorySlug: string, propertyStatus?: s
 
   console.log('=== getPropertiesByCategory Final Query ===');
   console.log('Query string:', qs);
+  console.log('Locale:', currentLocale);
   
   return query(`${qs}`)
     .then(res => {
@@ -115,12 +117,22 @@ export function getPropertiesByCategory(categorySlug: string, propertyStatus?: s
     })
 }
 
-export function getProperties( filter: getPropertiesFilter = {}) {
-
+export function getProperties(filter: getPropertiesFilter = {}) {
+  const currentLocale = getLocaleWithFallback(filter.locale)
+  
   let queryString = 'properties?populate=main_image&populate=property_status&populate=category&pagination[limit]=100'
-  console.log('=== getProperties DEBUG ===');
-  console.log('Filter:', filter);
-  console.log('Initial queryString:', queryString);
+  
+  // Agregar parámetro locale
+  queryString += `&locale=${encodeURIComponent(currentLocale)}`
+  
+  // Solo mostrar logs en desarrollo
+  if (process.env.NODE_ENV === 'development') {
+    console.log('=== getProperties DEBUG ===');
+    console.log('Filter:', filter);
+    console.log('Locale:', currentLocale);
+    console.log('Initial queryString:', queryString);
+    console.log('SERVER/CLIENT:', typeof window !== 'undefined' ? 'CLIENT' : 'SERVER');
+  }
 
   if (filter.categorySlug && filter.categorySlug.trim() !== '') {
     queryString += `&filters[category][slug][$contains]=${filter.categorySlug}`
@@ -136,12 +148,29 @@ export function getProperties( filter: getPropertiesFilter = {}) {
 
   return query(`${queryString}`)
     .then(res => {
-      console.log('=== getProperties API Response ===');
-      console.log('Response:', res);
-      console.log('Data count:', res.data?.length || 0);
+      if (process.env.NODE_ENV === 'development') {
+        console.log('=== getProperties API Response ===');
+        console.log('Data count:', res.data?.length || 0);
+      }
       
-      if (!res.data || res.data.length === 0) {
-        console.log('No properties found in response');
+      if (!res || !res.data) {
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Invalid response structure:', res);
+        }
+        return [];
+      }
+      
+      if (!Array.isArray(res.data)) {
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Response data is not an array:', res.data);
+        }
+        return [];
+      }
+      
+      if (res.data.length === 0) {
+        if (process.env.NODE_ENV === 'development') {
+          console.log('No properties found in response');
+        }
         return [];
       }
       
@@ -178,18 +207,20 @@ export function getProperties( filter: getPropertiesFilter = {}) {
           slug,
           propertyStatus,
           category,
-          
         }
       })
-      
     })
 }
 
-
-
 // Función para obtener una propiedad específica por documentId
-export function getPropertyByDocumentId(documentId: string) {
-  const queryString = `properties/${documentId}?populate=*`
+export function getPropertyByDocumentId(documentId: string, locale?: string) {
+  const currentLocale = getLocaleWithFallback(locale)
+  const queryString = `properties/${documentId}?populate=*&locale=${encodeURIComponent(currentLocale)}`
+  
+  console.log('=== getPropertyByDocumentId DEBUG ===');
+  console.log('DocumentId:', documentId);
+  console.log('Locale:', currentLocale);
+  console.log('Query string:', queryString);
   
   return query(queryString)
     .then(res => {

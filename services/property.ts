@@ -1,4 +1,5 @@
 import { query } from './strapi'
+import { getLocaleWithFallback } from '@/utils/get-current-locale'
 const { STRAPI_HOST } = process.env
 
 //http://localhost:1337/api/properties/tm87lmuqeg9bkros3zfm3e9m?populate=main_image&populate=gallery&populate=category
@@ -9,11 +10,20 @@ interface PropertyStatus {
     Title: string
   }
 
-const getPropertyById = async (documentId: string) => {
+const getPropertyById = async (documentId: string, locale?: string) => {
     try {
         // Usar documentId en lugar de id y agregar populate=* para obtener todas las relaciones
-        const response = await query(`properties/${documentId}?populate=main_image&populate=gallery&populate=category&populate=property_status`)
+        const currentLocale = getLocaleWithFallback(locale);
+        const queryString = `properties/${documentId}?populate=main_image&populate=gallery&populate=category&populate=property_status&locale=${encodeURIComponent(currentLocale)}`;
+        
+        console.log('=== getPropertyById DEBUG ===');
+        console.log('DocumentId:', documentId);
+        console.log('Locale:', currentLocale);
+        console.log('Query string:', queryString);
+        
+        const response = await query(queryString);
         console.log(response.data);
+        
         if (!response.data) {
             return null
         }
@@ -71,7 +81,6 @@ const getPropertyById = async (documentId: string) => {
         console.error('Error al obtener la propiedad:', error)
         return null
     }
-    
 }
 
 export default getPropertyById

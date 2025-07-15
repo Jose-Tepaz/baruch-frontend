@@ -1,12 +1,21 @@
-import { getCategories } from "@/services/categories";
+'use client'
 import Link from "next/link";
 
+interface Category {
+    slug: string;
+    name: string;
+    description: string;
+    image: string;
+}
 
+interface Category1Props {
+    categories: Category[];
+}
 
-export const Category1 = async () => {
-    const categories = await getCategories();
-    console.log(categories);
-    if (categories.length === 0) return null;
+export default function Category1({ categories }: Category1Props) {
+    if (!categories || categories.length === 0) {
+        return null;
+    }
    
     return (
         <>
@@ -28,8 +37,8 @@ export const Category1 = async () => {
                     </div>
 <div className="row">
     <div className="row gap-1 justify-content-center">
-    {categories.map((category: any, index: number) => (
-                        <div className="col-lg-3" key={index}>
+    {categories.map((category: Category, index: number) => (
+                        <div className="col-lg-3" key={category.slug || index}>
                             <Link href={`/categories/${category.slug}`}>
                             <div className="row" data-aos="zoom-in-up" data-aos-duration={800}>
                                 <div className="category-boxarea">
@@ -68,7 +77,3 @@ export const Category1 = async () => {
         </>
     );
 }
-
-
-
-export default Category1;

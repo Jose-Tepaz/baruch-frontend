@@ -1,4 +1,10 @@
 import { resources } from './i18n-static';
+import esCommon from '../public/locales/es/common.json';
+import enCommon from '../public/locales/en/common.json';
+import frCommon from '../public/locales/fr/common.json';
+import deCommon from '../public/locales/de/common.json';
+import itCommon from '../public/locales/it/common.json';
+import ptCommon from '../public/locales/pt/common.json';
 
 interface UseServerTranslationReturn {
   t: (key: string, options?: any) => string;
@@ -9,12 +15,12 @@ interface UseServerTranslationReturn {
 }
 
 export function useServerTranslation(namespace = 'common'): UseServerTranslationReturn {
-  const currentLanguage = 'es'; // Por defecto español
+  const currentLanguage = 'en'; // Cambiar por defecto a inglés
   
   const t = (key: string, options?: any): string => {
     try {
       const keys = key.split('.');
-      let value: any = resources[currentLanguage as keyof typeof resources][namespace as keyof typeof resources['es']];
+      let value: any = resources[currentLanguage as keyof typeof resources][namespace as keyof typeof resources['en']];
       
       for (const k of keys) {
         value = value?.[k];
@@ -24,9 +30,9 @@ export function useServerTranslation(namespace = 'common'): UseServerTranslation
         return value;
       }
       
-      // Fallback al español si no se encuentra
-      if (currentLanguage !== 'es') {
-        let fallbackValue: any = resources.es[namespace as keyof typeof resources['es']];
+      // Fallback al inglés si no se encuentra
+      if (currentLanguage !== 'en') {
+        let fallbackValue: any = resources.en[namespace as keyof typeof resources['en']];
         for (const k of keys) {
           fallbackValue = fallbackValue?.[k];
         }

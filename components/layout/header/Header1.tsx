@@ -29,7 +29,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                                 <Link href="/about-us">About Us</Link>
                                             </li>
                                             <li>
-                                                <Link href="/properties">Services</Link>
+                                                <Link href="/services">Services</Link>
                                             </li>
                                         {/*
                                         <li className="has-dropdown">

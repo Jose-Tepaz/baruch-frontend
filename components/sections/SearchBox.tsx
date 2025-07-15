@@ -202,9 +202,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                         
                                         <div className="filters z-1 position-relative">
                                             <div className="d-flex flex-lg-nowrap flex-wrap gap-2 justify-content-between w-100">
-                                                <div className="filter-group">
-                                                    <input type="text" name="keyword" placeholder="Keyword" />
-                                                </div>
+                                                
 
                                                 <div className="filter-group">
                                                     <select name="property_status" defaultValue="">
@@ -227,13 +225,8 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                                         ))}
                                                     </select>
                                                 </div>
-                                            </div>
-                                        </div>
 
-                                        <div className="filters pt-2">
-                                            <div className="d-flex justify-content-between w-100">
-                                                <div className="d-flex flex-wrap gap-2 align-items-center">
-                                                    <div className="search-button d-flex align-items-center">
+                                                <div className="search-button d-flex align-items-center">
                                                         <button type="submit">
                                                             Search Property
                                                             <span className="arrow1 ms-2">
@@ -244,6 +237,13 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                                             </span>
                                                         </button>
                                                     </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="filters pt-2">
+                                            <div className="d-flex justify-content-between w-100">
+                                                <div className="d-flex flex-wrap gap-2 align-items-center">
+                                                   
                                                     <Link href="/properties" className="text-decoration-none text-primary ms-2">
                                                         Show all properties
                                                     </Link>

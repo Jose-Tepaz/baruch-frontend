@@ -9,18 +9,48 @@
         "login": "Entrar",
         "register": "Registrar",
         "search": "Buscar",
-        "seeProperties": "Ver propriedades"
+        "seeProperties": "Ver Propriedades"
+    },
+    "common": {
+        "loading": "Carregando..."
+    },
+    "properties": {
+        "title": "Nossas Propriedades",
+        "discover_latest": "Descubra Nossas Últimas Propriedades",
+        "no_properties": "Nenhuma propriedade disponível"
     },
     "about": {
         "company": "Sobre a empresa",
         "hero": {
-            "title": "Seu parceiro de confiança para Propriedades Costa del Sol",
+            "title": "Seu parceiro confiável para propriedades da Costa del Sol",
 
-            "description": "Sonhando com a vida sob o sol, cercado por paisagens deslumbrantes, cultura rica e uma comunidade calorosa e acolhedora? Na Baruch Real Estate, fazemos mais do que ajudá-lo a comprar ou vender propriedades, ajudamos você a construir a vida que sempre imaginou na Costa del Sol."
+            "description": "Sonha com uma vida sob o sol, cercado por paisagens deslumbrantes, cultura rica e uma comunidade calorosa e acolhedora? Na Baruch Real Estate, fazemos mais do que ajudá-lo a comprar ou vender propriedades, ajudamos você a construir a vida que sempre imaginou na Costa del Sol."
+        },
+        "others3": {
+            "subtitle": "Missão e Visão",
+            "title": "Serviços imobiliários sob medida na Costa del Sol",
+            "forbuyers": "Para compradores",
+            "forbuyersDescription": {
+                "list1": "Pesquisas de propriedades personalizadas adaptadas ao seu estilo de vida e objetivos",
+                "list2": "Orientação especializada sobre bairros locais, escolas e comunidades",
+                "list3": "Visitas sem complicações e recomendações curadas",
+                "list4": "Negociação habilidosa para obter o melhor negócio",
+                "list5": "Advogados confiáveis internos para suporte legal",
+                "list6": "Parceiros financeiros para garantir uma transação suave"
+            },
+            "forseellers": "Para vendedores",
+            "forseellersDescription": {
+                "list1": "Avaliações de propriedades precisas baseadas em dados de mercado reais",
+                "list2": "Marketing premium com fotografia profissional e descrições convincentes",
+                "list3": "Exposição a compradores locais e internacionais",
+                "list4": "Experiência em negociação para maximizar seu preço de venda",
+                "list5": "Suporte completo da listagem ao fechamento"
+            }
         }
     },
     "language": {
         "selectLanguage": "Selecionar idioma",
-        "currentLanguage": "Idioma atual"
+        "currentLanguage": "Idioma atual",
+        "changing": "Mudando idioma para"
     }
 }

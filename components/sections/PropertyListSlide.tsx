@@ -12,6 +12,8 @@ type PropertyCardProps = {
     isForRent?: string
     documentId: string
     propertyStatus: string
+    category: string
+    locale: string
    
   }
   
@@ -23,7 +25,9 @@ type PropertyCardProps = {
     isNew = false,
     documentId,
     propertyStatus,
-    isForRent
+    isForRent,
+    category,
+    locale
    
   }: PropertyCardProps) {
     // Validación de seguridad para la URL
@@ -37,7 +41,7 @@ type PropertyCardProps = {
 
     console.log('=== PropertyListSlide DEBUG ===');
     console.log('propertyStatus received:', propertyStatus);
-    console.log('All props:', { title, address, price, imageUrl, isNew, propertyStatus, documentId });
+    console.log('All props:', { title, address, price, imageUrl, isNew, propertyStatus, documentId, category, locale   });
 
     return (
       <>

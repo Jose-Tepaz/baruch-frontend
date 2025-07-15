@@ -26,7 +26,7 @@ export default function Faq1() {
                                                     </h2>
                                                     <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                                         <div className="accordion-body">
-                                                            <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Housa, we understand that every decision involves crucial details, from financing.</p>
+                                                            <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Baruch, we understand that every decision involves crucial details, from financing.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -39,7 +39,7 @@ export default function Faq1() {
                                                     </h2>
                                                     <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                                         <div className="accordion-body">
-                                                            <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Housa, we understand that every decision involves crucial details, from financing.</p>
+                                                            <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Baruch, we understand that every decision involves crucial details, from financing.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -52,7 +52,7 @@ export default function Faq1() {
                                                     </h2>
                                                     <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                                         <div className="accordion-body">
-                                                            <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Housa, we understand that every decision involves crucial details, from financing.</p>
+                                                            <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Baruch, we understand that every decision involves crucial details, from financing.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -65,7 +65,7 @@ export default function Faq1() {
                                                     </h2>
                                                     <div id="collapseFour" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                                         <div className="accordion-body">
-                                                            <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Housa, we understand that every decision involves crucial details, from financing.</p>
+                                                            <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Baruch, we understand that every decision involves crucial details, from financing.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -78,7 +78,7 @@ export default function Faq1() {
                                                     </h2>
                                                     <div id="collapseFive" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                                         <div className="accordion-body">
-                                                            <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Housa, we understand that every decision involves crucial details, from financing.</p>
+                                                                <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Baruch, we understand that every decision involves crucial details, from financing.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -97,7 +97,7 @@ export default function Faq1() {
                                                     </h2>
                                                     <div id="collapseSix" className="accordion-collapse collapse" data-bs-parent="#accordionExample2">
                                                         <div className="accordion-body">
-                                                            <p>Renting typically refers to short-term agreements, often on a month-to the month basis. Tenants have the flexibility to move out with a shorter notice period, usually fixed-term contract 30 days providing stability flexibility.</p>
+                                                                <p>Renting typically refers to short-term agreements, often on a month-to the month basis. Tenants have the flexibility to move out with a shorter notice period, usually fixed-term contract 30 days providing stability flexibility.</p>
                                                         </div>
                                                     </div>
                                                 </div>

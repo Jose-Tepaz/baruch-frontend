@@ -1,5 +1,6 @@
 import { query } from './strapi'
 import { checkStrapiConfig } from './config'
+import { getLocaleWithFallback } from '@/utils/get-current-locale'
 
 interface PropertyStatus {
   id: number
@@ -7,15 +8,21 @@ interface PropertyStatus {
   Title: string
 }
 
-export async function getPropertyStatuses(): Promise<PropertyStatus[]> {
+export async function getPropertyStatuses(locale?: string): Promise<PropertyStatus[]> {
   try {
     // Verificar configuración antes de hacer la llamada
     if (!checkStrapiConfig()) {
       throw new Error('Strapi configuration is missing. Please check your environment variables.');
     }
 
-    console.log('Making request to: statuses?fields[0]=Title&fields[1]=id&fields[2]=documentId');
-    const response = await query('statuses?fields[0]=Title&fields[1]=id&fields[2]=documentId')
+    const currentLocale = getLocaleWithFallback(locale);
+    const queryString = `statuses?fields[0]=Title&fields[1]=id&fields[2]=documentId&locale=${encodeURIComponent(currentLocale)}`;
+    
+    console.log('=== getPropertyStatuses DEBUG ===');
+    console.log('Locale:', currentLocale);
+    console.log('Making request to:', queryString);
+    
+    const response = await query(queryString)
     
     console.log('=== Property Statuses Response ===');
     console.log('Response:', response);

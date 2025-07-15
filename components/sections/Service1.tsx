@@ -30,7 +30,7 @@ export default function Service2() {
                                     <div className="content">
                                         <Link href="#">Buying Property</Link>
                                         <div className="space16" />
-                                        <p>At Housa, we know that buying and home is one life’s biggest milestones, Our experienced team is here guide.</p>
+                                        <p>At Baruch, we know that buying and home is one life’s biggest milestones, Our experienced team is here guide.</p>
                                     </div>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@ export default function Service2() {
                                     <div className="content">
                                         <Link href="#">Sell Property</Link>
                                         <div className="space16" />
-                                        <p>Selling your home doesn’t have to be overwhelming. With Housa, our and dedicated experts will make process.</p>
+                                        <p>Selling your home doesn’t have to be overwhelming. With Baruch, our and dedicated experts will make process.</p>
                                     </div>
                                 </div>
                             </div>

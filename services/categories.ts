@@ -1,5 +1,6 @@
 import { query } from "./strapi";
 import { checkStrapiConfig } from "./config";
+import { getLocaleWithFallback } from '@/utils/get-current-locale';
 const { STRAPI_HOST } = process.env;
 
 // Definir la interfaz para la categoría de la API
@@ -12,13 +13,20 @@ interface CategoryData {
     };
 }
 
-export function getCategories() {
+export function getCategories(locale?: string) {
     // Verificar configuración antes de hacer la llamada
     if (!checkStrapiConfig()) {
         throw new Error('Strapi configuration is missing. Please check your environment variables.');
     }
 
-    return query("categories?fields[0]=name&fields[1]=slug&fields[2]=description&populate[image][fields][0]=url")
+    const currentLocale = getLocaleWithFallback(locale);
+    const queryString = `categories?fields[0]=name&fields[1]=slug&fields[2]=description&populate[image][fields][0]=url&locale=${encodeURIComponent(currentLocale)}`;
+    
+    console.log('=== getCategories DEBUG ===');
+    console.log('Locale:', currentLocale);
+    console.log('Query string:', queryString);
+
+    return query(queryString)
     .then(res => {
         console.log('Categories API Response:', JSON.stringify(res.data, null, 2));
         return res.data.map((category: CategoryData) => {

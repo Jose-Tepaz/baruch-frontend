@@ -1,5 +1,5 @@
 import SimpleLayout from "@/components/layout/SimpleLayout"
-import { getProperties, getPropertiesByCategory } from "@/services/properties"
+import { getProperties } from "@/services/get-properties"
 import InnerHeader from "@/components/layout/InnerHeader";
 import { getCategories } from "@/services/categories";
 import { getPropertyStatuses } from "@/services/property-status";
@@ -25,31 +25,30 @@ export default async function PropertiesPage({ searchParams }: PropertiesPagePro
     let propertyStatuses: any[] = [];
     
     try {
-        // Obtener propiedades según el filtro
-        if (category) {
-            properties = await getPropertiesByCategory(category, property_status);
-        } else {
-            // Solo pasar los filtros que tienen valor
-            const filters: any = {};
-            if (property_status && property_status.trim() !== '') {
-                filters.propertyStatus = property_status;
-            }
-            
-            console.log('=== Properties Page DEBUG ===');
-            console.log('Search params:', searchParams);
-            console.log('Filters to pass:', filters);
-            
-            properties = await getProperties(filters);
+        // Obtener propiedades según el filtro usando el servicio get-properties
+        console.log('=== Properties Page DEBUG ===');
+        console.log('Search params:', searchParams);
+        console.log('Category filter:', category);
+        console.log('Property status filter:', property_status);
+        
+        const result = await getProperties({ 
+            categoryId: category, 
+            locale: 'en' // Idioma por defecto del servidor
+        });
+        
+        properties = result?.properties || [];
+        
+        // Filtrar por property_status si está presente
+        if (property_status && property_status.trim() !== '') {
+            properties = properties.filter((property: any) => {
+                return property.propertyStatus === property_status;
+            });
+            console.log('Properties after status filter:', properties.length);
         }
         
         // Filtrar propiedades localmente por otros criterios si es necesario
-        if (properties && (property_status || keyword || city || state || amenities)) {
+        if (properties && (keyword || city || state || amenities)) {
             properties = properties.filter((property: any) => {
-                // Filtrar por property_status
-                if (property_status && property.propertyStatus !== property_status) {
-                    return false;
-                }
-                
                 // Filtrar por keyword (en título o descripción)
                 if (keyword) {
                     const searchTerm = keyword.toLowerCase();
@@ -61,12 +60,12 @@ export default async function PropertiesPage({ searchParams }: PropertiesPagePro
                 }
                 
                 // Filtrar por city
-                if (city && property.city !== city) {
+                if (city && !property.address?.toLowerCase().includes(city.toLowerCase())) {
                     return false;
                 }
                 
                 // Filtrar por state
-                if (state && property.state !== state) {
+                if (state && !property.address?.toLowerCase().includes(state.toLowerCase())) {
                     return false;
                 }
                 
@@ -87,26 +86,27 @@ export default async function PropertiesPage({ searchParams }: PropertiesPagePro
                 return true;
             });
         }
+        
+        console.log('Final properties count:', properties.length);
+        
     } catch (error) {
         console.error('Error loading properties:', error);
         properties = [];
     }
     
     try {
-        categories = await getCategories();
+        categories = await getCategories('en');
     } catch (error) {
         console.error('Error loading categories:', error);
         categories = [];
     }
 
     try {
-        propertyStatuses = await getPropertyStatuses();
+        propertyStatuses = await getPropertyStatuses('en');
     } catch (error) {
         console.error('Error loading property statuses:', error);
         propertyStatuses = [];
     }
-    
-    
     
     return (
         <SimpleLayout>

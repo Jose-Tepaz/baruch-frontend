@@ -9,18 +9,47 @@
         "login": "Anmelden",
         "register": "Registrieren",
         "search": "Suchen",
-        "seeProperties": "Immobilien anzeigen"
+        "seeProperties": "Eigenschaften anzeigen"
+    },
+    "common": {
+        "loading": "Laden..."
+    },
+    "properties": {
+        "title": "Unsere Immobilien",
+        "discover_latest": "Entdecken Sie unsere neuesten Immobilien",
+        "no_properties": "Keine Immobilien verfügbar"
     },
     "about": {
         "company": "Über das Unternehmen",
         "hero": {
-            "title": "Ihr vertrauensvoller Partner für Costa del Sol Immobilien",
-
-            "description": "Träumen Sie von einem Leben unter der Sonne, umgeben von atemberaubenden Landschaften, reicher Kultur und einer warmen, einladenden Gemeinschaft? Bei Baruch Real Estate tun wir mehr, als Ihnen beim Kauf oder Verkauf von Immobilien zu helfen - wir helfen Ihnen dabei, das Leben aufzubauen, das Sie sich schon immer an der Costa del Sol vorgestellt haben."
+            "title": "Ihr vertrauensvoller Partner für Immobilien an der Costa del Sol",
+            "description": "Träumen Sie von einem Leben unter der Sonne, umgeben von atemberaubenden Landschaften, reicher Kultur und einer warmen, einladenden Gemeinschaft? Bei Baruch Real Estate helfen wir Ihnen nicht nur beim Kauf oder Verkauf von Immobilien, wir helfen Ihnen dabei, das Leben zu gestalten, das Sie sich an der Costa del Sol immer vorgestellt haben."
+        },
+        "others3": {
+            "subtitle": "Mission und Vision",
+            "title": "Maßgeschneiderte Immobiliendienstleistungen an der Costa del Sol",
+            "forbuyers": "Für Käufer",
+            "forbuyersDescription": {
+                "list1": "Personalisierte Immobiliensuche, die auf Ihren Lebensstil und Ihre Ziele zugeschnitten ist",
+                "list2": "Fachkundige Beratung zu lokalen Vierteln, Schulen und Gemeinden",
+                "list3": "Problemlose Besichtigungen und kuratierte Empfehlungen",
+                "list4": "Geschickte Verhandlung, um Ihnen das beste Angebot zu verschaffen",
+                "list5": "Vertrauenswürdige Anwälte im Haus für rechtliche Unterstützung",
+                "list6": "Finanzpartner, um eine reibungslose Transaktion zu gewährleisten"
+            },
+            "forseellers": "Für Verkäufer",
+            "forseellersDescription": {
+                "list1": "Genaue Immobilienbewertungen basierend auf echten Marktdaten",
+                "list2": "Premium-Marketing mit professioneller Fotografie und überzeugenden Beschreibungen",
+                "list3": "Exposition gegenüber lokalen und internationalen Käufern",
+                "list4": "Verhandlungsexpertise, um Ihren Verkaufspreis zu maximieren",
+                "list5": "Vollständige Unterstützung von der Auflistung bis zum Abschluss"
+            }
         }
     },
     "language": {
         "selectLanguage": "Sprache auswählen",
-        "currentLanguage": "Aktuelle Sprache"
+        "currentLanguage": "Aktuelle Sprache",
+        "changing": "Sprache wird geändert zu"
     }
 }
