@@ -3,19 +3,25 @@ import Layout from "@/components/layout/Layout";
 import InnerHeader from "@/components/layout/InnerHeader";
 import CategoryContent from "@/components/pages/CategoryContent";
 
-export default async function CategoryPage(
-    { params }: { params: { categoryId: string } }
-) { 
-    const { categoryId } = await params;
+interface CategoryPageProps {
+    params: { 
+        lang: string;
+        categoryId: string;
+    };
+}
+
+export default async function CategoryPage({ params }: CategoryPageProps) { 
+    const { lang, categoryId } = params;
     
     // Cargar datos iniciales en el servidor
     let initialProperties = [];
     try {
-        const { properties } = await getProperties({ categoryId, locale: 'en' }); // Usar inglés como por defecto del servidor
+        const { properties } = await getProperties({ categoryId, locale: lang }); // Usar el locale dinámico
         initialProperties = properties || [];
         
         if (process.env.NODE_ENV === 'development') {
             console.log('=== CategoryPage Server DEBUG ===');
+            console.log('Language:', lang);
             console.log('Category ID:', categoryId);
             console.log('Initial properties loaded:', initialProperties.length);
         }

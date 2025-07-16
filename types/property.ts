@@ -23,6 +23,7 @@ export interface PropertyDetail {
         image: string;
     };
     amenities: string[];
+    is_private?: boolean;
 }
 
 export interface PropertyResponse {
@@ -55,4 +56,5 @@ export interface PropertyListItem {
         name: string;
         image: string;
     };
+    is_private?: boolean;
 } 

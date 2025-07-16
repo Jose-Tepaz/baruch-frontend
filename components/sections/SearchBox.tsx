@@ -1,7 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
+import { useTranslation } from "@/utils/i18n-simple";
 
 interface Category {
     id?: number;
@@ -36,9 +37,9 @@ const fallbackCategories: Category[] = [
 
 export default function SearchBox({ categories = fallbackCategories, propertyStatuses = [] }: SearchBoxProps) {
     const router = useRouter();
-    
-   
-
+    const params = useParams();
+    const lang = params.lang as string;
+    const { t, i18n } = useTranslation('common');
     // Handle form submission
     const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -56,6 +57,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
         const params = new URLSearchParams();
 
         console.log('=== SearchBox Form Submission ===');
+        console.log('Language:', lang);
         console.log('Search criteria:', searchCriteria);
 
         // Add non-empty parameters to URL
@@ -65,7 +67,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
             }
         });
 
-        const finalUrl = `/properties?${params.toString()}`;
+        const finalUrl = `/${lang}/properties?${params.toString()}`;
         console.log('Final URL:', finalUrl);
         console.log('URL parameters:', params.toString());
 
@@ -195,7 +197,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                 <form onSubmit={handleSearch}>
                                     <div className="tab-content1">
                                         <div className="filters mb-2 is-center">
-                                            <h3 className="text-align-center size-32">Find your dream property</h3>
+                                            <h3 className="text-align-center size-32">{t('home.title-filter')}</h3>
                                         </div>
                                         
                                       
@@ -206,7 +208,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
 
                                                 <div className="filter-group">
                                                     <select name="property_status" defaultValue="">
-                                                        <option value="">All Status</option>
+                                                        <option value="">{t('home.title-filter-1')}</option>
                                                         {propertyStatuses.map((status) => (
                                                             <option key={status.documentId} value={status.Title}>
                                                                 {status.Title}
@@ -217,7 +219,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
 
                                                 <div className="filter-group">
                                                     <select name="category">
-                                                        <option value="">All Types</option>
+                                                        <option value="">{t('home.title-filter-2')}</option>
                                                         {categories.map((category: Category) => (
                                                             <option key={category.slug} value={category.slug}>
                                                                 {category.name}
@@ -228,7 +230,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
 
                                                 <div className="search-button d-flex align-items-center">
                                                         <button type="submit">
-                                                            Search Property
+                                                            {t('home.btn-filter')}
                                                             <span className="arrow1 ms-2">
                                                                 <i className="fa-solid fa-arrow-right" />
                                                             </span>
@@ -244,8 +246,8 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                             <div className="d-flex justify-content-between w-100">
                                                 <div className="d-flex flex-wrap gap-2 align-items-center">
                                                    
-                                                    <Link href="/properties" className="text-decoration-none text-primary ms-2">
-                                                        Show all properties
+                                                    <Link href={`/${lang}/properties`} className="text-decoration-none text-primary ms-2">
+                                                        {t('home.btn-all-properties')}
                                                     </Link>
                                                 </div>
                                             </div>

@@ -22,24 +22,34 @@ interface PropertyData {
   documentId: string
   property_status: PropertyStatus
   category: any
+  is_private?: boolean
 }
 
 export function getProperties(
-    { categoryId, locale }: 
-    { categoryId?: string; locale?: string }
+    { categoryId, locale, onlyPrivate }: 
+    { categoryId?: string; locale?: string; onlyPrivate?: boolean }
 ) {
     console.log('=== get-properties.ts: Function called with params ===');
     console.log('=== get-properties.ts: categoryId:', categoryId);
     console.log('=== get-properties.ts: locale (input):', locale);
+    console.log('=== get-properties.ts: onlyPrivate:', onlyPrivate);
     
     const currentLocale = getLocaleWithFallback(locale);
     console.log('=== get-properties.ts: currentLocale (after fallback):', currentLocale);
     
-    let queryString = `properties?populate=main_image&populate=property_status&populate=category&pagination[limit]=100&locale=${encodeURIComponent(currentLocale)}`;
+    let queryString = `properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&pagination[limit]=100&locale=${encodeURIComponent(currentLocale)}`;
     
     // Solo agregar filtro de categoría si se proporciona categoryId
     if (categoryId && categoryId.trim() !== '') {
         queryString += `&filters[category][slug][$contains]=${categoryId}`;
+    }
+    // Agregar filtro para propiedades privadas si onlyPrivate es true
+    if (onlyPrivate) {
+        queryString += `&filters[is_private][$eq]=true`;
+    }
+    // Agregar filtro para solo públicas si onlyPrivate es false
+    if (onlyPrivate === false) {
+        queryString += `&filters[$or][0][is_private][$eq]=false&filters[$or][1][is_private][$null]=true`;
     }
     
     // Solo mostrar logs en desarrollo
@@ -57,6 +67,7 @@ export function getProperties(
         if (process.env.NODE_ENV === 'development') {
             console.log('=== get-properties.ts API Response ===');
             console.log('Data count:', res.data?.length || 0);
+            console.log('Sample property:', res.data?.[0]);
         }
         
         if (!res || !res.data) {
@@ -92,7 +103,8 @@ export function getProperties(
                 slug,
                 documentId,
                 property_status,
-                category
+                category,
+                is_private
             } = property
 
             const image = rawimage ? `${STRAPI_HOST}${rawimage.url}` : ''
@@ -103,6 +115,7 @@ export function getProperties(
                 console.log('Property title:', title);
                 console.log('Property status:', propertyStatus);
                 console.log('Category:', category);
+                console.log('is_private:', is_private);
             }
 
             return {
@@ -115,7 +128,8 @@ export function getProperties(
                 slug,
                 documentId,
                 propertyStatus,
-                category
+                category,
+                is_private
             }
         })
 

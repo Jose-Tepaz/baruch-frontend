@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams, useParams } from 'next/navigation';
 import styles from './property-filter-static.module.css';
 
 interface Category {
@@ -87,6 +87,8 @@ function CustomDropdown({ value, options, placeholder, onChange, name }: CustomD
 export default function PropertyFilterStatic({ categories, propertyStatuses = [] }: PropertyFilterStaticProps) {
     const router = useRouter();
     const searchParams = useSearchParams();
+    const params = useParams();
+    const lang = params.lang as string;
     
     const [keyword, setKeyword] = useState(searchParams.get('keyword') || '');
     const [selectedCategory, setSelectedCategory] = useState(searchParams.get('category') || '');
@@ -127,9 +129,10 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         if (finalStatus) params.set('property_status', finalStatus);
         
         const queryString = params.toString();
-        const newUrl = `/properties${queryString ? `?${queryString}` : ''}`;
+        const newUrl = `/${lang}/properties${queryString ? `?${queryString}` : ''}`;
         
         console.log('=== Updating URL with filters ===');
+        console.log('Language:', lang);
         console.log('Keyword:', finalKeyword);
         console.log('Category:', finalCategory);
         console.log('Status:', finalStatus);
@@ -148,7 +151,7 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         setKeyword('');
         setSelectedCategory('');
         setSelectedStatus('');
-        router.push('/properties');
+        router.push(`/${lang}/properties`);
     };
     
     // Handlers para aplicar filtros inmediatamente

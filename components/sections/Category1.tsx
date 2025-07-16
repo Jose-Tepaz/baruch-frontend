@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-
+import { useTranslation } from "@/utils/i18n-simple";
 interface Category {
     slug: string;
     name: string;
@@ -16,7 +16,7 @@ export default function Category1({ categories }: Category1Props) {
     if (!categories || categories.length === 0) {
         return null;
     }
-   
+    const { t } = useTranslation('common')
     return (
         <>
             <div className="space60"></div>
@@ -29,9 +29,9 @@ export default function Category1({ categories }: Category1Props) {
                     <div className="row">
                         <div className="col-lg-7 m-auto">
                             <div className="heading1 text-center space-margin60">
-                                <h5>Category</h5>
+                                <h5>{t('home.subtitle-category')}</h5>
                                 <div className="space16" />
-                                <h3 className="text-anime-style-3 text-white ">Select The Home That Suits You</h3>
+                                <h3 className="text-anime-style-3 text-white ">{t('home.title-category')}</h3>
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@ export default function Category1({ categories }: Category1Props) {
     {categories.map((category: Category, index: number) => (
                         <div className="col-lg-3" key={category.slug || index}>
                             <Link href={`/categories/${category.slug}`}>
-                            <div className="row" data-aos="zoom-in-up" data-aos-duration={800}>
+                            <div className="row" >
                                 <div className="category-boxarea">
 
                                     {category.image ? (

@@ -1,10 +1,54 @@
 {
-    "welcome": "Welcome to Housa",
+    "welcome": "Welcome to Baruch Real Estate",
     "navigation": {
         "home": "Home",
-        "about": "About",
-        "contact": "Contact"
+        "about": "About Us",
+        "properties": "Properties",
+        "services": "Services",
+        "contact": "Contact",
+        "btn-nav-1": "Get in touch"
     },
+
+"footer": {
+    "title-cta":"Let's Make Your Dream a Reality",
+    "description-cta":"Don’t wait to start your real estate journey. Whether you’re buying, selling, or renting, our expert team is here to guide you every step of the way. Let’s turn your vision into reality with personalized service and a seamless experience.",
+    "btn-cta": "Start Your Search Today",
+    "description-footer": "We are committed to making your real estate journey seamless and stress-free. Whether you’re buying, selling, or renting every step the way.",
+    "head-title-1": "Quick Links",
+    "head-title-2": "Categories",
+    "head-title-3": "Contact Us",
+    "head-title-4": "We Are Here",
+    "title-1-footer": "Home",
+    "title-2-footer": "About Us",
+    "title-3-footer": "Properties",
+    "title-4-footer": "Services",
+    "title-5-footer": "Contact Us"
+   
+},  
+    "home": {
+        "btn-1-hero": "View Properties",
+        "btn-2-hero": "Learn More",
+        "title-filter": "Find Your Dream Property",
+        "title-filter-1": "All Status",
+        "title-filter-2": "All Categories",
+        "btn-filter": "Search Properties",
+        "btn-all-properties": "Show all properties",
+        "title-about-us": "About Company",
+        "subtitle-list-properties": "Properties",
+        "title-list-properties": "Discover Our Latest Properties",
+        "subtitle-category": "Category",
+        "title-category": "Select The Home That Suits You",
+        "btn-about-section-2": "View Listing",
+        "title-testimonials": "What Our Clients Say",
+        "subtitle-testimonials": "Testimonials"
+
+        
+   
+
+    },
+
+
+
     "buttons": {
         "login": "Login",
         "register": "Register",

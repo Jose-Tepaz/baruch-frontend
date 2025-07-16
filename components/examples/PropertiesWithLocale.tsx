@@ -17,6 +17,7 @@ interface Property {
     slug: string;
     propertyStatus: string;
     category: any;
+    is_private?: boolean;
 }
 
 interface Category {

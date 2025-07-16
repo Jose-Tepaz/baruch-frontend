@@ -1,7 +1,7 @@
 'use client';
 import Link from "next/link";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
-
+import { useTranslation } from "@/utils/i18n-simple";
 interface About2Props {
     homeInfo?: {
         title?: string;
@@ -31,6 +31,7 @@ interface About2Props {
 }
 
 const About2 = ({ homeInfo }: About2Props) => {
+    const { t, i18n } = useTranslation('common');
     console.log('=== About2 Component Debug ===');
     console.log('Received homeInfo:', homeInfo);
     console.log('homeInfo keys:', homeInfo ? Object.keys(homeInfo) : 'No homeInfo');
@@ -64,25 +65,13 @@ const About2 = ({ homeInfo }: About2Props) => {
                    homeInfo?.image || 
                    "/assets/img/all-images/about/about-img2.png";
 
-    console.log('=== About2 Final Values ===');
-    console.log('Title used:', title);
-    console.log('Subtitle used:', subtitle);
-    console.log('Description used:', description);
-    console.log('Image used:', image);
-    console.log('Available data paths:');
-    console.log('  - homeInfo?.about2?.title:', homeInfo?.about2?.title);
-    console.log('  - homeInfo?.abouttitle?.about_title?.Title:', homeInfo?.abouttitle?.about_title?.Title);
-    console.log('  - homeInfo?.Title:', homeInfo?.Title);
-    console.log('  - homeInfo?.title:', homeInfo?.title);
+  
 
     // Función para renderizar el contenido de description de manera segura
     const renderDescription = () => {
         if (!description) return null;
         
-        console.log('=== About2 Description Debug ===');
-        console.log('Description type:', typeof description);
-        console.log('Description value:', description);
-        console.log('Is array:', Array.isArray(description));
+        
         
         // Si description es un array de bloques Strapi, usar BlocksRenderer
         if (Array.isArray(description)) {
@@ -129,12 +118,12 @@ const About2 = ({ homeInfo }: About2Props) => {
                     <div className="row align-items-center">
                         <div className="col-lg-4">
                             <div className="heading1">
-                                <h5 className="text-color-black-blue">About Company</h5>
+                                <h5 className="text-color-black-blue">{t('home.title-about-us')}</h5>
                                 <div className="space16" />
                                 <h2 className="text-anime-style-3">{title}</h2>
                                 <h3>{subtitle}</h3>
                                 <div className="space50" />
-                                <div className="img1 image-anime reveal">
+                                <div className="img1 image-anime reveal" style={{width: '100%', height: '350px'}}>
                                     <img src={image} alt="housa" />
                                 </div>
                             </div>
@@ -147,42 +136,7 @@ const About2 = ({ homeInfo }: About2Props) => {
                         </div>
                         <div className="col-lg-4">
                             <div className="heading1">
-                                <div className="arrow-btnarea" data-aos="fade-left" data-aos-duration={900}>
-                                    <Link href="/about-us">
-                                        <div className="content keyframe5">
-                                            <h6 className="circle rotateme">
-                                                <span style={{ transform: "rotate(0deg)" }}>A</span>
-                                                <span style={{ transform: "rotate(17deg)" }}>S</span>
-                                                <span style={{ transform: "rotate(34deg)" }}>u</span>
-                                                <span style={{ transform: "rotate(51deg)" }}>c</span>
-                                                <span style={{ transform: "rotate(51deg)" }}>c</span>
-                                                <span style={{ transform: "rotate(68deg)" }}>e</span>
-                                                <span style={{ transform: "rotate(85deg)" }}>s</span>
-                                                <span style={{ transform: "rotate(102deg)" }}>s</span>
-                                                <span style={{ transform: "rotate(119deg)" }}>b</span>
-                                                <span style={{ transform: "rotate(136deg)" }}>r</span>
-                                                <span style={{ transform: "rotate(153deg)" }}>a</span>
-                                                <span style={{ transform: "rotate(170deg)" }}>n</span>
-                                                <span style={{ transform: "rotate(187deg)" }}>w</span>
-                                                <span style={{ transform: "rotate(204deg)" }}>i</span>
-                                                <span style={{ transform: "rotate(221deg)" }}>t</span>
-                                                <span style={{ transform: "rotate(238deg)" }}>h</span>
-                                                <span style={{ transform: "rotate(255deg)" }}>d</span>
-                                                <span style={{ transform: "rotate(272deg)" }}>e</span>
-                                                <span style={{ transform: "rotate(289deg)" }}>m</span>
-                                                <span style={{ transform: "rotate(306deg)" }}>o</span>
-                                                <span style={{ transform: "rotate(323deg)" }}>u</span>
-                                                <span style={{ transform: "rotate(340deg)" }}>i</span>
-                                                <span style={{ transform: "rotate(340deg)" }}>b</span>
-                                                <span style={{ transform: "rotate(340deg)" }}>u</span>
-                                                <span style={{ transform: "rotate(340deg)" }}>i</span>
-                                                <span style={{ transform: "rotate(340deg)" }}>l</span>
-                                                <span style={{ transform: "rotate(340deg)" }}>d</span>
-                                            </h6>
-                                        </div>
-                                        <img src="/assets/img/icons/arrow1.svg" alt="housa" className="arrow1" />
-                                    </Link>
-                                </div>
+                            <div className="space30" />
                                 <div className="space30" />
                                 <div>
                                     {renderDescription()}

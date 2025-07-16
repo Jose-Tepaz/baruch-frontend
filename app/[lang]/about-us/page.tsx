@@ -8,15 +8,81 @@ import Team1 from "@/components/sections/Team1";
 import Testimonial1 from "@/components/sections/Testimonial1";
 import Property1 from "@/components/sections/property1";
 import PropertyList1 from "@/components/sections/PropertieList1";
-import { getProperties } from "@/services/properties";
+import { getProperties } from "@/services/get-properties";
+import { Metadata } from 'next';
 
-export default async function Home() {
-    const properties = await getProperties({ locale: 'en' });
+interface AboutUsPageProps {
+    params: {
+        lang: string;
+    };
+}
+
+export async function generateMetadata({ params: { lang } }: AboutUsPageProps): Promise<Metadata> {
+  const titles = {
+    en: 'About Us - Baruch Real Estate',
+    es: 'Sobre Nosotros - Baruch Bienes Raíces',
+    fr: 'À Propos de Nous - Baruch Immobilier',
+    de: 'Über Uns - Baruch Immobilien',
+    it: 'Chi Siamo - Baruch Immobiliare',
+    pt: 'Sobre Nós - Baruch Imobiliária'
+  };
+
+  const descriptions = {
+    en: 'Learn about Baruch Real Estate, our mission, values, and commitment to helping you find your perfect property. Meet our experienced team of real estate professionals.',
+    es: 'Conoce sobre Baruch Bienes Raíces, nuestra misión, valores y compromiso para ayudarte a encontrar tu propiedad perfecta. Conoce a nuestro experimentado equipo de profesionales inmobiliarios.',
+    fr: 'Découvrez Baruch Immobilier, notre mission, nos valeurs et notre engagement à vous aider à trouver votre propriété parfaite. Rencontrez notre équipe expérimentée de professionnels immobiliers.',
+    de: 'Erfahren Sie mehr über Baruch Immobilien, unsere Mission, Werte und unser Engagement, Ihnen bei der Suche nach Ihrer perfekten Immobilie zu helfen. Lernen Sie unser erfahrenes Team von Immobilienprofis kennen.',
+    it: 'Scopri Baruch Immobiliare, la nostra missione, i nostri valori e il nostro impegno per aiutarti a trovare la tua proprietà perfetta. Incontra il nostro team esperto di professionisti immobiliari.',
+    pt: 'Saiba mais sobre a Baruch Imobiliária, nossa missão, valores e compromisso em ajudá-lo a encontrar sua propriedade perfeita. Conheça nossa equipe experiente de profissionais imobiliários.'
+  };
+
+  return {
+    title: titles[lang as keyof typeof titles] || titles.en,
+    description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
+    keywords: 'about us, real estate company, Baruch, property professionals, team, mission, values',
+    openGraph: {
+      title: titles[lang as keyof typeof titles] || titles.en,
+      description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
+      type: 'website',
+      locale: lang,
+      url: `https://baruch.com/${lang}/about-us`,
+      siteName: 'Baruch Real Estate',
+      images: [
+        {
+          url: 'https://baruch.com/about-us-og.jpg',
+          width: 1200,
+          height: 630,
+          alt: 'About Baruch Real Estate'
+        }
+      ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: titles[lang as keyof typeof titles] || titles.en,
+      description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
+      images: ['https://baruch.com/about-us-og.jpg']
+    },
+    alternates: {
+      canonical: `https://baruch.com/${lang}/about-us`,
+      languages: {
+        'en': '/en/about-us',
+        'es': '/es/about-us',
+        'fr': '/fr/about-us',
+        'de': '/de/about-us',
+        'it': '/it/about-us',
+        'pt': '/pt/about-us'
+      }
+    }
+  };
+}
+
+export default async function AboutUsPage({ params: { lang } }: AboutUsPageProps) {
+    const propertiesResult = await getProperties({ locale: lang, onlyPrivate: false });
+    const properties = propertiesResult?.properties || [];
     
     return (
         <>
             <Layout>
-                
                 <AboutHero />
                <div className="space30"></div>
                 <Others3 />

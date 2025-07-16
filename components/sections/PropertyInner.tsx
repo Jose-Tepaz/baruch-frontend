@@ -20,6 +20,7 @@ interface Property {
     documentId: string;
     Map_link: string;
     propertyStatus: string;
+    is_private?: boolean;
 }
 
 export default function PropertyInner({ block_extend, property }: { block_extend: string, property: Property }) {

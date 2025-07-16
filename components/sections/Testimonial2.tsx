@@ -1,6 +1,7 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { useTranslation } from "@/utils/i18n-simple";
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
     slidesPerView: 1,
@@ -21,6 +22,7 @@ const swiperOptions = {
     },
 };
 export default function Testimonial2() {
+    const { t } = useTranslation('common')
     return (
         <>
             {/*===== TESTIMONIAL AREA STARTS =======*/}
@@ -34,9 +36,9 @@ export default function Testimonial2() {
                         </div>
                         <div className="col-lg-6">
                             <div className="heading1">
-                                <h5>Testimonials</h5>
+                                <h5>{t('home.subtitle-testimonials')}</h5>
                                 <div className="space16" />
-                                <h2 className="text-anime-style-3">Hear from satisfied clients who have found dream Their homes.</h2>
+                                <h2 className="text-anime-style-3">{t('home.title-testimonials')}</h2>
                                 <div className="space50" />
                                 <div className="testimonial-container">
                                     <Swiper {...swiperOptions} className="swiper mySwiper">

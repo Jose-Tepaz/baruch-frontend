@@ -2,7 +2,7 @@
 "use client";
 
 import Link from 'next/link'
-
+import { useTranslation } from "@/utils/i18n-simple";
 type PropertyCardProps = {
     title: string
     address: string
@@ -14,7 +14,7 @@ type PropertyCardProps = {
     propertyStatus: string
     category: string
     locale: string
-   
+    isPrivate: boolean
   }
   
   export default function PropertyListSlide({
@@ -27,9 +27,11 @@ type PropertyCardProps = {
     propertyStatus,
     isForRent,
     category,
-    locale
+    locale,
+    isPrivate
    
   }: PropertyCardProps) {
+    const { t } = useTranslation('common')
     // Validación de seguridad para la URL
     //const sanitizedUrl = documentId && typeof documentId === 'string' ? documentId.replace(/[^a-zA-Z0-9-_]/g, '') : ''
     
@@ -39,9 +41,7 @@ type PropertyCardProps = {
     // Validación de imagen
     const safeImageUrl = imageUrl && typeof imageUrl === 'string' ? imageUrl : ''
 
-    console.log('=== PropertyListSlide DEBUG ===');
-    console.log('propertyStatus received:', propertyStatus);
-    console.log('All props:', { title, address, price, imageUrl, isNew, propertyStatus, documentId, category, locale   });
+   
 
     return (
       <>

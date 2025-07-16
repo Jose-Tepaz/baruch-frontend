@@ -1,5 +1,8 @@
 import Link from "next/link";
+import logoWhite from '@/public/assets/img/logo/logo-baruch-white.svg';
+import { useTranslation } from "@/utils/i18n-simple";
 export default function Footer1() {
+    const { t } = useTranslation('common')
     return (
         <>
         <div className="wrapper-footer">
@@ -9,15 +12,15 @@ export default function Footer1() {
                         <div className="row">
                             <div className="col-lg-10 m-auto">
                                 <div className="heading1 text-center">
-                                    <h2 className="text-anime-style-3 text-color-blue">Let’s Make Your Property Dreams a Reality</h2>
+                                    <h2 className="text-anime-style-3 text-color-blue">{t('footer.title-cta')}</h2>
                                     <div className="space16" />
                                     <p data-aos="fade-up text-white" data-aos-duration={900} className="text-white">
-                                        Don’t wait to start your real estate journey. Whether you’re buying, selling, or renting, our expert <br className="d-lg-block d-none" /> team is here to guide you every step of the way. Let’s turn your vision into reality with <br className="d-lg-block d-none" /> personalized service and a seamless experience.
+                                        {t('footer.description-cta')}
                                     </p>
                                     <div className="space32" />
                                     <div  data-aos="fade-up" data-aos-duration={1000}>
                                         <Link href="/properties" className="vl-btn1 is-primary">
-                                            Start Your Search Today
+                                            {t('footer.btn-cta')}
                                             <span className="arrow1 ms-2">
                                                 <i className="fa-solid fa-arrow-right" />
                                             </span>
@@ -36,9 +39,9 @@ export default function Footer1() {
                         <div className="row">
                             <div className="col-lg-3 col-md-6">
                                 <div className="footer-time-area">
-                                    <img src="/assets/img/logo/logo1.png" alt="housa" />
+                                    <img src={logoWhite.src} alt="housa" />
                                     <div className="space24" />
-                                    <p className="text-white">We are committed to making your real estate journey seamless and stress-free. Whether you’re buying, selling, or renting every step the way.</p>
+                                    <p className="text-white">{t('footer.description-footer')}</p>
                                     <div className="space32" />
                                     <ul>
                                         <li>
@@ -67,22 +70,22 @@ export default function Footer1() {
                             <div className="col-lg col-md-6">
                                 <div className="space30 d-md-none d-block" />
                                 <div className="footer-widget-area foot-padding1">
-                                    <h3 className="text-white">Quick Links</h3>
+                                    <h3 className="text-white">{t('footer.head-title-1')}</h3>
                                     <ul className="text-white">
                                         <li>
-                                            <Link href="/" className="text-white">Home</Link>
+                                            <Link href="/" className="text-white">{t('footer.title-1-footer')}</Link>
                                         </li>
                                         <li>
-                                            <Link href="/about-us" className="text-white">About Us</Link>
+                                            <Link href="/about-us" className="text-white">{t('footer.title-2-footer')}</Link>
                                         </li>
                                         <li>
-                                            <Link href="/our-service" className="text-white">Services</Link>
+                                            <Link href="/properties" className="text-white">{t('footer.title-3-footer')}</Link>
                                         </li>
                                         <li>
-                                            <Link href="/property-halfmap-grid" className="text-white">Properties</Link>
+                                            <Link href="/services" className="text-white">{t('footer.title-4-footer')}</Link>
                                         </li>
                                         <li>
-                                            <Link href="/contact" className="text-white">Contact Us</Link>
+                                            <Link href="/contact" className="text-white">{t('footer.title-5-footer')}</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -90,7 +93,7 @@ export default function Footer1() {
                             <div className="col-lg col-md-4">
                                 <div className="space30 d-lg-none d-block" />
                                 <div className="footer-widget-area foot-padding2">
-                                    <h3 className="text-white">Categories</h3>
+                                    <h3 className="text-white">{t('footer.head-title-2')}</h3>
                                     <ul className="text-white">
                                         <li>
                                             <Link href="#" className="text-white">Residential</Link>
@@ -113,7 +116,7 @@ export default function Footer1() {
                             <div className="col-lg col-md-4">
                                 <div className="space30 d-lg-none d-block" />
                                 <div className="footer-widget-area">
-                                    <h3 className="text-white">Contact Us</h3>
+                                    <h3 className="text-white">{t('footer.head-title-3')}</h3>
                                     <ul className="text-white">
                                         <li>
                                             <Link href="tel:+11234567890" className="d-flex align-items-center gap-2 text-white">
@@ -178,7 +181,7 @@ export default function Footer1() {
                             <div className="col-lg col-md-4">
                                 <div className="space30 d-lg-none d-block" />
                                 <div className="footer-widget-area">
-                                    <h3 className="text-white">We Are Here</h3>
+                                    <h3 className="text-white">{t('footer.head-title-4')}</h3>
                                     <div className="space28" />
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4506257.120552435!2d88.67021924228865!3d21.954385721237916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1704088968016!5m2!1sen!2sbd" width={600} height={450} style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
                                 </div>

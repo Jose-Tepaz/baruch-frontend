@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import AuthButtons from "@/components/auth/AuthButtons";
+
 export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
     const [isAccordion, setIsAccordion] = useState(0);
     const handleAccordion = (key: any) => {
@@ -24,6 +26,12 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
                                 </button>
                             </div>
                         </div>
+                        
+                        {/* Botones de autenticación móviles */}
+                        <div className="mb-4 px-3">
+                            <AuthButtons />
+                        </div>
+                        
                         <div className="vl-offcanvas-menu d-lg-none mb-40">
                             <nav>
                                 <ul>

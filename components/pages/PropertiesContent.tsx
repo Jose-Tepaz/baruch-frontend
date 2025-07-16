@@ -1,9 +1,5 @@
 "use client";
 
-import { useLanguageData } from '@/hooks/useLanguageData'
-import { getProperties } from '@/services/get-properties'
-import { getCategories } from '@/services/categories'
-import { getPropertyStatuses } from '@/services/property-status'
 import { useState, useEffect } from 'react'
 import PropertyFilterStatic from "@/components/elements/property-filter-static";
 import PropertieCardV1 from "@/components/sections/PropertieCardV1";
@@ -40,6 +36,7 @@ interface Property {
     amenities?: string[];
     documentId: string;
     description?: string;
+    is_private?: boolean;
 }
 
 interface PropertiesContentProps {
@@ -58,84 +55,26 @@ interface PropertiesContentProps {
 
 export default function PropertiesContent({ 
     initialProperties, 
-    categories: initialCategories, 
-    propertyStatuses: initialStatuses,
+    categories, 
+    propertyStatuses,
     searchParams 
 }: PropertiesContentProps) {
-    const { category, property_status } = searchParams;
-    
-    // Función para obtener propiedades según filtros
-    const fetchProperties = async (locale: string) => {
-        try {
-            console.log('=== PropertiesContent: Fetching properties with locale:', locale);
-            console.log('=== PropertiesContent: Category filter:', category);
-            console.log('=== PropertiesContent: Property status filter:', property_status);
-            
-            const result = await getProperties({ 
-                categoryId: category, 
-                locale 
-            });
-            
-            console.log('=== PropertiesContent: API Response:', result);
-            console.log('=== PropertiesContent: Properties fetched:', result?.properties?.length || 0);
-            
-            // Filtrar por property_status si está presente
-            let properties = result?.properties || [];
-            console.log('=== PropertiesContent: Properties before status filter:', properties.length);
-            
-            if (property_status && property_status.trim() !== '') {
-                properties = properties.filter((property: any) => {
-                    return property.propertyStatus === property_status;
-                });
-                console.log('=== PropertiesContent: Properties after status filter:', properties.length);
-            }
-            
-            console.log('=== PropertiesContent: Final properties to return:', properties.length);
-            console.log('=== PropertiesContent: First property:', properties[0]);
-            
-            return properties; // Devolver solo el array de propiedades
-        } catch (error) {
-            console.error('=== PropertiesContent: Error fetching properties:', error);
-            return [];
-        }
-    };
-    
-    // Hooks para manejar cambios de idioma
-    const { data: properties, loading: propertiesLoading, error: propertiesError } = useLanguageData(
-        fetchProperties,
-        initialProperties || [], // Solo pasar el array de propiedades
-        [category, property_status] // Recargar cuando cambien los filtros
-    );
-    
-    const { data: categories, loading: categoriesLoading } = useLanguageData(
-        (locale: string) => getCategories(locale),
-        initialCategories || [],
-        []
-    );
-    
-    const { data: propertyStatuses, loading: statusesLoading } = useLanguageData(
-        (locale: string) => getPropertyStatuses(locale),
-        initialStatuses || [],
-        []
-    );
     
     // Filtros adicionales (los que no se pueden hacer en el servidor)
     const [filteredProperties, setFilteredProperties] = useState<Property[]>([]);
     
     useEffect(() => {
         console.log('=== PropertiesContent: Filtering properties ===');
-        console.log('Raw properties:', properties);
-        console.log('Properties length:', properties?.length || 0);
-        console.log('Properties loading:', propertiesLoading);
-        console.log('Properties error:', propertiesError);
+        console.log('Raw properties:', initialProperties);
+        console.log('Properties length:', initialProperties?.length || 0);
         
-        if (!properties || !Array.isArray(properties) || properties.length === 0) {
+        if (!initialProperties || !Array.isArray(initialProperties) || initialProperties.length === 0) {
             console.log('=== PropertiesContent: No properties to filter ===');
             setFilteredProperties([]);
             return;
         }
         
-        let filtered = [...properties];
+        let filtered = [...initialProperties];
         
         // Aplicar filtros locales
         const { keyword, city, state, amenities } = searchParams;
@@ -167,12 +106,10 @@ export default function PropertiesContent({
         
         console.log('=== PropertiesContent: Filtered properties count:', filtered.length);
         setFilteredProperties(filtered);
-    }, [properties, searchParams, propertiesLoading, propertiesError]);
+    }, [initialProperties, searchParams]);
     
-    const isLoading = propertiesLoading || categoriesLoading || statusesLoading;
+    const isLoading = false; // Ya no hay loading porque usamos datos del servidor
     
-
-
     return (
         <div className="property-inner-section-find">
            
@@ -219,7 +156,7 @@ export default function PropertiesContent({
                                 <h4>No se encontraron propiedades</h4>
                                 <p>Intenta cambiar los filtros de búsqueda</p>
                                 <small className="text-muted">
-                                    Debug: Properties={properties?.length || 0}, 
+                                    Debug: Properties={initialProperties?.length || 0}, 
                                     Filtered={filteredProperties?.length || 0}, 
                                     Loading={isLoading ? 'Yes' : 'No'}
                                 </small>

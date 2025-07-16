@@ -22,50 +22,50 @@ interface PropertiesPageProps {
 
 export async function generateMetadata({ params: { lang } }: PropertiesPageProps): Promise<Metadata> {
   const titles = {
-    en: 'Properties - Baruch Real Estate',
-    es: 'Propiedades - Baruch Bienes Raíces',
-    fr: 'Propriétés - Baruch Immobilier',
-    de: 'Immobilien - Baruch Immobilien',
-    it: 'Proprietà - Baruch Immobiliare',
-    pt: 'Propriedades - Baruch Imobiliária'
+    en: 'Private Properties - Baruch Real Estate',
+    es: 'Propiedades Privadas - Baruch Bienes Raíces',
+    fr: 'Propriétés Privées - Baruch Immobilier',
+    de: 'Private Immobilien - Baruch Immobilien',
+    it: 'Proprietà Private - Baruch Immobiliare',
+    pt: 'Propriedades Privadas - Baruch Imobiliária'
   };
 
   const descriptions = {
-    en: 'Browse our extensive collection of properties. Find houses, apartments, and commercial properties that match your needs.',
-    es: 'Explora nuestra extensa colección de propiedades. Encuentra casas, apartamentos y propiedades comerciales que se adapten a tus necesidades.',
-    fr: 'Parcourez notre vaste collection de propriétés. Trouvez maisons, appartements et propriétés commerciales qui correspondent à vos besoins.',
-    de: 'Durchsuchen Sie unsere umfangreiche Immobiliensammlung. Finden Sie Häuser, Wohnungen und Gewerbeimmobilien, die Ihren Bedürfnissen entsprechen.',
-    it: 'Sfoglia la nostra vasta collezione di proprietà. Trova case, appartamenti e proprietà commerciali che si adattano alle tue esigenze.',
-    pt: 'Navegue pela nossa extensa coleção de propriedades. Encontre casas, apartamentos e propriedades comerciais que atendam às suas necessidades.'
+    en: 'Browse our exclusive collection of private properties for authorized users.',
+    es: 'Explora nuestra colección exclusiva de propiedades privadas para usuarios autorizados.',
+    fr: 'Parcourez notre collection exclusive de propriétés privées pour les utilisateurs autorisés.',
+    de: 'Durchsuchen Sie unsere exklusive Sammlung privater Immobilien für autorisierte Benutzer.',
+    it: 'Sfoglia la nostra collezione esclusiva di proprietà private per utenti autorizzati.',
+    pt: 'Navegue pela nossa coleção exclusiva de propriedades privadas para usuários autorizados.'
   };
 
   return {
     title: titles[lang as keyof typeof titles] || titles.en,
     description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
-    keywords: 'properties, real estate, houses, apartments, commercial properties, Baruch',
+    keywords: 'private properties, real estate, Baruch',
     openGraph: {
       title: titles[lang as keyof typeof titles] || titles.en,
       description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
       type: 'website',
       locale: lang,
-      url: `https://baruch.com/${lang}/properties`,
+      url: `https://baruch.com/${lang}/private-properties`,
       siteName: 'Baruch Real Estate',
     },
     alternates: {
-      canonical: `https://baruch.com/${lang}/properties`,
+      canonical: `https://baruch.com/${lang}/private-properties`,
       languages: {
-        'en': '/en/properties',
-        'es': '/es/properties',
-        'fr': '/fr/properties',
-        'de': '/de/properties',
-        'it': '/it/properties',
-        'pt': '/pt/properties'
+        'en': '/en/private-properties',
+        'es': '/es/private-properties',
+        'fr': '/fr/private-properties',
+        'de': '/de/private-properties',
+        'it': '/it/private-properties',
+        'pt': '/pt/private-properties'
       }
     }
   };
 }
 
-export default async function PropertiesPage({ params, searchParams }: PropertiesPageProps) {
+export default async function PrivatePropertiesPage({ params, searchParams }: PropertiesPageProps) {
     const { lang } = params;
     const { category, property_status, keyword, city, state, amenities } = searchParams;
     
@@ -76,32 +76,21 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
     
     try {
         // Obtener propiedades según el filtro usando el servicio get-properties
-        console.log('=== Properties Page DEBUG ===');
-        console.log('Language:', lang);
-        console.log('Search params:', searchParams);
-        console.log('Category filter:', category);
-        console.log('Property status filter:', property_status);
-        
         const result = await getProperties({ 
             categoryId: category, 
-            locale: lang, // Usar el locale dinámico
-            onlyPrivate: false // Mostrar solo propiedades públicas
+            locale: lang,
+            onlyPrivate: true // Filtro para solo propiedades privadas
         });
-        
         properties = result?.properties || [];
-        
         // Filtrar por property_status si está presente
         if (property_status && property_status.trim() !== '') {
             properties = properties.filter((property: any) => {
                 return property.propertyStatus === property_status;
             });
-            console.log('Properties after status filter:', properties.length);
         }
-        
         // Filtrar propiedades localmente por otros criterios si es necesario
         if (properties && (keyword || city || state || amenities)) {
             properties = properties.filter((property: any) => {
-                // Filtrar por keyword (en título o descripción)
                 if (keyword) {
                     const searchTerm = keyword.toLowerCase();
                     const title = property.title?.toLowerCase() || '';
@@ -110,18 +99,12 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
                         return false;
                     }
                 }
-                
-                // Filtrar por city
                 if (city && !property.address?.toLowerCase().includes(city.toLowerCase())) {
                     return false;
                 }
-                
-                // Filtrar por state
                 if (state && !property.address?.toLowerCase().includes(state.toLowerCase())) {
                     return false;
                 }
-                
-                // Filtrar por amenities
                 if (amenities) {
                     const amenityArray = Array.isArray(amenities) ? amenities : [amenities];
                     if (amenityArray.length > 0) {
@@ -134,37 +117,26 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
                         }
                     }
                 }
-                
                 return true;
             });
         }
-        
-        console.log('Final properties count:', properties.length);
-        
     } catch (error) {
-        console.error('Error loading properties:', error);
         properties = [];
     }
-    
     try {
-        categories = await getCategories(lang); // Usar el locale dinámico
+        categories = await getCategories(lang);
     } catch (error) {
-        console.error('Error loading categories:', error);
         categories = [];
     }
-
     try {
-        propertyStatuses = await getPropertyStatuses(lang); // Usar el locale dinámico
+        propertyStatuses = await getPropertyStatuses(lang);
     } catch (error) {
-        console.error('Error loading property statuses:', error);
         propertyStatuses = [];
     }
-    
     return (
         <SimpleLayout>
-            <InnerHeader title="Our Properties" currentpage="Our Properties" />
+            <InnerHeader title="Private Properties" currentpage="Private Properties" />
             <div className="space30" />
-            
             <PropertiesContent 
                 initialProperties={properties}
                 categories={categories}
@@ -173,5 +145,4 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
             />
         </SimpleLayout>
     )
-}
-
+} 

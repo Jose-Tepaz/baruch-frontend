@@ -28,6 +28,7 @@ interface PropertyData {
   city?: string
   state?: string
   amenities?: string[]
+  is_private?: boolean
 }
 
 export type getPropertiesFilter = {
@@ -120,7 +121,8 @@ export function getPropertiesByCategory(categorySlug: string, propertyStatus?: s
 export function getProperties(filter: getPropertiesFilter = {}) {
   const currentLocale = getLocaleWithFallback(filter.locale)
   
-  let queryString = 'properties?populate=main_image&populate=property_status&populate=category&pagination[limit]=100'
+  // Arreglar la query para populizar correctamente los campos
+  let queryString = 'properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&pagination[limit]=100'
   
   // Agregar parámetro locale
   queryString += `&locale=${encodeURIComponent(currentLocale)}`
@@ -151,6 +153,7 @@ export function getProperties(filter: getPropertiesFilter = {}) {
       if (process.env.NODE_ENV === 'development') {
         console.log('=== getProperties API Response ===');
         console.log('Data count:', res.data?.length || 0);
+        console.log('Sample property:', res.data?.[0]);
       }
       
       if (!res || !res.data) {
@@ -191,10 +194,12 @@ export function getProperties(filter: getPropertiesFilter = {}) {
         const image = rawimage ? `${STRAPI_HOST}${rawimage.url}` : ''
         const propertyStatus = property_status ? property_status.Title : ''
         
-        console.log('=== getProperties Property Mapping ===');
-        console.log('Property title:', title);
-        console.log('Property status:', propertyStatus);
-        console.log('Category:', category);
+        if (process.env.NODE_ENV === 'development') {
+          console.log('=== getProperties Property Mapping ===');
+          console.log('Property title:', title);
+          console.log('Property status:', propertyStatus);
+          console.log('Category:', category);
+        }
         
         return {
           id,
@@ -246,7 +251,8 @@ export function getPropertyByDocumentId(documentId: string, locale?: string) {
         slug,
         property_status,
         category,
-        is_new
+        is_new,
+        is_private
       } = property
 
       const main_image = rawMainImage ? `${STRAPI_HOST}${rawMainImage.url}` : ''
@@ -270,6 +276,7 @@ export function getPropertyByDocumentId(documentId: string, locale?: string) {
         slug,
         category,
         is_new,
+        is_private,
         propertyStatus,
       }
     })

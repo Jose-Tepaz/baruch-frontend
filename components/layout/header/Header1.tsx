@@ -1,7 +1,10 @@
 import Link from "next/link";
 import LanguageSelector from "@/components/elements/LanguageSelector";
+import AuthButtons from "@/components/auth/AuthButtons";
+import { useTranslation } from "@/utils/i18n-simple";
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any) {
+    const { t } = useTranslation('common')
     return (
         <header className="homepage1-body">
             <div id="vl-header-sticky" className={`vl-header-area vl-transparent-header  ${scroll ? "header-sticky top-0 position-fixed w-100" : ""}`}>
@@ -14,22 +17,22 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                 </Link>
                             </div>
                         </div>
-                        <div className="col-lg-8 d-none d-lg-block">
+                        <div className="col-lg-6 d-none d-lg-block">
                             <div className="vl-main-menu text-center">
                                 <nav className="vl-mobile-menu-active">
                                     <ul>
                                         <li className="has-dropdown">
-                                            <Link href="/">Home</Link>
+                                            <Link href="/">{t('navigation.home')}</Link>
                                           
                                         </li>
                                             <li>
-                                                <Link href="/properties">Properties</Link>
+                                                <Link href="/properties">{t('navigation.properties')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/about-us">About Us</Link>
+                                                <Link href="/about-us">{t('navigation.about')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/services">Services</Link>
+                                                <Link href="/services">{t('navigation.services')}</Link>
                                             </li>
                                         {/*
                                         <li className="has-dropdown">
@@ -168,13 +171,14 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                 </nav>
                             </div>
                         </div>
-                        <div className="col-lg-2 col-md-6 col-6">
+                        <div className="col-lg-4 col-md-6 col-6">
                             <div className="vl-hero-btn d-none d-lg-block text-end">
                                 <div className="d-flex align-items-center justify-content-end gap-3">
                                     <LanguageSelector />
+                                    <AuthButtons />
                                     <div className="btn-area1 mt-0" style={{width: '20px', minWidth: '200px', display: 'flex', justifyContent: 'flex-end', alignItems: 'center'}}>
                                         <Link href="/add-property" className="vl-btn1 mt-0">
-                                        Get in touch
+                                        {t('navigation.btn-nav-1')}
                                             <span className="arrow1 ms-2">
                                                 <i className="fa-solid fa-arrow-right" />
                                             </span>

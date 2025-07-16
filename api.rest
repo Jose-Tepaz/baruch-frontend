@@ -1,5 +1,11 @@
-//GET http://localhost:1337/api/home?populate[0]=abouttitle&populate[1]=abouttitle.about_title&populate[2]=abouttitle.about_title.img_1&populate[3]=abouttitle.about_title.img_2
+//Get Home
+//GET http://localhost:1337/api/home?populate[0]=abouttitle&populate[1]=abouttitle.about_title&populate[2]=abouttitle.about_title.img_1&populate[3]=abouttitle.about_title.img_2&populate=why_choose_us.img_1&populate=why_choose_us.img_2
 //Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
+
+//GET http://localhost:1337/api/home?populate[0]=why_choose_us
+//Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
+
+
 
 //GET http://localhost:1337/api/categories?fields[0]=name&fields[1]=slug&fields[2]=description&populate[image][fields][0]=url
 //Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
@@ -20,5 +26,8 @@
 //GET http://localhost:1337/api/properties?populate=main_image&filters[category][slug][$contains]=
 //Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
 
-GET http://localhost:1337/api/properties/sv61fkb8tyugdjae25pjq0me?populate=main_image&populate=gallery&populate=category&populate=property_status&locale=en
+//GET http://localhost:1337/api/properties/sv61fkb8tyugdjae25pjq0me?populate=main_image&populate=gallery&populate=category&populate=property_status&locale=en
+//Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
+
+GET http://localhost:1337/api/properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&pagination[limit]=100
 Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
