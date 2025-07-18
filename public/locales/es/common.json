@@ -6,7 +6,10 @@
         "properties": "Propiedades",
         "services": "Servicios",
         "contact": "Contacto",
-        "btn-nav-1": "Contactar"
+        "btn-nav-1": "Contactar",
+        "login-btn": "Iniciar Sesión",
+        "logout-btn": "Cerrar Sesión",
+        "btn-private-properties": "Propiedades"
     },
 
 "footer": {

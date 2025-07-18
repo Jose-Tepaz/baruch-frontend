@@ -135,7 +135,7 @@ export default async function PrivatePropertiesPage({ params, searchParams }: Pr
     }
     return (
         <SimpleLayout>
-            <InnerHeader title="Private Properties" currentpage="Private Properties" />
+           
             <div className="space30" />
             <PropertiesContent 
                 initialProperties={properties}

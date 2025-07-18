@@ -4,12 +4,12 @@ import { useAuth } from '@/context/AuthContext'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { getCurrentLocale } from '@/utils/get-current-locale'
-
+import { useTranslation } from '@/utils/i18n-simple'
 export default function AuthButtons() {
   const { user, isAuthenticated, logout } = useAuth()
   const router = useRouter()
   const currentLocale = getCurrentLocale()
-
+  const { t } = useTranslation('common')
   const handleLogout = () => {
     logout()
     router.push(`/${currentLocale}`)
@@ -26,13 +26,13 @@ export default function AuthButtons() {
             aria-expanded="false"
           >
             <i className="fa-solid fa-user me-2"></i>
-            {user?.username || 'Usuario'}
+            {user?.username || t('navigation.logout-btn')}
           </button>
           <ul className="dropdown-menu">
             <li>
               <Link className="dropdown-item" href={`/${currentLocale}/private-properties`}>
                 <i className="fa-solid fa-lock me-2"></i>
-                Properties
+                {t('navigation.btn-private-properties')}
               </Link>
             </li>
             <li><hr className="dropdown-divider" /></li>
@@ -42,7 +42,7 @@ export default function AuthButtons() {
                 onClick={handleLogout}
               >
                 <i className="fa-solid fa-sign-out-alt me-2"></i>
-                Cerrar Sesión
+                {t('navigation.logout-btn')}
               </button>
             </li>
           </ul>
@@ -52,10 +52,10 @@ export default function AuthButtons() {
   }
 
   return (
-    <div className="d-flex align-items-center gap-2">
-      <Link href={`/${currentLocale}/login`} className="btn btn-outline-primary">
+    <div className="wrapp-login-btn">
+      <Link href={`/${currentLocale}/login`} className="login-btn">
         <i className="fa-solid fa-sign-in-alt me-2"></i>
-        Iniciar Sesión
+       Login
       </Link>
     </div>
   )

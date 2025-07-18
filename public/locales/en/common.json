@@ -6,7 +6,11 @@
         "properties": "Properties",
         "services": "Services",
         "contact": "Contact",
-        "btn-nav-1": "Get in touch"
+        "btn-nav-1": "Get in touch",
+        "login-btn": "Login",
+        "logout-btn": "Logout",
+        "btn-private-properties": "Properties"
+        
     },
 
 "footer": {

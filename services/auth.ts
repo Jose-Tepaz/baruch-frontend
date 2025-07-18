@@ -72,38 +72,7 @@ export async function login(credentials: LoginCredentials): Promise<AuthResponse
   }
 }
 
-// Función para registrar usuario
-export async function register(userData: RegisterData): Promise<AuthResponse> {
-  try {
-    console.log('Intentando registro con URL:', `${STRAPI_HOST}/api/auth/local/register`)
-    
-    const response = await fetch(`${STRAPI_HOST}/api/auth/local/register`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(userData),
-    })
 
-    if (!response.ok) {
-      const errorText = await response.text()
-      console.error('Error response:', errorText)
-      
-      try {
-        const error = JSON.parse(errorText)
-        throw new Error(error.error?.message || 'Registration failed')
-      } catch (parseError) {
-        throw new Error(`Registration failed: ${response.status} ${response.statusText}`)
-      }
-    }
-
-    const data = await response.json()
-    return data
-  } catch (error) {
-    console.error('Registration error:', error)
-    throw error
-  }
-}
 
 // Función para verificar el token
 export async function verifyToken(token: string): Promise<User> {

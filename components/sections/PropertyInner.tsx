@@ -28,7 +28,7 @@ export default function PropertyInner({ block_extend, property }: { block_extend
     return (
         <>
             {/*===== PROPERTY AREA STARTS =======*/}
-            <div className="property-inner-section-find">
+            <div className="property-inner-section-find details-section">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12">
@@ -68,28 +68,7 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                                                         
                                                             <iframe src={property.Map_link} width={800}  height={450} style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
                                                           
-                                                            <div className="list-property-details">
-                                                            <ul>
-                                                                <li>
-                                                                    <span>Address:</span>
-                                                                    <div>CA, USA</div>
-                                                                </li>
-                                                                <li>
-                                                                    <span>City:</span>
-                                                                    <div>Los Angeles</div>
-                                                                </li>
-                                                            </ul>
-                                                            <ul className="m-0 ">
-                                                                <li>
-                                                                    <span>Postal Code:</span>
-                                                                    <div>CA, USA</div>
-                                                                </li>
-                                                                <li>
-                                                                    <span>Area Name:</span>
-                                                                    <div>Los Angeles</div>
-                                                                </li>
-                                                            </ul>
-                                                            </div>
+                                                           
                                                         
                                                     </div>
                                                     

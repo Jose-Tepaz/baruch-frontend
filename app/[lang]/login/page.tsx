@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useAuth } from '@/context/AuthContext'
 import { useRouter } from 'next/navigation'
 import Layout from '@/components/layout/Layout'
+import React from 'react'
 
 interface LoginPageProps {
   params: {
@@ -11,7 +12,8 @@ interface LoginPageProps {
   }
 }
 
-export default function LoginPage({ params: { lang } }: LoginPageProps) {
+export default function LoginPage({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = React.use(params)
   const [identifier, setIdentifier] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
@@ -27,7 +29,7 @@ export default function LoginPage({ params: { lang } }: LoginPageProps) {
 
     try {
       await login(identifier, password)
-      router.push(`/${lang}/properties`)
+      router.push(`/${lang}/private-properties`)
     } catch (error: any) {
       setError(error.message || 'Login failed')
     } finally {
@@ -37,12 +39,12 @@ export default function LoginPage({ params: { lang } }: LoginPageProps) {
 
   return (
     <Layout>
-      <div className="container">
+      <div className="container" style={{ marginTop: '120px' }}>
         <div className="row justify-content-center">
           <div className="col-md-6 col-lg-4">
             <div className="card mt-5">
-              <div className="card-body">
-                <h2 className="text-center mb-4">Login</h2>
+              <div className="card-body" style={{ borderRadius: '20px' }}>
+                <h2 className="text-size-large text-center mb-4">Login</h2>
                 
                 {error && (
                   <div className="alert alert-danger" role="alert">
@@ -78,21 +80,24 @@ export default function LoginPage({ params: { lang } }: LoginPageProps) {
                       required
                     />
                   </div>
-
+                <div className="btn-area1 mt-0">
                   <button
                     type="submit"
-                    className="btn btn-primary w-100"
+                    className="vl-btn1 mt-0"
                     disabled={isLoading}
                   >
                     {isLoading ? 'Logging in...' : 'Login'}
+
+                    <span className="arrow1 ms-2"><i className="fa-solid fa-arrow-right"></i></span>
+                    
                   </button>
+                  
+
+                </div>
+                 
                 </form>
 
-                <div className="text-center mt-3">
-                  <a href={`/${lang}/register`} className="text-decoration-none">
-                    Don't have an account? Register here
-                  </a>
-                </div>
+                
               </div>
             </div>
           </div>

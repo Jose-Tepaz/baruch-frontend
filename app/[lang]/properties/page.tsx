@@ -162,7 +162,7 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
     
     return (
         <SimpleLayout>
-            <InnerHeader title="Our Properties" currentpage="Our Properties" />
+            
             <div className="space30" />
             
             <PropertiesContent 

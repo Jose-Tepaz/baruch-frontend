@@ -23,14 +23,14 @@ export default function Properties2Details({ property }: { property: Property })
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-12">
-                            <Swiper modules={[Autoplay, Thumbs]} thumbs={{ swiper: thumbsSwiper }} spaceBetween={0} autoplay={{ delay: 2500 }} freeMode={true} slidesPerView={1} className="all-galler-images" data-aos="fade-left" data-aos-duration={1000}>
+                            <Swiper modules={[Autoplay, Thumbs]} thumbs={{ swiper: thumbsSwiper }} spaceBetween={0} autoplay={{ delay: 2500 }} freeMode={true} slidesPerView={1} className="all-galler-images" >
                                 {property.gallery.map((image, index) => (
                                     <SwiperSlide key={index} className="big-img">
                                         <img src={image} alt={`Imagen ${index + 1}`} />
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
-                            <Swiper onSwiper={setThumbsSwiper} modules={[Thumbs]} spaceBetween={10} freeMode={true} slidesPerView={5} watchSlidesProgress={true} className="bottom-galler-images" data-aos="fade-right" data-aos-duration={1100}>
+                            <Swiper onSwiper={setThumbsSwiper} modules={[Thumbs]} spaceBetween={10} freeMode={true} slidesPerView={5} watchSlidesProgress={true} className="bottom-galler-images" >
                                 {property.gallery.map((image, index) => (
                                     <SwiperSlide key={index} className="small-img">
                                         <img src={image} alt={`Miniatura ${index + 1}`} />
