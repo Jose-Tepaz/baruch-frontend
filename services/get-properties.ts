@@ -107,7 +107,9 @@ export function getProperties(
                 is_private
             } = property
 
-            const image = rawimage ? `${STRAPI_HOST}${rawimage.url}` : ''
+            const image = rawimage
+                ? (rawimage.url.startsWith('http') ? rawimage.url : `${STRAPI_HOST}${rawimage.url}`)
+                : ''
             const propertyStatus = property_status?.Title || ''
             
             if (process.env.NODE_ENV === 'development') {

@@ -52,8 +52,12 @@ const getPropertyById = async (documentId: string, locale?: string) => {
         } = property
         
         // Procesar las imágenes
-        const processedMainImage = main_image ? `${STRAPI_HOST}${main_image.url}` : ''
-        const processedGallery = gallery ? gallery.map((img: any) => `${STRAPI_HOST}${img.url}`) : []
+        const processedMainImage = main_image
+            ? (main_image.url.startsWith('http') ? main_image.url : `${STRAPI_HOST}${main_image.url}`)
+            : ''
+        const processedGallery = gallery
+            ? gallery.map((img: any) => img.url.startsWith('http') ? img.url : `${STRAPI_HOST}${img.url}`)
+            : []
         const propertyStatus = property_status ? property_status.Title : ''
         
         return {

@@ -90,7 +90,9 @@ export function getPropertiesByCategory(categorySlug: string, propertyStatus?: s
           amenities
         } = property
 
-        const image = rawimage ? `${STRAPI_HOST}${rawimage.url}` : ''
+        const image = rawimage
+          ? (rawimage.url.startsWith('http') ? rawimage.url : `${STRAPI_HOST}${rawimage.url}`)
+          : ''
         const propertyStatus = property_status ? property_status.Title : ''
         
         console.log('=== getPropertiesByCategory DEBUG ===');
@@ -191,7 +193,9 @@ export function getProperties(filter: getPropertiesFilter = {}) {
           category
         } = property
 
-        const image = rawimage ? `${STRAPI_HOST}${rawimage.url}` : ''
+        const image = rawimage
+          ? (rawimage.url.startsWith('http') ? rawimage.url : `${STRAPI_HOST}${rawimage.url}`)
+          : ''
         const propertyStatus = property_status ? property_status.Title : ''
         
         if (process.env.NODE_ENV === 'development') {
@@ -255,8 +259,14 @@ export function getPropertyByDocumentId(documentId: string, locale?: string) {
         is_private
       } = property
 
-      const main_image = rawMainImage ? `${STRAPI_HOST}${rawMainImage.url}` : ''
-      const gallery = rawGallery ? rawGallery.map((img: any) => `${STRAPI_HOST}${img.url}`) : []
+      const main_image = rawMainImage
+        ? (rawMainImage.url.startsWith('http') ? rawMainImage.url : `${STRAPI_HOST}${rawMainImage.url}`)
+        : ''
+      const gallery = rawGallery
+        ? rawGallery.map((img: any) =>
+            img.url.startsWith('http') ? img.url : `${STRAPI_HOST}${img.url}`
+          )
+        : []
       const propertyStatus = property_status ? property_status.Title : ''
 
       return {

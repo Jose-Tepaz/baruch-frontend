@@ -31,7 +31,9 @@ export function getCategories(locale?: string) {
         console.log('Categories API Response:', JSON.stringify(res.data, null, 2));
         return res.data.map((category: CategoryData) => {
             const {name, slug, description, image: rawimage} = category;
-            const image = rawimage ? `${STRAPI_HOST}${rawimage.url}` : '';
+            const image = rawimage
+                ? (rawimage.url.startsWith('http') ? rawimage.url : `${STRAPI_HOST}${rawimage.url}`)
+                : '';
             return {name, slug, description, image}
         })
     })

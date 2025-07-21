@@ -14,24 +14,24 @@ export function getHomeInfo(locale?: string) {
         
         // Validar y construir URLs de manera segura
         const banner_img = res.data.banner_img?.[0]?.url 
-            ? `${STRAPI_HOST}${res.data.banner_img[0].url}` 
+            ? (res.data.banner_img[0].url.startsWith('http') ? res.data.banner_img[0].url : `${STRAPI_HOST}${res.data.banner_img[0].url}`)
             : null;
             
         const image_1 = res.data.abouttitle?.about_title?.img_1?.url 
-            ? `${STRAPI_HOST}${res.data.abouttitle.about_title.img_1.url}` 
+            ? (res.data.abouttitle.about_title.img_1.url.startsWith('http') ? res.data.abouttitle.about_title.img_1.url : `${STRAPI_HOST}${res.data.abouttitle.about_title.img_1.url}`)
             : null;
             
         const image_2 = res.data.abouttitle?.about_title?.img_2?.url 
-            ? `${STRAPI_HOST}${res.data.abouttitle.about_title.img_2.url}` 
+            ? (res.data.abouttitle.about_title.img_2.url.startsWith('http') ? res.data.abouttitle.about_title.img_2.url : `${STRAPI_HOST}${res.data.abouttitle.about_title.img_2.url}`)
             : null;
             
         // Arreglar el acceso a las imágenes de why_choose_us
         const image_1_why = res.data.why_choose_us?.img_1?.url 
-            ? `${STRAPI_HOST}${res.data.why_choose_us.img_1.url}` 
+            ? (res.data.why_choose_us.img_1.url.startsWith('http') ? res.data.why_choose_us.img_1.url : `${STRAPI_HOST}${res.data.why_choose_us.img_1.url}`)
             : null;
             
         const image_2_why = res.data.why_choose_us?.img_2?.url 
-            ? `${STRAPI_HOST}${res.data.why_choose_us.img_2.url}` 
+            ? (res.data.why_choose_us.img_2.url.startsWith('http') ? res.data.why_choose_us.img_2.url : `${STRAPI_HOST}${res.data.why_choose_us.img_2.url}`)
             : null;
 
         // Actualizar los datos solo si existen
