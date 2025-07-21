@@ -63,7 +63,7 @@
 
 .property-features {
     display: flex;
-    gap: 40px;
+    gap: 16px 32px;
     flex-wrap: wrap;
 }
 

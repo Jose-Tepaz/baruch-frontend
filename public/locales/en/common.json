@@ -100,5 +100,21 @@
         "selectLanguage": "Select Language",
         "currentLanguage": "Current Language",
         "changing": "Changing language to"
+    },
+    "propertyDetails": {
+        "built_area-text": "Built Area",
+        "lot_area-text": "Lot Area",
+        "parking_spaces-text": "Parking Spaces",
+        "bedrooms-text": "Bedrooms",
+        "bathrooms-text": "Bathrooms",
+        "price-text": "Price",
+        "contact-text": "Contact Us",
+        "map_locations-text": "Map Locations",
+        "send_message-text": "Send Us A Message",
+        "send-btn": "Send",
+        "fullName-text": "Full Name",
+        "phoneNumber-text": "Phone Number",
+        "email-text": "Email Address",
+        "message-text": "Your Message"
     }
 }

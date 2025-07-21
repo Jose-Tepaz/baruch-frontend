@@ -6,12 +6,13 @@ import Faq1 from "@/components/sections/Faq1";
 import { Metadata } from 'next';
 
 interface ServicesPageProps {
-    params: {
+    params: Promise<{
         lang: string;
-    };
+    }>;
 }
 
-export async function generateMetadata({ params: { lang } }: ServicesPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: ServicesPageProps): Promise<Metadata> {
+  const { lang } = await params;
   const titles = {
     en: 'Our Services - Baruch Real Estate',
     es: 'Nuestros Servicios - Baruch Bienes Raíces',
@@ -70,7 +71,8 @@ export async function generateMetadata({ params: { lang } }: ServicesPageProps):
   };
 }
 
-export default function ServicesPage({ params: { lang } }: ServicesPageProps) {
+export default async function ServicesPage({ params }: ServicesPageProps) {
+    const { lang } = await params;
     return (
         <>
             <Layout>

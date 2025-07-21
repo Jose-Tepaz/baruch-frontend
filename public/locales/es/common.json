@@ -92,5 +92,21 @@
         "selectLanguage": "Seleccionar Idioma",
         "currentLanguage": "Idioma Actual",
         "changing": "Cambiando idioma a"
+    },
+    "propertyDetails": {
+        "built_area-text": "Área Construida",
+        "lot_area-text": "Área Terreno",
+        "parking_spaces-text": "Espacios de Estacionamiento",
+        "bedrooms-text": "Habitaciones",
+        "bathrooms-text": "Baños",
+        "price-text": "Precio",
+        "contact-text": "Contactanos",
+        "map_locations-text": "Ubicación en el Mapa",
+        "send_message-text": "Envíanos un Mensaje",
+        "send-btn": "Enviar",
+        "fullName-text": "Nombre Completo",
+        "phoneNumber-text": "Número de Teléfono",
+        "email-text": "Correo Electrónico",
+        "message-text": "Tu Mensaje"
     }
 }

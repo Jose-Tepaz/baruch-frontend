@@ -12,12 +12,13 @@ import { getProperties } from "@/services/get-properties";
 import { Metadata } from 'next';
 
 interface AboutUsPageProps {
-    params: {
+    params: Promise<{
         lang: string;
-    };
+    }>;
 }
 
-export async function generateMetadata({ params: { lang } }: AboutUsPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: AboutUsPageProps): Promise<Metadata> {
+  const { lang } = await params;
   const titles = {
     en: 'About Us - Baruch Real Estate',
     es: 'Sobre Nosotros - Baruch Bienes Raíces',
@@ -76,7 +77,8 @@ export async function generateMetadata({ params: { lang } }: AboutUsPageProps): 
   };
 }
 
-export default async function AboutUsPage({ params: { lang } }: AboutUsPageProps) {
+export default async function AboutUsPage({ params }: AboutUsPageProps) {
+    const { lang } = await params;
     const propertiesResult = await getProperties({ locale: lang, onlyPrivate: false });
     const properties = propertiesResult?.properties || [];
     

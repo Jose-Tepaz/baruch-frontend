@@ -2,11 +2,16 @@
 import "@/public/assets/css/propertyDetails.css";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
-export default function PropertyDetails({ property }) {
+interface PropertyData {
+    description: string | any;
+    [key: string]: any;
+}
+
+export default function PropertyDetails({ property }: { property: PropertyData }) {
     console.log(property);
     
     // Formatear el precio con separadores de miles
-    const formatPrice = (price) => {
+    const formatPrice = (price: number | undefined) => {
         if (!price) return '';
         return `$${price.toLocaleString()}`;
     };

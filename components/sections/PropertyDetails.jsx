@@ -1,10 +1,10 @@
 "use client";
 import "@/public/assets/css/propertyDetails.css";
 import Link from "next/link";
+import { useTranslation } from "@/utils/i18n-simple";
 
 export default function PropertyDetails({ property }) {
-    console.log(property.propertyStatus);
-    
+    const { t, i18n } = useTranslation('common');
     // Formatear el precio con separadores de miles
     const formatPrice = (price) => {
         if (!price) return '';
@@ -32,15 +32,27 @@ export default function PropertyDetails({ property }) {
                                  <div className="property-features">
                                     <div className="feature-item">
                                         <i className="fas fa-expand-arrows-alt"></i>
-                                        <span>{property.built_area.toLocaleString()  || '2150'} sqft</span>
+                                        <span>{property.built_area.toLocaleString()  || '2150'} sqft {t("propertyDetails.built_area-text")}</span>
+                                       
                                     </div>
                                     <div className="feature-item">
+                                       
+                                        <i className="fas fa-expand-arrows-alt"></i>
+                                        <span>{property.lot_area.toLocaleString()  || '2150'} sqft {t("propertyDetails.lot_area-text")}</span>
+                                        
+                                    </div>
+                                    <div className="feature-item">
+                                        <i className="fas fa-car"></i>
+                                        <span>{property.parking_spaces} {t("propertyDetails.parking_spaces-text")}</span>
+                                    </div>
+                                    
+                                    <div className="feature-item">
                                         <i className="fas fa-bed"></i>
-                                        <span>{property.bedrooms} Bedrooms</span>
+                                        <span>{property.bedrooms} {t("propertyDetails.bedrooms-text")}</span>
                                     </div>
                                     <div className="feature-item">
                                         <i className="fas fa-bath"></i>
-                                        <span>{property.bathrooms} Bathrooms</span>
+                                        <span>{property.bathrooms} {t("propertyDetails.bathrooms-text")}</span>
                                     </div>
                                 </div>
 
@@ -52,11 +64,17 @@ export default function PropertyDetails({ property }) {
                                 <div className="property-price-section">
                                     <div className="property-price">
                                         {formatPrice(property.price)}
-                                    </div>
-                                    <Link className="contact-btn"  href="#contact">
-                                    Contáctanos
-                                    <i className="fas fa-arrow-right"></i>
+                                    </div>  
+                                    <Link className="vl-btn1"  href="#contact">
+                                    {t("propertyDetails.contact-text")}
+                                    <span className="arrow1 ms-2">
+                            <i className="fa-solid fa-arrow-right" />
+                        </span>
+                        <span className="arrow2 ms-2">
+                            <i className="fa-solid fa-arrow-right" />
+                        </span>
                                     </Link>
+
                                     
                                 </div>
                             </div>

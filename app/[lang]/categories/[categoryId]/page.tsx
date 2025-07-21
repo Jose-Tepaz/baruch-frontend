@@ -4,14 +4,14 @@ import InnerHeader from "@/components/layout/InnerHeader";
 import CategoryContent from "@/components/pages/CategoryContent";
 
 interface CategoryPageProps {
-    params: { 
+    params: Promise<{ 
         lang: string;
         categoryId: string;
-    };
+    }>;
 }
 
 export default async function CategoryPage({ params }: CategoryPageProps) { 
-    const { lang, categoryId } = params;
+    const { lang, categoryId } = await params;
     
     // Cargar datos iniciales en el servidor
     let initialProperties = [];

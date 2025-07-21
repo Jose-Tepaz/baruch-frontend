@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import PropertyFilter from './property-filter';
 
 interface Category {
@@ -95,9 +96,9 @@ export default function PropertyFilterWrapper({ categories }: PropertyFilterWrap
                             </span>
                         </button>
                         <div className="d-flex justify-content-between align-items-center mt-4">
-                            <a href="/sidebar-grid" className="text-decoration-none text-primary">
+                            <Link href="/sidebar-grid" className="text-decoration-none text-primary">
                                 Show all properties
-                            </a>
+                            </Link>
                         </div>
                     </form>
                 </div>

@@ -113,7 +113,7 @@ const About2 = ({ homeInfo }: About2Props) => {
     return (
         <>
             {/*===== ABOUT AREA STARTS =======*/}
-            <div className="about2 sp1">
+            <div className="about2 sp1" id="more-info">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-lg-4">
@@ -144,8 +144,8 @@ const About2 = ({ homeInfo }: About2Props) => {
                                 
                                 <div className="space32" />
                                 <div className="btn-area1" data-aos="fade-left" data-aos-duration={1200}>
-                                    <Link href="/property-halfmap-grid" className="vl-btn1">
-                                        Add Listing
+                                    <Link href="/properties" className="vl-btn1">
+                                        {t('home.btn-1-hero')}
                                         <span className="arrow1 ms-2">
                                             <i className="fa-solid fa-arrow-right" />
                                         </span>

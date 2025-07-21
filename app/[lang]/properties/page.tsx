@@ -7,20 +7,21 @@ import PropertiesContent from "@/components/pages/PropertiesContent";
 import { Metadata } from 'next';
 
 interface PropertiesPageProps {
-    params: {
+    params: Promise<{
         lang: string;
-    };
-    searchParams: {
+    }>;
+    searchParams: Promise<{
         category?: string;
         property_status?: string;
         keyword?: string;
         city?: string;
         state?: string;
         amenities?: string | string[];
-    };
+    }>;
 }
 
-export async function generateMetadata({ params: { lang } }: PropertiesPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PropertiesPageProps): Promise<Metadata> {
+  const { lang } = await params;
   const titles = {
     en: 'Properties - Baruch Real Estate',
     es: 'Propiedades - Baruch Bienes Raíces',
@@ -66,8 +67,8 @@ export async function generateMetadata({ params: { lang } }: PropertiesPageProps
 }
 
 export default async function PropertiesPage({ params, searchParams }: PropertiesPageProps) {
-    const { lang } = params;
-    const { category, property_status, keyword, city, state, amenities } = searchParams;
+    const { lang } = await params;
+    const { category, property_status, keyword, city, state, amenities } = await searchParams;
     
     // Obtener datos del servidor con manejo de errores
     let properties = [];
@@ -169,7 +170,7 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
                 initialProperties={properties}
                 categories={categories}
                 propertyStatuses={propertyStatuses}
-                searchParams={searchParams}
+                searchParams={{ category, property_status, keyword, city, state, amenities }}
             />
         </SimpleLayout>
     )

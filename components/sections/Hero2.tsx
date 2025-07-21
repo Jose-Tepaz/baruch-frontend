@@ -42,7 +42,7 @@ const Hero2 = ({ homeInfo }: Hero2Props) => {
                                 <h3 className="text-anime-style-3 text-white size-32">{homeInfo?.Subtitle}</h3>
                               <div className="d-flex justify-content-start align-items-center gap-4 mt-4">
                                 <div className="">
-                                <Link href="/add-property" className="vl-btn1 mt-0">
+                                <Link href="/properties" className="vl-btn1 mt-0">
                                         {t('home.btn-1-hero')}
                                         <span className="arrow1 ms-2">
                                             <i className="fa-solid fa-arrow-right" />
@@ -53,7 +53,7 @@ const Hero2 = ({ homeInfo }: Hero2Props) => {
                                     </Link>
                                 </div>
                                 <div className="">
-                                <Link href="/add-property" className="vl-btn1 is-secondary mt-0">
+                                <Link href="/#more-info" className="vl-btn1 is-secondary mt-0">
                                         {t('home.btn-2-hero')}
                                         <span className="arrow1 ms-2">
                                             <i className="fa-solid fa-arrow-right" />

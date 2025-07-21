@@ -1,7 +1,10 @@
+"use client"
+
 import Link from "next/link";
 import ContactSeller from "@/components/elements/ContactSeller";
 import PropertyDetails from "@/components/sections/PropertyDetails";
 import PropertyDescription from "@/components/sections/PropertyDescription";
+import { useTranslation } from "@/utils/i18n-simple";   
 
 
 interface Property {
@@ -24,6 +27,8 @@ interface Property {
 }
 
 export default function PropertyInner({ block_extend, property }: { block_extend: string, property: Property }) {
+    const { t, i18n } = useTranslation('common');
+    
     console.log(property);
     return (
         <>
@@ -63,7 +68,7 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                                                 <div className="space30" />
                                                 
                                                     <div className="wrapp-card-details-propertie">
-                                                        <h3>Map Locations</h3>
+                                                        <h3>{t("propertyDetails.map_locations-text")}</h3>
                                                       
                                                         
                                                             <iframe src={property.Map_link} width={800}  height={450} style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
@@ -79,39 +84,39 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                                               
                                                 <div className="wrapp-card-details-propertie" id="contact">
                                                     <div className="bg-area">
-                                                        <h3>Send Us A Message</h3>
+                                                        <h3>{t("propertyDetails.send_message-text")}</h3>
                                                         <div className="space8" />
                                                         <div className="row">
                                                             <div className="col-lg-6">
                                                                 <div className="input-area">
-                                                                    <input type="text" placeholder="Your Name" />
+                                                                    <input type="text" placeholder={t("propertyDetails.fullName-text")} />
+                                                                </div>
+                                                            </div>  
+                                                            <div className="col-lg-6">
+                                                                <div className="input-area">
+                                                                    <input type="text" placeholder={t("propertyDetails.phoneNumber-text")} />
                                                                 </div>
                                                             </div>
                                                             <div className="col-lg-6">
                                                                 <div className="input-area">
-                                                                    <input type="text" placeholder="Last Name*" />
+                                                                    <input type="number" placeholder={t("propertyDetails.phoneNumber-text")} />
                                                                 </div>
                                                             </div>
                                                             <div className="col-lg-6">
                                                                 <div className="input-area">
-                                                                    <input type="number" placeholder="Phone Number " />
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-lg-6">
-                                                                <div className="input-area">
-                                                                    <input type="email" placeholder="Email Address*" />
+                                                                    <input type="email" placeholder={t("propertyDetails.email-text")} />
                                                                 </div>
                                                             </div>
                                                             <div className="col-lg-12">
                                                                 <div className="input-area">
-                                                                    <textarea placeholder="Write message" defaultValue={""} />
+                                                                    <textarea placeholder={t("propertyDetails.message-text")} defaultValue={""} />
                                                                 </div>
                                                             </div>
                                                             <div className="col-lg-12">
                                                                 <div className="space16" />
                                                                 <div className="input-area">
                                                                     <button type="submit" className="vl-btn1">
-                                                                        Reply Now
+                                                                        {t("propertyDetails.send-btn")}
                                                                         <span className="arrow1 ms-2">
                                                                             <i className="fa-solid fa-arrow-right" />
                                                                         </span>

@@ -1,6 +1,7 @@
 'use client';
 
 import PropertieCardV1 from '@/components/sections/PropertieCardV1';
+import { useTranslation } from '@/utils/i18n-simple';
 
 interface CategoryContentProps {
     categoryId: string;
@@ -8,6 +9,7 @@ interface CategoryContentProps {
 }
 
 export default function CategoryContent({ categoryId, initialProperties }: CategoryContentProps) {
+    const { t } = useTranslation('common');
     const properties = initialProperties || [];
 
     // Debug: Log properties data (solo en desarrollo)
@@ -26,7 +28,7 @@ export default function CategoryContent({ categoryId, initialProperties }: Categ
                         <div className="col-lg-7 m-auto d-flex justify-content-center align-items-center">
                             <div className="heading1">
                                 <h2>{categoryId.charAt(0).toUpperCase() + categoryId.slice(1)}</h2>
-                                <p>No se encontraron propiedades en esta categoría</p>
+                                <p>{t("categories.noPropertiesFound")}</p>
                             </div>
                         </div>
                     </div>
@@ -34,7 +36,7 @@ export default function CategoryContent({ categoryId, initialProperties }: Categ
                     <div className="row">
                         <div className="col-12 text-center">
                             <div className="alert alert-info">
-                                No hay propiedades disponibles en esta categoría.
+                                {t("categories.noPropertiesAvailable")}
                             </div>
                         </div>
                     </div>
@@ -50,7 +52,7 @@ export default function CategoryContent({ categoryId, initialProperties }: Categ
                     <div className="col-lg-7 m-auto d-flex justify-content-center align-items-center">
                         <div className="heading1">
                             <h2>{categoryId.charAt(0).toUpperCase() + categoryId.slice(1)}</h2>
-                            <p>Discover Our Latest Properties ({properties.length})</p>
+                            <p>{t("categories.discoverProperties")} ({properties.length})</p>
                         </div>
                     </div>
                 </div>

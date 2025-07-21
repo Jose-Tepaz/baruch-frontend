@@ -8,13 +8,14 @@ import PropertyDetails from "@/components/sections/PropertyDetails";
 import { Metadata } from 'next';
 
 interface PropertyPageProps {
-    params: { 
+    params: Promise<{ 
         lang: string;
         property: string;
-    };
+    }>;
 }
 
-export async function generateMetadata({ params: { lang, property } }: PropertyPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: PropertyPageProps): Promise<Metadata> {
+  const { lang, property } = await params;
   // Obtener datos de la propiedad para metadata dinámica
   const propertyData = await getPropertyById(property, lang);
   
@@ -84,7 +85,7 @@ export async function generateMetadata({ params: { lang, property } }: PropertyP
 }
 
 export default async function PropertyPage({ params }: PropertyPageProps) {
-    const { lang, property } = params;
+    const { lang, property } = await params;
     
     console.log('=== PropertyPage DEBUG ===');
     console.log('Language:', lang);

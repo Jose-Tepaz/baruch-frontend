@@ -18,15 +18,16 @@ const About3 = dynamic(() => import("@/components/sections/About3"), { ssr: true
 const Testimonial2 = dynamic(() => import("@/components/sections/Testimonial2"), { ssr: true });
 
 interface Props {
-  params: {
+  params: Promise<{
     lang: string;
-  };
+  }>;
 }
 
 const allowedLocales = ['en', 'es', 'fr', 'de', 'it', 'pt'];
 
 // Configuración de metadata para SEO
-export async function generateMetadata({ params: { lang } }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
   const titles = {
     en: 'Baruch Real Estate - Find Your Dream Property',
     es: 'Baruch Bienes Raíces - Encuentra tu Propiedad Ideal',
@@ -96,7 +97,8 @@ export async function generateMetadata({ params: { lang } }: Props): Promise<Met
   };
 }
 
-export default async function Home({ params: { lang } }: Props) {
+export default async function Home({ params }: Props) {
+    const { lang } = await params;
     // Validar que el idioma sea permitido
     if (!allowedLocales.includes(lang)) {
       redirect('/en');

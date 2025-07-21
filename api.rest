@@ -15,19 +15,19 @@
 //Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
 
 //test properties
-//GET http://localhost:1337/api/properties?populate[main_image][fields][0]=url&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&filters[category][slug][$contains]=apartaments
+//GET http://localhost:1337/api/properties?populate[main_image][fields][0]=url&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&filters[category][slug][$contains]=apartaments leapr3bj7vtxnl3d97o6hvm2
 //Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
 
 
-//GET http://localhost:1337/api/properties?filters[category][slug][$contains]=apartaments
+//GET http://localhost:1337/api/properties?filters[category][slug][$contains]=apartament&locale=es
 //Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
 
 
-//GET http://localhost:1337/api/properties?populate=main_image&filters[category][slug][$contains]=
-//Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
+GET http://localhost:1337/api/properties?populate=main_image&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&filters[category][documentId][$contains]=leapr3bj7vtxnl3d97o6hvm2&locale=en
+Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
 
 //GET http://localhost:1337/api/properties/sv61fkb8tyugdjae25pjq0me?populate=main_image&populate=gallery&populate=category&populate=property_status&locale=en
 //Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
 
-GET http://localhost:1337/api/properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&pagination[limit]=100
-Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
+//GET http://localhost:1337/api/properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&pagination[limit]=100
+//Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e

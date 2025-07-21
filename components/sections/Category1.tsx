@@ -13,10 +13,11 @@ interface Category1Props {
 }
 
 export default function Category1({ categories }: Category1Props) {
+    const { t } = useTranslation('common');
+    
     if (!categories || categories.length === 0) {
         return null;
     }
-    const { t } = useTranslation('common')
     return (
         <>
             <div className="space60"></div>

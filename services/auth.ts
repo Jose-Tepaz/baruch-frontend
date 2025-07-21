@@ -35,6 +35,42 @@ export interface AuthResponse {
   user: User
 }
 
+// Función para registrar un nuevo usuario
+export async function register(data: RegisterData): Promise<AuthResponse> {
+  try {
+    console.log('Intentando registro con URL:', `${STRAPI_HOST}/api/auth/local/register`)
+    console.log('Datos de registro:', { username: data.username, email: data.email })
+    
+    const response = await fetch(`${STRAPI_HOST}/api/auth/local/register`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+
+    console.log('Response status:', response.status)
+
+    if (!response.ok) {
+      const errorText = await response.text()
+      console.error('Error response:', errorText)
+      
+      try {
+        const error = JSON.parse(errorText)
+        throw new Error(error.error?.message || 'Registration failed')
+      } catch (parseError) {
+        throw new Error(`Registration failed: ${response.status} ${response.statusText}`)
+      }
+    }
+
+    const data_response = await response.json()
+    return data_response
+  } catch (error) {
+    console.error('Registration error:', error)
+    throw error
+  }
+}
+
 // Función para hacer login
 export async function login(credentials: LoginCredentials): Promise<AuthResponse> {
   try {
