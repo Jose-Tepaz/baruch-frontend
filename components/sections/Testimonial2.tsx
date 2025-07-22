@@ -38,7 +38,7 @@ export default function Testimonial2() {
                             <div className="heading1">
                                 <h5>{t('home.subtitle-testimonials')}</h5>
                                 <div className="space16" />
-                                <h2 className="text-anime-style-3">{t('home.title-testimonials')}</h2>
+                                <h2 >{t('home.title-testimonials')}</h2>
                                 <div className="space50" />
                                 <div className="testimonial-container">
                                     <Swiper {...swiperOptions} className="swiper mySwiper">

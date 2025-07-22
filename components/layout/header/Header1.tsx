@@ -50,7 +50,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                             <div className="vl-header-action-item d-block d-lg-none">
                                 <div className="d-flex align-items-center gap-2">
                                     <LanguageSelector />
-                                    <button type="button" className="vl-offcanvas-toggle px-1">
+                                    <button type="button" className="vl-offcanvas-toggle px-1" onClick={handleMobileMenu}>
                                         <i className="fa-solid fa-bars-staggered" />
                                     </button>
                                 </div>

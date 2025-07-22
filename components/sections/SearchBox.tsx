@@ -126,7 +126,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
 
                 .filter-group input {
                     width: 100%;
-                    min-width: 248px;
+                  
                 }
 
                 .filter-group input[type="text"] {
@@ -187,12 +187,11 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                     transform: translateY(-2px);
                 }
             `}</style>
-
-            <div className="space30"></div>
-            <div className="others-section-area container-home1">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-lg-12">
+            <div className="section-search-box">
+                <div className="padding-global padding-section-medium">
+                    <div className="container-large">
+                        <div className="others-section-area ">
+                
                             <div className="property-tab-section b-bg1">
                                 <form onSubmit={handleSearch}>
                                     <div className="tab-content1">
@@ -255,11 +254,15 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                     </div>
                                 </form>
                             </div>
+                        
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="space30"></div>
+            
+            
+            
+           
         </>
     );
 }

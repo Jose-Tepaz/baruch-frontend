@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import HeaderSelector from "./HeaderSelector";
 import FooterSelector from "./FooterSelector";
 import BackToTop from "../elements/BackToTop";
+import MobileMenu from "./MobileMenu";
 
 interface SimpleLayoutProps {
     headerStyle?: Number;
@@ -14,6 +15,7 @@ interface SimpleLayoutProps {
 export default function SimpleLayout({ headerStyle, footerStyle, children }: SimpleLayoutProps) {
     const [scroll, setScroll] = useState(false);
     const [mounted, setMounted] = useState(false);
+    const [isMobileMenu, setIsMobileMenu] = useState(false);
 
     useEffect(() => {
         setMounted(true);
@@ -35,6 +37,8 @@ export default function SimpleLayout({ headerStyle, footerStyle, children }: Sim
         };
     }, []);
 
+    const handleMobileMenu = () => setIsMobileMenu((prev) => !prev);
+
     return (
         <>
             <div id="top" />
@@ -42,7 +46,12 @@ export default function SimpleLayout({ headerStyle, footerStyle, children }: Sim
             <HeaderSelector 
                 headerStyle={headerStyle} 
                 scroll={mounted ? scroll : false} 
+                isMobileMenu={isMobileMenu}
+                handleMobileMenu={handleMobileMenu}
             />
+            {isMobileMenu && (
+                <MobileMenu isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />
+            )}
             
             {children}
             

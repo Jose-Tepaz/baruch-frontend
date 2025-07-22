@@ -120,7 +120,7 @@ const About2 = ({ homeInfo }: About2Props) => {
                             <div className="heading1">
                                 <h5 className="text-color-black-blue">{t('home.title-about-us')}</h5>
                                 <div className="space16" />
-                                <h2 className="text-anime-style-3">{title}</h2>
+                                <h2 >{title}</h2>
                                 <h3>{subtitle}</h3>
                                 <div className="space50" />
                                 <div className="img1 image-anime reveal" style={{width: '100%', height: '350px'}}>
@@ -143,7 +143,7 @@ const About2 = ({ homeInfo }: About2Props) => {
                                 </div>
                                 
                                 <div className="space32" />
-                                <div className="btn-area1" data-aos="fade-left" data-aos-duration={1200}>
+                                <div className="btn-area1">
                                     <Link href="/properties" className="vl-btn1">
                                         {t('home.btn-1-hero')}
                                         <span className="arrow1 ms-2">

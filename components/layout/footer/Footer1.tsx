@@ -12,9 +12,9 @@ export default function Footer1() {
                         <div className="row">
                             <div className="col-lg-10 m-auto">
                                 <div className="heading1 text-center">
-                                    <h2 className="text-anime-style-3 text-color-blue">{t('footer.title-cta')}</h2>
+                                    <h2 className=" text-color-blue">{t('footer.title-cta')}</h2>
                                     <div className="space16" />
-                                    <p data-aos="fade-up text-white" data-aos-duration={900} className="text-white">
+                                    <p  className="text-white">
                                         {t('footer.description-cta')}
                                     </p>
                                     <div className="space32" />

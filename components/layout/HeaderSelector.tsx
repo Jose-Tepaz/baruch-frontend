@@ -9,12 +9,14 @@ import Header5 from "./header/Header5";
 interface HeaderSelectorProps {
     headerStyle?: Number;
     scroll: boolean;
+    isMobileMenu?: boolean;
+    handleMobileMenu?: () => void;
 }
 
-export default function HeaderSelector({ headerStyle, scroll }: HeaderSelectorProps) {
-    if (headerStyle === 2) return <Header2 scroll={scroll} />;
-    if (headerStyle === 3) return <Header3 scroll={scroll} />;
-    if (headerStyle === 4) return <Header4 scroll={scroll} />;
-    if (headerStyle === 5) return <Header5 scroll={scroll} />;
-    return <Header1 scroll={scroll} />;
+export default function HeaderSelector({ headerStyle, scroll, isMobileMenu, handleMobileMenu }: HeaderSelectorProps) {
+    if (headerStyle === 2) return <Header2 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />;
+    if (headerStyle === 3) return <Header3 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />;
+    if (headerStyle === 4) return <Header4 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />;
+    if (headerStyle === 5) return <Header5 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />;
+    return <Header1 scroll={scroll} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />;
 } 

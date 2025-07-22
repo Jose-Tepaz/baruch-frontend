@@ -175,13 +175,28 @@ img {
     margin: auto;
 }
 
-.padding-global {
-    padding: 0px 32px;
+.padding-section-medium {
+    padding-top: 62px;
+    padding-bottom: 62px;
 }
 
-.padding-section-medium {
-    padding: 62px 0px!important;
+.padding-global {
+    padding-right: 32px;
+    padding-left: 32px;
 }
+
+@media (max-width: 768px) {
+    .padding-global {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .padding-section-medium {
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+}
+
+
 
 .bg-blue {
     background-color: var(--ztc-bg-bg-3);
@@ -977,9 +992,7 @@ Location:
     color: var(--ztc-text-text-2);
 }
 
-.padding-global {
-    padding: 32px 0;
-}
+
 
 .pagination-area ul {
     justify-content: center;
@@ -5334,6 +5347,13 @@ only screen and (min-width: 768px) and (max-width: 991px),
         left: 0;
         min-width: 160px;
     }
+   
+}
+
+@media (max-width: 480px) {
+    .lang-name{
+       font-size: 12px;
+    }
 }
 
 
@@ -8525,8 +8545,8 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 .others-section-area {
     background: var(--ztc-bg-bg-1);
-    padding: 32px 16px;
-    border-radius: 30px;
+    padding: 20px;
+    border-radius: 20px;
     position: relative;
     z-index: 2;
 }
@@ -8534,7 +8554,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 @media (max-width: 767px) {
     .others-section-area {
         margin: 0;
-        padding: 24px;
+        padding: 20px;
     }
 }
 
@@ -8738,13 +8758,13 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 @media only screen and (min-width: 1400px) and (max-width: 1599px) {
     .others-section-area .property-tab-section .nice-select {
-        width: 220px;
+        width: 100%;
     }
 }
 
 @media only screen and (min-width: 1600px) and (max-width: 1700px) {
     .others-section-area .property-tab-section .nice-select {
-        width: 260px;
+        width: 100%;
     }
 }
 
@@ -8766,6 +8786,8 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 .others-section-area .property-tab-section .search-button {
     position: relative;
+    width: 100%;
+    min-width: 280px;
 }
 
 .others-section-area .property-tab-section .search-button button {
@@ -17498,8 +17520,10 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 @media (max-width: 767px) {
-    .property-inner-section-find {
-        margin: 0;
+    
+    .property-inner-section-find{
+       
+        padding-top: 48px;
     }
 }
 
