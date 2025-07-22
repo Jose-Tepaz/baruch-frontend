@@ -38,9 +38,9 @@ const Hero2 = ({ homeInfo }: Hero2Props) => {
                     <div className="row">
                         <div className="row ">
                             <div className="hero-heading heading1" style={{maxWidth: '860px'}}>
-                                <h1 className="text-anime-style-3 heading-style-h1 ">{homeInfo?.Title}</h1>
-                                <h3 className="text-anime-style-3 text-white size-32">{homeInfo?.Subtitle}</h3>
-                              <div className="d-flex justify-content-start align-items-center gap-4 mt-4">
+                                <h1 className="heading-style-h1 ">{homeInfo?.Title}</h1>
+                                <h3 className="text-white size-32">{homeInfo?.Subtitle}</h3>
+                              <div className="wrapp-btns-hero-home">
                                 <div className="">
                                 <Link href="/properties" className="vl-btn1 mt-0">
                                         {t('home.btn-1-hero')}
