@@ -6,6 +6,7 @@ import { getPropertyStatuses } from "@/services/property-status";
 import { getHomeInfo } from "@/services/get-home-info";
 import imgLandscape from "@/public/assets/img/all-images/home/img-home.webp"
 import { Metadata } from 'next';
+import { getTestimonials } from "@/services/testimonials";
 
 // Importar componentes del cliente dinámicamente
 const Layout = dynamic(() => import("@/components/layout/Layout"), { ssr: true });
@@ -105,14 +106,18 @@ export default async function Home({ params }: Props) {
     }
 
     try {
-        const [propertiesResult, categories, propertyStatuses, homeInfo] = await Promise.all([
+        const [propertiesResult, categories, propertyStatuses, homeInfo, testimonials] = await Promise.all([
             getProperties({ locale: lang, onlyPrivate: false }),
             getCategories(lang),
             getPropertyStatuses(lang),
-            getHomeInfo(lang)
+            getHomeInfo(lang),
+            getTestimonials(lang).catch(() => []) // Si falla, regresa array vacío
         ]);
 
         const properties = propertiesResult?.properties || [];
+
+        console.log('=== Testimonials API Data ===');
+        console.log(testimonials);
 
         console.log('=== Home Page Debug ===');
         console.log('Language:', lang);
@@ -132,7 +137,7 @@ export default async function Home({ params }: Props) {
                 <Category1 categories={categories || []} />
                 <About3 homeInfo={homeInfo?.data} />
                 <img src={imgLandscape.src} alt="baruch" style={{width: '100%', height: 'auto'}} />
-                <Testimonial2 />
+                <Testimonial2 testimonials={testimonials} />
             </Layout>
         );
     } catch (error) {
@@ -150,7 +155,7 @@ export default async function Home({ params }: Props) {
                 <Category1 categories={[]} />
                 <About3 homeInfo={undefined} />
                 <img src={imgLandscape.src} alt="baruch" style={{width: '100%', height: 'auto'}} />
-                <Testimonial2 />
+                <Testimonial2 testimonials={[]} />
             </Layout>
         );
     }
