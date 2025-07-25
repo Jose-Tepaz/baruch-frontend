@@ -20,8 +20,9 @@ export default function About3({ homeInfo }: About3Props) {
         <>
             {/*===== ABOUT AREA STARTS =======*/}
             <div className="about3-section-area sp1 bg-blue">
-                <div className="space26" />
-                <div className="container">
+                
+                <div className="padding-global">
+                <div className="container-large">
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="about-images-area">
@@ -31,7 +32,7 @@ export default function About3({ homeInfo }: About3Props) {
                                             <img src= {img_1} alt="baruch" />
                                         </div>
                                     </div>
-                                    <div className="col-lg-6 col-md-6">
+                                    <div className="col-lg-6 col-md-6 img-about-3-sectiond">
                                         <div className="space100" />
                                         <div className="img1  reveal img-about-3" >
                                             <img src={img_2} alt="baruch" />
@@ -73,6 +74,7 @@ export default function About3({ homeInfo }: About3Props) {
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
                 <div className="space26" />
             </div>

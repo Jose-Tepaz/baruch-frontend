@@ -32,11 +32,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     
     return (
         <Layout>
-            <InnerHeader title="Our Properties" currentpage="Our Properties" />
+            
             <CategoryContent 
                 categoryId={categoryId}
                 initialProperties={initialProperties}
             />
+            
         </Layout>
     );
 }

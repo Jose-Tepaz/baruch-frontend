@@ -92,7 +92,8 @@ export default function Testimonial2({ testimonials }: Testimonial2Props = {}) {
         <>
             {/*===== TESTIMONIAL AREA STARTS =======*/}
             <div className="testi2 sp1 py-5">
-                <div className="container">
+                <div className="padding-global">
+                    <div className="container-large">
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="testi-img image-anime reveal">
@@ -141,17 +142,7 @@ export default function Testimonial2({ testimonials }: Testimonial2Props = {}) {
                                                                     <span>{testimonial.position_of_client}</span>
                                                                 </div>
                                                             </div>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width={50} height={50} viewBox="0 0 50 50" fill="none">
-                                                                <g clipPath="url(#clip0_6058_76061)">
-                                                                    <path fillRule="evenodd" clipRule="evenodd" d="M30 37.5L34 25.2273H30L30 15L40 15L40 25.2273L36 37.5H30Z" fill="#ED8438" />
-                                                                    <path opacity="0.3" fillRule="evenodd" clipRule="evenodd" d="M12.5 37.5L16.5 25.2273H12.5L12.5 15L22.5 15L22.5 25.2273L18.5 37.5H12.5Z" fill="#ED8438" />
-                                                                </g>
-                                                                <defs>
-                                                                    <clipPath id="clip0_6058_76061">
-                                                                        <rect width={50} height={50} fill="white" />
-                                                                    </clipPath>
-                                                                </defs>
-                                                            </svg>
+                                                            
                                                         </div>
                                                     </div>
                                                 </SwiperSlide>
@@ -165,7 +156,9 @@ export default function Testimonial2({ testimonials }: Testimonial2Props = {}) {
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
+                    
             </div>
             {/*===== TESTIMONIAL AREA ENDS =======*/}
         </>

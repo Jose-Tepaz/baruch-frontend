@@ -20,28 +20,28 @@ export default function Category1({ categories }: Category1Props) {
     }
     return (
         <>
-            <div className="space60"></div>
+            
             <div className="category-section_home">
-                <div className="global-padding">
-                <div className="space60"></div>
+                <div className="padding-global">
+                
                     <div className="container-large">
                     <div className="category1">
-                <div className="container">
+                <div className="">
                     <div className="row">
                         <div className="col-lg-7 m-auto">
                             <div className="heading1 text-center space-margin60">
                                 <h5>{t('home.subtitle-category')}</h5>
                                 <div className="space16" />
-                                <h3 className="text-anime-style-3 text-white ">{t('home.title-category')}</h3>
+                                <h3 className=" text-white ">{t('home.title-category')}</h3>
                             </div>
                         </div>
                     </div>
-<div className="row">
-    <div className="row gap-1 justify-content-center">
+<div className="section-wrapper-category">
+    <div className="wrapper-category">
     {categories.map((category: Category, index: number) => (
-                        <div className="col-lg-3" key={category.slug || index}>
+                        <div className="card-category" key={category.slug || index}>
                             <Link href={`/categories/${category.slug}`}>
-                            <div className="row" >
+                            <div className="" >
                                 <div className="category-boxarea">
 
                                     {category.image ? (
@@ -69,7 +69,7 @@ export default function Category1({ categories }: Category1Props) {
 
                 </div>
             </div>
-            <div className="space60"></div>
+           
                     </div>
                 </div>
 

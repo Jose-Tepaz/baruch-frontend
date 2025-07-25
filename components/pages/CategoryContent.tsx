@@ -22,13 +22,13 @@ export default function CategoryContent({ categoryId, initialProperties }: Categ
 
     if (!properties || properties.length === 0) {
         return (
-            <section className="py-5">
-                <div className="container">
+            <section className="container-result-category">
+                <div className="container ">
                     <div className="row">
                         <div className="col-lg-7 m-auto d-flex justify-content-center align-items-center">
                             <div className="heading1">
                                 <h2>{categoryId.charAt(0).toUpperCase() + categoryId.slice(1)}</h2>
-                                <p>{t("categories.noPropertiesFound")}</p>
+                                
                             </div>
                         </div>
                     </div>
@@ -46,13 +46,13 @@ export default function CategoryContent({ categoryId, initialProperties }: Categ
     }
 
     return (
-        <section className="py-5">
+        <section className="container-result-category">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-7 m-auto d-flex justify-content-center align-items-center">
                         <div className="heading1">
                             <h2>{categoryId.charAt(0).toUpperCase() + categoryId.slice(1)}</h2>
-                            <p>{t("categories.discoverProperties")} ({properties.length})</p>
+                            
                         </div>
                     </div>
                 </div>
