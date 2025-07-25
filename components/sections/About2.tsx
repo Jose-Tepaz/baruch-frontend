@@ -122,7 +122,7 @@ const About2 = ({ homeInfo }: About2Props) => {
                                 <div className="space16" />
                                 <h2 >{title}</h2>
                                 <h3>{subtitle}</h3>
-                                <div className="space50" />
+                                <div className="space30" />
                                 <div className="img1 image-anime reveal" style={{width: '100%', height: '350px'}}>
                                     <img src={image} alt="housa" />
                                 </div>
@@ -136,8 +136,7 @@ const About2 = ({ homeInfo }: About2Props) => {
                         </div>
                         <div className="col-lg-4">
                             <div className="heading1">
-                            <div className="space30" />
-                                <div className="space30" />
+                           
                                 <div>
                                     {renderDescription()}
                                 </div>

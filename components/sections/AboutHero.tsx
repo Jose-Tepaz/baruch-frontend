@@ -20,7 +20,7 @@ export default function AboutHero() {
     return (
         <>
             <div className="about-hero-section">
-                <div className="global-padding">
+                <div className="padding-global">
                     <div className="container-large"> 
                         <div className="wrapper-about-hero-content">                 
                             <div className="about-hero-content">
@@ -29,7 +29,7 @@ export default function AboutHero() {
                                 </div>
                                 
                                 <div className="main-title fade-in-up">
-                                    <h1 className="text-anime-style-3 heading-style-h2 text-align-center">
+                                    <h1 className="heading-style-h2 text-align-center">
                                         {t('about.hero.title')}
                                     </h1>
                                 </div>

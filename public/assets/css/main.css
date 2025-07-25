@@ -1861,6 +1861,13 @@ Location:
     line-height: 26px;
 }
 
+/*============= PROPERTIES LIST CSS AREA ===============*/
+
+.wrapp-properties-list {
+    padding: 48px 0px;
+    overflow: hidden;
+}
+
 
 /*============= SERVICE CSS AREA ENDS===============*/
 
@@ -1950,7 +1957,7 @@ Location:
 
 @media (max-width: 767px) {
     .hero2-section-area {
-        padding: 170px 0 0 0;
+        padding: 0px;
     }
 }
 
@@ -5436,6 +5443,9 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 @media (max-width: 767px) {
+    .about-hero-section {
+        padding-top: 48px;
+    }
     .footer-cta-bg-area {
         margin: 0;
     }
@@ -9559,6 +9569,10 @@ only screen and (min-width: 768px) and (max-width: 991px),
 @media (max-width: 767px) {
     .miision1 {
         margin: 0;
+    }
+    .wrapp-content-mission {
+        flex-direction: column;
+        gap: 0px;
     }
 }
 
@@ -18841,7 +18855,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .property-inner-section-find .property-widget-sidebar {
     position: relative;
     z-index: 1;
-    margin: 0 0 0 30px;
+    margin: 0px;
 }
 
 @media (max-width: 767px) {

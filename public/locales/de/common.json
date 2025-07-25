@@ -1,55 +1,172 @@
 {
-    "welcome": "Willkommen bei Housa",
+    "welcome": "Willkommen bei Baruch Real Estate",
     "navigation": {
         "home": "Startseite",
         "about": "Über uns",
-        "contact": "Kontakt"
+        "properties": "Eigenschaften",
+        "services": "Dienstleistungen",
+        "contact": "Kontakt",
+        "btn-nav-1": "Kontakt aufnehmen",
+        "login-btn": "Anmelden",
+        "logout-btn": "Abmelden",
+        "btn-private-properties": "Eigenschaften"
+        
     },
+
+"footer": {
+    "title-cta":"Lass uns dein Traum wahr werden",
+    "description-cta":"Warte nicht, um deine Immobilienreise zu beginnen. Ob du kaufst, verkaufst oder mietest, unser Experten-Team ist hier, um dich bei jedem Schritt zu unterstützen. Lass uns deine Vision in die Tat umsetzen mit persönlicher Service und einem nahtlosen Erlebnis.",
+    "btn-cta": "Starte deine Suche heute",
+    "description-footer": "Wir sind dafür verpflichtet, deine Immobilienreise nahtlos und stressfrei zu gestalten. Ob du kaufst, verkaufst oder mietest, wir sind hier, um dich bei jedem Schritt zu unterstützen.",
+    "head-title-1": "Schnelle Links",
+    "head-title-2": "Kategorien",
+    "head-title-3": "Kontaktiere uns",
+    "head-title-4": "Wir sind hier",
+    "title-1-footer": "Startseite",
+    "title-2-footer": "Über uns",
+    "title-3-footer": "Eigenschaften",
+    "title-4-footer": "Dienstleistungen",
+    "title-5-footer": "Kontaktiere uns"
+   
+},  
+    "home": {
+        "btn-1-hero": "Eigenschaften ansehen",
+        "btn-2-hero": "Mehr erfahren",
+        "title-filter": "Finde dein Traum-Eigentum",
+        "title-filter-1": "Alle Status",
+        "title-filter-2": "Alle Kategorien",
+        "btn-filter": "Eigenschaften suchen",
+        "btn-all-properties": "Alle Eigenschaften anzeigen",
+        "title-about-us": "Über uns",
+        "subtitle-list-properties": "Eigenschaften",
+        "title-list-properties": "Entdecken Sie unsere neuesten Eigenschaften",
+        "subtitle-category": "Kategorie",
+        "title-category": "Wählen Sie das Zuhause, das Ihnen passt",
+        "btn-about-section-2": "Eigenschaften ansehen",
+        "subtitle-testimonials-1": "Testimonials",
+        "title-testimonials": "Was unsere Kunden sagen",
+        "subtitle-testimonials": "Testimonials"
+
+        
+   
+
+    },
+
+
+
     "buttons": {
         "login": "Anmelden",
         "register": "Registrieren",
         "search": "Suchen",
-        "seeProperties": "Eigenschaften anzeigen"
+        "seeProperties": "Eigenschaften ansehen"
     },
     "common": {
-        "loading": "Laden..."
+        "loading": "Loading..."
     },
     "properties": {
-        "title": "Unsere Immobilien",
-        "discover_latest": "Entdecken Sie unsere neuesten Immobilien",
-        "no_properties": "Keine Immobilien verfügbar"
+        "title": "Unsere Eigenschaften",
+        "discover_latest": "Entdecken Sie unsere neuesten Eigenschaften",
+        "no_properties": "Keine Eigenschaften verfügbar"
     },
     "about": {
-        "company": "Über das Unternehmen",
+        "company": "Über uns",
         "hero": {
-            "title": "Ihr vertrauensvoller Partner für Immobilien an der Costa del Sol",
-            "description": "Träumen Sie von einem Leben unter der Sonne, umgeben von atemberaubenden Landschaften, reicher Kultur und einer warmen, einladenden Gemeinschaft? Bei Baruch Real Estate helfen wir Ihnen nicht nur beim Kauf oder Verkauf von Immobilien, wir helfen Ihnen dabei, das Leben zu gestalten, das Sie sich an der Costa del Sol immer vorgestellt haben."
+            "title": "Ihr vertrauenswürdiger Partner für Immobilien in Costa del Sol",
+
+            "description": "Träumen Sie von einem Leben unter der Sonne, umgeben von beeindruckenden Landschaften, reicher Kultur und einer warmen, einladenden Gemeinschaft? Bei Baruch Real Estate helfen wir Ihnen nicht nur, Eigentum zu kaufen oder zu verkaufen, sondern wir helfen Ihnen, das Leben zu schaffen, das Sie immer gewünscht haben, auf der Costa del Sol."
         },
         "others3": {
-            "subtitle": "Mission und Vision",
-            "title": "Maßgeschneiderte Immobiliendienstleistungen an der Costa del Sol",
+            "subtitle": "Mission & Vision",
+            "title": "Angepasste Immobilienleistungen auf der Costa del Sol",
             "forbuyers": "Für Käufer",
             "forbuyersDescription": {
-                "list1": "Personalisierte Immobiliensuche, die auf Ihren Lebensstil und Ihre Ziele zugeschnitten ist",
-                "list2": "Fachkundige Beratung zu lokalen Vierteln, Schulen und Gemeinden",
-                "list3": "Problemlose Besichtigungen und kuratierte Empfehlungen",
-                "list4": "Geschickte Verhandlung, um Ihnen das beste Angebot zu verschaffen",
+                "list1": "Persönliche Eigentumsrecherchen angepasst an Ihr Lebensstil und Ziele",
+                "list2": "Expertenberatung zu lokalen Nachbarschaften, Schulen und Gemeinschaften",
+                "list3": "Hassle-free viewings and curated recommendations",
+                "list4": "Geschultes Verhandeln, um Sie mit dem besten Deal zu versorgen",
                 "list5": "Vertrauenswürdige Anwälte im Haus für rechtliche Unterstützung",
-                "list6": "Finanzpartner, um eine reibungslose Transaktion zu gewährleisten"
+                "list6": "Finanzpartner, um eine glatte Transaktion sicherzustellen"
             },
             "forseellers": "Für Verkäufer",
             "forseellersDescription": {
-                "list1": "Genaue Immobilienbewertungen basierend auf echten Marktdaten",
-                "list2": "Premium-Marketing mit professioneller Fotografie und überzeugenden Beschreibungen",
-                "list3": "Exposition gegenüber lokalen und internationalen Käufern",
-                "list4": "Verhandlungsexpertise, um Ihren Verkaufspreis zu maximieren",
-                "list5": "Vollständige Unterstützung von der Auflistung bis zum Abschluss"
+                "list1": "Genau Eigentumsbewertungen basierend auf realen Marktdaten",
+                "list2": "Premium Marketing mit professioneller Fotografie und eindringlichen Beschreibungen",
+                "list3": "Exposure to both local and international buyers",
+                "list4": "Geschultes Verhandeln, um Sie mit dem besten Deal zu versorgen",
+                "list5": "Vollständige Unterstützung von der Auflistung bis zur Schließung" 
             }
         }
+    },
+    "services": {
+        "title": "Angepasste Immobilienleistungen auf der Costa del Sol",
+        "card-1": "Eigentum kaufen",
+        "card-1-description": "Bei Baruch wissen wir, dass das Kaufen eines Hauses eine der größten Meilensteine in Ihrem Leben ist. Unser erfahrenes Team ist hier, um Sie zu unterstützen.",
+        "card-2": "Eigentum verkaufen",
+        "card-2-description": "Das Verkaufen Ihres Hauses muss nicht überwältigend sein. Mit Baruch unterstützen unsere erfahrenen Experten Sie bei jedem Schritt.",
+        "card-3": "Eigentum mieten",
+        "card-3-description": "Das Finden des richtigen Mietobjekts ist mit Housebox einfach. Egal, ob Sie nach einem gemütlichen Appartment oder einem großzügigen Haus suchen."
+    },
+    "faq": {
+        "title": "Häufig gestellte Fragen",
+       
+                "question-1": "Welche Dienstleistungen bietet Baruch Real Estate?",
+                "answer-1": "Baruch Real Estate bietet Eigentum kaufen, verkaufen und mieten, sowie Immobilienverwaltung und Investitionsberatung auf der Costa del Sol.",
+           
+            
+                "question-2": "Warum sollte ich Baruch Real Estate wählen?",
+                "answer-2": "Baruch Real Estate bietet persönliche Service, erfahrene lokale Kenntnisse und ein engagiertes Team, um Sie bei jedem Schritt Ihrer Immobilienreise zu unterstützen.",
+           
+                "question-3": "Wie kann Baruch mir helfen, das richtige Eigentum zu finden?",
+                "answer-3": "Baruch Real Estate hört Ihre Bedürfnisse und Vorlieben und erstellt dann eine Auswahl von Eigenschaften, die zu Ihrem Lebensstil und Zielen passen.",
+            
+            
+                "question-4": "Unterstützt Baruch Real Estate mit rechtlichen Papieren?",
+                "answer-4": "Ja, Baruch Real Estate hat vertrauenswürdige Anwälte im Haus, um Ihnen bei allen rechtlichen Dokumenten zu helfen und eine glatte Transaktion sicherzustellen.",
+           
+                "question-5": "Kann Baruch mir helfen, mein Eigentum schnell zu verkaufen?",
+                "answer-5": "Baruch Real Estate verwendet Premium-Marketing-Strategien und eine breite Netzwerk, um sowohl lokale als auch internationale Käufer anzuziehen, um Sie effizient zu verkaufen.",
+           
+            
+                "question-6": "Welche Gebiete deckt Baruch Real Estate ab?",
+                "answer-6": "Baruch Real Estate spezialisiert auf Eigenschaften auf der Costa del Sol, einschließlich Marbella, Estepona, Benahavís und umliegenden Gebieten.",
+            
+            
+                "question-7": "Bietet Baruch Immobilienverwaltungsdienste?",
+                "answer-7": "Ja, Baruch Real Estate bietet umfassende Immobilienverwaltung, um sicherzustellen, dass Ihre Investition gut gepflegt wird, auch wenn Sie weg sind.",
+            
+            
+                "question-8": "Wie unterstützt Baruch internationale Käufer?",
+                "answer-8": "Baruch Real Estate bietet Multilingual-Support, Richtlinien zu lokalen Vorschriften und Unterstützung bei allen Aspekten des Eigentums kaufen aus dem Ausland.",
+            
+            
+                "question-9": "Was macht Baruch Real Estate von anderen Agenturen unterscheidet?",
+                "answer-9": "Baruch Real Estate unterscheidet sich durch seine Verpflichtung zur Kundenzufriedenheit, Transparenz und einem angepassten Ansatz zu den Bedürfnissen jedes Kunden.",
+            
+            
+                "question-10": "Wie kann ich Baruch Real Estate für eine Beratung kontaktieren?",
+                "answer-10": "Sie können Baruch Real Estate über unsere Website, Telefon oder durch Besuch unseres Büros kontaktieren. Unser Team ist bereit, Ihnen bei allen Fragen zu helfen."
     },
     "language": {
         "selectLanguage": "Sprache auswählen",
         "currentLanguage": "Aktuelle Sprache",
-        "changing": "Sprache wird geändert zu"
+        "changing": "Sprache ändern zu"
+    },
+    "propertyDetails": {
+        "properti-not-found": "Eigentum nicht gefunden",
+        "property-not-found-description": "Das Eigentum, das Sie suchen, existiert nicht.",
+        "built_area-text": "Gebäudefläche",
+        "lot_area-text": "Grundstücksfläche",
+        "parking_spaces-text": "Parkplätze",
+        "bedrooms-text": "Schlafzimmer",
+        "bathrooms-text": "Badezimmer",
+        "price-text": "Preis",
+        "contact-text": "Kontaktiere uns",
+        "map_locations-text": "Karte",
+        "send_message-text": "Senden Sie uns eine Nachricht",
+        "send-btn": "Senden",
+        "fullName-text": "Vor- und Nachname",
+        "phoneNumber-text": "Telefonnummer",
+        "email-text": "E-Mail-Adresse",
+        "message-text": "Ihre Nachricht"
     }
 }

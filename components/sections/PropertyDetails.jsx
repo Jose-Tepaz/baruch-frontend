@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useTranslation } from "@/utils/i18n-simple";
 
 export default function PropertyDetails({ property }) {
-    const { t, i18n } = useTranslation('common');
+  
+    const { t } = useTranslation('common');
     // Formatear el precio con separadores de miles
     const formatPrice = (price) => {
         if (!price) return '';
@@ -21,7 +22,7 @@ export default function PropertyDetails({ property }) {
                                 <span className="status-badge for-sale">{property.propertyStatus}</span>
                                 </div>
                                 {/* Título principal */}
-                                <h1 className="text-anime-style-3 heading-style-h1">{property.title}</h1>
+                                <h1 className="heading-style-h1">{property.title}</h1>
                             
                                 {/* Dirección con icono */}
                                 <div className="property-location d-flex align-items-center gap-2">

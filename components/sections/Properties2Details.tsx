@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Thumbs } from "swiper/modules";
 import SwiperCore from "swiper";
+import "@/public/assets/css/propertyDetails.css";
 
 interface Property {
     
@@ -26,14 +27,14 @@ export default function Properties2Details({ property }: { property: Property })
                             <Swiper modules={[Autoplay, Thumbs]} thumbs={{ swiper: thumbsSwiper }} spaceBetween={0} autoplay={{ delay: 2500 }} freeMode={true} slidesPerView={1} className="all-galler-images" >
                                 {property.gallery.map((image, index) => (
                                     <SwiperSlide key={index} className="big-img">
-                                        <img src={image} alt={`Imagen ${index + 1}`} />
+                                        <img src={image} alt={`Imagen ${index + 1}`} className="main-img-property"/>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>
                             <Swiper onSwiper={setThumbsSwiper} modules={[Thumbs]} spaceBetween={10} freeMode={true} slidesPerView={5} watchSlidesProgress={true} className="bottom-galler-images" >
                                 {property.gallery.map((image, index) => (
                                     <SwiperSlide key={index} className="small-img">
-                                        <img src={image} alt={`Miniatura ${index + 1}`} />
+                                        <img src={image} alt={`Miniatura ${index + 1}`} className="thumb-img-property"/>
                                     </SwiperSlide>
                                 ))}
                             </Swiper>

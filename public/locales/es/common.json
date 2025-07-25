@@ -42,6 +42,7 @@
         "subtitle-category": "Categorías",
         "title-category": "Selecciona la categoría que estas buscando",
         "btn-about-section-2": "Ver Listado",
+        "subtitle-testimonials-1": "Testimonios",
         "title-testimonials": "Lo Que Dicen Nuestros Clientes",
         "subtitle-testimonials": "Testimonios"
     },
@@ -88,12 +89,63 @@
             }
         }
     },
+    "services": {
+        "title": "Servicios de Inmobiliario Personalizados en la Costa del Sol",
+        "card-1": "Comprar Propiedad",
+        "card-1-description": "En Baruch, sabemos que comprar una casa es uno de los mayores hitos en tu vida. Nuestro equipo experto está aquí para guiarte en cada paso del camino.",
+        "card-2": "Vender Propiedad",
+        "card-2-description": "Vender tu casa no tiene por qué ser abrumador. Con Baruch, nuestros expertos y dedicados harán el proceso.",
+        "card-3": "Alquilar Propiedad",
+        "card-3-description": "Encontrar la propiedad de alquiler correcta es fácil con Housebox. Ya sea que busques un apartamento acogedor o un hogar amplio."
+    },
+    "faq": {
+        "title": "Preguntas Frecuentes",
+       
+                "question-1": "¿Qué servicios ofrece Baruch Real Estate?",
+                "answer-1": "Baruch Real Estate ofrece servicios de compra, venta y alquiler, así como gestión de propiedades y asesoría de inversión en la Costa del Sol.",
+           
+            
+                "question-2": "¿Por qué debería elegir Baruch Real Estate?",
+                "answer-2": "Baruch Real Estate ofrece servicio personalizado, conocimiento local experto y un equipo dedicado para guiarte en cada paso de tu viaje inmobiliario.",
+           
+                "question-3": "¿Cómo puede Baruch ayudarme a encontrar la propiedad correcta?",
+                "answer-3": "Baruch Real Estate escucha tus necesidades y preferencias, luego selecciona una selección de propiedades que coincidan con tu estilo de vida y objetivos.",
+            
+            
+                "question-4": "¿Ayuda Baruch Real Estate con papeleo legal?",
+                "answer-4": "Sí, Baruch Real Estate tiene abogados de confianza en la empresa para ayudarte con todos los documentos legales y garantizar una transacción sin complicaciones.",
+           
+                "question-5": "¿Puede Baruch ayudarme a vender mi propiedad rápidamente?",
+                "answer-5": "Baruch Real Estate utiliza estrategias de marketing premium y una red amplia para atraer tanto compradores locales como internacionales, ayudándote a vender de manera eficiente.",
+           
+            
+                "question-6": "¿Qué áreas cubre Baruch Real Estate?",
+                "answer-6": "Baruch Real Estate se especializa en propiedades en la Costa del Sol, incluyendo Marbella, Estepona, Benahavís y áreas circundantes.",
+            
+            
+                "question-7": "¿Ofrece Baruch servicios de gestión de propiedades?",
+                "answer-7": "Sí, Baruch Real Estate ofrece gestión de propiedades integral para garantizar que tu inversión esté bien cuidada, incluso cuando estés ausente.",
+            
+            
+                "question-8": "¿Cómo ayuda Baruch a compradores internacionales?",
+                "answer-8": "Baruch Real Estate ofrece soporte multilingüe, orientación sobre regulaciones locales y asistencia con todos los aspectos de la compra de propiedades desde el extranjero.",
+            
+            
+                "question-9": "¿Qué hace que Baruch Real Estate sea diferente de otras agencias?",
+                "answer-9": "Baruch Real Estate destaca por su compromiso con la satisfacción del cliente, transparencia y un enfoque personalizado a las necesidades de cada cliente.",
+            
+            
+                "question-10": "¿Cómo puedo contactar a Baruch Real Estate para una consulta?",
+                "answer-10": "Puedes contactar a Baruch Real Estate a través de nuestro sitio web, por teléfono o visitando nuestro oficina. Nuestro equipo está listo para ayudarte con cualquier pregunta."
+    },
     "language": {
         "selectLanguage": "Seleccionar Idioma",
         "currentLanguage": "Idioma Actual",
         "changing": "Cambiando idioma a"
     },
     "propertyDetails": {
+        "properti-not-found": "Propiedad no encontrada",
+        "property-not-found-description": "La propiedad que estás buscando no existe.",
         "built_area-text": "Área Construida",
         "lot_area-text": "Área Terreno",
         "parking_spaces-text": "Espacios de Estacionamiento",

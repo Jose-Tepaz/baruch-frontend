@@ -136,7 +136,7 @@ export default async function Home({ params }: Props) {
                 <PropertyList1 properties={properties || []} />
                 <Category1 categories={categories || []} />
                 <About3 homeInfo={homeInfo?.data} />
-                <img src={imgLandscape.src} alt="baruch" style={{width: '100%', height: 'auto'}} />
+                <img className="img-landscape" src={imgLandscape.src} alt="baruch" style={{width: '100%', height: 'auto'}} />
                 <Testimonial2 testimonials={testimonials} />
             </Layout>
         );

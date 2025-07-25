@@ -67,7 +67,7 @@ export default function PropertyList1({ properties }: { properties: any[] }) {
   }
 
   return (
-    <section className="py-5">
+    <section className="wrapp-properties-list">
         <div className="row">
             <div className="col-lg-7 m-auto d-flex justify-content-center align-items-center">
                 <div className="heading1">

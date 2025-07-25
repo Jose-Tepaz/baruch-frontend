@@ -10,25 +10,22 @@
         "login-btn": "Login",
         "logout-btn": "Logout",
         "btn-private-properties": "Properties"
-        
     },
-
-"footer": {
-    "title-cta":"Let's Make Your Dream a Reality",
-    "description-cta":"Don’t wait to start your real estate journey. Whether you’re buying, selling, or renting, our expert team is here to guide you every step of the way. Let’s turn your vision into reality with personalized service and a seamless experience.",
-    "btn-cta": "Start Your Search Today",
-    "description-footer": "We are committed to making your real estate journey seamless and stress-free. Whether you’re buying, selling, or renting every step the way.",
-    "head-title-1": "Quick Links",
-    "head-title-2": "Categories",
-    "head-title-3": "Contact Us",
-    "head-title-4": "We Are Here",
-    "title-1-footer": "Home",
-    "title-2-footer": "About Us",
-    "title-3-footer": "Properties",
-    "title-4-footer": "Services",
-    "title-5-footer": "Contact Us"
-   
-},  
+    "footer": {
+        "title-cta": "Let's Make Your Dream a Reality",
+        "description-cta": "Don’t wait to start your real estate journey. Whether you’re buying, selling, or renting, our expert team is here to guide you every step of the way. Let’s turn your vision into reality with personalized service and a seamless experience.",
+        "btn-cta": "Start Your Search Today",
+        "description-footer": "We are committed to making your real estate journey seamless and stress-free. Whether you’re buying, selling, or renting every step the way.",
+        "head-title-1": "Quick Links",
+        "head-title-2": "Categories",
+        "head-title-3": "Contact Us",
+        "head-title-4": "We Are Here",
+        "title-1-footer": "Home",
+        "title-2-footer": "About Us",
+        "title-3-footer": "Properties",
+        "title-4-footer": "Services",
+        "title-5-footer": "Contact Us"
+    },
     "home": {
         "btn-1-hero": "View Properties",
         "btn-2-hero": "Learn More",
@@ -43,16 +40,10 @@
         "subtitle-category": "Category",
         "title-category": "Select The Home That Suits You",
         "btn-about-section-2": "View Listing",
+        "subtitle-testimonials-1": "Testimonials",
         "title-testimonials": "What Our Clients Say",
         "subtitle-testimonials": "Testimonials"
-
-        
-   
-
     },
-
-
-
     "buttons": {
         "login": "Login",
         "register": "Register",
@@ -71,7 +62,6 @@
         "company": "About Company",
         "hero": {
             "title": "Your Trusted Partner for Costa del Sol Property",
-
             "description": "Dreaming of life under the sun, surrounded by stunning landscapes, rich culture, and a warm, welcoming community? At Baruch Real Estate, we do more than help you buy or sell property, we help you build the life you've always imagined on the Costa del Sol."
         },
         "others3": {
@@ -96,12 +86,66 @@
             }
         }
     },
+    "services": {
+        "title": "Real Estate Services Tailored Solutions",
+        "card-1": "Buying Property",
+        "card-1-description": "At Baruch, we know that buying and home is one life’s biggest milestones, Our experienced team is here guide.",
+        "card-2": "Sell Property",
+        "card-2-description": "Selling your home doesn’t have to be overwhelming. With Baruch, our and dedicated experts will make process.",
+        "card-3": "Renting Property",
+        "card-3-description": "Finding the right rental property is easy with Housebox. Whether you’re seeking a cozy apartment spacious."
+    },
+    "faq": {
+        "title": "Frequently Asked Question",
+       
+                "question-1": "What services does Baruch Real Estate offer?",
+                "answer-1": "Baruch Real Estate offers buying, selling, and renting services, as well as property management and investment advice on the Costa del Sol.",
+           
+            
+                "question-2": "Why should I choose Baruch Real Estate?",
+                "answer-2": "Baruch Real Estate provides personalized service, expert local knowledge, and a dedicated team to guide you through every step of your real estate journey.",
+           
+                "question-3": "How can Baruch help me find the right property?",
+                "answer-3": "Baruch Real Estate listens to your needs and preferences, then curates a selection of properties that match your lifestyle and goals.",
+            
+            
+                "question-4": "Does Baruch Real Estate assist with legal paperwork?",
+                "answer-4": "Yes, Baruch Real Estate has trusted in-house lawyers to help you with all legal documentation and ensure a smooth transaction.",
+           
+                "question-5": "Can Baruch help me sell my property quickly?",
+                "answer-5": "Baruch Real Estate uses premium marketing strategies and a wide network to attract both local and international buyers, helping you sell efficiently.",
+           
+            
+                "question-6": "What areas does Baruch Real Estate cover?",
+                "answer-6": "Baruch Real Estate specializes in properties across the Costa del Sol, including Marbella, Estepona, Benahavís, and surrounding areas.",
+            
+            
+                "question-7": "Does Baruch offer property management services?",
+                "answer-7": "Yes, Baruch Real Estate provides comprehensive property management to ensure your investment is well cared for, even when you are away.",
+            
+            
+                "question-8": "How does Baruch support international buyers?",
+                "answer-8": "Baruch Real Estate offers multilingual support, guidance on local regulations, and assistance with all aspects of purchasing property from abroad.",
+            
+            
+                "question-9": "What makes Baruch Real Estate different from other agencies?",
+                "answer-9": "Baruch Real Estate stands out for its commitment to client satisfaction, transparency, and a tailored approach to every client’s needs.",
+            
+            
+                "question-10": "How do I contact Baruch Real Estate for a consultation?",
+                "answer-10": "You can contact Baruch Real Estate through our website, by phone, or by visiting our office. Our team is ready to assist you with any questions."
+    },
+            
+            
+
     "language": {
         "selectLanguage": "Select Language",
         "currentLanguage": "Current Language",
         "changing": "Changing language to"
     },
     "propertyDetails": {
+        "properti-not-found": "Property not found",
+        "property-not-found-description": "The property you're looking for doesn't exist.",
         "built_area-text": "Built Area",
         "lot_area-text": "Lot Area",
         "parking_spaces-text": "Parking Spaces",

@@ -12,7 +12,9 @@ export default function Others3() {
             <div className="space30" />
             {/*===== OTHERS AREA STARTS =======*/}
             <div className="miision1">
-                <div className="containr-fluid">
+                <div className="padding-global">
+
+                    <div className="container-large">
                     <div className="row">
                         <div className="col-lg-6 m-auto">
                             <div className="heading1 text-center space-margin60">
@@ -102,6 +104,7 @@ export default function Others3() {
                                 </div>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>

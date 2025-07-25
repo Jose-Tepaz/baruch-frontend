@@ -1,6 +1,10 @@
+'use client';
 import Link from "next/link";
+import { useTranslation } from "@/utils/i18n-simple";
 
-export default function Service2() {
+export default function Service1() {
+    const { t, i18n } = useTranslation('common');
+
     return (
         <>
             {/*===== SERVICE AREA STARTS =======*/}
@@ -9,7 +13,7 @@ export default function Service2() {
                     <div className="row">
                         <div className="col-lg-6 m-auto">
                             <div className="heading1 text-center space-margin60">
-                                <h2>Real Estate Tailored Solution</h2>
+                                <h2>{t('services.title')}</h2>
                             </div>
                         </div>
                     </div>
@@ -28,9 +32,9 @@ export default function Service2() {
                                         </svg>
                                     </div>
                                     <div className="content">
-                                        <Link href="#">Buying Property</Link>
+                                        <Link href="#">{t('services.card-1')}</Link>
                                         <div className="space16" />
-                                        <p>At Baruch, we know that buying and home is one life’s biggest milestones, Our experienced team is here guide.</p>
+                                        <p>{t('services.card-1-description')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -50,9 +54,9 @@ export default function Service2() {
                                         </svg>
                                     </div>
                                     <div className="content">
-                                        <Link href="#">Sell Property</Link>
+                                        <Link href="#">{t('services.card-2')}</Link>
                                         <div className="space16" />
-                                        <p>Selling your home doesn’t have to be overwhelming. With Baruch, our and dedicated experts will make process.</p>
+                                        <p>{t('services.card-2-description')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -71,9 +75,9 @@ export default function Service2() {
                                         </svg>
                                     </div>
                                     <div className="content">
-                                        <Link href="#">Renting Property</Link>
+                                        <Link href="#">{t('services.card-3')}</Link>
                                         <div className="space16" />
-                                        <p>Finding the right rental property is easy with Housebox. Whether you’re seeking a cozy apartment spacious.</p>
+                                        <p>{t('services.card-3-description')}</p>
                                     </div>
                                 </div>
                             </div>

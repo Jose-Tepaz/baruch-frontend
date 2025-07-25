@@ -38,7 +38,7 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="property-mapgrid-area">
-                                <div className="space32" />
+                                
                                 <div className="row">
                                     <div className="col-lg-3">
                                         <div className="sidebar1-area">
@@ -48,12 +48,9 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                                                 agentEmail="housa@.com"
                                                 agentPhone="(234) 345-4574"
                                             />
-                                            <div className="space30" />
-
-
-                                            <div className="space30" />
                                             
-                                            <div className="space30 d-lg-none d-block" />
+                                            
+                                           
                                         </div>
                                     </div>
 

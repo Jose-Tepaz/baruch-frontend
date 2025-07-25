@@ -97,14 +97,14 @@ export default function Testimonial2({ testimonials }: Testimonial2Props = {}) {
                     <div className="row align-items-center">
                         <div className="col-lg-6">
                             <div className="testi-img image-anime reveal">
-                                <img src="/assets/img/all-images//testimonial/testimonial-img1.png" alt="housa" />
+                                <img className="imgage-landscape" src="/assets/img/all-images//testimonial/testimonial-img1.png" alt="housa" />
                             </div>
                         </div>
                         <div className="col-lg-6">
                             <div className="heading1">
-                                <h5>{t('home.subtitle-testimonials')}</h5>
+                                <h5 className="text-color-blue">{t('home.subtitle-testimonials')}</h5>
                                 <div className="space16" />
-                                <h2>{t('home.title-testimonials')}</h2>
+                                <h2 className="text-anime-style-3">{t('home.title-testimonials')}</h2>
                                 <div className="space50" />
                                 <div className="testimonial-container">
                                     <Swiper {...swiperOptions} className="swiper mySwiper">

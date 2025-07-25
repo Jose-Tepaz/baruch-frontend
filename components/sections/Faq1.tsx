@@ -1,4 +1,9 @@
+'use client';
+import { useTranslation } from "@/utils/i18n-simple";
+
 export default function Faq1() {
+    const { t, i18n } = useTranslation('common');
+
     return (
         <>
             {/*===== FAQ AREA STARTS =======*/}
@@ -7,7 +12,7 @@ export default function Faq1() {
                     <div className="row">
                         <div className="col-lg-7 m-auto">
                             <div className="heading2 text-center space-margin60">
-                                <h2>Frequently Asked Question</h2>
+                                <h2>{t('faq.title')}</h2>
                             </div>
                         </div>
                     </div>
@@ -21,12 +26,12 @@ export default function Faq1() {
                                                 <div className="accordion-item">
                                                     <h2 className="accordion-header">
                                                         <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                            Do I need a real estate agent to buy or sell a property?
+                                                            {t('faq.question-1')}
                                                         </button>
                                                     </h2>
                                                     <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                                         <div className="accordion-body">
-                                                            <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Baruch, we understand that every decision involves crucial details, from financing.</p>
+                                                            <p>{t('faq.answer-1')}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -34,12 +39,12 @@ export default function Faq1() {
                                                 <div className="accordion-item">
                                                     <h2 className="accordion-header">
                                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                            How do I calculate my on investment (ROI) real estate?
+                                                            {t('faq.question-2')}
                                                         </button>
                                                     </h2>
                                                     <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                                         <div className="accordion-body">
-                                                            <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Baruch, we understand that every decision involves crucial details, from financing.</p>
+                                                            <p>{t('faq.answer-2')}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -47,12 +52,12 @@ export default function Faq1() {
                                                 <div className="accordion-item">
                                                     <h2 className="accordion-header">
                                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                            How much down payment do I need to buy a home?
+                                                            {t('faq.question-3')}
                                                         </button>
                                                     </h2>
                                                     <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                                         <div className="accordion-body">
-                                                            <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Baruch, we understand that every decision involves crucial details, from financing.</p>
+                                                            <p>{t('faq.answer-3')}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -60,12 +65,12 @@ export default function Faq1() {
                                                 <div className="accordion-item">
                                                     <h2 className="accordion-header">
                                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                            Do I need a real estate agent to buy or sell a property?
+                                                            {t('faq.question-4')}
                                                         </button>
                                                     </h2>
                                                     <div id="collapseFour" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                                         <div className="accordion-body">
-                                                            <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Baruch, we understand that every decision involves crucial details, from financing.</p>
+                                                            <p>{t('faq.answer-4')}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -73,12 +78,12 @@ export default function Faq1() {
                                                 <div className="accordion-item">
                                                     <h2 className="accordion-header">
                                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                                            Do I have to pay taxes when selling my home?
+                                                            {t('faq.question-5')}
                                                         </button>
                                                     </h2>
                                                     <div id="collapseFive" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                                         <div className="accordion-body">
-                                                                <p>Navigating the real estate market can been overwhelming, whether you're buying your first home, selling property, or investing in real estate. Baruch, we understand that every decision involves crucial details, from financing.</p>
+                                                                <p>{t('faq.answer-5')}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -92,12 +97,12 @@ export default function Faq1() {
                                                 <div className="accordion-item">
                                                     <h2 className="accordion-header">
                                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                                                            What hidden costs should I expect when buying a home?
+                                                            {t('faq.question-6')}
                                                         </button>
                                                     </h2>
                                                     <div id="collapseSix" className="accordion-collapse collapse" data-bs-parent="#accordionExample2">
                                                         <div className="accordion-body">
-                                                                <p>Renting typically refers to short-term agreements, often on a month-to the month basis. Tenants have the flexibility to move out with a shorter notice period, usually fixed-term contract 30 days providing stability flexibility.</p>
+                                                                <p>{t('faq.answer-6')}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -105,12 +110,12 @@ export default function Faq1() {
                                                 <div className="accordion-item">
                                                     <h2 className="accordion-header">
                                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                                            What is the difference between freehold best property?
+                                                                {t('faq.question-7')}
                                                         </button>
                                                     </h2>
                                                     <div id="collapseSeven" className="accordion-collapse collapse" data-bs-parent="#accordionExample2">
                                                         <div className="accordion-body">
-                                                            <p>Renting typically refers to short-term agreements, often on a month-to the month basis. Tenants have the flexibility to move out with a shorter notice period, usually fixed-term contract 30 days providing stability flexibility.</p>
+                                                            <p>{t('faq.answer-7')}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -118,12 +123,12 @@ export default function Faq1() {
                                                 <div className="accordion-item">
                                                     <h2 className="accordion-header">
                                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                                            How do I determine the right price for my home?
+                                                            {t('faq.question-8')}
                                                         </button>
                                                     </h2>
                                                     <div id="collapseEight" className="accordion-collapse collapse" data-bs-parent="#accordionExample2">
                                                         <div className="accordion-body">
-                                                            <p>Renting typically refers to short-term agreements, often on a month-to the month basis. Tenants have the flexibility to move out with a shorter notice period, usually fixed-term contract 30 days providing stability flexibility.</p>
+                                                            <p>{t('faq.answer-8')}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -131,12 +136,12 @@ export default function Faq1() {
                                                 <div className="accordion-item">
                                                     <h2 className="accordion-header">
                                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                                                            What is the difference between leasehold property?
+                                                            {t('faq.question-9')}
                                                         </button>
                                                     </h2>
                                                     <div id="collapseNine" className="accordion-collapse collapse" data-bs-parent="#accordionExample2">
                                                         <div className="accordion-body">
-                                                            <p>Renting typically refers to short-term agreements, often on a month-to the month basis. Tenants have the flexibility to move out with a shorter notice period, usually fixed-term contract 30 days providing stability flexibility.</p>
+                                                            <p>{t('faq.answer-9')}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -144,12 +149,12 @@ export default function Faq1() {
                                                 <div className="accordion-item">
                                                     <h2 className="accordion-header">
                                                         <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                                                            What is the difference between renting and leasing?
+                                                            {t('faq.question-10')}
                                                         </button>
                                                     </h2>
                                                     <div id="collapseTen" className="accordion-collapse collapse" data-bs-parent="#accordionExample2">
                                                         <div className="accordion-body">
-                                                            <p>Renting typically refers to short-term agreements, often on a month-to the month basis. Tenants have the flexibility to move out with a shorter notice period, usually fixed-term contract 30 days providing stability flexibility.</p>
+                                                            <p>{t('faq.answer-10')}</p>
                                                         </div>
                                                     </div>
                                                 </div>

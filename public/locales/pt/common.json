@@ -1,14 +1,63 @@
 {
-    "welcome": "Bem-vindo ao Housa",
+    "welcome": "Bem-vindo ao Baruch Real Estate",
     "navigation": {
         "home": "Início",
-        "about": "Sobre",
-        "contact": "Contato"
+        "about": "Sobre Nós",
+        "properties": "Propriedades",
+        "services": "Serviços",
+        "contact": "Contato",
+        "btn-nav-1": "Entre em contato",
+        "login-btn": "Login",
+        "logout-btn": "Sair",
+        "btn-private-properties": "Propriedades"
+        
     },
+
+"footer": {
+    "title-cta":"Vamos Fazer Seu Sonho Realidade",
+    "description-cta":"Não espere mais para começar sua jornada imobiliária. Seja você comprando, vendendo ou alugando, nosso time de especialistas está aqui para guiar você em cada passo do caminho. Vamos transformar sua visão em realidade com um serviço personalizado e uma experiência sem complicações.",
+    "btn-cta": "Comece Sua Busca Hoje",
+    "description-footer": "Nós estamos comprometidos em fazer sua jornada imobiliária sem complicações e sem estresse. Seja você comprando, vendendo ou alugando, cada passo do caminho.",
+    "head-title-1": "Links Rápidos",
+    "head-title-2": "Categorias",
+    "head-title-3": "Contato",
+    "head-title-4": "Estamos Aqui",
+    "title-1-footer": "Início",
+    "title-2-footer": "Sobre Nós",
+    "title-3-footer": "Propriedades",
+    "title-4-footer": "Serviços",
+    "title-5-footer": "Contato"
+   
+},  
+    "home": {
+        "btn-1-hero": "Visualizar Propriedades",
+        "btn-2-hero": "Saiba Mais",
+        "title-filter": "Encontre a Propriedade Ideal",
+        "title-filter-1": "Todos os Status",
+        "title-filter-2": "Todas as Categorias",
+        "btn-filter": "Pesquisar Propriedades",
+        "btn-all-properties": "Mostrar todas as propriedades",
+        "title-about-us": "Sobre a Empresa",
+        "subtitle-list-properties": "Propriedades",
+        "title-list-properties": "Descubra Nossas Últimas Propriedades",
+        "subtitle-category": "Categorias",
+        "title-category": "Selecione a Propriedade Que Você Gosta",
+        "btn-about-section-2": "Visualizar Lista",
+        "subtitle-testimonials-1": "Depoimentos",
+        "title-testimonials": "O Que Nossos Clientes Dizem",
+        "subtitle-testimonials": "Depoimentos"
+
+        
+   
+
+    },
+
+
+
     "buttons": {
         "login": "Entrar",
         "register": "Registrar",
-        "search": "Buscar",
+        "search": "Pesquisar",
         "seeProperties": "Ver Propriedades"
     },
     "common": {
@@ -20,37 +69,104 @@
         "no_properties": "Nenhuma propriedade disponível"
     },
     "about": {
-        "company": "Sobre a empresa",
+        "company": "Sobre a Empresa",
         "hero": {
-            "title": "Seu parceiro confiável para propriedades da Costa del Sol",
+            "title": "Seu Parceiro de Confiança para Propriedades em Costa del Sol",
 
-            "description": "Sonha com uma vida sob o sol, cercado por paisagens deslumbrantes, cultura rica e uma comunidade calorosa e acolhedora? Na Baruch Real Estate, fazemos mais do que ajudá-lo a comprar ou vender propriedades, ajudamos você a construir a vida que sempre imaginou na Costa del Sol."
+            "description": "Sonhando com a vida sob o sol, cercado por paisagens incríveis, cultura rica e uma comunidade acolhedora e acolhedora? Na Baruch Real Estate, fazemos mais do que ajudar você a comprar ou vender propriedade, ajudamos você a construir a vida que você sempre imaginou em Costa del Sol."
         },
         "others3": {
-            "subtitle": "Missão e Visão",
-            "title": "Serviços imobiliários sob medida na Costa del Sol",
-            "forbuyers": "Para compradores",
+            "subtitle": "Missão & Visão",
+            "title": "Serviços Imobiliários Personalizados em Costa del Sol",
+            "forbuyers": "Para Compradores",
             "forbuyersDescription": {
                 "list1": "Pesquisas de propriedades personalizadas adaptadas ao seu estilo de vida e objetivos",
-                "list2": "Orientação especializada sobre bairros locais, escolas e comunidades",
-                "list3": "Visitas sem complicações e recomendações curadas",
+                "list2": "Orientação especializada em bairros locais, escolas e comunidades",
+                "list3": "Visitas sem complicações e recomendações personalizadas",
                 "list4": "Negociação habilidosa para obter o melhor negócio",
-                "list5": "Advogados confiáveis internos para suporte legal",
-                "list6": "Parceiros financeiros para garantir uma transação suave"
+                "list5": "Advogados confiáveis em casa para suporte legal",
+                "list6": "Parceiros financeiros para garantir uma transação sem complicações"
             },
-            "forseellers": "Para vendedores",
+            "forseellers": "Para Vendedores",
             "forseellersDescription": {
                 "list1": "Avaliações de propriedades precisas baseadas em dados de mercado reais",
                 "list2": "Marketing premium com fotografia profissional e descrições convincentes",
                 "list3": "Exposição a compradores locais e internacionais",
-                "list4": "Experiência em negociação para maximizar seu preço de venda",
-                "list5": "Suporte completo da listagem ao fechamento"
+                "list4": "Experiência de negociação para maximizar seu preço de venda",
+                "list5": "Suporte completo desde a listagem até a fechamento"
             }
         }
     },
+    "services": {
+        "title": "Serviços de Imobiliário Personalizados em Costa del Sol",
+        "card-1": "Comprar Propriedade",
+        "card-1-description": "A Baruch, sabemos que comprar uma casa é um dos maiores hitos da sua vida. Nosso time experiente está aqui para guiá-lo em cada passo do caminho.",
+        "card-2": "Vender Propriedade",
+        "card-2-description": "Vender sua casa não precisa ser complicado. Com a Baruch, nossos especialistas e dedicados farão o processo.",
+        "card-3": "Alugar Propriedade",
+        "card-3-description": "Encontrar a propriedade de aluguel correta é fácil com Housebox. Seja que você esteja procurando um apartamento confortável ou um grande lar."
+    },
+    "faq": {
+        "title": "Perguntas Frequentes",
+       
+                "question-1": "Quais serviços a Baruch Real Estate oferece?",
+                "answer-1": "A Baruch Real Estate oferece serviços de compra, venda e aluguel, além de gerenciamento de propriedades e consultoria de investimento na Costa del Sol.",
+           
+            
+                "question-2": "Por que devo escolher a Baruch Real Estate?",
+                "answer-2": "A Baruch Real Estate oferece um serviço personalizado, conhecimento local experiente e um time dedicado para guiá-lo em cada passo do seu viagem imobiliária.",
+           
+                "question-3": "Como a Baruch pode me ajudar a encontrar a propriedade correta?",
+                "answer-3": "Baruch Real Estate escuta suas necessidades e preferências, então seleciona uma seleção de propriedades que correspondem ao seu estilo de vida e objetivos.",
+            
+            
+                "question-4": "A Baruch Real Estate ajuda com documentos legais?",
+                "answer-4": "Sim, a Baruch Real Estate tem advogados de confiança na empresa para ajudar com todos os documentos legais e garantir uma transação sem complicações.",
+           
+                "question-5": "A Baruch pode me ajudar a vender minha propriedade rapidamente?",
+                "answer-5": "Baruch Real Estate utiliza estratégias de marketing premium e uma rede ampla para atrair tanto compradores locais quanto internacionais, ajudando você a vender de forma eficiente.",
+           
+            
+                "question-6": "Quais áreas a Baruch Real Estate cobre?",
+                "answer-6": "Baruch Real Estate se especializa em propriedades na Costa del Sol, incluindo Marbella, Estepona, Benahavís e áreas circunvizinhas.",
+            
+            
+                "question-7": "A Baruch oferece serviços de gerenciamento de propriedades?",
+                "answer-7": "Sim, a Baruch Real Estate oferece um gerenciamento de propriedades completo para garantir que sua investimento seja bem cuidado, mesmo quando você está ausente.",
+            
+            
+                "question-8": "Como a Baruch ajuda compradores internacionais?",
+                "answer-8": "A Baruch Real Estate oferece suporte multilingue, orientação sobre regulamentações locais e assistência com todos os aspectos da compra de propriedades do exterior.",
+            
+            
+                "question-9": "O que torna a Baruch Real Estate diferente das outras agências?",
+                "answer-9": "A Baruch Real Estate se destaca por seu compromisso com a satisfação do cliente, transparência e um enfoque personalizado para as necessidades de cada cliente.",
+            
+            
+                "question-10": "Como posso contatar a Baruch Real Estate para uma consulta?",
+                "answer-10": "Você pode contatar a Baruch Real Estate através de nosso site, por telefone ou visitando nosso escritório. Nosso time está pronto para ajudar com qualquer dúvida."
+    },
     "language": {
-        "selectLanguage": "Selecionar idioma",
-        "currentLanguage": "Idioma atual",
+        "selectLanguage": "Selecionar Idioma",
+        "currentLanguage": "Idioma Atual",
         "changing": "Mudando idioma para"
+    },
+    "propertyDetails": {
+        "properti-not-found": "Propriedade não encontrada",
+        "property-not-found-description": "A propriedade que você está procurando não existe.",
+        "built_area-text": "Área Construída",
+        "lot_area-text": "Área Terreno",
+        "parking_spaces-text": "Vagas de Estacionamento",
+        "bedrooms-text": "Quartos",
+        "bathrooms-text": "Banheiros",
+        "price-text": "Preço",
+        "contact-text": "Contato",
+        "map_locations-text": "Localização",
+        "send_message-text": "Envie-nos um Mensagem",
+        "send-btn": "Enviar",
+        "fullName-text": "Nome Completo",
+        "phoneNumber-text": "Número de Telefone",
+        "email-text": "Email",
+        "message-text": "Seu Mensagem"
     }
 }
