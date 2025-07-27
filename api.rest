@@ -35,7 +35,19 @@
 //GET https://inviting-angel-c3362cfe53.strapiapp.com/api/properties?populate=main_image
 //Authorization: Bearer 8d499d53e408249d6db8d6cd2e06a78f8fa8a9004023cb0552a610ceea39df3aa5f48403bc58167307add03185d38c74a35fc33d7615780b45b6668d4055a4436f987206c8b2ec5571722f525ddc6cf9009350123170a4a7214ea21d64502e53b415ca6296d984ba101cf6ad0b76d3ca8d52b770315e47b59d41a85d96c63bac
 
-GET http://localhost:1337/api/testimonials
+//GET http://localhost:1337/api/testimonials
+//Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
+
+
+POST http://localhost:1337/api/contacts
 Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
+Content-Type: application/json
 
-
+{
+  "data": {
+    "property_of_interest": "123",
+    "client_name": "John Doe",
+    "email_address": "john.doe@example.com",
+    "message": "Este es un mensaje de prueba"
+  }
+}

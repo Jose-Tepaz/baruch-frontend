@@ -49,7 +49,7 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href="/about">
+                                        <Link href="/about-us">
                                             {t('navigation.about')}
                                         </Link>
                                     </li>
