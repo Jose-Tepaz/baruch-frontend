@@ -155,7 +155,7 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                                                                     </div>
                                                                 </div>
                                                             )}
-                                                            <div className="col-lg-6">
+                                                            <div className="col-lg-12">
                                                                 <div className="input-area">
                                                                     <input 
                                                                         type="text" 
