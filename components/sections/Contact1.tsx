@@ -22,7 +22,7 @@ export default function Contact1() {
                                 </div>
                                 <div className="content">
                                     <p>Our Email</p>
-                                    <Link href="mailto:Housarealesate@gmail.com">Housarealesate@gmail.com</Link>
+                                    <Link href="mailto:Housarealesate@gmail.com">baruch@gmail.com</Link>
                                 </div>
                             </div>
                         </div>
@@ -82,6 +82,10 @@ export default function Contact1() {
                                     <h3>Send Us A Message</h3>
                                     <div className="space8" />
                                     <div className="row">
+                                        <form action="">
+                                            
+                                       
+                                        
                                         <div className="col-lg-6">
                                             <div className="input-area">
                                                 <input type="text" placeholder="Your Name" />
@@ -126,6 +130,7 @@ export default function Contact1() {
                                                 </button>
                                             </div>
                                         </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
