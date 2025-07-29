@@ -66,7 +66,7 @@ export default function PrivacyPolicy() {
                                 <div className="contact-us-box heading1">
                                     <h3>Contact Us</h3>
                                     <div className="space16" />
-                                    <p>Let’s make an real estate journey smooth and successful. Contact Housa today!</p>
+                                    <p>Let’s make an real estate journey smooth and successful. Contact Baruch today!</p>
                                     <div className="space24" />
                                     <div className="btn-area1">
                                         <Link href="#" className="vl-btn1">
@@ -91,11 +91,11 @@ export default function PrivacyPolicy() {
                                 <div className="heading1">
                                     <h2>Privacy &amp; Policy</h2>
                                     <div className="space24" />
-                                    <p>At&nbsp;Housa, protecting your privacy is our top priority. This Privacy Policy outlines how we collect, use, and safeguard your personal information when you interact with our website and services.</p>
+                                    <p>At&nbsp;Baruch, protecting your privacy is our top priority. This Privacy Policy outlines how we collect, use, and safeguard your personal information when you interact with our website and services.</p>
                                     <div className="space24" />
                                     <h4>Effective Date: 26 February 2025</h4>
                                     <div className="space16" />
-                                    <p>At&nbsp;Housa, protecting your privacy is our top priority. This Privacy Policy outlines how we collect, use, and safeguard your personal information when you interact with our website and services.</p>
+                                    <p>At&nbsp;Baruch, protecting your privacy is our top priority. This Privacy Policy outlines how we collect, use, and safeguard your personal information when you interact with our website and services.</p>
                                     <div className="space50" />
                                     <h3>Information We Collect</h3>
                                     <div className="space16" />
@@ -181,7 +181,7 @@ export default function PrivacyPolicy() {
                                     <div className="space16" />
                                     <p>Our website may contain links to third-party websites. We are not responsible for their privacy practices, so please review their policies independently.</p>
                                     <div className="space16" />
-                                    <p>At&nbsp;Housa, your privacy is our priority. We are committed to protecting the personal information you share with us when using our services. We collect information such as your name, contact details, and property preferences to provide a seamless experience in buying, selling, or renting properties. This data helps us personalize your journey, process transactions, and improve our services. Rest assured, we do not sell or rent your information to third parties. We use secure systems to safeguard your data and ensure compliance with privacy standards. For any questions or concerns, feel free to reach out to our team—we're here to assist you.</p>
+                                   <p>At&nbsp;Baruch, your privacy is our priority. We are committed to protecting the personal information you share with us when using our services. We collect information such as your name, contact details, and property preferences to provide a seamless experience in buying, selling, or renting properties. This data helps us personalize your journey, process transactions, and improve our services. Rest assured, we do not sell or rent your information to third parties. We use secure systems to safeguard your data and ensure compliance with privacy standards. For any questions or concerns, feel free to reach out to our team—we're here to assist you.</p>
                                 </div>
                             </div>
                         </div>
