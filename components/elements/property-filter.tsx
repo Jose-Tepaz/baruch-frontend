@@ -350,7 +350,7 @@ export default function PropertyFilter({ categories }: { categories: Category[] 
                                 <div className="input-area filter-group">
                                     <select 
                                         name="propertyType" 
-                                        className="nice-select" 
+                                        className="form-select" 
                                         onChange={handlePropertyTypeChange} 
                                         value={propertyFilter.propertyType}
                                     >
@@ -364,7 +364,7 @@ export default function PropertyFilter({ categories }: { categories: Category[] 
                                 </div>
 
                                 <div className="input-area filter-group">
-                                    <select name="status" className="nice-select" onChange={handleStatusChange} value={propertyFilter.status}>
+                                    <select name="status" className="form-select" onChange={handleStatusChange} value={propertyFilter.status}>
                                         <option value="">All Status</option>
                                         {statuses.map((status) => (
                                             <option key={status.id} value={status.value}>

@@ -160,5 +160,24 @@
         "phoneNumber-text": "Phone Number",
         "email-text": "Email Address",
         "message-text": "Your Message"
+    },
+    "contact": {
+        "title": "Contact Us",
+        "our-email": "Our Email",
+        "our-phone": "Phone",
+        "our-schedule": "Schedule",
+        "form-title": "Send Us A Message",
+      
+        "your-name": "Your Name",
+        "phone-number": "Phone Number",
+        "email-address": "Email Address",
+        "service-type": "Service Type",
+        "service-type-1": "Sell Property",
+        "service-type-2": "Buy Property",
+        "service-type-3": "Rent Property",
+        "message": "Your Message",
+        "submit-now": "Submit Now",
+        "error-message": "Error sending message",
+        "success-message": "Message sent successfully!"
     }
 }

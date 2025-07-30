@@ -73,7 +73,7 @@ export default function PropertyFilterSimple({ categories }: PropertyFilterSimpl
                             <div className="input-area filter-group">
                                 <select 
                                     name="propertyType" 
-                                    className="nice-select"
+                                    className="form-select"
                                     value={filters.propertyType}
                                     onChange={(e) => handleInputChange('propertyType', e.target.value)}
                                 >
@@ -89,7 +89,7 @@ export default function PropertyFilterSimple({ categories }: PropertyFilterSimpl
                             <div className="input-area filter-group">
                                 <select 
                                     name="status" 
-                                    className="nice-select"
+                                    className="form-select"
                                     value={filters.status}
                                     onChange={(e) => handleInputChange('status', e.target.value)}
                                 >

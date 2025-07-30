@@ -32,17 +32,11 @@ export default function DashboardArea() {
                                     </div>
                                     <div className="col-lg-4 col-md-6">
                                         <div className="input-area">
-                                            <div className="nice-select" tabIndex={0}>
-                                                <span className="current">Select</span>
-                                                <ul className="list">
-                                                    <li data-value={1} className="option">
-                                                        Today
-                                                    </li>
-                                                    <li data-value={2} className="option selected">
-                                                        Yesterday
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                            <select className="form-select">
+                                                <option value="">Select</option>
+                                                <option value="1">Today</option>
+                                                <option value="2" selected>Yesterday</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div className="space28" />

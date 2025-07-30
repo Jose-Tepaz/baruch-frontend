@@ -45,7 +45,7 @@ Content-Type: application/json
 
 {
   "data": {
-    "property_of_interest": "123",
+    "interested_in": "123",
     "client_name": "John Doe",
     "email_address": "john.doe@example.com",
     "message": "Este es un mensaje de prueba"

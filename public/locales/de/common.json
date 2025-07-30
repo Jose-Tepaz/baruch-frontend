@@ -168,5 +168,24 @@
         "phoneNumber-text": "Telefonnummer",
         "email-text": "E-Mail-Adresse",
         "message-text": "Ihre Nachricht"
+    },
+    "contact": {
+        "title": "Kontaktiere uns",
+        "our-email": "Unsere E-Mail",
+        "our-phone": "Telefon",
+        "our-schedule": "Zeitplan",
+        "form-title": "Senden Sie uns eine Nachricht",
+      
+        "your-name": "Ihr Name",
+        "phone-number": "Telefonnummer",
+        "email-address": "E-Mail-Adresse",
+        "service-type": "Dienstleistungstyp",
+        "service-type-1": "Eigentum verkaufen",
+        "service-type-2": "Eigentum kaufen",
+        "service-type-3": "Eigentum mieten",
+        "message": "Ihre Nachricht",
+        "submit-now": "Jetzt senden",
+        "error-message": "Fehler beim Senden der Nachricht",
+        "success-message": "Nachricht erfolgreich gesendet!"
     }
 }

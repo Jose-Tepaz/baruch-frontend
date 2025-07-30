@@ -1,7 +1,7 @@
 const { STRAPI_HOST, STRAPI_TOKEN } = process.env;
 
 export async function postContact(data: {
-  property_of_interest: string,
+  interested_in: string,
   client_name: string,
   email_address: string,
   phone: string,

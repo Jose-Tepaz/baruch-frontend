@@ -63,7 +63,7 @@ export default function AddProperty() {
                                                     <div className="input-area">
                                                         <h5>Select Category*</h5>
                                                         <div className="space16" />
-                                                        <select className="nice-select">
+                                                        <select className="form-select">
                                                             <option>Apartment</option>
                                                             <option>Bar</option>
                                                             <option>Cafe</option>
@@ -77,7 +77,7 @@ export default function AddProperty() {
                                                     <div className="input-area">
                                                         <h5>Listed In*</h5>
                                                         <div className="space16" />
-                                                        <select className="nice-select">
+                                                        <select className="form-select">
                                                             <option>Active</option>
                                                             <option>Inactive</option>
                                                         </select>
@@ -88,7 +88,7 @@ export default function AddProperty() {
                                                     <div className="input-area">
                                                         <h5>Property Status*</h5>
                                                         <div className="space16" />
-                                                        <select className="nice-select">
+                                                        <select className="form-select">
                                                             <option>Approved</option>
                                                             <option>Sale</option>
                                                         </select>
@@ -199,7 +199,7 @@ export default function AddProperty() {
                                                         <div className="input-area">
                                                             <h5>Select Category*</h5>
                                                             <div className="space16" />
-                                                            <select className="nice-select">
+                                                            <select className="form-select">
                                                                 <option>Facebook</option>
                                                                 <option>Instagram</option>
                                                                 <option>Linkedin</option>
@@ -212,7 +212,7 @@ export default function AddProperty() {
                                                         <div className="input-area">
                                                             <h5>Embed Video Id*</h5>
                                                             <div className="space16" />
-                                                            <select className="nice-select">
+                                                            <select className="form-select">
                                                                 <option>Facebook</option>
                                                                 <option>Instagram</option>
                                                                 <option>Linkedin</option>
@@ -262,32 +262,16 @@ export default function AddProperty() {
                                                         <div className="input-area">
                                                             <h5>Country Name</h5>
                                                             <div className="space16" />
-                                                            <div className="nice-select" tabIndex={0}>
-                                                                <span className="current">Select Country</span>
-                                                                <ul className="list">
-                                                                    <li data-value={1} className="option">
-                                                                        USA
-                                                                    </li>
-                                                                    <li data-value={2} className="option selected">
-                                                                        Australia
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        England
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        Portugal
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        California
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        Inter Milan
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        Liverpool
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
+                                                            <select className="form-select">
+                                                                <option value="">Select Country</option>
+                                                                <option value="1">USA</option>
+                                                                <option value="2" selected>Australia</option>
+                                                                <option value="3">England</option>
+                                                                <option value="4">Portugal</option>
+                                                                <option value="5">California</option>
+                                                                <option value="6">Inter Milan</option>
+                                                                <option value="7">Liverpool</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-4 col-md-6">
@@ -295,32 +279,16 @@ export default function AddProperty() {
                                                         <div className="input-area">
                                                             <h5>Property City</h5>
                                                             <div className="space16" />
-                                                            <div className="nice-select" tabIndex={0}>
-                                                                <span className="current">Select City</span>
-                                                                <ul className="list">
-                                                                    <li data-value={1} className="option">
-                                                                        USA
-                                                                    </li>
-                                                                    <li data-value={2} className="option selected">
-                                                                        Australia
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        England
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        Portugal
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        California
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        Inter Milan
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        Liverpool
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
+                                                            <select className="form-select">
+                                                                <option value="">Select City</option>
+                                                                <option value="1">USA</option>
+                                                                <option value="2" selected>Australia</option>
+                                                                <option value="3">England</option>
+                                                                <option value="4">Portugal</option>
+                                                                <option value="5">California</option>
+                                                                <option value="6">Inter Milan</option>
+                                                                <option value="7">Liverpool</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-4 col-md-6">
@@ -519,35 +487,17 @@ export default function AddProperty() {
                                                         <div className="input-area">
                                                             <h5>Floors no</h5>
                                                             <div className="space16" />
-                                                            <div className="nice-select" tabIndex={0}>
-                                                                <span className="current">Select</span>
-                                                                <ul className="list">
-                                                                    <li data-value={1} className="option">
-                                                                        1
-                                                                    </li>
-                                                                    <li data-value={2} className="option selected">
-                                                                        2
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        3
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        4
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        5
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        6
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        7
-                                                                    </li>
-                                                                    <li data-value={1} className="option">
-                                                                        8
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
+                                                            <select className="form-select">
+                                                                <option value="">Select</option>
+                                                                <option value="1">1</option>
+                                                                <option value="2" selected>2</option>
+                                                                <option value="3">3</option>
+                                                                <option value="4">4</option>
+                                                                <option value="5">5</option>
+                                                                <option value="6">6</option>
+                                                                <option value="7">7</option>
+                                                                <option value="8">8</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-4 col-md-6">
@@ -555,17 +505,11 @@ export default function AddProperty() {
                                                         <div className="input-area">
                                                             <h5>Energy Class</h5>
                                                             <div className="space16" />
-                                                            <div className="nice-select" tabIndex={0}>
-                                                                <span className="current">Choose</span>
-                                                                <ul className="list">
-                                                                    <li data-value={1} className="option">
-                                                                        For Rent
-                                                                    </li>
-                                                                    <li data-value={2} className="option selected">
-                                                                        For Sale
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
+                                                            <select className="form-select">
+                                                                <option value="">Choose</option>
+                                                                <option value="1">For Rent</option>
+                                                                <option value="2" selected>For Sale</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                     <div className="col-lg-4 col-md-6">
@@ -573,17 +517,11 @@ export default function AddProperty() {
                                                         <div className="input-area">
                                                             <h5>Energy index in kWh/m2a</h5>
                                                             <div className="space16" />
-                                                            <div className="nice-select" tabIndex={0}>
-                                                                <span className="current">Choose</span>
-                                                                <ul className="list">
-                                                                    <li data-value={1} className="option">
-                                                                        New Listing
-                                                                    </li>
-                                                                    <li data-value={2} className="option selected">
-                                                                        Open House
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
+                                                            <select className="form-select">
+                                                                <option value="">Choose</option>
+                                                                <option value="1">New Listing</option>
+                                                                <option value="2" selected>Open House</option>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                 </div>

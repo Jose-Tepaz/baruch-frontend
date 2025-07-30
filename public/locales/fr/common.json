@@ -160,5 +160,23 @@
         "phoneNumber-text": "Numéro de Téléphone",
         "email-text": "Email",
         "message-text": "Votre Message"
-    }
+    },
+    "contact": {
+        "title": "Contactez-nous",
+        "our-email": "Notre Email",
+        "our-phone": "Téléphone",
+        "our-schedule": "Horaire",
+        "form-title": "Envie-nous un Message",
+        "your-name": "Votre Nom",
+        "phone-number": "Numéro de Téléphone",
+        "email-address": "Email",
+        "service-type": "Type de Service",
+        "service-type-1": "Vendre une Propriété",
+        "service-type-2": "Acheter une Propriété",
+        "service-type-3": "Louer une Propriété",
+        "message": "Votre Message",
+        "submit-now": "Envoyer",
+        "error-message": "Erreur lors de l'envoi du message",
+        "success-message": "Message envoyé avec succès!"
+    }   
 }

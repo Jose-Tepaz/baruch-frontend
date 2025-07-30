@@ -63,7 +63,7 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    property_of_interest: property.title,
+                    interested_in: property.title,
                     client_name: formData.client_name,
                     email_address: formData.email_address,
                     phone: formData.phone_number,
@@ -73,10 +73,10 @@ export default function PropertyInner({ block_extend, property }: { block_extend
 
             if (!response.ok) {
                 const errorData = await response.json();
-                throw new Error(errorData.error || 'Error al enviar el mensaje');
+                throw new Error(errorData.error || t('contact.error-message'));
             }
             
-            setSubmitMessage('Mensaje enviado exitosamente!');
+            setSubmitMessage(t('contact.success-message'));
             setFormData({
                 client_name: '',
                 email_address: '',
@@ -85,7 +85,7 @@ export default function PropertyInner({ block_extend, property }: { block_extend
             });
         } catch (error) {
             console.error('Error enviando mensaje:', error);
-            setSubmitMessage('Error al enviar el mensaje. Inténtalo de nuevo.');
+            setSubmitMessage(t('contact.error-message'));
         } finally {
             setIsSubmitting(false);
         }

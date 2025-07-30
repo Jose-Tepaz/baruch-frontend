@@ -36,7 +36,7 @@ export default function ContactSeller({ property }: { property: any }) {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    property_of_interest: property?.title || 'Contacto general',
+                    interested_in: property?.title || 'Contacto general',
                     client_name: formData.fullName,
                     email_address: formData.email,
                     phone: formData.phoneNumber,
@@ -46,10 +46,10 @@ export default function ContactSeller({ property }: { property: any }) {
 
             if (!response.ok) {
                 const errorData = await response.json();
-                throw new Error(errorData.error || 'Error al enviar el mensaje');
+                    throw new Error(errorData.error || t('contact.error-message'));
             }
             
-            setSubmitMessage('Mensaje enviado exitosamente!');
+            setSubmitMessage(t('contact.success-message'));
             setFormData({
                 fullName: '',
                 phoneNumber: '',
@@ -58,7 +58,7 @@ export default function ContactSeller({ property }: { property: any }) {
             });
         } catch (error) {
             console.error('Error enviando mensaje:', error);
-            setSubmitMessage('Error al enviar el mensaje. Inténtalo de nuevo.');
+            setSubmitMessage(t('contact.error-message'));
         } finally {
             setIsSubmitting(false);
         }

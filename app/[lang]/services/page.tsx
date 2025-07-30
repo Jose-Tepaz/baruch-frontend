@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import InnerHeader from "@/components/layout/InnerHeader";
 import Service1 from "@/components/sections/Service1";
-import Testimonial1 from "@/components/sections/Testimonial1";
+
 import Faq1 from "@/components/sections/Faq1";
 import { Metadata } from 'next';
 

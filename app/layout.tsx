@@ -4,7 +4,7 @@ import "/public/assets/css/plugins/fontawesome.css";
 import "/public/assets/css/plugins/magnific-popup.css";
 import "/public/assets/css/plugins/mobile.css";
 import "/public/assets/css/plugins/odometer.css";
-import "/public/assets/css/plugins/nice-select.css";
+// import "/public/assets/css/plugins/nice-select.css";
 import "/public/assets/css/plugins/owlcarousel.min.css";
 import "/public/assets/css/plugins/sidebar.css";
 import "/public/assets/css/plugins/slick-slider.css";

@@ -7,7 +7,7 @@ import { useSearchFormToggle } from '../elements/useSearchFormToggle';
 import { useTabSwitcher } from '../elements/setupTabSwitcher';
 import { useUIHandlers } from '../elements/useUIHandlers';
 import { useOdometerCounter } from '@/utils/useOdometerCounter';
-import useNiceSelect from '../elements/useNiceSelect';
+// import useNiceSelect from '../elements/useNiceSelect';
 import { setupToggleFilters } from '../elements/setupToggleFilters';
 
 export function useLayoutEffects() {
@@ -25,7 +25,7 @@ export function useLayoutEffects() {
     useTabSwitcher();
     useUIHandlers();
     useOdometerCounter();
-    useNiceSelect();
+    // useNiceSelect();
 
     // Handle scroll events
     useEffect(() => {

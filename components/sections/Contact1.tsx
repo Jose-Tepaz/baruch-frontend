@@ -1,6 +1,71 @@
+'use client';
 import Link from "next/link";
+import { useTranslation } from "@/utils/i18n-simple";
+import { useState } from "react";
+
 
 export default function Contact1() {
+    const { t, i18n } = useTranslation('common');
+    const [formData, setFormData] = useState({
+        client_name: '',
+        phone: '',
+        email_address: '',
+        interested_in: '',
+        message: ''
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+    const handleInputChange = (field: string, value: string) => {
+        setFormData(prev => ({
+            ...prev,
+            [field]: value
+        }));
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus('idle');
+
+        console.log('Enviando formulario con datos:', formData);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+
+            console.log('Respuesta del servidor:', response.status, response.statusText);
+
+            if (response.ok) {
+                const result = await response.json();
+                console.log('Respuesta exitosa:', result);
+                setSubmitStatus('success');
+        
+                setFormData({
+                    client_name: '',
+                    phone: '',
+                    email_address: '',
+                    interested_in: '',
+                    message: ''     
+                });
+            } else {
+                const errorText = await response.text();
+                console.error('Error del servidor:', response.status, errorText);
+                setSubmitStatus('error');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            setSubmitStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <>
             {/*===== CONTACT AREA STARTS =======*/}
@@ -21,7 +86,7 @@ export default function Contact1() {
                                     </svg>
                                 </div>
                                 <div className="content">
-                                    <p>Our Email</p>
+                                    <p>{t('contact.our-email')}</p>
                                     <Link href="mailto:Housarealesate@gmail.com">baruch@gmail.com</Link>
                                 </div>
                             </div>
@@ -40,7 +105,7 @@ export default function Contact1() {
                                     </svg>
                                 </div>
                                 <div className="content">
-                                    <p>Phone</p>
+                                    <p>{t('contact.our-phone')}</p>
                                     <Link href="tel:+11234567890">+1 123 456 7890</Link>
                                 </div>
                             </div>
@@ -57,7 +122,7 @@ export default function Contact1() {
                                     </svg>
                                 </div>
                                 <div className="content">
-                                    <p>Schedule</p>
+                                    <p>{t('contact.our-schedule')}</p>
                                     <Link href="tel:+11234567890">Sunday-Fri: 9 AM – 6 PM</Link>
                                 </div>
                             </div>
@@ -79,57 +144,101 @@ export default function Contact1() {
                         <div className="col-lg-6">
                             <div className="contact-boxarea">
                                 <div className="bg-area">
-                                    <h3>Send Us A Message</h3>
+                                    <h3>{t('contact.form-title')}</h3>
                                     <div className="space8" />
+                                    
+                                    {submitStatus === 'success' && (
+                                        <div className="alert alert-success mb-3">
+                                            {t('contact.success-message')}
+                                        </div>
+                                    )}
+                                    
+                                    {submitStatus === 'error' && (
+                                        <div className="alert alert-danger mb-3">
+                                            {t('contact.error-message')}
+                                        </div>
+                                    )}
+                                    
                                     <div className="row">
-                                        <form action="">
-                                            
-                                       
-                                        
-                                        <div className="col-lg-6">
-                                            <div className="input-area">
-                                                <input type="text" placeholder="Your Name" />
+                                        <form onSubmit={handleSubmit}>
+                                            <div className="row">
+                                                <div className="col-lg-12">
+                                                    <div className="input-area">
+                                                        <input 
+                                                            type="text" 
+                                                            placeholder={t('contact.your-name')}
+                                                            value={formData.client_name}
+                                                            onChange={(e) => handleInputChange('client_name', e.target.value)}
+                                                            required
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-6">
+                                                    <div className="input-area">
+                                                        <input 
+                                                            type="number" 
+                                                            placeholder={t('contact.phone-number')}
+                                                            value={formData.phone}
+                                                            onChange={(e) => handleInputChange('phone', e.target.value)}
+                                                            required
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-6">
+                                                    <div className="input-area">
+                                                        <input 
+                                                            type="email" 
+                                                            placeholder={t('contact.email-address')}
+                                                            value={formData.email_address}
+                                                            onChange={(e) => handleInputChange('email_address', e.target.value)}
+                                                            required
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-12">
+                                                    <select 
+                                                        name="interested_in" 
+                                                        id="interested_in" 
+                                                        className="form-select"
+                                                        value={formData.interested_in}
+                                                        onChange={(e) => handleInputChange('interested_in', e.target.value)}
+                                                        required
+                                                    >
+                                                        <option value="">{t('contact.service-type')}</option>
+                                                        <option value="sell">{t('contact.service-type-1')}</option>
+                                                        <option value="buy">{t('contact.service-type-2')}</option>
+                                                        <option value="rent">{t('contact.service-type-3')}</option>
+                                                    </select>
+                                                </div>
+                                                <div className="col-lg-12">
+                                                    <div className="input-area">
+                                                        <textarea 
+                                                            placeholder={t('contact.message')} 
+                                                            value={formData.message}
+                                                            onChange={(e) => handleInputChange('message', e.target.value)}
+                                                            required
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div className="col-lg-12">
+                                                    <div className="space16" />
+                                                    <div className="input-area text-end">
+                                                        <button 
+                                                            type="submit" 
+                                                            className="vl-btn1"
+                                                            disabled={isSubmitting}
+                                                        >      
+                                                            {isSubmitting ? (t('contact.submitting') || 'Enviando...') : t('contact.submit-now')}
+                                                            <span className="arrow1 ms-2">
+                                                                <i className="fa-solid fa-arrow-right" />
+                                                            </span>
+                                                            <span className="arrow2 ms-2">
+                                                                <i className="fa-solid fa-arrow-right" />
+                                                            </span>
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className="col-lg-6">
-                                            <div className="input-area">
-                                                <input type="text" placeholder="Last Name*" />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6">
-                                            <div className="input-area">
-                                                <input type="number" placeholder="Phone Number " />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6">
-                                            <div className="input-area">
-                                                <input type="email" placeholder="Email Address*" />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-12">
-                                            <div className="input-area">
-                                                <input type="text" placeholder="Service Type*" />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-12">
-                                            <div className="input-area">
-                                                <textarea placeholder="Your Message" defaultValue={""} />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-12">
-                                            <div className="space16" />
-                                            <div className="input-area text-end">
-                                                <button type="submit" className="vl-btn1">
-                                                    Submit Now
-                                                    <span className="arrow1 ms-2">
-                                                        <i className="fa-solid fa-arrow-right" />
-                                                    </span>
-                                                    <span className="arrow2 ms-2">
-                                                        <i className="fa-solid fa-arrow-right" />
-                                                    </span>
-                                                </button>
-                                            </div>
-                                        </div>
                                         </form>
                                     </div>
                                 </div>

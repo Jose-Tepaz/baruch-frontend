@@ -760,6 +760,12 @@ Location:
 
 /*============= CONTACT CSS AREA ===============*/
 
+.form-select{
+    margin-top: 16px;
+    padding: 16px 16px;
+    border-radius: 16px;
+    border-style: none;
+}
 
 /*============= TEAM CSS AREA ===============*/
 
@@ -2769,7 +2775,7 @@ Location:
 }
 
 .search-box-cover .property-tab-section .nice-select {
-    width: 200px;
+    width: 100%;
     padding: 18px 21px !important;
     border: none;
     outline: none;
@@ -2997,7 +3003,7 @@ Location:
 }
 
 .search-box-cover .wd-search-form .group-select .nice-select {
-    width: 275px;
+    width: 100%;
     padding: 18px 14px !important;
     border: none;
     outline: none;
@@ -8963,7 +8969,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .others-section-area .wd-search-form .group-select .nice-select {
-    width: 275px;
+    width: 100%;
     padding: 18px 14px !important;
     border: none;
     outline: none;
@@ -10004,7 +10010,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .dashboard-section-area .reviews .filter-group .nice-select {
-    width: 200px;
+    width: 100%;
     padding: 18px 14px !important;
     border: none;
     outline: none;
@@ -11735,7 +11741,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
     border-radius: 8px;
     border: 1px solid rgba(37, 39, 40, 0.06);
     background: #fff;
-    height: auto;
+    height: 100%;
 }
 
 .add-property-section .property-boxarea .upload-main-boxarea .input-area .nice-select::after {
@@ -16589,7 +16595,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .s-properties4 .s-porpeties-video .wd-search-form .group-select .nice-select {
-    width: 275px;
+    width: 100%;
     padding: 18px 14px !important;
     border: none;
     outline: none;

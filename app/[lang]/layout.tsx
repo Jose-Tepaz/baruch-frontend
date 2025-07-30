@@ -2,12 +2,13 @@ import { ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-  params: {
+  params: Promise<{
     lang: string;
-  };
+  }>;
 }
 
-export default function LocaleLayout({ children, params: { lang } }: Props) {
+export default async function LocaleLayout({ children, params }: Props) {
+  const { lang } = await params;
   return (
     <html lang={lang}>
       <body>

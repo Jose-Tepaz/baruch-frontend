@@ -45,7 +45,7 @@ export default function PropertyFilterWrapper({ categories }: PropertyFilterWrap
                                 <div className="input-area filter-group">
                                     <select 
                                         name="propertyType" 
-                                        className="nice-select" 
+                                        className="form-select" 
                                         value=""
                                         style={{ opacity: 0.6 }}
                                     >
@@ -61,7 +61,7 @@ export default function PropertyFilterWrapper({ categories }: PropertyFilterWrap
                                 <div className="input-area filter-group">
                                     <select 
                                         name="status" 
-                                        className="nice-select" 
+                                        className="form-select" 
                                         value=""
                                         style={{ opacity: 0.6 }}
                                     >
