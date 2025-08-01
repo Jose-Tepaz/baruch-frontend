@@ -1,6 +1,10 @@
+"use client"
 import Link from "next/link";
+import { useTranslation } from "@/utils/i18n-simple";
 
 export default function Others4() {
+    const { t, i18n } = useTranslation('common');
+
     return (
         <>
             {/*===== OTHERS AREA STARTS =======*/}
@@ -11,25 +15,21 @@ export default function Others4() {
                             <div className="row">
                                 <div className="col-lg-5 m-auto">
                             <div className="heading1 text-center space-margin60">
-                                <h5 className="text-color-white">Why Choose Us</h5>
-                                <div className="space16" />
-                                <h2 className="text-color-white">Why Choose Baruch Real Estate?</h2>
+                                <h5 className="text-color-white">{t('about.others4.subtitle')}</h5>
+                                <div className="space16" /> 
+                                <h2 className="text-color-white">{t('about.others4.title')}</h2>
                             </div>
                                 </div>
                             </div>
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
                             <div className="">
-                                <p className="text-size-medium text-color-cream text-weight-normal">At Baruch Real Estate, we believe that real estate is first and foremost about relationships. We don’t just sell houses.
-                                <br /> <br />
-                                We connect people with the right lifestyle, neighborhood, and future.
-                                <br /> <br />
-                                Our team consists of local residents who know the Costa del Sol not just as real estate professionals, but as proud members of the community. Whether you’re drawn to the energy of Marbella, the family-friendly charm of Fuengirola, or the peaceful elegance of Benahavís, we’ll help you find the perfect match. Not only for your needs, but for your way of life.</p>
+                                <p className="text-size-medium text-color-cream text-weight-normal">{t('about.others4.description')}</p>
                                 <div className="space24" />
                                 
                                 <div className="btn-area1 aos-init aos-animate ">
                                     <Link href="/contact" className="vl-btn1 is-secondary">
-                                        Contact Us
+                                        {t('about.others4.btn_text')}
                                         <span className="arrow1 ms-2">
                                             <i className="fa-solid fa-arrow-right" />
                                         </span>

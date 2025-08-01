@@ -7,9 +7,31 @@ import PropertyDescription from "@/components/sections/PropertyDescription";
 import { useTranslation } from "@/utils/i18n-simple";   
 // import { postContact } from "@/services/post-contact";
 import { useState } from "react";
+import Units from "@/components/sections/Units";
 
 
 
+
+interface Unit {
+    id: number;
+    housing_number: string;
+    bedrooms: string;
+    built_area: string;
+    lot_area: string;
+    storage_room: boolean;
+    garage: boolean;
+    is_available: boolean;
+    price: number;
+    floor?: {
+        id: number;
+        documentId: string;
+        name: string;
+        url: string;
+        ext: string;
+        mime: string;
+        size: number;
+    } | null;
+}
 
 interface Property {
     title: string;
@@ -28,7 +50,8 @@ interface Property {
     Map_link: string;
     propertyStatus: string;
     is_private?: boolean;
-}
+    units?: Unit[];
+    }
 
 export default function PropertyInner({ block_extend, property }: { block_extend: string, property: Property }) {
     const { t, i18n } = useTranslation('common');
@@ -41,7 +64,8 @@ export default function PropertyInner({ block_extend, property }: { block_extend
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState('');
     
-    console.log(property);
+    console.log('Property data:', property);
+    console.log('Units data:', property.units);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -120,6 +144,8 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                                            
                                                
                                             <PropertyDetails property={property} />
+                                            <div className="space30" />
+                                            <Units units={property.units} />    
                                             <div className="space30" />
                                             <PropertyDescription property={property} />
 

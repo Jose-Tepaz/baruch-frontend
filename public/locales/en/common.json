@@ -62,12 +62,14 @@
         "company": "About Company",
         "hero": {
             "title": "Your Trusted Partner for Costa del Sol Property",
-            "description": "Dreaming of life under the sun, surrounded by stunning landscapes, rich culture, and a warm, welcoming community? At Baruch Real Estate, we do more than help you buy or sell property, we help you build the life you've always imagined on the Costa del Sol."
+            "description": "Dreaming of life under the sun, surrounded by stunning landscapes, rich culture, and a warm, welcoming community? At Baruch Real Estate, we do more than help you buy or sell property, we help you build the life you've always imagined on the Costa del Sol.",
+            "btn_text": "Get in touch"
         },
         "others3": {
             "subtitle": "Mission & Vision",
             "title": "Tailored Real Estate Services on the Costa del Sol",
             "forbuyers": "For Buyers",
+            "btn_text": "See Properties",
             "forbuyersDescription": {
                 "list1": "Personalized property searches tailored to your lifestyle and goals",
                 "list2": "Expert guidance on local neighborhoods, schools, and communities",
@@ -76,6 +78,7 @@
                 "list5": "Trusted lawyers in-house for legal support",
                 "list6": "Financial partners to ensure a smooth transaction"
             },
+            
             "forseellers": "For Sellers",
             "forseellersDescription": {
                 "list1": "Accurate property valuations based on real market data",
@@ -84,6 +87,16 @@
                 "list4": "Negotiation expertise to maximize your sale price",
                 "list5": "Full support from listing to closing"
             }
+        },
+        "others4": {
+                "subtitle": "Why Choose Us",
+                "title": "Why Choose Baruch Real Estate?",
+                "description": "At Baruch Real Estate, we believe that real estate is first and foremost about relationships. We don’t just sell houses. We connect people with the right lifestyle, neighborhood, and future. Our team consists of local residents who know the Costa del Sol not just as real estate professionals, but as proud members of the community. Whether you’re drawn to the energy of Marbella, the family-friendly charm of Fuengirola, or the peaceful elegance of Benahavís, we’ll help you find the perfect match. Not only for your needs, but for your way of life.",
+            "btn_text": "Contact Us"
+            },
+        "meet-the-team": {
+         "title": "Conheça o Time",
+         "description": "Nosso time é composto por residentes locais que conhecem a Costa del Sol não apenas como profissionais do imobiliário, mas como orgulhosos membros da comunidade. Seja você atraído pela energia de Marbella, o encanto familiar de Fuengirola ou a elegância tranquila de Benahavís, nós te ajudaremos a encontrar o melhor compromisso. Não apenas para suas necessidades, mas para sua vida."
         }
     },
     "services": {
@@ -159,7 +172,22 @@
         "fullName-text": "Full Name",
         "phoneNumber-text": "Phone Number",
         "email-text": "Email Address",
-        "message-text": "Your Message"
+        "message-text": "Your Message",
+        "units": {
+            "title": "Units",
+            "id-house": "Id House",
+            "dorms": "Dorms.",
+            "built-area": "Built Area",
+            "exterior-area": "Exterior Area",
+            "garage": "Garage",
+            "price": "Price",
+            "storage_room": "Storage Room",
+            "floor": "View Floor Plan",
+            "unavailable": "Unavailable",
+            "no-units": "No units available for this property.",
+            "is_available": "yes",
+            "is_not_available": "no"
+        }
     },
     "contact": {
         "title": "Contact Us",

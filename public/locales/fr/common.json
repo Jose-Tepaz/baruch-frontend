@@ -65,12 +65,14 @@
             "company": "À propos de l'Entreprise",
         "hero": {
             "title": "Ton Partenaire de Confiance pour les Propriétés en Costa del Sol",
-            "description": "Voudrais-tu vivre sous le soleil, entouré de paysages impressionnants, d'une culture riche et d'une communauté chaleureuse et accueillante? En Baruch Real Estate, nous faisons plus que vous aider à acheter ou vendre des propriétés, nous vous aidons à construire la vie que vous avez toujours imaginée en Costa del Sol."
+            "description": "Voudrais-tu vivre sous le soleil, entouré de paysages impressionnants, d'une culture riche et d'une communauté chaleureuse et accueillante? En Baruch Real Estate, nous faisons plus que vous aider à acheter ou vendre des propriétés, nous vous aidons à construire la vie que vous avez toujours imaginée en Costa del Sol.",
+            "btn_text": "Contactez-nous"
         },
         "others3": {
             "subtitle": "Mission et Vision",
             "title": "Services de Immobilier Personnalisés en la Costa del Sol",
             "forbuyers": "Pour les Acheteurs",
+            "btn_text": "Voir les Propriétés",
             "forbuyersDescription": {
                 "list1": "Recherches de propriétés personnalisées adaptées à ton style de vie et à tes objectifs",
                 "list2": "Conseil expert en quartiers locaux, écoles et communautés",
@@ -79,6 +81,7 @@
                 "list5": "Avocats dans l'entreprise pour le support juridique",
                 "list6": "Partenaires financiers pour garantir une transaction sans problèmes"
             },
+            
             "forseellers": "Pour les Vendeurs",
             "forseellersDescription": {
                 "list1": "Évaluations de propriétés précises basées sur des données du marché",
@@ -87,6 +90,12 @@
                 "list4": "Expertise en négociation pour maximiser ton prix de vente",
                 "list5": "Support complet de la publication jusqu'à la clôture"
             }
+        },
+        "others4": {
+            "subtitle": "Pourquoi nous choisir?",
+            "title": "Pourquoi choisir Baruch Real Estate?",
+            "description": "Chez Baruch Real Estate, nous pensons que l'immobilier est avant tout lié aux relations. Nous ne vendons pas seulement des maisons. Nous connectons les gens avec le bon style de vie, le quartier et le futur. Notre équipe est composée de résidents locaux qui connaissent la Costa del Sol non seulement comme professionnels de l'immobilier, mais comme membres fiers de la communauté. Que vous soyez attiré par l'énergie de Marbella, le charme familial de Fuengirola ou l'élégance paisible de Benahavís, nous vous aiderons à trouver le bon compromis. Non seulement pour vos besoins, mais pour votre façon de vivre.",
+            "btn_text": "Contactez-nous"
         }
     },
     "services": {
@@ -159,7 +168,22 @@
         "fullName-text": "Nom Complet",
         "phoneNumber-text": "Numéro de Téléphone",
         "email-text": "Email",
-        "message-text": "Votre Message"
+        "message-text": "Votre Message",
+        "units": {
+            "title": "Unités",
+            "id-house": "Id Maison",
+            "dorms": "Dorms.",
+            "built-area": "Zone Construite",
+            "exterior-area": "Zone Exterieure",
+            "garage": "Garage",
+            "price": "Prix",
+            "storage_room": "Trastero",
+            "floor": "Voir le Plan",
+            "unavailable": "Non Disponible",
+            "no-units": "Aucune unité disponible pour cette propriété.",
+            "is_available": "Oui",
+            "is_not_available": "Non"
+        }
     },
     "contact": {
         "title": "Contactez-nous",

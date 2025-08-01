@@ -41,8 +41,8 @@ export default function AboutHero() {
                                 </div>
                                 <div className="space20" />
                                 <div className="btn-area1 mt-0">
-                                    <Link href="/add-property" className="vl-btn1 mt-0">
-                                        Get in touch
+                                    <Link href="/contact" className="vl-btn1 mt-0">
+                                        {t('about.hero.btn_text')}
                                         <span className="arrow1 ms-2">
                                             <i className="fa-solid fa-arrow-right" />
                                         </span>

@@ -14,7 +14,7 @@ const getPropertyById = async (documentId: string, locale?: string) => {
     try {
         // Usar documentId en lugar de id y agregar populate=* para obtener todas las relaciones
         const currentLocale = getLocaleWithFallback(locale);
-        const queryString = `properties/${documentId}?populate=main_image&populate=gallery&populate=category&populate=property_status&locale=${encodeURIComponent(currentLocale)}`;
+        const queryString = `properties/${documentId}?populate=main_image&populate=gallery&populate=category&populate=property_status&populate=units&populate=units.floor&locale=${encodeURIComponent(currentLocale)}`;
         
         console.log('=== getPropertyById DEBUG ===');
         console.log('DocumentId:', documentId);
@@ -22,7 +22,8 @@ const getPropertyById = async (documentId: string, locale?: string) => {
         console.log('Query string:', queryString);
         
         const response = await query(queryString);
-        console.log(response.data);
+        console.log('Full API response:', response);
+        console.log('Response data:', response.data);
         
         if (!response.data) {
             return null
@@ -49,7 +50,11 @@ const getPropertyById = async (documentId: string, locale?: string) => {
             is_new,
             Map_link,
             property_status,
+            units,
         } = property
+        
+        console.log('Property object keys:', Object.keys(property));
+        console.log('Units from destructuring:', units);
         
         // Procesar las imágenes
         const processedMainImage = main_image
@@ -59,6 +64,30 @@ const getPropertyById = async (documentId: string, locale?: string) => {
             ? gallery.map((img: any) => img.url.startsWith('http') ? img.url : `${STRAPI_HOST}${img.url}`)
             : []
         const propertyStatus = property_status ? property_status.Title : ''
+        
+        // Procesar las unidades
+        console.log('Raw units from API:', units);
+        const processedUnits = units ? units.map((unit: any) => ({
+            id: unit.id,
+            housing_number: unit.housing_number,
+            bedrooms: unit.bedrooms,
+            built_area: unit.built_area,
+            lot_area: unit.lot_area,
+            storage_room: unit.storage_room,
+            garage: unit.garage,
+            price: unit.price,
+            is_available: unit.is_available,
+            floor: unit.floor ? {
+                id: unit.floor.id,
+                documentId: unit.floor.documentId,
+                name: unit.floor.name,
+                url: unit.floor.url.startsWith('http') ? unit.floor.url : `${STRAPI_HOST}${unit.floor.url}`,
+                ext: unit.floor.ext,
+                mime: unit.floor.mime,
+                size: unit.floor.size
+            } : null
+        })) : []
+        console.log('Processed units:', processedUnits);
         
         return {
             id,
@@ -78,7 +107,8 @@ const getPropertyById = async (documentId: string, locale?: string) => {
             category,
             is_new,
             Map_link,
-            propertyStatus
+            propertyStatus,
+            units: processedUnits
         }
         
     } catch (error) {

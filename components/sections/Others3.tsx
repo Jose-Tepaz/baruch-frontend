@@ -18,7 +18,7 @@ export default function Others3() {
                     <div className="row">
                         <div className="col-lg-6 m-auto">
                             <div className="heading1 text-center space-margin60">
-                                <h5 className="text-color-blue">{t('about.others3.subtitle')}</h5>
+                               
                                 <div className="space16" />
                                 <h2 className="text-color-blue">{t('about.others3.title')}</h2>
                             </div>
@@ -38,8 +38,8 @@ export default function Others3() {
                                 <h2>{t('about.others3.forbuyers')}</h2>
                                 <div className="space16" />
                                 <div style={{ display: 'flex', alignItems: 'start', gap: '10px' }}>
-                                <img src={Iconcheck.src} alt="check" style={{ width: '18px', height: '18px', color: '#fff' }} />
-                                <p>{t('about.others3.forbuyersDescription.list1')}</p>
+                                    <img src={Iconcheck.src} alt="check" style={{ width: '18px', height: '18px', color: '#fff' }} />
+                                    <p>{t('about.others3.forbuyersDescription.list1')}</p>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'start', gap: '10px' }}>
                                 <img src={Iconcheck.src} alt="check" style={{ width: '18px', height: '18px', color: '#fff' }} />
@@ -92,8 +92,8 @@ export default function Others3() {
                                 
                                 
                                 <div className="btn-area1">
-                                    <Link href="/property-details-v1" className="vl-btn1">
-                                        See All Properties
+                                    <Link href="/properties" className="vl-btn1">
+                                        {t('about.others3.btn_text')}
                                         <span className="arrow1 ms-2">
                                             <i className="fa-solid fa-arrow-right" />
                                         </span>
