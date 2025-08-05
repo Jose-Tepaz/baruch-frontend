@@ -87,10 +87,7 @@ export default function Others3() {
                                 <img src={Iconcheck.src} alt="check" style={{ width: '18px', height: '18px', color: '#fff' }} />
                                     <p>{t('about.others3.forseellersDescription.list5')}</p>
                                 </div>
-                                </div>
-                                
-                                
-                                
+                                </div>                 
                                 <div className="btn-area1">
                                     <Link href="/properties" className="vl-btn1">
                                         {t('about.others3.btn_text')}
