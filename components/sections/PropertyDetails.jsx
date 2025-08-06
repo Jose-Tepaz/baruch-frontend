@@ -33,13 +33,13 @@ export default function PropertyDetails({ property }) {
                                  <div className="property-features">
                                     <div className="feature-item">
                                         <i className="fas fa-expand-arrows-alt"></i>
-                                        <span>{property.built_area.toLocaleString()  || '2150'} sqft {t("propertyDetails.built_area-text")}</span>
+                                        <span>{property.built_area.toLocaleString()  || '2150'} m² {t("propertyDetails.built_area-text")}</span>
                                        
                                     </div>
                                     <div className="feature-item">
                                        
                                         <i className="fas fa-expand-arrows-alt"></i>
-                                        <span>{property.lot_area.toLocaleString()  || '2150'} sqft {t("propertyDetails.lot_area-text")}</span>
+                                        <span>{property.lot_area.toLocaleString()  || '2150'} m² {t("propertyDetails.lot_area-text")}</span>
                                         
                                     </div>
                                     <div className="feature-item">
@@ -64,7 +64,7 @@ export default function PropertyDetails({ property }) {
                                 {/* Precio y botón de contacto */}
                                 <div className="property-price-section">
                                     <div className="property-price">
-                                        {formatPrice(property.price)}
+                                        {property.price ? `$${property.price.toLocaleString('es-ES')}` : ''}
                                     </div>  
                                     <Link className="vl-btn1"  href="#contact">
                                     {t("propertyDetails.contact-text")}
