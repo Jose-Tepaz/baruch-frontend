@@ -105,7 +105,7 @@ export default function Others3() {
                     </div>
                 </div>
             </div>
-            {/*===== OTHERS AREA ENDS =======*/}
+            
             <div className="space40" />
         </>
     );
