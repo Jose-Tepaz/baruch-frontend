@@ -84,19 +84,7 @@ const Hero2 = ({ homeInfo }: Hero2Props) => {
                             <div className="hero-heading heading1" style={{ maxWidth: '860px' }}>
                                 <h1 className="heading-style-h1 ">{homeInfo?.Title}</h1>
                                 <h3 className="text-white size-32">{homeInfo?.Subtitle}</h3>
-                                <div className="wrapp-btns-hero-home">
-                                    <div className="">
-                                        <Link href="/properties" className="vl-btn1 is-secondary mt-0">
-                                            {t('home.btn-2-hero')}
-                                            <span className="arrow1 ms-2">
-                                                <i className="fa-solid fa-arrow-right" />
-                                            </span>
-                                            <span className="arrow2 ms-2">
-                                                <i className="fa-solid fa-arrow-right" />
-                                            </span>
-                                        </Link>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
