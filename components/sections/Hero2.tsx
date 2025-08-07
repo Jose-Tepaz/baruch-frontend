@@ -23,9 +23,9 @@ interface Hero2Props {
 }
 
 const SLIDES = [
-    "/assets/img/home/img-1.jpg",
-    "/assets/img/home/img-2.jpg",
-    "/assets/img/home/img-3.jpg"
+    "/assets/img/home/img-1.pmg",
+    "/assets/img/home/img-2.pmg"
+    
 ];
 
 const Hero2 = ({ homeInfo }: Hero2Props) => {

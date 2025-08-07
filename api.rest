@@ -11,8 +11,14 @@
 //Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
 
 
-GET http://localhost:1337/api/properties?fields[0]=title&fields[1]=description&fields[2]=price&fields[3]=address&fields[4]=location&fields[5]=slug&populate[main_image][fields][0]=url&populate[category][fields][0]=name&populate[property_status][fields][0]=Title
+//GET http://localhost:1337/api/properties?fields[0]=title&fields[1]=description&fields[2]=price&fields[3]=address&fields[4]=location&fields[5]=slug&populate[main_image][fields][0]=url&populate[category][fields][0]=name&populate[property_status][fields][0]=Title
+//Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
+
+
+GET http://localhost:1337/api/properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&pagination[limit]=100&
 Authorization: Bearer eb4e2efb133d98cb73e1ddff5f5b53a5adfde3183ebbbec039fc8b7128eea600bfefe4ec91db954348687956cd0fa07b39f13f41763dae65460a60215beb681664f7d9bcedc1301e94ade82710afe8fece4beb4b81a9552e1788471f8c1dda467fae85d09c915e614ce8c57fbda5de707ae22992912226e06dddcc1295af936e
+
+
 
 //test properties
 //GET http://localhost:1337/api/properties?populate[main_image][fields][0]=url&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&filters[category][slug][$contains]=apartaments leapr3bj7vtxnl3d97o6hvm2
