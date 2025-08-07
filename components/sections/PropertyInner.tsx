@@ -130,12 +130,9 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                                     <div className="col-lg-3">
                                         <div className="sidebar1-area">
                                             <ContactSeller
-                                                property={property}
-                                                
+                                                property={property}  
                                             />
-                                            
-                                            
-                                           
+
                                         </div>
                                     </div>
 

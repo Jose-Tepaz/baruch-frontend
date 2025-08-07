@@ -18,15 +18,14 @@
     "description-cta":"Não espere mais para começar sua jornada imobiliária. Seja você comprando, vendendo ou alugando, nosso time de especialistas está aqui para guiar você em cada passo do caminho. Vamos transformar sua visão em realidade com um serviço personalizado e uma experiência sem complicações.",
     "btn-cta": "Comece Sua Busca Hoje",
     "description-footer": "Nós estamos comprometidos em fazer sua jornada imobiliária sem complicações e sem estresse. Seja você comprando, vendendo ou alugando, cada passo do caminho.",
-    "head-title-1": "Links Rápidos",
+    "head-title-1": "Menu",
     "head-title-2": "Categorias",
     "head-title-3": "Contato",
     "head-title-4": "Estamos Aqui",
-    "title-1-footer": "Início",
-    "title-2-footer": "Sobre Nós",
-    "title-3-footer": "Propriedades",
-    "title-4-footer": "Serviços",
-    "title-5-footer": "Contato"
+    "title-1-footer": "Sobre Nós",
+    "title-2-footer": "Magazine",
+    "title-3-footer": "Testimonials",
+    "title-4-footer": "Contact"
    
 },  
     "home": {
@@ -164,7 +163,7 @@
         "properti-not-found": "Propriedade não encontrada",
         "property-not-found-description": "A propriedade que você está procurando não existe.",
         "built_area-text": "Área Construída",
-        "lot_area-text": "Área Terreno",
+        "lot_area-text": "Área do Terreno",
         "parking_spaces-text": "Vagas de Estacionamento",
         "bedrooms-text": "Quartos",
         "bathrooms-text": "Banheiros",

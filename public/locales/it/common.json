@@ -18,15 +18,14 @@
     "description-cta":"Non aspettare più per iniziare il tuo viaggio immobiliare. Sia che tu stia comprando, vendendo o noleggiando, il nostro team esperto è qui per guidarti ogni passo del percorso. Trasformiamo la tua visione in realtà con un servizio personalizzato e un'esperienza senza complicazioni.",
     "btn-cta": "Inizia la tua ricerca oggi",
     "description-footer": "Siamo committti a rendere il tuo viaggio immobiliare senza complicazioni e senza stress. Sia che tu stia comprando, vendendo o noleggiando, ogni passo del percorso.",
-    "head-title-1": "Link Veloci",
+    "head-title-1": "Menu",
     "head-title-2": "Categorie",
     "head-title-3": "Contattaci",
     "head-title-4": "Siamo Qui",
-    "title-1-footer": "Home",
-    "title-2-footer": "Chi Siamo",
-    "title-3-footer": "Proprietà",
-    "title-4-footer": "Servizi",
-    "title-5-footer": "Contattaci"
+    "title-1-footer": "Chi Siamo",
+    "title-2-footer": "Magazine",
+    "title-3-footer": "Testimonials",
+    "title-4-footer": "Contattaci"
    
 },  
     "home": {
@@ -161,10 +160,10 @@
         "properti-not-found": "Proprietà non trovata",
         "property-not-found-description": "La proprietà che stai cercando non esiste.",
         "built_area-text": "Area Totale",
-        "lot_area-text": "Area Terreno",
+        "lot_area-text": "Area Terreno",        
         "parking_spaces-text": "Posti Macchina",
         "bedrooms-text": "Numero di Stanze",
-        "bathrooms-text": "Numero di Bagni",
+        "bathrooms-text": "Numero di Bagni",        
         "price-text": "Prezzo",
         "contact-text": "Contattaci",
         "map_locations-text": "Localizzazione",

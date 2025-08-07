@@ -17,15 +17,14 @@
     "description-cta":"Ne t'attend plus pour commencer ton voyage immobilier. Que tu sois en train de vendre, d'acheter ou de louer, notre équipe expérimentée est là pour t'accompagner à chaque étape du chemin. Transformons ton vision en réalité avec un service personnalisé et une expérience sans complication.",
     "btn-cta": "Commence ta recherche aujourd'hui",
     "description-footer": "Nous nous engageons à rendre ton voyage immobilier sans complication et sans stress. Que tu sois en train de vendre, d'acheter ou de louer, chaque étape du chemin.",
-    "head-title-1": "Liens Rapides",
+    "head-title-1": "Menu",
     "head-title-2": "Catégories",
     "head-title-3": "Contact",
     "head-title-4": "Nous Sommes Ici",
-    "title-1-footer": "Inicio",
-    "title-2-footer": "À propos",
-    "title-3-footer": "Propriétés",
-    "title-4-footer": "Services",
-    "title-5-footer": "Contact"
+    "title-1-footer": "À propos",
+    "title-2-footer": "Magazine",
+    "title-3-footer": "Testimonials",
+    "title-4-footer": "Contact"
    
 },  
     "home": {
@@ -151,12 +150,12 @@
         "selectLanguage": "Sélectionner la Langue",
         "currentLanguage": "Langue Actuelle",
         "changing": "Changement de langue en"
-    },
+    },  
     "propertyDetails": {
         "properti-not-found": "Propriété non trouvée",
         "property-not-found-description": "La propriété que vous recherchez n'existe pas.",
         "built_area-text": "Zone Construite",
-        "lot_area-text": "Zone Terrestre",
+        "lot_area-text": "Zone Terrain",
         "parking_spaces-text": "Espaces de Stationnement",
         "bedrooms-text": "Chambres",
         "bathrooms-text": "Salles de Bains",

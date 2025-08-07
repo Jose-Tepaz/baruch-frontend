@@ -116,14 +116,7 @@ export default async function Home({ params }: Props) {
 
         const properties = propertiesResult?.properties || [];
 
-        console.log('=== Testimonials API Data ===');
-        console.log(testimonials);
-
-        console.log('=== Home Page Debug ===');
-        console.log('Language:', lang);
-        console.log('Home Info:', homeInfo);
-        console.log('About2 Data:', homeInfo?.data?.about2);
-        console.log('About3 Data:', homeInfo?.data?.about3);
+       
 
         return (
             <Layout>

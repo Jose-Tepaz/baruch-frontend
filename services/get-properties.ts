@@ -22,20 +22,18 @@ interface PropertyData {
   documentId: string
   property_status: PropertyStatus
   category: any
-  is_private?: boolean
+  is_private?: boolean,
+  location?: string
 }
 
 export function getProperties(
     { categoryId, locale, onlyPrivate }: 
     { categoryId?: string; locale?: string; onlyPrivate?: boolean }
 ) {
-    console.log('=== get-properties.ts: Function called with params ===');
-    console.log('=== get-properties.ts: categoryId:', categoryId);
-    console.log('=== get-properties.ts: locale (input):', locale);
-    console.log('=== get-properties.ts: onlyPrivate:', onlyPrivate);
+   
     
     const currentLocale = getLocaleWithFallback(locale);
-    console.log('=== get-properties.ts: currentLocale (after fallback):', currentLocale);
+   
     
     let queryString = `properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&pagination[limit]=100&locale=${encodeURIComponent(currentLocale)}`;
     
@@ -52,23 +50,11 @@ export function getProperties(
         queryString += `&filters[$or][0][is_private][$eq]=false&filters[$or][1][is_private][$null]=true`;
     }
     
-    // Solo mostrar logs en desarrollo
-    if (process.env.NODE_ENV === 'development') {
-        console.log('=== get-properties.ts DEBUG ===');
-        console.log('CategoryId:', categoryId || 'ALL');
-        console.log('Locale:', currentLocale);
-        console.log('Query string:', queryString);
-        console.log('Full URL:', `${process.env.STRAPI_HOST}/api/${queryString}`);
-        console.log('SERVER/CLIENT:', typeof window !== 'undefined' ? 'CLIENT' : 'SERVER');
-    }
+ 
     
     return query(queryString)
     .then(res => {
-        if (process.env.NODE_ENV === 'development') {
-            console.log('=== get-properties.ts API Response ===');
-            console.log('Data count:', res.data?.length || 0);
-            console.log('Sample property:', res.data?.[0]);
-        }
+        
         
         if (!res || !res.data) {
             if (process.env.NODE_ENV === 'development') {
@@ -104,7 +90,8 @@ export function getProperties(
                 documentId,
                 property_status,
                 category,
-                is_private
+                is_private,
+                location
             } = property
 
             const image = rawimage
@@ -131,7 +118,9 @@ export function getProperties(
                 documentId,
                 propertyStatus,
                 category,
-                is_private
+                is_private,
+                location
+
             }
         })
 

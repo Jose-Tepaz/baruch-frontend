@@ -18,15 +18,14 @@
     "description-cta":"Warte nicht, um deine Immobilienreise zu beginnen. Ob du kaufst, verkaufst oder mietest, unser Experten-Team ist hier, um dich bei jedem Schritt zu unterstützen. Lass uns deine Vision in die Tat umsetzen mit persönlicher Service und einem nahtlosen Erlebnis.",
     "btn-cta": "Starte deine Suche heute",
     "description-footer": "Wir sind dafür verpflichtet, deine Immobilienreise nahtlos und stressfrei zu gestalten. Ob du kaufst, verkaufst oder mietest, wir sind hier, um dich bei jedem Schritt zu unterstützen.",
-    "head-title-1": "Schnelle Links",
+    "head-title-1": "Menü",
     "head-title-2": "Kategorien",
     "head-title-3": "Kontaktiere uns",
     "head-title-4": "Wir sind hier",
-    "title-1-footer": "Startseite",
-    "title-2-footer": "Über uns",
-    "title-3-footer": "Eigenschaften",
-    "title-4-footer": "Dienstleistungen",
-    "title-5-footer": "Kontaktiere uns"
+    "title-1-footer": "Über uns",
+    "title-2-footer": "Magazine",
+    "title-3-footer": "Testimonials",
+    "title-4-footer": "Kontaktiere uns"
    
 },  
     "home": {
@@ -163,7 +162,7 @@
         "properti-not-found": "Eigentum nicht gefunden",
         "property-not-found-description": "Das Eigentum, das Sie suchen, existiert nicht.",
         "built_area-text": "Gebäudefläche",
-        "lot_area-text": "Grundstücksfläche",
+        "lot_area-text": "Plotfläche",
         "parking_spaces-text": "Parkplätze",
         "bedrooms-text": "Schlafzimmer",
         "bathrooms-text": "Badezimmer",

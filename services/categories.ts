@@ -29,6 +29,13 @@ export function getCategories(locale?: string) {
     return query(queryString)
     .then(res => {
         console.log('Categories API Response:', JSON.stringify(res.data, null, 2));
+        
+        // Verificar que res.data existe y es un array
+        if (!res.data || !Array.isArray(res.data)) {
+            console.warn('Categories API: res.data no es un array:', res.data);
+            return [];
+        }
+        
         return res.data.map((category: CategoryData) => {
             const {name, slug, description, image: rawimage} = category;
             const image = rawimage
@@ -39,6 +46,6 @@ export function getCategories(locale?: string) {
     })
     .catch(error => {
         console.error('Error in getCategories:', error);
-        throw error;
+        return []; // Devolver array vacío en lugar de lanzar error
     });
 }

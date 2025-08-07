@@ -1,8 +1,50 @@
+'use client'
 import Link from "next/link";
 import logoWhite from '@/public/assets/img/logo/logo-baruch-white.svg';
 import { useTranslation } from "@/utils/i18n-simple";
+import { useEffect, useState } from "react";
+
+interface Category {
+    id?: number;
+    slug: string;
+    name: string;
+    description?: string;
+    image?: string;
+}
+
 export default function Footer1() {
     const { t } = useTranslation('common')
+    const [categories, setCategories] = useState<Category[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchCategories = async () => {
+            try {
+                console.log('Footer1: Iniciando fetch de categorías...');
+                const response = await fetch('/api/categories');
+                const categoriesData = await response.json();
+                console.log('Footer1: Categorías recibidas:', categoriesData);
+                console.log('Footer1: Tipo de datos:', typeof categoriesData);
+                console.log('Footer1: Es array?', Array.isArray(categoriesData));
+                console.log('Footer1: Longitud:', categoriesData?.length);
+                
+                // Asegurar que categoriesData sea un array
+                if (categoriesData && Array.isArray(categoriesData)) {
+                    setCategories(categoriesData);
+                } else {
+                    console.warn('Footer1: categoriesData no es un array válido:', categoriesData);
+                    setCategories([]);
+                }
+            } catch (error) {
+                console.error('Footer1: Error fetching categories:', error);
+                setCategories([]);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchCategories();
+    }, []);
     return (
         <>
         <div className="wrapper-footer">
@@ -70,7 +112,7 @@ export default function Footer1() {
                             <div className="col-lg col-md-6">
                                 <div className="space30 d-md-none d-block" />
                                 <div className="footer-widget-area foot-padding1">
-                                    <h3 className="text-white">{t('footer.head-title-1')}</h3>
+                                    <p className="text-white text-size-large text-weight-medium">{t('footer.head-title-1')}</p>
                                     <ul className="text-white">
                                         <li>
                                             <Link href="/" className="text-white">{t('footer.title-1-footer')}</Link>
@@ -84,39 +126,39 @@ export default function Footer1() {
                                         <li>
                                             <Link href="/services" className="text-white">{t('footer.title-4-footer')}</Link>
                                         </li>
-                                        <li>
-                                            <Link href="/contact" className="text-white">{t('footer.title-5-footer')}</Link>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
                             <div className="col-lg col-md-4">
                                 <div className="space30 d-lg-none d-block" />
                                 <div className="footer-widget-area foot-padding2">
-                                    <h3 className="text-white">{t('footer.head-title-2')}</h3>
+                                    <p className="text-white text-size-large text-weight-medium">{t('footer.head-title-2')}</p>
                                     <ul className="text-white">
-                                        <li>
-                                            <Link href="#" className="text-white">Residential</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="#" className="text-white">Commercial</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="#" className="text-white">Land</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="#" className="text-white">Investment</Link>
-                                        </li>
-                                        <li>
-                                            <Link href="#" className="text-white">Rental</Link>
-                                        </li>
+                                        {loading ? (
+                                            <li>
+                                                <span className="text-white">Cargando categorías...</span>
+                                            </li>
+                                        ) : categories.length > 0 ? (
+                                            categories.slice(0, 5).map((category: Category) => (
+                                                <li key={category.id || category.slug}>
+                                                    <Link href={`/categories/${category.slug}`} className="text-white">
+                                                        {category.name}
+                                                    </Link>
+                                                </li>
+                                            ))
+                                        ) : (
+                                            <li>
+                                                <span className="text-white">No hay categorías disponibles</span>
+                                            </li>
+                                        )}
                                     </ul>
                                 </div>
                             </div>
                             <div className="col-lg col-md-4">
                                 <div className="space30 d-lg-none d-block" />
                                 <div className="footer-widget-area">
-                                    <h3 className="text-white">{t('footer.head-title-3')}</h3>
+                                    <p className="text-white text-size-large text-weight-medium">{t('footer.head-title-3')}</p>
                                     <ul className="text-white">
                                         <li>
                                             <Link href="tel:+11234567890" className="d-flex align-items-center gap-2 text-white">
@@ -181,7 +223,7 @@ export default function Footer1() {
                             <div className="col-lg col-md-4">
                                 <div className="space30 d-lg-none d-block" />
                                 <div className="footer-widget-area">
-                                    <h3 className="text-white">{t('footer.head-title-4')}</h3>
+                                    <p className="text-white text-size-large text-weight-medium">{t('footer.head-title-4')}</p>
                                     <div className="space28" />
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4506257.120552435!2d88.67021924228865!3d21.954385721237916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1704088968016!5m2!1sen!2sbd" width={600} height={450} style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
                                 </div>

@@ -32,7 +32,8 @@ export default function PropertyDetails({ property }) {
                                  {/* Información de la propiedad */}
                                  <div className="property-features">
                                     <div className="feature-item">
-                                        <i className="fas fa-expand-arrows-alt"></i>
+                                        <i className="fas fa-minimize"></i>
+                                        
                                         <span>{property.built_area.toLocaleString()  || '2150'} m² {t("propertyDetails.built_area-text")}</span>
                                        
                                     </div>

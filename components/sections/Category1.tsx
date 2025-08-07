@@ -60,7 +60,7 @@ export default function Category1({ categories }: Category1Props) {
                                 </div>
                             </div>
                             </Link>
-                            
+                        
                         </div>
                     ))}
     </div>

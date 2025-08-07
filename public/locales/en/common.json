@@ -16,15 +16,15 @@
         "description-cta": "Don’t wait to start your real estate journey. Whether you’re buying, selling, or renting, our expert team is here to guide you every step of the way. Let’s turn your vision into reality with personalized service and a seamless experience.",
         "btn-cta": "Start Your Search Today",
         "description-footer": "We are committed to making your real estate journey seamless and stress-free. Whether you’re buying, selling, or renting every step the way.",
-        "head-title-1": "Quick Links",
+        "head-title-1": "Menu",
         "head-title-2": "Categories",
         "head-title-3": "Contact Us",
         "head-title-4": "We Are Here",
-        "title-1-footer": "Home",
-        "title-2-footer": "About Us",
-        "title-3-footer": "Properties",
-        "title-4-footer": "Services",
-        "title-5-footer": "Contact Us"
+        "title-1-footer": "About Us",
+        "title-2-footer": "Magazine",
+        "title-3-footer": "Testimonials",
+        "title-4-footer": "Contact"
+        
     },
     "home": {
         "btn-1-hero": "View Properties",
@@ -160,7 +160,7 @@
         "properti-not-found": "Property not found",
         "property-not-found-description": "The property you're looking for doesn't exist.",
         "built_area-text": "Built Area",
-        "lot_area-text": "Lot Area",
+        "lot_area-text": "Plot Area",
         "parking_spaces-text": "Parking Spaces",
         "bedrooms-text": "Bedrooms",
         "bathrooms-text": "Bathrooms",

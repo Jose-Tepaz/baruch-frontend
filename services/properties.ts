@@ -27,8 +27,9 @@ interface PropertyData {
   type?: string
   city?: string
   state?: string
-  amenities?: string[]
+  amenities?: string[]  
   is_private?: boolean
+  location: string
 }
 
 export type getPropertiesFilter = {
@@ -129,14 +130,7 @@ export function getProperties(filter: getPropertiesFilter = {}) {
   // Agregar parámetro locale
   queryString += `&locale=${encodeURIComponent(currentLocale)}`
   
-  // Solo mostrar logs en desarrollo
-  if (process.env.NODE_ENV === 'development') {
-    console.log('=== getProperties DEBUG ===');
-    console.log('Filter:', filter);
-    console.log('Locale:', currentLocale);
-    console.log('Initial queryString:', queryString);
-    console.log('SERVER/CLIENT:', typeof window !== 'undefined' ? 'CLIENT' : 'SERVER');
-  }
+  
 
   if (filter.categorySlug && filter.categorySlug.trim() !== '') {
     queryString += `&filters[category][slug][$contains]=${filter.categorySlug}`
@@ -147,8 +141,7 @@ export function getProperties(filter: getPropertiesFilter = {}) {
     queryString += `&filters[property_status][Title][$eq]=${encodeURIComponent(filter.propertyStatus)}`
     console.log('Added property status filter:', filter.propertyStatus);
   }
-  
-  console.log('Final queryString:', queryString);
+
 
   return query(`${queryString}`)
     .then(res => {
@@ -190,7 +183,9 @@ export function getProperties(filter: getPropertiesFilter = {}) {
           main_image: rawimage,
           slug,
           property_status,
-          category
+          category,
+          location
+
         } = property
 
         const image = rawimage
@@ -216,6 +211,7 @@ export function getProperties(filter: getPropertiesFilter = {}) {
           slug,
           propertyStatus,
           category,
+          location
         }
       })
     })
@@ -226,10 +222,7 @@ export function getPropertyByDocumentId(documentId: string, locale?: string) {
   const currentLocale = getLocaleWithFallback(locale)
   const queryString = `properties/${documentId}?populate=*&locale=${encodeURIComponent(currentLocale)}`
   
-  console.log('=== getPropertyByDocumentId DEBUG ===');
-  console.log('DocumentId:', documentId);
-  console.log('Locale:', currentLocale);
-  console.log('Query string:', queryString);
+
   
   return query(queryString)
     .then(res => {
