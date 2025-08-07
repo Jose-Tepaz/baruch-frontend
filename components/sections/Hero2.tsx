@@ -23,8 +23,8 @@ interface Hero2Props {
 }
 
 const SLIDES = [
-    "/assets/img/home/img-1.pmg",
-    "/assets/img/home/img-2.pmg"
+    "/assets/img/home/img-1.png",
+    "/assets/img/home/img-2.png"
     
 ];
 
