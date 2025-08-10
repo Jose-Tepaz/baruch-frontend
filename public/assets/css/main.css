@@ -5249,6 +5249,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .login-btn:hover {
     background: rgba(255, 255, 255, 1);
     border-color: #233850;
+    color: #233850;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -9567,8 +9568,8 @@ only screen and (min-width: 768px) and (max-width: 991px),
 }
 
 .wrapp-card-mission {
-    background: #fff;
-    border-radius: 16px;
+  
+    border-radius: 8px;
     padding: 32px;
 }
 
@@ -9592,7 +9593,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
     height: 100%;
     width: 100%;
     object-fit: cover;
-    border-radius: 16px;
+    border-radius: 8px;
 }
 
 .miision1 .mission-heading {

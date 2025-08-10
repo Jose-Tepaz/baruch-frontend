@@ -20,7 +20,7 @@ export default function AuthButtons() {
       <div className="d-flex align-items-center gap-2">
         <div className="dropdown">
           <button 
-            className="btn btn-outline-primary dropdown-toggle" 
+            className="login-btn  dropdown-toggle" 
             type="button" 
             data-bs-toggle="dropdown" 
             aria-expanded="false"

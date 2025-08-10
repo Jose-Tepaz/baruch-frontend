@@ -85,14 +85,15 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
     return (
         <>
             <Layout>
-                <AboutHero />
+                <AboutHero /> {/* Hero Section */}
                <div className="space30"></div>
-                <Others3 />
-                <Others4 />
-                <PropertyList1 properties={properties} />
+                <Others3 /> {/* About Section */}
+                <Others4 /> {/* Mission Section */}
+                
+                
                 
                 <div className="space30"></div>
-                <Team1 />
+               
                 
                 <div className="space30"></div>
             </Layout>
