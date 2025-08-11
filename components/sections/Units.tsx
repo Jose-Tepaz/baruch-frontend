@@ -130,13 +130,13 @@ export default function Units({ units }: { units?: Unit[] }) {
                                                     </h6>
                                                     <p className="card-text mb-1">
                                                         <small className="text-muted">
-                                                            Dormitorios: {unit.bedrooms}
+                                                            {t('propertyDetails.units.dorms')}: {unit.bedrooms}
                                                         </small>
                                                     </p>
                                                 </div>
                                                 <div className="col-6 text-end">
                                                     <h6 className="text-primary mb-2">
-                                                        <strong>{unit.price ? unit.price.toLocaleString('de-DE') : ''}</strong>
+                                                        <strong>€ {unit.price ? Number(unit.price).toLocaleString('de-DE') : ''}</strong>
                                                     </h6>
                                                     <button
                                                         className="btn btn-dark btn-sm"
@@ -150,26 +150,26 @@ export default function Units({ units }: { units?: Unit[] }) {
                                             <div className="row mt-2">
                                                 <div className="col-6">
                                                     <small className="text-muted">
-                                                        Construida: {unit.built_area} m²
+                                                        {t('propertyDetails.units.built-area')}: {unit.built_area} m²
                                                     </small>
                                                 </div>
                                                 <div className="col-6">
                                                     <small className="text-muted">
-                                                        Exterior: {unit.lot_area} m²
+                                                        {t('propertyDetails.units.exterior-area')}: {unit.lot_area} m²
                                                     </small>
                                                 </div>
                                             </div>
                                             <div className="row mt-1">
                                                 <div className="col-6">
                                                     <small className="text-muted">
-                                                        Garaje: <span className={`badge ${unit.garage ? 'badge-available' : 'badge-unavailable'}`}>
+                                                        {t('propertyDetails.units.garage')}: <span className={`badge ${unit.garage ? 'badge-available' : 'badge-unavailable'}`}>
                                                             {unit.garage ? t('propertyDetails.units.is_available') : t('propertyDetails.units.is_not_available')}
                                                         </span>
                                                     </small>
                                                 </div>
                                                 <div className="col-6">
                                                     <small className="text-muted">
-                                                        Trastero: <span className={`badge ${unit.storage_room ? 'badge-available' : 'badge-unavailable'}`}>
+                                                        {t('propertyDetails.units.storage_room')}: <span className={`badge ${unit.storage_room ? 'badge-available' : 'badge-unavailable'}`}>
                                                             {unit.storage_room ? t('propertyDetails.units.is_available') : t('propertyDetails.units.is_not_available')}
                                                         </span>
                                                     </small>
