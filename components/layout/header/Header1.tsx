@@ -34,6 +34,12 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                             <li>
                                                 <Link href="/services">{t('navigation.services')}</Link>
                                             </li>
+                                            <li>    
+                                                <Link href="/testimonials">{t('navigation.testimonials')}</Link>
+                                            </li>
+                                            <li>    
+                                                <Link href="/contact">{t('navigation.contact')}</Link>
+                                            </li>
                                         
                                     </ul>
                                 </nav>

@@ -19,7 +19,7 @@ export default function About3({ homeInfo }: About3Props) {
     return (
         <>
             {/*===== ABOUT AREA STARTS =======*/}
-            <div className="about3-section-area sp1 bg-blue">
+            <div className="about3-section-area sp1 ">
                 
                 <div className="padding-global">
                 <div className="container-large">
@@ -35,7 +35,7 @@ export default function About3({ homeInfo }: About3Props) {
                                     <div className="col-lg-6 col-md-6 img-about-3-sectiond">
                                         <div className="space100" />
                                         <div className="img1  reveal img-about-3" >
-                                            <img src={img_2} alt="baruch" />
+                                            <img src="/assets/img/home/img-1.png" alt="baruch" />
                                         </div>
                                     </div>
                                 </div>
@@ -45,14 +45,14 @@ export default function About3({ homeInfo }: About3Props) {
                         <div className="col-lg-1" />
                         <div className="col-lg-5">
                             <div className="about-heading"   >
-                                <h3 style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: 'rgba(189, 189, 189, 0.1)', width: 'auto', padding: '6px', borderRadius: '10px', color: '#D7CCC3'}}>
+                                <h3 style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', backgroundColor: 'rgba(189, 189, 189, 0.1)', width: 'auto', padding: '6px', borderRadius: '10px'}}>
                                 {Title}
                                 </h3>
                                 
                                 <div className="space26" />
                                 
                                 
-                                <div  className="text-white text-size-large text-color-cream">
+                                <div  className="text-white text-size-large text-color-blue">
                                 <BlocksRenderer content={[Description[0]] } />
                                 <BlocksRenderer content={[Description[1]]} />
                                 <BlocksRenderer content={[Description[2]]} />
@@ -61,7 +61,7 @@ export default function About3({ homeInfo }: About3Props) {
                                 </div>
                                 <div className="space32" />
                                 <div className="btn-area1" >
-                                    <Link href="/properties" className="vl-btn1 is-secondary mt-0">
+                                    <Link href="/properties" className="vl-btn1 ">
                                         {t('home.btn-about-section-2')}
                                         <span className="arrow1 ms-2">
                                             <i className="fa-solid fa-arrow-right" />

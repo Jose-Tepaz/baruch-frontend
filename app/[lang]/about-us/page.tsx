@@ -5,6 +5,8 @@ import About1 from "@/components/sections/About1";
 import Others4 from "@/components/sections/Others4";
 import Others3 from "@/components/sections/Others3";
 import Team1 from "@/components/sections/Team1";
+import AboutForSellers from "@/components/sections/AboutForSellers";
+import TestimonialsClientForm from "@/components/sections/TestimonialsContactForm";
 
 
 import PropertyList1 from "@/components/sections/PropertieList1";
@@ -88,14 +90,25 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
                 <AboutHero /> {/* Hero Section */}
                <div className="space30"></div>
                 <Others3 /> {/* About Section */}
+                <AboutForSellers /> {/* About For Sellers Section */}
                 <Others4 /> {/* Mission Section */}
+                <div className="padding-global">
+                  <div className="container-large">
+                    <div className="row">
+                      <div className="col-lg-6 m-auto">
+                        <div className="space30"></div>
+                        <div className="space30"></div>
+
+                        <TestimonialsClientForm/>                
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 
+
                 
-                
-                <div className="space30"></div>
                
-                
-                <div className="space30"></div>
             </Layout>
         </>
     );

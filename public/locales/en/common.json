@@ -9,7 +9,9 @@
         "btn-nav-1": "Get in touch",
         "login-btn": "Login",
         "logout-btn": "Logout",
-        "btn-private-properties": "Properties"
+        "btn-private-properties": "Properties",
+        "testimonials": "Testimonials"
+        
     },
     "footer": {
         "title-cta": "Let's Make Your Dream a Reality",
@@ -71,21 +73,21 @@
             "forbuyers": "For Buyers",
             "btn_text": "See Properties",
             "forbuyersDescription": {
-                "list1": "Personalized property searches tailored to your lifestyle and goals",
-                "list2": "Expert guidance on local neighborhoods, schools, and communities",
-                "list3": "Hassle-free viewings and curated recommendations",
-                "list4": "Skilled negotiation to get you the best deal",
-                "list5": "Trusted lawyers in-house for legal support",
-                "list6": "Financial partners to ensure a smooth transaction"
+                "list1": "Personalized property searches tailored to your lifestyle and goals.",
+                "list2": "Expert guidance on local neighborhoods, schools, and communities.",
+                "list3": "Hassle-free viewings and curated recommendations.",
+                "list4": "Skilled negotiation to get you the best deal.",
+                "list5": "Trusted lawyers in-house for legal support.",
+                "list6": "Financial partners to ensure a smooth transaction."
             },
             
             "forseellers": "For Sellers",
             "forseellersDescription": {
-                "list1": "Accurate property valuations based on real market data",
-                "list2": "Premium marketing with professional photography and compelling descriptions",
-                "list3": "Exposure to both local and international buyers",
-                "list4": "Negotiation expertise to maximize your sale price",
-                "list5": "Full support from listing to closing"
+                "list1": "Accurate property valuations based on real market data.",
+                "list2": "Premium marketing with professional photography and compelling descriptions.",
+                "list3": "Exposure to both local and international buyers.",
+                "list4": "Negotiation expertise to maximize your sale price.",
+                "list5": "Full support from listing to closing."
             }
         },
         "others4": {
@@ -207,5 +209,21 @@
         "submit-now": "Submit Now",
         "error-message": "Error sending message",
         "success-message": "Message sent successfully!"
+    },
+    "testimonials": {
+        "title": "Testimonials",
+        "contact-title": "Get in touch",
+        "your-name": "Your Name",
+        "phone-number": "Phone Number",
+        "email-address": "Email Address",
+        "message": "Your Message",
+        "submit-now": "Submit Now",
+        "error-message": "Error sending message",
+        "success-message": "Message sent successfully!",
+        "service-type": "Service Type",
+        "service-type-1": "Sell Property",
+        "service-type-2": "Buy Property",
+        "service-type-3": "Rent Property",
+        "submitting": "Submitting..."
     }
 }

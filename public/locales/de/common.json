@@ -9,7 +9,8 @@
         "btn-nav-1": "Kontakt aufnehmen",
         "login-btn": "Anmelden",
         "logout-btn": "Abmelden",
-        "btn-private-properties": "Eigenschaften"
+        "btn-private-properties": "Eigenschaften",
+        "testimonials": "Testimonials"
         
     },
 
@@ -209,5 +210,21 @@
         "submit-now": "Jetzt senden",
         "error-message": "Fehler beim Senden der Nachricht",
         "success-message": "Nachricht erfolgreich gesendet!"
+    },
+    "testimonials": {
+        "title": "Testimonials",
+        "contact-title": "Kontaktiere uns",
+        "your-name": "Ihr Name",
+        "phone-number": "Telefonnummer",
+        "email-address": "E-Mail-Adresse",
+        "message": "Ihre Nachricht",
+        "submit-now": "Jetzt senden",
+        "error-message": "Fehler beim Senden der Nachricht",
+        "success-message": "Nachricht erfolgreich gesendet!",
+        "service-type": "Dienstleistungstyp",
+        "service-type-1": "Eigentum verkaufen",
+        "service-type-2": "Eigentum kaufen",
+        "service-type-3": "Eigentum mieten",
+        "submitting": "Senden..."
     }
 }

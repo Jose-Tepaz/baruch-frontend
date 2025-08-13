@@ -128,9 +128,10 @@ export default async function Home({ params }: Props) {
                 <About2 homeInfo={homeInfo?.data} />
                 <PropertyList1 properties={properties || []} />
                 <Category1 categories={categories || []} />
-                <About3 homeInfo={homeInfo?.data} />
+                
                 <img className="img-landscape" src={imgLandscape.src} alt="baruch" style={{width: '100%', height: 'auto'}} />
-                <Testimonial2 testimonials={testimonials} />
+                <About3 homeInfo={homeInfo?.data} />
+                
             </Layout>
         );
     } catch (error) {
@@ -146,9 +147,10 @@ export default async function Home({ params }: Props) {
                 <About2 homeInfo={undefined} />
                 <PropertyList1 properties={[]} />
                 <Category1 categories={[]} />
-                <About3 homeInfo={undefined} />
+                
                 <img className="img-landscape" src={imgLandscape.src} alt="baruch"  />
-                <Testimonial2 testimonials={[]} />
+                <About3 homeInfo={undefined} />
+                
             </Layout>
         );
     }

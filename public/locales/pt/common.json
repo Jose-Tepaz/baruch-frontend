@@ -9,7 +9,8 @@
         "btn-nav-1": "Entre em contato",
         "login-btn": "Login",
         "logout-btn": "Sair",
-        "btn-private-properties": "Propriedades"
+        "btn-private-properties": "Propriedades",
+        "testimonials": "Depoimentos"
         
     },
 
@@ -210,5 +211,21 @@
         "submit-now": "Enviar",
         "error-message": "Erro ao enviar mensagem",
         "success-message": "Mensagem enviada com sucesso!"
+    },
+    "testimonials": {
+        "title": "Depoimentos",
+        "contact-title": "Contate-nos",
+        "your-name": "Seu Nome",
+        "phone-number": "Número de Telefone",
+        "email-address": "Email",
+        "message": "Seu Mensagem",
+        "submit-now": "Enviar",
+        "error-message": "Erro ao enviar mensagem",
+        "success-message": "Mensagem enviada com sucesso!",
+        "service-type": "Tipo de Serviço",
+        "service-type-1": "Vender Propriedade",
+        "service-type-2": "Comprar Propriedade",
+        "service-type-3": "Alugar Propriedade",
+        "submitting": "Enviando..."
     }
 }

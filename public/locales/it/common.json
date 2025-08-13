@@ -9,7 +9,8 @@
         "btn-nav-1": "Contattaci",
         "login-btn": "Login",
         "logout-btn": "Esci",
-        "btn-private-properties": "Proprietà"
+        "btn-private-properties": "Proprietà",
+        "testimonials": "Testimonianze"
         
     },
 
@@ -207,5 +208,21 @@
         "submit-now": "Invia",
         "error-message": "Errore nell'invio del messaggio",
         "success-message": "Messaggio inviato con successo!"
+    },
+    "testimonials": {
+        "title": "Testimonianze",
+        "contact-title": "Contattaci",
+        "your-name": "Il tuo Nome",
+        "phone-number": "Numero di Telefono",
+        "email-address": "Email",
+        "message": "Il tuo Messaggio",
+        "submit-now": "Invia",
+        "error-message": "Errore nell'invio del messaggio",
+        "success-message": "Messaggio inviato con successo!",
+        "service-type": "Tipo di Servizio",
+        "service-type-1": "Vendere Proprietà",
+        "service-type-2": "Comprare Proprietà",
+        "service-type-3": "Noleggiare Proprietà",
+        "submitting": "Inviando..."
     }
 }

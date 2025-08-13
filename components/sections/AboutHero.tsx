@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useTranslation } from "@/utils/i18n-simple";
 import { useEffect } from 'react';
-import Image1 from '@/public/assets/img/all-images/about/img-about-1.png'
+import Image1 from '@/public/assets/img/all-images/about/img-hero.webp'
 
 export default function AboutHero() {
     const { t, i18n } = useTranslation('common');
@@ -29,9 +29,7 @@ export default function AboutHero() {
                                 </div>
                                 
                                 <div className="main-title fade-in-up">
-                                    <h1 className="heading-style-h2 text-align-center">
-                                        {t('about.hero.title')}
-                                    </h1>
+                                    <h3 className="text-color-blue text-align-center size-32">{t('about.hero.title')}</h3>
                                 </div>
                                 
                                 <div className="description fade-in-up">
@@ -53,11 +51,11 @@ export default function AboutHero() {
                                 </div>
                             </div>
                             <div className="about-hero-image fade-in-up">
-                                <div className="image-container">
+                                <div className="image-container-hero-about">
                                     <img 
                                         src={Image1.src} 
                                         alt="Modern Costa del Sol Property" 
-                                        className="img-fluid"
+                                        className="img-hero-about"
                                     />
                                 </div>
                             </div>

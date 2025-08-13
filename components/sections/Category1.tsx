@@ -34,7 +34,15 @@ export default function Category1({ categories }: Category1Props) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="section-wrapper-category">
+                            
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div className="section-wrapper-category">
                                 <div className="wrapper-category">
                                     {categories.map((category: Category, index: number) => (
                                         <div className="card-category" key={category.slug || index}>
@@ -63,14 +71,6 @@ export default function Category1({ categories }: Category1Props) {
                                     ))}
                                 </div>
                             </div>
-
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
         </div>
     );
 }
