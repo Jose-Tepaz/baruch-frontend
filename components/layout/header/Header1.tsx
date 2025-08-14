@@ -21,10 +21,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                             <div className="vl-main-menu text-center">
                                 <nav className="vl-mobile-menu-active">
                                     <ul>
-                                        <li className="has-dropdown">
-                                            <Link href="/">{t('navigation.home')}</Link>
-                                          
-                                        </li>
+                                        
                                             <li>
                                                 <Link href="/properties">{t('navigation.properties')}</Link>
                                             </li>
@@ -34,9 +31,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                             <li>
                                                 <Link href="/services">{t('navigation.services')}</Link>
                                             </li>
-                                            <li>    
-                                                <Link href="/testimonials">{t('navigation.testimonials')}</Link>
-                                            </li>
+                                           
                                             <li>    
                                                 <Link href="/contact">{t('navigation.contact')}</Link>
                                             </li>

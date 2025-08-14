@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from '@/utils/i18n-simple';
 
 export default function TestimonialsContactForm() {
@@ -16,6 +16,9 @@ export default function TestimonialsContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
+  const phoneInputRef = useRef<HTMLInputElement | null>(null);
+  const itiRef = useRef<any>(null);
+
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
@@ -25,20 +28,106 @@ export default function TestimonialsContactForm() {
     setIsSubmitting(true);
     setSubmitStatus('idle');
     try {
+      const phoneFull = (() => {
+        try {
+          if (itiRef.current && typeof (itiRef.current as any).getNumber === 'function') {
+            const w: any = typeof window !== 'undefined' ? (window as any) : undefined;
+            const utils = w?.intlTelInputUtils;
+            const num = utils
+              ? (itiRef.current as any).getNumber(utils.numberFormat?.E164 ?? 0)
+              : (itiRef.current as any).getNumber();
+            return num || '';
+          }
+        } catch (_) {}
+        return '';
+      })();
+
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          ...formData,
+          phone: phoneFull || formData.phone,
+        })
       });
       if (!res.ok) throw new Error('Failed');
       setSubmitStatus('success');
       setFormData({ client_name: '', phone: '', email_address: '', interested_in: '', message: '' });
+      try { if (phoneInputRef.current) phoneInputRef.current.value = ''; } catch (_) {}
     } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
   };
+
+  const updatePhoneFromIti = () => {
+    try {
+      const inputEl = phoneInputRef.current as HTMLInputElement | null;
+      if (!itiRef.current || !inputEl) return;
+      const w: any = typeof window !== 'undefined' ? (window as any) : undefined;
+      const utils = w?.intlTelInputUtils;
+      const e164: string = utils
+        ? (itiRef.current as any).getNumber(utils.numberFormat?.E164 ?? 0) || ''
+        : (itiRef.current as any).getNumber() || '';
+      if (e164) {
+        setFormData(prev => ({ ...prev, phone: e164 }));
+        return;
+      }
+      const raw = inputEl.value || '';
+      const digits = raw.replace(/\D/g, '');
+      const data = (itiRef.current as any).getSelectedCountryData?.();
+      const dial = data?.dialCode ? `+${data.dialCode}` : '';
+      const fallback = dial && digits ? `${dial}${digits}` : (digits ? `+${digits}` : '');
+      setFormData(prev => ({ ...prev, phone: fallback }));
+    } catch (_) {}
+  };
+
+  useEffect(() => {
+    let isMounted = true;
+    (async () => {
+      if (!phoneInputRef.current) return;
+      const mod = await import('intl-tel-input');
+      if (!isMounted || !phoneInputRef.current) return;
+      const options: any = {
+        initialCountry: 'auto',
+        geoIpLookup: (callback: (countryCode: string) => void) => {
+          fetch('https://ipapi.co/json/')
+            .then(res => res.json())
+            .then(data => {
+              const code = (data && data.country_code ? String(data.country_code).toLowerCase() : 'us');
+              callback(code);
+            })
+            .catch(() => callback('us'));
+        },
+        separateDialCode: true,
+        nationalMode: false,
+        autoPlaceholder: 'polite',
+        formatOnDisplay: true,
+        utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js',
+      };
+      itiRef.current = (mod as any).default(phoneInputRef.current, options);
+
+      updatePhoneFromIti();
+      const inputEl = phoneInputRef.current;
+      const handler = () => updatePhoneFromIti();
+      inputEl?.addEventListener('input', handler);
+      inputEl?.addEventListener('change', handler);
+      inputEl?.addEventListener('keyup', handler);
+      inputEl?.addEventListener('countrychange', handler);
+
+      return () => {
+        inputEl?.removeEventListener('input', handler);
+        inputEl?.removeEventListener('change', handler);
+        inputEl?.removeEventListener('keyup', handler);
+        inputEl?.removeEventListener('countrychange', handler);
+      };
+    })();
+    return () => {
+      isMounted = false;
+      try { itiRef.current?.destroy(); } catch (_) {}
+    };
+  }, []);
 
   return (
     <div className="contact-form-container-testimonials">
@@ -65,12 +154,14 @@ export default function TestimonialsContactForm() {
           <div className="col-lg-12">
             <div className="input-area">
               <input
-                type="number"
+                type="tel"
                 placeholder={t('testimonials.phone-number')}
-                value={formData.phone}
                 onChange={(e) => handleInputChange('phone', e.target.value)}
+                ref={phoneInputRef}
+                autoComplete="tel"
                 required
               />
+              <input type="hidden" name="phone" value={formData.phone} />
             </div>
           </div>
           <div className="col-lg-12">

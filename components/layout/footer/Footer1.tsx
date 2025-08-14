@@ -121,7 +121,7 @@ export default function Footer1() {
                                             <Link href="/about-us" className="text-white">{t('footer.title-2-footer')}</Link>
                                         </li>
                                         <li>
-                                            <Link href="/properties" className="text-white">{t('footer.title-3-footer')}</Link>
+                                            <Link href="/testimonials" className="text-white">{t('footer.title-3-footer')}</Link>
                                         </li>
                                         <li>
                                             <Link href="/services" className="text-white">{t('footer.title-4-footer')}</Link>

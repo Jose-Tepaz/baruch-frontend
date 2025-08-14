@@ -7,6 +7,7 @@ import { getHomeInfo } from "@/services/get-home-info";
 import imgLandscape from "@/public/assets/img/all-images/home/img-home.webp"
 import { Metadata } from 'next';
 import { getTestimonials } from "@/services/testimonials";
+import HeroHome from "@/components/sections/HeroHome";
 
 // Importar componentes del cliente dinámicamente
 const Layout = dynamic(() => import("@/components/layout/Layout"), { ssr: true });
@@ -120,7 +121,7 @@ export default async function Home({ params }: Props) {
 
         return (
             <Layout>
-                <Hero2 homeInfo={homeInfo?.data} />
+                <HeroHome properties={properties || []} />
                 <SearchBox 
                     categories={categories || []}
                     propertyStatuses={propertyStatuses || []}
@@ -139,7 +140,7 @@ export default async function Home({ params }: Props) {
         
         return (
             <Layout>
-                <Hero2 />
+                <HeroHome properties={[]} />
                 <SearchBox 
                     categories={[]}
                     propertyStatuses={[]}

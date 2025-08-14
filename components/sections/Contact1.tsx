@@ -1,7 +1,7 @@
 'use client';
 import Link from "next/link";
 import { useTranslation } from "@/utils/i18n-simple";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 
 export default function Contact1() {
@@ -16,12 +16,87 @@ export default function Contact1() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
+    const phoneInputRef = useRef<HTMLInputElement | null>(null);
+    const itiRef = useRef<any>(null);
+
+    const updatePhoneFromIti = () => {
+        try {
+            const inputEl = phoneInputRef.current as HTMLInputElement | null;
+            if (!itiRef.current || !inputEl) return;
+            const w: any = typeof window !== 'undefined' ? (window as any) : undefined;
+            const utils = w?.intlTelInputUtils;
+            const e164: string = utils
+                ? (itiRef.current as any).getNumber(utils.numberFormat?.E164 ?? 0) || ''
+                : (itiRef.current as any).getNumber() || '';
+            if (e164) {
+                setFormData(prev => ({ ...prev, phone: e164 }));
+                return;
+            }
+            const raw = inputEl.value || '';
+            const digits = raw.replace(/\D/g, '');
+            const data = (itiRef.current as any).getSelectedCountryData?.();
+            const dial = data?.dialCode ? `+${data.dialCode}` : '';
+            const fallback = dial && digits ? `${dial}${digits}` : (digits ? `+${digits}` : '');
+            setFormData(prev => ({ ...prev, phone: fallback }));
+        } catch (_) {
+            // noop
+        }
+    };
+
     const handleInputChange = (field: string, value: string) => {
         setFormData(prev => ({
             ...prev,
             [field]: value
         }));
     };
+
+    useEffect(() => {
+        let isMounted = true;
+        (async () => {
+            if (!phoneInputRef.current) return;
+            const mod = await import("intl-tel-input");
+            if (!isMounted || !phoneInputRef.current) return;
+            const options: any = {
+                initialCountry: 'auto',
+                geoIpLookup: (callback: (countryCode: string) => void) => {
+                    fetch('https://ipapi.co/json/')
+                        .then(res => res.json())
+                        .then(data => {
+                            const code = (data && data.country_code ? String(data.country_code).toLowerCase() : 'us');
+                            callback(code);
+                        })
+                        .catch(() => callback('us'));
+                },
+                separateDialCode: true,
+                nationalMode: false,
+                autoPlaceholder: 'polite',
+                formatOnDisplay: true,
+                utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js',
+            };
+            itiRef.current = (mod as any).default(phoneInputRef.current, options);
+
+            // Sync hidden phone on init and on changes
+            updatePhoneFromIti();
+            const inputEl = phoneInputRef.current;
+            const handler = () => updatePhoneFromIti();
+            inputEl?.addEventListener('input', handler);
+            inputEl?.addEventListener('change', handler);
+            inputEl?.addEventListener('keyup', handler);
+            inputEl?.addEventListener('countrychange', handler);
+
+            // Cleanup listeners
+            return () => {
+                inputEl?.removeEventListener('input', handler);
+                inputEl?.removeEventListener('change', handler);
+                inputEl?.removeEventListener('keyup', handler);
+                inputEl?.removeEventListener('countrychange', handler);
+            };
+        })();
+        return () => {
+            isMounted = false;
+            try { itiRef.current?.destroy(); } catch (_) { /* noop */ }
+        };
+    }, []);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -31,12 +106,37 @@ export default function Contact1() {
         console.log('Enviando formulario con datos:', formData);
 
         try {
+            const phoneWithDialCode = (() => {
+                try {
+                    if (itiRef.current) {
+                        if (typeof (itiRef.current as any).getNumber === 'function') {
+                            const w: any = typeof window !== 'undefined' ? (window as any) : undefined;
+                            const utils = w?.intlTelInputUtils;
+                            // E.164 => 0
+                            const num = utils
+                                ? (itiRef.current as any).getNumber(utils.numberFormat?.E164 ?? 0)
+                                : (itiRef.current as any).getNumber();
+                            return num || "";
+                        }
+                        return "";
+                    }
+                } catch (_) {
+                    // noop
+                }
+                return "";
+            })();
+
+            const payload = {
+                ...formData,
+                phone: phoneWithDialCode || formData.phone,
+            };
+
             const response = await fetch('/api/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(payload)
             });
 
             console.log('Respuesta del servidor:', response.status, response.statusText);
@@ -176,12 +276,14 @@ export default function Contact1() {
                                                 <div className="col-lg-6">
                                                     <div className="input-area">
                                                         <input 
-                                                            type="number" 
+                                                            type="tel" 
                                                             placeholder={t('contact.phone-number')}
-                                                            value={formData.phone}
                                                             onChange={(e) => handleInputChange('phone', e.target.value)}
+                                                            ref={phoneInputRef}
+                                                            autoComplete="tel"
                                                             required
                                                         />
+                                                        <input type="hidden" name="phone" value={formData.phone} />
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-6">

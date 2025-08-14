@@ -23,7 +23,8 @@ interface PropertyData {
   property_status: PropertyStatus
   category: any
   is_private?: boolean,
-  location?: string
+  location?: string,
+  is_featured?: boolean
 }
 
 export function getProperties(
@@ -91,7 +92,8 @@ export function getProperties(
                 property_status,
                 category,
                 is_private,
-                location
+                location,
+                is_featured
             } = property
 
             const image = rawimage
@@ -119,7 +121,8 @@ export function getProperties(
                 propertyStatus,
                 category,
                 is_private,
-                location
+                location,
+                is_featured
 
             }
         })
