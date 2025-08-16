@@ -1,5 +1,5 @@
 import SimpleLayout from "@/components/layout/SimpleLayout"
-import { getProperties } from "@/services/get-properties"
+import { getProperties } from "@/services/properties"
 import InnerHeader from "@/components/layout/InnerHeader";
 import { getCategories } from "@/services/categories";
 import { getPropertyStatuses } from "@/services/property-status";
@@ -13,6 +13,11 @@ interface PropertiesPageProps {
     searchParams: Promise<{
         category?: string;
         property_status?: string;
+        bedrooms?: string;
+        bathrooms?: string;
+        min_price?: string;
+        max_price?: string;
+        location?: string;
         keyword?: string;
         city?: string;
         state?: string;
@@ -68,7 +73,7 @@ export async function generateMetadata({ params }: PropertiesPageProps): Promise
 
 export default async function PropertiesPage({ params, searchParams }: PropertiesPageProps) {
     const { lang } = await params;
-    const { category, property_status, keyword, city, state, amenities } = await searchParams;
+    const { category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities } = await searchParams;
     
     // Obtener datos del servidor con manejo de errores
     let properties = [];
@@ -84,20 +89,20 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
         console.log('Property status filter:', property_status);
         
         const result = await getProperties({ 
-            categoryId: category, 
+            categorySlug: category, 
+            propertyStatus: property_status,
+            bedrooms: bedrooms,
+            bathrooms: bathrooms,
+            min_price: min_price,
+            max_price: max_price,
+            location: location,
             locale: lang, // Usar el locale dinámico
-            onlyPrivate: false // Mostrar solo propiedades públicas
         });
         
-        properties = result?.properties || [];
+        properties = result || [];
         
-        // Filtrar por property_status si está presente
-        if (property_status && property_status.trim() !== '') {
-            properties = properties.filter((property: any) => {
-                return property.propertyStatus === property_status;
-            });
-            console.log('Properties after status filter:', properties.length);
-        }
+        // Los filtros ya se aplican en el servicio getProperties, no necesitamos filtrar aquí
+        console.log('Properties from service:', properties.length);
         
         // Filtrar propiedades localmente por otros criterios si es necesario
         if (properties && (keyword || city || state || amenities)) {
@@ -170,7 +175,7 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
                 initialProperties={properties}
                 categories={categories}
                 propertyStatuses={propertyStatuses}
-                searchParams={{ category, property_status, keyword, city, state, amenities }}
+                searchParams={{ category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities }}
             />
         </SimpleLayout>
     )

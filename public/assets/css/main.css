@@ -8642,7 +8642,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 /*============= FILTER CSS AREA STARTS ===============*/
 
 .others-section-area {
-    background: var(--ztc-bg-bg-1);
+    background: #fff;
     padding: 20px;
     border-radius: 20px;
     position: relative;
@@ -8707,8 +8707,8 @@ only screen and (min-width: 768px) and (max-width: 991px),
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
-    background: #f1f2f3;
-    padding: 24px 24px 0 24px;
+   
+   
     margin-top: -6px;
     border-radius: 20px;
 }
@@ -9284,6 +9284,22 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 
 /*============= FILTER CSS AREA ENDS ===============*/
+.filter-group{
+    width: 100%;
+    margin-bottom: 0 !important;
+}
+.filter-group input, .filter-group select{
+    border: 1px solid #87878762 !important;
+    border-radius: 8px !important;
+    padding: 10px 16px !important;
+    background-color: #fff !important;
+    color: #1b1b1b !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 22px !important;
+    height: 52px !important;
+}
+
 
 
 /*============= STEP CSS AREA STARTS ===============*/
@@ -9818,7 +9834,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
     background-color: transparent;
     text-align: left;
     border: none;
-    border-bottom: 1px solid #dddbdb;
+    border-bottom: 1px solid #1b1b1b;
     padding-left: 0;
     border-radius: 0;
     width: 100%;

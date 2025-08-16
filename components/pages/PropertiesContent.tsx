@@ -46,6 +46,11 @@ interface PropertiesContentProps {
     searchParams: {
         category?: string;
         property_status?: string;
+        bedrooms?: string;
+        bathrooms?: string;
+        min_price?: string;
+        max_price?: string;
+        location?: string;
         keyword?: string;
         city?: string;
         state?: string;

@@ -35,6 +35,11 @@ interface PropertyData {
 export type getPropertiesFilter = {
   categorySlug?: string
   propertyStatus?: string
+  bedrooms?: string
+  bathrooms?: string
+  min_price?: string
+  max_price?: string
+  location?: string
   locale?: string
   [key: string]: any
 }
@@ -140,6 +145,31 @@ export function getProperties(filter: getPropertiesFilter = {}) {
   if (filter.propertyStatus && filter.propertyStatus.trim() !== '') {
     queryString += `&filters[property_status][Title][$eq]=${encodeURIComponent(filter.propertyStatus)}`
     console.log('Added property status filter:', filter.propertyStatus);
+  }
+
+  if (filter.bedrooms && filter.bedrooms.trim() !== '') {
+    queryString += `&filters[bedrooms][$gte]=${encodeURIComponent(filter.bedrooms)}`
+    console.log('Added bedrooms filter:', filter.bedrooms);
+  }
+
+  if (filter.bathrooms && filter.bathrooms.trim() !== '') {
+    queryString += `&filters[bathrooms][$gte]=${encodeURIComponent(filter.bathrooms)}`
+    console.log('Added bathrooms filter:', filter.bathrooms);
+  }
+
+  if (filter.min_price && filter.min_price.trim() !== '') {
+    queryString += `&filters[price][$gte]=${encodeURIComponent(filter.min_price)}`
+    console.log('Added min price filter:', filter.min_price);
+  }
+
+  if (filter.max_price && filter.max_price.trim() !== '') {
+    queryString += `&filters[price][$lte]=${encodeURIComponent(filter.max_price)}`
+    console.log('Added max price filter:', filter.max_price);
+  }
+
+  if (filter.location && filter.location.trim() !== '') {
+    queryString += `&filters[location][$containsi]=${encodeURIComponent(filter.location)}`
+    console.log('Added location filter:', filter.location);
   }
 
 
