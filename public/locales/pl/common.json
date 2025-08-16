@@ -1,0 +1,65 @@
+{
+  "language": {
+    "changing": "Cambiando a"
+  },
+  "home": {
+    "title-filter": "Encuentra tu propiedad ideal",
+    "title-filter-1": "Estado de la propiedad",
+    "title-filter-2": "Tipo de propiedad",
+    "btn-filter": "Buscar propiedades",
+    "btn-all-properties": "Ver todas las propiedades",
+    "location-filter": "Ubicación",
+    "bedrooms-filter": "Habitaciones",
+    "bathrooms-filter": "Baños",
+    "min-price-filter": "Precio Mínimo",
+    "max-price-filter": "Precio Máximo",
+    "show-more": "Mostrar más filtros",
+    "show-less": "Mostrar menos filtros"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Estamos aquí para ayudarte",
+    "name": "Nombre completo",
+    "email": "Correo electrónico",
+    "phone-number": "Número de teléfono",
+    "message": "Mensaje",
+    "interested-in": "Interesado en",
+    "submit": "Enviar mensaje",
+    "success": "Mensaje enviado exitosamente",
+    "error": "Error al enviar el mensaje"
+  },
+  "properties": {
+    "title": "Propiedades",
+    "no-properties": "No se encontraron propiedades",
+    "view-details": "Ver detalles",
+    "price": "Precio",
+    "bedrooms": "Habitaciones",
+    "bathrooms": "Baños",
+    "sqft": "Pies cuadrados",
+    "location": "Ubicación"
+  },
+  "about": {
+    "title": "Sobre nosotros",
+    "subtitle": "Conoce nuestro equipo"
+  },
+  "testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Lo que dicen nuestros clientes"
+  },
+  "services": {
+    "title": "Servicios",
+    "subtitle": "Nuestros servicios especializados"
+  },
+  "login": {
+    "title": "Iniciar sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "submit": "Iniciar sesión",
+    "forgot-password": "¿Olvidaste tu contraseña?"
+  },
+  "footer": {
+    "copyright": "© 2024 Baruch Real Estate. Todos los derechos reservados.",
+    "privacy-policy": "Política de privacidad",
+    "terms": "Términos y condiciones"
+  }
+}

@@ -4,7 +4,7 @@ import { getCategories } from '@/services/categories'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://baruch.com'
-  const locales = ['en', 'es', 'fr', 'de', 'it', 'pt']
+  const locales = ['en', 'es', 'fr', 'de', 'pl', 'sv', 'nl']
   
   const sitemap: MetadataRoute.Sitemap = []
 

@@ -8715,7 +8715,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 @media (max-width: 767px) {
     .others-section-area .property-tab-section .filters {
-        padding: 24px;
+        padding: 0px;
     }
 }
 
@@ -9288,6 +9288,14 @@ only screen and (min-width: 768px) and (max-width: 991px),
     width: 100%;
     margin-bottom: 0 !important;
 }
+
+.others-section-area-filters{
+    background-color: #ffffff7e;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0px 4px 48px 0px rgba(0, 0, 0, 0.1);
+}
+
 .filter-group input, .filter-group select{
     border: 1px solid #87878762 !important;
     border-radius: 8px !important;
@@ -9300,7 +9308,73 @@ only screen and (min-width: 768px) and (max-width: 991px),
     height: 52px !important;
 }
 
+.search-button-filters{
+    width: 100%;
+    background-color: var(--ztc-bg-bg-3);
+    border-radius: 80px;
+    padding: 12px 32px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
 
+.search-button-filters button{
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 16px;
+}
+.search-button-filters:hover{
+   
+    transform: translateY(-2px);
+}
+
+.btn-show-more{
+    background: transparent;
+    border: 0;
+    color: var(--ztc-text-text-2);
+    padding: 12px 32px;
+    border-radius: 80px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 56px;
+    display: flex;
+    align-items: center;
+}
+
+.btns-actions-filters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-top: 1px solid #f0f1f1;
+    border-bottom: 1px solid #f0f1f1;
+}
+
+.show-all-properties-filters{
+    color: var(--ztc-text-text-2);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .btns-actions-filters{
+        justify-content: center;
+        flex-direction: column;
+    }
+}
 
 /*============= STEP CSS AREA STARTS ===============*/
 

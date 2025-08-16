@@ -5,19 +5,21 @@ import esCommon from '../public/locales/es/common.json';
 import enCommon from '../public/locales/en/common.json';
 import frCommon from '../public/locales/fr/common.json';
 import deCommon from '../public/locales/de/common.json';
-import itCommon from '../public/locales/it/common.json';
-import ptCommon from '../public/locales/pt/common.json';
+import plCommon from '../public/locales/pl/common.json';
+import svCommon from '../public/locales/sv/common.json';
+import nlCommon from '../public/locales/nl/common.json';
 
 export const translations = {
   es: { common: esCommon },
   en: { common: enCommon },
   fr: { common: frCommon },
   de: { common: deCommon },
-  it: { common: itCommon },
-  pt: { common: ptCommon },
+  pl: { common: plCommon },
+  sv: { common: svCommon },
+  nl: { common: nlCommon },
 };
 
-export type Language = 'es' | 'en' | 'fr' | 'de' | 'it' | 'pt';
+export type Language = 'es' | 'en' | 'fr' | 'de' | 'pl' | 'sv' | 'nl';
 
 let currentLanguage: Language = 'en';
 let changeListeners: (() => void)[] = [];
@@ -37,7 +39,7 @@ function detectLanguageFromURL(): Language {
   
   if (localeMatch) {
     const locale = localeMatch[1] as Language;
-    const supportedLocales: Language[] = ['en', 'es', 'fr', 'de', 'it', 'pt'];
+    const supportedLocales: Language[] = ['en', 'es', 'fr', 'de', 'pl', 'sv', 'nl'];
     
     if (supportedLocales.includes(locale)) {
       return locale;

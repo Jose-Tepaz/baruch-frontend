@@ -27,7 +27,7 @@ export const useLanguage = () => {
             
             if (localeMatch) {
                 const locale = localeMatch[1];
-                const supportedLocales = ['en', 'es', 'fr', 'de', 'it', 'pt'];
+                const supportedLocales = ['en', 'es', 'fr', 'de', 'pl', 'sv', 'nl'];
                 
                 if (supportedLocales.includes(locale)) {
                     return locale;
@@ -56,7 +56,7 @@ export const useLanguage = () => {
             i18n.changeLanguage(lang as any);
             updateCurrentLocale(lang); // Actualizar el idioma global para los servicios
         },
-        availableLanguages: ['es', 'en', 'fr', 'de', 'it', 'pt'],
+        availableLanguages: ['es', 'en', 'fr', 'de', 'pl', 'sv', 'nl'],
         getCurrentLocale: () => getCurrentLocale()
     };
 }; 

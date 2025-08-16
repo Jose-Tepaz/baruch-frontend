@@ -39,7 +39,7 @@ function detectLocaleFromURL(): string | null {
   
   if (localeMatch) {
     const locale = localeMatch[1];
-    const supportedLocales = ['en', 'es', 'fr', 'de', 'it', 'pt'];
+    const supportedLocales = ['en', 'es', 'fr', 'de', 'pl', 'sv', 'nl'];
     
     if (supportedLocales.includes(locale)) {
       return locale;

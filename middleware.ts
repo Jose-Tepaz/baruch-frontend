@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-const locales = ['en', 'es', 'fr', 'de', 'it', 'pt'];
+const locales = ['en', 'es', 'fr', 'de', 'pl', 'sv', 'nl'];
 const defaultLocale = 'en';
 
 // Función para obtener el idioma preferido del usuario

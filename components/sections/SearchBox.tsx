@@ -259,7 +259,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
             <div className="section-search-box">
                 <div className="padding-global padding-section-medium">
                     <div className="container-large">
-                        <div className="others-section-area ">
+                        <div className="others-section-area-filters ">
                 
                             <div className="property-tab-section ">
                                 <form onSubmit={handleSearch}>
@@ -386,7 +386,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                              <div className="d-flex justify-content-center w-100">
                                                  <button 
                                                      type="button"
-                                                     className="btn btn-outline-primary"
+                                                     className="btn-show-more"
                                                      onClick={() => setShowMoreFilters(!showMoreFilters)}
                                                  >
                                                      {showMoreFilters ? t('home.show-less') : t('home.show-more')}
@@ -396,25 +396,24 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                          </div>
 
                                          {/* Tercera fila: Botones de acción */}
-                                         <div className="filters pt-2">
-                                             <div className="d-flex flex-lg-nowrap flex-wrap gap-2 justify-content-between w-100">
-                                                 <div className="search-button d-flex align-items-center">
+                                         <div className="btns-actions-filters">
+                                            
+                                                 <div className="search-button-filters" style={{width: 'auto'}}>
                                                      <button type="submit">
                                                          {t('home.btn-filter')}
                                                          <span className="arrow1 ms-2">
                                                              <i className="fa-solid fa-arrow-right" />
                                                          </span>
-                                                         <span className="arrow2 ms-2">
-                                                             <i className="fa-solid fa-arrow-right" />
-                                                         </span>
+                                                         
                                                      </button>
                                                  </div>
+
                                                  <div className="d-flex align-items-center">
-                                                     <Link href={`/${lang}/properties`} className="text-decoration-none text-primary">
+                                                     <Link href={`/${lang}/properties`} className="show-all-properties-filters">
                                                          {t('home.btn-all-properties')}
                                                      </Link>
                                                  </div>
-                                             </div>
+                                           
                                          </div>
                                     </div>
                                 </form>

@@ -11,7 +11,7 @@ i18n
     lng: 'en', // Idioma por defecto
     fallbackLng: 'en',
     debug: process.env.NODE_ENV === 'development',
-    supportedLngs: ['es', 'en', 'fr', 'de', 'it', 'pt'],
+    supportedLngs: ['es', 'en', 'fr', 'de', 'pl', 'sv', 'nl'],
     
     // Namespace por defecto
     defaultNS: 'common',

@@ -1,0 +1,65 @@
+{
+  "language": {
+    "changing": "Bytter till"
+  },
+  "home": {
+    "title-filter": "Hitta din perfekta fastighet",
+    "title-filter-1": "Fastighetens status",
+    "title-filter-2": "Fastighetstyp",
+    "btn-filter": "Sök fastigheter",
+    "btn-all-properties": "Se alla fastigheter",
+    "location-filter": "Plats",
+    "bedrooms-filter": "Sovrum",
+    "bathrooms-filter": "Badrum",
+    "min-price-filter": "Minsta pris",
+    "max-price-filter": "Högsta pris",
+    "show-more": "Visa fler filter",
+    "show-less": "Visa färre filter"
+  },
+  "contact": {
+    "title": "Kontakta oss",
+    "subtitle": "Vi är här för att hjälpa dig",
+    "name": "Fullständigt namn",
+    "email": "E-postadress",
+    "phone-number": "Telefonnummer",
+    "message": "Meddelande",
+    "interested-in": "Intresserad av",
+    "submit": "Skicka meddelande",
+    "success": "Meddelande skickat framgångsrikt",
+    "error": "Fel vid sändning av meddelande"
+  },
+  "properties": {
+    "title": "Fastigheter",
+    "no-properties": "Inga fastigheter hittades",
+    "view-details": "Se detaljer",
+    "price": "Pris",
+    "bedrooms": "Sovrum",
+    "bathrooms": "Badrum",
+    "sqft": "Kvadratmeter",
+    "location": "Plats"
+  },
+  "about": {
+    "title": "Om oss",
+    "subtitle": "Lär känna vårt team"
+  },
+  "testimonials": {
+    "title": "Omdömen",
+    "subtitle": "Vad våra kunder säger"
+  },
+  "services": {
+    "title": "Tjänster",
+    "subtitle": "Våra specialiserade tjänster"
+  },
+  "login": {
+    "title": "Logga in",
+    "email": "E-postadress",
+    "password": "Lösenord",
+    "submit": "Logga in",
+    "forgot-password": "Glömt ditt lösenord?"
+  },
+  "footer": {
+    "copyright": "© 2024 Baruch Fastigheter. Alla rättigheter förbehållna.",
+    "privacy-policy": "Integritetspolicy",
+    "terms": "Villkor och bestämmelser"
+  }
+}

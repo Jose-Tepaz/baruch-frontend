@@ -25,7 +25,7 @@ interface Props {
   }>;
 }
 
-const allowedLocales = ['en', 'es', 'fr', 'de', 'it', 'pt'];
+const allowedLocales = ['en', 'es', 'fr', 'de', 'pl', 'sv', 'nl'];
 
 // Configuración de metadata para SEO
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -92,8 +92,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         'es': '/es',
         'fr': '/fr',
         'de': '/de',
-        'it': '/it',
-        'pt': '/pt'
+        'pl': '/pl',
+        'sv': '/sv',
+        'nl': '/nl'
       }
     }
   };

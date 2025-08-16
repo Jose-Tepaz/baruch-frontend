@@ -1,0 +1,65 @@
+{
+  "language": {
+    "changing": "Wisselen naar"
+  },
+  "home": {
+    "title-filter": "Vind je ideale eigendom",
+    "title-filter-1": "Eigendom status",
+    "title-filter-2": "Eigendomstype",
+    "btn-filter": "Zoek eigenschappen",
+    "btn-all-properties": "Bekijk alle eigenschappen",
+    "location-filter": "Locatie",
+    "bedrooms-filter": "Slaapkamers",
+    "bathrooms-filter": "Badkamers",
+    "min-price-filter": "Minimum prijs",
+    "max-price-filter": "Maximum prijs",
+    "show-more": "Toon meer filters",
+    "show-less": "Toon minder filters"
+  },
+  "contact": {
+    "title": "Neem contact op",
+    "subtitle": "We zijn hier om je te helpen",
+    "name": "Volledige naam",
+    "email": "E-mailadres",
+    "phone-number": "Telefoonnummer",
+    "message": "Bericht",
+    "interested-in": "Geïnteresseerd in",
+    "submit": "Verstuur bericht",
+    "success": "Bericht succesvol verzonden",
+    "error": "Fout bij verzenden van bericht"
+  },
+  "properties": {
+    "title": "Eigenschappen",
+    "no-properties": "Geen eigenschappen gevonden",
+    "view-details": "Bekijk details",
+    "price": "Prijs",
+    "bedrooms": "Slaapkamers",
+    "bathrooms": "Badkamers",
+    "sqft": "Vierkante meters",
+    "location": "Locatie"
+  },
+  "about": {
+    "title": "Over ons",
+    "subtitle": "Leer ons team kennen"
+  },
+  "testimonials": {
+    "title": "Getuigenissen",
+    "subtitle": "Wat onze klanten zeggen"
+  },
+  "services": {
+    "title": "Diensten",
+    "subtitle": "Onze gespecialiseerde diensten"
+  },
+  "login": {
+    "title": "Inloggen",
+    "email": "E-mailadres",
+    "password": "Wachtwoord",
+    "submit": "Inloggen",
+    "forgot-password": "Wachtwoord vergeten?"
+  },
+  "footer": {
+    "copyright": "© 2024 Baruch Vastgoed. Alle rechten voorbehouden.",
+    "privacy-policy": "Privacybeleid",
+    "terms": "Algemene voorwaarden"
+  }
+}

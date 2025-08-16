@@ -6,7 +6,7 @@ export default function StrapiApiTest() {
     const [testResults, setTestResults] = useState<any>({})
     const [loading, setLoading] = useState(false)
 
-    const testLanguages = ['en', 'es', 'fr', 'de', 'it', 'pt']
+    const testLanguages = ['en', 'es', 'fr', 'de', 'pl', 'sv', 'nl']
 
     const testPropertiesAPI = async () => {
         setLoading(true)
