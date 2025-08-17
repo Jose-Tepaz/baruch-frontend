@@ -6,8 +6,6 @@ import esCommon from '../public/locales/es/common.json';
 import enCommon from '../public/locales/en/common.json';
 import frCommon from '../public/locales/fr/common.json';
 import deCommon from '../public/locales/de/common.json';
-import itCommon from '../public/locales/it/common.json';
-import ptCommon from '../public/locales/pt/common.json';
 
 const resources = {
   es: {
@@ -21,12 +19,6 @@ const resources = {
   },
   de: {
     common: deCommon,
-  },
-  it: {
-    common: itCommon,
-  },
-  pt: {
-    common: ptCommon,
   },
 };
 
