@@ -1,66 +1,236 @@
 {
-  "language": {
-    "changing": "Cambiando a"
-  },
-  "home": {
-    "title-filter": "Encuentra tu propiedad ideal",
-    "title-filter-1": "Estado de la propiedad",
-    "title-filter-2": "Tipo de propiedad",
-    "btn-filter": "Buscar propiedades",
-    "btn-all-properties": "Ver todas las propiedades",
-    "location-filter": "Ubicación",
-    "bedrooms-filter": "Habitaciones",
-    "bathrooms-filter": "Baños",
-    "min-price-filter": "Precio Mínimo",
-    "max-price-filter": "Precio Máximo",
-    "show-more": "Mostrar más filtros",
-    "show-less": "Mostrar menos filtros"
-  },
-  "contact": {
-    "title": "Contáctanos",
-    "subtitle": "Estamos aquí para ayudarte",
-    "name": "Nombre completo",
-    "email": "Correo electrónico",
-    "phone-number": "Número de teléfono",
-    "message": "Mensaje",
-    "interested-in": "Interesado en",
-    "submit": "Enviar mensaje",
-    "success": "Mensaje enviado exitosamente",
-    "error": "Error al enviar el mensaje"
-  },
-  "properties": {
-    "title": "Propiedades",
-    "no-properties": "No se encontraron propiedades",
-    "view-details": "Ver detalles",
-    "price": "Precio",
-    "bedrooms": "Habitaciones",
-    "bathrooms": "Baños",
-    "sqft": "Pies cuadrados",
-    "location": "Ubicación"
-  },
-  "about": {
-    "title": "Sobre nosotros",
-    "subtitle": "Conoce nuestro equipo"
-  },
-  "testimonials": {
-    "title": "Testimonios",
-    "subtitle": "Lo que dicen nuestros clientes"
-  },
-  "services": {
-    "title": "Servicios",
-    "subtitle": "Nuestros servicios especializados"
-  },
-  "login": {
-    "title": "Iniciar sesión",
-    "email": "Correo electrónico",
-    "password": "Contraseña",
-    "submit": "Iniciar sesión",
-    "forgot-password": "¿Olvidaste tu contraseña?"
+    "welcome": "Witamy w Baruch Real Estate",
+  "navigation": {
+      "home": "Home",
+      "about": "O nas",
+      "properties": "Nieruchomości",
+      "services": "Usługi",
+      "contact": "Contact",
+      "btn-nav-1": "Skontaktuj się z nami",
+      "login-btn": "Zaloguj się",
+      "logout-btn": "Wyloguj się",
+      "btn-private-properties": "Nieruchomości",
+      "testimonials": "Opinie"
+      
   },
   "footer": {
-    "copyright": "© 2024 Baruch Real Estate. Todos los derechos reservados.",
-    "privacy-policy": "Política de privacidad",
-    "terms": "Términos y condiciones"
+      "title-cta": "Zróbmy Twoją marzenie realnym",
+      "description-cta": "Nie czekaj na swoją podróż nieruchomościami. Niezależnie od tego, czy kupujesz, sprzedajesz, czy wynajmujesz, nasz ekspercki zespół jest tu, aby Cię kierować każdym krokiem. Zróbmy Twoją wizję realną z osobistym usługą i płynnym doświadczeniem.",
+      "btn-cta": "Rozpocznij swoją wyszukiwanie już dziś",
+      "description-footer": "Jesteśmy zobowiązani do uczynienia Twojej podróży nieruchomościami płynną i bez stresu. Niezależnie od tego, czy kupujesz, sprzedajesz, czy wynajmujesz, każdy krok na drodze.",
+      "head-title-1": "Menu",
+      "head-title-2": "Kategorie",
+      "head-title-3": "Skontaktuj się z nami",
+      "head-title-4": "Jesteśmy tutaj",
+      "title-1-footer": "O nas",
+      "title-2-footer": "Magazyn",
+      "title-3-footer": "Opinie",
+      "title-4-footer": "Kontakt"
+      
+  },
+  "home": {
+        "btn-1-hero": "Zobacz nieruchomości",
+      "btn-2-hero": "Dowiedz się więcej",
+      "title-filter": "Znajdź swoją marzenie nieruchomości",
+      "title-filter-1": "Wszystkie statusy",
+      "title-filter-2": "Wszystkie kategorie",
+      "bedrooms-filter": "Sypialnie",
+      "bathrooms-filter": "Łazienki",
+      "min-price-filter": "Minimalna cena",
+      "max-price-filter": "Maksymalna cena",
+      "location-filter": "Lokalizacja",
+      "show-more": "Pokaż więcej filtrów",
+      "show-less": "Pokaż mniej filtrów",
+      "btn-filter": "Wyszukaj nieruchomości",
+      "btn-all-properties": "Pokaż wszystkie nieruchomości",
+      "title-about-us": "O nas",
+      "subtitle-list-properties": "Nieruchomości",
+      "title-list-properties": "Odkryj nasze najnowsze nieruchomości",
+      "subtitle-category": "Kategoria",
+      "title-category": "Wybierz dom, który Ci odpowiada",
+      "btn-about-section-2": "Zobacz listę",
+      "subtitle-testimonials-1": "Opinie",
+      "title-testimonials": "Co mówią nasi klienci",
+      "subtitle-testimonials": "Opinie"
+  },
+  "buttons": {
+      "login": "Zaloguj się",
+      "register": "Zarejestruj się",
+      "search": "Wyszukaj",
+      "seeProperties": "Zobacz nieruchomości"
+  },
+  "common": {
+      "loading": "Ładowanie..."
+  },
+  "properties": {
+      "title": "Nasze nieruchomości",
+      "discover_latest": "Odkryj nasze najnowsze nieruchomości",
+      "no_properties": "Brak nieruchomości"
+  },
+  "about": {
+      "company": "O nas",
+      "hero": {
+          "title": "Twój zaufany partner dla nieruchomości na Costa del Sol",
+          "description": "Marzenie o życiu pod słońcem, otoczonym wspaniałymi krajobrazami, bogatą kulturą i ciepłą, przyjazną społecznością? W Baruch Real Estate robimy więcej niż pomagamy Ci kupić lub sprzedać nieruchomość, pomagamy Ci zbudować życie, które zawsze marzyłeś na Costa del Sol.",
+          "btn_text": "Skontaktuj się z nami"
+      },
+      "others3": {
+          "subtitle": "Misja & Wizja",
+          "title": "Dostosowane usługi nieruchomości na Costa del Sol",
+          "forbuyers": "Dla Kupujących",
+          "btn_text": "Zobacz nieruchomości",
+          "forbuyersDescription": {
+              "list1": "Personalizowane wyszukiwania nieruchomości dostosowane do Twojego stylu życia i celów.",
+              "list2": "Eksperckie wskazówki dotyczące lokalnych dzielnic, szkół i społeczności.",
+              "list3": "Bezproblemowe oglądania i zalecenia.",
+              "list4": "Skuteczne negocjacje, aby uzyskać najlepszą ofertę.",
+              "list5": "Zaufani prawnicy w-house dla wsparcia prawnego.",
+              "list6": "Finansowi partnerzy, aby zapewnić płynną transakcję."
+          },
+          
+          "forseellers": "Dla Sprzedających",
+          "forseellersDescription": {
+              "list1": "Dokładne wartościowanie nieruchomości na podstawie rzeczywistych danych rynkowych.",
+              "list2": "Premium marketing z profesjonalną fotografią i przekonującymi opisami.",
+              "list3": "Ekspozycja dla zarówno lokalnych, jak i międzynarodowych kupujących.",
+              "list4": "Eksperckie negocjacje, aby zmaksymalizować cenę sprzedaży.",
+              "list5": "Pełna obsługa od listowania do zamknięcia."
+          }
+      },
+      "others4": {
+              "subtitle": "Dlaczego wybrać nas",
+              "title": "Dlaczego wybrać Baruch Real Estate?",
+              "description": "W Baruch Real Estate, wierzymy, że nieruchomości są pierwszą i najważniejszą rzeczą w relacjach. Nie tylko sprzedajemy domy. Łączymy ludzi z odpowiednim stylem życia, dzielnicą i przyszłością. Nasz zespół składa się z lokalnych mieszkańców, którzy nie tylko są profesjonalistami w dziedzinie nieruchomości, ale także zafascynowani przez społeczność. Czy jesteś przyciągany przez energię Marbella, przyjazny charakter Fuengiroli, czy spokojna elegancja Benahavís, pomożemy Ci znaleźć idealne dopasowanie. Nie tylko dla Twoich potrzeb, ale także dla Twojego stylu życia.",
+          "btn_text": "Skontaktuj się z nami"
+          },
+      "meet-the-team": {
+       "title": "Poznaj nasz zespół",
+       "description": "Nasz zespół składa się z lokalnych mieszkańców, którzy nie tylko są profesjonalistami w dziedzinie nieruchomości, ale także zafascynowani przez społeczność. Czy jesteś przyciągany przez energię Marbella, przyjazny charakter Fuengiroli, czy spokojna elegancja Benahavís, pomożemy Ci znaleźć idealne dopasowanie. Nie tylko dla Twoich potrzeb, ale także dla Twojego stylu życia."
+      }
+  },
+  "services": {
+      "title": "Dostosowane usługi nieruchomości na Costa del Sol",
+      "card-1": "Kupowanie nieruchomości",
+      "card-1-description": "W Baruch wiemy, że kupowanie nieruchomości jest jednym z największych etapów w życiu. Nasz ekspercki zespół jest tu, aby Cię kierować każdym krokiem.",
+      "card-2": "Sprzedaż nieruchomości",
+      "card-2-description": "Sprzedaż Twojego domu nie musi być przeszkodą. W Baruch nasz i ekspercki zespół zrobi proces.",
+      "card-3": "Wynajem nieruchomości",
+      "card-3-description": "Znalezienie odpowiedniej nieruchomości do wynajęcia jest łatwe z Housebox. Czy szukasz przytulnego apartamentu, czy spokojnego domu."
+  },
+  "faq": {
+      "title": "Często zadawane pytania",
+     
+              "question-1": "Jakie usługi oferuje Baruch Real Estate?",
+              "answer-1": "Baruch Real Estate oferuje usługi kupowania, sprzedaży i wynajmu, a także zarządzanie nieruchomościami i doradztwo inwestycyjne na Costa del Sol.",
+         
+          
+              "question-2": "Dlaczego powinienem wybrać Baruch Real Estate?",
+              "answer-2": "Baruch Real Estate zapewnia osobistą obsługę, ekspercką wiedzę lokalną i zespół dedykowany do kierowania Cię przez każdy krok Twojej podróży nieruchomościami.",
+         
+              "question-3": "Jak Baruch Real Estate może pomóc mi znaleźć odpowiednią nieruchomość?",
+              "answer-3": "Baruch Real Estate nasłuchuje na Twoje potrzeby i preferencje, a następnie tworzy selekcję nieruchomości, które pasują do Twojego stylu życia i celów.",
+          
+          
+              "question-4": "Czy Baruch Real Estate pomaga z legalnymi dokumentami?",
+              "answer-4": "Tak, Baruch Real Estate ma zaufanych prawników w-house, aby pomóc Ci z wszystkimi dokumentami prawnymi i zapewnić płynną transakcję.",
+         
+              "question-5": "Czy Baruch Real Estate pomaga mi sprzedać nieruchomość szybko?",
+              "answer-5": "Baruch Real Estate używa premium marketing strategies and a wide network to attract both local and international buyers, helping you sell efficiently.",
+         
+          
+              "question-6": "Jakie obszary obejmuje Baruch Real Estate?",
+              "answer-6": "Baruch Real Estate specjalizuje się w nieruchomościach na Costa del Sol, w tym w Marbelli, Esteponie, Benahavís i otaczających obszarach.",
+          
+          
+              "question-7": "Czy Baruch Real Estate oferuje usługi zarządzania nieruchomościami?",
+              "answer-7": "Tak, Baruch Real Estate zapewnia kompleksowe zarządzanie nieruchomościami, aby zapewnić, że Twoja inwestycja jest dobrze opiekowana, nawet kiedy jesteś poza domem.",
+          
+          
+              "question-8": "Jak Baruch Real Estate wspiera międzynarodowych kupujących?",
+              "answer-8": "Baruch Real Estate oferuje wsparcie wielojęzyczne, wskazówki dotyczące lokalnych przepisów i pomoc w każdym aspekcie zakupu nieruchomości z zagranicy.",
+          
+          
+              "question-9": "Co sprawia, że Baruch Real Estate różni się od innych agencji?",
+              "answer-9": "Baruch Real Estate wyróżnia się swoim zaangażowaniem w satysfakcję klienta, przejrzystość i dostosowanie do potrzeb każdego klienta.",
+          
+          
+              "question-10": "Jak mogę skontaktować się z Baruch Real Estate o konsultacji?",
+              "answer-10": "Możesz skontaktować się z Baruch Real Estate przez naszą stronę internetową, telefonicznie lub odwiedzając nasze biuro. Nasz zespół jest gotowy do pomocy z każdym pytaniem."
+  },
+          
+          
+
+  "language": {
+      "selectLanguage": "Wybierz język",
+      "currentLanguage": "Aktualny język",
+      "changing": "Zmieniając język na"
+  },
+  "propertyDetails": {
+      "properti-not-found": "Nieruchomość nie znaleziona",
+      "property-not-found-description": "Nieruchomość, której szukasz, nie istnieje.",
+      "built_area-text": "Powierzchnia użytkowa",
+      "lot_area-text": "Powierzchnia działki",
+      "parking_spaces-text": "Parkingi",
+      "bedrooms-text": "Sypialnie",
+      "bathrooms-text": "Łazienki",
+      "price-text": "Cena",
+      "contact-text": "Skontaktuj się z nami",
+      "map_locations-text": "Mapy lokalizacji",
+      "send_message-text": "Wyślij nam wiadomość",
+      "send-btn": "Wyślij",
+      "fullName-text": "Imię i nazwisko",
+      "phoneNumber-text": "Numer telefonu",
+      "email-text": "Adres e-mail",
+      "message-text": "Twoja wiadomość",
+      "units": {
+          "title": "Jednostki",
+          "id-house": "Id domu",
+          "dorms": "Sypialnie",
+          "built-area": "Powierzchnia użytkowa",
+          "exterior-area": "Powierzchnia zewnętrzna",
+          "garage": "Garage",
+          "price": "Cena",
+          "storage_room": "Pokój magazynowy",
+          "floor": "Zobacz plan piętra",  
+          "unavailable": "Niedostępne",
+          "no-units": "Brak jednostek dostępnych dla tej nieruchomości.",
+          "is_available": "tak",
+          "is_not_available": "nie"
+      }
+  },
+  "contact": {
+        "title": "Skontaktuj się z nami",
+      "our-email": "Nasz e-mail",
+      "our-phone": "Telefon",
+      "our-schedule": "Harmonogram",
+      "form-title": "Wyślij nam wiadomość",
+    
+      "your-name": "Twoje imię",
+      "phone-number": "Numer telefonu",
+      "email-address": "Adres e-mail",
+      "service-type": "Typ usługi",
+      "service-type-1": "Sprzedaż nieruchomości",
+      "service-type-2": "Kupowanie nieruchomości",
+      "service-type-3": "Wynajem nieruchomości",
+      "message": "Twoja wiadomość",
+      "submit-now": "Wyślij",
+      "error-message": "Błąd podczas wysyłania wiadomości",
+      "success-message": "Wiadomość wysłana pomyślnie!"
+  },
+  "testimonials": {
+      "title": "Opinie",
+      "contact-title": "Skontaktuj się z nami",
+      "your-name": "Twoje imię",
+      "phone-number": "Numer telefonu",
+      "email-address": "Adres e-mail",
+      "message": "Twoja wiadomość",
+      "submit-now": "Wyślij",
+      "error-message": "Błąd podczas wysyłania wiadomości",
+      "success-message": "Wiadomość wysłana pomyślnie!",
+      "service-type": "Typ usługi",
+      "service-type-1": "Sprzedaż nieruchomości",
+      "service-type-2": "Kupowanie nieruchomości",
+      "service-type-3": "Wynajem nieruchomości",
+      "submitting": "Wysyłanie..."
   }
 }
-

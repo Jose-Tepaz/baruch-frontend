@@ -1,66 +1,212 @@
 {
-  "language": {
-    "changing": "Wisselen naar"
+  "welcome": "Welkom bij Baruch Real Estate",
+  "navigation": {
+    "home": "Home",
+    "about": "Over ons",
+    "properties": "Eigenschappen",
+    "services": "Diensten",
+    "contact": "Contact",
+    "btn-nav-1": "Neem contact op",
+    "login-btn": "Inloggen",
+    "logout-btn": "Uitloggen",
+    "btn-private-properties": "Eigenschappen",
+    "testimonials": "Getuigenissen"
+  },
+  "footer": {
+    "title-cta": "Laten we je droom werkelijkheid maken",
+    "description-cta": "Wacht niet met het beginnen van je woonreis. Of je nu koopt, verkoopt of huurt, ons team van experts staat klaar om je bij elke stap te begeleiden. Laten we je visie realiseren met persoonlijke service en een eenvoudige ervaring.",
+    "btn-cta": "Begin vandaag met zoeken",
+    "description-footer": "Wij zetten ons in om jouw woonreis eenvoudig en stressvrij te maken. Of je nu koopt, verkoopt of huurt, wij zijn er voor jou.",
+    "head-title-1": "Menu",
+    "head-title-2": "Categorieën",
+    "head-title-3": "Neem contact op",
+    "head-title-4": "Wij zijn hier",
+    "title-1-footer": "Over ons",
+    "title-2-footer": "Magazine",
+    "title-3-footer": "Getuigenissen",
+    "title-4-footer": "Contact"
   },
   "home": {
-    "title-filter": "Vind je ideale eigendom",
-    "title-filter-1": "Eigendom status",
-    "title-filter-2": "Eigendomstype",
-    "btn-filter": "Zoek eigenschappen",
-    "btn-all-properties": "Bekijk alle eigenschappen",
-    "location-filter": "Locatie",
+    "btn-1-hero": "Bekijk eigenschappen",
+    "btn-2-hero": "Meer informatie",
+    "title-filter": "Vind jouw droomwoning",
+    "title-filter-1": "Alle status",
+    "title-filter-2": "Alle categorieën",
     "bedrooms-filter": "Slaapkamers",
     "bathrooms-filter": "Badkamers",
-    "min-price-filter": "Minimum prijs",
-    "max-price-filter": "Maximum prijs",
+    "min-price-filter": "Minimale prijs",
+    "max-price-filter": "Maximale prijs",
+    "location-filter": "Locatie",
     "show-more": "Toon meer filters",
-    "show-less": "Toon minder filters"
+    "show-less": "Toon minder filters",
+    "btn-filter": "Zoek eigenschappen",
+    "btn-all-properties": "Toon alle eigenschappen",
+    "title-about-us": "Over het bedrijf",
+    "subtitle-list-properties": "Eigenschappen",
+    "title-list-properties": "Ontdek onze nieuwste eigenschappen",
+    "subtitle-category": "Categorie",
+    "title-category": "Kies het huis dat bij je past",
+    "btn-about-section-2": "Bekijk aanbod",
+    "subtitle-testimonials-1": "Getuigenissen",
+    "title-testimonials": "Wat onze klanten zeggen",
+    "subtitle-testimonials": "Getuigenissen"
+  },
+  "buttons": {
+    "login": "Inloggen",
+    "register": "Registreren",
+    "search": "Zoeken",
+    "seeProperties": "Bekijk eigenschappen"
+  },
+  "common": {
+    "loading": "Laden..."
+  },
+  "properties": {
+    "title": "Onze eigenschappen",
+    "discover_latest": "Ontdek onze nieuwste eigenschappen",
+    "no_properties": "Geen eigenschappen beschikbaar"
+  },
+  "about": {
+    "company": "Over het bedrijf",
+    "hero": {
+      "title": "Jouw vertrouwde partner voor vastgoed aan de Costa del Sol",
+      "description": "Droom je van een leven onder de zon, omringd door prachtige landschappen, rijke cultuur en een warme, gastvrije gemeenschap? Bij Baruch Real Estate doen we meer dan alleen helpen bij het kopen of verkopen van vastgoed, we helpen je het leven op te bouwen dat je altijd al hebt gewenst aan de Costa del Sol.",
+      "btn_text": "Neem contact op"
+    },
+    "others3": {
+      "subtitle": "Missie & Visie",
+      "title": "Op maat gemaakte vastgoedservices aan de Costa del Sol",
+      "forbuyers": "Voor kopers",
+      "btn_text": "Bekijk eigenschappen",
+      "forbuyersDescription": {
+        "list1": "Persoonlijke zoekopdrachten naar woningen, afgestemd op jouw levensstijl en doelen.",
+        "list2": "Deskundig advies over lokale buurten, scholen en gemeenschappen.",
+        "list3": "Probleemloze bezichtigingen en zorgvuldig geselecteerde aanbevelingen.",
+        "list4": "Vakkundige onderhandelingen om de beste deal te krijgen.",
+        "list5": "Betrouwbare interne advocaten voor juridische ondersteuning.",
+        "list6": "Financiële partners voor een soepele transactie."
+      },
+      "forseellers": "Voor verkopers",
+      "forseellersDescription": {
+        "list1": "Nauwkeurige waardebepalingen op basis van echte marktgegevens.",
+        "list2": "Premium marketing met professionele fotografie en overtuigende beschrijvingen.",
+        "list3": "Zichtbaarheid bij zowel lokale als internationale kopers.",
+        "list4": "Onderhandelingsexpertise om je verkoopprijs te maximaliseren.",
+        "list5": "Volledige ondersteuning van plaatsing tot afronding."
+      }
+    },
+    "others4": {
+      "subtitle": "Waarom voor ons kiezen",
+      "title": "Waarom kiezen voor Baruch Real Estate?",
+      "description": "Bij Baruch Real Estate geloven we dat vastgoed in de eerste plaats draait om relaties. We verkopen niet alleen huizen. We verbinden mensen met de juiste levensstijl, buurt en toekomst. Ons team bestaat uit lokale bewoners die de Costa del Sol niet alleen kennen als vastgoedprofessionals, maar als trotse leden van de gemeenschap. Of je nu wordt aangetrokken door de energie van Marbella, de gezinsvriendelijke charme van Fuengirola of de rustige elegantie van Benahavís, wij helpen je de perfecte match te vinden. Niet alleen voor je behoeften, maar voor jouw manier van leven.",
+      "btn_text": "Neem contact op"
+    },
+    "meet-the-team": {
+      "title": "Ontmoet het team",
+      "description": "Ons team bestaat uit lokale bewoners die de Costa del Sol niet alleen kennen als vastgoedprofessionals, maar als trotse leden van de gemeenschap. Of je nu wordt aangetrokken door de energie van Marbella, de gezinsvriendelijke charme van Fuengirola of de rustige elegantie van Benahavís, wij helpen je de beste match te vinden. Niet alleen voor je behoeften, maar voor jouw leven."
+    }
+  },
+  "services": {
+    "title": "Vastgoeddiensten op maat",
+    "card-1": "Woning kopen",
+    "card-1-description": "Bij Baruch weten we dat een huis kopen een van de grootste mijlpalen in het leven is. Ons ervaren team staat klaar om je te begeleiden.",
+    "card-2": "Woning verkopen",
+    "card-2-description": "Je huis verkopen hoeft niet overweldigend te zijn. Met Baruch maken onze toegewijde experts het proces eenvoudig.",
+    "card-3": "Woning huren",
+    "card-3-description": "Het vinden van de juiste huurwoning is eenvoudig met Baruch. Of je nu op zoek bent naar een knus appartement of een ruim huis."
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "question-1": "Welke diensten biedt Baruch Real Estate aan?",
+    "answer-1": "Baruch Real Estate biedt koop-, verkoop- en verhuurdiensten, evenals vastgoedbeheer en investeringsadvies aan de Costa del Sol.",
+    "question-2": "Waarom zou ik voor Baruch Real Estate kiezen?",
+    "answer-2": "Baruch Real Estate biedt persoonlijke service, deskundige lokale kennis en een toegewijd team dat je begeleidt bij elke stap van je vastgoedtraject.",
+    "question-3": "Hoe helpt Baruch mij de juiste woning te vinden?",
+    "answer-3": "Baruch Real Estate luistert naar jouw wensen en voorkeuren en selecteert vervolgens woningen die passen bij jouw levensstijl en doelen.",
+    "question-4": "Helpt Baruch Real Estate met juridische documenten?",
+    "answer-4": "Ja, Baruch Real Estate heeft betrouwbare interne advocaten die je helpen met alle juridische documenten en zorgen voor een soepele transactie.",
+    "question-5": "Kan Baruch mij helpen mijn woning snel te verkopen?",
+    "answer-5": "Baruch Real Estate gebruikt premium marketingstrategieën en een breed netwerk om zowel lokale als internationale kopers aan te trekken, zodat je efficiënt kunt verkopen.",
+    "question-6": "Welke gebieden dekt Baruch Real Estate?",
+    "answer-6": "Baruch Real Estate is gespecialiseerd in woningen aan de Costa del Sol, waaronder Marbella, Estepona, Benahavís en omliggende gebieden.",
+    "question-7": "Biedt Baruch vastgoedbeheer aan?",
+    "answer-7": "Ja, Baruch Real Estate biedt uitgebreid vastgoedbeheer om ervoor te zorgen dat je investering goed wordt verzorgd, zelfs als je er niet bent.",
+    "question-8": "Hoe ondersteunt Baruch internationale kopers?",
+    "answer-8": "Baruch Real Estate biedt meertalige ondersteuning, begeleiding bij lokale regelgeving en hulp bij alle aspecten van het kopen van vastgoed vanuit het buitenland.",
+    "question-9": "Wat maakt Baruch Real Estate anders dan andere makelaars?",
+    "answer-9": "Baruch Real Estate onderscheidt zich door toewijding aan klanttevredenheid, transparantie en een persoonlijke aanpak voor elke klant.",
+    "question-10": "Hoe neem ik contact op met Baruch Real Estate voor een consult?",
+    "answer-10": "Je kunt contact opnemen met Baruch Real Estate via onze website, telefonisch of door ons kantoor te bezoeken. Ons team staat klaar om je te helpen met al je vragen."
+  },
+  "language": {
+    "selectLanguage": "Selecteer taal",
+    "currentLanguage": "Huidige taal",
+    "changing": "Taal wijzigen naar"
+  },
+  "propertyDetails": {
+    "properti-not-found": "Eigendom niet gevonden",
+    "property-not-found-description": "Het eigendom dat je zoekt bestaat niet.",
+    "built_area-text": "Gebruiksoppervlakte",
+    "lot_area-text": "Perceeloppervlakte",
+    "parking_spaces-text": "Parkeerplaatsen",
+    "bedrooms-text": "Slaapkamers",
+    "bathrooms-text": "Badkamers",
+    "price-text": "Prijs",
+    "contact-text": "Neem contact op",
+    "map_locations-text": "Locaties op de kaart",
+    "send_message-text": "Stuur ons een bericht",
+    "send-btn": "Verzenden",
+    "fullName-text": "Volledige naam",
+    "phoneNumber-text": "Telefoonnummer",
+    "email-text": "E-mailadres",
+    "message-text": "Jouw bericht",
+    "units": {
+      "title": "Eenheden",
+      "id-house": "Huis-ID",
+      "dorms": "Slaapkamers",
+      "built-area": "Gebruiksoppervlakte",
+      "exterior-area": "Buitenoppervlakte",
+      "garage": "Garage",
+      "price": "Prijs",
+      "storage_room": "Berging",
+      "floor": "Bekijk plattegrond",
+      "unavailable": "Niet beschikbaar",
+      "no-units": "Geen eenheden beschikbaar voor dit eigendom.",
+      "is_available": "ja",
+      "is_not_available": "nee"
+    }
   },
   "contact": {
     "title": "Neem contact op",
-    "subtitle": "We zijn hier om je te helpen",
-    "name": "Volledige naam",
-    "email": "E-mailadres",
+    "our-email": "Ons e-mailadres",
+    "our-phone": "Telefoon",
+    "our-schedule": "Openingstijden",
+    "form-title": "Stuur ons een bericht",
+    "your-name": "Jouw naam",
     "phone-number": "Telefoonnummer",
-    "message": "Bericht",
-    "interested-in": "Geïnteresseerd in",
-    "submit": "Verstuur bericht",
-    "success": "Bericht succesvol verzonden",
-    "error": "Fout bij verzenden van bericht"
-  },
-  "properties": {
-    "title": "Eigenschappen",
-    "no-properties": "Geen eigenschappen gevonden",
-    "view-details": "Bekijk details",
-    "price": "Prijs",
-    "bedrooms": "Slaapkamers",
-    "bathrooms": "Badkamers",
-    "sqft": "Vierkante meters",
-    "location": "Locatie"
-  },
-  "about": {
-    "title": "Over ons",
-    "subtitle": "Leer ons team kennen"
+    "email-address": "E-mailadres",
+    "service-type": "Type dienst",
+    "service-type-1": "Woning verkopen",
+    "service-type-2": "Woning kopen",
+    "service-type-3": "Woning huren",
+    "message": "Jouw bericht",
+    "submit-now": "Nu verzenden",
+    "error-message": "Fout bij het verzenden van het bericht",
+    "success-message": "Bericht succesvol verzonden!"
   },
   "testimonials": {
     "title": "Getuigenissen",
-    "subtitle": "Wat onze klanten zeggen"
-  },
-  "services": {
-    "title": "Diensten",
-    "subtitle": "Onze gespecialiseerde diensten"
-  },
-  "login": {
-    "title": "Inloggen",
-    "email": "E-mailadres",
-    "password": "Wachtwoord",
-    "submit": "Inloggen",
-    "forgot-password": "Wachtwoord vergeten?"
-  },
-  "footer": {
-    "copyright": "© 2024 Baruch Vastgoed. Alle rechten voorbehouden.",
-    "privacy-policy": "Privacybeleid",
-    "terms": "Algemene voorwaarden"
+    "contact-title": "Neem contact op",
+    "your-name": "Jouw naam",
+    "phone-number": "Telefoonnummer",
+    "email-address": "E-mailadres",
+    "message": "Jouw bericht",
+    "submit-now": "Nu verzenden",
+    "error-message": "Fout bij het verzenden van het bericht",
+    "success-message": "Bericht succesvol verzonden!",
+    "service-type": "Type dienst",
+    "service-type-1": "Woning verkopen",
+    "service-type-2": "Woning kopen",
+    "service-type-3": "Woning huren",
+    "submitting": "Verzenden..."
   }
 }
-

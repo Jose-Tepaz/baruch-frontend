@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { useRouter, useSearchParams, useParams } from 'next/navigation';
+import { useTranslation } from "@/utils/i18n-simple";
 import styles from './property-filter-static.module.css';
 
 interface Category {
@@ -11,6 +12,7 @@ interface Category {
     slug: string;
     description?: string;
     image?: string;
+    
 }
 
 interface PropertyStatus {
@@ -30,9 +32,10 @@ interface CustomDropdownProps {
     placeholder: string;
     onChange: (value: string) => void;
     name: string;
+    id?: string;
 }
 
-function CustomDropdown({ value, options, placeholder, onChange, name }: CustomDropdownProps) {
+function CustomDropdown({ value, options, placeholder, onChange, name, id }: CustomDropdownProps) {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
     
@@ -54,6 +57,7 @@ function CustomDropdown({ value, options, placeholder, onChange, name }: CustomD
         <div className={styles.customDropdown} ref={dropdownRef}>
             <button 
                 type="button"
+                id={id}
                 className={`${styles.customDropdownButton} ${isOpen ? styles.open : ''}`}
                 onClick={() => setIsOpen(!isOpen)}
             >
@@ -89,13 +93,21 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
     const searchParams = useSearchParams();
     const params = useParams();
     const lang = params.lang as string;
+    const { t } = useTranslation('common');
     
     const [keyword, setKeyword] = useState(searchParams.get('keyword') || '');
+    const [location, setLocation] = useState(searchParams.get('location') || '');
     const [selectedCategory, setSelectedCategory] = useState(searchParams.get('category') || '');
     const [selectedStatus, setSelectedStatus] = useState(searchParams.get('property_status') || '');
+    const [bedrooms, setBedrooms] = useState(searchParams.get('bedrooms') || '');
+    const [bathrooms, setBathrooms] = useState(searchParams.get('bathrooms') || '');
+    const [minPrice, setMinPrice] = useState(searchParams.get('min_price') || '');
+    const [maxPrice, setMaxPrice] = useState(searchParams.get('max_price') || '');
+    const [showMoreFilters, setShowMoreFilters] = useState(false);
     
     // Ref para manejar el timeout del keyword search
     const keywordTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const locationTimeoutRef = useRef<NodeJS.Timeout | null>(null);
     
     // Cleanup del timeout al desmontar el componente
     useEffect(() => {
@@ -103,54 +115,136 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
             if (keywordTimeoutRef.current) {
                 clearTimeout(keywordTimeoutRef.current);
             }
+            if (locationTimeoutRef.current) {
+                clearTimeout(locationTimeoutRef.current);
+            }
         };
     }, []);
     
     const categoryOptions = [
-        { value: '', label: 'All Types' },
+        { value: '', label: t('home.title-filter-2') || 'All Types' },
         ...categories.map(cat => ({ value: cat.slug, label: cat.name }))
     ];
     
     const statusOptions = [
-        { value: '', label: 'All Status' },
+        { value: '', label: t('home.title-filter-1') || 'All Status' },
         ...propertyStatuses.map(status => ({ value: status.Title, label: status.Title }))
+    ];
+
+    const bedroomOptions = [
+        { value: '', label: t('home.bedrooms-filter') || 'Bedrooms' },
+        { value: '1', label: 'Min 1' },
+        { value: '2', label: 'Min 2' },
+        { value: '3', label: 'Min 3' },
+        { value: '4', label: 'Min 4' },
+        { value: '5', label: 'Min 5' },
+        { value: '6', label: 'Min 6' },
+        { value: '7', label: 'Min 7' },
+        { value: '8', label: 'Min 8' },
+        { value: '9', label: 'Min 9' },
+        { value: '10', label: 'Min 10' },
+    ];
+
+    const bathroomOptions = [
+        { value: '', label: t('home.bathrooms-filter') || 'Bathrooms' },
+        { value: '1', label: 'Min 1' },
+        { value: '2', label: 'Min 2' },
+        { value: '3', label: 'Min 3' },
+        { value: '4', label: 'Min 4' },
+        { value: '5', label: 'Min 5' },
+        { value: '6', label: 'Min 6' },
+        { value: '7', label: 'Min 7' },
+        { value: '8', label: 'Min 8' },
+        { value: '9', label: 'Min 9' },
+        { value: '10', label: 'Min 10' },
+    ];
+
+    const minPriceOptions = [
+        { value: '', label: t('home.min-price-filter') || 'Min Price' },
+        { value: '50000', label: '€50,000' },
+        { value: '100000', label: '€100,000' },
+        { value: '150000', label: '€150,000' },
+        { value: '200000', label: '€200,000' },
+        { value: '250000', label: '€250,000' },
+        { value: '300000', label: '€300,000' },
+        { value: '400000', label: '€400,000' },
+        { value: '500000', label: '€500,000' },
+        { value: '750000', label: '€750,000' },
+        { value: '1000000', label: '€1,000,000' },
+        { value: '1500000', label: '€1,500,000' },
+        { value: '2000000', label: '€2,000,000' },
+    ];
+
+    const maxPriceOptions = [
+        { value: '', label: t('home.max-price-filter') || 'Max Price' },
+        { value: '100000', label: '€100,000' },
+        { value: '150000', label: '€150,000' },
+        { value: '200000', label: '€200,000' },
+        { value: '250000', label: '€250,000' },
+        { value: '300000', label: '€300,000' },
+        { value: '400000', label: '€400,000' },
+        { value: '500000', label: '€500,000' },
+        { value: '750000', label: '€750,000' },
+        { value: '1000000', label: '€1,000,000' },
+        { value: '1500000', label: '€1,500,000' },
+        { value: '2000000', label: '€2,000,000' },
+        { value: '5000000', label: '€5,000,000' },
+        { value: '10000000', label: '€10,000,000' },
     ];
     
     // Función para actualizar la URL y aplicar filtros
-    const updateFilters = (newKeyword?: string, newCategory?: string, newStatus?: string) => {
+    const updateFilters = (newFilters: {
+        keyword?: string;
+        location?: string;
+        category?: string;
+        status?: string;
+        bedrooms?: string;
+        bathrooms?: string;
+        minPrice?: string;
+        maxPrice?: string;
+    }) => {
         const params = new URLSearchParams();
         
-        const finalKeyword = newKeyword !== undefined ? newKeyword : keyword;
-        const finalCategory = newCategory !== undefined ? newCategory : selectedCategory;
-        const finalStatus = newStatus !== undefined ? newStatus : selectedStatus;
+        const finalKeyword = newFilters.keyword !== undefined ? newFilters.keyword : keyword;
+        const finalLocation = newFilters.location !== undefined ? newFilters.location : location;
+        const finalCategory = newFilters.category !== undefined ? newFilters.category : selectedCategory;
+        const finalStatus = newFilters.status !== undefined ? newFilters.status : selectedStatus;
+        const finalBedrooms = newFilters.bedrooms !== undefined ? newFilters.bedrooms : bedrooms;
+        const finalBathrooms = newFilters.bathrooms !== undefined ? newFilters.bathrooms : bathrooms;
+        const finalMinPrice = newFilters.minPrice !== undefined ? newFilters.minPrice : minPrice;
+        const finalMaxPrice = newFilters.maxPrice !== undefined ? newFilters.maxPrice : maxPrice;
         
         if (finalKeyword.trim()) params.set('keyword', finalKeyword.trim());
+        if (finalLocation.trim()) params.set('location', finalLocation.trim());
         if (finalCategory) params.set('category', finalCategory);
         if (finalStatus) params.set('property_status', finalStatus);
+        if (finalBedrooms) params.set('bedrooms', finalBedrooms);
+        if (finalBathrooms) params.set('bathrooms', finalBathrooms);
+        if (finalMinPrice) params.set('min_price', finalMinPrice);
+        if (finalMaxPrice) params.set('max_price', finalMaxPrice);
         
         const queryString = params.toString();
         const newUrl = `/${lang}/properties${queryString ? `?${queryString}` : ''}`;
         
-        console.log('=== Updating URL with filters ===');
-        console.log('Language:', lang);
-        console.log('Keyword:', finalKeyword);
-        console.log('Category:', finalCategory);
-        console.log('Status:', finalStatus);
-        console.log('Query string:', queryString);
-        console.log('New URL:', newUrl);
+       
         
         router.push(newUrl);
     };
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        updateFilters();
+        updateFilters({});
     };
     
     const handleReset = () => {
         setKeyword('');
+        setLocation('');
         setSelectedCategory('');
         setSelectedStatus('');
+        setBedrooms('');
+        setBathrooms('');
+        setMinPrice('');
+        setMaxPrice('');
         router.push(`/${lang}/properties`);
     };
     
@@ -165,81 +259,230 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         
         // Aplicar filtro automáticamente después de 500ms de inactividad
         keywordTimeoutRef.current = setTimeout(() => {
-            updateFilters(value);
+            updateFilters({ keyword: value });
+        }, 500);
+    };
+
+    const handleLocationChange = (value: string) => {
+        setLocation(value);
+        
+        // Limpiar timeout anterior si existe
+        if (locationTimeoutRef.current) {
+            clearTimeout(locationTimeoutRef.current);
+        }
+        
+        // Aplicar filtro automáticamente después de 500ms de inactividad
+        locationTimeoutRef.current = setTimeout(() => {
+            updateFilters({ location: value });
         }, 500);
     };
     
     const handleCategoryChange = (value: string) => {
         setSelectedCategory(value);
-        updateFilters(undefined, value);
+        updateFilters({ category: value });
     };
     
     const handleStatusChange = (value: string) => {
         setSelectedStatus(value);
-        updateFilters(undefined, undefined, value);
+        updateFilters({ status: value });
+    };
+
+    const handleBedroomsChange = (value: string) => {
+        setBedrooms(value);
+        updateFilters({ bedrooms: value });
+    };
+
+    const handleBathroomsChange = (value: string) => {
+        setBathrooms(value);
+        updateFilters({ bathrooms: value });
+    };
+
+    const handleMinPriceChange = (value: string) => {
+        setMinPrice(value);
+        updateFilters({ minPrice: value });
+    };
+
+    const handleMaxPriceChange = (value: string) => {
+        setMaxPrice(value);
+        updateFilters({ maxPrice: value });
     };
     
     return (
-        <div className="sidebar1-area">
-            <div className="tab-content" id="pills-tabContent">
-                <form onSubmit={handleSubmit}>
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <div className="input-area filter-group mb-0">
-                                <input 
-                                    className="mb-0" 
-                                    type="text" 
-                                    value={keyword}
-                                    onChange={(e) => handleKeywordChange(e.target.value)}
-                                    placeholder="Types keyword" 
-                                />
-                            </div>
+        <>
+            <style jsx>{`
+                .filter-label {
+                    display: block;
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #1B1B1B;
+                    line-height: 1.2;
+                }
 
-                            <div className="input-area filter-group">
-                                <CustomDropdown
-                                    value={selectedCategory}
-                                    options={categoryOptions}
-                                    placeholder="All Types"
-                                    onChange={handleCategoryChange}
-                                    name="category"
-                                />
-                            </div>
+                .filter-label:hover {
+                    color: var(--ztc-bg-bg-3);
+                }
 
-                            <div className="input-area filter-group">
-                                <CustomDropdown
-                                    value={selectedStatus}
-                                    options={statusOptions}
-                                    placeholder="All Status"
-                                    onChange={handleStatusChange}
-                                    name="property_status"
-                                />
+                .input-area.filter-group {
+                    margin-bottom: 16px;
+                }
+
+                .input-area.filter-group input,
+                .input-area.filter-group .customDropdown {
+                    margin-top: 4px;
+                }
+            `}</style>
+            <div className="sidebar1-area">
+                <div className="tab-content" id="pills-tabContent">
+                    <form onSubmit={handleSubmit}>
+                        <div className="row">
+                            <div className="col-lg-12">
+                                
+
+                                {/* Location input */}
+                                <div className="input-area filter-group mb-3">
+                                    <label htmlFor="location-input" className="filter-label">
+                                        {t('home.location-filter') || 'Location'}
+                                    </label>
+                                    <input 
+                                        id="location-input"
+                                        className="mb-0" 
+                                        type="text" 
+                                        value={location}
+                                        onChange={(e) => handleLocationChange(e.target.value)}
+                                        placeholder={t('home.location-filter') || "Location"} 
+                                    />
+                                </div>
+
+                                {/* Category dropdown */}
+                                <div className="input-area filter-group mb-3">
+                                    <label htmlFor="category-dropdown" className="filter-label">
+                                        {t('home.title-filter-2') || 'Property Type'}
+                                    </label>
+                                    <CustomDropdown
+                                        id="category-dropdown"
+                                        value={selectedCategory}
+                                        options={categoryOptions}
+                                        placeholder={t('home.title-filter-2') || "All Types"}
+                                        onChange={handleCategoryChange}
+                                        name="category"
+                                    />
+                                </div>
+
+                                {/* Status dropdown */}
+                                <div className="input-area filter-group mb-3">
+                                    <label htmlFor="status-dropdown" className="filter-label">
+                                        {t('home.title-filter-1') || 'Property Status'}
+                                    </label>
+                                    <CustomDropdown
+                                        id="status-dropdown"
+                                        value={selectedStatus}
+                                        options={statusOptions}
+                                        placeholder={t('home.title-filter-1') || "All Status"}
+                                        onChange={handleStatusChange}
+                                        name="property_status"
+                                    />
+                                </div>
+
+                                {/* Bedrooms dropdown */}
+                                <div className="input-area filter-group mb-3">
+                                    <label htmlFor="bedrooms-dropdown" className="filter-label">
+                                        {t('home.bedrooms-filter') || 'Bedrooms'}
+                                    </label>
+                                    <CustomDropdown
+                                        id="bedrooms-dropdown"
+                                        value={bedrooms}
+                                        options={bedroomOptions}
+                                        placeholder={t('home.bedrooms-filter') || "Bedrooms"}
+                                        onChange={handleBedroomsChange}
+                                        name="bedrooms"
+                                    />
+                                </div>
+
+                                {/* Bathrooms dropdown - hidden on mobile unless showMoreFilters is true */}
+                                <div className={`input-area filter-group mb-3 ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
+                                    <label htmlFor="bathrooms-dropdown" className="filter-label">
+                                        {t('home.bathrooms-filter') || 'Bathrooms'}
+                                    </label>
+                                    <CustomDropdown
+                                        id="bathrooms-dropdown"
+                                        value={bathrooms}
+                                        options={bathroomOptions}
+                                        placeholder={t('home.bathrooms-filter') || "Bathrooms"}
+                                        onChange={handleBathroomsChange}
+                                        name="bathrooms"
+                                    />
+                                </div>
+
+                                {/* Min Price dropdown - hidden on mobile unless showMoreFilters is true */}
+                                <div className={`input-area filter-group mb-3 ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
+                                    <label htmlFor="min-price-dropdown" className="filter-label">
+                                        {t('home.min-price-filter') || 'Min Price'}
+                                    </label>
+                                    <CustomDropdown
+                                        id="min-price-dropdown"
+                                        value={minPrice}
+                                        options={minPriceOptions}
+                                        placeholder={t('home.min-price-filter') || "Min Price"}
+                                        onChange={handleMinPriceChange}
+                                        name="min_price"
+                                    />
+                                </div>
+
+                                {/* Max Price dropdown - hidden on mobile unless showMoreFilters is true */}
+                                <div className={`input-area filter-group mb-3 ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
+                                    <label htmlFor="max-price-dropdown" className="filter-label">
+                                        {t('home.max-price-filter') || 'Max Price'}
+                                    </label>
+                                    <CustomDropdown
+                                        id="max-price-dropdown"
+                                        value={maxPrice}
+                                        options={maxPriceOptions}
+                                        placeholder={t('home.max-price-filter') || "Max Price"}
+                                        onChange={handleMaxPriceChange}
+                                        name="max_price"
+                                    />
+                                </div>
+
+                                {/* Show More/Less button for mobile */}
+                                <div className="d-lg-none mb-3">
+                                    <button 
+                                        type="button"
+                                        className="btn-show-more"
+                                        onClick={() => setShowMoreFilters(!showMoreFilters)}
+                                    >
+                                        {showMoreFilters ? t('home.show-less') || 'Show Less' : t('home.show-more') || 'Show More'}
+                                        <i className={`fa-solid fa-chevron-${showMoreFilters ? 'up' : 'down'} ms-2`} />
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="space32" />
-                    <button type="submit" className="vl-btn1">
-                        Search Property
-                        <span className="arrow1 ms-2">
-                            <i className="fa-solid fa-arrow-right" />
-                        </span>
-                        <span className="arrow2 ms-2">
-                            <i className="fa-solid fa-arrow-right" />
-                        </span>
-                    </button>
-                    
-                    <div className="d-flex justify-content-between align-items-center mt-4">
-                        <button
-                            type="button"
-                            onClick={handleReset}
-                            className={styles.resetButton}
-                        >
-                            <i className="fa-solid fa-rotate-left me-2"></i>
-                            Reset filters
+                        <div className="space32" />
+                        <button type="submit" className="vl-btn1">
+                            {t('home.btn-filter') || 'Search Property'}
+                            <span className="arrow1 ms-2">
+                                <i className="fa-solid fa-arrow-right" />
+                            </span>
+                            <span className="arrow2 ms-2">
+                                <i className="fa-solid fa-arrow-right" />
+                            </span>
                         </button>
-                    </div>
-                </form>
+                        
+                        <div className="d-flex justify-content-between align-items-center mt-4">
+                            <button
+                                type="button"
+                                onClick={handleReset}
+                                className={styles.resetButton}
+                            >
+                                <i className="fa-solid fa-rotate-left me-2"></i>
+                                Reset filters
+                            </button>
+                            
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
+        </>
     );
 } 

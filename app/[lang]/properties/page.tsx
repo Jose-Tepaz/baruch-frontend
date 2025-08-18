@@ -81,12 +81,7 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
     let propertyStatuses: any[] = [];
     
     try {
-        // Obtener propiedades según el filtro usando el servicio get-properties
-        console.log('=== Properties Page DEBUG ===');
-        console.log('Language:', lang);
-        console.log('Search params:', searchParams);
-        console.log('Category filter:', category);
-        console.log('Property status filter:', property_status);
+       
         
         const result = await getProperties({ 
             categorySlug: category, 
@@ -101,8 +96,7 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
         
         properties = result || [];
         
-        // Los filtros ya se aplican en el servicio getProperties, no necesitamos filtrar aquí
-        console.log('Properties from service:', properties.length);
+       
         
         // Filtrar propiedades localmente por otros criterios si es necesario
         if (properties && (keyword || city || state || amenities)) {
