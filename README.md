@@ -1,6 +1,6 @@
 # Baruch
 
-Housa is a modern real estate web application built with Next.js, designed for property listing, searching, and management. Developed by AliThemes, this project provides a robust, scalable, and user-friendly platform for real estate agencies, agents, and property seekers.
+Baruch is a modern real estate web application built with Next.js, designed for property listing, searching, and management. Developed by AliThemes, this project provides a robust, scalable, and user-friendly platform for real estate agencies, agents, and property seekers.
 
 ## Features
 
@@ -23,4 +23,5 @@ Housa is a modern real estate web application built with Next.js, designed for p
 - Tailwind CSS
 - Bootstrap 5.3 (UI/UX principles)
 - Swiper.js (image galleries)
+
 
