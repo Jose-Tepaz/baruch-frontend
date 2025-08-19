@@ -1,66 +1,212 @@
 {
-  "language": {
-    "changing": "Bytter till"
-  },
-  "home": {
-    "title-filter": "Hitta din perfekta fastighet",
-    "title-filter-1": "Fastighetens status",
-    "title-filter-2": "Fastighetstyp",
-    "btn-filter": "Sök fastigheter",
-    "btn-all-properties": "Se alla fastigheter",
-    "location-filter": "Plats",
-    "bedrooms-filter": "Sovrum",
-    "bathrooms-filter": "Badrum",
-    "min-price-filter": "Minsta pris",
-    "max-price-filter": "Högsta pris",
-    "show-more": "Visa fler filter",
-    "show-less": "Visa färre filter"
-  },
-  "contact": {
-    "title": "Kontakta oss",
-    "subtitle": "Vi är här för att hjälpa dig",
-    "name": "Fullständigt namn",
-    "email": "E-postadress",
-    "phone-number": "Telefonnummer",
-    "message": "Meddelande",
-    "interested-in": "Intresserad av",
-    "submit": "Skicka meddelande",
-    "success": "Meddelande skickat framgångsrikt",
-    "error": "Fel vid sändning av meddelande"
-  },
-  "properties": {
-    "title": "Fastigheter",
-    "no-properties": "Inga fastigheter hittades",
-    "view-details": "Se detaljer",
-    "price": "Pris",
-    "bedrooms": "Sovrum",
-    "bathrooms": "Badrum",
-    "sqft": "Kvadratmeter",
-    "location": "Plats"
-  },
-  "about": {
-    "title": "Om oss",
-    "subtitle": "Lär känna vårt team"
-  },
-  "testimonials": {
-    "title": "Omdömen",
-    "subtitle": "Vad våra kunder säger"
-  },
-  "services": {
-    "title": "Tjänster",
-    "subtitle": "Våra specialiserade tjänster"
-  },
-  "login": {
-    "title": "Logga in",
-    "email": "E-postadress",
-    "password": "Lösenord",
-    "submit": "Logga in",
-    "forgot-password": "Glömt ditt lösenord?"
+  "welcome": "Välkommen till Baruch Real Estate",
+  "navigation": {
+      "home": "Hem",
+      "about": "Om oss",
+      "properties": "Fastigheter",
+      "services": "Tjänster",
+      "contact": "Kontakt",
+      "btn-nav-1": "Kontakta oss",
+      "login-btn": "Logga in",
+      "logout-btn": "Logga ut",
+      "btn-private-properties": "Fastigheter",
+      "testimonials": "Omdömen"
   },
   "footer": {
-    "copyright": "© 2024 Baruch Fastigheter. Alla rättigheter förbehållna.",
-    "privacy-policy": "Integritetspolicy",
-    "terms": "Villkor och bestämmelser"
+      "title-cta": "Låt oss göra din dröm till verklighet",
+      "description-cta": "Vänta inte med att påbörja din fastighetsresa. Oavsett om du köper, säljer eller hyr, står vårt erfarna team redo att guida dig varje steg på vägen. Låt oss förverkliga din vision med personlig service och en smidig upplevelse.",
+      "btn-cta": "Börja söka idag",
+      "description-footer": "Vi är engagerade i att göra din fastighetsresa smidig och stressfri. Oavsett om du köper, säljer eller hyr, finns vi med dig hela vägen.",
+      "head-title-1": "Meny",
+      "head-title-2": "Kategorier",
+      "head-title-3": "Kontakta oss",
+      "head-title-4": "Vi finns här",
+      "title-1-footer": "Om oss",
+      "title-2-footer": "Magasin",
+      "title-3-footer": "Omdömen",
+      "title-4-footer": "Kontakt"
+  },
+  "home": {
+      "btn-1-hero": "Se fastigheter",
+      "btn-2-hero": "Läs mer",
+      "title-filter": "Hitta ditt drömhem",
+      "title-filter-1": "Alla statusar",
+      "title-filter-2": "Alla kategorier",
+      "bedrooms-filter": "Sovrum",
+      "bathrooms-filter": "Badrum",
+      "min-price-filter": "Min pris",
+      "max-price-filter": "Max pris",
+      "location-filter": "Plats",
+      "show-more": "Visa fler filter",
+      "show-less": "Visa färre filter",
+      "btn-filter": "Sök fastigheter",
+      "btn-all-properties": "Visa alla fastigheter",
+      "title-about-us": "Om företaget",
+      "subtitle-list-properties": "Fastigheter",
+      "title-list-properties": "Upptäck våra senaste fastigheter",
+      "subtitle-category": "Kategori",
+      "title-category": "Välj det hem som passar dig",
+      "btn-about-section-2": "Se erbjudande",
+      "subtitle-testimonials-1": "Omdömen",
+      "title-testimonials": "Vad våra kunder säger",
+      "subtitle-testimonials": "Omdömen"
+  },
+  "buttons": {
+      "login": "Logga in",
+      "register": "Registrera",
+      "search": "Sök",
+      "seeProperties": "Se fastigheter"
+  },
+  "common": {
+      "loading": "Laddar..."
+  },
+  "properties": {
+      "title": "Våra fastigheter",
+      "discover_latest": "Upptäck våra senaste fastigheter",
+      "no_properties": "Inga fastigheter tillgängliga"
+  },
+  "about": {
+      "company": "Om företaget",
+      "hero": {
+          "title": "Din pålitliga partner för fastigheter på Costa del Sol",
+          "description": "Drömmer du om ett liv i solen, omgiven av vackra landskap, rik kultur och ett varmt, välkomnande samhälle? På Baruch Real Estate gör vi mer än att bara hjälpa dig att köpa eller sälja fastigheter – vi hjälper dig att bygga det liv du alltid har föreställt dig på Costa del Sol.",
+          "btn_text": "Kontakta oss"
+      },
+      "others3": {
+          "subtitle": "Mission & Vision",
+          "title": "Skräddarsydda fastighetstjänster på Costa del Sol",
+          "forbuyers": "För köpare",
+          "btn_text": "Se fastigheter",
+          "forbuyersDescription": {
+              "list1": "Personliga fastighetssökningar anpassade efter din livsstil och dina mål.",
+              "list2": "Expertis om lokala områden, skolor och samhällen.",
+              "list3": "Smidiga visningar och utvalda rekommendationer.",
+              "list4": "Professionell förhandling för att få bästa möjliga affär.",
+              "list5": "Pålitliga interna jurister för juridiskt stöd.",
+              "list6": "Finansiella partners för att säkerställa en smidig transaktion."
+          },
+          "forseellers": "För säljare",
+          "forseellersDescription": {
+              "list1": "Noggranna fastighetsvärderingar baserade på verkliga marknadsdata.",
+              "list2": "Premium marknadsföring med professionell fotografering och övertygande beskrivningar.",
+              "list3": "Exponering för både lokala och internationella köpare.",
+              "list4": "Förhandlingsexpertis för att maximera ditt försäljningspris.",
+              "list5": "Fullt stöd från annonsering till avslut."
+          }
+      },
+      "others4": {
+          "subtitle": "Varför välja oss",
+          "title": "Varför välja Baruch Real Estate?",
+          "description": "På Baruch Real Estate tror vi att fastigheter i första hand handlar om relationer. Vi säljer inte bara hus. Vi kopplar människor till rätt livsstil, område och framtid. Vårt team består av lokala invånare som känner Costa del Sol inte bara som fastighetsproffs, utan som stolta medlemmar av samhället. Oavsett om du dras till Marbellas energi, Fuengirolas familjevänliga charm eller Benahavís lugna elegans, hjälper vi dig att hitta den perfekta matchen. Inte bara för dina behov, utan för din livsstil.",
+          "btn_text": "Kontakta oss"
+      },
+      "meet-the-team": {
+          "title": "Möt teamet",
+          "description": "Vårt team består av lokala invånare som känner Costa del Sol inte bara som fastighetsproffs, utan som stolta medlemmar av samhället. Oavsett om du dras till Marbellas energi, Fuengirolas familjevänliga charm eller Benahavís lugna elegans, hjälper vi dig att hitta den bästa matchen. Inte bara för dina behov, utan för ditt liv."
+      }
+  },
+  "services": {
+      "title": "Skräddarsydda fastighetstjänster",
+      "card-1": "Köpa fastighet",
+      "card-1-description": "På Baruch vet vi att att köpa ett hem är en av livets största milstolpar. Vårt erfarna team är redo att guida dig.",
+      "card-2": "Sälja fastighet",
+      "card-2-description": "Att sälja ditt hem behöver inte vara överväldigande. Med Baruch tar våra dedikerade experter hand om processen.",
+      "card-3": "Hyra fastighet",
+      "card-3-description": "Att hitta rätt hyresbostad är enkelt med Housebox. Oavsett om du letar efter en mysig lägenhet eller ett rymligt hus."
+  },
+  "faq": {
+      "title": "Vanliga frågor",
+      "question-1": "Vilka tjänster erbjuder Baruch Real Estate?",
+      "answer-1": "Baruch Real Estate erbjuder köp-, sälj- och uthyrningstjänster samt fastighetsförvaltning och investeringsrådgivning på Costa del Sol.",
+      "question-2": "Varför ska jag välja Baruch Real Estate?",
+      "answer-2": "Baruch Real Estate erbjuder personlig service, expertkunskap om det lokala området och ett dedikerat team som guidar dig genom hela din fastighetsresa.",
+      "question-3": "Hur kan Baruch hjälpa mig att hitta rätt fastighet?",
+      "answer-3": "Baruch Real Estate lyssnar på dina önskemål och preferenser och presenterar sedan ett urval av fastigheter som passar din livsstil och dina mål.",
+      "question-4": "Hjälper Baruch Real Estate med juridiska dokument?",
+      "answer-4": "Ja, Baruch Real Estate har pålitliga interna jurister som hjälper dig med all juridisk dokumentation och säkerställer en smidig transaktion.",
+      "question-5": "Kan Baruch hjälpa mig att sälja min fastighet snabbt?",
+      "answer-5": "Baruch Real Estate använder premium marknadsföringsstrategier och ett brett nätverk för att nå både lokala och internationella köpare, så att du kan sälja effektivt.",
+      "question-6": "Vilka områden täcker Baruch Real Estate?",
+      "answer-6": "Baruch Real Estate är specialiserade på fastigheter på Costa del Sol, inklusive Marbella, Estepona, Benahavís och omgivande områden.",
+      "question-7": "Erbjuder Baruch fastighetsförvaltning?",
+      "answer-7": "Ja, Baruch Real Estate erbjuder omfattande fastighetsförvaltning för att säkerställa att din investering tas om hand, även när du inte är där.",
+      "question-8": "Hur stöttar Baruch internationella köpare?",
+      "answer-8": "Baruch Real Estate erbjuder flerspråkigt stöd, vägledning kring lokala regler och hjälp med alla aspekter av att köpa fastighet från utlandet.",
+      "question-9": "Vad gör Baruch Real Estate annorlunda än andra mäklare?",
+      "answer-9": "Baruch Real Estate utmärker sig genom sitt engagemang för kundnöjdhet, transparens och ett skräddarsytt tillvägagångssätt för varje kunds behov.",
+      "question-10": "Hur kontaktar jag Baruch Real Estate för en konsultation?",
+      "answer-10": "Du kan kontakta Baruch Real Estate via vår webbplats, telefon eller genom att besöka vårt kontor. Vårt team står redo att hjälpa dig med alla dina frågor."
+  },
+  "language": {
+      "selectLanguage": "Välj språk",
+      "currentLanguage": "Nuvarande språk",
+      "changing": "Byter språk till"
+  },
+  "propertyDetails": {
+      "properti-not-found": "Fastighet hittades inte",
+      "property-not-found-description": "Fastigheten du söker finns inte.",
+      "built_area-text": "Boarea",
+      "lot_area-text": "Tomtarea",
+      "parking_spaces-text": "Parkeringsplatser",
+      "bedrooms-text": "Sovrum",
+      "bathrooms-text": "Badrum",
+      "price-text": "Pris",
+      "contact-text": "Kontakta oss",
+      "map_locations-text": "Kartplatser",
+      "send_message-text": "Skicka ett meddelande",
+      "send-btn": "Skicka",
+      "fullName-text": "Fullständigt namn",
+      "phoneNumber-text": "Telefonnummer",
+      "email-text": "E-postadress",
+      "message-text": "Ditt meddelande",
+      "units": {
+          "title": "Enheter",
+          "id-house": "Hus-ID",
+          "dorms": "Sovrum",
+          "built-area": "Boarea",
+          "exterior-area": "Utearea",
+          "garage": "Garage",
+          "price": "Pris",
+          "storage_room": "Förråd",
+          "floor": "Visa planritning",
+          "unavailable": "Inte tillgänglig",
+          "no-units": "Inga enheter tillgängliga för denna fastighet.",
+          "is_available": "ja",
+          "is_not_available": "nej"
+      }
+  },
+  "contact": {
+      "title": "Kontakta oss",
+      "our-email": "Vår e-postadress",
+      "our-phone": "Telefon",
+      "our-schedule": "Schema",
+      "form-title": "Skicka ett meddelande",
+      "your-name": "Ditt namn",
+      "phone-number": "Telefonnummer",
+      "email-address": "E-postadress",
+      "service-type": "Typ av tjänst",
+      "service-type-1": "Sälja fastighet",
+      "service-type-2": "Köpa fastighet",
+      "service-type-3": "Hyra fastighet",
+      "message": "Ditt meddelande",
+      "submit-now": "Skicka nu",
+      "error-message": "Fel vid sändning av meddelande",
+      "success-message": "Meddelandet skickades framgångsrikt!"
+  },
+  "testimonials": {
+      "title": "Omdömen",
+      "contact-title": "Kontakta oss",
+      "your-name": "Ditt namn",
+      "phone-number": "Telefonnummer",
+      "email-address": "E-postadress",
+      "message": "Ditt meddelande",
+      "submit-now": "Skicka nu",
+      "error-message": "Fel vid sändning av meddelande",
+      "success-message": "Meddelandet skickades framgångsrikt!",
+      "service-type": "Typ av tjänst",
+      "service-type-1": "Sälja fastighet",
+      "service-type-2": "Köpa fastighet",
+      "service-type-3": "Hyra fastighet",
+      "submitting": "Skickar..."
   }
 }
-

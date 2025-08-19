@@ -88,8 +88,8 @@ type PropertyCardProps = {
               </p>
               <div className="d-flex justify-content-between align-items-center">
                 <span className="fw-bold fs-5">
-                  ${formattedPrice.toLocaleString()}
-                  <span className="fs-6 ">/month</span>
+                  €{formattedPrice.toLocaleString('es-ES')}
+                
                 </span>
                 <span className="btn btn-outline-light rounded-circle p-0 border-0" style={{ width: '32px', height: '32px' }}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto" fill="currentColor" className="bi bi-arrow-up-right-circle" viewBox="0 0 16 16">

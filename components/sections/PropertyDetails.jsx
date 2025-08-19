@@ -65,7 +65,7 @@ export default function PropertyDetails({ property }) {
                                 {/* Precio y botón de contacto */}
                                 <div className="property-price-section">
                                     <div className="property-price">
-                                        {property.price ? `$${property.price.toLocaleString('es-ES')}` : ''}
+                                        {property.price ? `€${property.price.toLocaleString('es-ES')}` : ''}
                                     </div>  
                                     <Link className="vl-btn1"  href="#contact">
                                     {t("propertyDetails.contact-text")}

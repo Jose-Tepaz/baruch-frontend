@@ -83,12 +83,7 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
     const currentPage = sp.page ? Math.max(1, Number(sp.page)) : 1;
     let pagination = { page: 1, pageSize: 9, pageCount: 0, total: 0 };
     try {
-        // Obtener propiedades según el filtro usando el servicio get-properties
-        console.log('=== Properties Page DEBUG ===');
-        console.log('Language:', lang);
-        console.log('Search params:', searchParams);
-        console.log('Category filter:', category);
-        console.log('Property status filter:', property_status);
+       
         
         const { data, meta } = await getProperties({
             categorySlug: category, 
@@ -105,8 +100,7 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
         properties = data;
         pagination = meta.pagination;
         
-        // Los filtros ya se aplican en el servicio getProperties, no necesitamos filtrar aquí
-        console.log('Properties from service:', properties.length);
+       
         
         // Filtrar propiedades localmente por otros criterios si es necesario
         if (properties && (keyword || city || state || amenities)) {

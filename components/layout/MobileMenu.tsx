@@ -38,11 +38,8 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
                         <div className="vl-offcanvas-menu d-lg-none mb-40">
                             <nav>
                                 <ul>
-                                    <li className={`has-dropdown ${isAccordion == 1 ? "active" : ""}`} onClick={() => handleAccordion(1)}>
-                                        <Link href="/">
-                                            {t('navigation.home')}
-                                        </Link>
-                                    </li>
+                                    
+                                    
                                     <li>
                                         <Link href="/properties">
                                             {t('navigation.properties')}
