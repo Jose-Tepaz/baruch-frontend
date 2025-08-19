@@ -4,10 +4,38 @@ import { query } from './strapi'
 import { getLocaleWithFallback } from '@/utils/get-current-locale'
 const { STRAPI_HOST } = process.env
 
+interface StrapiPagination {
+  page: number
+  pageSize: number
+  pageCount: number
+  total: number
+}
+
+interface StrapiMeta {
+  pagination: StrapiPagination
+}
 interface PropertyStatus {
   id: number
   documentId: string
   Title: string
+}
+export interface MappedProperty {
+  id: number
+  documentId: string
+  title: string
+  description: string
+  price: number
+  address: string
+  image: string
+  slug: string
+  propertyStatus: string
+  category: any
+  location: string
+}
+
+export interface PropertyListResponse {
+  data: MappedProperty[]
+  meta: StrapiMeta
 }
 
 // Definir la interfaz para la propiedad
@@ -27,7 +55,7 @@ interface PropertyData {
   type?: string
   city?: string
   state?: string
-  amenities?: string[]  
+  amenities?: string[]
   is_private?: boolean
   location: string
 }
@@ -41,6 +69,8 @@ export type getPropertiesFilter = {
   max_price?: string
   location?: string
   locale?: string
+  page?: number
+  pageSize?: number
   [key: string]: any
 }
 
@@ -48,12 +78,19 @@ export type getPropertiesFilter = {
 ///properties?populate[main_image][fields][0]=url&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&filters[category][slug][$contains]=apartaments 
 
 // Función para obtener propiedades filtradas por categoría
-export function getPropertiesByCategory(categorySlug: string, propertyStatus?: string, locale?: string) {
+export function getPropertiesByCategory(
+  categorySlug: string,
+  propertyStatus?: string,
+  locale?: string,
+  page: number = 1,
+  pageSize: number = 9) {
   const currentLocale = getLocaleWithFallback(locale)
   let qs = 'properties?populate[main_image][fields][0]=url&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&pagination[limit]=100'
 
   // Agregar parámetro locale
   qs += `&locale=${encodeURIComponent(currentLocale)}`
+  // Agregar paginación
+  qs += `&pagination[page]=${encodeURIComponent(String(page))}&pagination[pageSize]=${encodeURIComponent(String(pageSize))}`
 
   if (categorySlug) {
     qs += `&filters[category][slug][$eq]=${encodeURIComponent(categorySlug)}`
@@ -66,19 +103,21 @@ export function getPropertiesByCategory(categorySlug: string, propertyStatus?: s
   console.log('=== getPropertiesByCategory Final Query ===');
   console.log('Query string:', qs);
   console.log('Locale:', currentLocale);
-  
+
   return query(`${qs}`)
     .then(res => {
       console.log('=== getPropertiesByCategory API Response ===');
       console.log('Response:', res);
       console.log('Data count:', res.data?.length || 0);
-      
+
       if (!res.data || res.data.length === 0) {
         console.log('No properties found in getPropertiesByCategory response');
         return [];
       }
-      
-      return res.data.map((property: PropertyData) => {
+      const meta: StrapiMeta | undefined = res?.meta
+      const items = Array.isArray(res?.data) ? res.data : []
+
+      const mapped = items.map((property: PropertyData) => {
         const {
           id,
           documentId,
@@ -100,7 +139,7 @@ export function getPropertiesByCategory(categorySlug: string, propertyStatus?: s
           ? (rawimage.url.startsWith('http') ? rawimage.url : `${STRAPI_HOST}${rawimage.url}`)
           : ''
         const propertyStatus = property_status ? property_status.Title : ''
-        
+
         console.log('=== getPropertiesByCategory DEBUG ===');
         console.log('Property title:', title);
         console.log('Raw property_status:', property_status);
@@ -114,7 +153,7 @@ export function getPropertiesByCategory(categorySlug: string, propertyStatus?: s
           price,
           address,
           image,
-          slug, 
+          slug,
           propertyStatus,
           category,
           type,
@@ -123,19 +162,29 @@ export function getPropertiesByCategory(categorySlug: string, propertyStatus?: s
           amenities
         }
       })
+      return {
+        data: mapped,
+        meta: meta ?? { pagination: { page, pageSize, pageCount: Math.ceil(mapped.length / pageSize) || 1, total: mapped.length } }
+      }
+      
     })
 }
 
-export function getProperties(filter: getPropertiesFilter = {}) {
+export function getProperties(filter: getPropertiesFilter = {}): Promise<PropertyListResponse> {
   const currentLocale = getLocaleWithFallback(filter.locale)
-  
+
+  const page = typeof filter.page === 'number' && filter.page > 0 ? filter.page : 1
+  const pageSize = typeof filter.pageSize === 'number' && filter.pageSize > 0 ? filter.pageSize : 9
+
   // Arreglar la query para populizar correctamente los campos
-  let queryString = 'properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&pagination[limit]=100'
-  
+  let queryString = 'properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug'
+
   // Agregar parámetro locale
   queryString += `&locale=${encodeURIComponent(currentLocale)}`
-  
-  
+
+  // paginación
+  queryString += `&pagination[page]=${encodeURIComponent(String(page))}&pagination[pageSize]=${encodeURIComponent(String(pageSize))}`
+
 
   if (filter.categorySlug && filter.categorySlug.trim() !== '') {
     queryString += `&filters[category][slug][$contains]=${filter.categorySlug}`
@@ -180,29 +229,34 @@ export function getProperties(filter: getPropertiesFilter = {}) {
         console.log('Data count:', res.data?.length || 0);
         console.log('Sample property:', res.data?.[0]);
       }
-      
+
+      const meta: StrapiMeta | undefined = res?.meta
+      const items = Array.isArray(res?.data) ? res.data : []
+      const page = typeof filter.page === 'number' && filter.page > 0 ? filter.page : 1
+      const pageSize = typeof filter.pageSize === 'number' && filter.pageSize > 0 ? filter.pageSize : 9
+
       if (!res || !res.data) {
         if (process.env.NODE_ENV === 'development') {
           console.log('Invalid response structure:', res);
         }
-        return [];
+        return { data: [], meta: { pagination: { page, pageSize, pageCount: 1, total: 0 } } };
       }
-      
+
       if (!Array.isArray(res.data)) {
         if (process.env.NODE_ENV === 'development') {
           console.log('Response data is not an array:', res.data);
         }
-        return [];
+        return { data: [], meta: { pagination: { page, pageSize, pageCount: 1, total: 0 } } };
       }
-      
+
       if (res.data.length === 0) {
         if (process.env.NODE_ENV === 'development') {
           console.log('No properties found in response');
         }
-        return [];
+        return { data: [], meta: { pagination: { page, pageSize, pageCount: 1, total: 0 } } };
       }
-      
-      return res.data.map((property: PropertyData) => {
+
+      const mapped: MappedProperty[] = items.map((property: PropertyData) => {
         const {
           id,
           documentId,
@@ -222,14 +276,14 @@ export function getProperties(filter: getPropertiesFilter = {}) {
           ? (rawimage.url.startsWith('http') ? rawimage.url : `${STRAPI_HOST}${rawimage.url}`)
           : ''
         const propertyStatus = property_status ? property_status.Title : ''
-        
+
         if (process.env.NODE_ENV === 'development') {
           console.log('=== getProperties Property Mapping ===');
           console.log('Property title:', title);
           console.log('Property status:', propertyStatus);
           console.log('Category:', category);
         }
-        
+
         return {
           id,
           documentId,
@@ -244,6 +298,22 @@ export function getProperties(filter: getPropertiesFilter = {}) {
           location
         }
       })
+
+
+      // fallback si meta no viene
+      const fallbackMeta: StrapiMeta = {
+        pagination: {
+          page,
+          pageSize,
+          pageCount: Math.ceil(mapped.length / pageSize) || 1,
+          total: mapped.length
+        }
+      }
+
+      return {
+        data: mapped,
+        meta: meta ?? fallbackMeta
+      }
     })
 }
 
@@ -251,15 +321,15 @@ export function getProperties(filter: getPropertiesFilter = {}) {
 export function getPropertyByDocumentId(documentId: string, locale?: string) {
   const currentLocale = getLocaleWithFallback(locale)
   const queryString = `properties/${documentId}?populate=*&locale=${encodeURIComponent(currentLocale)}`
-  
 
-  
+
+
   return query(queryString)
     .then(res => {
       if (!res.data) {
         return null
       }
-      
+
       const property = res.data
       const {
         id,
@@ -287,8 +357,8 @@ export function getPropertyByDocumentId(documentId: string, locale?: string) {
         : ''
       const gallery = rawGallery
         ? rawGallery.map((img: any) =>
-            img.url.startsWith('http') ? img.url : `${STRAPI_HOST}${img.url}`
-          )
+          img.url.startsWith('http') ? img.url : `${STRAPI_HOST}${img.url}`
+        )
         : []
       const propertyStatus = property_status ? property_status.Title : ''
 
@@ -300,7 +370,7 @@ export function getPropertyByDocumentId(documentId: string, locale?: string) {
         price,
         address,
         bedrooms,
-        bathrooms,  
+        bathrooms,
         parking_spaces,
         lot_area,
         built_area,

@@ -22,6 +22,7 @@ interface PropertiesPageProps {
         city?: string;
         state?: string;
         amenities?: string | string[];
+        page?: string;
     }>;
 }
 
@@ -74,12 +75,13 @@ export async function generateMetadata({ params }: PropertiesPageProps): Promise
 export default async function PropertiesPage({ params, searchParams }: PropertiesPageProps) {
     const { lang } = await params;
     const { category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities } = await searchParams;
-    
+    const sp = await searchParams;
     // Obtener datos del servidor con manejo de errores
-    let properties = [];
     let categories = [];
+    let properties: any[] = [];
     let propertyStatuses: any[] = [];
-    
+    const currentPage = sp.page ? Math.max(1, Number(sp.page)) : 1;
+    let pagination = { page: 1, pageSize: 9, pageCount: 0, total: 0 };
     try {
         // Obtener propiedades según el filtro usando el servicio get-properties
         console.log('=== Properties Page DEBUG ===');
@@ -88,7 +90,7 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
         console.log('Category filter:', category);
         console.log('Property status filter:', property_status);
         
-        const result = await getProperties({ 
+        const { data, meta } = await getProperties({
             categorySlug: category, 
             propertyStatus: property_status,
             bedrooms: bedrooms,
@@ -97,9 +99,11 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
             max_price: max_price,
             location: location,
             locale: lang, // Usar el locale dinámico
+            page: currentPage, 
+            pageSize: 9  
         });
-        
-        properties = result || [];
+        properties = data;
+        pagination = meta.pagination;
         
         // Los filtros ya se aplican en el servicio getProperties, no necesitamos filtrar aquí
         console.log('Properties from service:', properties.length);
