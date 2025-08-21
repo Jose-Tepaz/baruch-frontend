@@ -174,6 +174,8 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
                 categories={categories}
                 propertyStatuses={propertyStatuses}
                 searchParams={{ category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities }}
+                pagination={pagination}   
+                lang={lang}
             />
         </SimpleLayout>
     )
