@@ -29,10 +29,10 @@
     
    
 },  
-    "home": {
+   "home": {
         "btn-1-hero": "Ver Propiedades",
-        "btn-2-hero": "Más Información",
-        "title-filter": "Encuentra tu Propiedad Ideal",
+        "btn-2-hero": "Más información",
+        "title-filter": "Encuentra tu Propiedad Soñada",
         "title-filter-1": "Todos los Estados",
         "title-filter-2": "Todas las Categorías",
         "bedrooms-filter": "Habitaciones",
@@ -45,14 +45,22 @@
         "btn-filter": "Buscar Propiedades",
         "btn-all-properties": "Mostrar todas las propiedades",
         "title-about-us": "Acerca de la Empresa",
+        "title-2-about-us": "Estamos aquí para ayudarte",
+        "title-3-about-us": "Encuentra tu casa soñada en España",
+        "paragraph-about-us": "Estamos apasionados por simplificar la experiencia inmobiliaria. Con un profundo conocimiento del mercado inmobiliario y un enfoque centrado en el cliente, nos esforzamos para ayudar a compradores, vendedores y arrendatarios a alcanzar sus objetivos inmobiliarios. Nuestro equipo de profesionales experimentados está dedicado a ofrecer un servicio personalizado, transparencia y asesoría experta.",
         "subtitle-list-properties": "Propiedades",
         "title-list-properties": "Descubre Nuestras Últimas Propiedades",
-        "subtitle-category": "Categorías",
-        "title-category": "Selecciona la categoría que estas buscando",
+        "subtitle-category": "Category",
+        "title-category": "Selecciona la Casa que Te Encaja",
         "btn-about-section-2": "Ver Listado",
         "subtitle-testimonials-1": "Testimonios",
-        "title-testimonials": "Lo Que Dicen Nuestros Clientes",
-        "subtitle-testimonials": "Testimonios"
+        "title-testimonials": "Lo Que Nuestros Clientes Dicen",
+        "subtitle-testimonials": "Testimonios",
+        "title-why-choose-us": "Por Qué Baruch Se destaca",
+        "list1-why-choose-us": "Agentes Expertos",
+        "list2-choose-us": "Listados Extensos",
+        "list3-why-choose-us": "Satisfacción del Cliente",
+        "paragraph-why-choose-us": "En Baruch, creemos que encontrar una casa va más allá de tener un techo sobre tu cabeza – es sobre descubrir un lugar que se adapte a tu estilo de vida único. Ya sea que busques un apartamento acogedor o un hogar amplio."
     },
 
     "buttons": {

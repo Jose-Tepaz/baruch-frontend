@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { getProperties, getPropertiesByCategory, getPropertyByDocumentId } from '@/services/properties';
+import { getProperties } from '@/services/get-properties';
+import { getPropertiesByCategory, getPropertyByDocumentId } from '@/services/properties';
 import { getCategories } from '@/services/categories';
 import { getPropertyStatuses } from '@/services/property-status';
 import { useLanguage } from '@/hooks/useLanguage';
@@ -52,7 +53,7 @@ export default function PropertiesWithLocale() {
                 getPropertyStatuses() // Sin especificar locale - usa el idioma actual del selector
             ]);
 
-            setProperties(propertiesData || []);
+            setProperties(propertiesData?.properties || []);
             setCategories(categoriesData || []);
             setPropertyStatuses(statusesData || []);
 
@@ -78,7 +79,7 @@ export default function PropertiesWithLocale() {
                 undefined
                 // Sin especificar locale - usa automáticamente el idioma seleccionado
             );
-            setProperties(filteredProperties || []);
+            setProperties(Array.isArray(filteredProperties) ? filteredProperties : (filteredProperties?.data || []));
         } catch (err) {
             console.error('Error filtrando por categoría:', err);
             setError('Error al filtrar propiedades');

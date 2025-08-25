@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { getProperties } from '@/services/properties'
+import { getProperties } from '@/services/get-properties'
 import { getCategories } from '@/services/categories'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -32,7 +32,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Agregar propiedades dinámicas
   try {
     for (const locale of locales) {
-      const properties = await getProperties({ locale })
+      const result = await getProperties({ locale })
+      const properties = result?.properties || []
       
       for (const property of properties) {
         sitemap.push({

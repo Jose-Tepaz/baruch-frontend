@@ -28,23 +28,38 @@
     "title-4-footer": "Contact"
    
 },  
-    "home": {
-    "btn-1-hero": "Voir les Propriétés",
-        "btn-2-hero": "Plus d'Informations",
-        "title-filter": "Trouve ta Propriété Idéale",
-        "title-filter-1": "Tous les États",
+   "home": {
+        "btn-1-hero": "Voir les Propriétés",
+        "btn-2-hero": "En savoir plus",
+        "title-filter": "Trouvez votre Propriété de Rêve",
+        "title-filter-1": "Tous les Statuts",
         "title-filter-2": "Toutes les Catégories",
-        "btn-filter": "Trouver les Propriétés",
+        "bedrooms-filter": "Chambres",
+        "bathrooms-filter": "Salles de Bains",
+        "min-price-filter": "Prix Min",
+        "max-price-filter": "Prix Max",
+        "location-filter": "Emplacement",
+        "show-more": "Afficher plus de filtres",
+        "show-less": "Afficher moins de filtres",
+        "btn-filter": "Rechercher les Propriétés",
         "btn-all-properties": "Afficher toutes les propriétés",
         "title-about-us": "À propos de l'Entreprise",
+        "title-2-about-us": "Nous sommes ici pour vous aider",
+        "title-3-about-us": "Trouvez votre maison de rêve en Espagne",
+        "paragraph-about-us": "Nous sommes passionnés par la simplification de l'expérience immobilière. Avec une compréhension profonde du marché immobilier et un approche client-centré, nous nous efforçons d'aider les acheteurs, les vendeurs et les locataires à atteindre leurs objectifs immobiliers. Notre équipe de professionnels expérimentés est dédiée à fournir un service personnalisé, une transparence et un conseil expert.",
         "subtitle-list-properties": "Propriétés",
         "title-list-properties": "Découvrez Nos Dernières Propriétés",
-        "subtitle-category": "Catégories",
-        "title-category": "Sélectionnez la catégorie que vous recherchez",
+        "subtitle-category": "Category",
+        "title-category": "Sélectionnez la Maison qui Vous Convient",
         "btn-about-section-2": "Voir la Liste",
         "subtitle-testimonials-1": "Témoignages",
         "title-testimonials": "Ce Que Nos Clients Disent",
-        "subtitle-testimonials": "Témoignages"
+        "subtitle-testimonials": "Témoignages",
+        "title-why-choose-us": "Pourquoi Baruch Se Démarque",
+        "list1-why-choose-us": "Agents Experts",
+        "list2-why-choose-us": "Listes Extensives",
+        "list3-why-choose-us": "Satisfaction Client",
+        "paragraph-why-choose-us": "Chez Baruch, nous pensons que trouver une maison va au-delà de simplement avoir un toit sur votre tête – c'est plutôt découvrir un endroit qui correspond à votre style de vie unique. Que vous recherchiez un appartement confortable ou un grand logement."
     },
 
     "buttons": {

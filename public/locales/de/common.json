@@ -32,24 +32,35 @@
     "home": {
         "btn-1-hero": "Eigenschaften ansehen",
         "btn-2-hero": "Mehr erfahren",
-        "title-filter": "Finde dein Traum-Eigentum",
+        "title-filter": "Finde dein Traumhaus",
         "title-filter-1": "Alle Status",
         "title-filter-2": "Alle Kategorien",
+        "bedrooms-filter": "Schlafzimmer",
+        "bathrooms-filter": "Badezimmer",
+        "min-price-filter": "Min Preis",
+        "max-price-filter": "Max Preis",
+        "location-filter": "Standort",
+        "show-more": "Mehr Filter anzeigen",
+        "show-less": "Weniger Filter anzeigen",
         "btn-filter": "Eigenschaften suchen",
         "btn-all-properties": "Alle Eigenschaften anzeigen",
         "title-about-us": "Über uns",
+        "title-2-about-us": "Wir sind hier, um dir zu helfen",
+        "title-3-about-us": "Finde dein Traumhaus in Spanien",
+        "paragraph-about-us": "Wir sind begeistert, das Immobilienerlebnis zu vereinfachen. Mit einem tiefen Verständnis des Immobilienmarktes und einem clientzentrierten Ansatz, streben wir dazu, Käufern, Verkäufern und Mietern dabei zu helfen, ihre Immobilienziele zu erreichen. Unser Team erfahrener Experten ist dafür verpflichtet, persönliche Service, Transparenz und Expertise zu bieten.",
         "subtitle-list-properties": "Eigenschaften",
         "title-list-properties": "Entdecken Sie unsere neuesten Eigenschaften",
         "subtitle-category": "Kategorie",
-        "title-category": "Wählen Sie das Zuhause, das Ihnen passt",
+        "title-category": "Wählen Sie das Haus, das zu Ihnen passt",
         "btn-about-section-2": "Eigenschaften ansehen",
         "subtitle-testimonials-1": "Testimonials",
         "title-testimonials": "Was unsere Kunden sagen",
-        "subtitle-testimonials": "Testimonials"
-
-        
-   
-
+        "subtitle-testimonials": "Testimonials",
+        "title-why-choose-us": "Warum Baruch sich auszeichnet",
+        "list1-why-choose-us": "Experten-Agenten",
+        "list2-why-choose-us": "Umfangreiche Angebote",
+        "list3-why-choose-us": "Kundenzufriedenheit",
+        "paragraph-why-choose-us": "Bei Baruch glauben wir, dass das Finden eines Hauses nicht nur darum geht, ein Dach über dem Kopf zu haben – es geht darum, ein Ort zu entdecken, der zu Ihrem einzigartigen Lebensstil passt. Ob Sie nach einem gemütlichen Appartment oder einem großzügigen Haus suchen."
     },
 
 

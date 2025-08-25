@@ -179,6 +179,7 @@ export default function PropertiesContent({
                                 basePath={`/${(lang || 'en')}/properties`}
                             />
                         </div>
+                        <div className="space30"></div>
                     </div>
                 </div>
             </div>

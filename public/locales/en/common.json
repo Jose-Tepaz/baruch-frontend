@@ -44,6 +44,9 @@
         "btn-filter": "Search Properties",
         "btn-all-properties": "Show all properties",
         "title-about-us": "About Company",
+        "title-2-about-us": "We are here to help you",
+        "title-3-about-us": "Find your dream home in spain",
+        "paragraph-about-us": "We are passionate about simplifying the real estate experience. With a deep understanding of the housing market and a client-first approach, we strive to help buyers, sellers, and renters achieve their property goals. Our team experienced professionals is dedicated to providing personalized service, transparency, expert advice.",
         "subtitle-list-properties": "Properties",
         "title-list-properties": "Discover Our Latest Properties",
         "subtitle-category": "Category",
@@ -51,7 +54,12 @@
         "btn-about-section-2": "View Listing",
         "subtitle-testimonials-1": "Testimonials",
         "title-testimonials": "What Our Clients Say",
-        "subtitle-testimonials": "Testimonials"
+        "subtitle-testimonials": "Testimonials",
+        "title-why-choose-us": "Why Baruch Stands Out",
+        "list1-why-choose-us": "Experts Agents",
+        "list2-why-choose-us": "Extensive Listings",
+        "list3-why-choose-us": "Customer Satisfaction",
+        "paragraph-why-choose-us": "At Baruch, we believe that finding a home goes beyond just a roof over your head – it's about discovering an place that fits your unique lifestyle. Whether you're searching for cozy."
     },
     "buttons": {
         "login": "Login",

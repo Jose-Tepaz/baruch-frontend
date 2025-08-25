@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { getProperties } from '@/services/properties';
+import { getProperties } from '@/services/get-properties';
 
 export default function PropertiesDebug() {
   const [properties, setProperties] = useState<any[]>([]);
@@ -13,9 +13,9 @@ export default function PropertiesDebug() {
       try {
         console.log('=== PropertiesDebug: Loading properties ===');
         setLoading(true);
-        const data = await getProperties({});
-        console.log('=== PropertiesDebug: Properties loaded ===', data);
-        setProperties(data || []);
+        const result = await getProperties({});
+        console.log('=== PropertiesDebug: Properties loaded ===', result);
+        setProperties(result?.properties || []);
       } catch (err) {
         console.error('=== PropertiesDebug: Error loading properties ===', err);
         setError(err instanceof Error ? err.message : 'Error unknown');

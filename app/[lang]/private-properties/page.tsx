@@ -74,6 +74,7 @@ export default async function PrivatePropertiesPage({ params, searchParams }: Pr
     let properties = [];
     let categories = [];
     let propertyStatuses: any[] = [];
+    let pagination = { page: 1, pageSize: 100, pageCount: 1, total: 0 };
     
     try {
         // Obtener propiedades según el filtro usando el servicio get-properties
@@ -83,6 +84,8 @@ export default async function PrivatePropertiesPage({ params, searchParams }: Pr
             onlyPrivate: true // Filtro para solo propiedades privadas
         });
         properties = result?.properties || [];
+        pagination = result?.pagination || { page: 1, pageSize: 100, pageCount: 1, total: 0 };
+        
         // Filtrar por property_status si está presente
         if (property_status && property_status.trim() !== '') {
             properties = properties.filter((property: any) => {
@@ -123,6 +126,7 @@ export default async function PrivatePropertiesPage({ params, searchParams }: Pr
         }
     } catch (error) {
         properties = [];
+        pagination = { page: 1, pageSize: 100, pageCount: 1, total: 0 };
     }
     try {
         categories = await getCategories(lang);
@@ -143,6 +147,8 @@ export default async function PrivatePropertiesPage({ params, searchParams }: Pr
                 categories={categories}
                 propertyStatuses={propertyStatuses}
                 searchParams={{ category, property_status, keyword, city, state, amenities }}
+                pagination={pagination}
+                lang={lang}
             />
         </SimpleLayout>
     )
