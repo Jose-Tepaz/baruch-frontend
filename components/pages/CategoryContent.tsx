@@ -68,6 +68,7 @@ export default function CategoryContent({ categoryId, initialProperties }: Categ
                                 documentId={property.documentId}
                                 propertyStatus={property.propertyStatus}
                                 isNew={property.is_new}
+                                location={property.location || ''}
                             />
                         </div>
                     ))}
