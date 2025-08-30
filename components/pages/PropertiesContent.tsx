@@ -37,6 +37,7 @@ interface Property {
     documentId: string;
     description?: string;
     is_private?: boolean;
+    location?: string;
 }
 
 interface PropertiesContentProps {
@@ -134,7 +135,7 @@ export default function PropertiesContent({
                     </div>
 
                     {/* Lista de propiedades */}
-                    <div className="col-lg-9">
+                    <div className="col-lg-9 wrapp-content--properties-list" >
 
 
                         {isLoading ? (
@@ -156,6 +157,7 @@ export default function PropertiesContent({
                                             documentId={property.documentId}
                                             propertyStatus={property.propertyStatus || property.status}
                                             isNew={property.status === 'new'}
+                                            location={property.location || ''}
                                         />
                                     </div>
                                 ))}

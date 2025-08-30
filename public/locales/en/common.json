@@ -10,7 +10,9 @@
         "login-btn": "Login",
         "logout-btn": "Logout",
         "btn-private-properties": "Properties",
-        "testimonials": "Testimonials"
+        "testimonials": "Testimonials",
+        "magazine": "Magazine",
+        "btn-header-1": "Sell your Property"
         
     },
     "footer": {
@@ -19,14 +21,33 @@
         "btn-cta": "Start Your Search Today",
         "description-footer": "We are committed to making your real estate journey seamless and stress-free. Whether you’re buying, selling, or renting every step the way.",
         "head-title-1": "Menu",
-        "head-title-2": "Categories",
-        "head-title-3": "Contact Us",
+        "head-title-2": "Property Types",
+        "head-title-3": "Popular Locations",
         "head-title-4": "We Are Here",
         "title-1-footer": "About Us",
         "title-2-footer": "Magazine",
         "title-3-footer": "Testimonials",
-        "title-4-footer": "Contact"
-        
+        "title-4-footer": "Contact",
+        "title-5-footer": "Terms & Conditions",
+        "title-6-footer": "Privacy Policy",
+        "title-services": "Services",
+        "title-services-1": "Buyer representation",
+        "title-services-2": "Sell your property",
+        "title-services-3": "Residency / NIE",
+        "title-services-4": "Finance / Mortgage",
+        "title-services-5": "Insurance",
+        "title-services-6": "Tax returns",
+        "title-services-7": "Legal services",
+        "title-popular-locations": "Popular Locations",
+        "title-popular-locations-1": "Property for sale in Marbella",
+        "title-popular-locations-2": "Property for sale in Mijas",
+        "title-popular-locations-3": "Property for sale in Estepona",
+        "title-popular-locations-4": "Property for sale in Sotogrande",
+        "title-popular-locations-5": "Property for sale in The Golden Mile",
+        "title-popular-locations-6": "Property for sale in Benahavís",
+        "title-popular-locations-7": "Property for sale in Rincon",
+        "title-popular-locations-8": "Property for sale in Torox",
+        "title-popular-locations-9": "Property for sale in Malaga"
     },
     "home": {
         "btn-1-hero": "View Properties",

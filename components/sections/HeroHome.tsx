@@ -85,21 +85,15 @@ export default function HeroHome({ properties = [] }: HeroHomeProps) {
                                     <div style={{ maxWidth: 880 }}>
                                         {property.location && (
                                             <div
-                                                style={{
-                                                    color: "#ffffff",
-                                                    opacity: 0.9,
-                                                    letterSpacing: 2,
-                                                    fontSize: 14,
-                                                    textTransform: "uppercase",
-                                                    marginBottom: 12,
-                                                }}
+                                                className="subtitle-properties text-color-white mb-3"
+
                                             >
                                                 {property.location}
                                             </div>
                                         )}
                                         <Link href={`/property/${property.documentId || ""}`} className="text-decoration-none" style={{ color: "inherit" }}>
-                                        <h3 className="text-color-white size-42">
-                                                {property.title}
+                                        <h3 className="title-properties text-color-white size-42">
+                                                {property.title} 
                                         </h3>
                                         <div style={{ height: 18 }} />
                                         <div style={{ display: "flex", alignItems: "center", gap: 14, color: "#fff", fontSize: 20 }}>

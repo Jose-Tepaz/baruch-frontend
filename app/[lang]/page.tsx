@@ -127,12 +127,12 @@ export default async function Home({ params }: Props) {
                     categories={categories || []}
                     propertyStatuses={propertyStatuses || []}
                 />
-                <About2 homeInfo={homeInfo?.data} />
+                <About2  />
                 <PropertyList1 properties={properties || []} />
                 <Category1 categories={categories || []} />
                 
                 <img className="img-landscape" src={imgLandscape.src} alt="baruch" style={{width: '100%', height: 'auto'}} />
-                <About3 homeInfo={homeInfo?.data} />
+                  <About3  />
                 
             </Layout>
         );
@@ -146,12 +146,12 @@ export default async function Home({ params }: Props) {
                     categories={[]}
                     propertyStatuses={[]}
                 />
-                <About2 homeInfo={undefined} />
+                <About2  />
                 <PropertyList1 properties={[]} />
                 <Category1 categories={[]} />
                 
                 <img className="img-landscape" src={imgLandscape.src} alt="baruch"  />
-                <About3 homeInfo={undefined} />
+                <About3  />
                 
             </Layout>
         );

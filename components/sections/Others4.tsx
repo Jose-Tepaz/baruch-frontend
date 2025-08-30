@@ -22,7 +22,7 @@ export default function Others4() {
                     <div className="container-large">
                     <div className="row">
                         <div className="col-lg-6 m-auto">
-                            <div className="heading1 text-center space-margin60">
+                            <div className=" text-center space-margin60">
                                
                                 <div className="space16" />
                                 <h5 className="text-color-white">{t('about.others4.subtitle')}</h5>

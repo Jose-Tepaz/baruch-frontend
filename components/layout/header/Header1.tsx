@@ -10,14 +10,14 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
             <div id="vl-header-sticky" className={`vl-header-area vl-transparent-header  ${scroll ? "header-sticky top-0 position-fixed w-100" : ""}`}>
                 <div className="container-fluid">
                     <div className="row align-items-center">
-                        <div className="col-lg-2 col-md-6 col-6">
+                        <div className="col-lg-3 col-md-6 col-6">
                             <div className="vl-logo">
                                 <Link href="/">
                                     <img src="/assets/img/logo/logo1.png" alt="housa" />
                                 </Link>
                             </div>
                         </div>
-                        <div className="col-lg-8 d-none d-lg-block">
+                        <div className="col-lg-5 d-none d-lg-block">
                             <div className="vl-main-menu text-center">
                                 <nav className="vl-mobile-menu-active">
                                     <ul>
@@ -25,13 +25,55 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                             <li>
                                                 <Link href="/properties">{t('navigation.properties')}</Link>
                                             </li>
-                                            <li>
-                                                <Link href="/about-us">{t('navigation.about')}</Link>
+                                            
+                                            <li className="dropdown">
+                                                <a href="#" className="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    {t('navigation.about')}
+                                                </a>
+                                                <ul className="dropdown-menu">
+                                                    <li>
+                                                        <Link className="dropdown-item" href="/about-us">{t('navigation.about')}</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link className="dropdown-item" href="/magazine">{t('navigation.magazine')}</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link className="dropdown-item" href="/testimonials">{t('navigation.testimonials')}</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link className="dropdown-item" href="/contact">{t('navigation.contact')}</Link>
+                                                    </li>
+                                                </ul>
                                             </li>
-                                            <li>
-                                                <Link href="/services">{t('navigation.services')}</Link>
+                                            <li className="dropdown">
+                                                <a href="#" className="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    {t('navigation.services')}
+                                                </a>
+                                                <ul className="dropdown-menu">
+                                                    <li>
+                                                        <Link className="dropdown-item" href="/about-us">{t('footer.title-services-1')}</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link className="dropdown-item" href="/magazine">{t('footer.title-services-2')}</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link className="dropdown-item" href="/testimonials">{t('footer.title-services-3')}</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link className="dropdown-item" href="/contact">{t('footer.title-services-4')}</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link className="dropdown-item" href="/contact">{t('footer.title-services-5')}</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link className="dropdown-item" href="/contact">{t('footer.title-services-6')}</Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link className="dropdown-item" href="/contact">{t('footer.title-services-7')}</Link>
+                                                    </li>
+                                                </ul>
                                             </li>
-                                           
+
                                             <li>    
                                                 <Link href="/contact">{t('navigation.contact')}</Link>
                                             </li>
@@ -40,11 +82,23 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                 </nav>
                             </div>
                         </div>
-                        <div className="col-lg-2 col-md-6 col-6">
+                        <div className="col-lg-4 col-md-6 col-6">
                             <div className="vl-hero-btn d-none d-lg-block text-end">
                                 <div className="d-flex align-items-center justify-content-end gap-3">
                                     <LanguageSelector />
                                     <AuthButtons />
+
+                                    <div className="btn-area1" style={{ marginTop: '0px' }}>
+                                    <Link href="/contact" className="vl-btn1" style={{ padding: '12px 4px 12px 16px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                        {t('navigation.btn-header-1')}
+                                        <span className="arrow1 ms-2">
+                                            <i className="fa-solid fa-arrow-right" />
+                                        </span>
+                                        <span className="arrow2 ms-2">
+                                            <i className="fa-solid fa-arrow-right" />
+                                        </span>
+                                    </Link>
+                                </div>
                                     
                                 </div>
                             </div>

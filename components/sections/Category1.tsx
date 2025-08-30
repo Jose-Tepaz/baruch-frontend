@@ -27,10 +27,10 @@ export default function Category1({ categories }: Category1Props) {
                         <div className="">
                             <div className="row">
                                 <div className="col-lg-7 m-auto">
-                                    <div className="heading1 text-center space-margin60">
+                                    <div className=" text-center ">
                                         <h5>{t('home.subtitle-category')}</h5>
                                         <div className="space16" />
-                                        <h3 className=" text-white ">{t('home.title-category')}</h3>
+                                        <h3 className=" text-color-black-blue ">{t('home.title-category')}</h3>
                                     </div>
                                 </div>
                             </div>
@@ -59,9 +59,8 @@ export default function Category1({ categories }: Category1Props) {
                                                         )}
 
                                                         <div className="text-absolute">
-                                                            <h5 className="text-white">{category.name}</h5>
-                                                            <div className="space16" />
-                                                            <p className="text-white">{category.description}</p>
+                                                            <p className="size-16">{category.name}</p>
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>
@@ -69,6 +68,18 @@ export default function Category1({ categories }: Category1Props) {
 
                                         </div>
                                     ))}
+                                </div>
+
+                                <div className="btn-area1" style={{ margin:'auto' }}>
+                                    <Link href="/properties" className="vl-btn1">
+                                        {t('home.btn-1-hero')}
+                                        <span className="arrow1 ms-2">
+                                            <i className="fa-solid fa-arrow-right" />
+                                        </span>
+                                        <span className="arrow2 ms-2">
+                                            <i className="fa-solid fa-arrow-right" />
+                                        </span>
+                                    </Link>
                                 </div>
                             </div>
         </div>

@@ -10,24 +10,47 @@
         "login-btn": "Anmelden",
         "logout-btn": "Abmelden",
         "btn-private-properties": "Eigenschaften",
-        "testimonials": "Testimonials"
+        "testimonials": "Testimonials",
+        "magazine": "Magazin",
+        "btn-header-1": "Eigentum verkaufen"
+        
         
     },
 
 "footer": {
-    "title-cta":"Lass uns dein Traum wahr werden",
-    "description-cta":"Warte nicht, um deine Immobilienreise zu beginnen. Ob du kaufst, verkaufst oder mietest, unser Experten-Team ist hier, um dich bei jedem Schritt zu unterstützen. Lass uns deine Vision in die Tat umsetzen mit persönlicher Service und einem nahtlosen Erlebnis.",
-    "btn-cta": "Starte deine Suche heute",
-    "description-footer": "Wir sind dafür verpflichtet, deine Immobilienreise nahtlos und stressfrei zu gestalten. Ob du kaufst, verkaufst oder mietest, wir sind hier, um dich bei jedem Schritt zu unterstützen.",
-    "head-title-1": "Menü",
-    "head-title-2": "Kategorien",
-    "head-title-3": "Kontaktiere uns",
-    "head-title-4": "Wir sind hier",
-    "title-1-footer": "Über uns",
-    "title-2-footer": "Magazine",
-    "title-3-footer": "Testimonials",
-    "title-4-footer": "Kontaktiere uns"
-   
+    "title-cta": "Lass uns dein Traum wahr werden",
+        "description-cta": "Don’t wait to start your real estate journey. Whether you’re buying, selling, or renting, our expert team is here to guide you every step of the way. Let’s turn your vision into reality with personalized service and a seamless experience.",
+        "btn-cta": "Starte deine Suche heute",
+        "description-footer": "Wir sind dafür verpflichtet, deine Immobilienreise nahtlos und stressfrei zu gestalten. Ob du kaufst, verkaufst oder mietest, wir sind hier, um dich bei jedem Schritt zu unterstützen.",
+        "head-title-1": "Menü",
+        "head-title-2": "Eigenschaften",            
+        "head-title-3": "Beliebte Standorte",
+        "head-title-4": "Wir sind hier",
+        "title-1-footer": "Über uns",
+        "title-2-footer": "Magazin",
+        "title-3-footer": "Testimonials",
+        "title-4-footer": "Kontaktiere uns",
+        "title-5-footer": "Nutzungsbedingungen",
+        "title-6-footer": "Datenschutzrichtlinie",
+        "title-services": "Dienstleistungen",
+        "title-services-1": "Käufervertretung",
+        "title-services-2": "Verkaufen Sie Ihr Eigentum",
+        "title-services-3": "Wohnsitz / NIE",
+        "title-services-4": "Finanzierung / Hypotheken",
+        "title-services-5": "Versicherung",
+        "title-services-6": "Steuererklärung",
+        "title-services-7": "Rechtsbeistand",
+        "title-popular-locations": "Beliebte Standorte",
+        "title-popular-locations-1": "Eigenschaften zum Verkauf in Marbella",
+        "title-popular-locations-2": "Eigenschaften zum Verkauf in Mijas",
+        "title-popular-locations-3": "Eigenschaften zum Verkauf in Estepona",
+        "title-popular-locations-4": "Eigenschaften zum Verkauf in Sotogrande",
+        "title-popular-locations-5": "Eigenschaften zum Verkauf in The Golden Mile",
+        "title-popular-locations-6": "Eigenschaften zum Verkauf in Benahavís",
+        "title-popular-locations-7": "Eigenschaften zum Verkauf in Rincon",
+        "title-popular-locations-8": "Eigenschaften zum Verkauf in Torox",
+        "title-popular-locations-9": "Eigenschaften zum Verkauf in Malaga"          
+    
 },  
     "home": {
         "btn-1-hero": "Eigenschaften ansehen",

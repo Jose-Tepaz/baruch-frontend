@@ -14,30 +14,15 @@ export default function About2() {
             <div className="about2 sp1" id="more-info">
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-lg-4">
-                            <div className="heading1">
-                                <h5 className="text-color-black-blue">{t('home.title-about-us')}</h5>
+                        <div className="col-lg-6">
+                            <div className="">
+                               
                                 <div className="space16" />
-                                <h2>{t('home.title-2-about-us')}</h2>
-                                <h3>{t('home.title-3-about-us')}</h3>
+                                <h2 className="font-weight-400 size-20 uppercase">{t('home.title-2-about-us')}</h2>
+                                <h3 className="font-weight-400 size-32 uppercase">{t('home.title-3-about-us')}</h3>
+                                <div className="space16" />
+                                <p>{t('home.paragraph-about-us')}</p>
                                 <div className="space30" />
-                                <div className="img1 image-anime reveal" style={{ width: '100%', height: '350px' }}>
-                                    <img src={img_1.src} alt="housa" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-                            <div className="space30 d-lg-none d-block" />
-                            <div className="img2 image-anime reveal">
-                                <img src={img_2.src} alt="housa" />
-                            </div>
-                        </div>
-                        <div className="col-lg-4">
-                            <div className="heading1">
-                                <div>
-                                    <p>{t('home.paragraph-about-us')}</p>
-                                </div>
-                                <div className="space32" />
                                 <div className="btn-area1">
                                     <Link href="/properties" className="vl-btn1">
                                         {t('home.btn-1-hero')}
@@ -49,7 +34,15 @@ export default function About2() {
                                         </span>
                                     </Link>
                                 </div>
+                                
                             </div>
+                        </div>
+                        
+                        <div className="col-lg-6">
+                            <div className="img2 image-anime reveal">
+                                <img src={img_2.src} alt="housa" />
+                            </div>
+                            
                         </div>
                     </div>
                 </div>

@@ -39,7 +39,7 @@ export default function LoginPage({ params }: { params: Promise<{ lang: string }
 
   return (
     <Layout>
-      <div className="container" style={{ marginTop: '120px' }}>
+      <div className="container wrapp-login-container" >
         <div className="row justify-content-center">
           <div className="col-md-6 col-lg-4">
             <div className="card mt-5">

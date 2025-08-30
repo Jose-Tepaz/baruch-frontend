@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import { useTranslation } from "@/utils/i18n-simple";
 
 export default function PrivacyPolicy() {
+    const { t } = useTranslation('common')
     return (
         <>
             {/*===== WORKS AREA STARTS =======*/}
@@ -10,11 +14,11 @@ export default function PrivacyPolicy() {
                         <div className="col-lg-4">
                             <div className="all-category">
                                 <div className="categories-area">
-                                    <h3>Categories</h3>
+                                  
                                     <ul>
                                         <li>
                                             <Link href="#">
-                                                Terms Of Use
+                                                {t('footer.title-5-footer')}
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                                     <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z" />
                                                 </svg>
@@ -22,44 +26,13 @@ export default function PrivacyPolicy() {
                                         </li>
                                         <li>
                                             <Link href="#">
-                                                Limitations
+                                                {t('footer.title-6-footer')}
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                                     <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z" />
                                                 </svg>
                                             </Link>
                                         </li>
-                                        <li>
-                                            <Link href="#">
-                                                Revisions and Errata
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                                    <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z" />
-                                                </svg>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="#">
-                                                Site Terms of Use
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                                    <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z" />
-                                                </svg>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="#">
-                                                Modifications
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                                    <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z" />
-                                                </svg>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="#">
-                                                Risks
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                                    <path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z" />
-                                                </svg>
-                                            </Link>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                                 <div className="space30" />
@@ -69,7 +42,7 @@ export default function PrivacyPolicy() {
                                     <p>Let’s make an real estate journey smooth and successful. Contact Baruch today!</p>
                                     <div className="space24" />
                                     <div className="btn-area1">
-                                        <Link href="#" className="vl-btn1">
+                                        <Link href="/contact" className="vl-btn1">
                                             <span>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width={23} height={22} viewBox="0 0 23 22" fill="none">
                                                     <path d="M12.8105 9.04492C12.3143 9.04492 11.9297 9.42949 11.9297 9.9043C11.9297 10.3791 12.3143 10.7637 12.8105 10.7637C13.2639 10.7637 13.6484 10.3791 13.6484 9.9043C13.6484 9.42949 13.2639 9.04492 12.8105 9.04492ZM6.79492 9.04492C6.29863 9.04492 5.91406 9.42949 5.91406 9.9043C5.91406 10.3791 6.29863 10.7637 6.79492 10.7637C7.24824 10.7637 7.63281 10.3791 7.63281 9.9043C7.63281 9.42949 7.24824 9.04492 6.79492 9.04492Z" fill="white" />

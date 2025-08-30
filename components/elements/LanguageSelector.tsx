@@ -92,8 +92,7 @@ export default function LanguageSelector() {
         return (
             <div className="language-selector">
                 <button className="language-toggle">
-                    <span className="flag">{currentLanguage.flag}</span>
-                    <span className="lang-name">{currentLanguage.name}</span>
+                    <i className="fa-solid fa-globe" />
                     <i className="fa-solid fa-chevron-down" />
                 </button>
             </div>
@@ -108,8 +107,15 @@ export default function LanguageSelector() {
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label={t('language.selectLanguage')}
                 >
-                    <span className="flag">{currentLanguage.flag}</span>
-                    <span className="lang-name">{currentLanguage.name}</span>
+                   
+                    <svg width="20" height="20" viewBox="0 0 432 432" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M216 8C101.13 8 8 101.13 8 216C8 330.87 101.13 424 216 424C330.87 424 424 330.87 424 216C424 101.13 330.87 8 216 8Z" stroke="#203644" stroke-width="16" stroke-miterlimit="10"/>
+<path d="M216 8C157.93 8 103.33 101.13 103.33 216C103.33 330.87 157.93 424 216 424C274.07 424 328.67 330.87 328.67 216C328.67 101.13 274.07 8 216 8Z" stroke="#203644" stroke-width="16" stroke-miterlimit="10"/>
+<path d="M77.33 77.33C115.57 104.48 163.71 120.67 216 120.67C268.29 120.67 316.43 104.48 354.67 77.33M354.67 354.67C316.43 327.52 268.29 311.33 216 311.33C163.71 311.33 115.57 327.52 77.33 354.67" stroke="#203644" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M216 8V424M424 216H8" stroke="#203644" stroke-width="16" stroke-miterlimit="10"/>
+</svg>
+
+                    
                     <i className={`fa-solid fa-chevron-${isOpen ? 'up' : 'down'}`} />
                 </button>
                 

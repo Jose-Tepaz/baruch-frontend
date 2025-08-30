@@ -11,6 +11,7 @@ type PropertyCardProps = {
     isNew?: boolean
     propertyStatus?: string
     documentId: string
+    location: string
   }
   
   export default function PropertieCardV1({
@@ -21,6 +22,7 @@ type PropertyCardProps = {
     isNew = false,
     propertyStatus,
     documentId,
+    location,
   }: PropertyCardProps) {
     // Validación de seguridad para la URL
     //const sanitizedUrl = documentId && typeof documentId === 'string' ? documentId.replace(/[^a-zA-Z0-9-_]/g, '') : ''
@@ -44,7 +46,7 @@ type PropertyCardProps = {
         `}</style>
        
         <Link href={`/property/${documentId}`} className="text-decoration-none">
-          <div className="property-card property-card-hover border-0 shadow-sm rounded-4 overflow-hidden d-flex flex-column justify-content-between">
+          <div className="property-card property-card-hover border-0 shadow-sm overflow-hidden d-flex flex-column justify-content-between">
           <div className="position-absolute top-0 start-0 p-3 d-flex gap-2 z-3" style={{zIndex: 10}}>
                 {propertyStatus && <span className="badge bg-light text-dark px-3 py-2">{propertyStatus}</span>}
                 {isNew && <span className="badge bg-dark text-white px-3 py-2">Nuevo</span>}
@@ -59,7 +61,7 @@ type PropertyCardProps = {
                 style={{ 
                   height: '350px', 
                   objectFit: 'cover', 
-                  borderRadius: '10px', 
+                 
                   border: '1px solid #eaeaea'
                 }}
               />
@@ -68,11 +70,9 @@ type PropertyCardProps = {
             )}
             </div>
             <div className="card-body-property text-white h-100 z-3 h-auto p-4">
-              <h3 className="">{title || 'Property'}</h3>
-              <p className="card-text mb-2">
-                <i className="bi bi-geo-alt-fill me-1 text-white"></i>
-                {address || 'Address not available'}
-              </p>
+              <p> {location}</p>
+              <h3 className="title-properties text-color-white size-20">{title || 'Property'}</h3>
+              
               <div className="d-flex justify-content-between align-items-center">
                 <span className="fw-bold fs-5">
                   €{formattedPrice.toLocaleString('es-ES')}

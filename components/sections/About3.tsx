@@ -11,51 +11,28 @@ export default function About3() {
     return (
         <>
             {/*===== ABOUT AREA STARTS =======*/}
-            <div className="about3-section-area sp1 ">
-                <div className="padding-global">
-                    <div className="container-large">
-                        <div className="row align-items-center">
-                            <div className="col-lg-6">
-                                <div className="about-images-area">
-                                    <div className="row">
-                                        <div className="col-lg-6 col-md-6">
-                                            <div className="img2  reveal img-about-3" >
-                                                <img src={img_1.src} alt="baruch" />
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6 col-md-6 img-about-3-sectiond">
-                                            <div className="space100" />
-                                            <div className="img1  reveal img-about-3" >
-                                                <img src={img_2.src} alt="baruch" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-1" />
-                            <div className="col-lg-5">
-                                <div className="about-heading">
-                                    <h3 style={{
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'space-between',
-                                        backgroundColor: 'rgba(189, 189, 189, 0.1)',
-                                        width: 'auto',
-                                        padding: '6px',
-                                        borderRadius: '10px'
-                                    }}>
-                                        {t('home.title-why-choose-us')}
-                                    </h3>
-                                    <div className="space26" />
-                                    <div className="text-white text-size-large text-color-blue">
-                                        <p>{t('home.list1-why-choose-us')}</p>
-                                        <p>{t('home.list2-why-choose-us')}</p>
-                                        <p>{t('home.list3-why-choose-us')}</p>
-                                        <br />
-                                        <p>{t('home.paragraph-why-choose-us')}</p>
-                                    </div>
-                                    <div className="space32" />
-                                    <div className="btn-area1">
+            
+            {/*===== ABOUT AREA ENDS =======*/}
+ 
+<div className="about2 sp1" id="more-info">
+    <div className="container">
+        <div className="row align-items-center">
+            <div className="col-lg-6">
+                <div className="">
+                   
+                    <div className="space16" />
+                    
+                    <h3 className="font-weight-400 size-32 uppercase">{t('home.title-why-choose-us')}</h3>
+                    <div className="space16" />
+                    <p>{t('home.paragraph-why-choose-us')}</p>
+                    <div className="space16" />
+                    <p>{t('home.list1-why-choose-us')}</p>
+                    <p>{t('home.list2-why-choose-us')}</p>
+                    <p>{t('home.list3-why-choose-us')}</p>
+               
+                    
+                    <div className="space30" />
+                    <div className="btn-area1">
                                         <Link href="/properties" className="vl-btn1 ">
                                             {t('home.btn-about-section-2')}
                                             <span className="arrow1 ms-2">
@@ -66,14 +43,20 @@ export default function About3() {
                                             </span>
                                         </Link>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
-                <div className="space26" />
             </div>
-            {/*===== ABOUT AREA ENDS =======*/}
-        </>
+            
+            <div className="col-lg-6">
+                <div className="img2 image-anime reveal">
+                    <img src={img_1.src} alt="housa" />
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+{/*===== ABOUT AREA ENDS =======*/}
+</>
     );
 }

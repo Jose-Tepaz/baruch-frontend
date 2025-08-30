@@ -19,7 +19,7 @@ export default function AboutForSellers() {
 
                     <div className="wrapp-content-mission">
                     <div className="col-lg-6">
-                            <div className="mission-heading heading1">
+                            <div className="mission-heading ">
                                 
                                 <div className="space20" />
                                 <div className="wrapp-card-mission" >

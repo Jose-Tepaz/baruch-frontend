@@ -56,8 +56,8 @@ export default function PropertyList1({ properties }: { properties: any[] }) {
     <section className="wrapp-properties-list">
       <div className="row">
         <div className="col-lg-7 m-auto d-flex justify-content-center align-items-center">
-          <div className="heading1">
-            <p className='text-align-center'>{t('home.subtitle-list-properties')}</p>
+          <div className="">
+           
             <h3 className='text-align-center'>
               {t('home.title-list-properties')}
             </h3>
