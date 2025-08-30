@@ -135,7 +135,7 @@ export default function Units({ units }: { units?: Unit[] }) {
                                                     </p>
                                                 </div>
                                                 <div className="col-6 text-end">
-                                                    <h6 className="text-primary mb-2">
+                                                    <h6 className="text-color-black mb-2">
                                                         <strong>€ {unit.price ? Number(unit.price).toLocaleString('de-DE') : ''}</strong>
                                                     </h6>
                                                     <button
@@ -185,6 +185,9 @@ export default function Units({ units }: { units?: Unit[] }) {
             </div>
 
             <style jsx>{`
+            .table-responsive{
+            border: 1px solid #eaeaea;
+            }
                 .units-section {
                     padding: 2rem 0;
                     background-color: #f8f9fa;
@@ -203,8 +206,10 @@ export default function Units({ units }: { units?: Unit[] }) {
                 .units-table-wrapper {
                     background: white;
                     border-radius: 8px;
-                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                   
                     overflow: hidden;
+                    padding: 0px 32px;
+                    
                 }
 
                 .units-table {

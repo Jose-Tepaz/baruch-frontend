@@ -22,7 +22,7 @@ export default function PropertyDetails({ property }) {
                                 <span className="status-badge for-sale">{property.propertyStatus}</span>
                                 </div>
                                 {/* Título principal */}
-                                <h1 className="heading-style-h1">{property.title}</h1>
+                                <h1 className="title-properties">{property.title}</h1>
                             
                                 {/* Dirección con icono */}
                                 <div className="property-location d-flex align-items-center gap-2">
