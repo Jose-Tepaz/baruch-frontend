@@ -61,7 +61,7 @@ export default function HeroHome({ properties = [] }: HeroHomeProps) {
                         <div
                             style={{
                                 width: "100%",
-                                minHeight: "100vh",
+                                minHeight: "100svh",
                                 backgroundImage: `url(${property.image || "/assets/img/all-images/hero/hero-img.webp"})`,
                                 backgroundPosition: "center",
                                 backgroundRepeat: "no-repeat",

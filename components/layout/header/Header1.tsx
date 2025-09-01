@@ -1,10 +1,61 @@
+"use client";
+
 import Link from "next/link";
+import { useState, useEffect, useRef } from "react";
 import LanguageSelector from "@/components/elements/LanguageSelector";
 import AuthButtons from "@/components/auth/AuthButtons";
 import { useTranslation } from "@/utils/i18n-simple";
+import styles from "./Header1.module.css";
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any) {
     const { t } = useTranslation('common')
+    const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+    const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+    const aboutDropdownRef = useRef<HTMLLIElement>(null);
+    const servicesDropdownRef = useRef<HTMLLIElement>(null);
+
+    // Cerrar dropdowns cuando se hace click fuera
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (aboutDropdownRef.current && !aboutDropdownRef.current.contains(event.target as Node)) {
+                setAboutDropdownOpen(false);
+            }
+            if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target as Node)) {
+                setServicesDropdownOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
+    // Cerrar dropdowns con tecla Escape
+    useEffect(() => {
+        const handleEscape = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                setAboutDropdownOpen(false);
+                setServicesDropdownOpen(false);
+            }
+        };
+
+        document.addEventListener('keydown', handleEscape);
+        return () => {
+            document.removeEventListener('keydown', handleEscape);
+        };
+    }, []);
+
+    const toggleAboutDropdown = () => {
+        setAboutDropdownOpen(!aboutDropdownOpen);
+        setServicesDropdownOpen(false); // Cerrar el otro dropdown
+    };
+
+    const toggleServicesDropdown = () => {
+        setServicesDropdownOpen(!servicesDropdownOpen);
+        setAboutDropdownOpen(false); // Cerrar el otro dropdown
+    };
+
     return (
         <header className="homepage1-body">
             <div id="vl-header-sticky" className={`vl-header-area vl-transparent-header  ${scroll ? "header-sticky top-0 position-fixed w-100" : ""}`}>
@@ -26,50 +77,58 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                                 <Link href="/properties">{t('navigation.properties')}</Link>
                                             </li>
                                             
-                                            <li className="dropdown">
-                                                <a href="#" className="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <li ref={aboutDropdownRef} className={`dropdown ${styles.headerDropdown}`}>
+                                                <a 
+                                                    href="#" 
+                                                    className={`dropdown-toggle ${styles.dropdownToggle}`}
+                                                    onClick={toggleAboutDropdown}
+                                                >
                                                     {t('navigation.about')}
                                                 </a>
-                                                <ul className="dropdown-menu">
+                                                <ul className={`dropdown-menu ${styles.dropdownMenu} ${aboutDropdownOpen ? styles.show : ''}`}>
                                                     <li>
-                                                        <Link className="dropdown-item" href="/about-us">{t('navigation.about')}</Link>
+                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/about-us">{t('navigation.about')}</Link>
                                                     </li>
                                                     <li>
-                                                        <Link className="dropdown-item" href="/magazine">{t('navigation.magazine')}</Link>
+                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/magazine">{t('navigation.magazine')}</Link>
                                                     </li>
                                                     <li>
-                                                        <Link className="dropdown-item" href="/testimonials">{t('navigation.testimonials')}</Link>
+                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/testimonials">{t('navigation.testimonials')}</Link>
                                                     </li>
                                                     <li>
-                                                        <Link className="dropdown-item" href="/contact">{t('navigation.contact')}</Link>
+                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/contact">{t('navigation.contact')}</Link>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li className="dropdown">
-                                                <a href="#" className="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <li ref={servicesDropdownRef} className={`dropdown ${styles.headerDropdown}`}>
+                                                <a 
+                                                    href="#" 
+                                                    className={`dropdown-toggle ${styles.dropdownToggle}`}
+                                                    onClick={toggleServicesDropdown}
+                                                >
                                                     {t('navigation.services')}
                                                 </a>
-                                                <ul className="dropdown-menu">
+                                                <ul className={`dropdown-menu ${styles.dropdownMenu} ${servicesDropdownOpen ? styles.show : ''}`}>
                                                     <li>
-                                                        <Link className="dropdown-item" href="/about-us">{t('footer.title-services-1')}</Link>
+                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/about-us">{t('footer.title-services-1')}</Link>
                                                     </li>
                                                     <li>
-                                                        <Link className="dropdown-item" href="/magazine">{t('footer.title-services-2')}</Link>
+                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/magazine">{t('footer.title-services-2')}</Link>
                                                     </li>
                                                     <li>
-                                                        <Link className="dropdown-item" href="/testimonials">{t('footer.title-services-3')}</Link>
+                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/testimonials">{t('footer.title-services-3')}</Link>
                                                     </li>
                                                     <li>
-                                                        <Link className="dropdown-item" href="/contact">{t('footer.title-services-4')}</Link>
+                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/contact">{t('footer.title-services-4')}</Link>
                                                     </li>
                                                     <li>
-                                                        <Link className="dropdown-item" href="/contact">{t('footer.title-services-5')}</Link>
+                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/contact">{t('footer.title-services-5')}</Link>
                                                     </li>
                                                     <li>
-                                                        <Link className="dropdown-item" href="/contact">{t('footer.title-services-6')}</Link>
+                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/contact">{t('footer.title-services-6')}</Link>
                                                     </li>
                                                     <li>
-                                                        <Link className="dropdown-item" href="/contact">{t('footer.title-services-7')}</Link>
+                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/contact">{t('footer.title-services-7')}</Link>
                                                     </li>
                                                 </ul>
                                             </li>

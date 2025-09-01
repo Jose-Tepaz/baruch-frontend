@@ -77,7 +77,7 @@
         "subtitle-testimonials-1": "Témoignages",
         "title-testimonials": "Ce Que Nos Clients Disent",
         "subtitle-testimonials": "Témoignages",
-        "title-why-choose-us": "Pourquoi Baruch Se Démarque",
+        "title-why-choose-us": "Pourquoi Baruch Se Démarque?",
         "list1-why-choose-us": "Agents Experts",
         "list2-why-choose-us": "Listes Extensives",
         "list3-why-choose-us": "Satisfaction Client",
@@ -96,7 +96,8 @@
     "properties": {
         "title": "Nos Propriétés",
         "discover_latest": "Découvrez Nos Dernières Propriétés",
-        "no_properties": "Aucune propriété disponible"
+        "no_properties": "Aucune propriété disponible",
+        "no_properties_description": "Essayez de changer les filtres de recherche"
     },
     "about": {
             "company": "À propos de l'Entreprise",

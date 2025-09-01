@@ -1,0 +1,161 @@
+/* Estilos personalizados para el dropdown del header */
+.headerDropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    min-width: 12rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.375rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.dropdownMenu.show {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.dropdownItem {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.dropdownItem:hover,
+.dropdownItem:focus {
+    color: #1e2125;
+    background-color: #e9ecef;
+    text-decoration: none;
+}
+
+.dropdownItem:active {
+    color: #fff;
+    background-color: #0d6efd;
+}
+
+.dropdownToggle {
+    display: inline-block;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.375rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+}
+
+.dropdownToggle:hover {
+    color: #1e2125;
+    background-color: #e9ecef;
+    text-decoration: none;
+}
+
+.dropdownToggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+/* Asegurar que los elementos del dropdown se muestren en columna */
+.dropdownMenu li {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdownMenu li a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Estilos específicos para el dropdown de servicios que tiene más elementos */
+.dropdownMenu li:first-child {
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+}
+
+.dropdownMenu li:last-child {
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 991.98px) {
+    .dropdownMenu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        display: none;
+    }
+    
+    .dropdownMenu.show {
+        display: block !important;
+    }
+    
+    .dropdownItem {
+        padding-left: 1.5rem;
+        color: #6c757d;
+    }
+    
+    .dropdownItem:hover {
+        background-color: transparent;
+        color: #495057;
+    }
+}
+
+/* Asegurar que el dropdown esté por encima de otros elementos */
+.headerDropdown {
+    z-index: 1001;
+}
+
+/* Animación suave para el dropdown */
+.dropdownMenu {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.dropdownMenu.show {
+    opacity: 1;
+    transform: translateY(0);
+}

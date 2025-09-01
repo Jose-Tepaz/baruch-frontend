@@ -6,6 +6,7 @@ import PropertieCardV1 from "@/components/sections/PropertieCardV1";
 import LanguageDebug from "@/components/debug/LanguageDebug";
 import StrapiApiTest from "@/components/debug/StrapiApiTest";
 import Pagination from "@/components/elements/Pagination";
+import { t, useTranslation } from "@/utils/i18n-simple"; 
 interface Category {
     id?: number;
     name: string;
@@ -141,9 +142,9 @@ export default function PropertiesContent({
                         {isLoading ? (
                             <div className="text-center py-5">
                                 <div className="spinner-border" role="status">
-                                    <span className="visually-hidden">Cargando...</span>
+                                    <span className="visually-hidden">{t('properties.loading')}</span>
                                 </div>
-                                <p className="mt-3">Cargando propiedades...</p>
+                                <p className="mt-3">{t('properties.loading')}</p>
                             </div>
                         ) : (filteredProperties && filteredProperties.length > 0) ? (
                             <div className="row g-4">
@@ -164,13 +165,9 @@ export default function PropertiesContent({
                             </div>
                         ) : (
                             <div className="text-center py-5">
-                                <h4>No se encontraron propiedades</h4>
-                                <p>Intenta cambiar los filtros de búsqueda</p>
-                                <small className="text-muted">
-                                    Debug: Properties={initialProperties?.length || 0},
-                                    Filtered={filteredProperties?.length || 0},
-                                    Loading={isLoading ? 'Yes' : 'No'}
-                                </small>
+                                <h4>{t('properties.no_properties')}</h4>
+                                <p>{t('properties.no_properties_description')}</p>
+                                
                             </div>
                         )}
                         <div className="mt-5 col-12 mt-4 d-flex justify-content-center">

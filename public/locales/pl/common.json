@@ -64,7 +64,7 @@
         "show-more": "Pokaż więcej filtrów",
         "show-less": "Pokaż mniej filtrów",
         "btn-filter": "Wyszukaj nieruchomości",
-        "btn-all-properties": "Pokaż wszystkie nieruchomości",
+        "btn-all-properties": "Pokaż wszystkie nieruchomości",  
         "title-about-us": "O nas",
         "title-2-about-us": "Jesteśmy tutaj, aby Cię pomóc",
         "title-3-about-us": "Znajdź swoją marzenią nieruchomość w Hiszpanii",
@@ -95,7 +95,8 @@
   "properties": {
       "title": "Nasze nieruchomości",
       "discover_latest": "Odkryj nasze najnowsze nieruchomości",
-      "no_properties": "Brak nieruchomości"
+      "no_properties": "Brak nieruchomości",
+      "no_properties_description": "Spróbuj zmienić filtry wyszukiwania"
   },
   "about": {
       "company": "O nas",

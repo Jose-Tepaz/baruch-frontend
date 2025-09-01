@@ -142,22 +142,22 @@ export default function Footer1() {
                                             <Link href="/" className="text-white">{t('footer.title-services-1')}</Link>
                                         </li>
                                         <li>
-                                            <Link href="/about-us" className="text-white">{t('footer.title-services-2')}</Link>
+                                            <Link href="/" className="text-white">{t('footer.title-services-2')}</Link>
                                         </li>
                                         <li>
-                                            <Link href="/testimonials" className="text-white">{t('footer.title-services-3')}</Link>
+                                            <Link href="/" className="text-white">{t('footer.title-services-3')}</Link>
                                         </li>
                                         <li>
-                                            <Link href="/contact" className="text-white">{t('footer.title-services-4')}</Link>
+                                            <Link href="/" className="text-white">{t('footer.title-services-4')}</Link>
                                         </li>
                                         <li>
-                                            <Link href="/privacy-policy" className="text-white">{t('footer.title-services-5')}</Link>
+                                            <Link href="/" className="text-white">{t('footer.title-services-5')}</Link>
                                         </li>
                                         <li>
-                                            <Link href="/privacy-policy" className="text-white">{t('footer.title-services-6')}</Link>
+                                            <Link href="/" className="text-white">{t('footer.title-services-6')}</Link>
                                         </li>
                                         <li>
-                                            <Link href="/privacy-policy" className="text-white">{t('footer.title-services-7')}</Link>
+                                            <Link href="/" className="text-white">{t('footer.title-services-7')}</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -169,29 +169,29 @@ export default function Footer1() {
                                     <p className="text-white text-size-large text-weight-medium" style={{ marginBottom: '16px' }}>{t('footer.head-title-3')}</p>
                                     <ul className="text-white">
                                         <li>
-                                        <Link href="/privacy-policy" className="text-white">{t('footer.title-popular-locations-1')}</Link>
+                                        <Link href="/en/properties?location=Marbella" className="text-white">{t('footer.title-popular-locations-1')}</Link>
                                         </li>
                                         <li>
-                                        <Link href="/privacy-policy" className="text-white">{t('footer.title-popular-locations-2')}</Link>
+                                        <Link href="/en/properties?location=Mijas" className="text-white">{t('footer.title-popular-locations-2')}</Link>
                                         </li>
                                         <li>
-                                        <Link href="/privacy-policy" className="text-white">{t('footer.title-popular-locations-3')}</Link>
+                                        <Link href="/en/properties?location=Estepona" className="text-white">{t('footer.title-popular-locations-3')}</Link>
                                         </li>
                                         <li>
-                                        <Link href="/privacy-policy" className="text-white">{t('footer.title-popular-locations-4')}</Link>
+                                        <Link href="/en/properties?location=Sotogrande" className="text-white">{t('footer.title-popular-locations-4')}</Link>
                                         </li>
                                         <li>
-                                        <Link href="/privacy-policy" className="text-white">{t('footer.title-popular-locations-5')}</Link>
+                                        <Link href="/en/properties?location=The Golden Mile" className="text-white">{t('footer.title-popular-locations-5')}</Link>
                                         </li>
                                       
                                         <li>
-                                        <Link href="/privacy-policy" className="text-white">{t('footer.title-popular-locations-7')}</Link>
+                                        <Link href="/en/properties?location=Rincon" className="text-white">{t('footer.title-popular-locations-7')}</Link>
                                         </li>
                                         <li>
-                                        <Link href="/privacy-policy" className="text-white">{t('footer.title-popular-locations-8')}</Link>
+                                        <Link href="/en/properties?location=Torox" className="text-white">{t('footer.title-popular-locations-8')}</Link>
                                         </li>
                                         <li>
-                                        <Link href="/privacy-policy" className="text-white">{t('footer.title-popular-locations-9')}</Link>
+                                        <Link href="/en/properties?location=Malaga" className="text-white">{t('footer.title-popular-locations-9')}</Link>
                                         </li>
                                     </ul>
                                 </div>

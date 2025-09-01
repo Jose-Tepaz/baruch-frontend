@@ -8,6 +8,7 @@ import PropertyDetails from "@/components/sections/PropertyDetails";
 import { Metadata } from 'next';
 
 
+
 interface PropertyPageProps {
     params: Promise<{ 
         lang: string;

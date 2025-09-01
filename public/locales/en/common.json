@@ -76,7 +76,7 @@
         "subtitle-testimonials-1": "Testimonials",
         "title-testimonials": "What Our Clients Say",
         "subtitle-testimonials": "Testimonials",
-        "title-why-choose-us": "Why Baruch Stands Out",
+        "title-why-choose-us": "Why Baruch Stands Out?",
         "list1-why-choose-us": "Experts Agents",
         "list2-why-choose-us": "Extensive Listings",
         "list3-why-choose-us": "Customer Satisfaction",
@@ -94,7 +94,8 @@
     "properties": {
         "title": "Our Properties",
         "discover_latest": "Discover Our Latest Properties",
-        "no_properties": "No properties available"
+        "no_properties": "No properties found",
+        "no_properties_description": "Try changing the search filters"
     },
     "about": {
         "company": "About Company",

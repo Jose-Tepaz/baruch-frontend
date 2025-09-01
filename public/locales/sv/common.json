@@ -58,7 +58,7 @@
         "bathrooms-filter": "Badrum",
         "min-price-filter": "Min Pris",
         "max-price-filter": "Max Pris",
-        "location-filter": "Plats",
+        "location-filter": "Plats",     
         "show-more": "Visa fler filter",
         "show-less": "Visa färre filter",
         "btn-filter": "Sök fastigheter",
@@ -93,7 +93,8 @@
   "properties": {
       "title": "Våra fastigheter",
       "discover_latest": "Upptäck våra senaste fastigheter",
-      "no_properties": "Inga fastigheter tillgängliga"
+      "no_properties": "Inga fastigheter tillgängliga",
+      "no_properties_description": "Försök ändra sökfiltren"
   },
   "about": {
       "company": "Om företaget",

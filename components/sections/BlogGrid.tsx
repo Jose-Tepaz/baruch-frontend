@@ -1,5 +1,38 @@
 import Link from "next/link";
-import blogData from "@/data/blog.json";
+
+// Datos de ejemplo para el blog
+const blogData = {
+    mainBlogPosts: [
+        {
+            image: "/assets/img/blog/blog1.png",
+            author: "Admin",
+            title: "How to Choose the Perfect Real Estate Investment",
+            link: "/blog/real-estate-investment-guide",
+            label: "Investment",
+            date: "15",
+            month: "Dec"
+        },
+        {
+            image: "/assets/img/blog/blog2.png",
+            author: "Admin",
+            title: "Top 10 Tips for First-Time Homebuyers",
+            link: "/blog/first-time-homebuyer-tips",
+            label: "Buying",
+            date: "20",
+            month: "Dec"
+        },
+        {
+            image: "/assets/img/blog/blog3.png",
+            author: "Admin",
+            title: "Market Trends: What to Expect in 2024",
+            link: "/blog/2024-market-trends",
+            label: "Market",
+            date: "25",
+            month: "Dec"
+        }
+    ]
+};
+
 // Reusable SVG Components
 
 // LabelIcon icon for label

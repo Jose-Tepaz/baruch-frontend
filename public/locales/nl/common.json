@@ -75,7 +75,7 @@
         "subtitle-testimonials-1": "Getuigenissen",
         "title-testimonials": "Wat onze klanten zeggen",
         "subtitle-testimonials": "Getuigenissen",
-        "title-why-choose-us": "Waarom Baruch zich onderscheidt",
+        "title-why-choose-us": "Waarom Baruch zich onderscheidt?",
         "list1-why-choose-us": "Experts Agents",
         "list2-why-choose-us": "Uitgebreide lijsten",
         "list3-why-choose-us": "Klanttevredenheid",
@@ -94,7 +94,8 @@
   "properties": {
     "title": "Onze eigenschappen",
     "discover_latest": "Ontdek onze nieuwste eigenschappen",
-    "no_properties": "Geen eigenschappen beschikbaar"
+    "no_properties": "Geen eigenschappen beschikbaar",
+    "no_properties_description": "Probeer de zoekfilters te wijzigen"
   },
   "about": {
     "company": "Over het bedrijf",

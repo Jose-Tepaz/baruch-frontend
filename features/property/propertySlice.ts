@@ -1,4 +1,3 @@
-import initialProperties from "@/data/property.json"
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit"
 
 // Define types for our state
@@ -76,7 +75,7 @@ interface UpdatePropertyPayload {
 }
 
 const initialState: PropertyState = {
-  properties: initialProperties as Property[],
+  properties: [], // Array vacío en lugar de datos de ejemplo
   favoriteProperties: [],
   propertyTypes: [
     { id: 1, name: "House", value: "house" },
