@@ -28,7 +28,7 @@ export default function Category1({ categories }: Category1Props) {
                             <div className="row">
                                 <div className="col-lg-7 m-auto">
                                     <div className=" text-center ">
-                                        <h5>{t('home.subtitle-category')}</h5>
+                                       
                                         <div className="space16" />
                                         <h3 className=" text-color-black-blue ">{t('home.title-category')}</h3>
                                     </div>
