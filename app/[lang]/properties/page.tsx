@@ -143,24 +143,24 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
             });
         }
         
-        console.log('Final properties count:', properties.length);
+
         
     } catch (error) {
-        console.error('Error loading properties:', error);
+     
         properties = [];
     }
     
     try {
         categories = await getCategories(lang); // Usar el locale dinámico
     } catch (error) {
-        console.error('Error loading categories:', error);
+        
         categories = [];
     }
 
     try {
         propertyStatuses = await getPropertyStatuses(lang); // Usar el locale dinámico
     } catch (error) {
-        console.error('Error loading property statuses:', error);
+        
         propertyStatuses = [];
     }
     

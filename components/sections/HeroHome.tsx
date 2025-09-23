@@ -97,7 +97,7 @@ export default function HeroHome({ properties = [] }: HeroHomeProps) {
                                         </h3>
                                         <div style={{ height: 18 }} />
                                         <div style={{ display: "flex", alignItems: "center", gap: 14, color: "#fff", fontSize: 20 }}>
-                                                €{property.price?.toLocaleString('es-ES')}
+                                                € {property.price?.toLocaleString('es-ES')}
                                                 <span aria-hidden style={{ color: "#fff", fontSize: 22 }}>→</span> 
                                         </div>
                                         </Link>
