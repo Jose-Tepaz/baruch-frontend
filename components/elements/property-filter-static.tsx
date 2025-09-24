@@ -156,12 +156,7 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         { value: '2', label: 'Min 2' },
         { value: '3', label: 'Min 3' },
         { value: '4', label: 'Min 4' },
-        { value: '5', label: 'Min 5' },
-        { value: '6', label: 'Min 6' },
-        { value: '7', label: 'Min 7' },
-        { value: '8', label: 'Min 8' },
-        { value: '9', label: 'Min 9' },
-        { value: '10', label: 'Min 10' },
+        
     ];
 
     const bathroomOptions = [
@@ -169,13 +164,7 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         { value: '1', label: 'Min 1' },
         { value: '2', label: 'Min 2' },
         { value: '3', label: 'Min 3' },
-        { value: '4', label: 'Min 4' },
-        { value: '5', label: 'Min 5' },
-        { value: '6', label: 'Min 6' },
-        { value: '7', label: 'Min 7' },
-        { value: '8', label: 'Min 8' },
-        { value: '9', label: 'Min 9' },
-        { value: '10', label: 'Min 10' },
+      
     ];
 
     const minPriceOptions = [

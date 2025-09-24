@@ -325,12 +325,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                                          <option value="2">Min 2</option>
                                                          <option value="3">Min 3</option>
                                                          <option value="4">Min 4</option>
-                                                         <option value="5">Min 5</option>
-                                                         <option value="6">Min 6</option>
-                                                         <option value="7">Min 7</option>
-                                                         <option value="8">Min 8</option>
-                                                         <option value="9">Min 9</option>
-                                                         <option value="10">Min 10</option>
+                                                    
                                                      </select>
                                                  </div>
 
@@ -341,13 +336,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                                          <option value="1">Min 1</option>
                                                          <option value="2">Min 2</option>
                                                          <option value="3">Min 3</option>
-                                                         <option value="4">Min 4</option>
-                                                         <option value="5">Min 5</option>
-                                                         <option value="6">Min 6</option>
-                                                         <option value="7">Min 7</option>
-                                                         <option value="8">Min 8</option>
-                                                         <option value="9">Min 9</option>
-                                                         <option value="10">Min 10</option>
+                                                         
                                                      </select>
                                                  </div>
 
