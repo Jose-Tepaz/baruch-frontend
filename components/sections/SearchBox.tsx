@@ -343,37 +343,37 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                                  <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
                                                      <select name="min_price" defaultValue="">
                                                          <option value="">{t('home.min-price-filter')}</option>
-                                                         <option value="50000">€50,000</option>
-                                                         <option value="100000">€100,000</option>
-                                                         <option value="150000">€150,000</option>
-                                                         <option value="200000">€200,000</option>
-                                                         <option value="250000">€250,000</option>
-                                                         <option value="300000">€300,000</option>
-                                                         <option value="400000">€400,000</option>
-                                                         <option value="500000">€500,000</option>
-                                                         <option value="750000">€750,000</option>
-                                                         <option value="1000000">€1,000,000</option>
-                                                         <option value="1500000">€1,500,000</option>
-                                                         <option value="2000000">€2,000,000</option>
+                                                        
+                                                         <option value="100000">€100.000</option>
+                                                         <option value="150000">€150.000</option>
+                                                         <option value="200000">€200.000</option>
+                                                         <option value="250000">€250.000</option>
+                                                         <option value="300000">€300.000</option>
+                                                         <option value="400000">€400.000</option>
+                                                         <option value="500000">€500.000</option>
+                                                         <option value="750000">€750.000</option>
+                                                         <option value="1000000">€1,000.000</option>
+                                                         <option value="1500000">€1,500.000</option>
+                                                         <option value="2000000">€2,000.000</option>
                                                      </select>
                                                  </div>
 
                                                  <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
                                                      <select name="max_price" defaultValue="">
                                                          <option value="">{t('home.max-price-filter')}</option>
-                                                         <option value="100000">€100,000</option>
-                                                         <option value="150000">€150,000</option>
-                                                         <option value="200000">€200,000</option>
-                                                         <option value="250000">€250,000</option>
-                                                         <option value="300000">€300,000</option>
-                                                         <option value="400000">€400,000</option>
-                                                         <option value="500000">€500,000</option>
-                                                         <option value="750000">€750,000</option>
-                                                         <option value="1000000">€1,000,000</option>
-                                                         <option value="1500000">€1,500,000</option>
-                                                         <option value="2000000">€2,000,000</option>
-                                                         <option value="5000000">€5,000,000</option>
-                                                         <option value="10000000">€10,000,000</option>
+                                                         
+                                                         <option value="150000">€150.000</option>
+                                                        <option value="200000">€200.000</option>
+                                                         <option value="250000">€250.000</option>
+                                                         <option value="300000">€300.000</option>
+                                                         <option value="400000">€400.000</option>
+                                                         <option value="500000">€500.000</option>
+                                                         <option value="750000">€750.000</option>
+                                                         <option value="1000000">€1,000.000</option>
+                                                         <option value="1500000">€1,500.000</option>
+                                                         <option value="2000000">€2,000.000</option>
+                                                         <option value="5000000">€5,000.000</option>
+                                                         <option value="10000000">€10,000.000</option>
                                                      </select>
                                                  </div>
 
