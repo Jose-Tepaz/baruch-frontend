@@ -45,10 +45,18 @@ interface Property {
     location?: string;
 }
 
+interface Amenity {
+    id: number;
+    documentId: string;
+    Name: string;
+    slug: string;
+}
+
 interface PropertiesContentProps {
     initialProperties: Property[];
     categories: Category[];
     propertyStatuses?: PropertyStatus[];
+    amenities?: Amenity[];
     searchParams: {
         category?: string;
         property_status?: string;
@@ -70,6 +78,7 @@ export default function PropertiesContent({
     initialProperties,
     categories,
     propertyStatuses,
+    amenities = [],
     searchParams,
     pagination,
     lang
@@ -141,7 +150,7 @@ export default function PropertiesContent({
                         <PropertyFilterStatic
                             categories={categories}
                             propertyStatuses={propertyStatuses}
-                            amenities={[]}
+                            amenities={amenities}
                         />
                     </div>
 

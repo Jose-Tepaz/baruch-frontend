@@ -145,6 +145,11 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         ...amenities.map(amenity => ({ value: amenity.Name, label: amenity.Name }))
     ];
 
+    // Debug log para verificar que las amenities se están cargando
+    console.log('=== PropertyFilterStatic Amenities Debug ===');
+    console.log('Amenities received:', amenities);
+    console.log('Amenities options:', amenitiesOptions);
+
     const bedroomOptions = [
         { value: '', label: t('home.bedrooms-filter') || 'Bedrooms' },
         { value: '1', label: 'Min 1' },

@@ -172,11 +172,14 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
         propertyStatuses = [];
     }
 
-    let amenities = [];
+    let amenities: any[] = [];
     try {
         amenities = await getAmenities(lang); // Usar el locale dinámico
+        console.log('=== Properties Page Amenities Debug ===');
+        console.log('Amenities loaded:', amenities);
+        console.log('Amenities count:', amenities.length);
     } catch (error) {
-        
+        console.error('Error loading amenities:', error);
         amenities = [];
     }
     
@@ -189,6 +192,7 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
                 initialProperties={properties}
                 categories={categories}
                 propertyStatuses={propertyStatuses}
+                amenities={amenities}
                 searchParams={{ category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities: searchAmenities }}
                 pagination={pagination}   
                 lang={lang}
