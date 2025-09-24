@@ -59,6 +59,7 @@
         "bathrooms-filter": "Bathrooms",
         "min-price-filter": "Min Price",
         "max-price-filter": "Max Price",
+        "amenities-filter": "Amenities",
         "location-filter": "Location",
         "show-more": "Show more filters",
         "show-less": "Show less filters",

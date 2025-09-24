@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import { getProperties } from "@/services/get-properties";
 import { getCategories } from "@/services/categories";
 import { getPropertyStatuses } from "@/services/property-status";
+import { getAmenities } from "@/services/amenities";
 import { getHomeInfo } from "@/services/get-home-info";
 import imgLandscape from "@/public/assets/img/all-images/home/img-home.webp"
 import { Metadata } from 'next';
@@ -108,10 +109,11 @@ export default async function Home({ params }: Props) {
     }
 
     try {
-        const [propertiesResult, categories, propertyStatuses, homeInfo, testimonials] = await Promise.all([
+        const [propertiesResult, categories, propertyStatuses, amenities, homeInfo, testimonials] = await Promise.all([
             getProperties({ locale: lang, onlyPrivate: false }),
             getCategories(lang),
             getPropertyStatuses(lang),
+            getAmenities(lang),
             getHomeInfo(lang),
             getTestimonials(lang).catch(() => []) // Si falla, regresa array vacío
         ]);
@@ -126,6 +128,7 @@ export default async function Home({ params }: Props) {
                 <SearchBox 
                     categories={categories || []}
                     propertyStatuses={propertyStatuses || []}
+                    amenities={amenities || []}
                 />
                 <About2  />
                 <PropertyList1 properties={properties || []} />
@@ -145,6 +148,7 @@ export default async function Home({ params }: Props) {
                 <SearchBox 
                     categories={[]}
                     propertyStatuses={[]}
+                    amenities={[]}
                 />
                 <About2  />
                 <PropertyList1 properties={[]} />

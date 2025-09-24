@@ -58,6 +58,7 @@
         "bathrooms-filter": "Badrum",
         "min-price-filter": "Min Pris",
         "max-price-filter": "Max Pris",
+        "amenities-filter": "Bekvämligheter",
         "location-filter": "Plats",     
         "show-more": "Visa fler filter",
         "show-less": "Visa färre filter",

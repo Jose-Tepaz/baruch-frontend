@@ -19,9 +19,17 @@ interface PropertyStatus {
     Title: string;
 }
 
+interface Amenity {
+    id: number;
+    documentId: string;
+    Name: string;
+    slug: string;
+}
+
 interface SearchBoxProps {
     categories?: Category[];
     propertyStatuses?: PropertyStatus[];
+    amenities?: Amenity[];
 }
 
 // Categorías de fallback en caso de que no se pasen props
@@ -36,7 +44,7 @@ const fallbackCategories: Category[] = [
     { name: "Cottages", slug: "cottages", description: "Cozy cottages" },
 ];
 
-export default function SearchBox({ categories = fallbackCategories, propertyStatuses = [] }: SearchBoxProps) {
+export default function SearchBox({ categories = fallbackCategories, propertyStatuses = [], amenities = [] }: SearchBoxProps) {
     const router = useRouter();
     const params = useParams();
     const lang = params.lang as string;
@@ -58,6 +66,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
             min_price: formData.get("min_price") as string,
             max_price: formData.get("max_price") as string,
             location: formData.get("location") as string,
+            amenities: formData.get("amenities") as string,
         };
 
         // Build query string
@@ -376,6 +385,17 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                                          <option value="2000000">€2,000,000</option>
                                                          <option value="5000000">€5,000,000</option>
                                                          <option value="10000000">€10,000,000</option>
+                                                     </select>
+                                                 </div>
+
+                                                 <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
+                                                     <select name="amenities" defaultValue="">
+                                                         <option value="">{t('home.amenities-filter')}</option>
+                                                         {amenities.map((amenity) => (
+                                                             <option key={amenity.documentId} value={amenity.Name}>
+                                                                 {amenity.Name}
+                                                             </option>
+                                                         ))}
                                                      </select>
                                                  </div>
                                              </div>

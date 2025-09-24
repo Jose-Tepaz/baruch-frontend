@@ -21,9 +21,17 @@ interface PropertyStatus {
     Title: string;
 }
 
+interface Amenity {
+    id: number;
+    documentId: string;
+    Name: string;
+    slug: string;
+}
+
 interface PropertyFilterStaticProps {
     categories: Category[];
     propertyStatuses?: PropertyStatus[];
+    amenities?: Amenity[];
 }
 
 interface CustomDropdownProps {
@@ -88,7 +96,7 @@ function CustomDropdown({ value, options, placeholder, onChange, name, id }: Cus
     );
 }
 
-export default function PropertyFilterStatic({ categories, propertyStatuses = [] }: PropertyFilterStaticProps) {
+export default function PropertyFilterStatic({ categories, propertyStatuses = [], amenities = [] }: PropertyFilterStaticProps) {
     const router = useRouter();
     const searchParams = useSearchParams();
     const params = useParams();
@@ -99,6 +107,7 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
     const [location, setLocation] = useState(searchParams.get('location') || '');
     const [selectedCategory, setSelectedCategory] = useState(searchParams.get('category') || '');
     const [selectedStatus, setSelectedStatus] = useState(searchParams.get('property_status') || '');
+    const [selectedAmenities, setSelectedAmenities] = useState(searchParams.get('amenities') || '');
     const [bedrooms, setBedrooms] = useState(searchParams.get('bedrooms') || '');
     const [bathrooms, setBathrooms] = useState(searchParams.get('bathrooms') || '');
     const [minPrice, setMinPrice] = useState(searchParams.get('min_price') || '');
@@ -129,6 +138,11 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
     const statusOptions = [
         { value: '', label: t('home.title-filter-1') || 'All Status' },
         ...propertyStatuses.map(status => ({ value: status.Title, label: status.Title }))
+    ];
+
+    const amenitiesOptions = [
+        { value: '', label: t('home.amenities-filter') || 'All Amenities' },
+        ...amenities.map(amenity => ({ value: amenity.Name, label: amenity.Name }))
     ];
 
     const bedroomOptions = [
@@ -198,6 +212,7 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         location?: string;
         category?: string;
         status?: string;
+        amenities?: string;
         bedrooms?: string;
         bathrooms?: string;
         minPrice?: string;
@@ -209,6 +224,7 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         const finalLocation = newFilters.location !== undefined ? newFilters.location : location;
         const finalCategory = newFilters.category !== undefined ? newFilters.category : selectedCategory;
         const finalStatus = newFilters.status !== undefined ? newFilters.status : selectedStatus;
+        const finalAmenities = newFilters.amenities !== undefined ? newFilters.amenities : selectedAmenities;
         const finalBedrooms = newFilters.bedrooms !== undefined ? newFilters.bedrooms : bedrooms;
         const finalBathrooms = newFilters.bathrooms !== undefined ? newFilters.bathrooms : bathrooms;
         const finalMinPrice = newFilters.minPrice !== undefined ? newFilters.minPrice : minPrice;
@@ -218,6 +234,7 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         if (finalLocation.trim()) params.set('location', finalLocation.trim());
         if (finalCategory) params.set('category', finalCategory);
         if (finalStatus) params.set('property_status', finalStatus);
+        if (finalAmenities) params.set('amenities', finalAmenities);
         if (finalBedrooms) params.set('bedrooms', finalBedrooms);
         if (finalBathrooms) params.set('bathrooms', finalBathrooms);
         if (finalMinPrice) params.set('min_price', finalMinPrice);
@@ -241,6 +258,7 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         setLocation('');
         setSelectedCategory('');
         setSelectedStatus('');
+        setSelectedAmenities('');
         setBedrooms('');
         setBathrooms('');
         setMinPrice('');
@@ -285,6 +303,11 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
     const handleStatusChange = (value: string) => {
         setSelectedStatus(value);
         updateFilters({ status: value });
+    };
+
+    const handleAmenitiesChange = (value: string) => {
+        setSelectedAmenities(value);
+        updateFilters({ amenities: value });
     };
 
     const handleBedroomsChange = (value: string) => {
@@ -381,6 +404,21 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
                                         placeholder={t('home.title-filter-1') || "All Status"}
                                         onChange={handleStatusChange}
                                         name="property_status"
+                                    />
+                                </div>
+
+                                {/* Amenities dropdown */}
+                                <div className="input-area filter-group mb-3">
+                                    <label htmlFor="amenities-dropdown" className="filter-label">
+                                        {t('home.amenities-filter') || 'Amenities'}
+                                    </label>
+                                    <CustomDropdown
+                                        id="amenities-dropdown"
+                                        value={selectedAmenities}
+                                        options={amenitiesOptions}
+                                        placeholder={t('home.amenities-filter') || "All Amenities"}
+                                        onChange={handleAmenitiesChange}
+                                        name="amenities"
                                     />
                                 </div>
 

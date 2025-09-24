@@ -60,6 +60,7 @@
         "bathrooms-filter": "Łazienki",
         "min-price-filter": "Min Cena",
         "max-price-filter": "Max Cena",
+        "amenities-filter": "Udogodnienia",
         "location-filter": "Lokalizacja",
         "show-more": "Pokaż więcej filtrów",
         "show-less": "Pokaż mniej filtrów",

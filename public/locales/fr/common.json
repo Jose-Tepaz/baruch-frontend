@@ -60,6 +60,7 @@
         "bathrooms-filter": "Salles de Bains",
         "min-price-filter": "Prix Min",
         "max-price-filter": "Prix Max",
+        "amenities-filter": "Équipements",
         "location-filter": "Emplacement",
         "show-more": "Afficher plus de filtres",
         "show-less": "Afficher moins de filtres",

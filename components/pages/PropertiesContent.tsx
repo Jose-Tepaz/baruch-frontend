@@ -34,7 +34,11 @@ interface Property {
     type?: string;
     city?: string;
     state?: string;
-    amenities?: string[];
+    amenities?: Array<{
+        id: number;
+        Name: string;
+        slug: string;
+    }>;
     documentId: string;
     description?: string;
     is_private?: boolean;
@@ -110,8 +114,13 @@ export default function PropertiesContent({
         if (amenities) {
             const amenityArray = Array.isArray(amenities) ? amenities : [amenities];
             if (amenityArray.length > 0) {
-                // Nota: necesitarías implementar la lógica de amenities según tu estructura de datos
-                // filtered = filtered.filter(property => /* lógica de amenities */);
+                filtered = filtered.filter(property => {
+                    const propertyAmenities = property.amenities || [];
+                    const propertyAmenityNames = propertyAmenities.map((amenity: any) => amenity.Name);
+                    return amenityArray.every(amenity => 
+                        propertyAmenityNames.includes(amenity)
+                    );
+                });
             }
         }
 
@@ -132,6 +141,7 @@ export default function PropertiesContent({
                         <PropertyFilterStatic
                             categories={categories}
                             propertyStatuses={propertyStatuses}
+                            amenities={[]}
                         />
                     </div>
 

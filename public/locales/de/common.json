@@ -62,6 +62,7 @@
         "bathrooms-filter": "Badezimmer",
         "min-price-filter": "Min Preis",
         "max-price-filter": "Max Preis",
+        "amenities-filter": "Ausstattung",
         "location-filter": "Standort",
         "show-more": "Mehr Filter anzeigen",
         "show-less": "Weniger Filter anzeigen",

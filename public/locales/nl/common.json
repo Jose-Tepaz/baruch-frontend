@@ -58,6 +58,7 @@
         "bathrooms-filter": "Badkamers",
         "min-price-filter": "Min Prijs",
         "max-price-filter": "Max Prijs",
+        "amenities-filter": "Voorzieningen",
         "location-filter": "Locatie",
         "show-more": "Meer filters tonen",
         "show-less": "Minder filters tonen",

@@ -3,6 +3,7 @@ import { getProperties } from "@/services/properties"
 import InnerHeader from "@/components/layout/InnerHeader";
 import { getCategories } from "@/services/categories";
 import { getPropertyStatuses } from "@/services/property-status";
+import { getAmenities } from "@/services/amenities";
 import PropertiesContent from "@/components/pages/PropertiesContent";
 import { Metadata } from 'next';
 
@@ -74,7 +75,7 @@ export async function generateMetadata({ params }: PropertiesPageProps): Promise
 
 export default async function PropertiesPage({ params, searchParams }: PropertiesPageProps) {
     const { lang } = await params;
-    const { category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities } = await searchParams;
+    const { category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities: searchAmenities } = await searchParams;
     const sp = await searchParams;
     // Obtener datos del servidor con manejo de errores
     let categories = [];
@@ -93,6 +94,7 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
             min_price: min_price,
             max_price: max_price,
             location: location,
+            amenities: Array.isArray(searchAmenities) ? searchAmenities[0] : searchAmenities,
             locale: lang, // Usar el locale dinámico
             page: currentPage, 
             pageSize: 9  
@@ -103,7 +105,7 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
        
         
         // Filtrar propiedades localmente por otros criterios si es necesario
-        if (properties && (keyword || city || state || amenities)) {
+        if (properties && (keyword || city || state || searchAmenities)) {
             properties = properties.filter((property: any) => {
                 // Filtrar por keyword (en título o descripción)
                 if (keyword) {
@@ -126,13 +128,19 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
                 }
                 
                 // Filtrar por amenities
-                if (amenities) {
-                    const amenityArray = Array.isArray(amenities) ? amenities : [amenities];
+                if (searchAmenities) {
+                    const amenityArray = Array.isArray(searchAmenities) ? searchAmenities : [searchAmenities];
                     if (amenityArray.length > 0) {
                         const propertyAmenities = property.amenities || [];
+                        const propertyAmenityNames = propertyAmenities.map((amenity: any) => amenity.Name);
                         const hasAllAmenities = amenityArray.every(amenity => 
-                            propertyAmenities.includes(amenity)
+                            propertyAmenityNames.includes(amenity)
                         );
+                        console.log('=== Amenities Filter Debug ===');
+                        console.log('Search amenities:', amenityArray);
+                        console.log('Property amenities:', propertyAmenities);
+                        console.log('Property amenity names:', propertyAmenityNames);
+                        console.log('Has all amenities:', hasAllAmenities);
                         if (!hasAllAmenities) {
                             return false;
                         }
@@ -163,6 +171,14 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
         
         propertyStatuses = [];
     }
+
+    let amenities = [];
+    try {
+        amenities = await getAmenities(lang); // Usar el locale dinámico
+    } catch (error) {
+        
+        amenities = [];
+    }
     
     return (
         <SimpleLayout>
@@ -173,7 +189,7 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
                 initialProperties={properties}
                 categories={categories}
                 propertyStatuses={propertyStatuses}
-                searchParams={{ category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities }}
+                searchParams={{ category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities: searchAmenities }}
                 pagination={pagination}   
                 lang={lang}
             />

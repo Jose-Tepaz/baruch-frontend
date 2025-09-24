@@ -31,6 +31,11 @@ export interface MappedProperty {
   propertyStatus: string
   category: any
   location: string
+  amenities: Array<{
+    id: number;
+    Name: string;
+    slug: string;
+  }>
 }
 
 export interface PropertyListResponse {
@@ -55,7 +60,11 @@ interface PropertyData {
   type?: string
   city?: string
   state?: string
-  amenities?: string[]
+  amenities?: Array<{
+    id: number;
+    Name: string;
+    slug: string;
+  }>
   is_private?: boolean
   location: string
 }
@@ -68,6 +77,7 @@ export type getPropertiesFilter = {
   min_price?: string
   max_price?: string
   location?: string
+  amenities?: string
   locale?: string
   page?: number
   pageSize?: number
@@ -85,7 +95,7 @@ export function getPropertiesByCategory(
   page: number = 1,
   pageSize: number = 9) {
   const currentLocale = getLocaleWithFallback(locale)
-  let qs = 'properties?populate[main_image][fields][0]=url&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&pagination[limit]=100'
+  let qs = 'properties?populate[main_image][fields][0]=url&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&populate[amenities][fields][0]=Name&populate[amenities][fields][1]=slug&pagination[limit]=100'
 
   // Agregar parámetro locale
   qs += `&locale=${encodeURIComponent(currentLocale)}`
@@ -100,9 +110,7 @@ export function getPropertiesByCategory(
     qs += `&filters[property_status][Title][$eq]=${encodeURIComponent(propertyStatus)}`
   }
 
-  console.log('=== getPropertiesByCategory Final Query ===');
-  console.log('Query string:', qs);
-  console.log('Locale:', currentLocale);
+
 
   return query(`${qs}`)
     .then(res => {
@@ -140,10 +148,7 @@ export function getPropertiesByCategory(
           : ''
         const propertyStatus = property_status ? property_status.Title : ''
 
-        console.log('=== getPropertiesByCategory DEBUG ===');
-        console.log('Property title:', title);
-        console.log('Raw property_status:', property_status);
-        console.log('Extracted propertyStatus:', propertyStatus);
+       
 
         return {
           id,
@@ -159,7 +164,7 @@ export function getPropertiesByCategory(
           type,
           city,
           state,
-          amenities
+          amenities: amenities || []
         }
       })
       return {
@@ -177,7 +182,7 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
   const pageSize = typeof filter.pageSize === 'number' && filter.pageSize > 0 ? filter.pageSize : 9
 
   // Arreglar la query para populizar correctamente los campos
-  let queryString = 'properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug'
+  let queryString = 'properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[amenities][fields][0]=Name&populate[amenities][fields][1]=slug'
 
   // Agregar parámetro locale
   queryString += `&locale=${encodeURIComponent(currentLocale)}`
@@ -219,6 +224,12 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
   if (filter.location && filter.location.trim() !== '') {
     queryString += `&filters[location][$containsi]=${encodeURIComponent(filter.location)}`
     console.log('Added location filter:', filter.location);
+  }
+
+  if (filter.amenities && filter.amenities.trim() !== '') {
+    queryString += `&filters[amenities][Name][$contains]=${encodeURIComponent(filter.amenities)}`
+    console.log('Added amenities filter:', filter.amenities);
+    console.log('Full query string with amenities:', queryString);
   }
 
 
@@ -268,7 +279,8 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           slug,
           property_status,
           category,
-          location
+          location,
+          amenities
 
         } = property
 
@@ -282,6 +294,7 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           console.log('Property title:', title);
           console.log('Property status:', propertyStatus);
           console.log('Category:', category);
+          console.log('Amenities:', amenities);
         }
 
         return {
@@ -295,7 +308,8 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           slug,
           propertyStatus,
           category,
-          location
+          location,
+          amenities: amenities || []
         }
       })
 
