@@ -2,7 +2,7 @@
     "welcome": "Welcome to Baruch Real Estate",
     "navigation": {
         "home": "Home",
-        "about": "About Us",
+        "about": "About",
         "properties": "Properties",
         "services": "Services",
         "contact": "Contact",
@@ -47,7 +47,12 @@
         "title-popular-locations-6": "Properties for sale in Benahavís",
         "title-popular-locations-7": "Properties for sale in Rincon",
         "title-popular-locations-8": "Properties for sale in Torox",
-        "title-popular-locations-9": "Properties for sale in Malaga"
+        "title-popular-locations-9": "Properties for sale in Malaga",
+        "category-1": "Villas",
+        "category-2": "Apartments",
+        "category-3": "New Developments",
+        "category-4": "Golf Properties"
+       
     },
     "home": {
         "btn-1-hero": "View Properties",
@@ -101,8 +106,8 @@
     "about": {
         "company": "About Company",
         "hero": {
-            "title": "Your Trusted Partner for Costa del Sol Property",
-            "description": "Dreaming of life under the sun, surrounded by stunning landscapes, rich culture, and a warm, welcoming community? At Baruch Real Estate, we do more than help you buy or sell property, we help you build the life you've always imagined on the Costa del Sol.",
+            "title": "Your Trusted Partner",
+            "description": "At Baruch Real Estate, we believe in building lasting relationships based on trust, transparency, and personal contact. For us, real estate is not just about properties, it’s about people. We guide you through the process step by step. With care, clarity, and a focus on quality at every stage. And our support doesn’t stop once you’ve bought a property. We are here to answer your questions and assist you even after the keys are in your hands.",
             "btn_text": "Get in touch"
         },
         "others3": {
@@ -129,9 +134,9 @@
             }
         },
         "others4": {
-                "subtitle": "Why Choose Us",
-                "title": "Why Choose Baruch Real Estate?",
-                "description": "At Baruch Real Estate, we believe that real estate is first and foremost about relationships. We don’t just sell houses. We connect people with the right lifestyle, neighborhood, and future. Our team consists of local residents who know the Costa del Sol not just as real estate professionals, but as proud members of the community. Whether you’re drawn to the energy of Marbella, the family-friendly charm of Fuengirola, or the peaceful elegance of Benahavís, we’ll help you find the perfect match. Not only for your needs, but for your way of life.",
+                "subtitle": "Ready for the next step? ",
+                "title": " We’ll be more than happy to guide you and make the process as smooth as possible.",
+                
             "btn_text": "Contact Us"
             },
         "meet-the-team": {

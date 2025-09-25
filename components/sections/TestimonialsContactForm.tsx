@@ -130,7 +130,7 @@ export default function TestimonialsContactForm() {
   }, []);
 
   return (
-    <div className="contact-form-container-testimonials">
+    <div className="contact-form-container-testimonials" id="contact">
       <h3 className="form-title">{t('testimonials.contact-title')}</h3>
       {submitStatus === 'success' && (
         <div className="alert alert-success mb-3">{t('testimonials.success-message')}</div>

@@ -93,59 +93,20 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                                     {t('navigation.about')}
                                                 </Link>
                                                 <ul className={`dropdown-menu ${styles.dropdownMenu} ${aboutDropdownOpen ? styles.show : ''}`}>
-                                                    <li>
-                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/about-us">{t('navigation.about')}</Link>
-                                                    </li>
+                                                    
                                                     <li>
                                                         <Link className={`dropdown-item ${styles.dropdownItem}`} href="/magazine">{t('navigation.magazine')}</Link>
                                                     </li>
                                                     <li>
                                                         <Link className={`dropdown-item ${styles.dropdownItem}`} href="/testimonials">{t('navigation.testimonials')}</Link>
                                                     </li>
-                                                    <li>
-                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/contact">{t('navigation.contact')}</Link>
-                                                    </li>
+                                                    
                                                 </ul>
                                             </li>
-                                            <li
-                                                ref={servicesDropdownRef}
-                                                className={`dropdown ${styles.headerDropdown}`}
-                                                onMouseEnter={() => setServicesDropdownOpen(true)}
-                                                onMouseLeave={() => setServicesDropdownOpen(false)}
-                                            >
-                                                <Link
-                                                    href="/about-us"
-                                                    className={`dropdown-toggle ${styles.dropdownToggle}`}
-                                                    tabIndex={0}
-                                                    onFocus={() => setServicesDropdownOpen(true)}
-                                                    onBlur={() => setServicesDropdownOpen(false)}
-                                                >
-                                                    {t('navigation.services')}
-                                                </Link>
-                                                <ul className={`dropdown-menu ${styles.dropdownMenu} ${servicesDropdownOpen ? styles.show : ''}`}>
-                                                    <li>
-                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/about-us">{t('footer.title-services-1')}</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/magazine">{t('footer.title-services-2')}</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/testimonials">{t('footer.title-services-3')}</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/contact">{t('footer.title-services-4')}</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/contact">{t('footer.title-services-5')}</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/contact">{t('footer.title-services-6')}</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/contact">{t('footer.title-services-7')}</Link>
-                                                    </li>
-                                                </ul>
+                                            <li>
+                                                <Link href="/services">{t('navigation.services')}</Link>
                                             </li>
+                                            
 
                                             <li>    
                                                 <Link href="/contact">{t('navigation.contact')}</Link>

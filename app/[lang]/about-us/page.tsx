@@ -98,7 +98,6 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
                       <div className="col-lg-6 m-auto">
                         <div className="space30"></div>
                         <div className="space30"></div>
-
                         <TestimonialsClientForm/>                
                         
                       </div>

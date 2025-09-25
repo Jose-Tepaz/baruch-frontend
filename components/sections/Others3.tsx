@@ -15,15 +15,7 @@ export default function Others3() {
                 <div className="padding-global">
 
                     <div className="container-large">
-                    <div className="row">
-                        <div className="col-lg-6 m-auto">
-                            <div className=" text-center space-margin60">
-                               
-                                <div className="space16" />
-                                <h2 className="text-color-blue">{t('about.others3.title')}</h2>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     <div className="wrapp-content-mission">
                         <div className="col-lg-6">

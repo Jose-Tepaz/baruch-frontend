@@ -3,6 +3,7 @@ import Link from "next/link";
 import logoWhite from '@/public/assets/img/logo/logo-baruch-white.svg';
 import { useTranslation } from "@/utils/i18n-simple";
 import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 
 interface Category {
     id?: number;
@@ -14,6 +15,8 @@ interface Category {
 
 export default function Footer1() {
     const { t } = useTranslation('common')
+    const params = useParams();
+    const locale = params.lang as string;
     const [categories, setCategories] = useState<Category[]>([]);
     const [loading, setLoading] = useState(true);
 
@@ -203,23 +206,19 @@ export default function Footer1() {
                                 <div className="footer-widget-area foot-padding2">
                                     <p className="text-white text-size-large text-weight-medium" style={{ marginBottom: '16px' }}>{t('footer.head-title-2')}</p>
                                     <ul className="text-white">
-                                        {loading ? (
-                                            <li>
-                                                <span className="text-white">Cargando categorías...</span>
-                                            </li>
-                                        ) : categories.length > 0 ? (
-                                            categories.slice(0, 5).map((category: Category) => (
-                                                <li key={category.id || category.slug}>
-                                                    <Link href={`/categories/${category.slug}`} className="text-white">
-                                                        {category.name}
-                                                    </Link>
-                                                </li>
-                                            ))
-                                        ) : (
-                                            <li>
-                                                <span className="text-white">No hay categorías disponibles</span>
-                                            </li>
-                                        )}
+                                       
+                                    <li>
+                                        <Link href={`/${locale}/properties?category=Villas`} className="text-white">{t('footer.category-1')}</Link>
+                                    </li>
+                                    <li>
+                                        <Link href={`/${locale}/properties?category=apartaments`} className="text-white">{t('footer.category-2')}</Link>
+                                    </li>
+                                    <li>
+                                        <Link href={`/${locale}/properties?category=new-developments`} className="text-white">{t('footer.category-3')}</Link>
+                                    </li>
+                                    <li>
+                                        <Link href={`/${locale}/properties?category=golf-properties`} className="text-white">{t('footer.category-4')}</Link>
+                                    </li>
                                     </ul>
                                 </div>
                             </div>
@@ -228,18 +227,10 @@ export default function Footer1() {
                             
                         </div>
                         <div className="space24" />
-                        <div className="col-lg-12">
-                            <div className="copyright-area">
+                        <div >
+                            <div className="copyright-area" style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                                 <p className="text-white">© 2025 Baruch Real Estate All Rights Reserved.</p>
-                                <ul>
-                                    <li>
-                                        <Link href="/privacy-policy" className="text-white">Privacy Policy</Link>
-                                        <span> | </span>
-                                    </li>
-                                    <li>
-                                        <Link href="/privacy-policy" className="text-white">Terms Of Condition</Link>
-                                    </li>
-                                </ul>
+                                
                             </div>
                         </div>
                     </div>

@@ -2,7 +2,7 @@
     "welcome": "Willkommen bei Baruch Real Estate",
     "navigation": {
         "home": "Startseite",
-        "about": "Über uns",
+        "about": "Über",
         "properties": "Eigenschaften",
         "services": "Dienstleistungen",
         "contact": "Kontakt",
@@ -106,9 +106,10 @@
     },
     "about": {
         "company": "Über uns",
+        
         "hero": {
-            "title": "Ihr vertrauenswürdiger Partner für Immobilien in Costa del Sol",
-            "description": "Träumen Sie von einem Leben unter der Sonne, umgeben von beeindruckenden Landschaften, reicher Kultur und einer warmen, einladenden Gemeinschaft? Bei Baruch Real Estate helfen wir Ihnen nicht nur, Eigentum zu kaufen oder zu verkaufen, sondern wir helfen Ihnen, das Leben zu schaffen, das Sie immer gewünscht haben, auf der Costa del Sol.",
+            "title": "Ihr Vertrauenspartner",
+            "description": "Bei Baruch Real Estate glauben wir, dass das Finden eines Hauses nicht nur darum geht, ein Dach über dem Kopf zu haben – es geht darum, ein Ort zu entdecken, der zu Ihrem einzigartigen Lebensstil passt. Ob Sie nach einem gemütlichen Appartment oder einem großzügigen Haus suchen.",
             "btn_text": "Kontaktiere uns"
         },
         "others3": {
@@ -135,9 +136,8 @@
             }
         },
         "others4": {
-            "subtitle": "Warum wählen Sie uns?",
-            "title": "Warum wählen Sie Baruch Real Estate?",
-            "description": "Bei Baruch Real Estate glauben wir, dass Immobilien zuerst und vor allem um Beziehungen gehen. Wir verkaufen nicht nur Häuser. Wir verbinden Menschen mit dem richtigen Lebensstil, Nachbarschaft und Zukunft. Unser Team besteht aus lokalen Bewohnern, die die Costa del Sol nicht nur als Immobilienexperten, sondern als stolz Mitglieder der Gemeinschaft kennen. Ob Sie von der Energie von Marbella, der familiären Charme von Fuengirola oder der friedlichen Eleganz von Benahavís angezogen werden, wir helfen Ihnen, den perfekten Treffer zu finden. Nicht nur für Ihre Bedürfnisse, sondern für Ihr Leben.",
+            "subtitle": "Bereit für den nächsten Schritt?",
+            "title": "Wir freuen uns, Sie zu begleiten und den Prozess so reibungslos wie möglich zu gestalten.",
             "btn_text": "Kontaktiere uns"
         }  
     },

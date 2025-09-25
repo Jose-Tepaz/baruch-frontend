@@ -24,9 +24,7 @@ export default function AboutHero() {
                     <div className="container-large"> 
                         <div className="wrapper-about-hero-content">                 
                             <div className="about-hero-content">
-                                <div className="subtitle fade-in-up">
-                                    <h5 className="text-color-blue">{t('about.company')}</h5>
-                                </div>
+                                
                                 
                                 <div className="main-title fade-in-up">
                                     <h3 className="text-color-blue text-align-center size-32">{t('about.hero.title')}</h3>
@@ -38,17 +36,7 @@ export default function AboutHero() {
                                     </p>
                                 </div>
                                 <div className="space20" />
-                                <div className="btn-area1 mt-0">
-                                    <Link href="/contact" className="vl-btn1 mt-0">
-                                        {t('about.hero.btn_text')}
-                                        <span className="arrow1 ms-2">
-                                            <i className="fa-solid fa-arrow-right" />
-                                        </span>
-                                        <span className="arrow2 ms-2">
-                                            <i className="fa-solid fa-arrow-right" />
-                                        </span>
-                                    </Link>
-                                </div>
+                                
                             </div>
                             <div className="about-hero-image fade-in-up">
                                 <div className="image-container-hero-about">

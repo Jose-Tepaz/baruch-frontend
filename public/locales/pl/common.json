@@ -102,9 +102,9 @@
   "about": {
       "company": "O nas",
       "hero": {
-          "title": "Twój zaufany partner dla nieruchomości na Costa del Sol",
-          "description": "Marzenie o życiu pod słońcem, otoczonym wspaniałymi krajobrazami, bogatą kulturą i ciepłą, przyjazną społecznością? W Baruch Real Estate robimy więcej niż pomagamy Ci kupić lub sprzedać nieruchomość, pomagamy Ci zbudować życie, które zawsze marzyłeś na Costa del Sol.",
-          "btn_text": "Skontaktuj się z nami"
+          "title": "Twój zaufany partner",
+            "description": "W Baruch Real Estate, wierzymy, że nieruchomości są pierwszą i najważniejszą rzeczą w relacjach. Nie tylko sprzedajemy domy. Łączymy ludzi z odpowiednim stylem życia, dzielnicą i przyszłością. Nasz zespół składa się z lokalnych mieszkańców, którzy nie tylko są profesjonalistami w dziedzinie nieruchomości, ale także zafascynowani przez społeczność. Czy jesteś przyciągany przez energię Marbella, przyjazny charakter Fuengiroli, czy spokojna elegancja Benahavís, pomożemy Ci znaleźć idealne dopasowanie. Nie tylko dla Twoich potrzeb, ale także dla Twojego stylu życia.",
+            "btn_text": "Skontaktuj się z nami"
       },
       "others3": {
           "subtitle": "Misja & Wizja",
@@ -130,10 +130,9 @@
           }
       },
       "others4": {
-              "subtitle": "Dlaczego wybrać nas",
-              "title": "Dlaczego wybrać Baruch Real Estate?",
-              "description": "W Baruch Real Estate, wierzymy, że nieruchomości są pierwszą i najważniejszą rzeczą w relacjach. Nie tylko sprzedajemy domy. Łączymy ludzi z odpowiednim stylem życia, dzielnicą i przyszłością. Nasz zespół składa się z lokalnych mieszkańców, którzy nie tylko są profesjonalistami w dziedzinie nieruchomości, ale także zafascynowani przez społeczność. Czy jesteś przyciągany przez energię Marbella, przyjazny charakter Fuengiroli, czy spokojna elegancja Benahavís, pomożemy Ci znaleźć idealne dopasowanie. Nie tylko dla Twoich potrzeb, ale także dla Twojego stylu życia.",
-          "btn_text": "Skontaktuj się z nami"
+        "subtitle": "Czy jesteś gotowy na następny krok? ",
+        "title": "Pomocemy Cię i uczynimy proces tak płynny jak to możliwe.",    
+    "btn_text": "Skontaktuj się z nami"
           },
       "meet-the-team": {
        "title": "Poznaj nasz zespół",

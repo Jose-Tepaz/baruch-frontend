@@ -103,8 +103,8 @@
     "about": {
             "company": "À propos de l'Entreprise",
         "hero": {
-            "title": "Ton Partenaire de Confiance pour les Propriétés en Costa del Sol",
-            "description": "Voudrais-tu vivre sous le soleil, entouré de paysages impressionnants, d'une culture riche et d'une communauté chaleureuse et accueillante? En Baruch Real Estate, nous faisons plus que vous aider à acheter ou vendre des propriétés, nous vous aidons à construire la vie que vous avez toujours imaginée en Costa del Sol.",
+           "title": "Ton Partenaire de Confiance",
+            "description": "En Baruch Real Estate, nous croyons à la construction de relations durables basées sur la confiance, la transparence et le contact personnel. Pour nous, l'immobilier n'est pas seulement sur les propriétés, c'est sur les personnes. Nous vous guidons étape par étape à travers le processus. Avec soin, clarté et un focus sur la qualité à chaque étape. Et notre support ne s'arrête pas une fois que vous avez acheté une propriété. Nous sommes ici pour répondre à vos questions et vous aider même après que les clés soient dans vos mains.",
             "btn_text": "Contactez-nous"
         },
         "others3": {
@@ -131,10 +131,10 @@
             }
         },
         "others4": {
-            "subtitle": "Pourquoi nous choisir?",
-            "title": "Pourquoi choisir Baruch Real Estate?",
-            "description": "Chez Baruch Real Estate, nous pensons que l'immobilier est avant tout lié aux relations. Nous ne vendons pas seulement des maisons. Nous connectons les gens avec le bon style de vie, le quartier et le futur. Notre équipe est composée de résidents locaux qui connaissent la Costa del Sol non seulement comme professionnels de l'immobilier, mais comme membres fiers de la communauté. Que vous soyez attiré par l'énergie de Marbella, le charme familial de Fuengirola ou l'élégance paisible de Benahavís, nous vous aiderons à trouver le bon compromis. Non seulement pour vos besoins, mais pour votre façon de vivre.",
-            "btn_text": "Contactez-nous"
+            "subtitle": "Prêt pour le prochain pas? ",
+            "title": "Nous serons heureux de vous guider et de rendre le processus aussi fluide que possible.",
+            
+        "btn_text": "Contactez-nous"
         }
     },
     "services": {

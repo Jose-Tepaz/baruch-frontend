@@ -5627,7 +5627,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 .footer-cta-bg-area .cta1-section-area {
     background: var(--ztc-bg-bg-1);
     padding: 60px 0 60px;
-    border-radius: 30px;
+    border-radius: 16px;
     position: absolute;
     left: auto;
     right: auto;
@@ -9890,7 +9890,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 .section-choose {
     background: var(--ztc-bg-bg-3);
-    border-radius: 40px;
+    border-radius: 0px;
 }
 
 .choose1 {

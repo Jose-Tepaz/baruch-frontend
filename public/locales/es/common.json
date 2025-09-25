@@ -104,8 +104,8 @@
     "about": {
         "company": "Acerca de la Empresa",
         "hero": {
-            "title": "Tu Socio de Confianza para Propiedades en Costa del Sol",
-            "description": "¿Sueñas con una vida bajo el sol, rodeado de paisajes impresionantes, rica cultura y una comunidad cálida y acogedora? En Baruch Real Estate, hacemos más que ayudarte a comprar o vender propiedades, te ayudamos a construir la vida que siempre has imaginado en la Costa del Sol.",
+            "title": "Tu Socio de Confianza", 
+            "description": "En Baruch Real Estate, creemos en construir relaciones duraderas basadas en confianza, transparencia y contacto personal. Para nosotros, la inmobiliaria no es solo sobre propiedades, es sobre personas. Te guiamos paso a paso a través del proceso. Con cuidado, claridad y un enfoque en la calidad en cada etapa. Y nuestro soporte no termina una vez que has comprado una propiedad. Estamos aquí para responder tus preguntas y asistirte incluso después de que las llaves estén en tus manos.",
             "btn_text": "Contactanos"
         },
         "others3": {
@@ -132,10 +132,10 @@
             }
         },
         "others4": {
-            "subtitle": "¿Por qué elegirnos?",
-            "title": "¿Por qué elegir Baruch Real Estate?",
-            "description": "En Baruch Real Estate, creemos que las propiedades son primero y principalmente sobre relaciones. No vendemos solo casas. Conectamos a las personas con el estilo de vida, barrio y futuro adecuados. Nuestro equipo está formado por residentes locales que conocen la Costa del Sol no solo como profesionales inmobiliarios, sino como orgullosos miembros de la comunidad. Ya sea que te atraigan la energía de Marbella, el encanto familiar de Fuengirola o la elegancia tranquila de Benahavís, te ayudaremos a encontrar el perfecto. No solo para tus necesidades, sino para tu estilo de vida.",
-            "btn_text": "Contactanos"
+            "subtitle": "¿Listo para el siguiente paso? ",
+            "title": "Te ayudaremos a guiarte y hacer el proceso lo más suave posible.",
+            
+        "btn_text": "Contactanos"
         }
     },
     "services": {

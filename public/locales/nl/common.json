@@ -101,9 +101,9 @@
   "about": {
     "company": "Over het bedrijf",
     "hero": {
-      "title": "Jouw vertrouwde partner voor vastgoed aan de Costa del Sol",
-      "description": "Droom je van een leven onder de zon, omringd door prachtige landschappen, rijke cultuur en een warme, gastvrije gemeenschap? Bij Baruch Real Estate doen we meer dan alleen helpen bij het kopen of verkopen van vastgoed, we helpen je het leven op te bouwen dat je altijd al hebt gewenst aan de Costa del Sol.",
-      "btn_text": "Neem contact op"
+      "title": "Jouw Vertrouwde Partner",
+            "description": "Bij Baruch Real Estate geloven we dat vastgoed in de eerste plaats draait om relaties. We verkopen niet alleen huizen. We verbinden mensen met de juiste levensstijl, buurt en toekomst. Ons team bestaat uit lokale bewoners die de Costa del Sol niet alleen kennen als vastgoedprofessionals, maar als trotse leden van de gemeenschap. Of je nu wordt aangetrokken door de energie van Marbella, de gezinsvriendelijke charme van Fuengirola of de rustige elegantie van Benahavís, wij helpen je de perfecte match te vinden. Niet alleen voor je behoeften, maar voor jouw manier van leven.",
+            "btn_text": "Neem contact op"
     },
     "others3": {
       "subtitle": "Missie & Visie",
@@ -128,10 +128,10 @@
       }
     },
     "others4": {
-      "subtitle": "Waarom voor ons kiezen",
-      "title": "Waarom kiezen voor Baruch Real Estate?",
-      "description": "Bij Baruch Real Estate geloven we dat vastgoed in de eerste plaats draait om relaties. We verkopen niet alleen huizen. We verbinden mensen met de juiste levensstijl, buurt en toekomst. Ons team bestaat uit lokale bewoners die de Costa del Sol niet alleen kennen als vastgoedprofessionals, maar als trotse leden van de gemeenschap. Of je nu wordt aangetrokken door de energie van Marbella, de gezinsvriendelijke charme van Fuengirola of de rustige elegantie van Benahavís, wij helpen je de perfecte match te vinden. Niet alleen voor je behoeften, maar voor jouw manier van leven.",
-      "btn_text": "Neem contact op"
+      "subtitle": "Klaar voor de volgende stap? ",
+      "title": "We helpen je graag en maken het proces zo soepel mogelijk.",
+      
+  "btn_text": "Contacteer ons"
     },
     "meet-the-team": {
       "title": "Ontmoet het team",

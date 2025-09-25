@@ -47,89 +47,22 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
                                     </li>
                                     <li>
                                         <div className={`mobile-dropdown ${isAccordion === 1 ? 'open' : ''}`}>
-                                            <button
-                                                className="mobile-dropdown-toggle options-mobile-menu"
-                                                onClick={() => handleAccordion(1)}
-                                            >
+                                            <Link href="/about-us" className="options-mobile-menu">
                                                 {t('navigation.about')}
-                                                <span style={{ float: "right" }}>
-                                                    <i className={`fa-solid fa-chevron-${isAccordion === 1 ? 'up' : 'down'}`}></i>
-                                                </span>
-                                            </button>
-                                            {isAccordion === 1 && (
-                                                <ul className="mobile-dropdown-menu" style={{ listStyle: "none", paddingLeft: "1.5rem", marginTop: "0px", paddingBottom: "16px" }}>
-                                                    <li>
-                                                        <Link href="/about-us">
-                                                            {t('footer.title-1-footer')}
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/magazine">
-                                                            {t('footer.title-2-footer')}
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/testimonials">
-                                                            {t('footer.title-3-footer')}
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            )}
+                                            </Link>
+                                            <Link href="/magazine" className="options-mobile-menu">
+                                                {t('footer.title-2-footer')}
+                                            </Link>
+                                            <Link href="/testimonials" className="options-mobile-menu">
+                                                {t('footer.title-3-footer')}
+                                            </Link>
+                                            
                                         </div>
                                         </li>
                                     <li>
-                                        <div className={`mobile-dropdown ${isAccordion === 2 ? 'open' : ''}`}>
-                                            <button
-                                                className="mobile-dropdown-toggle options-mobile-menu"
-                                                
-                                                onClick={() => handleAccordion(2)}
-                                                
-                                            >
-                                                {t('navigation.services')}
-                                                <span style={{ float: "right" }}>
-                                                    <i className={`fa-solid fa-chevron-${isAccordion === 2 ? 'up' : 'down'}`}></i>
-                                                </span>
-                                            </button>
-                                            {isAccordion === 2 && (
-                                                <ul className="mobile-dropdown-menu" style={{ listStyle: "none", paddingLeft: "1.5rem", marginTop: "0px", paddingBottom: "16px" }}>
-                                                    <li>
-                                                        <Link href="/about-us">
-                                                            {t('footer.title-services-1')}
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/magazine">
-                                                            {t('footer.title-services-2')}
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/testimonials">
-                                                            {t('footer.title-services-3')}
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/contact">
-                                                            {t('footer.title-services-4')}
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/privacy-policy">
-                                                            {t('footer.title-services-5')}
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/privacy-policy">
-                                                            {t('footer.title-services-6')}
-                                                        </Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/privacy-policy">
-                                                            {t('footer.title-services-7')}
-                                                        </Link>
-                                                    </li>
-                                                </ul>
-                                            )}
-                                        </div>
+                                        <Link href="/services" className="options-mobile-menu">
+                                            {t('navigation.services')}
+                                        </Link>
                                     </li>
                                     
                                 </ul>
