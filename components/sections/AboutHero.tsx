@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useTranslation } from "@/utils/i18n-simple";
 import { useEffect } from 'react';
-import Image1 from '@/public/assets/img/all-images/about/img-hero.webp'
+import Image1 from '@/public/assets/img/all-images/about/about-hero.webp'
 
 export default function AboutHero() {
     const { t, i18n } = useTranslation('common');
@@ -19,7 +19,8 @@ export default function AboutHero() {
 
     return (
         <>
-            <div className="about-hero-section">
+            <div className="about-hero-section" style={{backgroundImage: `url(${Image1.src})`}}>
+                <div className="overlay-about-hero" style={{background: 'rgba(0,0,0,0.2)'}}>
                 <div className="padding-global">
                     <div className="container-large"> 
                         <div className="wrapper-about-hero-content">                 
@@ -27,29 +28,25 @@ export default function AboutHero() {
                                 
                                 
                                 <div className="main-title fade-in-up">
-                                    <h3 className="text-color-blue text-align-center size-32">{t('about.hero.title')}</h3>
+                                    <h3 className="text-white text-align-center size-32">{t('about.hero.title')}</h3>
                                 </div>
                                 
                                 <div className="description fade-in-up">
-                                    <p className="size-16 text-align-center">
+                                    <p className="size-16 text-align-center text-white">
                                         {t('about.hero.description')}
                                     </p>
                                 </div>
                                 <div className="space20" />
+                                <div className="space20" />
+                                
                                 
                             </div>
-                            <div className="about-hero-image fade-in-up">
-                                <div className="image-container-hero-about">
-                                    <img 
-                                        src={Image1.src} 
-                                        alt="Modern Costa del Sol Property" 
-                                        className="img-hero-about"
-                                    />
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
+                    </div>  
+                
             </div>
         </>
     );

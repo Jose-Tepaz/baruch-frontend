@@ -1,17 +1,17 @@
 import Layout from "@/components/layout/Layout";
 import InnerHeader from "@/components/layout/InnerHeader";
 import AboutHero from "@/components/sections/AboutHero";
-import About1 from "@/components/sections/About1";
 import Others4 from "@/components/sections/Others4";
-import Others3 from "@/components/sections/Others3";
-import Team1 from "@/components/sections/Team1";
-import AboutForSellers from "@/components/sections/AboutForSellers";
-import TestimonialsClientForm from "@/components/sections/TestimonialsContactForm";
+import AboutForSellers from "@/components/sections/AboutForSellers"; 
+import AboutForBuyers from "@/components/sections/AboutForBuyers";
+
+import ContactForm from "@/components/sections/contactForm";
 
 
 import PropertyList1 from "@/components/sections/PropertieList1";
 import { getProperties } from "@/services/get-properties";
 import { Metadata } from 'next';
+import Link from "next/link";
 
 interface AboutUsPageProps {
     params: Promise<{
@@ -88,18 +88,44 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
         <>
             <Layout>
                 <AboutHero /> {/* Hero Section */}
-               <div className="space30"></div>
-                <Others3 /> {/* About Section */}
-                <AboutForSellers /> {/* About For Sellers Section */}
-                <Others4 /> {/* Mission Section */}
+               
+               <AboutForBuyers /> {/* About For Sellers Section */}
+                <AboutForSellers /> {/* About Section */}
+                
+               
                 <div className="padding-global">
                   <div className="container-large">
                     <div className="row">
+                      <div className="col-lg-6  justify-content-center  align-items-start d-flex flex-column">
+                        <div className="space30"></div>
+                        <img src="/assets/img/all-images/about/about-hero.webp" style={{width: '100%', height: '250px', objectFit: 'cover' }} />
+                        <div className="space30"></div>
+                        <h2 className="text-color-black text-size-32">Our Services</h2>
+                        <div className="space16"></div>
+                        <p className="text-color-black text-size-medium">At Baruch Real Estate, we believe in building lasting relationships based on trust, transparency, and personal contact. For us, real estate is not just about properties, it’s about people. We guide you through the process step by step. With care, clarity,</p>
+                        <div className="space30"></div>
+                        <Link href="services" className="vl-btn1 is-primary">
+                          See all services
+                          <span className="arrow1 ms-2">
+                            <i className="fa-solid fa-arrow-right" />
+                          </span>
+                          <span className="arrow2 ms-2">
+                            <i className="fa-solid fa-arrow-right" />
+                          </span>
+                        </Link>
+                      </div>
                       <div className="col-lg-6 m-auto">
                         <div className="space30"></div>
-                        <div className="space30"></div>
-                        <TestimonialsClientForm/>                
-                        
+                        <div className="bg-color-white" style={{padding: '20px'}}>
+                          <h2 className="text-color-black  size-20 uppercase">Reay for the next step?</h2>
+                          <h3 className="text-color-black size-42 uppercase">Let’s connect</h3>
+                          <p className="text-color-black size-16">Please fill in your details below so we can contact you.</p>
+                          
+                          <div className="space16"></div>
+                          <ContactForm/>  
+                          <div className="space30"></div>
+                        </div>
+                                       
                       </div>
                     </div>
                   </div>
