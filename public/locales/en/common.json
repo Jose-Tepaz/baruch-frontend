@@ -147,11 +147,64 @@
     "services": {
         "title": "Real Estate Services Tailored Solutions",
         "card-1": "Buying Property",
-        "card-1-description": "At Baruch, we know that buying and home is one life’s biggest milestones, Our experienced team is here guide.",
+        "card-1-description": "At Baruch, we know that buying and home is one life's biggest milestones, Our experienced team is here guide.",
         "card-2": "Sell Property",
-        "card-2-description": "Selling your home doesn’t have to be overwhelming. With Baruch, our and dedicated experts will make process.",
+        "card-2-description": "Selling your home doesn't have to be overwhelming. With Baruch, our and dedicated experts will make process.",
         "card-3": "Renting Property",
-        "card-3-description": "Finding the right rental property is easy with Housebox. Whether you’re seeking a cozy apartment spacious."
+        "card-3-description": "Finding the right rental property is easy with Housebox. Whether you're seeking a cozy apartment spacious.",
+        "modal": {
+            "main-title": "THE SERVICES WE OFFER",
+            "subtitle": "We are passionate about simplifying the real estate process in Spain. With a deep understanding of the housing market in Spain and a client-first approach, we strive to help buyers, sellers, and renters achieve their property goals.",
+            "what-we-offer": "What we offer:",
+            "nie": {
+                "title": "NIE/residency",
+                "description": "We facilitate the entire process of obtaining your NIE (Foreign Identity Number) and residency in Spain. Our team will guide you through all necessary documentation and administrative procedures.",
+                "detail1": "Complete advice on required documentation",
+                "detail2": "Management of appointments at immigration offices",
+                "detail3": "Support throughout the entire process",
+                "detail4": "Renewals and documentation updates"
+            },
+            "finance": {
+                "title": "finance / mortgage",
+                "description": "We help you find the best mortgage financing options for your property. We work with leading financial institutions to secure the most favorable conditions.",
+                "detail1": "Analysis of your financing capacity",
+                "detail2": "Comparison of offers from multiple banks",
+                "detail3": "Negotiation of favorable conditions",
+                "detail4": "Guidance throughout the approval process"
+            },
+            "insurance": {
+                "title": "insurance",
+                "description": "We offer comprehensive insurance solutions to protect your real estate investment. From home insurance to life and health insurance.",
+                "detail1": "Property and content insurance",
+                "detail2": "Life and health insurance",
+                "detail3": "Liability insurance",
+                "detail4": "Claims management and renewals"
+            },
+            "tax": {
+                "title": "tax returns",
+                "description": "Our team of tax experts handles all your tax obligations in Spain, ensuring compliance with all current regulations.",
+                "detail1": "Annual income tax return",
+                "detail2": "Property taxes (IBI, capital gains)",
+                "detail3": "Declaration of assets abroad (Form 720)",
+                "detail4": "Legal tax optimization"
+            },
+            "legal": {
+                "title": "legal services",
+                "description": "We have a legal team specialized in real estate law that will assist you in all legal aspects of your real estate transaction.",
+                "detail1": "Review of purchase agreements",
+                "detail2": "Property due diligence",
+                "detail3": "Representation in public deeds",
+                "detail4": "Dispute resolution and litigation"
+            },
+            "management": {
+                "title": "Property Management",
+                "description": "We manage your property comprehensively, from maintenance to tenant management, so you can enjoy your investment worry-free.",
+                "detail1": "Tenant search and selection",
+                "detail2": "Maintenance and repairs",
+                "detail3": "Collection and payment management",
+                "detail4": "Detailed monthly reports"
+            }
+        }
     },
     "faq": {
         "title": "Frequently Asked Question",

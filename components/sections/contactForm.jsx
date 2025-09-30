@@ -205,7 +205,7 @@ export default function ContactForm() {
             <div className=" row d-flex justify-content-between align-items-center">
                 <div className="col-lg-6">
                     <div className="form-check">
-                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" required/>
                         <label className="form-check-label" htmlFor="flexCheckDefault">
                         I agree with the privacy statement of Baruch S.L.
                         </label>

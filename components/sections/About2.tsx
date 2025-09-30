@@ -1,8 +1,7 @@
 'use client';
 import Link from "next/link";
 import { useTranslation } from "@/utils/i18n-simple";
-import img_1 from '@/public/assets/img/home/img-1.png'
-import img_2 from '@/public/assets/img/home/img-2.png'
+import img_1 from '@/public/assets/img/all-images/home/hp-1.webp'
 
 // Este componente ya no recibe datos de la API, solo usa traducciones de common.json
 export default function About2() {
@@ -39,8 +38,8 @@ export default function About2() {
                         </div>
                         
                         <div className="col-lg-6">
-                            <div className="img2 image-anime reveal">
-                                <img src={img_2.src} alt="housa" />
+                            <div className="img2">
+                                <img src={img_1.src} alt="housa" />
                             </div>
                             
                         </div>

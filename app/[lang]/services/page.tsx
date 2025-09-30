@@ -1,8 +1,12 @@
 import Layout from "@/components/layout/Layout";
 import InnerHeader from "@/components/layout/InnerHeader";
+import ServicesWithModal from "@/components/sections/ServicesWithModal";
 import Service1 from "@/components/sections/Service1";
 import Faq1 from "@/components/sections/Faq1";
 import { Metadata } from 'next';
+
+import ContactForm from "@/components/sections/contactForm";
+import Link from "next/link";
 
 interface ServicesPageProps {
     params: Promise<{
@@ -75,11 +79,51 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
     return (
         <>
             <Layout>
-                <Service1 />
-              
+                <ServicesWithModal />
+                
+               
                 <div className="space30"></div>
-                <Faq1 />
-                <div className="space30"></div>
+                <div className="">
+                <div className="padding-global">
+                  <div className="container-large">
+                    <div className="row">
+                      <div className="col-lg-6  justify-content-center  align-items-start d-flex flex-column">
+                        <div className="space30"></div>
+                        <img src="/assets/img/all-images/about/about-hero.webp" style={{width: '100%', height: '250px', objectFit: 'cover' }} />
+                        <div className="space30"></div>
+                        <h2 className="text-color-black text-size-32">Property services</h2>
+                        <div className="space16"></div>
+                        <p className="text-color-black text-size-medium">By combining these services with our real estate expertise, we make the entire process of buying, owning, and living in Spain more transparent and less stressful. We always try to support you, even long after the purchase has been completed.</p>
+                        <div className="space30"></div>
+                        <Link href="services" className="vl-btn1 is-primary">
+                          See all services
+                          <span className="arrow1 ms-2">
+                            <i className="fa-solid fa-arrow-right" />
+                          </span>
+                          <span className="arrow2 ms-2">
+                            <i className="fa-solid fa-arrow-right" />
+                          </span>
+                        </Link>
+                      </div>
+                      <div className="col-lg-6 m-auto">
+                        <div className="space30"></div>
+                        <div className="bg-color-white" style={{padding: '20px'}}>
+                          <h2 className="text-color-black  size-20 uppercase">Reay for the next step?</h2>
+                          <h3 className="text-color-black size-42 uppercase">Let’s connect</h3>
+                          <p className="text-color-black size-16">Please fill in your details below so we can contact you.</p>
+                          
+                          <div className="space16"></div>
+                          <ContactForm/>  
+                          <div className="space30"></div>
+                        </div>
+                                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                </div>
+                
             </Layout>
         </>
     );

@@ -145,7 +145,60 @@
         "card-2": "Vender Propiedad",
         "card-2-description": "Vender tu casa no tiene por qué ser abrumador. Con Baruch, nuestros expertos y dedicados harán el proceso.",
         "card-3": "Alquilar Propiedad",
-        "card-3-description": "Encontrar la propiedad de alquiler correcta es fácil con Housebox. Ya sea que busques un apartamento acogedor o un hogar amplio."
+        "card-3-description": "Encontrar la propiedad de alquiler correcta es fácil con Housebox. Ya sea que busques un apartamento acogedor o un hogar amplio.",
+        "modal": {
+            "main-title": "LOS SERVICIOS QUE OFRECEMOS",
+            "subtitle": "Estamos apasionados por simplificar el mercado inmobiliario en España. Con un profundo conocimiento del mercado de vivienda en España y un enfoque centrado en el cliente, nos esforzamos por ayudar a compradores, vendedores e inquilinos a alcanzar sus objetivos inmobiliarios.",
+            "what-we-offer": "Lo que ofrecemos:",
+            "nie": {
+                "title": "NIE/residency",
+                "description": "Facilitamos todo el proceso de obtención de tu NIE (Número de Identificación de Extranjero) y residencia en España. Nuestro equipo te guiará a través de toda la documentación necesaria y los procedimientos administrativos.",
+                "detail1": "Asesoramiento completo sobre documentación requerida",
+                "detail2": "Gestión de citas en oficinas de extranjería",
+                "detail3": "Acompañamiento durante todo el proceso",
+                "detail4": "Renovaciones y actualizaciones de documentación"
+            },
+            "finance": {
+                "title": "finance / mortgage",
+                "description": "Te ayudamos a encontrar las mejores opciones de financiación hipotecaria para tu propiedad. Trabajamos con las principales entidades financieras para conseguir las condiciones más favorables.",
+                "detail1": "Análisis de tu capacidad de financiación",
+                "detail2": "Comparación de ofertas de múltiples bancos",
+                "detail3": "Negociación de condiciones favorables",
+                "detail4": "Asesoramiento durante todo el proceso de aprobación"
+            },
+            "insurance": {
+                "title": "insurance",
+                "description": "Ofrecemos soluciones de seguros completas para proteger tu inversión inmobiliaria. Desde seguros de hogar hasta seguros de vida y salud.",
+                "detail1": "Seguros de propiedad y contenido",
+                "detail2": "Seguros de vida y salud",
+                "detail3": "Seguros de responsabilidad civil",
+                "detail4": "Gestión de reclamaciones y renovaciones"
+            },
+            "tax": {
+                "title": "tax returns",
+                "description": "Nuestro equipo de expertos fiscales se encarga de todas tus obligaciones tributarias en España, asegurando el cumplimiento de todas las normativas vigentes.",
+                "detail1": "Declaración de la renta anual",
+                "detail2": "Impuestos sobre la propiedad (IBI, plusvalía)",
+                "detail3": "Declaración de bienes en el extranjero (Modelo 720)",
+                "detail4": "Optimización fiscal legal"
+            },
+            "legal": {
+                "title": "legal services",
+                "description": "Contamos con un equipo legal especializado en derecho inmobiliario que te asistirá en todos los aspectos legales de tu transacción inmobiliaria.",
+                "detail1": "Revisión de contratos de compraventa",
+                "detail2": "Due diligence de propiedades",
+                "detail3": "Representación en escrituras públicas",
+                "detail4": "Resolución de conflictos y litigios"
+            },
+            "management": {
+                "title": "Property Management",
+                "description": "Gestionamos tu propiedad de manera integral, desde el mantenimiento hasta la gestión de inquilinos, para que disfrutes de tu inversión sin preocupaciones.",
+                "detail1": "Búsqueda y selección de inquilinos",
+                "detail2": "Mantenimiento y reparaciones",
+                "detail3": "Gestión de cobros y pagos",
+                "detail4": "Informes mensuales detallados"
+            }
+        }
     },
     "faq": {
         "title": "Preguntas Frecuentes",

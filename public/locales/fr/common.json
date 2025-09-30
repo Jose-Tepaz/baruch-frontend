@@ -144,7 +144,60 @@
         "card-2": "Vendre une Propriété",
         "card-2-description": "Vendre votre maison ne doit pas être intimidant. Avec Baruch, nos experts et dévoués feront le processus.",
         "card-3": "Louer une Propriété",
-        "card-3-description": "Trouver la propriété de location correcte est facile avec Housebox. Que vous recherchiez un appartement confortable ou un grand logement."
+        "card-3-description": "Trouver la propriété de location correcte est facile avec Housebox. Que vous recherchiez un appartement confortable ou un grand logement.",
+        "modal": {
+            "main-title": "LES SERVICES QUE NOUS OFFRONS",
+            "subtitle": "Nous sommes passionnés par la simplification du processus immobilier en Espagne. Avec une compréhension approfondie du marché immobilier en Espagne et une approche centrée sur le client, nous nous efforçons d'aider les acheteurs, vendeurs et locataires à atteindre leurs objectifs immobiliers.",
+            "what-we-offer": "Ce que nous offrons:",
+            "nie": {
+                "title": "NIE/residency",
+                "description": "Nous facilitons l'ensemble du processus d'obtention de votre NIE (Numéro d'Identification des Étrangers) et de votre résidence en Espagne. Notre équipe vous guidera à travers toute la documentation nécessaire et les procédures administratives.",
+                "detail1": "Conseils complets sur la documentation requise",
+                "detail2": "Gestion des rendez-vous aux bureaux d'immigration",
+                "detail3": "Accompagnement tout au long du processus",
+                "detail4": "Renouvellements et mises à jour de la documentation"
+            },
+            "finance": {
+                "title": "finance / mortgage",
+                "description": "Nous vous aidons à trouver les meilleures options de financement hypothécaire pour votre propriété. Nous travaillons avec les principales institutions financières pour obtenir les conditions les plus favorables.",
+                "detail1": "Analyse de votre capacité de financement",
+                "detail2": "Comparaison des offres de plusieurs banques",
+                "detail3": "Négociation de conditions favorables",
+                "detail4": "Conseils tout au long du processus d'approbation"
+            },
+            "insurance": {
+                "title": "insurance",
+                "description": "Nous offrons des solutions d'assurance complètes pour protéger votre investissement immobilier. De l'assurance habitation à l'assurance vie et santé.",
+                "detail1": "Assurance habitation et contenu",
+                "detail2": "Assurance vie et santé",
+                "detail3": "Assurance responsabilité civile",
+                "detail4": "Gestion des réclamations et renouvellements"
+            },
+            "tax": {
+                "title": "tax returns",
+                "description": "Notre équipe d'experts fiscaux s'occupe de toutes vos obligations fiscales en Espagne, en assurant la conformité avec toutes les réglementations en vigueur.",
+                "detail1": "Déclaration de revenus annuelle",
+                "detail2": "Impôts sur la propriété (IBI, plus-value)",
+                "detail3": "Déclaration des biens à l'étranger (Formulaire 720)",
+                "detail4": "Optimisation fiscale légale"
+            },
+            "legal": {
+                "title": "legal services",
+                "description": "Nous avons une équipe juridique spécialisée en droit immobilier qui vous assistera dans tous les aspects juridiques de votre transaction immobilière.",
+                "detail1": "Révision des contrats de vente",
+                "detail2": "Due diligence des propriétés",
+                "detail3": "Représentation dans les actes publics",
+                "detail4": "Résolution des conflits et litiges"
+            },
+            "management": {
+                "title": "Property Management",
+                "description": "Nous gérons votre propriété de manière globale, de l'entretien à la gestion des locataires, afin que vous puissiez profiter de votre investissement sans souci.",
+                "detail1": "Recherche et sélection de locataires",
+                "detail2": "Entretien et réparations",
+                "detail3": "Gestion des encaissements et paiements",
+                "detail4": "Rapports mensuels détaillés"
+            }
+        }
     },
     "faq": {
         "title": "Questions Fréquemment Posées",

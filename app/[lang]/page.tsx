@@ -5,7 +5,7 @@ import { getCategories } from "@/services/categories";
 import { getPropertyStatuses } from "@/services/property-status";
 import { getAmenities } from "@/services/amenities";
 import { getHomeInfo } from "@/services/get-home-info";
-import imgLandscape from "@/public/assets/img/all-images/home/img-home.webp"
+import imgLandscape from "@/public/assets/img/all-images/home/hp-6.webp"
 import { Metadata } from 'next';
 import { getTestimonials } from "@/services/testimonials";
 import HeroHome from "@/components/sections/HeroHome";

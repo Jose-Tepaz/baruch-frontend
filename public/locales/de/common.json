@@ -148,7 +148,60 @@
         "card-2": "Eigentum verkaufen",
         "card-2-description": "Das Verkaufen Ihres Hauses muss nicht überwältigend sein. Mit Baruch unterstützen unsere erfahrenen Experten Sie bei jedem Schritt.",
         "card-3": "Eigentum mieten",
-        "card-3-description": "Das Finden des richtigen Mietobjekts ist mit Housebox einfach. Egal, ob Sie nach einem gemütlichen Appartment oder einem großzügigen Haus suchen."
+        "card-3-description": "Das Finden des richtigen Mietobjekts ist mit Housebox einfach. Egal, ob Sie nach einem gemütlichen Appartment oder einem großzügigen Haus suchen.",
+        "modal": {
+            "main-title": "DIE DIENSTLEISTUNGEN, DIE WIR ANBIETEN",
+            "subtitle": "Wir sind leidenschaftlich daran interessiert, den Immobilienprozess in Spanien zu vereinfachen. Mit einem tiefen Verständnis des Wohnungsmarktes in Spanien und einem kundenorientierten Ansatz bemühen wir uns, Käufern, Verkäufern und Mietern zu helfen, ihre Immobilienziele zu erreichen.",
+            "what-we-offer": "Was wir anbieten:",
+            "nie": {
+                "title": "NIE/residency",
+                "description": "Wir erleichtern den gesamten Prozess der Erlangung Ihrer NIE (Ausländeridentifikationsnummer) und Ihres Wohnsitzes in Spanien. Unser Team führt Sie durch alle erforderlichen Unterlagen und Verwaltungsverfahren.",
+                "detail1": "Vollständige Beratung zu erforderlichen Unterlagen",
+                "detail2": "Verwaltung von Terminen bei Ausländerbehörden",
+                "detail3": "Unterstützung während des gesamten Prozesses",
+                "detail4": "Erneuerungen und Aktualisierungen der Unterlagen"
+            },
+            "finance": {
+                "title": "finance / mortgage",
+                "description": "Wir helfen Ihnen, die besten Hypothekenfinanzierungsoptionen für Ihre Immobilie zu finden. Wir arbeiten mit führenden Finanzinstituten zusammen, um die günstigsten Konditionen zu sichern.",
+                "detail1": "Analyse Ihrer Finanzierungskapazität",
+                "detail2": "Vergleich von Angeboten mehrerer Banken",
+                "detail3": "Verhandlung günstiger Konditionen",
+                "detail4": "Beratung während des gesamten Genehmigungsprozesses"
+            },
+            "insurance": {
+                "title": "insurance",
+                "description": "Wir bieten umfassende Versicherungslösungen zum Schutz Ihrer Immobilieninvestition. Von Hausversicherung bis Lebens- und Krankenversicherung.",
+                "detail1": "Immobilien- und Inhaltsversicherung",
+                "detail2": "Lebens- und Krankenversicherung",
+                "detail3": "Haftpflichtversicherung",
+                "detail4": "Schadensmanagement und Erneuerungen"
+            },
+            "tax": {
+                "title": "tax returns",
+                "description": "Unser Team von Steuerexperten kümmert sich um alle Ihre Steuerpflichten in Spanien und stellt die Einhaltung aller aktuellen Vorschriften sicher.",
+                "detail1": "Jährliche Einkommensteuererklärung",
+                "detail2": "Grundsteuern (IBI, Wertzuwachssteuer)",
+                "detail3": "Erklärung von Vermögen im Ausland (Formular 720)",
+                "detail4": "Legale Steueroptimierung"
+            },
+            "legal": {
+                "title": "legal services",
+                "description": "Wir haben ein auf Immobilienrecht spezialisiertes Rechtsteam, das Sie in allen rechtlichen Aspekten Ihrer Immobilientransaktion unterstützt.",
+                "detail1": "Überprüfung von Kaufverträgen",
+                "detail2": "Due Diligence von Immobilien",
+                "detail3": "Vertretung bei öffentlichen Urkunden",
+                "detail4": "Streitbeilegung und Rechtsstreitigkeiten"
+            },
+            "management": {
+                "title": "Property Management",
+                "description": "Wir verwalten Ihre Immobilie umfassend, von der Wartung bis zur Mieterverwaltung, damit Sie Ihre Investition sorgenfrei genießen können.",
+                "detail1": "Mietersuche und -auswahl",
+                "detail2": "Wartung und Reparaturen",
+                "detail3": "Einzugs- und Zahlungsmanagement",
+                "detail4": "Detaillierte monatliche Berichte"
+            }
+        }
     },
     "faq": {
         "title": "Häufig gestellte Fragen",
