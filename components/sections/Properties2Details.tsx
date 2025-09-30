@@ -25,10 +25,11 @@ export default function Properties2Details({ property }: { property: Property })
         <>
             {/*===== PROPERTIES AREA STARTS =======*/}
             <div className="properties2-others sp1">
-                <div className="space100"></div>
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-lg-12">
+
+                <div className="padding-global">
+                    <div className="container-large">
+                    <div className="space100"></div>
+                        <div className="col-lg-12 ">
                             <Swiper
                                 modules={[Navigation, Thumbs]}
                                 navigation={true}
@@ -63,6 +64,10 @@ export default function Properties2Details({ property }: { property: Property })
                         </div>
                     </div>
                 </div>
+
+
+                
+               
             </div>
             {/*===== PROPERTIES AREA ENDS =======*/}
         </>

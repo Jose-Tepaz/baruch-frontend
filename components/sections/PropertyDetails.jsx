@@ -19,7 +19,7 @@ export default function PropertyDetails({ property }) {
                             <div className="d-flex flex-column gap-2">
                                 {/* Etiqueta de estado */}
                                 <div className="property-status-tag">
-                                <span className="status-badge for-sale">{property.propertyStatus}</span>
+                                {/* <span className="status-badge for-sale">{property.propertyStatus}</span> */}
                                 </div>
                                 {/* Título principal */}
                                 <h1 className="title-properties">{property.title}</h1>

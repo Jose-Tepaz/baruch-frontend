@@ -14,11 +14,11 @@
     justify-content: space-between;
     flex-direction: row;
     gap: 32px;
-    padding: 40px;
+   
     background: white;
    
     
-    max-width: 1200px;
+  
     margin: 0 auto;
 }
 
@@ -137,10 +137,10 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 40px;
+   
     background: white;
    
-    max-width: 1200px;
+    
     margin: 0 auto;
 }
 
@@ -151,14 +151,14 @@
 
 .wrapp-card-details-propertie input,
 .wrapp-card-details-propertie textarea {
-    width: 100%;
+    
     color: var(--ztc-text-text-2);
     font-family: var(--ztc-family-font1);
     font-size: var(--ztc-font-size-font-s16);
     font-style: normal;
     font-weight: var(--ztc-weight-medium);
     line-height: 16px;
-    padding: 20px;
+    
     border-radius: 8px;
     background: #f1f2f3;
     margin-bottom: 12px;
@@ -166,6 +166,10 @@
 
 .wrapp-card-details-propertie textarea {
     height: 100px;
+}
+.iti input.iti__tel-input, .iti input.iti__tel-input[type=text], .iti input.iti__tel-input[type=tel]
+{
+    width: 100%!important;
 }
 
 .list-property-details {
@@ -193,7 +197,7 @@
     }
 
     .property-hero-content {
-        padding: 30px 20px;
+        
         margin: 0px;
         flex-direction: column;
     }

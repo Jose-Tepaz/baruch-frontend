@@ -116,7 +116,6 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
             <Layout>
                 <Properties2Details property={propertyData} />
                 <PropertyInner property={propertyData} block_extend="d-none" />
-                
                 <div className="space30"></div>
             </Layout>
         </>

@@ -208,7 +208,7 @@ export default function Units({ units }: { units?: Unit[] }) {
                     border-radius: 8px;
                    
                     overflow: hidden;
-                    padding: 0px 32px;
+                   
                     
                 }
 
