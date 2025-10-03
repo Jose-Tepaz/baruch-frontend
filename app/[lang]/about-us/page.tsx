@@ -94,14 +94,8 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
         <AboutForBuyers /> {/* About For Sellers Section */}
         <AboutForSellers /> {/* About Section */}
         <ContactSectionAbout 
-          
           imgContact={imgContact}
         /> {/* Contact Section */}
-
-
-
-
-
 
       </Layout>
     </>

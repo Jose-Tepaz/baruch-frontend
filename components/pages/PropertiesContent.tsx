@@ -88,12 +88,9 @@ export default function PropertiesContent({
     const [filteredProperties, setFilteredProperties] = useState<Property[]>([]);
 
     useEffect(() => {
-        console.log('=== PropertiesContent: Filtering properties ===');
-        console.log('Raw properties:', initialProperties);
-        console.log('Properties length:', initialProperties?.length || 0);
 
         if (!initialProperties || !Array.isArray(initialProperties) || initialProperties.length === 0) {
-            console.log('=== PropertiesContent: No properties to filter ===');
+           
             setFilteredProperties([]);
             return;
         }

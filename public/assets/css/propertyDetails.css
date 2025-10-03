@@ -49,7 +49,7 @@
 .property-location {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
+    
     color: #6c757d;
     font-size: 1.1rem;
 }
@@ -95,7 +95,7 @@
 }
 
 .property-price {
-    font-size: 3.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #2c3e50;
     line-height: 1;
