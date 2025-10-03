@@ -136,6 +136,17 @@
             "title": "Te ayudaremos a guiarte y hacer el proceso lo más suave posible.",
             
         "btn_text": "Contactanos"
+        },
+        "conatct-section": {
+            "title": "Nuestros Servicios ",
+            "description": "En Baruch Real Estate creemos en construir relaciones duraderas basadas en confianza, transparencia y contacto personal. Para nosotros, la inmobiliaria no es solo sobre propiedades, es sobre personas. Te guiamos paso a paso a través del proceso. Con cuidado, claridad y un enfoque en la calidad en cada etapa. Y nuestro soporte no termina una vez que has comprado una propiedad. Estamos aquí para responder tus preguntas y asistirte incluso después de que las llaves estén en tus manos.",
+            "btn_text": "Ver todos los servicios" 
+        },
+        "contact-form": {
+            "subtitle": "¿Listo para el siguiente paso? ",
+            "title": "¿Listo para el siguiente paso? ",
+            "description": "Te ayudaremos a guiarte y hacer el proceso lo más suave posible.",
+            "btn_text": "Contactanos"
         }
     },
     "services": {

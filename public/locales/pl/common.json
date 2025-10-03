@@ -137,7 +137,18 @@
       "meet-the-team": {
        "title": "Poznaj nasz zespół",
        "description": "Nasz zespół składa się z lokalnych mieszkańców, którzy nie tylko są profesjonalistami w dziedzinie nieruchomości, ale także zafascynowani przez społeczność. Czy jesteś przyciągany przez energię Marbella, przyjazny charakter Fuengiroli, czy spokojna elegancja Benahavís, pomożemy Ci znaleźć idealne dopasowanie. Nie tylko dla Twoich potrzeb, ale także dla Twojego stylu życia."
-      }
+      },
+      "conatct-section": {
+        "title": "Nasze Usługi ",
+        "description": "W Baruch Real Estate wierzymy, że znalezienie domu to nie tylko posiadanie dachu nad głową – to odkrywanie miejsca, które pasuje do Twojego unikalnego stylu życia. Czy szukasz przytulnego apartamentu, czy spokojnego domu.",
+        "btn_text": "Zobacz wszystkie usługi"
+    },
+    "contact-form": {
+        "subtitle": "Czy jesteś gotowy na następny krok? ",
+        "title": "Czy jesteś gotowy na następny krok? ",
+        "description": "Pomocemy Cię i uczynimy proces tak płynny jak to możliwe.",
+        "btn_text": "Skontaktuj się z nami"
+    }   
   },
   "services": {
       "title": "Dostosowane usługi nieruchomości na Costa del Sol",
@@ -189,7 +200,12 @@
               "answer-10": "Możesz skontaktować się z Baruch Real Estate przez naszą stronę internetową, telefonicznie lub odwiedzając nasze biuro. Nasz zespół jest gotowy do pomocy z każdym pytaniem."
   },
           
-          
+  "contact-form": {
+        "subtitle": "Czy jesteś gotowy na następny krok? ",
+        "title": "Låt oss ansluta",
+        "description": "Pomocemy Cię i uczynimy proces tak płynny jak to możliwe.",
+        "btn_text": "Skontaktuj się z nami"
+    },
 
   "language": {
       "selectLanguage": "Wybierz język",

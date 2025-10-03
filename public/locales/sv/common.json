@@ -189,7 +189,7 @@
       "send_message-text-description": "Vill du planera en visning eller har du en fråga? Fyll i dina detaljer nedan så att vi kan kontakta dig.",
       "send-btn": "Skicka",
       "fullName-text": "Fullständigt namn",
-      "phoneNumber-text": "Telefonnummer",
+      "phoneNumber-text": "Telefonnummer",      
       "email-text": "E-postadress",
       "message-text": "Ditt meddelande",
       "units": {
@@ -225,6 +225,12 @@
       "submit-now": "Skicka nu",
       "error-message": "Fel vid sändning av meddelande",
       "success-message": "Meddelandet skickades framgångsrikt!"
+  },
+  "contact-form": {
+      "subtitle": "Är du redo för nästa steg? ",
+      "title": "Låt oss ansluta", 
+      "description": "Vi kommer att vara glada att guida dig och göra processen så smidig som möjligt.",
+      "btn_text": "Kontakta oss"      
   },
   "testimonials": {
       "title": "Omdömen",

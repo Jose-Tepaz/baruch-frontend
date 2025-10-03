@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useTranslation } from "@/utils/i18n-simple";
 import { useEffect } from 'react';
-import Image1 from '@/public/assets/img/all-images/about/about-hero.webp'
+import Image1 from '@/public/assets/img/all-images/about/about-1.webp'
 
 export default function AboutHero() {
     const { t, i18n } = useTranslation('common');
@@ -20,7 +20,7 @@ export default function AboutHero() {
     return (
         <>
             <div className="about-hero-section" style={{backgroundImage: `url(${Image1.src})`}}>
-                <div className="overlay-about-hero" style={{background: 'rgba(0,0,0,0.2)'}}>
+                <div className="overlay-about-hero" >
                 <div className="padding-global">
                     <div className="container-large"> 
                         <div className="wrapper-about-hero-content">                 

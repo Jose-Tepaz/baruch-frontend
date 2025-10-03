@@ -2,21 +2,21 @@ import Layout from "@/components/layout/Layout";
 import InnerHeader from "@/components/layout/InnerHeader";
 import AboutHero from "@/components/sections/AboutHero";
 import Others4 from "@/components/sections/Others4";
-import AboutForSellers from "@/components/sections/AboutForSellers"; 
+import AboutForSellers from "@/components/sections/AboutForSellers";
 import AboutForBuyers from "@/components/sections/AboutForBuyers";
-
 import ContactForm from "@/components/sections/contactForm";
-
-
+import ContactSectionAbout from "@/components/sections/ContactSectionAbout";
 import PropertyList1 from "@/components/sections/PropertieList1";
 import { getProperties } from "@/services/get-properties";
 import { Metadata } from 'next';
 import Link from "next/link";
+  import { useTranslation } from "@/utils/i18n-simple";
+
 
 interface AboutUsPageProps {
-    params: Promise<{
-        lang: string;
-    }>;
+  params: Promise<{
+    lang: string;
+  }>;
 }
 
 export async function generateMetadata({ params }: AboutUsPageProps): Promise<Metadata> {
@@ -66,7 +66,7 @@ export async function generateMetadata({ params }: AboutUsPageProps): Promise<Me
       images: ['https://baruch.com/about-us-og.jpg']
     },
     alternates: {
-      canonical: `https://baruch.com/${lang}/about-us`,
+      canonical: `https://baruch.com/${lang}/about-us`, //eslint-disable-line
       languages: {
         'en': '/en/about-us',
         'es': '/es/about-us',
@@ -80,62 +80,31 @@ export async function generateMetadata({ params }: AboutUsPageProps): Promise<Me
 }
 
 export default async function AboutUsPage({ params }: AboutUsPageProps) {
-    const { lang } = await params;
-    const propertiesResult = await getProperties({ locale: lang, onlyPrivate: false });
-    const properties = propertiesResult?.properties || [];
-    
-    return (
-        <>
-            <Layout>
-                <AboutHero /> {/* Hero Section */}
-               
-               <AboutForBuyers /> {/* About For Sellers Section */}
-                <AboutForSellers /> {/* About Section */}
-                
-               
-                <div className="padding-global">
-                  <div className="container-large">
-                    <div className="row">
-                      <div className="col-lg-6  justify-content-center  align-items-start d-flex flex-column">
-                        <div className="space30"></div>
-                        <img src="/assets/img/all-images/about/about-hero.webp" style={{width: '100%', height: '250px', objectFit: 'cover' }} />
-                        <div className="space30"></div>
-                        <h2 className="text-color-black text-size-32">Our Services</h2>
-                        <div className="space16"></div>
-                        <p className="text-color-black text-size-medium">At Baruch Real Estate, we believe in building lasting relationships based on trust, transparency, and personal contact. For us, real estate is not just about properties, it’s about people. We guide you through the process step by step. With care, clarity,</p>
-                        <div className="space30"></div>
-                        <Link href="services" className="vl-btn1 is-primary">
-                          See all services
-                          <span className="arrow1 ms-2">
-                            <i className="fa-solid fa-arrow-right" />
-                          </span>
-                          <span className="arrow2 ms-2">
-                            <i className="fa-solid fa-arrow-right" />
-                          </span>
-                        </Link>
-                      </div>
-                      <div className="col-lg-6 m-auto">
-                        <div className="space30"></div>
-                        <div className="bg-color-white" style={{padding: '20px'}}>
-                          <h2 className="text-color-black  size-20 uppercase">Reay for the next step?</h2>
-                          <h3 className="text-color-black size-42 uppercase">Let’s connect</h3>
-                          <p className="text-color-black size-16">Please fill in your details below so we can contact you.</p>
-                          
-                          <div className="space16"></div>
-                          <ContactForm/>  
-                          <div className="space30"></div>
-                        </div>
-                                       
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
+  const { lang } = await params;
+  const propertiesResult = await getProperties({ locale: lang, onlyPrivate: false });
+  const properties = propertiesResult?.properties || [];
 
-                
-               
-            </Layout>
-        </>
-    );
+  const imgContact = "/assets/img/all-images/about/about-4.webp";
+  
+  return (
+    <>
+      <Layout>
+        <AboutHero /> {/* Hero Section */}
+
+        <AboutForBuyers /> {/* About For Sellers Section */}
+        <AboutForSellers /> {/* About Section */}
+        <ContactSectionAbout 
+          
+          imgContact={imgContact}
+        /> {/* Contact Section */}
+
+
+
+
+
+
+      </Layout>
+    </>
+  );
 }
 

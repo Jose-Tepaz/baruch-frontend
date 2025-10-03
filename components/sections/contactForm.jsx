@@ -231,11 +231,8 @@ export default function ContactForm() {
                 <div className="space16" />
                 <button className="vl-btn1" style={{width: '100%', backgroundColor: '#25D366', color: '#fff'}}  onClick={() => window.open('https://wa.me/34600000000', '_blank')}>
                     <i className="fa-brands fa-whatsapp" style={{marginRight: '10px'}} />
-                    
                     Click to WhatsApp
-                    
-                </button>
-                
+                </button> 
             </div>
           </div>
         </div>

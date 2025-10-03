@@ -139,9 +139,16 @@
                 
             "btn_text": "Contact Us"
             },
+        "conatct-section": {
+            "title": "Our Services ",
+            "description": "At Baruch Real Estate, we believe in building lasting relationships based on trust, transparency, and personal contact. For us, real estate is not just about properties, it’s about people. We guide you through the process step by step. With care, clarity,",
+            "btn_text": "See all services"
+        },
+       
         "meet-the-team": {
-         "title": "Conheça o Time",
-         "description": "Nosso time é composto por residentes locais que conhecem a Costa del Sol não apenas como profissionais do imobiliário, mas como orgulhosos membros da comunidade. Seja você atraído pela energia de Marbella, o encanto familiar de Fuengirola ou a elegância tranquila de Benahavís, nós te ajudaremos a encontrar o melhor compromisso. Não apenas para suas necessidades, mas para sua vida."
+        "subtitle": "Ready for the next step?",
+         "title": "Let’s connect",
+         "description": "Please fill in your details below so we can contact you."
         }
     },
     "services": {
@@ -247,8 +254,6 @@
                 "answer-10": "You can contact Baruch Real Estate through our website, by phone, or by visiting our office. Our team is ready to assist you with any questions."
     },
             
-            
-
     "language": {
         "selectLanguage": "Select Language",
         "currentLanguage": "Current Language",
@@ -306,6 +311,12 @@
         "submit-now": "Submit Now",
         "error-message": "Error sending message",
         "success-message": "Message sent successfully!"
+    },
+    "contact-form": {
+        "subtitle": "Ready for the next step? ",
+        "title": "Let’s connect ",  
+        "description": "We’ll be more than happy to guide you and make the process as smooth as possible.",
+        "btn_text": "Contact Us"
     },
     "testimonials": {
         "title": "Testimonials",

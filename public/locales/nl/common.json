@@ -136,7 +136,14 @@
     "meet-the-team": {
       "title": "Ontmoet het team",
       "description": "Ons team bestaat uit lokale bewoners die de Costa del Sol niet alleen kennen als vastgoedprofessionals, maar als trotse leden van de gemeenschap. Of je nu wordt aangetrokken door de energie van Marbella, de gezinsvriendelijke charme van Fuengirola of de rustige elegantie van Benahavís, wij helpen je de beste match te vinden. Niet alleen voor je behoeften, maar voor jouw leven."
-    }
+    },
+    "conatct-section": {
+      "title": "Onze Dienstleistingen ",
+      "description": "Bij Baruch Real Estate geloven we dat het vinden van een huis niet alleen gaat om een dak boven je hoofd – het gaat om het ontdekken van een plek die past bij je unieke levensstijl. Of je nu op zoek bent naar een cozy appartement of een ruim huis.",
+      "btn_text": "Alle Dienstleistingen ansehen" 
+  }
+  
+  
   },
   "services": {
     "title": "Vastgoeddiensten op maat",
@@ -226,6 +233,12 @@
     "submit-now": "Nu verzenden",
     "error-message": "Fout bij het verzenden van het bericht",
     "success-message": "Bericht succesvol verzonden!"
+  },
+  "contact-form": {
+      "subtitle": "Klaar voor de volgende stap? ",
+      "title": "Låt oss ansluten",
+      "description": "We helpen je graag en maken het proces zo soepel mogelijk.",
+      "btn_text": "Contacteer ons"
   },
   "testimonials": {
     "title": "Getuigenissen",

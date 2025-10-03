@@ -139,7 +139,23 @@
             "subtitle": "Bereit für den nächsten Schritt?",
             "title": "Wir freuen uns, Sie zu begleiten und den Prozess so reibungslos wie möglich zu gestalten.",
             "btn_text": "Kontaktiere uns"
-        }  
+        } ,
+        "conatct-section": {
+            "title": "Unsere Dienstleistungen ",
+            "description": "Bei Baruch Real Estate glauben wir, dass das Finden eines Hauses nicht nur darum geht, ein Dach über dem Kopf zu haben – es geht darum, ein Ort zu entdecken, der zu Ihrem einzigartigen Lebensstil passt. Ob Sie nach einem gemütlichen Appartment oder einem großzügigen Haus suchen.",
+            "btn_text": "Alle Dienstleistungen ansehen"
+        },
+        "contact-form": {
+            "subtitle": "Bereit für den nächsten Schritt? ",
+            "title": "Bereit für den nächsten Schritt? ",
+            "description": "Wir freuen uns, Sie zu begleiten und den Prozess so reibungslos wie möglich zu gestalten.",
+            "btn_text": "Kontaktiere uns"
+        },
+        "meet-the-team": {
+            "subtitle": "Bereit für den nächsten Schritt?",
+            "title": "Lass uns verbinden",
+            "description": "Bitte füllen Sie Ihre Details unten aus, damit wir Sie kontaktieren können."
+        }   
     },
     "services": {
         "title": "Angepasste Immobilienleistungen auf der Costa del Sol",
@@ -300,6 +316,12 @@
         "submit-now": "Jetzt senden",
         "error-message": "Fehler beim Senden der Nachricht",
         "success-message": "Nachricht erfolgreich gesendet!"
+    },
+    "contact-form": {
+        "subtitle": "Bereit für den nächsten Schritt? ",
+        "title": "Lass uns verbinden",
+        "description": "Wir helfen Ihnen gerne weiter und machen den Prozess so reibungslos wie möglich.",
+        "btn_text": "Kontaktiere uns"
     },
     "testimonials": {
         "title": "Testimonials",

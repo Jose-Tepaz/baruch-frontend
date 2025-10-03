@@ -53,7 +53,7 @@ export default function Others3() {
 
                         <div className="col-lg-6">
                             <div className="img-side-about">
-                                <img src="/assets/img/all-images/about/about-hero.webp" alt="housa" />
+                                <img src="/assets/img/all-images/about/about-3.webp" alt="housa" />
                             </div>
                         </div>
 

@@ -22,7 +22,7 @@ export default function AboutForSellers() {
                             
                             <div className="col-lg-6">
                                 <div className="img-side-about">
-                                    <img src="/assets/img/all-images/about/about-hero.webp" alt="housa" />
+                                    <img src="/assets/img/all-images/about/about-2.webp" alt="housa" />
                                 </div>
                             </div>
                             <div className="col-lg-6">
