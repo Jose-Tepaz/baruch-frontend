@@ -16,14 +16,10 @@ const getPropertyById = async (documentId: string, locale?: string) => {
         const currentLocale = getLocaleWithFallback(locale);
         const queryString = `properties/${documentId}?populate=main_image&populate=gallery&populate=category&populate=property_status&populate=units&populate=units.floor&locale=${encodeURIComponent(currentLocale)}`;
         
-        console.log('=== getPropertyById DEBUG ===');
-        console.log('DocumentId:', documentId);
-        console.log('Locale:', currentLocale);
-        console.log('Query string:', queryString);
+       
         
         const response = await query(queryString);
-        console.log('Full API response:', response);
-        console.log('Response data:', response.data);
+       
         
         if (!response.data) {
             return null
@@ -51,10 +47,10 @@ const getPropertyById = async (documentId: string, locale?: string) => {
             Map_link,
             property_status,
             units,
+            estimated_completion,
         } = property
         
-        console.log('Property object keys:', Object.keys(property));
-        console.log('Units from destructuring:', units);
+      
         
         // Procesar las imágenes
         const processedMainImage = main_image
@@ -108,7 +104,8 @@ const getPropertyById = async (documentId: string, locale?: string) => {
             is_new,
             Map_link,
             propertyStatus,
-            units: processedUnits
+            units: processedUnits,
+            estimated_completion,
         }
         
     } catch (error) {

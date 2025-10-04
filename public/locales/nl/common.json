@@ -200,6 +200,7 @@
     "phoneNumber-text": "Telefoonnummer",
     "email-text": "E-mailadres",
     "message-text": "Jouw bericht",
+    "estimated_completion-text": "Geschatte Completietijd",
     "units": {
       "title": "Eenheden",
       "id-house": "Huis-ID",

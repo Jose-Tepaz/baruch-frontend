@@ -273,6 +273,7 @@
         "phoneNumber-text": "Numéro de Téléphone",
         "email-text": "Email",
         "message-text": "Votre Message",
+        "estimated_completion-text": "Date de Finimation Estimée",
         "units": {
             "title": "Unités",
             "id-house": "Id Maison",

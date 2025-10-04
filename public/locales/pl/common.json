@@ -230,6 +230,7 @@
       "phoneNumber-text": "Numer telefonu",
       "email-text": "Adres e-mail",
       "message-text": "Twoja wiadomość",
+      "estimated_completion-text": "Data zakończenia oszacowana",
       "units": {
           "title": "Jednostki",
           "id-house": "Id domu",

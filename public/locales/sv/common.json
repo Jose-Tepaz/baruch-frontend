@@ -192,6 +192,7 @@
       "phoneNumber-text": "Telefonnummer",      
       "email-text": "E-postadress",
       "message-text": "Ditt meddelande",
+      "estimated_completion-text": "Uppskattad slutförande",  
       "units": {
           "title": "Enheter",
           "id-house": "Hus-ID",

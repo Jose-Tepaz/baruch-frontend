@@ -51,6 +51,7 @@ interface Property {
     propertyStatus: string;
     is_private?: boolean;
     units?: Unit[];
+    estimated_completion: string;
 }
 
 export default function PropertyInner({ block_extend, property }: { block_extend: string, property: Property }) {
@@ -220,9 +221,11 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                         <div className="property-widget-sidebar">
                             <PropertyDetails property={property} />
                             <div className="space30" />
-                            <Units units={property.units} />
-                            <div className="space30" />
+                            
                             <PropertyDescription property={property} />
+                            <div className="space30" />
+                            <Units units={property.units} />
+                            
                             <div className="space30" />
                             <div className="wrapp-card-details-propertie">
                                 <h3>{t("propertyDetails.map_locations-text")}</h3>

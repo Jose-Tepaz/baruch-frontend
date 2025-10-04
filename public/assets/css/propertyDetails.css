@@ -26,6 +26,17 @@
     margin-bottom: 20px;
 }
 
+.title-properties-single{
+    font-family: 'Libre Baskerville', serif!important;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ztc-bg-bg-3);
+
+}
+
 .status-badge {
     background: #2c3e50;
     color: white;
@@ -201,9 +212,16 @@
         margin: 0px;
         flex-direction: column;
     }
+
+  
+
     .property-title {
         font-size: 2rem;
     }
+
+
+
+
     .property-main-info {
         flex-direction: column;
         align-items: flex-start;

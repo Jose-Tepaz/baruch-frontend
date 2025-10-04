@@ -277,6 +277,7 @@
         "phoneNumber-text": "Phone Number",
         "email-text": "Email Address",
         "message-text": "Your Message",
+        "estimated_completion-text": "Estimated Completion",
         "units": {
             "title": "Units",
             "id-house": "Id House",

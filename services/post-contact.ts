@@ -5,6 +5,8 @@ export async function postContact(data: {
   client_name: string,
   email_address: string,
   phone: string,
+  city: string,
+  preferred_contact_moment: string,
   message: string
 }) {
   const response = await fetch(`${STRAPI_HOST}/api/contacts`, {

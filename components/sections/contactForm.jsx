@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from '@/utils/i18n-simple';
 
 export default function ContactForm() {
-  const { t } = useTranslation('common'); 
+  const { t } = useTranslation('common');
 
   const [formData, setFormData] = useState({
-    client_name: '',    
+    client_name: '',
     phone: '',
     email_address: '',
     interested_in: '',
@@ -38,7 +38,7 @@ export default function ContactForm() {
               : (itiRef.current).getNumber();
             return num || '';
           }
-        } catch (_) {}
+        } catch (_) { }
         return '';
       })();
 
@@ -53,7 +53,7 @@ export default function ContactForm() {
       if (!res.ok) throw new Error('Failed');
       setSubmitStatus('success');
       setFormData({ client_name: '', phone: '', email_address: '', interested_in: '', message: '' });
-      try { if (phoneInputRef.current) phoneInputRef.current.value = ''; } catch (_) {}
+      try { if (phoneInputRef.current) phoneInputRef.current.value = ''; } catch (_) { }
     } catch {
       setSubmitStatus('error');
     } finally {
@@ -80,7 +80,7 @@ export default function ContactForm() {
       const dial = data?.dialCode ? `+${data.dialCode}` : '';
       const fallback = dial && digits ? `${dial}${digits}` : (digits ? `+${digits}` : '');
       setFormData(prev => ({ ...prev, phone: fallback }));
-    } catch (_) {}
+    } catch (_) { }
   };
 
   useEffect(() => {
@@ -125,13 +125,13 @@ export default function ContactForm() {
     })();
     return () => {
       isMounted = false;
-      try { itiRef.current?.destroy(); } catch (_) {}
+      try { itiRef.current?.destroy(); } catch (_) { }
     };
   }, []);
 
   return (
     <div className="" id="contact" >
-      
+
       {submitStatus === 'success' && (
         <div className="alert alert-success mb-3">{t('testimonials.success-message')}</div>
       )}
@@ -140,7 +140,16 @@ export default function ContactForm() {
       )}
       <form onSubmit={handleSubmit}>
         <div className="row g-2">
+        { /* Name */}
           <div className="col-lg-12">
+            <div className="row g-2">
+              <input
+                type="hidden"
+                name="interested_in"
+                value="Concat general"
+                readOnly
+              />
+            </div>
             <div className="input-area">
               <input
                 type="text"
@@ -151,6 +160,19 @@ export default function ContactForm() {
               />
             </div>
           </div>
+          { /* Email */}
+          <div className="col-lg-12">
+            <div className="input-area">
+              <input
+                type="email"
+                placeholder={t('testimonials.email-address')}
+                value={formData.email_address}
+                onChange={(e) => handleInputChange('email_address', e.target.value)}
+                required
+              />
+            </div>
+          </div>
+          { /* Phone */}
           <div className="col-lg-12">
             <div className="input-area">
               <input
@@ -164,32 +186,36 @@ export default function ContactForm() {
               <input type="hidden" name="phone" value={formData.phone} />
             </div>
           </div>
-          <div className="col-lg-12">
+          
+         <div className="row g-2">
+         { /* City */}
+          <div className="col-lg-6">
             <div className="input-area">
               <input
-                type="email"
-                placeholder={t('testimonials.email-address')}
-                value={formData.email_address}
-                onChange={(e) => handleInputChange('email_address', e.target.value)}
+                type="text"
+                placeholder={t('contact.city')}
+                value={formData.city}
+                onChange={(e) => handleInputChange('city', e.target.value)}
                 required
               />
             </div>
           </div>
-          <div className="col-lg-12">
-            <select
-              name="interested_in"
-              id="interested_in"
-              className="form-select"
-              value={formData.interested_in}
-              onChange={(e) => handleInputChange('interested_in', e.target.value)}
-              required
-            >
-              <option value="">{t('testimonials.service-type')}</option>
-              <option value="sell">{t('testimonials.service-type-1')}</option>
-              <option value="buy">{t('testimonials.service-type-2')}</option>
-              <option value="rent">{t('testimonials.service-type-3')}</option>
-            </select>
+          { /* Preferred contact moment */}
+          <div className="col-lg-6">
+            <div className="input-area">
+              <input
+                type="text"
+                placeholder={t('contact.preferred-contact-moment')}
+                value={formData.preferred_contact_moment}
+                onChange={(e) => handleInputChange('preferred_contact_moment', e.target.value)}
+                required
+              />
+            </div>
           </div>
+
+         </div>
+          
+          { /* Message */}
           <div className="col-lg-12">
             <div className="input-area">
               <textarea
@@ -200,39 +226,40 @@ export default function ContactForm() {
               />
             </div>
           </div>
+          { /* Privacy statement */}
           <div className="col-lg-12">
             <div className="space16" />
             <div className=" row d-flex justify-content-between align-items-center">
-                <div className="col-lg-6">
-                    <div className="form-check">
-                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" required/>
-                        <label className="form-check-label" htmlFor="flexCheckDefault">
-                        I agree with the privacy statement of Baruch S.L.
-                        </label>
-                    </div>
+              <div className="col-lg-6">
+                <div className="form-check">
+                  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" required />
+                  <label className="form-check-label" htmlFor="flexCheckDefault">
+                    I agree with the privacy statement of Baruch S.L.
+                  </label>
                 </div>
-                
-            
-                <div className="col-lg-6 d-flex justify-content-end">
-                    <button type="submit" className="vl-btn1" disabled={isSubmitting}>
-                    {isSubmitting ? (t('testimonials.submitting') || 'Enviando...') : t('testimonials.submit-now')}
-                    <span className="arrow1 ms-2"><i className="fa-solid fa-arrow-right" /></span>
-                    <span className="arrow2 ms-2"><i className="fa-solid fa-arrow-right" /></span>
-                    
-                    </button>
-                </div>
-                
+              </div>
+
+
+              <div className="col-lg-6 d-flex justify-content-end">
+                <button type="submit" className="vl-btn1" disabled={isSubmitting}>
+                  {isSubmitting ? (t('testimonials.submitting') || 'Enviando...') : t('testimonials.submit-now')}
+                  <span className="arrow1 ms-2"><i className="fa-solid fa-arrow-right" /></span>
+                  <span className="arrow2 ms-2"><i className="fa-solid fa-arrow-right" /></span>
+
+                </button>
+              </div>
+
             </div>
             <div className="space16" />
-            <div style={{borderTop: '1px solid #000'}}></div>
+            <div style={{ borderTop: '1px solid #000' }}></div>
             <div className="space16" />
             <div className="d-flex flex-column justify-content-center align-items-center">
-                <h2 className="text-color-black size-16">OR</h2>
-                <div className="space16" />
-                <button className="vl-btn1" style={{width: '100%', backgroundColor: '#25D366', color: '#fff'}}  onClick={() => window.open('https://wa.me/34600000000', '_blank')}>
-                    <i className="fa-brands fa-whatsapp" style={{marginRight: '10px'}} />
-                    Click to WhatsApp
-                </button> 
+              <h2 className="text-color-black size-16">OR</h2>
+              <div className="space16" />
+              <button className="vl-btn1" style={{ width: '100%', backgroundColor: '#25D366', color: '#fff' }} onClick={() => window.open('https://wa.me/34600000000', '_blank')}>
+                <i className="fa-brands fa-whatsapp" style={{ marginRight: '10px' }} />
+                Click to WhatsApp
+              </button>
             </div>
           </div>
         </div>

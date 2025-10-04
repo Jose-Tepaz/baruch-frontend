@@ -282,6 +282,7 @@
         "phoneNumber-text": "Telefonnummer",
         "email-text": "E-Mail-Adresse",
         "message-text": "Ihre Nachricht",
+        "estimated_completion-text": "Geschätzte Fertigstellung",
         "units": {
             "title": "Einheiten",
             "id-house": "Haus-ID",

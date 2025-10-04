@@ -274,6 +274,7 @@
         "phoneNumber-text": "Número de Teléfono",
         "email-text": "Correo Electrónico",
         "message-text": "Tu Mensaje",
+        "estimated_completion-text": "Fecha de Finalización Estimada",
         "units": {
             "title": "Unidades",
             "id-house": "Id Casa",

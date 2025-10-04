@@ -21,9 +21,9 @@ export default function PropertyDetails({ property }) {
                     <div className="property-status-tag">
                         {/* <span className="status-badge for-sale">{property.propertyStatus}</span> */}
                     </div>
-                    <div className="d-flex flex-column gap-2 mb-3">
+                    <div className="d-flex flex-column gap-2 mb-3" >
                         {/* Título principal */}
-                        <h1 className="title-properties">{property.title}</h1>
+                        <h1 className="title-properties-single">{property.title}</h1>
                         {/* Precio con icono */}
                         <div className="property-price">
                             {property.price ? `€${property.price.toLocaleString('es-ES')}` : ''}
@@ -45,13 +45,13 @@ export default function PropertyDetails({ property }) {
                         <div className="feature-item">
                             <i className="fas fa-minimize"></i>
 
-                            <span>{property.built_area.toLocaleString() || '2150'} m² {t("propertyDetails.built_area-text")}</span>
+                            <span>{property.built_area.toLocaleString() || '2150'}m²  {t("propertyDetails.built_area-text")}</span>
 
                         </div>
                         <div className="feature-item">
 
                             <i className="fas fa-expand-arrows-alt"></i>
-                            <span>{property.lot_area.toLocaleString() || '2150'} m² {t("propertyDetails.lot_area-text")}</span>
+                            <span>{property.lot_area.toLocaleString() || '2150'}m² {t("propertyDetails.lot_area-text")}</span>
 
                         </div>
                         <div className="feature-item">
@@ -67,12 +67,18 @@ export default function PropertyDetails({ property }) {
                             <i className="fas fa-bath"></i>
                             <span>{property.bathrooms} {t("propertyDetails.bathrooms-text")}</span>
                         </div>
+                        
+                        {property.estimated_completion && 
+                        <div className="feature-item">
+                            <i className="fas fa-calendar"></i>
+                            <span>{property.estimated_completion} {t("propertyDetails.estimated_completion-text")}</span>
+                        </div>} 
                     </div>
 
                 </div>
 
                 {/* Contenedor principal con información y precio */}
-                <div className="property-main-info">
+                <div style={{width: '250px', marginTop: 'autos'}}>
                     {/* Precio y botón de contacto */}
                     <div className="property-price-section">
 
