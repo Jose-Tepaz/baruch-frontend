@@ -210,29 +210,31 @@
       }
   },
   "contact": {
-      "title": "Kontakta oss",
-      "our-email": "Vår e-postadress",
-      "our-phone": "Telefon",
-      "our-schedule": "Schema",
-      "form-title": "Skicka ett meddelande",
-      "your-name": "Ditt namn",
-      "phone-number": "Telefonnummer",
-      "email-address": "E-postadress",
-      "service-type": "Typ av tjänst",
-      "service-type-1": "Sälja fastighet",
-      "service-type-2": "Köpa fastighet",
-      "service-type-3": "Hyra fastighet",
-      "message": "Ditt meddelande",
-      "submit-now": "Skicka nu",
-      "error-message": "Fel vid sändning av meddelande",
-      "success-message": "Meddelandet skickades framgångsrikt!"
+    "hero": {
+        "title": "Kontakta oss",
+        "description": "Vi är här för att hjälpa dig på vägen till din drömfastighet i Spanien. Kontakta oss när du vill, utan bindningar eller tryck. Använd kontaktformuläret nedan för att komma i kontakt, och vi kommer att svara så snart som möjligt."
+    },
+    "title": "Kontakta oss",
+    "description": "Vi är här för att hjälpa dig på vägen till din drömfastighet i Spanien. Kontakta oss när du vill, utan bindningar eller tryck. Använd kontaktformuläret nedan för att komma i kontakt, och vi kommer att svara så snart som möjligt.",
+    "btn_text": "om oss"
   },
   "contact-form": {
-      "subtitle": "Är du redo för nästa steg? ",
-      "title": "Låt oss ansluta", 
-      "description": "Vi kommer att vara glada att guida dig och göra processen så smidig som möjligt.",
-      "btn_text": "Kontakta oss"      
-  },
+        "subtitle": "Är du redo för nästa steg? ",
+        "title": "Låt oss ansluta ",  
+        "description": "Vi kommer att vara glada att guida dig och göra processen så smidig som möjligt.",
+        "btn_text": "Kontakta oss",
+        "input-name": "Namn",
+        "input-email": "E-post",
+        "input-phone": "Telefon",
+        "input-city": "Stad",
+        "input-preferred_contact_moment": "Föredragen kontaktmoment",
+        "input-message": "Meddelande",
+        "input-submit-now": "Skicka nu",
+        "error-message": "Fel vid sändning av meddelande",
+        "success-message": "Meddelande skickat framgångsrikt!",
+        "submitting": "Skickar...",
+        "input-click-to-whatsapp": "Klicka på WhatsApp"
+    },
   "testimonials": {
       "title": "Omdömen",
       "contact-title": "Kontakta oss",

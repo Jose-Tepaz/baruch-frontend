@@ -2,6 +2,7 @@
 import TestimonialsContactForm from "./TestimonialsContactForm";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { useTranslation } from "@/utils/i18n-simple";
+import ContactForm from "./contactForm";
 
 export default function TestimonialList({ testimonials }: { testimonials: any[] }) {
     const { t } = useTranslation('common');
@@ -34,8 +35,14 @@ export default function TestimonialList({ testimonials }: { testimonials: any[] 
 
             {/* Derecha: formulario + tarjetas */}
             <div className="col-lg-4 left-column-testimonials">
-              <TestimonialsContactForm />
-
+              <div className="bg-color-white" style={{ padding: '20px' }}>
+                <h3 className="text-color-black size-20 uppercase">{t('contact-form.subtitle')}</h3>
+                <h3 className="text-color-black size-42 uppercase">{t('contact-form.title')}</h3>
+                <p className="text-color-black size-16">{t('contact-form.description')}</p>
+                <div className="space16"></div>
+              <ContactForm />
+              </div>
+              
               <div className="space30"></div>
 
             

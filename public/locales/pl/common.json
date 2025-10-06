@@ -248,24 +248,31 @@
       }
   },
   "contact": {
+    "hero": {
         "title": "Skontaktuj się z nami",
-      "our-email": "Nasz e-mail",
-      "our-phone": "Telefon",
-      "our-schedule": "Harmonogram",
-      "form-title": "Wyślij nam wiadomość",
-    
-      "your-name": "Twoje imię",
-      "phone-number": "Numer telefonu",
-      "email-address": "Adres e-mail",
-      "service-type": "Typ usługi",
-      "service-type-1": "Sprzedaż nieruchomości",
-      "service-type-2": "Kupowanie nieruchomości",
-      "service-type-3": "Wynajem nieruchomości",
-      "message": "Twoja wiadomość",
-      "submit-now": "Wyślij",
-      "error-message": "Błąd podczas wysyłania wiadomości",
-      "success-message": "Wiadomość wysłana pomyślnie!"
+        "description": "Jesteśmy tutaj, aby Cię pomóc w każdym kroku w znalezieniu Twojego marzenia domu w Hiszpanii. Nie ma obowiązków, nie ma presji. Użyj formularza kontaktowego poniżej, aby skontaktować się z nami, i odpowiemy tak szybko, jak to możliwe."
+    },
+    "title": "Skontaktuj się z nami",
+    "description": "Jesteśmy tutaj, aby Cię pomóc w każdym kroku w znalezieniu Twojego marzenia domu w Hiszpanii. Nie ma obowiązków, nie ma presji. Użyj formularza kontaktowego poniżej, aby skontaktować się z nami, i odpowiemy tak szybko, jak to możliwe.",
+    "btn_text": "o nas"
   },
+  "contact-form": {
+        "subtitle": "Gotowy na następny krok? ",    
+        "title": "Połączmy się ",  
+        "description": "Będziemy bardzo zadowoleni, aby Ci pomóc i uczynić proces tak płynny, jak to możliwe.",
+        "btn_text": "Skontaktuj się z nami",
+        "input-name": "Imię i nazwisko",    
+        "input-email": "Email",
+        "input-phone": "Telefon",
+        "input-city": "Miasto",
+        "input-preferred_contact_moment": "Preferowany moment kontaktu",
+        "input-message": "Wiadomość",
+        "input-submit-now": "Wyślij teraz",
+        "error-message": "Błąd podczas wysyłania wiadomości",
+        "success-message": "Wiadomość wysłana pomyślnie!",
+        "submitting": "Wysyłanie...",
+        "input-click-to-whatsapp": "Kliknij na WhatsApp"
+    },
   "testimonials": {
       "title": "Opinie",
       "contact-title": "Skontaktuj się z nami",

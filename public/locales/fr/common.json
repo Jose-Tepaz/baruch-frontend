@@ -291,23 +291,31 @@
         }
     },
     "contact": {
+        "hero": {
+            "title": "Contactez-nous",
+            "description": "Nous sommes ici pour vous aider à chaque étape du chemin dans la recherche de votre maison de rêve en Espagne. N'hésitez pas à nous contacter à tout moment sans obligation, sans pression. Utilisez le formulaire de contact ci-dessous pour entrer en contact avec nous, et nous répondrons aussi vite que possible."
+        },
         "title": "Contactez-nous",
-        "our-email": "Notre Email",
-        "our-phone": "Téléphone",
-        "our-schedule": "Horaire",
-        "form-title": "Envie-nous un Message",
-        "your-name": "Votre Nom",
-        "phone-number": "Numéro de Téléphone",
-        "email-address": "Email",
-        "service-type": "Type de Service",
-        "service-type-1": "Vendre une Propriété",
-        "service-type-2": "Acheter une Propriété",
-        "service-type-3": "Louer une Propriété",
-        "message": "Votre Message",
-        "submit-now": "Envoyer",
-        "error-message": "Erreur lors de l'envoi du message",
-        "success-message": "Message envoyé avec succès!"
+        "description": "Vous êtes invité à visiter notre bureau à Málaga pour une rencontre personnelle, ou nous serions heureux de vous accompagner lors d'une visite de propriété. Que vous ayez des questions sur l'achat, la vente, la financement ou la résidence, notre équipe est prête à vous aider. Nous parlons Français, Anglais et Espagnol, pour assurer une communication claire et un support tout au long du processus.",
+        "btn_text": "à propos de nous"
     } ,
+    "contact-form": {
+        "subtitle": "Prêt pour le prochain pas?",     
+        "title": "Connectons-nous ",  
+        "description": "Nous serons heureux de vous guider et de rendre le processus aussi fluide que possible.",
+        "btn_text": "Contactez-nous",
+        "input-name": "Nom",
+        "input-email": "E-Mail-Adresse",
+        "input-phone": "Numéro de Téléphone",
+        "input-city": "Ville",
+        "input-preferred_contact_moment": "Moment de Contact Préféré",
+        "input-message": "Message",
+        "input-submit-now": "Envoyer Maintenant",
+        "error-message": "Erreur lors de l'envoi du message",
+        "success-message": "Message envoyé avec succès!",
+        "submitting": "Envoi...",
+        "input-click-to-whatsapp": "Cliquer pour WhatsApp"
+    },
     "testimonials": {
         "title": "Témoignages",
         "contact-title": "Contactez-nous",

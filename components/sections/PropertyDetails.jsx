@@ -78,11 +78,11 @@ export default function PropertyDetails({ property }) {
                 </div>
 
                 {/* Contenedor principal con información y precio */}
-                <div style={{width: '250px', marginTop: 'autos'}}>
+                <div style={{width: '250px', marginTop: 'autos'}} className="d-flex justify-content-end align-items-end mobile-justify-content-left mobile-align-items-leftr">
                     {/* Precio y botón de contacto */}
-                    <div className="property-price-section">
+                    <div className="property-price-section d-flex justify-content-end align-items-end mobile-justify-content-left mobile-align-items-left" >
 
-                        <Link className="vl-btn1" href="#contact">
+                        <Link className="vl-btn1 mt-auto mb-auto mobile-mr-auto mobile-ml-0" href="#contact">
                             {t("propertyDetails.contact-text")}
                             <span className="arrow1 ms-2">
                                 <i className="fa-solid fa-arrow-right" />

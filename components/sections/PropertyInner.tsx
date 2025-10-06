@@ -60,7 +60,9 @@ export default function PropertyInner({ block_extend, property }: { block_extend
         client_name: '',
         email_address: '',
         phone_number: '',
-        message: ''
+        message: '',
+        city: '',
+        preferred_contact_moment: ''
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState('');
@@ -184,7 +186,9 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                     client_name: formData.client_name,
                     email_address: formData.email_address,
                     phone: phoneWithDialCode || formData.phone_number,
-                    message: formData.message
+                    message: formData.message,
+                    city: formData.city,
+                    preferred_contact_moment: formData.preferred_contact_moment
                 })
             });
 
@@ -198,7 +202,9 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                 client_name: '',
                 email_address: '',
                 phone_number: '',
-                message: ''
+                message: '',
+                city: '',
+                preferred_contact_moment: ''
             });
             try { if (phoneInputRef.current) phoneInputRef.current.value = ''; } catch (_) { }
         } catch (error) {
@@ -221,11 +227,11 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                         <div className="property-widget-sidebar">
                             <PropertyDetails property={property} />
                             <div className="space30" />
-                            
+
                             <PropertyDescription property={property} />
                             <div className="space30" />
                             <Units units={property.units} />
-                            
+
                             <div className="space30" />
                             <div className="wrapp-card-details-propertie">
                                 <h3>{t("propertyDetails.map_locations-text")}</h3>
@@ -255,8 +261,8 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                                                         type="text"
                                                         name="client_name"
                                                         value={formData.client_name}
-                                                        onChange={handleInputChange}
-                                                        placeholder={t("propertyDetails.fullName-text")}
+                                                        onChange={handleInputChange}                
+                                                        placeholder={t("contact-form.input-name")}
                                                         required
                                                     />
                                                 </div>
@@ -267,7 +273,7 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                                                         type="tel"
                                                         name="phone_number_visible"
                                                         ref={phoneInputRef}
-                                                        placeholder={t("propertyDetails.phoneNumber-text")}
+                                                        placeholder={t("contact-form.input-phone")}
                                                         autoComplete="tel"
                                                         required
                                                         style={{ marginBottom: '10px!important', width: '100%' }}
@@ -287,6 +293,36 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                                                     />
                                                 </div>
                                             </div>
+
+                                            <div className="col-lg-6">
+                                                <div className="input-area">
+                                                    <input
+                                                        type="text"
+                                                        name="city"
+                                                        value={formData.city}
+                                                        onChange={handleInputChange}
+                                                        placeholder={t("contact-form.input-city")}
+                                                        required
+                                                    />
+
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6">
+                                                <div className="input-area">
+                                                    <input
+                                                        type="text"
+                                                        name="preferred_contact_moment"
+                                                        value={formData.preferred_contact_moment}
+                                                        onChange={handleInputChange}
+                                                        placeholder={t("contact-form.input-preferred_contact_moment")}
+                                                        required
+                                                    />
+                                                </div>
+                                            </div>
+
+
+
+
 
                                             <div className="col-lg-12">
                                                 <div className="input-area">
@@ -330,9 +366,9 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                                                 <div className="d-flex flex-column justify-content-center align-items-center">
                                                     <h2 className="text-color-black size-16">OR</h2>
                                                     <div className="space16" />
-                                                    <button className="vl-btn1" style={{ width: '100%', backgroundColor: '#25D366', color: '#fff' }} onClick={() => window.open('https://wa.me/34600000000', '_blank')}>
+                                                    <button className="vl-btn1" style={{ width: '100%', backgroundColor: '#25D366', color: '#fff' }} onClick={() => window.open('https://wa.me/34628621130', '_blank')}>
                                                         <i className="fa-brands fa-whatsapp" style={{ marginRight: '10px' }} />
-                                                        Click to WhatsApp
+                                                        {t("contact-form.input-click-to-whatsapp")}
                                                     </button>
                                                 </div>
 

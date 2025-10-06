@@ -218,29 +218,31 @@
     }
   },
   "contact": {
-    "title": "Neem contact op",
-    "our-email": "Ons e-mailadres",
-    "our-phone": "Telefoon",
-    "our-schedule": "Openingstijden",
-    "form-title": "Stuur ons een bericht",
-    "your-name": "Jouw naam",
-    "phone-number": "Telefoonnummer",
-    "email-address": "E-mailadres",
-    "service-type": "Type dienst",
-    "service-type-1": "Woning verkopen",
-    "service-type-2": "Woning kopen",
-    "service-type-3": "Woning huren",
-    "message": "Jouw bericht",
-    "submit-now": "Nu verzenden",
-    "error-message": "Fout bij het verzenden van het bericht",
-    "success-message": "Bericht succesvol verzonden!"
+    "hero": {
+      "title": "Contacteer ons",
+      "description": "Wij zijn hier om je te helpen bij elke stap in het vinden van je droomhuis in Spanje. Neem contact op met ons op elk moment, zonder verplichtingen of druk. Gebruik het contactformulier hieronder om in contact te treden, en we zullen zo snel mogelijk reageren."
+  },
+  "title": "Contacteer ons",
+  "description": "Je bent uitgenodigd om onze kantoor in Málaga te bezoeken voor een persoonlijke afspraak, of we zouden graag je bij een eigendomsbewaking willen begeleiden. Of je vragen hebt over kopen, verkopen, financiering of residentie, ons team staat klaar om je te helpen. We spreken Nederlands, Engels en Spaans, om een duidelijke communicatie en ondersteuning tijdens het hele proces te garanderen.",
+  "btn_text": "over ons"
   },
   "contact-form": {
-      "subtitle": "Klaar voor de volgende stap? ",
-      "title": "Låt oss ansluten",
-      "description": "We helpen je graag en maken het proces zo soepel mogelijk.",
-      "btn_text": "Contacteer ons"
-  },
+        "subtitle": "Klaar voor de volgende stap? ",
+        "title": "Laten we verbinden ",   
+        "description": "We zullen graag je helpen en het proces zo soepel mogelijk maken.",
+        "btn_text": "Contacteer ons",
+        "input-name": "Naam en achternaam", 
+        "input-email": "E-mailadres",   
+        "input-phone": "Telefoonnummer",  
+        "input-city": "Stad",
+        "input-preferred_contact_moment": "Voorkeur Contact Moment",  
+        "input-message": "Bericht", 
+        "input-submit-now": "Nu verzenden", 
+        "error-message": "Fout bij het verzenden van het bericht",
+        "success-message": "Bericht succesvol verzonden!",
+        "submitting": "Verzenden...",
+        "input-click-to-whatsapp": "Klik voor WhatsApp"
+    },
   "testimonials": {
     "title": "Getuigenissen",
     "contact-title": "Neem contact op",

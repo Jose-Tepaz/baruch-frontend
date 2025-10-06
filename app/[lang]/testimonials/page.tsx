@@ -2,6 +2,7 @@
 import dynamic from 'next/dynamic';
 import { getTestimonials } from '@/services/testimonials';
 
+
 import TestimonialList from '@/components/sections/TestimonialList';
 
 // Mantener header/footer existentes como en la home

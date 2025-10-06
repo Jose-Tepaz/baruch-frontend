@@ -295,29 +295,31 @@
         }
     },
     "contact": {
-        "title": "Contact Us",
-        "our-email": "Our Email",
-        "our-phone": "Phone",
-        "our-schedule": "Schedule",
-        "form-title": "Send Us A Message",
-      
-        "your-name": "Your Name",
-        "phone-number": "Phone Number",
-        "email-address": "Email Address",
-        "service-type": "Service Type",
-        "service-type-1": "Sell Property",
-        "service-type-2": "Buy Property",
-        "service-type-3": "Rent Property",
-        "message": "Your Message",
-        "submit-now": "Submit Now",
-        "error-message": "Error sending message",
-        "success-message": "Message sent successfully!"
+        "hero": {
+            "title": "Contact Us",
+            "description": "We’re here to help you every step of the way in finding your dream property in Spain. Feel free to reach out to us anytime with no obligations, no pressure. Use the contact form below to get in touch, and we’ll respond as soon as possible."
+        },
+        "title": "Get in touch",
+        "description": "You’re welcome to visit our office in Málaga for a personal meeting, or we’d be happy to accompany you on a property visit. Whether you have questions about buying, selling, financing, or residency, our team is ready to assist. We speak Dutch, English, and Spanish, ensuring clear communication and support throughout the process.",
+        "btn_text": "about us"
+       
     },
     "contact-form": {
         "subtitle": "Ready for the next step? ",
         "title": "Let’s connect ",  
         "description": "We’ll be more than happy to guide you and make the process as smooth as possible.",
-        "btn_text": "Contact Us"
+        "btn_text": "Contact Us",
+        "input-name": "Name",
+        "input-email": "Email",
+        "input-phone": "Phone",
+        "input-city": "City",
+        "input-preferred_contact_moment": "Preferred Contact Moment",
+        "input-message": "Message",
+        "input-submit-now": "Submit Now",
+        "error-message": "Error sending message",
+        "success-message": "Message sent successfully!",
+        "submitting": "Submitting...",
+        "input-click-to-whatsapp": "Click to WhatsApp"
     },
     "testimonials": {
         "title": "Testimonials",

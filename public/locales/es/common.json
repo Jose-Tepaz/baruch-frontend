@@ -293,23 +293,30 @@
         
     },
     "contact": {
+        "hero": {
+            "title": "Contactanos",
+            "description": "Estamos aquí para ayudarte en cada paso del camino en encontrar tu casa soñada en España. No te preocupes por nada, contáctanos en cualquier momento sin obligaciones ni presión. Utiliza el formulario de contacto abajo para comunicarte con nosotros, y te responderemos lo antes posible."
+        },
         "title": "Contactanos",
-        "our-email": "Nuestro Correo Electrónico",
-        "our-phone": "Teléfono",
-        "our-schedule": "Horario",
-        "form-title": "Envíanos un Mensaje",
-      
-        "your-name": "Tu Nombre",
-        "phone-number": "Número de Teléfono",
-        "email-address": "Correo Electrónico",
-        "service-type": "Tipo de Servicio",
-        "service-type-1": "Vender Propiedad",
-        "service-type-2": "Comprar Propiedad",
-        "service-type-3": "Alquilar Propiedad",
-        "message": "Tu Mensaje",
-        "submit-now": "Enviar",
+        "description": "Estamos aquí para ayudarte en cada paso del camino en encontrar tu casa soñada en España. No te preocupes por nada, contáctanos en cualquier momento sin obligaciones ni presión. Utiliza el formulario de contacto abajo para comunicarte con nosotros, y te responderemos lo antes posible.",
+        "btn_text": "sobre nosotros"
+    },
+    "contact-form": {
+            "subtitle": "¿Listo para el siguiente paso? ",
+        "title": "Conectemos ",  
+        "description": "Te ayudaremos a guiarte y hacer el proceso lo más suave posible.",
+        "btn_text": "Contactanos",
+        "input-name": "Nombre",
+        "input-email": "Correo Electrónico",
+        "input-phone": "Teléfono",
+        "input-city": "Ciudad",
+        "input-preferred_contact_moment": "Momento de Contacto Preferido",
+        "input-message": "Mensaje",
+        "input-submit-now": "Enviar Ahora", 
         "error-message": "Error al enviar el mensaje",
-        "success-message": "Mensaje enviado exitosamente!"
+        "success-message": "Mensaje enviado exitosamente!",
+        "submitting": "Enviando...",
+        "input-click-to-whatsapp": "Click para WhatsApp"
     },
     "testimonials": {
         "title": "Testimonios",

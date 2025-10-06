@@ -5804,10 +5804,19 @@ only screen and (min-width: 768px) and (max-width: 991px),
     background-repeat: no-repeat;
 }
 .overlay-about-hero {
-    
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-contact-hero {
+    
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
     display: flex;
     justify-content: center;
     align-items: center;
