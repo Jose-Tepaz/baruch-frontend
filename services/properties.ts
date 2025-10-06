@@ -31,6 +31,7 @@ export interface MappedProperty {
   propertyStatus: string
   category: any
   location: string
+  is_private?: boolean
   amenities: Array<{
     id: number;
     Name: string;
@@ -67,6 +68,26 @@ interface PropertyData {
   }>
   is_private?: boolean
   location: string
+}
+
+// Función para verificar si el usuario está autenticado (lado servidor)
+function isUserAuthenticated(): boolean {
+  // En servidor, verificar el token desde cookies o headers
+  if (typeof window === 'undefined') {
+    // Verificar cookies en el servidor usando next/headers
+    try {
+      const { cookies } = require('next/headers');
+      const token = cookies().get('auth_token')?.value;
+      return !!token;
+    } catch {
+      return false;
+    }
+  }
+  // En cliente, verificar localStorage
+  if (typeof window !== 'undefined') {
+    return !!localStorage.getItem('auth_token');
+  }
+  return false;
 }
 
 export type getPropertiesFilter = {
@@ -280,7 +301,8 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           property_status,
           category,
           location,
-          amenities
+          amenities,
+          is_private
 
         } = property
 
@@ -295,6 +317,7 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           console.log('Property status:', propertyStatus);
           console.log('Category:', category);
           console.log('Amenities:', amenities);
+          console.log('Is Private:', is_private);
         }
 
         return {
@@ -309,6 +332,7 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           propertyStatus,
           category,
           location,
+          is_private,
           amenities: amenities || []
         }
       })

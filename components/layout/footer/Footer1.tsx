@@ -208,7 +208,7 @@ export default function Footer1() {
                                     <ul className="text-white">
                                        
                                     <li>
-                                        <Link href={`/${locale}/properties?category=Villas`} className="text-white">{t('footer.category-1')}</Link>
+                                        <Link href={`/${locale}/properties?category=villas`} className="text-white">{t('footer.category-1')}</Link>
                                     </li>
                                     <li>
                                         <Link href={`/${locale}/properties?category=apartaments`} className="text-white">{t('footer.category-2')}</Link>

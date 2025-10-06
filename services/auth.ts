@@ -136,6 +136,8 @@ export function logout(): void {
   if (typeof window !== 'undefined') {
     localStorage.removeItem('auth_token')
     localStorage.removeItem('user')
+    // Eliminar la cookie también
+    document.cookie = 'auth_token=; path=/; max-age=0'
     window.location.href = '/login'
   }
 }
@@ -148,10 +150,12 @@ export function getToken(): string | null {
   return null
 }
 
-// Función para guardar el token en localStorage
+// Función para guardar el token en localStorage y cookies
 export function saveToken(token: string): void {
   if (typeof window !== 'undefined') {
     localStorage.setItem('auth_token', token)
+    // Guardar también en cookies para que el servidor pueda acceder
+    document.cookie = `auth_token=${token}; path=/; max-age=${60 * 60 * 24 * 7}; SameSite=Lax`
   }
 }
 

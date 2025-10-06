@@ -6,6 +6,7 @@ import { getPropertyStatuses } from "@/services/property-status";
 import { getAmenities } from "@/services/amenities";
 import PropertiesContent from "@/components/pages/PropertiesContent";
 import { Metadata } from 'next';
+import { cookies } from 'next/headers';
 
 interface PropertiesPageProps {
     params: Promise<{
@@ -77,6 +78,12 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
     const { lang } = await params;
     const { category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities: searchAmenities } = await searchParams;
     const sp = await searchParams;
+    
+    // Verificar autenticación del usuario
+    const cookieStore = await cookies();
+    const authToken = cookieStore.get('auth_token')?.value;
+    const isAuthenticated = !!authToken;
+    
     // Obtener datos del servidor con manejo de errores
     let categories = [];
     let properties: any[] = [];
@@ -102,7 +109,14 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
         properties = data;
         pagination = meta.pagination;
         
-       
+        // Filtrar propiedades privadas si el usuario no está autenticado
+        if (!isAuthenticated && properties) {
+            properties = properties.filter((property: any) => {
+                // Solo mostrar propiedades que NO sean privadas o que is_private sea undefined/null/false
+                return !property.is_private;
+            });
+            console.log(`Filtered ${data.length - properties.length} private properties (user not authenticated)`);
+        }
         
         // Filtrar propiedades localmente por otros criterios si es necesario
         if (properties && (keyword || city || state || searchAmenities)) {

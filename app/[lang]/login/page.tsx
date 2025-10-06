@@ -18,7 +18,7 @@ export default function LoginPage({ params }: { params: Promise<{ lang: string }
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(false)
-  
+  const [showPassword, setShowPassword] = useState(false)
   const { login } = useAuth()
   const router = useRouter()
 
@@ -70,15 +70,36 @@ export default function LoginPage({ params }: { params: Promise<{ lang: string }
                   <div className="mb-3">
                     <label htmlFor="password" className="form-label">
                       Password
-                    </label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                    />
+                    </label> 
+                    <div style={{ position: 'relative' }}>
+                      <input
+                        type={showPassword ? "text" : "password"}
+                        className="form-control"
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                        style={{ paddingRight: '40px' }}
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        style={{
+                          position: 'absolute',
+                          right: '10px',
+                          top: '50%',
+                          transform: 'translateY(-50%)',
+                          background: 'none',
+                          border: 'none',
+                          cursor: 'pointer',
+                          padding: 0
+                        }}
+                        tabIndex={-1}
+                        aria-label={showPassword ? "Ocultar contraseña" : "Mostrar contraseña"}
+                      >
+                        <i className={`fa-solid ${showPassword ? "fa-eye-slash" : "fa-eye"}`}></i>
+                      </button>
+                    </div>
                   </div>
                 <div className="btn-area1 mt-0">
                   <button
