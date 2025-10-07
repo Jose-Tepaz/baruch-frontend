@@ -331,5 +331,16 @@
         "service-type-2": "Acheter une Propriété",
         "service-type-3": "Louer une Propriété",
         "submitting": "Envoi..."
-    }  
+    },
+    "whatsapp": {
+        "tooltip": "Écrivez-nous sur WhatsApp !",
+        "messages": {
+            "default": "Bonjour, je suis intéressé par vos propriétés immobilières",
+            "home": "Bonjour, je suis intéressé par vos propriétés immobilières",
+            "properties": "Bonjour, je suis intéressé par les propriétés disponibles",
+            "contact": "Bonjour, j'ai une question sur vos services",
+            "about": "Bonjour, j'aimerais en savoir plus sur votre entreprise",
+            "services": "Bonjour, je suis intéressé par vos services immobiliers"
+        }
+    }
 }

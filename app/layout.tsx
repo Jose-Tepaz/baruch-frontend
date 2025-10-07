@@ -11,6 +11,7 @@ import "/public/assets/css/plugins/slick-slider.css";
 import "/public/assets/css/plugins/swiper-slider.css";
 import "/public/assets/css/main.css";
 import "/public/assets/css/custom-fonts.css";
+import "/public/assets/css/whatsapp-button.css";
 import "intl-tel-input/build/css/intlTelInput.css";
 
 import StoreProvider from "@/features/StoreProvider";

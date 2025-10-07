@@ -336,5 +336,16 @@
         "service-type-2": "Buy Property",
         "service-type-3": "Rent Property",
         "submitting": "Submitting..."
+    },
+    "whatsapp": {
+        "tooltip": "Write to us on WhatsApp!",
+        "messages": {
+            "default": "Hello, I'm interested in learning more about your real estate properties",
+            "home": "Hello, I'm interested in learning more about your real estate properties",
+            "properties": "Hello, I'm interested in viewing the available properties",
+            "contact": "Hello, I have a question about your services",
+            "about": "Hello, I would like to know more about your company",
+            "services": "Hello, I'm interested in learning more about your real estate services"
+        }
     }
 }

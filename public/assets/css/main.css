@@ -4,6 +4,7 @@
    Support: https://alithemes.ticksy.com
    Version: 1.0
 =======
+
 Table of contents
     01. Template Default CSS
     02. Header
@@ -1303,6 +1304,7 @@ Location:
     border-radius: 8px;
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
 .vl-btn1::after {

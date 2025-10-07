@@ -333,5 +333,16 @@
         "service-type-2": "Comprar Propiedad",
         "service-type-3": "Alquilar Propiedad",
         "submitting": "Enviando..."
+    },
+    "whatsapp": {
+        "tooltip": "¡Escríbenos por WhatsApp!",
+        "messages": {
+            "default": "Hola, me interesa conocer más sobre sus propiedades inmobiliarias",
+            "home": "Hola, me interesa conocer más sobre sus propiedades inmobiliarias",
+            "properties": "Hola, me interesa ver las propiedades disponibles",
+            "contact": "Hola, tengo una consulta sobre sus servicios",
+            "about": "Hola, me gustaría conocer más sobre su empresa",
+            "services": "Hola, me interesa conocer más sobre sus servicios inmobiliarios"
+        }
     }
 }

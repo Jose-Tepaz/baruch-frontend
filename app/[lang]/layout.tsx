@@ -1,4 +1,6 @@
 import { ReactNode } from 'react';
+import WhatsAppButton from '@/components/elements/WhatsAppButton';
+import { WHATSAPP_CONFIG } from '@/config/whatsapp';
 
 interface Props {
   children: ReactNode;
@@ -10,10 +12,11 @@ interface Props {
 export default async function LocaleLayout({ children, params }: Props) {
   const { lang } = await params;
   return (
-    <html lang={lang}>
-      <body>
-        {children}
-      </body>
-    </html>
+    <>
+      {children}
+      <WhatsAppButton 
+        phoneNumber={WHATSAPP_CONFIG.phoneNumber}
+      />
+    </>
   );
 } 

@@ -250,5 +250,16 @@
       "service-type-2": "Köpa fastighet",
       "service-type-3": "Hyra fastighet",
       "submitting": "Skickar..."
+  },
+  "whatsapp": {
+    "tooltip": "Skriv till oss på WhatsApp!",
+    "messages": {
+      "default": "Hej, jag är intresserad av dina fastigheter",
+      "home": "Hej, jag är intresserad av dina fastigheter",
+      "properties": "Hej, jag är intresserad av tillgängliga fastigheter",
+      "contact": "Hej, jag har en fråga om dina tjänster",
+      "about": "Hej, jag skulle vilja veta mer om ditt företag",
+      "services": "Hej, jag är intresserad av dina fastighetstjänster"
+    }
   }
 }

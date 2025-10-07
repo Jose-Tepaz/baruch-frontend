@@ -340,5 +340,16 @@
         "service-type-2": "Eigentum kaufen",
         "service-type-3": "Eigentum mieten",
         "submitting": "Senden..."
+    },
+    "whatsapp": {
+        "tooltip": "Schreiben Sie uns auf WhatsApp!",
+        "messages": {
+            "default": "Hallo, ich interessiere mich für Ihre Immobilien",
+            "home": "Hallo, ich interessiere mich für Ihre Immobilien",
+            "properties": "Hallo, ich interessiere mich für die verfügbaren Immobilien",
+            "contact": "Hallo, ich habe eine Frage zu Ihren Dienstleistungen",
+            "about": "Hallo, ich möchte mehr über Ihr Unternehmen erfahren",
+            "services": "Hallo, ich interessiere mich für Ihre Immobiliendienstleistungen"
+        }
     }
 }

@@ -288,5 +288,16 @@
       "service-type-2": "Kupowanie nieruchomości",
       "service-type-3": "Wynajem nieruchomości",
       "submitting": "Wysyłanie..."
+  },
+  "whatsapp": {
+    "tooltip": "Napisz do nas na WhatsApp!",
+    "messages": {
+      "default": "Cześć, jestem zainteresowany Twoimi nieruchomościami",
+      "home": "Cześć, jestem zainteresowany Twoimi nieruchomościami",
+      "properties": "Cześć, jestem zainteresowany dostępnymi nieruchomościami",
+      "contact": "Cześć, mam pytanie dotyczące Twoich usług",
+      "about": "Cześć, chciałbym dowiedzieć się więcej o Twojej firmie",
+      "services": "Cześć, jestem zainteresowany Twoimi usługami nieruchomościowymi"
+    }
   }
 }

@@ -258,5 +258,16 @@
     "service-type-2": "Woning kopen",
     "service-type-3": "Woning huren",
     "submitting": "Verzenden..."
+  },
+  "whatsapp": {
+    "tooltip": "Schrijf ons op WhatsApp!",
+    "messages": {
+      "default": "Hallo, ik ben geïnteresseerd in uw vastgoed",
+      "home": "Hallo, ik ben geïnteresseerd in uw vastgoed",
+      "properties": "Hallo, ik ben geïnteresseerd in de beschikbare eigenschappen",
+      "contact": "Hallo, ik heb een vraag over uw diensten",
+      "about": "Hallo, ik zou graag meer willen weten over uw bedrijf",
+      "services": "Hallo, ik ben geïnteresseerd in uw vastgoeddiensten"
+    }
   }
 }
