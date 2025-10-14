@@ -90,7 +90,7 @@ export default async function AboutUsPage({ params }: AboutUsPageProps) {
     <>
       <Layout>
         <AboutHero /> {/* Hero Section */}
-
+       
         <AboutForBuyers /> {/* About For Sellers Section */}
         <AboutForSellers /> {/* About Section */}
         <ContactSectionAbout 

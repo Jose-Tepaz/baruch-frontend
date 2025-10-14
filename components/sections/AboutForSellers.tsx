@@ -27,24 +27,28 @@ export default function Others3() {
                                 <h3 className="size-32">{t('about.others3.forseellers')}</h3>
                                 <div className="space16" />
                                 <div style={{ display: 'flex', alignItems: 'start', gap: '10px', marginTop: '10px' }}>
-                                
-                                    <p>-{t('about.others3.forseellersDescription.list1')}</p>
+                                <span className="text-color-blue"> <i className="fa-solid fa-check"></i> </span>
+                                    <p className="text-color-black ">{t('about.others3.forseellersDescription.list1')}</p>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'start', gap: '10px', marginTop: '10px' }}>
                                 
-                                    <p>-{t('about.others3.forseellersDescription.list2')}</p>
+                                    <span className="text-color-blue"> <i className="fa-solid fa-check"></i> </span>
+                                    <p className="text-color-black ">{t('about.others3.forseellersDescription.list2')}</p>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'start', gap: '10px', marginTop: '10px' }}>
                                 
-                                    <p>-{t('about.others3.forseellersDescription.list3')}</p>
+                                    <span className="text-color-blue"> <i className="fa-solid fa-check"></i> </span>
+                                    <p className="text-color-black ">{t('about.others3.forseellersDescription.list3')}</p>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'start', gap: '10px', marginTop: '10px' }}>
                                 
-                                    <p>-{t('about.others3.forseellersDescription.list4')}</p>
+                                    <span className="text-color-blue"> <i className="fa-solid fa-check"></i> </span>
+                                    <p className="text-color-black ">{t('about.others3.forseellersDescription.list4')}</p>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'start', gap: '10px', marginTop: '10px' }}>
                                 
-                                    <p>-{t('about.others3.forseellersDescription.list5')}</p>
+                                    <span className="text-color-blue"> <i className="fa-solid fa-check" ></i> </span>
+                                    <p className="text-color-black ">{t('about.others3.forseellersDescription.list5')}</p>
                                 </div>
                                 </div>                 
                                 
@@ -61,7 +65,7 @@ export default function Others3() {
                     </div>
                     </div>
                 </div>
-                <div className="space40" />
+                <div className="space60" />
             </div>
             
             

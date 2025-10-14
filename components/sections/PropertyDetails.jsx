@@ -24,10 +24,7 @@ export default function PropertyDetails({ property }) {
                     <div className="d-flex flex-column gap-2 mb-3" >
                         {/* Título principal */}
                         <h1 className="title-properties-single">{property.title}</h1>
-                        {/* Precio con icono */}
-                        <div className="property-price">
-                            {property.price ? `€${property.price.toLocaleString('es-ES')}` : ''}
-                        </div>
+                        
 
                         {/* Dirección con icono */}
                         <div className="property-location d-flex align-items-center gap-2">
@@ -78,9 +75,14 @@ export default function PropertyDetails({ property }) {
                 </div>
 
                 {/* Contenedor principal con información y precio */}
-                <div style={{width: '250px', marginTop: 'autos'}} className="d-flex justify-content-end align-items-end mobile-justify-content-left mobile-align-items-leftr">
+                <div style={{width: '250px', marginTop: 'autos'}} className="d-flex flex-column gap-4 mt-auto justify-content-center align-items-end mobile-justify-content-left mobile-align-items-leftr">
+                     {/* Precio con icono */}
+                     <div className="property-price">
+                            {property.price ? `€ ${property.price.toLocaleString('es-ES')}` : ''}
+                        </div>
                     {/* Precio y botón de contacto */}
-                    <div className="property-price-section d-flex justify-content-end align-items-end mobile-justify-content-left mobile-align-items-left" >
+                    <div className="property-price-section d-flex justify-content-end align-items-soace-between mobile-justify-content-left mobile-align-items-left" >
+                       
 
                         <Link className="vl-btn1 mt-auto mb-auto mobile-mr-auto mobile-ml-0" href="#contact">
                             {t("propertyDetails.contact-text")}

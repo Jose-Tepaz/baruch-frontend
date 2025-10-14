@@ -3,17 +3,17 @@ import ContactForm from "./contactForm";
 import { useTranslation } from "@/utils/i18n-simple";
 import Link from "next/link";
 
-export default function ContactSectionAbout({ imgContact}: { imgContact: string }) {
+export default function ContactSectionAbout({ imgContact }: { imgContact: string }) {
     const { t } = useTranslation('common');
     return (
         <div className="padding-global">
             <div className="container-large">
-                <div className="row">
+                <div className="row gap-4 align-items-start">
                     <div className="col-lg-6  justify-content-center  align-items-start d-flex flex-column">
                         <div className="space30"></div>
                         <img src={imgContact} style={{ width: '100%', height: '550px', objectFit: 'cover' }} />
                         <div className="space30"></div>
-                            <h2 className="text-color-black text-size-32">{t('about.conatct-section.title')}</h2>
+                        <h2 className="text-color-black text-size-32">{t('about.conatct-section.title')}</h2>
                         <div className="space16"></div>
                         <p className="text-color-black text-size-medium">{t('about.conatct-section.description')}</p>
                         <div className="space30"></div>
@@ -27,7 +27,7 @@ export default function ContactSectionAbout({ imgContact}: { imgContact: string 
                             </span>
                         </Link>
                     </div>
-                    <div className="col-lg-6 m-auto">
+                    <div className="col-lg-5 m-auto">
                         <div className="space30"></div>
                         <div className="bg-color-white" style={{ padding: '20px' }}>
                             <h2 className="text-color-black  size-20 uppercase">{t('contact-form.subtitle')}</h2>

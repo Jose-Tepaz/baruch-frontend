@@ -18,6 +18,29 @@ export default function Category1({ categories }: Category1Props) {
     if (!categories || categories.length === 0) {
         return null;
     }
+
+    // Definir el orden personalizado de las categorías
+    // Modifica este array con los nombres exactos de tus categorías en el orden que desees
+    const customOrder = [
+        'Villas',
+        'Apartaments', 
+        'Golf Properties',
+        'New Developments',
+        // Agrega más categorías según necesites
+    ];
+
+    // Ordenar categorías según el orden personalizado
+    const sortedCategories = [...categories].sort((a, b) => {
+        const indexA = customOrder.indexOf(a.name);
+        const indexB = customOrder.indexOf(b.name);
+        
+        // Si la categoría no está en el array personalizado, ponerla al final
+        if (indexA === -1) return 1;
+        if (indexB === -1) return -1;
+        
+        return indexA - indexB;
+    });
+
     return (
         <div className="category-section_home">
             <div className="padding-global">
@@ -44,7 +67,7 @@ export default function Category1({ categories }: Category1Props) {
             </div>
             <div className="section-wrapper-category">
                                 <div className="wrapper-category">
-                                    {categories.map((category: Category, index: number) => (
+                                    {sortedCategories.map((category: Category, index: number) => (
                                         <div className="card-category" key={category.slug || index}>
                                             <Link href={`/categories/${category.slug}`}>
                                                 <div className="" >

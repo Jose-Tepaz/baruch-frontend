@@ -58,7 +58,7 @@
         "btn-1-hero": "View Properties",
         "btn-2-hero": "Learn More",
         "title-filter": "Find Your Dream Home",
-        "title-filter-1": "Features",
+        "title-filter-1": "Property Status",
         "title-filter-2": "Property type",
         "bedrooms-filter": "Bedrooms",
         "bathrooms-filter": "Bathrooms",
@@ -78,7 +78,7 @@
         "title-list-properties": "Discover Our Latest Properties",
         "subtitle-category": "Category",
         "title-category": "Select The Home That Suits You",
-        "btn-about-section-2": "View Listing",
+        "btn-about-section-2": "Learn More",
         "subtitle-testimonials-1": "Testimonials",
         "title-testimonials": "What Our Clients Say",
         "subtitle-testimonials": "Testimonials",
@@ -86,7 +86,7 @@
         "list1-why-choose-us": "Experts Agents",
         "list2-why-choose-us": "Extensive Listings",
         "list3-why-choose-us": "Customer Satisfaction",
-        "paragraph-why-choose-us": "At Baruch, we believe that finding a home goes beyond just a roof over your head – it's about discovering an place that fits your unique lifestyle. Whether you're searching for cozy."
+        "paragraph-why-choose-us": "At Baruch Real Estate, we believe finding a home is more than just securing a roof over your head — it’s about discovering a place that perfectly matches your lifestyle. Our team of experts, extensive listings, and commitment to customer satisfaction set us apart in delivering a seamless real estate experience."
     },
     "buttons": {
         "login": "Login",
@@ -338,7 +338,7 @@
         "submitting": "Submitting..."
     },
     "whatsapp": {
-        "tooltip": "Write to us on WhatsApp!",
+        "tooltip": "Write us on WhatsApp!",
         "messages": {
             "default": "Hello, I'm interested in learning more about your real estate properties",
             "home": "Hello, I'm interested in learning more about your real estate properties",

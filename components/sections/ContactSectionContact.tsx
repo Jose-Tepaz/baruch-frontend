@@ -4,31 +4,23 @@ import { useTranslation } from "@/utils/i18n-simple";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function ContactSectionContact({ imgContact}: { imgContact: string }) {
+export default function ContactSectionContact({ imgContact }: { imgContact: string }) {
     const { t } = useTranslation('common');
     return (
         <div className="padding-global">
             <div className="container-large">
-                <div className="row">
-                    <div className="col-lg-6  justify-content-center  align-items-start d-flex flex-column">
+                <div className="row gap-4 align-items-start">
+                    <div className="col-lg-6 justify-content-center  align-items-start d-flex flex-column">
                         <div className="space30"></div>
                         <img src={imgContact} style={{ width: '100%', height: '550px', objectFit: 'cover' }} />
                         <div className="space30"></div>
-                            <h2 className="text-color-black text-size-32">{t('contact.title')}</h2>
+                        <h2 className="text-color-black text-size-32">{t('contact.title')}</h2>
                         <div className="space16"></div>
-                        <p className="text-color-black text-size-medium">{t('contact.description')}</p>
+                        <p className="text-color-black">{t('contact.description')}</p>
                         <div className="space30"></div>
-                        <Link href="about-us" className="vl-btn1 is-primary">
-                            {t('contact.btn_text')}
-                            <span className="arrow1 ms-2">
-                                <i className="fa-solid fa-arrow-right" />
-                            </span>
-                            <span className="arrow2 ms-2">
-                                <i className="fa-solid fa-arrow-right" />
-                            </span>
-                        </Link>
+                        
                     </div>
-                    <div className="col-lg-6 m-auto">
+                    <div className="col-lg-5 m-auto">
                         <div className="space30"></div>
                         <div className="bg-color-white" style={{ padding: '20px' }}>
                             <h2 className="text-color-black  size-20 uppercase">{t('contact-form.subtitle')}</h2>

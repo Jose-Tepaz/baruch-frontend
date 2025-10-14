@@ -342,7 +342,7 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                                                         <div className="form-check">
                                                             <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" required />
                                                             <label className="form-check-label" htmlFor="flexCheckDefault">
-                                                                I agree with the privacy statement of Baruch S.L.
+                                                                I agree with the privacy statement of Baruch Real Estate
                                                             </label>
                                                         </div>
                                                     </div>

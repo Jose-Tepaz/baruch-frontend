@@ -52,7 +52,7 @@
         "btn-1-hero": "Bekijk Eigenschappen",
         "btn-2-hero": "Meer leren",
         "title-filter": "Vind je Droomhuis",
-        "title-filter-1": "Kenmerken",
+        "title-filter-1": "Eigendomstatus",
         "title-filter-2": "Type eigendom",
         "bedrooms-filter": "Slaapkamers",
         "bathrooms-filter": "Badkamers",
@@ -61,7 +61,7 @@
         "amenities-filter": "Voorzieningen",
         "location-filter": "Locatie",
         "show-more": "Meer filters tonen",
-        "show-less": "Minder filters tonen",
+        "show-less": "Minder filters tonen",  
         "btn-filter": "Eigenschappen zoeken",
         "btn-all-properties": "Alle eigenschappen tonen",
         "title-about-us": "Over het bedrijf",
@@ -72,7 +72,7 @@
         "title-list-properties": "Ontdek onze Nieuwste Eigenschappen",
         "subtitle-category": "Categorie",
         "title-category": "Selecteer het huis dat bij je past",
-        "btn-about-section-2": "Eigenschappen bekijken",
+        "btn-about-section-2": "Meer leren",
         "subtitle-testimonials-1": "Getuigenissen",
         "title-testimonials": "Wat onze klanten zeggen",
         "subtitle-testimonials": "Getuigenissen",
@@ -80,7 +80,7 @@
         "list1-why-choose-us": "Experts Agents",
         "list2-why-choose-us": "Uitgebreide lijsten",
         "list3-why-choose-us": "Klanttevredenheid",
-        "paragraph-why-choose-us": "Bij Baruch geloven we dat het vinden van een huis verder gaat dan alleen een dak boven je hoofd – het gaat om het ontdekken van een plek die past bij je unieke levensstijl. Of je nu op zoek bent naar een cozy appartement of een ruim huis."
+        "paragraph-why-choose-us": "Bij Baruch Real Estate geloven we dat een huis vinden meer is dan alleen een dak boven je hoofd bemachtigen — het gaat om het ontdekken van een plek die perfect bij jouw levensstijl past. Ons team van experts, ons uitgebreide aanbod en onze toewijding aan klanttevredenheid onderscheiden ons in het leveren van een zorgeloze vastgoedervaring."
        
       },
   "buttons": {

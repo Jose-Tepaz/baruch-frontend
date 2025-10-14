@@ -56,9 +56,9 @@
         "btn-1-hero": "Eigenschaften ansehen",
         "btn-2-hero": "Mehr erfahren",
         "title-filter": "Finde dein Traumhaus",
-        "title-filter-1": "Ausstattung",
+        "title-filter-1": "Eigentum Status",
         "title-filter-2": "Immobilienart",
-        "bedrooms-filter": "Schlafzimmer",
+        "bedrooms-filter": "Schlafzimmer",  
         "bathrooms-filter": "Badezimmer",
         "min-price-filter": "Min Preis",
         "max-price-filter": "Max Preis",
@@ -76,7 +76,7 @@
         "title-list-properties": "Entdecken Sie unsere neuesten Eigenschaften",
         "subtitle-category": "Kategorie",
         "title-category": "Wählen Sie das Haus, das zu Ihnen passt",
-        "btn-about-section-2": "Eigenschaften ansehen",
+        "btn-about-section-2": "Mehr erfahren",
         "subtitle-testimonials-1": "Testimonials",
         "title-testimonials": "Was unsere Kunden sagen",
         "subtitle-testimonials": "Testimonials",
@@ -84,7 +84,7 @@
         "list1-why-choose-us": "Experten-Agenten",
         "list2-why-choose-us": "Umfangreiche Angebote",
         "list3-why-choose-us": "Kundenzufriedenheit",
-        "paragraph-why-choose-us": "Bei Baruch glauben wir, dass das Finden eines Hauses nicht nur darum geht, ein Dach über dem Kopf zu haben – es geht darum, ein Ort zu entdecken, der zu Ihrem einzigartigen Lebensstil passt. Ob Sie nach einem gemütlichen Appartment oder einem großzügigen Haus suchen."
+        "paragraph-why-choose-us": "Bei Baruch Real Estate sind wir überzeugt, dass die Suche nach einem Zuhause mehr ist, als nur ein Dach über dem Kopf zu finden – es geht darum, einen Ort zu entdecken, der perfekt zu Ihrem Lebensstil passt. Unser Expertenteam, umfangreiche Angebote und unser Engagement für Kundenzufriedenheit heben uns hervor, um Ihnen ein nahtloses Immobilienerlebnis zu bieten."
     },
 
 
@@ -342,7 +342,7 @@
         "submitting": "Senden..."
     },
     "whatsapp": {
-        "tooltip": "Schreiben Sie uns auf WhatsApp!",
+        "tooltip": "Schreibe uns auf WhatsApp!",
         "messages": {
             "default": "Hallo, ich interessiere mich für Ihre Immobilien",
             "home": "Hallo, ich interessiere mich für Ihre Immobilien",

@@ -4,6 +4,7 @@ import { useTranslation } from "@/utils/i18n-simple";
 import Iconcheck from '@/public/assets/img/icons/rounded-check.svg';
 
 
+
 export default function AboutForSellers() {
     const { t, i18n } = useTranslation('common');
 
@@ -16,7 +17,7 @@ export default function AboutForSellers() {
                 <div className="padding-global">
 
                     <div className="container-large">
-                    <div className="space30" />
+                    <div className="space60" />
 
                         <div className="wrapp-content-mission">
                             
@@ -33,33 +34,37 @@ export default function AboutForSellers() {
                                 <h3 className="size-32">{t('about.others3.forbuyers')}</h3>
                                 <div className="space16" />
                                 <div style={{ display: 'flex', alignItems: 'start', gap: '10px', marginTop: '10px' }}>
-                                
-                                    <p className="text-color-black text-size-medium">-{t('about.others3.forbuyersDescription.list1')}</p>
+                                <span className="text-color-blue"> <i className="fa-solid fa-check"></i> </span>  
+                                    <p className="text-color-black ">{t('about.others3.forbuyersDescription.list1')}</p>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'start', gap: '10px', marginTop: '10px' }}>
 
-                                    <p>-{t('about.others3.forbuyersDescription.list2')}</p>
+                                    <span className="text-color-blue"> <i className="fa-solid fa-check"></i> </span>
+                                    <p className="text-color-black ">{t('about.others3.forbuyersDescription.list2')}</p>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'start', gap: '10px', marginTop: '10px' }}>
                                 
-                                    <p>-{t('about.others3.forbuyersDescription.list3')}</p>
+                                    <span className="text-color-blue "> <i className="fa-solid fa-check"></i> </span>
+                                    <p className="text-color-black ">{t('about.others3.forbuyersDescription.list3')}</p>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'start', gap: '10px', marginTop: '10px' }}>
                                 
-                                    <p>-{t('about.others3.forbuyersDescription.list4')}</p>
+                                    <span className="text-color-blue "> <i className="fa-solid fa-check"></i> </span>
+                                    <p className="text-color-black ">{t('about.others3.forbuyersDescription.list4')}</p>
                                 </div>
                                 <div style={{ display: 'flex', alignItems: 'start', gap: '10px', marginTop: '10px' }}>
                                 
-                                    <p>-{t('about.others3.forbuyersDescription.list5')}</p>
+                                    <span className="text-color-blue"> <i className="fa-solid fa-check"></i> </span>
+                                    <p className="text-color-black ">{t('about.others3.forbuyersDescription.list5')}</p>
                                 </div>
-                                </div>                 
+                                </div>                          
                                 
                                 </div>
                             </div>
 
                         
                         </div>
-                        <div className="space40" />
+                        <div className="space60" />
                     </div>
 
                 </div>

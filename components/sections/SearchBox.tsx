@@ -269,173 +269,186 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                 <div className="padding-global padding-section-medium">
                     <div className="container-large">
                         <div className="others-section-area-filters ">
-                
+
                             <div className="property-tab-section ">
                                 <form onSubmit={handleSearch}>
                                     <div className="">
                                         <div className=" mb-4 is-center">
                                             <h3 className="text-align-center size-32">{t('home.title-filter')}</h3>
                                         </div>
-                                        
-                                      
-                                        
-                                          {/* Primera fila: Input de búsqueda, categoría y estatus */}
-                                         <div className="filters z-1 position-relative mb-3">
-                                             <div className="d-flex flex-lg-nowrap flex-wrap gap-2 justify-content-between w-100">
-                                                 <div className="filter-group flex-grow-1">
-                                                     <input 
-                                                         type="text" 
-                                                         name="location" 
-                                                         placeholder={t('home.location-filter')}
-                                                         className="location-input"
-                                                     />
-                                                 </div>
-                                                 <div className="filter-group">
-                                                     <select name="category">
-                                                         <option value="">{t('home.title-filter-2')}</option>
-                                                         {categories.map((category: Category) => (
-                                                             <option key={category.slug} value={category.slug}>
-                                                                 {category.name}
-                                                             </option>
-                                                         ))}
-                                                     </select>
-                                                 </div>
-                                                 <div className="filter-group">
-                                                     <select name="property_status" defaultValue="">
-                                                         <option value="">{t('home.title-filter-1')}</option>
-                                                         {propertyStatuses.map((status) => (
-                                                             <option key={status.documentId} value={status.Title}>
-                                                                 {status.Title}
-                                                             </option>
-                                                         ))}
-                                                     </select>
-                                                 </div>
-                                             </div>
-                                         </div>
 
-                                         {/* Segunda fila: Filtros adicionales */}
-                                         <div className="filters z-1 position-relative mb-3">
-                                             <div className="d-flex flex-lg-nowrap flex-wrap gap-2 justify-content-between w-100">
-                                                 
-                                                 {/* Filtros siempre visibles en mobile */}
-                                                 <div className="filter-group">
-                                                     <select name="bedrooms" defaultValue="">
-                                                         <option value="">{t('home.bedrooms-filter')}</option>
-                                                         <option value="1">Min 1</option>
-                                                         <option value="2">Min 2</option>
-                                                         <option value="3">Min 3</option>
-                                                         <option value="4">Min 4</option>
-                                                    
-                                                     </select>
-                                                 </div>
 
-                                                 {/* Filtros ocultos en mobile */}
-                                                 <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
-                                                     <select name="bathrooms" defaultValue="">
-                                                         <option value="">{t('home.bathrooms-filter')}</option>
-                                                         <option value="1">Min 1</option>
-                                                         <option value="2">Min 2</option>
-                                                         <option value="3">Min 3</option>
-                                                         
-                                                     </select>
-                                                 </div>
 
-                                                 <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
-                                                     <select name="min_price" defaultValue="">
-                                                         <option value="">{t('home.min-price-filter')}</option>
-                                                        
-                                                         <option value="100000">€100.000</option>
-                                                         <option value="150000">€150.000</option>
-                                                         <option value="200000">€200.000</option>
-                                                         <option value="250000">€250.000</option>
-                                                         <option value="300000">€300.000</option>
-                                                         <option value="400000">€400.000</option>
-                                                         <option value="500000">€500.000</option>
-                                                         <option value="750000">€750.000</option>
-                                                         <option value="1000000">€1,000.000</option>
-                                                         <option value="1500000">€1,500.000</option>
-                                                         <option value="2000000">€2,000.000</option>
-                                                     </select>
-                                                 </div>
+                                        {/* Primera fila: Input de búsqueda, categoría y estatus */}
+                                        <div className="filters z-1 position-relative mb-3">
+                                            <div className="d-flex flex-lg-nowrap flex-wrap gap-2 justify-content-between w-100">
+                                                <div className="filter-group flex-grow-1">
+                                                    <input
+                                                        type="text"
+                                                        name="location"
+                                                        placeholder={t('home.location-filter')}
+                                                        className="location-input"
+                                                    />
+                                                </div>
+                                                <div className="filter-group">
+                                                    <select name="category">
+                                                        <option value="">{t('home.title-filter-2')}</option>
+                                                        {categories.map((category: Category) => (
+                                                            <option key={category.slug} value={category.slug}>
+                                                                {category.name}
+                                                            </option>
+                                                        ))}
+                                                    </select>
+                                                </div>
+                                                <div className="filter-group">
+                                                    <select name="property_status" defaultValue="">
+                                                        <option value="">{t('home.title-filter-1')}</option>
+                                                        {propertyStatuses.map((status) => (
+                                                            <option key={status.documentId} value={status.Title}>
+                                                                {status.Title}
+                                                            </option>
+                                                        ))}
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                                 <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
-                                                     <select name="max_price" defaultValue="">
-                                                         <option value="">{t('home.max-price-filter')}</option>
-                                                         
-                                                         <option value="150000">€150.000</option>
+                                        {/* Segunda fila: Filtros adicionales */}
+                                        <div className="filters z-1 position-relative mb-3">
+                                            <div className="d-flex flex-lg-nowrap flex-wrap gap-2 justify-content-between w-100">
+
+                                                {/* Filtros siempre visibles en mobile */}
+                                                <div className="filter-group">
+                                                    <select name="bedrooms" defaultValue="">
+                                                        <option value="">{t('home.bedrooms-filter')}</option>
+                                                        <option value="1">Min 1</option>
+                                                        <option value="2">Min 2</option>
+                                                        <option value="3">Min 3</option>
+                                                        <option value="4">Min 4</option>
+
+                                                    </select>
+                                                </div>
+
+                                                {/* Filtros ocultos en mobile */}
+                                                <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
+                                                    <select name="bathrooms" defaultValue="">
+                                                        <option value="">{t('home.bathrooms-filter')}</option>
+                                                        <option value="1">Min 1</option>
+                                                        <option value="2">Min 2</option>
+                                                        <option value="3">Min 3</option>
+
+                                                    </select>
+                                                </div>
+
+                                                <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
+                                                    <select name="min_price" defaultValue="">
+                                                        <option value="">{t('home.min-price-filter')}</option>
+
+                                                        <option value="100000">€100.000</option>
+                                                        <option value="150000">€150.000</option>
                                                         <option value="200000">€200.000</option>
-                                                         <option value="250000">€250.000</option>
-                                                         <option value="300000">€300.000</option>
-                                                         <option value="400000">€400.000</option>
-                                                         <option value="500000">€500.000</option>
-                                                         <option value="750000">€750.000</option>
-                                                         <option value="1000000">€1,000.000</option>
-                                                         <option value="1500000">€1,500.000</option>
-                                                         <option value="2000000">€2,000.000</option>
-                                                         <option value="5000000">€5,000.000</option>
-                                                         <option value="10000000">€10,000.000</option>
-                                                     </select>
-                                                 </div>
+                                                        <option value="250000">€250.000</option>
+                                                        <option value="300000">€300.000</option>
+                                                        <option value="400000">€400.000</option>
+                                                        <option value="500000">€500.000</option>
+                                                        <option value="750000">€750.000</option>
+                                                        <option value="1000000">€1,000.000</option>
+                                                        <option value="1500000">€1,500.000</option>
+                                                        <option value="2000000">€2,000.000</option>
+                                                    </select>
+                                                </div>
 
-                                                 <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
-                                                     <select name="amenities" defaultValue="">
-                                                         <option value="">{t('home.amenities-filter')}</option>
-                                                         {amenities.map((amenity) => (
-                                                             <option key={amenity.documentId} value={amenity.Name}>
-                                                                 {amenity.Name}
-                                                             </option>
-                                                         ))}
-                                                     </select>
-                                                 </div>
-                                             </div>
-                                         </div>
+                                                <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
+                                                    <select name="max_price" defaultValue="">
+                                                        <option value="">{t('home.max-price-filter')}</option>
 
-                                         {/* Botón Show More/Less para mobile */}
-                                         <div className="filters pt-2 d-lg-none">
-                                             <div className="d-flex justify-content-center w-100">
-                                                 <button 
-                                                     type="button"
-                                                     className="btn-show-more"
-                                                     onClick={() => setShowMoreFilters(!showMoreFilters)}
-                                                 >
-                                                     {showMoreFilters ? t('home.show-less') : t('home.show-more')}
-                                                     <i className={`fa-solid fa-chevron-${showMoreFilters ? 'up' : 'down'} ms-2`} />
-                                                 </button>
-                                             </div>
-                                         </div>
+                                                        <option value="150000">€150.000</option>
+                                                        <option value="200000">€200.000</option>
+                                                        <option value="250000">€250.000</option>
+                                                        <option value="300000">€300.000</option>
+                                                        <option value="400000">€400.000</option>
+                                                        <option value="500000">€500.000</option>
+                                                        <option value="750000">€750.000</option>
+                                                        <option value="1000000">€1,000.000</option>
+                                                        <option value="1500000">€1,500.000</option>
+                                                        <option value="2000000">€2,000.000</option>
+                                                        <option value="5000000">€5,000.000</option>
+                                                        <option value="10000000">€10,000.000</option>
+                                                    </select>
+                                                </div>
 
-                                         {/* Tercera fila: Botones de acción */}
-                                         <div className="btns-actions-filters">
+                                                <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
+                                                    <select name="amenities" defaultValue="">
+                                                        <option value="">{t('home.amenities-filter')}</option>
+                                                        {amenities.map((amenity) => (
+                                                            <option key={amenity.documentId} value={amenity.Name}>
+                                                                {amenity.Name}
+                                                            </option>
+                                                        ))}
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Botón Show More/Less para mobile */}
+                                        <div className="filters pt-2 d-lg-none">
+                                            <div className="d-flex justify-content-center w-100">
+                                                <button
+                                                    type="button"
+                                                    className="btn-show-more"
+                                                    onClick={() => setShowMoreFilters(!showMoreFilters)}
+                                                >
+                                                    {showMoreFilters ? t('home.show-less') : t('home.show-more')}
+                                                    <i className={`fa-solid fa-chevron-${showMoreFilters ? 'up' : 'down'} ms-2`} />
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        {/* Tercera fila: Botones de acción */}
+                                        <div className="btns-actions-filters">
+
                                             
-                                                 <div className="search-button-filters" style={{width: 'auto'}}>
-                                                     <button type="submit">
-                                                         {t('home.btn-filter')}
-                                                         <span className="arrow1 ms-2">
-                                                             <i className="fa-solid fa-arrow-right" />
-                                                         </span>
-                                                         
-                                                     </button>
-                                                 </div>
+                                                <button type="submit" className="vl-btn1 mt-auto mb-auto mobile-mr-auto mobile-ml-0">
+                                                    {t('home.btn-filter')}
+                                                    <span className="arrow1 ms-2">
+                                                        <i className="fa-solid fa-arrow-right" />
+                                                    </span>
+                                                    <span className="arrow2 ms-2">
+                                                    <i className="fa-solid fa-arrow-right" />
+                                                </span>
 
-                                                 <div className="d-flex align-items-center">
-                                                     <Link href={`/${lang}/properties`} className="show-all-properties-filters">
-                                                         {t('home.btn-all-properties')}
-                                                     </Link>
-                                                 </div>
+
+
+                                                </button>
+
+                                                
+
+                                            
+
                                            
-                                         </div>
+
+                                            <div className="d-flex align-items-center">
+                                                <Link href={`/${lang}/properties`} className="show-all-properties-filters">
+                                                    {t('home.btn-all-properties')}
+                                                </Link>
+
+
+
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </form>
                             </div>
-                        
+
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
-            
-           
+
+
+
+
         </>
     );
 }

@@ -54,7 +54,7 @@
         "btn-1-hero": "Voir les Propriétés",
         "btn-2-hero": "En savoir plus",
         "title-filter": "Trouvez votre Maison de Rêve",
-        "title-filter-1": "Caractéristiques",
+        "title-filter-1": "Statut de la Propriété",
         "title-filter-2": "Type de propriété",
         "bedrooms-filter": "Chambres",
         "bathrooms-filter": "Salles de Bains",
@@ -74,15 +74,15 @@
         "title-list-properties": "Découvrez Nos Dernières Propriétés",
         "subtitle-category": "Category",
         "title-category": "Sélectionnez la Maison qui Vous Convient",
-        "btn-about-section-2": "Voir la Liste",
+        "btn-about-section-2": "En savoir plus",
         "subtitle-testimonials-1": "Témoignages",
         "title-testimonials": "Ce Que Nos Clients Disent",
         "subtitle-testimonials": "Témoignages",
-        "title-why-choose-us": "Pourquoi Baruch Se Démarque?",
+        "title-why-choose-us": "Pourquoi Baruch Se Démarque?",      
         "list1-why-choose-us": "Agents Experts",
         "list2-why-choose-us": "Listes Extensives",
         "list3-why-choose-us": "Satisfaction Client",
-        "paragraph-why-choose-us": "Chez Baruch, nous pensons que trouver une maison va au-delà de simplement avoir un toit sur votre tête – c'est plutôt découvrir un endroit qui correspond à votre style de vie unique. Que vous recherchiez un appartement confortable ou un grand logement."
+        "paragraph-why-choose-us": "Chez Baruch Real Estate, nous croyons que trouver une maison, ce n'est pas seulement avoir un toit au-dessus de sa tête — c'est découvrir un lieu qui correspond parfaitement à votre style de vie. Notre équipe d'experts, nos listes de biens étendues et notre engagement envers la satisfaction client nous distinguent pour vous offrir une expérience immobilière sans faille."
     },
 
     "buttons": {
@@ -333,7 +333,7 @@
         "submitting": "Envoi..."
     },
     "whatsapp": {
-        "tooltip": "Écrivez-nous sur WhatsApp !",
+        "tooltip": "Écrivez-nous sur WhatsApp !",   
         "messages": {
             "default": "Bonjour, je suis intéressé par vos propriétés immobilières",
             "home": "Bonjour, je suis intéressé par vos propriétés immobilières",
