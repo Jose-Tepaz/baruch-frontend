@@ -138,13 +138,68 @@
       }
   },
   "services": {
-      "title": "Skräddarsydda fastighetstjänster",
-      "card-1": "Köpa fastighet",
-      "card-1-description": "På Baruch vet vi att att köpa ett hem är en av livets största milstolpar. Vårt erfarna team är redo att guida dig.",
-      "card-2": "Sälja fastighet",
-      "card-2-description": "Att sälja ditt hem behöver inte vara överväldigande. Med Baruch tar våra dedikerade experter hand om processen.",
-      "card-3": "Hyra fastighet",
-      "card-3-description": "Att hitta rätt hyresbostad är enkelt med Housebox. Oavsett om du letar efter en mysig lägenhet eller ett rymligt hus."
+    "title": "Skräddarsydda fastighetstjänster",
+    "btn-text": "Begär offert",
+    "card-1": "Köpa fastighet",
+    "card-1-description": "På Baruch vet vi att att köpa en bostad är en av livets största milstolpar. Vårt erfarna team finns här för att guida dig.",
+    "card-2": "Sälja fastighet",
+    "card-2-description": "Att sälja din bostad behöver inte vara överväldigande. Med Baruch ser våra engagerade experter till att processen blir smidig.",
+    "card-3": "Hyra fastighet",
+    "card-3-description": "Att hitta rätt hyresbostad är enkelt med Housebox. Oavsett om du söker en mysig lägenhet eller ett större hem hjälper vi dig.",
+    "modal": {
+        "main-title": "TJÄNSTER VI ERBJUDER",
+        "subtitle": "Vi brinner för att göra fastighetsprocessen i Spanien så enkel som möjligt. Med djup förståelse för den spanska bostadsmarknaden och ett kundfokuserat synsätt hjälper vi köpare, säljare och hyresgäster att nå sina fastighetsmål.",
+        "what-we-offer": "Vad vi erbjuder:",
+        "btn-text": "Begär offert",
+        "nie": {
+            "title": "NIE/Uppehållstillstånd",
+            "description": "Vi hjälper dig genom hela processen att erhålla ditt NIE (utländskt identitetsnummer) och uppehållstillstånd i Spanien. Vårt team guidar dig genom all nödvändig dokumentation och administrativa procedurer.",
+            "detail1": "Full rådgivning om nödvändig dokumentation",
+            "detail2": "Bokning av tider hos migrationsmyndigheter",
+            "detail3": "Stöd under hela processen",
+            "detail4": "Förnyelser och uppdateringar av dokumentation"
+        },
+        "finance": {
+            "title": "Finansiering / bolån",
+            "description": "Vi hjälper dig att hitta de bästa finansieringsalternativen för din fastighet. Vi samarbetar med ledande banker för att ge dig de mest fördelaktiga villkoren.",
+            "detail1": "Analys av din finansieringsförmåga",
+            "detail2": "Jämförelse av erbjudanden från flera banker",
+            "detail3": "Förhandling om förmånliga villkor",
+            "detail4": "Rådgivning under hela godkännandeprocessen"
+        },
+        "insurance": {
+            "title": "Försäkring",
+            "description": "Vi erbjuder heltäckande försäkringslösningar för att skydda din fastighetsinvestering. Från hemförsäkring till liv- och sjukförsäkring.",
+            "detail1": "Hem- och egendomsförsäkring",
+            "detail2": "Liv- och sjukförsäkring",
+            "detail3": "Ansvarsförsäkring",
+            "detail4": "Hantera skadeanmälningar och förnyelser"
+        },
+        "tax": {
+            "title": "Skattedeklaration",
+            "description": "Vårt team av skattexperter hanterar alla dina skatteåtaganden i Spanien och säkerställer att allt är i enlighet med gällande lagar.",
+            "detail1": "Årlig inkomstdeklaration",
+            "detail2": "Fastighetsskatter (IBI, reavinstskatt)",
+            "detail3": "Deklaration av tillgångar utomlands (Formulär 720)",
+            "detail4": "Legal skatteoptimering"
+        },
+        "legal": {
+            "title": "Juridiska tjänster",
+            "description": "Vi har en juridisk avdelning specialiserad på fastighetsrätt som hjälper dig med alla juridiska aspekter av din fastighetsaffär.",
+            "detail1": "Granskning av köpeavtal",
+            "detail2": "Due diligence av fastigheter",
+            "detail3": "Representation vid offentliga handlingar",
+            "detail4": "Tvistlösning och rättstvister"
+        },
+        "management": {
+            "title": "Fastighetsförvaltning",
+            "description": "Vi erbjuder helhetsförvaltning av din fastighet, från underhåll till hyresgästadministration, så att du kan njuta av din investering utan bekymmer.",
+            "detail1": "Sökning och val av hyresgäster",
+            "detail2": "Underhåll och reparationer",
+            "detail3": "Hantering av in- och utbetalningar",
+            "detail4": "Detaljerade månadsrapporter"
+        }
+    }
   },
   "faq": {
       "title": "Vanliga frågor",

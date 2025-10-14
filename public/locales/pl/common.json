@@ -151,13 +151,68 @@
     }   
   },
   "services": {
-      "title": "Dostosowane usługi nieruchomości na Costa del Sol",
-      "card-1": "Kupowanie nieruchomości",
-      "card-1-description": "W Baruch wiemy, że kupowanie nieruchomości jest jednym z największych etapów w życiu. Nasz ekspercki zespół jest tu, aby Cię kierować każdym krokiem.",
-      "card-2": "Sprzedaż nieruchomości",
-      "card-2-description": "Sprzedaż Twojego domu nie musi być przeszkodą. W Baruch nasz i ekspercki zespół zrobi proces.",
-      "card-3": "Wynajem nieruchomości",
-      "card-3-description": "Znalezienie odpowiedniej nieruchomości do wynajęcia jest łatwe z Housebox. Czy szukasz przytulnego apartamentu, czy spokojnego domu."
+     "title": "Usługi nieruchomości – dopasowane rozwiązania",
+        "card-1": "Kupno nieruchomości",
+        "card-1-description": "W Baruch wiemy, że zakup domu to jeden z najważniejszych momentów w życiu. Nasz doświadczony zespół jest tutaj, aby Ci pomóc.",
+        "card-2": "Sprzedaż nieruchomości",
+        "card-2-description": "Sprzedaż domu nie musi być przytłaczająca. Z Baruch nasz oddany zespół ekspertów uprości cały proces.",
+        "card-3": "Wynajem nieruchomości",
+        "card-3-description": "Znalezienie odpowiedniej nieruchomości na wynajem jest proste z Housebox. Niezależnie, czy szukasz przytulnego apartamentu, czy przestronnego domu.",
+        "btn-text": "Poproś o wycenę",
+        "modal": {
+            "main-title": "USŁUGI, KTÓRE OFERUJEMY",
+            "subtitle": "Z pasją upraszczamy proces nieruchomości w Hiszpanii. Dzięki głębokiej znajomości rynku i podejściu zorientowanemu na klienta pomagamy kupującym, sprzedającym i najemcom realizować ich cele.",
+            "what-we-offer": "Co oferujemy:",
+            "btn-text": "Poproś o wycenę",
+            "nie": {
+                "title": "NIE/rezydencja",
+                "description": "Ułatwiamy cały proces uzyskania Twojego NIE (Numer Identyfikacji Cudzoziemca) oraz rezydencji w Hiszpanii. Poprowadzimy Cię przez wszystkie dokumenty i procedury administracyjne.",
+                "detail1": "Kompleksowe doradztwo dotyczące wymaganych dokumentów",
+                "detail2": "Umawianie wizyt w urzędach imigracyjnych",
+                "detail3": "Wsparcie przez cały proces",
+                "detail4": "Odnowienia i aktualizacje dokumentów"
+            },
+            "finance": {
+                "title": "finansowanie / kredyt hipoteczny",
+                "description": "Pomagamy znaleźć najlepsze opcje finansowania dla Twojej nieruchomości. Współpracujemy z czołowymi instytucjami finansowymi, aby zapewnić najkorzystniejsze warunki.",
+                "detail1": "Analiza Twojej zdolności kredytowej",
+                "detail2": "Porównanie ofert wielu banków",
+                "detail3": "Negocjacje korzystnych warunków",
+                "detail4": "Opieka na każdym etapie zatwierdzenia kredytu"
+            },
+            "insurance": {
+                "title": "ubezpieczenia",
+                "description": "Oferujemy kompleksowe rozwiązania ubezpieczeniowe, by chronić Twoje inwestycje. Od ubezpieczeń nieruchomości po ubezpieczenie na życie i zdrowotne.",
+                "detail1": "Ubezpieczenie nieruchomości i ruchomości",
+                "detail2": "Ubezpieczenie na życie i zdrowotne",
+                "detail3": "Ubezpieczenie OC",
+                "detail4": "Obsługa zgłoszeń i odnowień ubezpieczeń"
+            },
+            "tax": {
+                "title": "rozliczenia podatkowe",
+                "description": "Nasz zespół ekspertów podatkowych zajmie się wszystkimi Twoimi zobowiązaniami podatkowymi w Hiszpanii, dbając o zgodność z aktualnymi przepisami.",
+                "detail1": "Roczne zeznania podatkowe",
+                "detail2": "Podatki od nieruchomości (IBI, podatek od zysków kapitałowych)",
+                "detail3": "Deklaracja zagranicznych aktywów (formularz 720)",
+                "detail4": "Legalna optymalizacja podatkowa"
+            },
+            "legal": {
+                "title": "usługi prawne",
+                "description": "Nasz zespół prawników specjalizujących się w prawie nieruchomości wesprze Cię we wszystkich formalnościach związanych z transakcją.",
+                "detail1": "Weryfikacja umów kupna-sprzedaży",
+                "detail2": "Due diligence nieruchomości",
+                "detail3": "Reprezentacja przy aktach notarialnych",
+                "detail4": "Rozwiązywanie sporów i postępowania sądowe"
+            },
+            "management": {
+                "title": "Zarządzanie nieruchomościami",
+                "description": "Kompleksowo zarządzamy Twoją nieruchomością – od konserwacji po obsługę najemców, abyś mógł cieszyć się swoją inwestycją bez zmartwień.",
+                "detail1": "Poszukiwanie i selekcja najemców",
+                "detail2": "Konserwacja i naprawy",
+                "detail3": "Obsługa płatności i rozliczeń",
+                "detail4": "Szczegółowe miesięczne raporty"
+            }
+        }
   },
   "faq": {
       "title": "Często zadawane pytania",

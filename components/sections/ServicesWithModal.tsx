@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useTranslation } from "@/utils/i18n-simple";
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface ServiceModalData {
     id: string;
@@ -192,6 +193,16 @@ export default function ServicesWithModal() {
                                     ))}
                                 </ul>
                             </div>
+                            <div className="space30"></div>
+                            <Link href="#contact-form" className="vl-btn1 is-primary" onClick={closeModal}>
+                             {t('services.modal.btn-text')}
+                              <span className="arrow1 ms-2">
+                                <i className="fa-solid fa-arrow-right" />
+                              </span>
+                              <span className="arrow2 ms-2">
+                                <i className="fa-solid fa-arrow-right" />
+                              </span>
+                            </Link>
                         </div>
                     </div>
                 </div>
