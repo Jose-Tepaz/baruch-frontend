@@ -174,7 +174,7 @@
                 "detail4": "Renewals and documentation updates"
             },
             "finance": {
-                "title": "finance / mortgage",
+                "title": "Finance / mortgage",
                 "description": "We help you find the best mortgage financing options for your property. We work with leading financial institutions to secure the most favorable conditions.",
                 "detail1": "Analysis of your financing capacity",
                 "detail2": "Comparison of offers from multiple banks",
@@ -182,7 +182,7 @@
                 "detail4": "Guidance throughout the approval process"
             },
             "insurance": {
-                "title": "insurance",
+                "title": "Insurance",
                 "description": "We offer comprehensive insurance solutions to protect your real estate investment. From home insurance to life and health insurance.",
                 "detail1": "Property and content insurance",
                 "detail2": "Life and health insurance",
@@ -190,7 +190,7 @@
                 "detail4": "Claims management and renewals"
             },
             "tax": {
-                "title": "tax returns",
+                "title": "Tax returns",
                 "description": "Our team of tax experts handles all your tax obligations in Spain, ensuring compliance with all current regulations.",
                 "detail1": "Annual income tax return",
                 "detail2": "Property taxes (IBI, capital gains)",
@@ -198,7 +198,7 @@
                 "detail4": "Legal tax optimization"
             },
             "legal": {
-                "title": "legal services",
+                "title": "Legal services",
                 "description": "We have a legal team specialized in real estate law that will assist you in all legal aspects of your real estate transaction.",
                 "detail1": "Review of purchase agreements",
                 "detail2": "Property due diligence",

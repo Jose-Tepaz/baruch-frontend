@@ -86,7 +86,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                 <div className="">
                 <div className="padding-global" id="contact-form">
                   <div className="container-large">
-                    <div className="row gap-4 align-items-start">
+                    <div className="row gap-4 align-items-start justify-content-between">
                       <div className="col-lg-6  justify-content-center  align-items-start d-flex flex-column">
                         <div className="space30"></div>
                         <img src="/assets/img/all-images/service/entrance.webp" style={{width: '100%', height: '450px', objectFit: 'cover' }} />
@@ -105,7 +105,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                           </span>
                         </Link>
                       </div>
-                      <div className="col-lg-5 m-auto">
+                      <div className="col-lg-5 m-auto d-flex" style={{marginLeft: 'auto'}}>
                         <div className="space30"></div>
                         <div className="bg-color-white" style={{padding: '20px'}}>
                           <h2 className="text-color-black  size-20 uppercase">Reay for the next step?</h2>
@@ -113,7 +113,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                           <p className="text-color-black size-16">Please fill in your details below so we can contact you.</p>
                           
                           <div className="space16"></div>
-                          <ContactForm/>  
+                            <ContactForm/>  
                           <div className="space30"></div>
                         </div>
                                        
