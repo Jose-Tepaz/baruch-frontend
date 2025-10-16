@@ -8681,12 +8681,13 @@ only screen and (min-width: 768px) and (max-width: 991px),
 /*============= WORK CSS AREA ===============*/
 
 .privacy-policy-area {
+    padding-top: 100px;
     position: relative;
     z-index: 1;
     max-width: 1376px;
     margin: 0 auto;
     border-radius: 40px;
-    background-color: var(--ztc-bg-bg-1);
+    
 }
 
 .privacy-policy-area .policy-details {

@@ -5,7 +5,7 @@ export default function Home() {
     return (
         <>
             <Layout>
-                <InnerHeader title="Privacy Policy" currentpage="Privacy Policy" />
+                
                 <PrivacyPolicy />
                 <div className="space30"></div>
             </Layout>
