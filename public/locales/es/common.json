@@ -67,6 +67,10 @@
         "show-less": "Mostrar menos filtros",
         "btn-filter": "Buscar Propiedades",
         "btn-all-properties": "Mostrar todas las propiedades",
+        "all-locations": "Todas las Ubicaciones",
+        "locations-selected": "ubicaciones seleccionadas",
+        "select-all-locations": "Seleccionar Todas",
+        "no-locations-available": "No hay ubicaciones disponibles",
         "title-about-us": "Acerca de la Empresa",
         "title-2-about-us": "Estamos aquí para ayudarte",
         "title-3-about-us": "Encuentra tu casa soñada en España",
@@ -345,5 +349,9 @@
             "about": "Hola, me gustaría conocer más sobre su empresa",
             "services": "Hola, me interesa conocer más sobre sus servicios inmobiliarios"
         }
+    },
+    "filters": {
+        "select-option": "Selecciona una opción",
+        "select-all": "Seleccionar todas"
     }
 }

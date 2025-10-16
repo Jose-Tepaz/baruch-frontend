@@ -9026,6 +9026,20 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 /*============= FILTER CSS AREA STARTS ===============*/
 
+.filter-checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    height: 32px;
+}
+
+.filter-checkbox {
+    margin-right: 8px !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
 .others-section-area {
     background: #fff;
     padding: 20px;

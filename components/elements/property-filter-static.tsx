@@ -5,6 +5,10 @@ import { useState, useRef, useEffect } from 'react';
 import { useRouter, useSearchParams, useParams } from 'next/navigation';
 import { useTranslation } from "@/utils/i18n-simple";
 import styles from './property-filter-static.module.css';
+import LocationMultiSelect from './LocationMultiSelect';
+import CategoryMultiSelect from './CategoryMultiSelect';
+import PropertyStatusMultiSelect from './PropertyStatusMultiSelect';
+import AmenitiesMultiSelect from './AmenitiesMultiSelect';
 
 interface Category {
     id?: number;
@@ -28,10 +32,18 @@ interface Amenity {
     slug: string;
 }
 
+interface Location {
+    id: number;
+    documentId: string;
+    name: string;
+    slug: string;
+}
+
 interface PropertyFilterStaticProps {
     categories: Category[];
     propertyStatuses?: PropertyStatus[];
     amenities?: Amenity[];
+    locations?: Location[];
 }
 
 interface CustomDropdownProps {
@@ -96,7 +108,7 @@ function CustomDropdown({ value, options, placeholder, onChange, name, id }: Cus
     );
 }
 
-export default function PropertyFilterStatic({ categories, propertyStatuses = [], amenities = [] }: PropertyFilterStaticProps) {
+export default function PropertyFilterStatic({ categories, propertyStatuses = [], amenities = [], locations = [] }: PropertyFilterStaticProps) {
     const router = useRouter();
     const searchParams = useSearchParams();
     const params = useParams();
@@ -104,10 +116,10 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
     const { t } = useTranslation('common');
     
     const [keyword, setKeyword] = useState(searchParams.get('keyword') || '');
-    const [location, setLocation] = useState(searchParams.get('location') || '');
-    const [selectedCategory, setSelectedCategory] = useState(searchParams.get('category') || '');
-    const [selectedStatus, setSelectedStatus] = useState(searchParams.get('property_status') || '');
-    const [selectedAmenities, setSelectedAmenities] = useState(searchParams.get('amenities') || '');
+    const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
+    const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+    const [selectedStatuses, setSelectedStatuses] = useState<string[]>([]);
+    const [selectedAmenities, setSelectedAmenities] = useState<string[]>([]);
     const [bedrooms, setBedrooms] = useState(searchParams.get('bedrooms') || '');
     const [bathrooms, setBathrooms] = useState(searchParams.get('bathrooms') || '');
     const [minPrice, setMinPrice] = useState(searchParams.get('min_price') || '');
@@ -118,6 +130,43 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
     const keywordTimeoutRef = useRef<NodeJS.Timeout | null>(null);
     const locationTimeoutRef = useRef<NodeJS.Timeout | null>(null);
     
+    // Parse location parameter from URL on component mount
+    useEffect(() => {
+        const locationParam = searchParams.get('location');
+        if (locationParam) {
+            // Handle both single location and comma-separated multiple locations
+            const locationsFromUrl = locationParam.split(',').map(loc => loc.trim()).filter(Boolean);
+            setSelectedLocations(locationsFromUrl);
+        }
+    }, [searchParams]);
+
+    // Parse category parameter from URL on component mount
+    useEffect(() => {
+        const categoryParam = searchParams.get('category');
+        if (categoryParam) {
+            const categoriesFromUrl = categoryParam.split(',').map(cat => cat.trim()).filter(Boolean);
+            setSelectedCategories(categoriesFromUrl);
+        }
+    }, [searchParams]);
+
+    // Parse property_status parameter from URL on component mount
+    useEffect(() => {
+        const statusParam = searchParams.get('property_status');
+        if (statusParam) {
+            const statusesFromUrl = statusParam.split(',').map(status => status.trim()).filter(Boolean);
+            setSelectedStatuses(statusesFromUrl);
+        }
+    }, [searchParams]);
+
+    // Parse amenities parameter from URL on component mount
+    useEffect(() => {
+        const amenitiesParam = searchParams.get('amenities');
+        if (amenitiesParam) {
+            const amenitiesFromUrl = amenitiesParam.split(',').map(amenity => amenity.trim()).filter(Boolean);
+            setSelectedAmenities(amenitiesFromUrl);
+        }
+    }, [searchParams]);
+
     // Cleanup del timeout al desmontar el componente
     useEffect(() => {
         return () => {
@@ -202,10 +251,10 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
     // Función para actualizar la URL y aplicar filtros
     const updateFilters = (newFilters: {
         keyword?: string;
-        location?: string;
-        category?: string;
-        status?: string;
-        amenities?: string;
+        locations?: string[];
+        categories?: string[];
+        statuses?: string[];
+        amenities?: string[];
         bedrooms?: string;
         bathrooms?: string;
         minPrice?: string;
@@ -214,9 +263,9 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         const params = new URLSearchParams();
         
         const finalKeyword = newFilters.keyword !== undefined ? newFilters.keyword : keyword;
-        const finalLocation = newFilters.location !== undefined ? newFilters.location : location;
-        const finalCategory = newFilters.category !== undefined ? newFilters.category : selectedCategory;
-        const finalStatus = newFilters.status !== undefined ? newFilters.status : selectedStatus;
+        const finalLocations = newFilters.locations !== undefined ? newFilters.locations : selectedLocations;
+        const finalCategories = newFilters.categories !== undefined ? newFilters.categories : selectedCategories;
+        const finalStatuses = newFilters.statuses !== undefined ? newFilters.statuses : selectedStatuses;
         const finalAmenities = newFilters.amenities !== undefined ? newFilters.amenities : selectedAmenities;
         const finalBedrooms = newFilters.bedrooms !== undefined ? newFilters.bedrooms : bedrooms;
         const finalBathrooms = newFilters.bathrooms !== undefined ? newFilters.bathrooms : bathrooms;
@@ -224,10 +273,10 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         const finalMaxPrice = newFilters.maxPrice !== undefined ? newFilters.maxPrice : maxPrice;
         
         if (finalKeyword.trim()) params.set('keyword', finalKeyword.trim());
-        if (finalLocation.trim()) params.set('location', finalLocation.trim());
-        if (finalCategory) params.set('category', finalCategory);
-        if (finalStatus) params.set('property_status', finalStatus);
-        if (finalAmenities) params.set('amenities', finalAmenities);
+        if (finalLocations.length > 0) params.set('location', finalLocations.join(','));
+        if (finalCategories.length > 0) params.set('category', finalCategories.join(','));
+        if (finalStatuses.length > 0) params.set('property_status', finalStatuses.join(','));
+        if (finalAmenities.length > 0) params.set('amenities', finalAmenities.join(','));
         if (finalBedrooms) params.set('bedrooms', finalBedrooms);
         if (finalBathrooms) params.set('bathrooms', finalBathrooms);
         if (finalMinPrice) params.set('min_price', finalMinPrice);
@@ -235,8 +284,6 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         
         const queryString = params.toString();
         const newUrl = `/${lang}/properties${queryString ? `?${queryString}` : ''}`;
-        
-       
         
         router.push(newUrl);
     };
@@ -248,10 +295,10 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
     
     const handleReset = () => {
         setKeyword('');
-        setLocation('');
-        setSelectedCategory('');
-        setSelectedStatus('');
-        setSelectedAmenities('');
+        setSelectedLocations([]);
+        setSelectedCategories([]);
+        setSelectedStatuses([]);
+        setSelectedAmenities([]);
         setBedrooms('');
         setBathrooms('');
         setMinPrice('');
@@ -274,33 +321,33 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         }, 500);
     };
 
-    const handleLocationChange = (value: string) => {
-        setLocation(value);
+    const handleLocationsChange = (locations: string[]) => {
+        setSelectedLocations(locations);
         
         // Limpiar timeout anterior si existe
         if (locationTimeoutRef.current) {
             clearTimeout(locationTimeoutRef.current);
         }
         
-        // Aplicar filtro automáticamente después de 500ms de inactividad
+        // Aplicar filtro automáticamente después de 300ms de inactividad
         locationTimeoutRef.current = setTimeout(() => {
-            updateFilters({ location: value });
-        }, 500);
+            updateFilters({ locations });
+        }, 300);
     };
     
-    const handleCategoryChange = (value: string) => {
-        setSelectedCategory(value);
-        updateFilters({ category: value });
+    const handleCategoriesChange = (categories: string[]) => {
+        setSelectedCategories(categories);
+        updateFilters({ categories });
     };
     
-    const handleStatusChange = (value: string) => {
-        setSelectedStatus(value);
-        updateFilters({ status: value });
+    const handleStatusesChange = (statuses: string[]) => {
+        setSelectedStatuses(statuses);
+        updateFilters({ statuses });
     };
 
-    const handleAmenitiesChange = (value: string) => {
-        setSelectedAmenities(value);
-        updateFilters({ amenities: value });
+    const handleAmenitiesChange = (amenities: string[]) => {
+        setSelectedAmenities(amenities);
+        updateFilters({ amenities });
     };
 
     const handleBedroomsChange = (value: string) => {
@@ -355,62 +402,62 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
                             <div className="col-lg-12">
                                 
 
-                                {/* Location input */}
-                                <div className="input-area filter-group mb-3">
-                                    <label htmlFor="location-input" className="filter-label">
+                                {/* Location multi-select */}
+                                <div className="input-area filter-group mb-3" style={{ position: 'relative' }}>
+                                    <label htmlFor="location-multi-select" className="filter-label">
                                         {t('home.location-filter') || 'Location'}
                                     </label>
-                                    <input 
-                                        id="location-input"
-                                        className="mb-0" 
-                                        type="text" 
-                                        value={location}
-                                        onChange={(e) => handleLocationChange(e.target.value)}
-                                        placeholder={t('home.location-filter') || "Location"} 
+                                    <LocationMultiSelect
+                                        id="location-multi-select"
+                                        locations={locations}
+                                        selectedLocations={selectedLocations}
+                                        onChange={handleLocationsChange}
+                                        placeholder={t('home.location-filter') || "Select locations"}
+                                        name="location"
                                     />
                                 </div>
 
-                                {/* Category dropdown */}
-                                <div className="input-area filter-group mb-3">
-                                    <label htmlFor="category-dropdown" className="filter-label">
+                                {/* Category multi-select */}
+                                <div className="input-area filter-group mb-3" style={{ position: 'relative' }}>
+                                    <label htmlFor="category-multi-select" className="filter-label">
                                         {t('home.title-filter-2') || 'Property Type'}
                                     </label>
-                                    <CustomDropdown
-                                        id="category-dropdown"
-                                        value={selectedCategory}
-                                        options={categoryOptions}
-                                        placeholder={t('home.title-filter-2') || "All Types"}
-                                        onChange={handleCategoryChange}
+                                    <CategoryMultiSelect
+                                        id="category-multi-select"
+                                        categories={categories}
+                                        selectedCategories={selectedCategories}
+                                        onChange={handleCategoriesChange}
+                                        placeholder={t('home.title-filter-2') || "Select property types"}
                                         name="category"
                                     />
                                 </div>
 
-                                {/* Status dropdown */}
-                                <div className="input-area filter-group mb-3">
-                                    <label htmlFor="status-dropdown" className="filter-label">
+                                {/* Status multi-select */}
+                                <div className="input-area filter-group mb-3" style={{ position: 'relative' }}>
+                                    <label htmlFor="status-multi-select" className="filter-label">
                                         {t('home.title-filter-1') || 'Property Status'}
                                     </label>
-                                    <CustomDropdown
-                                        id="status-dropdown"
-                                        value={selectedStatus}
-                                        options={statusOptions}
-                                        placeholder={t('home.title-filter-1') || "All Status"}
-                                        onChange={handleStatusChange}
+                                    <PropertyStatusMultiSelect
+                                        id="status-multi-select"
+                                        propertyStatuses={propertyStatuses}
+                                        selectedStatuses={selectedStatuses}
+                                        onChange={handleStatusesChange}
+                                        placeholder={t('home.title-filter-1') || "Select property status"}
                                         name="property_status"
                                     />
                                 </div>
 
-                                {/* Amenities dropdown */}
-                                <div className="input-area filter-group mb-3">
-                                    <label htmlFor="amenities-dropdown" className="filter-label">
+                                {/* Amenities multi-select */}
+                                <div className="input-area filter-group mb-3" style={{ position: 'relative' }}>
+                                    <label htmlFor="amenities-multi-select" className="filter-label">
                                         {t('home.amenities-filter') || 'Amenities'}
                                     </label>
-                                    <CustomDropdown
-                                        id="amenities-dropdown"
-                                        value={selectedAmenities}
-                                        options={amenitiesOptions}
-                                        placeholder={t('home.amenities-filter') || "All Amenities"}
+                                    <AmenitiesMultiSelect
+                                        id="amenities-multi-select"
+                                        amenities={amenities}
+                                        selectedAmenities={selectedAmenities}
                                         onChange={handleAmenitiesChange}
+                                        placeholder={t('home.amenities-filter') || "Select amenities"}
                                         name="amenities"
                                     />
                                 </div>

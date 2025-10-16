@@ -19,6 +19,13 @@ interface PropertyStatus {
   documentId: string
   Title: string
 }
+
+interface Location {
+  id: number
+  documentId: string
+  name: string
+  slug: string
+}
 export interface MappedProperty {
   id: number
   documentId: string
@@ -30,7 +37,7 @@ export interface MappedProperty {
   slug: string
   propertyStatus: string
   category: any
-  location: string
+  location: Location
   is_private?: boolean
   amenities: Array<{
     id: number;
@@ -58,6 +65,7 @@ interface PropertyData {
   documentId: string
   property_status: PropertyStatus
   category: any
+  location: Location
   type?: string
   city?: string
   state?: string
@@ -67,7 +75,6 @@ interface PropertyData {
     slug: string;
   }>
   is_private?: boolean
-  location: string
 }
 
 // Función para verificar si el usuario está autenticado (lado servidor)
@@ -92,13 +99,18 @@ function isUserAuthenticated(): boolean {
 
 export type getPropertiesFilter = {
   categorySlug?: string
+  categories?: string[]
   propertyStatus?: string
+  statuses?: string[]
   bedrooms?: string
   bathrooms?: string
   min_price?: string
   max_price?: string
   location?: string
+  locations?: string[]
+  locationSlug?: string
   amenities?: string
+  amenitiesArray?: string[]
   locale?: string
   page?: number
   pageSize?: number
@@ -116,7 +128,7 @@ export function getPropertiesByCategory(
   page: number = 1,
   pageSize: number = 9) {
   const currentLocale = getLocaleWithFallback(locale)
-  let qs = 'properties?populate[main_image][fields][0]=url&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&populate[amenities][fields][0]=Name&populate[amenities][fields][1]=slug&pagination[limit]=100'
+  let qs = 'properties?populate[main_image][fields][0]=url&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&populate[amenities][fields][0]=Name&populate[amenities][fields][1]=slug&populate[location][fields][0]=name&populate[location][fields][1]=slug&pagination[limit]=100'
 
   // Agregar parámetro locale
   qs += `&locale=${encodeURIComponent(currentLocale)}`
@@ -158,6 +170,7 @@ export function getPropertiesByCategory(
           slug,
           property_status,
           category,
+          location,
           type,
           city,
           state,
@@ -168,8 +181,6 @@ export function getPropertiesByCategory(
           ? (rawimage.url.startsWith('http') ? rawimage.url : `${STRAPI_HOST}${rawimage.url}`)
           : ''
         const propertyStatus = property_status ? property_status.Title : ''
-
-       
 
         return {
           id,
@@ -182,6 +193,7 @@ export function getPropertiesByCategory(
           slug,
           propertyStatus,
           category,
+          location,
           type,
           city,
           state,
@@ -203,7 +215,7 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
   const pageSize = typeof filter.pageSize === 'number' && filter.pageSize > 0 ? filter.pageSize : 9
 
   // Arreglar la query para populizar correctamente los campos
-  let queryString = 'properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[amenities][fields][0]=Name&populate[amenities][fields][1]=slug'
+  let queryString = 'properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[amenities][fields][0]=Name&populate[amenities][fields][1]=slug&populate[location][fields][0]=name&populate[location][fields][1]=slug'
 
   // Agregar parámetro locale
   queryString += `&locale=${encodeURIComponent(currentLocale)}`
@@ -212,12 +224,28 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
   queryString += `&pagination[page]=${encodeURIComponent(String(page))}&pagination[pageSize]=${encodeURIComponent(String(pageSize))}`
 
 
-  if (filter.categorySlug && filter.categorySlug.trim() !== '') {
+  // Aplicar filtro de categoría solo si no hay múltiples categorías seleccionadas
+  if (filter.categories && filter.categories.length > 0) {
+    // Para múltiples categorías, usar $or para cada categoría
+    filter.categories.forEach((slug, index) => {
+      queryString += `&filters[\$or][${index}][category][slug][\$eq]=${encodeURIComponent(slug)}`;
+    });
+    console.log('Added multiple categories filter:', filter.categories);
+  } else if (filter.categorySlug && filter.categorySlug.trim() !== '') {
+    // Solo aplicar filtro de texto si no hay múltiples categorías
     queryString += `&filters[category][slug][$contains]=${filter.categorySlug}`
     console.log('Added category filter:', filter.categorySlug);
   }
 
-  if (filter.propertyStatus && filter.propertyStatus.trim() !== '') {
+  // Aplicar filtro de status solo si no hay múltiples status seleccionados
+  if (filter.statuses && filter.statuses.length > 0) {
+    // Para múltiples status, usar $or para cada status
+    filter.statuses.forEach((status, index) => {
+      queryString += `&filters[\$or][${index}][property_status][Title][\$eq]=${encodeURIComponent(status)}`;
+    });
+    console.log('Added multiple statuses filter:', filter.statuses);
+  } else if (filter.propertyStatus && filter.propertyStatus.trim() !== '') {
+    // Solo aplicar filtro de texto si no hay múltiples status
     queryString += `&filters[property_status][Title][$eq]=${encodeURIComponent(filter.propertyStatus)}`
     console.log('Added property status filter:', filter.propertyStatus);
   }
@@ -242,12 +270,33 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
     console.log('Added max price filter:', filter.max_price);
   }
 
-  if (filter.location && filter.location.trim() !== '') {
-    queryString += `&filters[location][$containsi]=${encodeURIComponent(filter.location)}`
+  // Aplicar filtro de location solo si no hay múltiples locations seleccionadas
+  if (filter.locations && filter.locations.length > 0) {
+    // Para múltiples locations, usar $or para cada location
+    filter.locations.forEach((slug, index) => {
+      queryString += `&filters[\$or][${index}][location][slug][\$eq]=${encodeURIComponent(slug)}`;
+    });
+    console.log('Added multiple locations filter:', filter.locations);
+  } else if (filter.location && filter.location.trim() !== '') {
+    // Solo aplicar filtro de texto si no hay múltiples locations
+    queryString += `&filters[location][name][$containsi]=${encodeURIComponent(filter.location)}`
     console.log('Added location filter:', filter.location);
   }
 
-  if (filter.amenities && filter.amenities.trim() !== '') {
+  if (filter.locationSlug && filter.locationSlug.trim() !== '') {
+    queryString += `&filters[location][slug][$eq]=${encodeURIComponent(filter.locationSlug)}`
+    console.log('Added location slug filter:', filter.locationSlug);
+  }
+
+  // Aplicar filtro de amenities solo si no hay múltiples amenities seleccionadas
+  if (filter.amenitiesArray && filter.amenitiesArray.length > 0) {
+    // Para múltiples amenities, usar $or para cada amenity
+    filter.amenitiesArray.forEach((amenity, index) => {
+      queryString += `&filters[\$or][${index}][amenities][Name][\$eq]=${encodeURIComponent(amenity)}`;
+    });
+    console.log('Added multiple amenities filter:', filter.amenitiesArray);
+  } else if (filter.amenities && filter.amenities.trim() !== '') {
+    // Solo aplicar filtro de texto si no hay múltiples amenities
     queryString += `&filters[amenities][Name][$contains]=${encodeURIComponent(filter.amenities)}`
     console.log('Added amenities filter:', filter.amenities);
     console.log('Full query string with amenities:', queryString);
@@ -316,6 +365,7 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           console.log('Property title:', title);
           console.log('Property status:', propertyStatus);
           console.log('Category:', category);
+          console.log('Location:', location);
           console.log('Amenities:', amenities);
           console.log('Is Private:', is_private);
         }
@@ -358,7 +408,7 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
 // Función para obtener una propiedad específica por documentId
 export function getPropertyByDocumentId(documentId: string, locale?: string) {
   const currentLocale = getLocaleWithFallback(locale)
-  const queryString = `properties/${documentId}?populate=*&locale=${encodeURIComponent(currentLocale)}`
+  const queryString = `properties/${documentId}?populate[main_image][fields][0]=url&populate[gallery][fields][0]=url&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&populate[location][fields][0]=name&populate[location][fields][1]=slug&populate[amenities][fields][0]=Name&populate[amenities][fields][1]=slug&locale=${encodeURIComponent(currentLocale)}`
 
 
 
@@ -386,6 +436,7 @@ export function getPropertyByDocumentId(documentId: string, locale?: string) {
         slug,
         property_status,
         category,
+        location,
         is_new,
         is_private
       } = property
@@ -416,6 +467,7 @@ export function getPropertyByDocumentId(documentId: string, locale?: string) {
         gallery,
         slug,
         category,
+        location,
         is_new,
         is_private,
         propertyStatus,

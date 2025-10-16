@@ -1,9 +1,14 @@
 "use client";
 
+import React from "react";
 import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
 import { useTranslation } from "@/utils/i18n-simple";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import LocationMultiSelect from "@/components/elements/LocationMultiSelect";
+import CategoryMultiSelect from "@/components/elements/CategoryMultiSelect";
+import PropertyStatusMultiSelect from "@/components/elements/PropertyStatusMultiSelect";
+import AmenitiesMultiSelect from "@/components/elements/AmenitiesMultiSelect";
 
 interface Category {
     id?: number;
@@ -26,10 +31,18 @@ interface Amenity {
     slug: string;
 }
 
+interface Location {
+    id: number;
+    documentId: string;
+    name: string;
+    slug: string;
+}
+
 interface SearchBoxProps {
     categories?: Category[];
     propertyStatuses?: PropertyStatus[];
     amenities?: Amenity[];
+    locations?: Location[];
 }
 
 // Categorías de fallback en caso de que no se pasen props
@@ -44,29 +57,31 @@ const fallbackCategories: Category[] = [
     { name: "Cottages", slug: "cottages", description: "Cozy cottages" },
 ];
 
-export default function SearchBox({ categories = fallbackCategories, propertyStatuses = [], amenities = [] }: SearchBoxProps) {
+export default function SearchBox({ categories = fallbackCategories, propertyStatuses = [], amenities = [], locations = [] }: SearchBoxProps) {
     const router = useRouter();
     const params = useParams();
     const lang = params.lang as string;
     const { t, i18n } = useTranslation('common');
     const [showMoreFilters, setShowMoreFilters] = useState(false);
+    
+    // Estados para filtros multi-select
+    const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
+    const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+    const [selectedStatuses, setSelectedStatuses] = useState<string[]>([]);
+    const [selectedAmenities, setSelectedAmenities] = useState<string[]>([]);
     // Handle form submission
     const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const form = e.currentTarget;
         const formData = new FormData(form);
 
-        // Get search criteria
+        // Get search criteria from form and multi-select states
         const searchCriteria = {
             keyword: formData.get("keyword") as string,
-            property_status: formData.get("property_status") as string,
-            category: formData.get("category") as string,
             bedrooms: formData.get("bedrooms") as string,
             bathrooms: formData.get("bathrooms") as string,
             min_price: formData.get("min_price") as string,
             max_price: formData.get("max_price") as string,
-            location: formData.get("location") as string,
-            amenities: formData.get("amenities") as string,
         };
 
         // Build query string
@@ -75,6 +90,10 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
         console.log('=== SearchBox Form Submission ===');
         console.log('Language:', lang);
         console.log('Search criteria:', searchCriteria);
+        console.log('Selected locations:', selectedLocations);
+        console.log('Selected categories:', selectedCategories);
+        console.log('Selected statuses:', selectedStatuses);
+        console.log('Selected amenities:', selectedAmenities);
 
         // Add non-empty parameters to URL
         Object.entries(searchCriteria).forEach(([key, value]) => {
@@ -82,6 +101,20 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                 params.append(key, value);
             }
         });
+
+        // Add multi-select parameters
+        if (selectedLocations.length > 0) {
+            params.set('location', selectedLocations.join(','));
+        }
+        if (selectedCategories.length > 0) {
+            params.set('category', selectedCategories.join(','));
+        }
+        if (selectedStatuses.length > 0) {
+            params.set('property_status', selectedStatuses.join(','));
+        }
+        if (selectedAmenities.length > 0) {
+            params.set('amenities', selectedAmenities.join(','));
+        }
 
         const finalUrl = `/${lang}/properties?${params.toString()}`;
         console.log('Final URL:', finalUrl);
@@ -108,6 +141,59 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%231B1B1B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
                     background-repeat: no-repeat;
                     background-position: right 16px center;
+                }
+
+                /* Estilos para componentes multi-select */
+                .filter-group .location-multi-select,
+                .filter-group .category-multi-select,
+                .filter-group .property-status-multi-select,
+                .filter-group .amenities-multi-select {
+                    width: 100%;
+                    position: relative;
+                }
+
+                .filter-group .location-dropdown-button,
+                .filter-group .category-dropdown-button,
+                .filter-group .property-status-dropdown-button,
+                .filter-group .amenities-dropdown-button {
+                    width: 100%;
+                    height: 48px;
+                    padding: 0 16px;
+                    border: 1px solid #E7E7E7;
+                    border-radius: 8px;
+                    background-color: #fff;
+                    font-size: 14px;
+                    color: #1B1B1B;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    text-align: left;
+                }
+
+                .filter-group .location-dropdown-button:hover,
+                .filter-group .category-dropdown-button:hover,
+                .filter-group .property-status-dropdown-button:hover,
+                .filter-group .amenities-dropdown-button:hover {
+                    border-color: #D1D1D1;
+                }
+
+                .filter-group .location-dropdown-menu,
+                .filter-group .category-dropdown-menu,
+                .filter-group .property-status-dropdown-menu,
+                .filter-group .amenities-dropdown-menu {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    background-color: #fff;
+                    border: 1px solid #E7E7E7;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                    z-index: 1000;
+                    max-height: 300px;
+                    overflow-y: auto;
+                    margin-top: 4px;
                 }
 
                 .filter-group select:hover {
@@ -279,36 +365,35 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
 
 
 
-                                        {/* Primera fila: Input de búsqueda, categoría y estatus */}
+                                        {/* Primera fila: Location, categoría y estatus multi-select */}
                                         <div className="filters z-1 position-relative mb-3">
                                             <div className="d-flex flex-lg-nowrap flex-wrap gap-2 justify-content-between w-100">
                                                 <div className="filter-group flex-grow-1">
-                                                    <input
-                                                        type="text"
+                                                    <LocationMultiSelect
+                                                        locations={locations}
+                                                        selectedLocations={selectedLocations}
+                                                        onChange={setSelectedLocations}
+                                                        placeholder={t('home.location-filter') || "Select locations"}
                                                         name="location"
-                                                        placeholder={t('home.location-filter')}
-                                                        className="location-input"
                                                     />
                                                 </div>
                                                 <div className="filter-group">
-                                                    <select name="category">
-                                                        <option value="">{t('home.title-filter-2')}</option>
-                                                        {categories.map((category: Category) => (
-                                                            <option key={category.slug} value={category.slug}>
-                                                                {category.name}
-                                                            </option>
-                                                        ))}
-                                                    </select>
+                                                    <CategoryMultiSelect
+                                                        categories={categories}
+                                                        selectedCategories={selectedCategories}
+                                                        onChange={setSelectedCategories}
+                                                        placeholder={t('home.title-filter-2') || "Select property types"}
+                                                        name="category"
+                                                    />
                                                 </div>
                                                 <div className="filter-group">
-                                                    <select name="property_status" defaultValue="">
-                                                        <option value="">{t('home.title-filter-1')}</option>
-                                                        {propertyStatuses.map((status) => (
-                                                            <option key={status.documentId} value={status.Title}>
-                                                                {status.Title}
-                                                            </option>
-                                                        ))}
-                                                    </select>
+                                                    <PropertyStatusMultiSelect
+                                                        propertyStatuses={propertyStatuses}
+                                                        selectedStatuses={selectedStatuses}
+                                                        onChange={setSelectedStatuses}
+                                                        placeholder={t('home.title-filter-1') || "Select property status"}
+                                                        name="property_status"
+                                                    />
                                                 </div>
                                             </div>
                                         </div>
@@ -378,14 +463,13 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                                 </div>
 
                                                 <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
-                                                    <select name="amenities" defaultValue="">
-                                                        <option value="">{t('home.amenities-filter')}</option>
-                                                        {amenities.map((amenity) => (
-                                                            <option key={amenity.documentId} value={amenity.Name}>
-                                                                {amenity.Name}
-                                                            </option>
-                                                        ))}
-                                                    </select>
+                                                    <AmenitiesMultiSelect
+                                                        amenities={amenities}
+                                                        selectedAmenities={selectedAmenities}
+                                                        onChange={setSelectedAmenities}
+                                                        placeholder={t('home.amenities-filter') || "Select amenities"}
+                                                        name="amenities"
+                                                    />
                                                 </div>
                                             </div>
                                         </div>

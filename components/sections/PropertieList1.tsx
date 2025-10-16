@@ -80,7 +80,7 @@ export default function PropertyList1({ properties }: { properties: any[] }) {
                 category={property.category}
                 locale={currentLanguage}
                 isPrivate={property.is_private || false}
-                location={property.location}
+                location={typeof property.location === 'string' ? property.location : property.location?.name || ''}
               />
             </div>
           ))}

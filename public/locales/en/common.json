@@ -70,6 +70,10 @@
         "show-less": "Show less filters",
         "btn-filter": "Search Properties",
         "btn-all-properties": "Show all properties",
+        "all-locations": "All Locations",
+        "locations-selected": "locations selected",
+        "select-all-locations": "Select All",
+        "no-locations-available": "No locations available",
         "title-about-us": "About Company",
         "title-2-about-us": "We are here to help you",
         "title-3-about-us": "Find your dream home in spain",
@@ -349,5 +353,11 @@
             "about": "Hello, I would like to know more about your company",
             "services": "Hello, I'm interested in learning more about your real estate services"
         }
+    },
+    "filters": {
+        "select-option": "Select option",
+        "select-all": "Select All"
+
+        
     }
 }

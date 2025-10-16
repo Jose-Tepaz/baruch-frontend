@@ -343,5 +343,9 @@
             "about": "Bonjour, j'aimerais en savoir plus sur votre entreprise",
             "services": "Bonjour, je suis intéressé par vos services immobiliers"
         }
+    },
+    "filters": {
+        "select-option": "Sélectionner une option",
+        "select-all": "Tout sélectionner"
     }
 }

@@ -4,6 +4,7 @@ import InnerHeader from "@/components/layout/InnerHeader";
 import { getCategories } from "@/services/categories";
 import { getPropertyStatuses } from "@/services/property-status";
 import { getAmenities } from "@/services/amenities";
+import { getLocations } from "@/services/locations";
 import PropertiesContent from "@/components/pages/PropertiesContent";
 import { Metadata } from 'next';
 import { cookies } from 'next/headers';
@@ -77,6 +78,19 @@ export async function generateMetadata({ params }: PropertiesPageProps): Promise
 export default async function PropertiesPage({ params, searchParams }: PropertiesPageProps) {
     const { lang } = await params;
     const { category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities: searchAmenities } = await searchParams;
+    
+    // Parse parameters to handle multiple selections
+    const locationParam = location;
+    const locationSlugs = locationParam ? locationParam.split(',').map(loc => loc.trim()).filter(Boolean) : [];
+    
+    const categoryParam = category;
+    const categorySlugs = categoryParam ? categoryParam.split(',').map(cat => cat.trim()).filter(Boolean) : [];
+    
+    const statusParam = property_status;
+    const statusTitles = statusParam ? statusParam.split(',').map(status => status.trim()).filter(Boolean) : [];
+    
+    const amenitiesParam = Array.isArray(searchAmenities) ? searchAmenities[0] : searchAmenities;
+    const amenitiesArray = amenitiesParam ? amenitiesParam.split(',').map(amenity => amenity.trim()).filter(Boolean) : [];
     const sp = await searchParams;
     
     // Verificar autenticación del usuario
@@ -94,14 +108,18 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
        
         
         const { data, meta } = await getProperties({
-            categorySlug: category, 
-            propertyStatus: property_status,
+            categorySlug: category, // Mantener para compatibilidad
+            categories: categorySlugs, // Array de slugs para filtrado múltiple
+            propertyStatus: property_status, // Mantener para compatibilidad
+            statuses: statusTitles, // Array de títulos para filtrado múltiple
             bedrooms: bedrooms,
             bathrooms: bathrooms,
             min_price: min_price,
             max_price: max_price,
-            location: location,
-            amenities: Array.isArray(searchAmenities) ? searchAmenities[0] : searchAmenities,
+            location: location, // Mantener para compatibilidad con filtros de texto
+            locations: locationSlugs, // Array de slugs para filtrado múltiple
+            amenities: Array.isArray(searchAmenities) ? searchAmenities[0] : searchAmenities, // Mantener para compatibilidad
+            amenitiesArray: amenitiesArray, // Array de nombres para filtrado múltiple
             locale: lang, // Usar el locale dinámico
             page: currentPage, 
             pageSize: 9  
@@ -196,6 +214,17 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
         console.error('Error loading amenities:', error);
         amenities = [];
     }
+
+    let locations: any[] = [];
+    try {
+        locations = await getLocations(lang); // Usar el locale dinámico
+        console.log('=== Properties Page Locations Debug ===');
+        console.log('Locations loaded:', locations);
+        console.log('Locations count:', locations.length);
+    } catch (error) {
+        console.error('Error loading locations:', error);
+        locations = [];
+    }
     
     return (
         <SimpleLayout>
@@ -207,6 +236,7 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
                 categories={categories}
                 propertyStatuses={propertyStatuses}
                 amenities={amenities}
+                locations={locations}
                 searchParams={{ category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities: searchAmenities }}
                 pagination={pagination}   
                 lang={lang}

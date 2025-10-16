@@ -14,7 +14,7 @@ type HeroProperty = {
     title: string;
     price?: number;
     image?: string;
-    location?: string;
+    location?: string | { name: string; slug: string };
     is_featured?: boolean;
     documentId?: string;
     slug?: string;
@@ -88,7 +88,7 @@ export default function HeroHome({ properties = [] }: HeroHomeProps) {
                                                 className="subtitle-properties text-color-white mb-3"
 
                                             >
-                                                {property.location}
+                                                {typeof property.location === 'string' ? property.location : property.location?.name || ''}
                                             </div>
                                         )}
                                         <Link href={`/property/${property.documentId || ""}`} className="text-decoration-none" style={{ color: "inherit" }}>

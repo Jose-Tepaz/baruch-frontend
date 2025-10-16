@@ -11,7 +11,7 @@ type PropertyCardProps = {
     isNew?: boolean
     propertyStatus?: string
     documentId: string
-    location: string
+    location: string | { name: string; slug: string }
   }
   
   export default function PropertieCardV1({
@@ -70,7 +70,7 @@ type PropertyCardProps = {
             )}
             </div>
             <div className="card-body-property text-white h-100 z-3 h-auto p-4">
-              <p> {location}</p>
+              <p> {typeof location === 'string' ? location : location?.name || ''}</p>
               <h3 className="title-properties text-color-white size-20">{title || 'Property'}</h3>
               
               <div className="d-flex justify-content-between align-items-center">

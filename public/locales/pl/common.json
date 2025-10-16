@@ -354,5 +354,9 @@
       "about": "Cześć, chciałbym dowiedzieć się więcej o Twojej firmie",
       "services": "Cześć, jestem zainteresowany Twoimi usługami nieruchomościowymi"
     }
+  },
+  "filters": {
+    "select-option": "Wybierz opcję",
+    "select-all": "Wybierz wszystkie"
   }
 }

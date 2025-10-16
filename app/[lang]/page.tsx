@@ -4,6 +4,7 @@ import { getProperties } from "@/services/get-properties";
 import { getCategories } from "@/services/categories";
 import { getPropertyStatuses } from "@/services/property-status";
 import { getAmenities } from "@/services/amenities";
+import { getLocations } from "@/services/locations";
 import imgLandscape from "@/public/assets/img/all-images/home/hp-6.webp"
 import { Metadata } from 'next';
 import { getTestimonials } from "@/services/testimonials";
@@ -108,11 +109,12 @@ export default async function Home({ params }: Props) {
     }
 
     try {
-        const [propertiesResult, categories, propertyStatuses, amenities, testimonials] = await Promise.all([
+        const [propertiesResult, categories, propertyStatuses, amenities, locations, testimonials] = await Promise.all([
             getProperties({ locale: lang, onlyPrivate: false }),
             getCategories(lang),
             getPropertyStatuses(lang),
             getAmenities(lang),
+            getLocations(lang).catch(() => []), // Si falla, regresa array vacío
             getTestimonials(lang).catch(() => []) // Si falla, regresa array vacío
         ]);
 
@@ -127,6 +129,7 @@ export default async function Home({ params }: Props) {
                     categories={categories || []}
                     propertyStatuses={propertyStatuses || []}
                     amenities={amenities || []}
+                    locations={locations || []}
                 />
                 <About2  />
                 <PropertyList1 properties={properties || []} />
@@ -147,6 +150,7 @@ export default async function Home({ params }: Props) {
                     categories={[]}
                     propertyStatuses={[]}
                     amenities={[]}
+                    locations={[]}
                 />
                 <About2  />
                 <PropertyList1 properties={[]} />

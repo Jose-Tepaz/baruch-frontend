@@ -316,5 +316,9 @@
       "about": "Hej, jag skulle vilja veta mer om ditt företag",
       "services": "Hej, jag är intresserad av dina fastighetstjänster"
     }
+  },
+  "filters": {
+    "select-option": "Välj en option",
+    "select-all": "Välj alla"
   }
 }

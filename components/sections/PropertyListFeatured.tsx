@@ -15,7 +15,7 @@ type PropertyCardProps = {
     category: string
     locale: string
     isPrivate: boolean
-    location?: string
+    location?: string | { name: string; slug: string }
   }
   
   export default function PropertyListSlide({
@@ -84,7 +84,7 @@ type PropertyCardProps = {
               
               <p className="card-text mb-2">
                 <i className="bi bi-geo-alt-fill me-1 text-white"></i>
-                {location}
+                {typeof location === 'string' ? location : location?.name || ''}
               </p>
               <h3 className="title-properties text-color-white size-20">{title || 'Property'}</h3>
               <div className="d-flex justify-content-between align-items-center">

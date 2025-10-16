@@ -320,5 +320,9 @@
       "about": "Hallo, ik zou graag meer willen weten over uw bedrijf",
       "services": "Hallo, ik ben geïnteresseerd in uw vastgoeddiensten"
     }
+  },
+  "filters": {
+    "select-option": "Selecteer een optie",
+    "select-all": "Alles selecteren"
   }
 }

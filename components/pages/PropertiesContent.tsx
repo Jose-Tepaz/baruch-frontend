@@ -42,7 +42,7 @@ interface Property {
     documentId: string;
     description?: string;
     is_private?: boolean;
-    location?: string;
+    location?: string | { name: string; slug: string };
 }
 
 interface Amenity {
@@ -52,11 +52,20 @@ interface Amenity {
     slug: string;
 }
 
+interface Location {
+    id: number;
+    documentId: string;
+    name: string;
+    slug: string;
+    description?: string;
+}
+
 interface PropertiesContentProps {
     initialProperties: Property[];
     categories: Category[];
     propertyStatuses?: PropertyStatus[];
     amenities?: Amenity[];
+    locations?: Location[];
     searchParams: {
         category?: string;
         property_status?: string;
@@ -79,6 +88,7 @@ export default function PropertiesContent({
     categories,
     propertyStatuses,
     amenities = [],
+    locations = [],
     searchParams,
     pagination,
     lang
@@ -148,6 +158,7 @@ export default function PropertiesContent({
                             categories={categories}
                             propertyStatuses={propertyStatuses}
                             amenities={amenities}
+                            locations={locations}
                         />
                     </div>
 
@@ -174,7 +185,7 @@ export default function PropertiesContent({
                                             documentId={property.documentId}
                                             propertyStatus={property.propertyStatus || property.status}
                                             isNew={property.status === 'new'}
-                                            location={property.location || ''}
+                                            location={typeof property.location === 'string' ? property.location : property.location?.name || ''}
                                         />
                                     </div>
                                 ))}

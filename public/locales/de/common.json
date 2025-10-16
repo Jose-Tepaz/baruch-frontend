@@ -352,5 +352,9 @@
             "about": "Hallo, ich möchte mehr über Ihr Unternehmen erfahren",
             "services": "Hallo, ich interessiere mich für Ihre Immobiliendienstleistungen"
         }
+    },
+    "filters": {
+        "select-option": "Wähle eine Option",
+        "select-all": "Alles auswählen"
     }
 }
