@@ -906,6 +906,12 @@ Location:
     transition: transform 0.3s ease;
 }
 
+.img-from-services {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+
 .service-card-modal:hover .service-image {
     transform: scale(1.1);
 }
@@ -1067,6 +1073,10 @@ Location:
 @media (max-width: 768px) {
     .service-image-wrapper {
         height: 220px;
+    }
+
+    .img-from-services {
+        height: 450px;
     }
 
     .modal-header {

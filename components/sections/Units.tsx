@@ -6,6 +6,7 @@ interface Unit {
     id: number;
     housing_number: string;
     bedrooms: string;
+    bathrooms: string;
     built_area: string;
     lot_area: string;
     storage_room: boolean;
@@ -67,6 +68,7 @@ export default function Units({ units }: { units?: Unit[] }) {
                                         <tr>
                                             <th className='text-size-smaill text-weight-medium'>{t('propertyDetails.units.id-house')}</th>
                                             <th className='text-size-smaill text-weight-medium'>{t('propertyDetails.units.dorms')}</th>
+                                            <th className='text-size-smaill text-weight-medium'>{t('propertyDetails.units.bathrooms')}</th>
                                             <th className='text-size-smaill text-weight-medium'>{t('propertyDetails.units.built-area')}</th>
                                             <th className='text-size-smaill text-weight-medium'>{t('propertyDetails.units.exterior-area')}</th>
                                             <th className='text-size-smaill text-weight-medium'>{t('propertyDetails.units.garage')}</th>
@@ -83,6 +85,9 @@ export default function Units({ units }: { units?: Unit[] }) {
                                                 </td>
                                                 <td className="bedrooms-cell">
                                                     {unit.bedrooms}
+                                                </td>
+                                                <td className="bathrooms-cell">
+                                                    {unit.bathrooms}
                                                 </td>
                                                 <td className="built-area-cell">
                                                     {unit.built_area} m²
@@ -133,6 +138,11 @@ export default function Units({ units }: { units?: Unit[] }) {
                                                             {t('propertyDetails.units.dorms')}: {unit.bedrooms}
                                                         </small>
                                                     </p>
+                                                    <p className="card-text mb-1">
+                                                        <small className="text-muted">
+                                                            {t('propertyDetails.units.bathrooms')}: {unit.bathrooms}
+                                                        </small>
+                                                    </p>
                                                 </div>
                                                 <div className="col-6 text-end">
                                                     <h6 className="text-color-black mb-2">
@@ -148,32 +158,32 @@ export default function Units({ units }: { units?: Unit[] }) {
                                                 </div>
                                             </div>
                                             <div className="row mt-2">
-                                                <div className="col-6">
+                                                <p className="col-6 text-muted">
                                                     <small className="text-muted">
                                                         {t('propertyDetails.units.built-area')}: {unit.built_area} m²
                                                     </small>
-                                                </div>
-                                                <div className="col-6">
+                                                </p>
+                                                <p className="col-6 text-muted">
                                                     <small className="text-muted">
                                                         {t('propertyDetails.units.exterior-area')}: {unit.lot_area} m²
                                                     </small>
-                                                </div>
+                                                </p>
                                             </div>
                                             <div className="row mt-1">
-                                                <div className="col-6">
+                                                <p className="col-6 text-muted">
                                                     <small className="text-muted">
                                                         {t('propertyDetails.units.garage')}: <span className={`badge ${unit.garage ? 'badge-available' : 'badge-unavailable'}`}>
                                                             {unit.garage ? t('propertyDetails.units.is_available') : t('propertyDetails.units.is_not_available')}
                                                         </span>
                                                     </small>
-                                                </div>
-                                                <div className="col-6">
+                                                </p>
+                                                <p className="col-6 text-muted">
                                                     <small className="text-muted">
                                                         {t('propertyDetails.units.storage_room')}: <span className={`badge ${unit.storage_room ? 'badge-available' : 'badge-unavailable'}`}>
                                                             {unit.storage_room ? t('propertyDetails.units.is_available') : t('propertyDetails.units.is_not_available')}
                                                         </span>
                                                     </small>
-                                                </div>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>

@@ -67,6 +67,7 @@ const getPropertyById = async (documentId: string, locale?: string) => {
             id: unit.id,
             housing_number: unit.housing_number,
             bedrooms: unit.bedrooms,
+            bathrooms: unit.bathrooms,  
             built_area: unit.built_area,
             lot_area: unit.lot_area,
             storage_room: unit.storage_room,

@@ -89,7 +89,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                     <div className="row gap-4 align-items-start justify-content-between">
                       <div className="col-lg-6  justify-content-center  align-items-start d-flex flex-column">
                         <div className="space30"></div>
-                        <img src="/assets/img/all-images/service/entrance.webp" style={{width: '100%', height: '450px', objectFit: 'cover' }} />
+                        <img src="/assets/img/all-images/service/entrance.webp" className="img-from-services" />
                         <div className="space30"></div>
                         <h2 className="text-color-black text-size-32">Property services</h2>
                         <div className="space16"></div>
@@ -108,7 +108,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                       <div className="col-lg-5 m-auto d-flex" style={{marginLeft: 'auto'}}>
                         <div className="space30"></div>
                         <div className="bg-color-white" style={{padding: '20px'}}>
-                          <h2 className="text-color-black  size-20 uppercase">Reay for the next step?</h2>
+                          <h2 className="text-color-black  size-20 uppercase">Ready for the next step?</h2>
                           <h3 className="text-color-black size-42 uppercase">Let’s connect</h3>
                           <p className="text-color-black size-16">Please fill in your details below so we can contact you.</p>
                           

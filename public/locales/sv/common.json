@@ -252,6 +252,7 @@
           "title": "Enheter",
           "id-house": "Hus-ID",
           "dorms": "Sovrum",
+          "bathrooms": "Badrum",
           "built-area": "Boarea",
           "exterior-area": "Utearea",
           "garage": "Garage",

@@ -290,6 +290,7 @@
           "title": "Jednostki",
           "id-house": "Id domu",
           "dorms": "Sypialnie",
+          "bathrooms": "Łazienki",
           "built-area": "Powierzchnia użytkowa",
           "exterior-area": "Powierzchnia zewnętrzna",
           "garage": "Garage",
