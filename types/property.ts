@@ -57,4 +57,23 @@ export interface PropertyListItem {
         image: string;
     };
     is_private?: boolean;
+}
+
+export interface Unit {
+    id: number;
+    housing_number: string;
+    bedrooms: string;
+    bathrooms: string;
+    built_area: string;
+    lot_area: string;
+    storage_room: boolean;
+    garage: boolean;
+    is_available: boolean;
+    price: number;
+    floor?: {
+        id: number;
+        documentId: string;
+        name: string;
+        url: string;
+    };
 } 

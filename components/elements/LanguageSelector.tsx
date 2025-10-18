@@ -31,7 +31,7 @@ export default function LanguageSelector() {
             i18n.changeLanguage(cookieLocale as Language);
             updateCurrentLocale(cookieLocale as Language);
         }
-    }, []);
+    }, [i18n, updateCurrentLocale]);
     
     const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
 

@@ -1,28 +1,7 @@
 'use client';
 import { useState } from 'react';
-import { useTranslation } from "@/utils/i18n-simple";   
-
-interface Unit {
-    id: number;
-    housing_number: string;
-    bedrooms: string;
-    bathrooms: string;
-    built_area: string;
-    lot_area: string;
-    storage_room: boolean;
-    garage: boolean;
-    is_available: boolean;
-    price: number; 
-    floor?: {
-        id: number;
-        documentId: string;
-        name: string;
-        url: string;
-        ext: string;
-        mime: string;
-        size: number;
-    } | null;
-}
+import { useTranslation } from "@/utils/i18n-simple";
+import { Unit } from "@/types/property";
 
 export default function Units({ units }: { units?: Unit[] }) {
     const { t } = useTranslation();

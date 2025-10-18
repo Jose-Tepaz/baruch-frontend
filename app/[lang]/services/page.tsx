@@ -89,7 +89,7 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                     <div className="row gap-4 align-items-start justify-content-between">
                       <div className="col-lg-6  justify-content-center  align-items-start d-flex flex-column">
                         <div className="space30"></div>
-                        <img src="/assets/img/all-images/service/entrance.webp" className="img-from-services" />
+                        <img src="/assets/img/all-images/service/entrance.webp" className="img-from-services" alt="Property services entrance" />
                         <div className="space30"></div>
                         <h2 className="text-color-black text-size-32">Property services</h2>
                         <div className="space16"></div>

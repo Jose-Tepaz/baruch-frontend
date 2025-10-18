@@ -12,7 +12,7 @@ export default function ContactSectionContact({ imgContact }: { imgContact: stri
                 <div className="row gap-4 align-items-start">
                     <div className="col-lg-6 justify-content-center  align-items-start d-flex flex-column">
                         <div className="space30"></div>
-                        <img src={imgContact} style={{ width: '100%', height: '550px', objectFit: 'cover' }} />
+                        <img src={imgContact} style={{ width: '100%', height: '550px', objectFit: 'cover' }} alt="Contact section" />
                         <div className="space30"></div>
                         <h2 className="text-color-black text-size-32">{t('contact.title')}</h2>
                         <div className="space16"></div>

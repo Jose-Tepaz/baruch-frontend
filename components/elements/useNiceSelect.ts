@@ -16,7 +16,7 @@ export function useNiceSelect() {
 			// Create custom markup
 			createNiceSelect(select)
 		})
-	}, [])
+	}, [createNiceSelect])
 
 	useEffect(() => {
 		initializeNiceSelect()

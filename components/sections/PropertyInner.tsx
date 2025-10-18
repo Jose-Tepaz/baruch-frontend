@@ -8,30 +8,7 @@ import { useTranslation } from "@/utils/i18n-simple";
 // import { postContact } from "@/services/post-contact";
 import { useState, useEffect, useRef } from "react";
 import Units from "@/components/sections/Units";
-
-
-
-
-interface Unit {
-    id: number;
-    housing_number: string;
-    bedrooms: string;
-    built_area: string;
-    lot_area: string;
-    storage_room: boolean;
-    garage: boolean;
-    is_available: boolean;
-    price: number;
-    floor?: {
-        id: number;
-        documentId: string;
-        name: string;
-        url: string;
-        ext: string;
-        mime: string;
-        size: number;
-    } | null;
-}
+import { Unit } from "@/types/property";
 
 interface Property {
     title: string;
