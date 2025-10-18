@@ -164,7 +164,7 @@ export default function AmenitiesMultiSelect({
           {amenities.length === 0 && (    
             <div className='filter-checkbox-label'  
             >
-              {t('home.no-amenities-available') || 'No amenities available'}
+              {t('filters.no-results') || 'No results found'}
             </div>
           )}
         </div>

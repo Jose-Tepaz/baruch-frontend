@@ -166,8 +166,8 @@ export default function CategoryMultiSelect({
           {categories.length === 0 && (    
             <div className='filter-checkbox-label'  
             >
-              {t('home.no-categories-available') || 'No categories available'}
-            </div>
+              {t('filters.no-results') || 'No results found'}
+              </div>
           )}
         </div>
       )}

@@ -9042,6 +9042,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
     cursor: pointer;
     font-size: 14px;
     height: 32px;
+    padding: 0px 16px;
 }
 
 .filter-checkbox {

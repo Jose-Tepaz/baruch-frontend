@@ -324,6 +324,7 @@
   },
   "filters": {
     "select-option": "Selecteer een optie",
-    "select-all": "Alles selecteren"
+    "select-all": "Alles selecteren",
+    "no-results": "Geen resultaten gevonden"
   }
 }

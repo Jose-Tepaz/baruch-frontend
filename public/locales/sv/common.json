@@ -320,6 +320,7 @@
   },
   "filters": {
     "select-option": "Välj en option",
-    "select-all": "Välj alla"
+    "select-all": "Välj alla",
+    "no-results": "Inga resultat hittades"
   }
 }

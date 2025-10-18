@@ -168,7 +168,8 @@ export default function LocationMultiSelect({
           {locations.length === 0 && (      
             <div className='filter-checkbox-label'  
             >
-              {t('home.no-locations-available') || 'No locations available'}
+              
+              {t('filters.no-results') || 'No results found'}
             </div>
           )}
         </div>

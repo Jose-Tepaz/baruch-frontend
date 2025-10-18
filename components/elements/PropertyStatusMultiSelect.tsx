@@ -15,7 +15,7 @@ interface PropertyStatusMultiSelectProps {
   onChange: (selectedStatuses: string[]) => void;
   placeholder: string;
   name: string;
-  id?: string;
+  id?: string; // optional id for the dropdown button
 }
 
 export default function PropertyStatusMultiSelect({ 
@@ -163,7 +163,7 @@ export default function PropertyStatusMultiSelect({
           {propertyStatuses.length === 0 && (    
             <div className='filter-checkbox-label'  
             >
-              {t('home.no-statuses-available') || 'No statuses available'}
+              {t('filters.no-results') || 'No results found'}
             </div>
           )}
         </div>

@@ -357,7 +357,8 @@
     },
     "filters": {
         "select-option": "Select option",
-        "select-all": "Select All"
+        "select-all": "Select All",
+        "no-results": "No results found"
 
         
     }

@@ -87,14 +87,6 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
         // Build query string
         const params = new URLSearchParams();
 
-        console.log('=== SearchBox Form Submission ===');
-        console.log('Language:', lang);
-        console.log('Search criteria:', searchCriteria);
-        console.log('Selected locations:', selectedLocations);
-        console.log('Selected categories:', selectedCategories);
-        console.log('Selected statuses:', selectedStatuses);
-        console.log('Selected amenities:', selectedAmenities);
-
         // Add non-empty parameters to URL
         Object.entries(searchCriteria).forEach(([key, value]) => {
             if (value && value.trim() !== '') {
@@ -117,9 +109,6 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
         }
 
         const finalUrl = `/${lang}/properties?${params.toString()}`;
-        console.log('Final URL:', finalUrl);
-        console.log('URL parameters:', params.toString());
-
         // Navigate to properties page with query parameters
         router.push(finalUrl);
     };
@@ -369,6 +358,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                         <div className="filters z-1 position-relative mb-3">
                                             <div className="d-flex flex-lg-nowrap flex-wrap gap-2 justify-content-between w-100">
                                                 <div className="filter-group flex-grow-1">
+                                                    <label htmlFor="location">{t('home.location-filter')}</label>
                                                     <LocationMultiSelect
                                                         locations={locations}
                                                         selectedLocations={selectedLocations}
@@ -378,6 +368,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                                     />
                                                 </div>
                                                 <div className="filter-group">
+                                                    <label htmlFor="category">{t('home.title-filter-2')}</label>
                                                     <CategoryMultiSelect
                                                         categories={categories}
                                                         selectedCategories={selectedCategories}
@@ -387,6 +378,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                                     />
                                                 </div>
                                                 <div className="filter-group">
+                                                    <label htmlFor="property_status">{t('home.title-filter-1')}</label>
                                                     <PropertyStatusMultiSelect
                                                         propertyStatuses={propertyStatuses}
                                                         selectedStatuses={selectedStatuses}
@@ -404,8 +396,9 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
 
                                                 {/* Filtros siempre visibles en mobile */}
                                                 <div className="filter-group">
+                                                    <label htmlFor="bedrooms">{t('home.bedrooms-filter')}</label>
                                                     <select name="bedrooms" defaultValue="">
-                                                        <option value="">{t('home.bedrooms-filter')}</option>
+                                                        <option value="">{t('filters.select-option')}</option>
                                                         <option value="1">Min 1</option>
                                                         <option value="2">Min 2</option>
                                                         <option value="3">Min 3</option>
@@ -416,8 +409,9 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
 
                                                 {/* Filtros ocultos en mobile */}
                                                 <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
+                                                    <label htmlFor="bathrooms">{t('home.bathrooms-filter')}</label>
                                                     <select name="bathrooms" defaultValue="">
-                                                        <option value="">{t('home.bathrooms-filter')}</option>
+                                                        <option value="">{t('filters.select-option')}</option>
                                                         <option value="1">Min 1</option>
                                                         <option value="2">Min 2</option>
                                                         <option value="3">Min 3</option>
@@ -426,8 +420,9 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                                 </div>
 
                                                 <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
+                                                    <label htmlFor="min_price">{t('home.min-price-filter')}</label>
                                                     <select name="min_price" defaultValue="">
-                                                        <option value="">{t('home.min-price-filter')}</option>
+                                                        <option value="">{t('filters.select-option')}</option>
 
                                                         <option value="100000">€100.000</option>
                                                         <option value="150000">€150.000</option>
@@ -444,8 +439,9 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                                 </div>
 
                                                 <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
+                                                    <label htmlFor="max_price">{t('home.max-price-filter')}</label>
                                                     <select name="max_price" defaultValue="">
-                                                        <option value="">{t('home.max-price-filter')}</option>
+                                                        <option value="">{t('filters.select-option')}</option>
 
                                                         <option value="150000">€150.000</option>
                                                         <option value="200000">€200.000</option>
@@ -463,6 +459,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                                 </div>
 
                                                 <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
+                                                    <label htmlFor="amenities">{t('home.amenities-filter')}</label>
                                                     <AmenitiesMultiSelect
                                                         amenities={amenities}
                                                         selectedAmenities={selectedAmenities}

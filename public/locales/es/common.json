@@ -353,6 +353,7 @@
     },
     "filters": {
         "select-option": "Selecciona una opción",
-        "select-all": "Seleccionar todas"
+        "select-all": "Seleccionar todas",
+        "no-results": "No se encontraron resultados"
     }
 }
