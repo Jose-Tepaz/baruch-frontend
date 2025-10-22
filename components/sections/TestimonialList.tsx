@@ -25,7 +25,7 @@ export default function TestimonialList({ testimonials }: { testimonials: any[] 
                       
                       <div className="testimonial-author">
                         <span className="author-name">{t.name_of_client}</span>
-                        <span className="author-location">, {t.position_of_client} (Client)</span>
+                        <span className="author-location">, {t.position_of_client}</span>
                       </div>
                     </div>
                   </div>
