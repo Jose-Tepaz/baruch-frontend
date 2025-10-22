@@ -16,15 +16,21 @@ type Testimonial = {
 
 interface Props {
   params: Promise<{ lang: string }>;
+  searchParams: Promise<{ page?: string }>;
 }
 
-export default async function TestimonialsPage({ params }: Props) {
+export default async function TestimonialsPage({ params, searchParams }: Props) {
   const { lang } = await params;
+  const { page } = await searchParams;
   const testimonials: Testimonial[] = await getTestimonials(lang);
   
   return (
     <Layout>
-        <TestimonialList testimonials={testimonials} />
+        <TestimonialList 
+          testimonials={testimonials} 
+          searchParams={{ page }}
+          lang={lang}
+        />
     </Layout>
   );
 }
