@@ -70,20 +70,6 @@ if (typeof window !== 'undefined') {
 }
 
 export function getCurrentLanguage(): Language {
-  if (typeof window !== 'undefined') {
-    // Verificar primero la URL
-    const urlLanguage = detectLanguageFromURL();
-    console.log('=== getCurrentLanguage: URL language detected:', urlLanguage);
-    console.log('=== getCurrentLanguage: Current language before:', currentLanguage);
-    
-    if (urlLanguage && urlLanguage !== currentLanguage) {
-      console.log('=== getCurrentLanguage: Updating language from URL:', urlLanguage);
-      setLanguage(urlLanguage);
-    }
-    
-    console.log('=== getCurrentLanguage: Final language:', currentLanguage);
-  }
-  
   return currentLanguage;
 }
 
@@ -146,19 +132,13 @@ export function t(key: string, namespace = 'common'): string {
 
 export function useTranslation(namespace = 'common') {
   const [, forceUpdate] = useState({});
-  const [language, setLanguageState] = useState<Language>('en');
+  const [language, setLanguageState] = useState<Language>(currentLanguage);
   const [isHydrated, setIsHydrated] = useState(false);
   
   useEffect(() => {
     // Marcar como hidratado
     setIsHydrated(true);
-    
-    // Detectar idioma desde URL o localStorage
-    const detectedLanguage = getCurrentLanguage();
-    if (detectedLanguage !== language) {
-      setLanguageState(detectedLanguage);
-      forceUpdate({});
-    }
+    setLanguageState(currentLanguage);
     
     // Suscribirse a cambios
     const unsubscribe = subscribeToLanguageChange(() => {
@@ -166,20 +146,8 @@ export function useTranslation(namespace = 'common') {
       forceUpdate({});
     });
     
-    // Detectar cambios en la URL
-    const handleLocationChange = () => {
-      const newLanguage = detectLanguageFromURL();
-      if (newLanguage !== currentLanguage) {
-        setLanguage(newLanguage);
-      }
-    };
-    
-    // Escuchar cambios en la URL
-    window.addEventListener('popstate', handleLocationChange);
-    
     return () => {
       unsubscribe();
-      window.removeEventListener('popstate', handleLocationChange);
     };
   }, []);
   

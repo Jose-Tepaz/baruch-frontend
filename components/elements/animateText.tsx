@@ -18,8 +18,8 @@ export default function AnimatedText() {
 
       // Try to dynamically import SplitText
       try {
-        const gsapAll = await import("gsap/all")
-        SplitText = gsapAll.SplitText
+        const { SplitText: SplitTextPlugin } = await import("gsap/SplitText")
+        SplitText = SplitTextPlugin
         gsap.registerPlugin(SplitText)
       } catch (error) {
         console.warn("SplitText plugin not available. Falling back to simpler animation.")

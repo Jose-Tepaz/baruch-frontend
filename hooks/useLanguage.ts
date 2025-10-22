@@ -8,15 +8,11 @@ export const useLanguage = () => {
     const pathname = usePathname();
     
     useEffect(() => {
-        // Refrescar el locale desde la URL cuando cambie
-        refreshLocaleFromURL();
-        
-        // Detectar idioma desde la URL cada vez que cambie
+        // Solo detectar idioma desde URL cuando cambie la ruta
         const detectLanguageFromURL = () => {
             if (typeof window === 'undefined') return 'en';
             
             const currentPath = pathname;
-            console.log('=== useLanguage: Detecting language from URL:', currentPath);
             
             // Si la URL es solo "/" o no tiene código de idioma, es inglés (por defecto)
             if (currentPath === '/' || !currentPath.match(/^\/[a-z]{2}(\/|$)/)) {
@@ -38,23 +34,19 @@ export const useLanguage = () => {
         };
         
         const urlLanguage = detectLanguageFromURL();
-        console.log('=== useLanguage: URL language detected:', urlLanguage);
-        console.log('=== useLanguage: Current i18n language:', i18n.language);
         
-        // Si el idioma de la URL es diferente al actual, actualizar
+        // Solo actualizar si es diferente y no es la primera carga
         if (urlLanguage !== i18n.language) {
-            console.log('=== useLanguage: Updating language from', i18n.language, 'to', urlLanguage);
             i18n.changeLanguage(urlLanguage as any);
             updateCurrentLocale(urlLanguage);
         }
-    }, [pathname, i18n]);
+    }, [pathname]); // Remover i18n de las dependencias para evitar bucles
     
     return {
         currentLanguage: i18n.language,
         changeLanguage: (lang: string) => {
-            console.log('=== useLanguage: Manual language change to:', lang);
             i18n.changeLanguage(lang as any);
-            updateCurrentLocale(lang); // Actualizar el idioma global para los servicios
+            updateCurrentLocale(lang);
         },
         availableLanguages: ['es', 'en', 'fr', 'de', 'pl', 'sv', 'nl'],
         getCurrentLocale: () => getCurrentLocale()

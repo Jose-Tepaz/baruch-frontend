@@ -71,20 +71,7 @@ export function updateCurrentLocale(newLocale: string): void {
  * Para usar en servicios que necesitan el locale actual
  */
 export function getCurrentLocale(): string {
-  if (typeof window !== 'undefined') {
-    // En el cliente, primero verificar la URL, luego la variable global
-    const urlLocale = detectLocaleFromURL();
-    if (urlLocale) {
-      currentLocale = urlLocale;
-      return urlLocale;
-    }
-    
-    // Si no hay en URL, usar la variable global
-    return currentLocale;
-  }
-  
-  // En el servidor, usar inglés por defecto
-  return 'en';
+  return currentLocale;
 }
 
 /**
@@ -92,17 +79,11 @@ export function getCurrentLocale(): string {
  * Para usar en servicios que necesitan garantizar un locale válido
  */
 export function getLocaleWithFallback(locale?: string): string {
-  console.log('=== getLocaleWithFallback: Input locale:', locale);
-  
   if (locale && locale.trim() !== '') {
-    console.log('=== getLocaleWithFallback: Using provided locale:', locale);
     return locale;
   }
   
-  const currentLocale = getCurrentLocale();
-  console.log('=== getLocaleWithFallback: Using current locale:', currentLocale);
-  
-  return currentLocale;
+  return getCurrentLocale();
 }
 
 /**
@@ -112,11 +93,8 @@ export function getLocaleWithFallback(locale?: string): string {
 export function refreshLocaleFromURL(): void {
   if (typeof window !== 'undefined') {
     const urlLocale = detectLocaleFromURL();
-    console.log('=== refreshLocaleFromURL: URL locale detected:', urlLocale);
-    console.log('=== refreshLocaleFromURL: Current locale before:', currentLocale);
     
     if (urlLocale && urlLocale !== currentLocale) {
-      console.log('=== refreshLocaleFromURL: Updating locale from', currentLocale, 'to', urlLocale);
       currentLocale = urlLocale;
       
       // Guardar en localStorage
