@@ -58,7 +58,7 @@
         "bathrooms-filter": "Badrum",
         "min-price-filter": "Min Pris",
         "max-price-filter": "Max Pris",
-        "amenities-filter": "Bekvämligheter",
+        "amenities-filter": "Egenskaper",
         "location-filter": "Plats",     
         "show-more": "Visa fler filter",    
         "show-less": "Visa färre filter",
@@ -80,7 +80,7 @@
         "list1-why-choose-us": "Erfarna mäklare",   
         "list2-why-choose-us": "Utgående listor",
         "list3-why-choose-us": "Kundnöjdhet",
-        "paragraph-why-choose-us": "På Baruch Real Estate tror vi att att hitta ett hem är mer än bara att hitta ett tak över huvudet – det handlar om att upptäcka en plats som perfekt passar din livsstil. Vårt expertteam, vårt omfattande utbud och vårt engagemang för kundnöjdhet gör att vi sticker ut genom att erbjuda en sömlös fastighetsupplevelse."
+        "paragraph-why-choose-us": "Vid Baruch Real Estate, vi tror att att hitta ett hem är mer än bara att hitta ett tak över huvudet. Det handlar om att upptäcka en plats som perfekt passar din livsstil. Vårt expertteam, vårt omfattande utbud och vårt engagemang för kundnöjdhet gör att vi sticker ut genom att erbjuda en sömlös fastighetsupplevelse."
     },
   "buttons": {
       "login": "Logga in",
@@ -135,6 +135,11 @@
       "meet-the-team": {
           "title": "Möt teamet",
           "description": "Vårt team består av lokala invånare som känner Costa del Sol inte bara som fastighetsproffs, utan som stolta medlemmar av samhället. Oavsett om du dras till Marbellas energi, Fuengirolas familjevänliga charm eller Benahavís lugna elegans, hjälper vi dig att hitta den bästa matchen. Inte bara för dina behov, utan för ditt liv."
+      },
+      "conatct-section": {
+        "title": "Våra tjänster ",
+        "description": "Vid Baruch Real Estate, vi tror in att bygga långvariga relationer baserade på förtroende, transparens och personligt kontakt. För oss är fastigheter inte bara om egendom, det handlar om människor. Vi hjälper dig steg för steg genom processen. Med omsorg, tydlighet och en fokus på kvalitet vid varje steg. Och vårt stöd slutar inte en gång du har köpt en fastighet.",
+        "btn_text": "Se våra tjänster"
       }
   },
   "services": {
@@ -247,7 +252,7 @@
       "phoneNumber-text": "Telefonnummer",      
       "email-text": "E-postadress",
       "message-text": "Ditt meddelande",
-      "estimated_completion-text": "Uppskattad slutförande",  
+      "estimated_completion-text": "Voraussichtliche Fertigstellung",  
       "units": {
           "title": "Enheter",
           "id-house": "Hus-ID",

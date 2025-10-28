@@ -58,7 +58,7 @@
     "bathrooms-filter": "Badkamers",
     "min-price-filter": "Min Prijs",
     "max-price-filter": "Max Prijs",
-    "amenities-filter": "Voorzieningen",
+    "amenities-filter": "Eigenschappen",
     "location-filter": "Locatie",
     "show-more": "Meer filters tonen",
     "show-less": "Minder filters tonen",
@@ -80,7 +80,7 @@
     "list1-why-choose-us": "Experts Agents",
     "list2-why-choose-us": "Uitgebreide lijsten",
     "list3-why-choose-us": "Klanttevredenheid",
-    "paragraph-why-choose-us": "Bij Baruch Real Estate geloven we dat een huis vinden meer is dan alleen een dak boven je hoofd bemachtigen — het gaat om het ontdekken van een plek die perfect bij jouw levensstijl past. Ons team van experts, ons uitgebreide aanbod en onze toewijding aan klanttevredenheid onderscheiden ons in het leveren van een zorgeloze vastgoedervaring."
+    "paragraph-why-choose-us": "Bij Baruch Real Estate geloven we dat het vinden van een huis niet alleen gaat om een dak boven je hoofd – het gaat om het ontdekken van een plek die perfect bij jouw levensstijl past. Ons team van experts, onze uitgebreide lijsten en onze toewijding aan klanttevredenheid onderscheiden ons in het leveren van een zorgeloze vastgoedervaring."
   },
   "buttons": {
     "login": "Inloggen",
@@ -137,7 +137,7 @@
     },
     "conatct-section": {
       "title": "Onze Dienstleistingen ",
-      "description": "Bij Baruch Real Estate geloven we dat het vinden van een huis niet alleen gaat om een dak boven je hoofd – het gaat om het ontdekken van een plek die past bij je unieke levensstijl. Of je nu op zoek bent naar een cozy appartement of een ruim huis.",
+      "description": "Bij Baruch Real Estate geloven we in het bouwen van langdurige relaties op basis van vertrouwen, transparantie en persoonlijke contact. Voor ons is vastgoed niet alleen over eigendommen, het gaat om mensen. We helpen je stap voor stap door het proces. Met zorg, duidelijkheid en een focus op kwaliteit bij elke stap. En onze ondersteuning stopt niet eenmaal je een eigendom hebt gekocht.",
       "btn_text": "Alle Dienstleistingen ansehen"
     }
   },
@@ -251,7 +251,7 @@
     "phoneNumber-text": "Telefoonnummer",
     "email-text": "E-mailadres",
     "message-text": "Jouw bericht",
-    "estimated_completion-text": "Geschatte Completietijd",
+    "estimated_completion-text": "Voraussichtliche Fertigstellung",
     "units": {
       "title": "Eenheden",
       "id-house": "Huis-ID",

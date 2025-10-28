@@ -108,7 +108,7 @@ export default function PropertiesContent({
         let filtered = [...initialProperties];
 
         // Aplicar filtros locales
-        const { keyword, city, state, amenities } = searchParams;
+        const { keyword, city, state, amenities, category, property_status, location } = searchParams;
 
         if (keyword) {
             const searchTerm = keyword.toLowerCase();
@@ -127,13 +127,65 @@ export default function PropertiesContent({
             filtered = filtered.filter(property => property.address?.toLowerCase().includes(state.toLowerCase()));
         }
 
+        // Filtro por categorías (OR)
+        if (category) {
+            const categoryArray = Array.isArray(category) ? category : [category];
+            if (categoryArray.length > 0) {
+                filtered = filtered.filter(property => {
+                    const propertyCategory = property.category;
+                    if (!propertyCategory) return false;
+                    
+                    const categorySlug = propertyCategory.slug || propertyCategory.name?.toLowerCase();
+                    return categoryArray.some(cat => 
+                        categorySlug === cat.toLowerCase() || 
+                        propertyCategory.name?.toLowerCase() === cat.toLowerCase()
+                    );
+                });
+            }
+        }
+
+        // Filtro por ubicaciones (OR)
+        if (location) {
+            const locationArray = Array.isArray(location) ? location : [location];
+            if (locationArray.length > 0) {
+                filtered = filtered.filter(property => {
+                    const propertyLocation = property.location;
+                    if (!propertyLocation) return false;
+                    
+                    const locationName = typeof propertyLocation === 'string' 
+                        ? propertyLocation 
+                        : propertyLocation.name;
+                    
+                    return locationArray.some(loc => 
+                        locationName?.toLowerCase().includes(loc.toLowerCase())
+                    );
+                });
+            }
+        }
+
+        // Filtro por estados de propiedad (OR)
+        if (property_status) {
+            const statusArray = Array.isArray(property_status) ? property_status : [property_status];
+            if (statusArray.length > 0) {
+                filtered = filtered.filter(property => {
+                    const propertyStatus = property.propertyStatus || property.status;
+                    if (!propertyStatus) return false;
+                    
+                    return statusArray.some(status => 
+                        propertyStatus.toLowerCase() === status.toLowerCase()
+                    );
+                });
+            }
+        }
+
+        // Filtro por amenities (OR)
         if (amenities) {
             const amenityArray = Array.isArray(amenities) ? amenities : [amenities];
             if (amenityArray.length > 0) {
                 filtered = filtered.filter(property => {
                     const propertyAmenities = property.amenities || [];
                     const propertyAmenityNames = propertyAmenities.map((amenity: any) => amenity.Name);
-                    return amenityArray.every(amenity => 
+                    return amenityArray.some(amenity => 
                         propertyAmenityNames.includes(amenity)
                     );
                 });

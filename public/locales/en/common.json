@@ -64,7 +64,7 @@
         "bathrooms-filter": "Bathrooms",
         "min-price-filter": "Min Price",
         "max-price-filter": "Max Price",
-        "amenities-filter": "Amenities",
+        "amenities-filter": "Features",
         "location-filter": "Location",
         "show-more": "Show more filters",
         "show-less": "Show less filters",
@@ -90,7 +90,7 @@
         "list1-why-choose-us": "Experts Agents",
         "list2-why-choose-us": "Extensive Listings",
         "list3-why-choose-us": "Customer Satisfaction",
-        "paragraph-why-choose-us": "At Baruch Real Estate, we believe finding a home is more than just securing a roof over your head — it’s about discovering a place that perfectly matches your lifestyle. Our team of experts, extensive listings, and commitment to customer satisfaction set us apart in delivering a seamless real estate experience."
+        "paragraph-why-choose-us": "At Baruch Real Estate, we believe finding a home is more than just securing a roof over your head. It’s about discovering a place that perfectly matches your lifestyle. Our team of experts, extensive listings, and commitment to customer satisfaction set us apart in delivering a seamless real estate experience."
     },
     "buttons": {
         "login": "Login",
@@ -145,7 +145,7 @@
             },
         "conatct-section": {
             "title": "Our Services ",
-            "description": "At Baruch Real Estate, we believe in building lasting relationships based on trust, transparency, and personal contact. For us, real estate is not just about properties, it’s about people. We guide you through the process step by step. With care, clarity,",
+            "description": "At Baruch Real Estate, we believe in building lasting relationships based on trust, transparency, and personal contact. For us, real estate is not just about properties, it’s about people. We guide you through the process step by step. With care, clarity and a focus on quality at every stage. And our support doesn’t stop once you’ve bought a property.",
             "btn_text": "See all services"
         },
        
@@ -170,7 +170,7 @@
             "what-we-offer": "What we offer:",
             "btn-text": "Request quote",
             "nie": {
-                "title": "NIE/residency",
+                "title": "NIE/Residency",
                 "description": "We facilitate the entire process of obtaining your NIE (Foreign Identity Number) and residency in Spain. Our team will guide you through all necessary documentation and administrative procedures.",
                 "detail1": "Complete advice on required documentation",
                 "detail2": "Management of appointments at immigration offices",
@@ -178,7 +178,7 @@
                 "detail4": "Renewals and documentation updates"
             },
             "finance": {
-                "title": "Finance / mortgage",
+                "title": "Finance / Mortgage",
                 "description": "We help you find the best mortgage financing options for your property. We work with leading financial institutions to secure the most favorable conditions.",
                 "detail1": "Analysis of your financing capacity",
                 "detail2": "Comparison of offers from multiple banks",
@@ -194,7 +194,7 @@
                 "detail4": "Claims management and renewals"
             },
             "tax": {
-                "title": "Tax returns",
+                "title": "Tax Returns",
                 "description": "Our team of tax experts handles all your tax obligations in Spain, ensuring compliance with all current regulations.",
                 "detail1": "Annual income tax return",
                 "detail2": "Property taxes (IBI, capital gains)",
@@ -202,7 +202,7 @@
                 "detail4": "Legal tax optimization"
             },
             "legal": {
-                "title": "Legal services",
+                "title": "Legal Services",
                 "description": "We have a legal team specialized in real estate law that will assist you in all legal aspects of your real estate transaction.",
                 "detail1": "Review of purchase agreements",
                 "detail2": "Property due diligence",
@@ -283,7 +283,7 @@
         "phoneNumber-text": "Phone Number",
         "email-text": "Email Address",
         "message-text": "Your Message",
-        "estimated_completion-text": "Estimated delivery",
+        "estimated_completion-text": "Estimated completion",
         "units": {
             "title": "Units",
             "id-house": "Id House",

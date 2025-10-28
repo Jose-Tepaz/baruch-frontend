@@ -7,7 +7,7 @@
         "services": "Servicios",
         "contact": "Contacto",
         "btn-nav-1": "Contactar",
-        "login-btn": "Iniciar Sesión",
+        "login-btn": "Login",
         "logout-btn": "Cerrar Sesión",
         "btn-private-properties": "Propiedades",
         "testimonials": "Testimonios",
@@ -61,7 +61,7 @@
         "bathrooms-filter": "Baños",
         "min-price-filter": "Precio Mínimo",
         "max-price-filter": "Precio Máximo",
-        "amenities-filter": "Comodidades",
+        "amenities-filter": "Características",
         "location-filter": "Ubicación",
         "show-more": "Mostrar más filtros",
         "show-less": "Mostrar menos filtros",
@@ -87,7 +87,7 @@
         "list1-why-choose-us": "Agentes Expertos",
         "list2-choose-us": "Listados Extensos",
         "list3-why-choose-us": "Satisfacción del Cliente",
-        "paragraph-why-choose-us": "En Baruch Real Estate, creemos que encontrar una casa es más que simplemente tener un techo sobre tu cabeza — es sobre descubrir un lugar que coincide perfectamente con tu estilo de vida. Nuestro equipo de expertos, nuestras listas extensas y nuestro compromiso con la satisfacción del cliente nos distinguen en ofrecer una experiencia inmobiliaria sin complicaciones."
+        "paragraph-why-choose-us": "En Baruch Real Estate, creemos que encontrar un hogar es mucho más que conseguir un techo sobre tu cabeza: se trata de descubrir un lugar que encaje perfectamente con tu estilo de vida. Nuestro equipo de expertos, los listados extensos y nuestro compromiso con la satisfacción del cliente nos distinguen para ofrecerte una experiencia inmobiliaria sin complicaciones."
     },
 
     "buttons": {
@@ -143,7 +143,7 @@
         },
         "conatct-section": {
             "title": "Nuestros Servicios ",
-            "description": "En Baruch Real Estate creemos en construir relaciones duraderas basadas en confianza, transparencia y contacto personal. Para nosotros, la inmobiliaria no es solo sobre propiedades, es sobre personas. Te guiamos paso a paso a través del proceso. Con cuidado, claridad y un enfoque en la calidad en cada etapa. Y nuestro soporte no termina una vez que has comprado una propiedad. Estamos aquí para responder tus preguntas y asistirte incluso después de que las llaves estén en tus manos.",
+            "description": "En Baruch Real Estate, creemos en construir relaciones duraderas basadas en confianza, transparencia y contacto personal. Para nosotros, la inmobiliaria no es solo sobre propiedades, es sobre personas. Te guiamos paso a paso a través del proceso. Con cuidado, claridad y un enfoque en la calidad en cada etapa. Y nuestro soporte no termina una vez que has comprado una propiedad.",
             "btn_text": "Ver todos los servicios" 
         },
         "contact-form": {
@@ -166,8 +166,9 @@
             "main-title": "LOS SERVICIOS QUE OFRECEMOS",
             "subtitle": "Estamos apasionados por simplificar el mercado inmobiliario en España. Con un profundo conocimiento del mercado de vivienda en España y un enfoque centrado en el cliente, nos esforzamos por ayudar a compradores, vendedores e inquilinos a alcanzar sus objetivos inmobiliarios.",
             "what-we-offer": "Lo que ofrecemos:",
+            "btn-text": "Solicitar cotización",
             "nie": {
-                "title": "NIE/residency",
+                "title": "NIE/Residencia",
                 "description": "Facilitamos todo el proceso de obtención de tu NIE (Número de Identificación de Extranjero) y residencia en España. Nuestro equipo te guiará a través de toda la documentación necesaria y los procedimientos administrativos.",
                 "detail1": "Asesoramiento completo sobre documentación requerida",
                 "detail2": "Gestión de citas en oficinas de extranjería",
@@ -175,7 +176,7 @@
                 "detail4": "Renovaciones y actualizaciones de documentación"
             },
             "finance": {
-                "title": "finance / mortgage",
+                "title": "Financiación / Hipoteca",
                 "description": "Te ayudamos a encontrar las mejores opciones de financiación hipotecaria para tu propiedad. Trabajamos con las principales entidades financieras para conseguir las condiciones más favorables.",
                 "detail1": "Análisis de tu capacidad de financiación",
                 "detail2": "Comparación de ofertas de múltiples bancos",
@@ -183,7 +184,7 @@
                 "detail4": "Asesoramiento durante todo el proceso de aprobación"
             },
             "insurance": {
-                "title": "insurance",
+                "title": "Seguros",
                 "description": "Ofrecemos soluciones de seguros completas para proteger tu inversión inmobiliaria. Desde seguros de hogar hasta seguros de vida y salud.",
                 "detail1": "Seguros de propiedad y contenido",
                 "detail2": "Seguros de vida y salud",
@@ -191,7 +192,7 @@
                 "detail4": "Gestión de reclamaciones y renovaciones"
             },
             "tax": {
-                "title": "tax returns",
+                "title": "Declaración de Impuestos",
                 "description": "Nuestro equipo de expertos fiscales se encarga de todas tus obligaciones tributarias en España, asegurando el cumplimiento de todas las normativas vigentes.",
                 "detail1": "Declaración de la renta anual",
                 "detail2": "Impuestos sobre la propiedad (IBI, plusvalía)",
@@ -199,7 +200,7 @@
                 "detail4": "Optimización fiscal legal"
             },
             "legal": {
-                "title": "legal services",
+                "title": "Asesoría Legal",
                 "description": "Contamos con un equipo legal especializado en derecho inmobiliario que te asistirá en todos los aspectos legales de tu transacción inmobiliaria.",
                 "detail1": "Revisión de contratos de compraventa",
                 "detail2": "Due diligence de propiedades",
@@ -207,7 +208,7 @@
                 "detail4": "Resolución de conflictos y litigios"
             },
             "management": {
-                "title": "Property Management",
+                "title": "Gestión de Propiedades",
                 "description": "Gestionamos tu propiedad de manera integral, desde el mantenimiento hasta la gestión de inquilinos, para que disfrutes de tu inversión sin preocupaciones.",
                 "detail1": "Búsqueda y selección de inquilinos",
                 "detail2": "Mantenimiento y reparaciones",

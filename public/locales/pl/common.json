@@ -60,7 +60,7 @@
         "bathrooms-filter": "Łazienki",
         "min-price-filter": "Min Cena",
         "max-price-filter": "Max Cena",
-        "amenities-filter": "Udogodnienia",
+        "amenities-filter": "Cechy",
         "location-filter": "Lokalizacja",
         "show-more": "Pokaż więcej filtrów",    
         "show-less": "Pokaż mniej filtrów",
@@ -82,7 +82,7 @@
         "list1-why-choose-us": "Ekspercki zespół",
         "list2-why-choose-us": "Szeroka oferta",
         "list3-why-choose-us": "Zadowolenie klienta",       
-        "paragraph-why-choose-us": "W Baruch Real Estate wierzymy, że znalezienie domu to coś więcej niż tylko zdobycie dachu nad głową — to odkrycie miejsca, które idealnie pasuje do Twojego stylu życia. Nasz zespół ekspertów, szeroka oferta i zaangażowanie w satysfakcję klienta wyróżniają nas w dostarczaniu bezproblemowego doświadczenia na rynku nieruchomości."
+        "paragraph-why-choose-us": "W Baruch Real Estate, wierzymy, że znalezienie domu to coś więcej niż tylko zdobycie dachu nad głową. To odkrycie miejsca, które idealnie pasuje do Twojego stylu życia. Nasz zespół ekspertów, szeroka oferta i zaangażowanie w satysfakcję klienta wyróżniają nas w dostarczaniu bezproblemowego doświadczenia na rynku nieruchomości."
     },
   "buttons": {
       "login": "Zaloguj się",
@@ -140,7 +140,7 @@
       },
       "conatct-section": {
         "title": "Nasze Usługi ",
-        "description": "W Baruch Real Estate wierzymy, że znalezienie domu to nie tylko posiadanie dachu nad głową – to odkrywanie miejsca, które pasuje do Twojego unikalnego stylu życia. Czy szukasz przytulnego apartamentu, czy spokojnego domu.",
+        "description": "W Baruch Real Estate, wierzymy w budowanie trwałych relacji opartych na zaufaniu, przejrzystości i osobistym kontakcie. Dla nas, nieruchomości to nie tylko o własnościach, to o ludziach. Pomagamy Ci przejść przez proces krok po kroku. Z zasadnością, przejrzystością i skupieniem na jakości na każdym etapie. I nasze wsparcie nie kończy się, dopiero gdy kupisz nieruchomość.",
         "btn_text": "Zobacz wszystkie usługi"
     },
     "contact-form": {
@@ -285,7 +285,7 @@
       "phoneNumber-text": "Numer telefonu",
       "email-text": "Adres e-mail",
       "message-text": "Twoja wiadomość",
-      "estimated_completion-text": "Data zakończenia oszacowana",
+      "estimated_completion-text": "Voraussichtliche Fertigstellung",
       "units": {
           "title": "Jednostki",
           "id-house": "Id domu",

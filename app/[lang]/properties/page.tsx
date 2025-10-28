@@ -159,21 +159,21 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
                     return false;
                 }
                 
-                // Filtrar por amenities
+                // Filtrar por amenities (OR)
                 if (searchAmenities) {
                     const amenityArray = Array.isArray(searchAmenities) ? searchAmenities : [searchAmenities];
                     if (amenityArray.length > 0) {
                         const propertyAmenities = property.amenities || [];
                         const propertyAmenityNames = propertyAmenities.map((amenity: any) => amenity.Name);
-                        const hasAllAmenities = amenityArray.every(amenity => 
+                        const hasAnyAmenity = amenityArray.some(amenity => 
                             propertyAmenityNames.includes(amenity)
                         );
                         console.log('=== Amenities Filter Debug ===');
                         console.log('Search amenities:', amenityArray);
                         console.log('Property amenities:', propertyAmenities);
                         console.log('Property amenity names:', propertyAmenityNames);
-                        console.log('Has all amenities:', hasAllAmenities);
-                        if (!hasAllAmenities) {
+                        console.log('Has any amenity:', hasAnyAmenity);
+                        if (!hasAnyAmenity) {
                             return false;
                         }
                     }

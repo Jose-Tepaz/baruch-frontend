@@ -60,7 +60,7 @@
         "bathrooms-filter": "Salles de Bains",
         "min-price-filter": "Prix Min",
         "max-price-filter": "Prix Max",
-        "amenities-filter": "Équipements",
+        "amenities-filter": "Caractéristiques",
         "location-filter": "Emplacement",
         "show-more": "Afficher plus de filtres",
         "show-less": "Afficher moins de filtres",
@@ -82,7 +82,7 @@
         "list1-why-choose-us": "Agents Experts",
         "list2-why-choose-us": "Listes Extensives",
         "list3-why-choose-us": "Satisfaction Client",
-        "paragraph-why-choose-us": "Chez Baruch Real Estate, nous croyons que trouver une maison, ce n'est pas seulement avoir un toit au-dessus de sa tête — c'est découvrir un lieu qui correspond parfaitement à votre style de vie. Notre équipe d'experts, nos listes de biens étendues et notre engagement envers la satisfaction client nous distinguent pour vous offrir une expérience immobilière sans faille."
+        "paragraph-why-choose-us": "Chez Baruch Real Estate, nous croyons que trouver une maison est plus que de simplement avoir un toit au-dessus de sa tête. C'est sur la découverte d'un lieu qui correspond parfaitement à votre style de vie. Notre équipe d'experts, nos listes étendues et notre engagement envers la satisfaction client nous distinguent pour vous offrir une expérience immobilière sans faille."
     },
 
     "buttons": {
@@ -138,7 +138,7 @@
         },
         "conatct-section": {
             "title": "Nos Services ",
-            "description": "En Baruch Real Estate, nous croyons à la construction de relations durables basées sur la confiance, la transparence et le contact personnel. Pour nous, l'immobilier n'est pas seulement sur les propriétés, c'est sur les personnes. Nous vous guidons étape par étape à travers le processus. Avec soin, clarté et un focus sur la qualité à chaque étape. Et notre support ne s'arrête pas une fois que vous avez acheté une propriété. Nous sommes ici pour répondre à vos questions et vous aider même après que les clés soient dans vos mains.",
+            "description": "Chez Baruch Real Estate, nous croyons à la construction de relations durables basées sur la confiance, la transparence et le contact personnel. Pour nous, l'immobilier n'est pas seulement sur les propriétés, c'est sur les personnes. Nous vous guidons étape par étape à travers le processus. Avec soin, clarté et un focus sur la qualité à chaque étape. Et notre support ne s'arrête pas une fois que vous avez acheté une propriété.",
             "btn_text": "Voir tous les services"
         },
         "contact-form": {
@@ -161,8 +161,9 @@
             "main-title": "LES SERVICES QUE NOUS OFFRONS",
             "subtitle": "Nous sommes passionnés par la simplification du processus immobilier en Espagne. Avec une compréhension approfondie du marché immobilier en Espagne et une approche centrée sur le client, nous nous efforçons d'aider les acheteurs, vendeurs et locataires à atteindre leurs objectifs immobiliers.",
             "what-we-offer": "Ce que nous offrons:",
+            "btn-text": "Demander une citation",
             "nie": {
-                "title": "NIE/residency",
+                "title": "NIE/Résidence",
                 "description": "Nous facilitons l'ensemble du processus d'obtention de votre NIE (Numéro d'Identification des Étrangers) et de votre résidence en Espagne. Notre équipe vous guidera à travers toute la documentation nécessaire et les procédures administratives.",
                 "detail1": "Conseils complets sur la documentation requise",
                 "detail2": "Gestion des rendez-vous aux bureaux d'immigration",
@@ -170,7 +171,7 @@
                 "detail4": "Renouvellements et mises à jour de la documentation"
             },
             "finance": {
-                "title": "finance / mortgage",
+                "title": "Finance / Hypothèque",
                 "description": "Nous vous aidons à trouver les meilleures options de financement hypothécaire pour votre propriété. Nous travaillons avec les principales institutions financières pour obtenir les conditions les plus favorables.",
                 "detail1": "Analyse de votre capacité de financement",
                 "detail2": "Comparaison des offres de plusieurs banques",
@@ -178,7 +179,7 @@
                 "detail4": "Conseils tout au long du processus d'approbation"
             },
             "insurance": {
-                "title": "insurance",
+                "title": "Assurance",
                 "description": "Nous offrons des solutions d'assurance complètes pour protéger votre investissement immobilier. De l'assurance habitation à l'assurance vie et santé.",
                 "detail1": "Assurance habitation et contenu",
                 "detail2": "Assurance vie et santé",
@@ -186,7 +187,7 @@
                 "detail4": "Gestion des réclamations et renouvellements"
             },
             "tax": {
-                "title": "tax returns",
+                "title": "Déclaration de revenus",
                 "description": "Notre équipe d'experts fiscaux s'occupe de toutes vos obligations fiscales en Espagne, en assurant la conformité avec toutes les réglementations en vigueur.",
                 "detail1": "Déclaration de revenus annuelle",
                 "detail2": "Impôts sur la propriété (IBI, plus-value)",
@@ -194,7 +195,7 @@
                 "detail4": "Optimisation fiscale légale"
             },
             "legal": {
-                "title": "legal services",
+                "title": "Services Juridiques",
                 "description": "Nous avons une équipe juridique spécialisée en droit immobilier qui vous assistera dans tous les aspects juridiques de votre transaction immobilière.",
                 "detail1": "Révision des contrats de vente",
                 "detail2": "Due diligence des propriétés",
@@ -202,7 +203,7 @@
                 "detail4": "Résolution des conflits et litiges"
             },
             "management": {
-                "title": "Property Management",
+                "title": "Gestion de Propriétés",
                 "description": "Nous gérons votre propriété de manière globale, de l'entretien à la gestion des locataires, afin que vous puissiez profiter de votre investissement sans souci.",
                 "detail1": "Recherche et sélection de locataires",
                 "detail2": "Entretien et réparations",
@@ -274,7 +275,7 @@
         "phoneNumber-text": "Numéro de Téléphone",
         "email-text": "Email",
         "message-text": "Votre Message",
-        "estimated_completion-text": "Date de Finimation Estimée",
+        "estimated_completion-text": "Voraussichtliche Fertigstellung",
         "units": {
             "title": "Unités",
             "id-house": "Id Maison",

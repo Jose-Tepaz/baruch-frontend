@@ -75,7 +75,7 @@ type PropertyCardProps = {
               
               <div className="d-flex justify-content-between align-items-center">
                 <span className="fw-bold fs-5">
-                  €{formattedPrice.toLocaleString('es-ES')}
+                  € {formattedPrice.toLocaleString('es-ES')}
                   <span className="fs-6 "></span>
                 </span>
                 <span className="btn btn-outline-light rounded-circle p-0 border-0" style={{ width: '32px', height: '32px' }}>

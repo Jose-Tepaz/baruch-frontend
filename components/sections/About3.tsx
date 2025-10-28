@@ -26,9 +26,7 @@ export default function About3() {
                                 <div className="space16" />
                                 <p>{t('home.paragraph-why-choose-us')}</p>
                                 <div className="space16" />
-                                <p>{t('home.list1-why-choose-us')}</p>
-                                <p>{t('home.list2-why-choose-us')}</p>
-                                <p>{t('home.list3-why-choose-us')}</p>
+                              
 
 
                                 <div className="space30" />

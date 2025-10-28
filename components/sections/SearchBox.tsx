@@ -96,16 +96,24 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
 
         // Add multi-select parameters
         if (selectedLocations.length > 0) {
-            params.set('location', selectedLocations.join(','));
+            selectedLocations.forEach(location => {
+                params.append('location', location);
+            });
         }
         if (selectedCategories.length > 0) {
-            params.set('category', selectedCategories.join(','));
+            selectedCategories.forEach(category => {
+                params.append('category', category);
+            });
         }
         if (selectedStatuses.length > 0) {
-            params.set('property_status', selectedStatuses.join(','));
+            selectedStatuses.forEach(status => {
+                params.append('property_status', status);
+            });
         }
         if (selectedAmenities.length > 0) {
-            params.set('amenities', selectedAmenities.join(','));
+            selectedAmenities.forEach(amenity => {
+                params.append('amenities', amenity);
+            });
         }
 
         const finalUrl = `/${lang}/properties?${params.toString()}`;
