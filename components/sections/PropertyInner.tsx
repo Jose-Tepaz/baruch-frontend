@@ -207,14 +207,16 @@ export default function PropertyInner({ block_extend, property }: { block_extend
 
                             <PropertyDescription property={property} />
                             <div className="space30" />
+                            {property.units && (
                             <Units units={property.units} />
-
+                            )}
                             <div className="space30" />
+                            {property.Map_link && (
                             <div className="wrapp-card-details-propertie">
                                 <h3>{t("propertyDetails.map_locations-text")}</h3>
                                 <iframe src={property.Map_link} width={800} height={450} style={{ border: 0 }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
                             </div>
-
+                            )}
                             <div className="space30" />
 
                             <div className="wrapp-card-details-propertie" id="contact">

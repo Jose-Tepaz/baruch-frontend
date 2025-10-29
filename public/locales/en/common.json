@@ -326,7 +326,8 @@
         "error-message": "Error sending message",
         "success-message": "Message sent successfully!",
         "submitting": "Submitting...",
-        "input-click-to-whatsapp": "Click to WhatsApp"
+        "input-click-to-whatsapp": "Click to WhatsApp",
+        "privacy-statement": "I agree with the privacy statement of Baruch Real Estate"
     },
     "testimonials": {
         "title": "Testimonials",

@@ -75,7 +75,7 @@ export default function PropertyDetails({ property }) {
                 </div>
 
                 {/* Contenedor principal con información y precio */}
-                <div style={{width: '250px', marginTop: 'autos'}} className="d-flex flex-column gap-4 mt-auto justify-content-center align-items-end mobile-justify-content-left mobile-align-items-leftr">
+                <div style={{width: '250px', minWidth: '250px', marginTop: 'autos'}} className="d-flex flex-column gap-4 mt-auto justify-content-center align-items-end mobile-justify-content-left mobile-align-items-leftr">
                      {/* Precio con icono */}
                      <div className="property-price">
                             {property.price ? `€ ${property.price.toLocaleString('es-ES')}` : ''}

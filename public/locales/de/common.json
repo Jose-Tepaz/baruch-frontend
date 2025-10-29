@@ -259,7 +259,7 @@
         "message-text": "Ihre Nachricht",
         "estimated_completion-text": "Voraussichtliche Fertigstellung",
         "units": {
-            "title": "Einheiten",
+            "title": "Einheiten",   
             "id-house": "Haus-ID",
             "dorms": "Dorms.",
             "built-area": "Gebäudefläche",
@@ -298,6 +298,7 @@
         "error-message": "Fehler beim Senden der Nachricht",
         "success-message": "Nachricht erfolgreich gesendet!",
         "submitting": "Senden...",
+        "privacy-statement": "Ich stimme der Datenschutzrichtlinie von Baruch Real Estate zu",
         "input-click-to-whatsapp": "Klicken Sie auf WhatsApp"
     },
     "testimonials": {

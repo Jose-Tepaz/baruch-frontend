@@ -7,6 +7,7 @@ import { Metadata } from 'next';
 
 import ContactForm from "@/components/sections/contactForm";
 import Link from "next/link";
+import ContactSectionServices from "@/components/sections/ContactSectionServices";
 
 interface ServicesPageProps {
     params: Promise<{
@@ -95,28 +96,12 @@ export default async function ServicesPage({ params }: ServicesPageProps) {
                         <div className="space16"></div>
                         <p className="text-color-black text-size-medium">By combining these services with our real estate expertise, we make the entire process of buying, owning, and living in Spain more transparent and less stressful. We always try to support you, even long after the purchase has been completed.</p>
                         <div className="space30"></div>
-                        <Link href="services" className="vl-btn1 is-primary">
-                          See all services
-                          <span className="arrow1 ms-2">
-                            <i className="fa-solid fa-arrow-right" />
-                          </span>
-                          <span className="arrow2 ms-2">
-                            <i className="fa-solid fa-arrow-right" />
-                          </span>
-                        </Link>
+                        
                       </div>
                       <div className="col-lg-5 m-auto d-flex" style={{marginLeft: 'auto'}}>
-                        <div className="space30"></div>
-                        <div className="bg-color-white" style={{padding: '20px'}}>
-                          <h2 className="text-color-black  size-20 uppercase">Ready for the next step?</h2>
-                          <h3 className="text-color-black size-42 uppercase">Let’s connect</h3>
-                          <p className="text-color-black size-16">Please fill in your details below so we can contact you.</p>
-                          
-                          <div className="space16"></div>
-                            <ContactForm/>  
-                          <div className="space30"></div>
-                        </div>
-                                       
+                        
+
+                        <ContactSectionServices />
                       </div>
                     </div>
                   </div>

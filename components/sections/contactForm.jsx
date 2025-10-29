@@ -294,7 +294,7 @@ export default function ContactForm() {
                 <div className="form-check">
                   <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" required />
                   <label className="form-check-label" htmlFor="flexCheckDefault">
-                    I agree with the privacy statement of Baruch Real Estate
+                    {t('contact-form.privacy-statement')}
                   </label>
                 </div>
               </div>
