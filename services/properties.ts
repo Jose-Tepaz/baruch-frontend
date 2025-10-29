@@ -15,7 +15,7 @@ interface StrapiMeta {
   pagination: StrapiPagination
 }
 interface PropertyStatus {
-  id: number
+  id: number 
   documentId: string
   Title: string
 }
@@ -30,10 +30,11 @@ export interface MappedProperty {
   id: number
   documentId: string
   title: string
-  description: string
+  description: string 
   price: number
   address: string
   image: string
+  highlight?: string
   slug: string
   propertyStatus: string
   category: any
@@ -45,7 +46,7 @@ export interface MappedProperty {
     slug: string;
   }>
 }
-
+    
 export interface PropertyListResponse {
   data: MappedProperty[]
   meta: StrapiMeta
@@ -62,6 +63,7 @@ interface PropertyData {
     url: string
   }
   slug: string
+  highlight?: string
   documentId: string
   property_status: PropertyStatus
   category: any
@@ -167,6 +169,7 @@ export function getPropertiesByCategory(
           price,
           address,
           main_image: rawimage,
+          highlight,
           slug,
           property_status,
           category,
@@ -190,6 +193,7 @@ export function getPropertiesByCategory(
           price,
           address,
           image,
+          highlight,
           slug,
           propertyStatus,
           category,
@@ -346,6 +350,7 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           price,
           address,
           main_image: rawimage,
+          highlight,
           slug,
           property_status,
           category,
@@ -378,6 +383,7 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           price,
           address,
           image,
+          highlight,
           slug,
           propertyStatus,
           category,
@@ -433,6 +439,7 @@ export function getPropertyByDocumentId(documentId: string, locale?: string) {
         built_area,
         main_image: rawMainImage,
         gallery: rawGallery,
+        highlight,
         slug,
         property_status,
         category,
@@ -465,6 +472,7 @@ export function getPropertyByDocumentId(documentId: string, locale?: string) {
         built_area,
         main_image,
         gallery,
+        highlight,
         slug,
         category,
         location,

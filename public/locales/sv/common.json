@@ -264,7 +264,7 @@
           "price": "Pris",
           "storage_room": "Förråd",
           "floor": "Visa planritning",
-          "unavailable": "Inte tillgänglig",
+          "unavailable": "På begäran",
           "no-units": "Inga enheter tillgängliga för denna fastighet.",
           "is_available": "ja",
           "is_not_available": "nej"

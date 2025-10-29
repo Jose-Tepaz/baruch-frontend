@@ -5,9 +5,7 @@ import { Unit } from "@/types/property";
 
 export default function Units({ units }: { units?: Unit[] }) {
     const { t } = useTranslation();
-    console.log('Units component received:', units);
-    console.log('Units type:', typeof units);
-    console.log('Units length:', units?.length);
+  
     
     // Si no hay unidades, mostrar mensaje
     if (!units || !Array.isArray(units) || units.length === 0) {
@@ -18,7 +16,7 @@ export default function Units({ units }: { units?: Unit[] }) {
                         <div className="col-12">
                             <div className="text-center py-4">
                                 <p className="text-muted">{t('propertyDetails.units.no-units')}</p>
-                            </div>
+                            </div>  
                         </div>
                     </div>
                 </div>
@@ -43,7 +41,7 @@ export default function Units({ units }: { units?: Unit[] }) {
                             {/* Tabla para pantallas grandes */}
                             <div className="table-responsive d-none d-lg-block">
                                 <table className="table table-hover units-table">
-                                    <thead>
+                                    <thead> 
                                         <tr>
                                             <th className='text-size-smaill text-weight-medium'>{t('propertyDetails.units.id-house')}</th>
                                             <th className='text-size-smaill text-weight-medium'>{t('propertyDetails.units.dorms')}</th>
@@ -72,7 +70,7 @@ export default function Units({ units }: { units?: Unit[] }) {
                                                     {unit.built_area} m²
                                                 </td>
                                                 <td className="exterior-area-cell">
-                                                    {unit.lot_area} m²
+                                                    {unit.exterior_area} m²
                                                 </td>
                                                 <td className="garage-cell">
                                                     <span className={`badge ${unit.garage ? 'badge-available' : 'badge-unavailable'}`}>
@@ -111,7 +109,7 @@ export default function Units({ units }: { units?: Unit[] }) {
                                                 <div className="col-6">
                                                     <h6 className="card-title mb-2">
                                                         <strong>{unit.housing_number}</strong>
-                                                    </h6>
+                                                    </h6>   
                                                     <p className="card-text mb-1">
                                                         <small className="text-muted">
                                                             {t('propertyDetails.units.dorms')}: {unit.bedrooms}
@@ -144,7 +142,7 @@ export default function Units({ units }: { units?: Unit[] }) {
                                                 </p>
                                                 <p className="col-6 text-muted">
                                                     <small className="text-muted">
-                                                        {t('propertyDetails.units.exterior-area')}: {unit.lot_area} m²
+                                                        {t('propertyDetails.units.exterior-area')}: {unit.exterior_area} m²
                                                     </small>
                                                 </p>
                                             </div>
@@ -161,7 +159,7 @@ export default function Units({ units }: { units?: Unit[] }) {
                                                         {t('propertyDetails.units.storage_room')}: <span className={`badge ${unit.storage_room ? 'badge-available' : 'badge-unavailable'}`}>
                                                             {unit.storage_room ? t('propertyDetails.units.is_available') : t('propertyDetails.units.is_not_available')}
                                                         </span>
-                                                    </small>
+                                                    </small>    
                                                 </p>
                                             </div>
                                         </div>
@@ -171,7 +169,7 @@ export default function Units({ units }: { units?: Unit[] }) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>      
 
             <style jsx>{`
             .table-responsive{

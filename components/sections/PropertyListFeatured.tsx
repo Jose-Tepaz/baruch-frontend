@@ -12,6 +12,7 @@ type PropertyCardProps = {
     isForRent?: string
     documentId: string
     propertyStatus: string
+    highlight?: string
     category: string
     locale: string
     isPrivate: boolean
@@ -30,7 +31,8 @@ type PropertyCardProps = {
     category,
     locale,
     isPrivate,
-    location
+    location,
+    highlight
    
   }: PropertyCardProps) {
     const { t } = useTranslation('common')
@@ -42,8 +44,6 @@ type PropertyCardProps = {
     
     // Validación de imagen
     const safeImageUrl = imageUrl && typeof imageUrl === 'string' ? imageUrl : ''
-
-   
 
     return (
       <>
@@ -60,8 +60,8 @@ type PropertyCardProps = {
         <Link href={`/property/${documentId}`} className="text-decoration-none">
           <div className="property-card property-card-hover border-0 shadow-sm  overflow-hidden d-flex flex-column justify-content-between">
             <div className="position-absolute top-0 start-0 p-3 d-flex gap-2 z-3" style={{zIndex: 10}}>
-                {propertyStatus && <span className="badge bg-light text-dark px-3 py-2">{propertyStatus}</span>}
-                {isForRent && <span className="badge bg-dark text-white px-3 py-2">{isForRent}</span>}
+                {highlight && <span className="badge bg-light text-dark px-3 py-2">{highlight}</span>}
+                
             </div>
             <div className="wrapp-img-card-properties">
             {safeImageUrl ? (
@@ -89,7 +89,7 @@ type PropertyCardProps = {
               <h3 className="title-properties text-color-white size-20">{title || 'Property'}</h3>
               <div className="d-flex justify-content-between align-items-center">
                 <span className="fw-bold fs-5">
-                  €{formattedPrice.toLocaleString('es-ES')}
+                  € {formattedPrice.toLocaleString('es-ES')}
                 
                 </span>
                 <span className="btn btn-outline-light rounded-circle p-0 border-0" style={{ width: '32px', height: '32px' }}>

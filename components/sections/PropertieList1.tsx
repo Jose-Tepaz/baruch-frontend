@@ -75,6 +75,7 @@ export default function PropertyList1({ properties }: { properties: any[] }) {
                 price={property.price}
                 imageUrl={property.image}
                 isNew={property.is_new}
+                highlight={property.highlight}
                 propertyStatus={property.propertyStatus}
                 documentId={property.documentId}
                 category={property.category}

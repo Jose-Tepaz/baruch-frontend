@@ -21,6 +21,7 @@ interface PropertyData {
   description: string
   price: number
   address: string
+  highlight: string
   main_image?: {
     url: string
   }
@@ -102,6 +103,7 @@ export function getProperties(
                 description,
                 price,
                 address,
+                highlight,
                 main_image: rawimage,
                 slug,
                 documentId,
@@ -130,12 +132,13 @@ export function getProperties(
                 address,
                 image,
                 slug,
+                highlight,
                 documentId,
                 propertyStatus,
                 category,
                 is_private,
                 location,
-                is_featured
+                is_featured 
             }
         })
 

@@ -41,6 +41,7 @@ interface Property {
     }>;
     documentId: string;
     description?: string;
+    highlight?: string;
     is_private?: boolean;
     location?: string | { name: string; slug: string };
 }
@@ -238,6 +239,7 @@ export default function PropertiesContent({
                                             propertyStatus={property.propertyStatus || property.status}
                                             isNew={property.status === 'new'}
                                             location={typeof property.location === 'string' ? property.location : property.location?.name || ''}
+                                            highlight={property.highlight}
                                         />
                                     </div>
                                 ))}

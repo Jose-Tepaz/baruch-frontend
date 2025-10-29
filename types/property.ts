@@ -14,6 +14,7 @@ export interface PropertyDetail {
     bathrooms: number;
     garages: number;
     rooms: number;
+    highlight: string;
     minPrice: number;
     maxPrice: number;
     minSize: number;
@@ -47,7 +48,8 @@ export interface PropertyListItem {
     bathrooms: number;
     garages: number;
     rooms: number;
-    minPrice: number;
+    highlight: string;
+    minPrice: number;   
     maxPrice: number;
     minSize: number;
     maxSize: number;
@@ -65,7 +67,7 @@ export interface Unit {
     bedrooms: string;
     bathrooms: string;
     built_area: string;
-    lot_area: string;
+    exterior_area: string; 
     storage_room: boolean;
     garage: boolean;
     is_available: boolean;
