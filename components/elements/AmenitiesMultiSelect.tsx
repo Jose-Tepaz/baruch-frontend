@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from "@/utils/i18n-simple";
+import { getCleanAmenityName } from "@/utils/amenity-name";
 
 interface Amenity {
   id: number;
@@ -63,7 +64,7 @@ export default function AmenitiesMultiSelect({
       return t('filters.select-option') || 'Select option';
     }
     if (selectedAmenities.length === 1) {
-      return selectedAmenities[0];
+      return getCleanAmenityName(selectedAmenities[0]);
     }
     if (selectedAmenities.length === amenities.length) {
       return t('home.all-amenities') || 'All Amenities';
@@ -156,7 +157,7 @@ export default function AmenitiesMultiSelect({
                   onChange={() => handleAmenityToggle(amenity.Name)}
                   className='filter-checkbox'
                 />
-                <span>{amenity.Name}</span>
+                <span>{getCleanAmenityName(amenity.Name)}</span>
               </label>
             </div>
           ))}
