@@ -67,7 +67,7 @@ export default function Category1({ categories }: Category1Props) {
             </div>
             <div className="section-wrapper-category">
                                 <div className="wrapper-category">
-                                    {sortedCategories.map((category: Category, index: number) => (
+                                    {sortedCategories.slice(0, 4).map((category: Category, index: number) => (
                                         <div className="card-category" key={category.slug || index}>
                                             <Link href={`/categories/${category.slug}`}>
                                                 <div className="" >
