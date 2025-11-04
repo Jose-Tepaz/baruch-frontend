@@ -14,14 +14,14 @@ type HeroProperty = {
     title: string;
     price?: number;
     image?: string;
-    location?: string | { name: string; slug: string };
+    location?: any;
     is_featured?: boolean;
     documentId?: string;
     slug?: string;
 };
 
 interface HeroHomeProps {
-    properties?: HeroProperty[];
+    properties?: HeroProperty[];    
 }
 
 // Formatea el precio con símbolo Euro por defecto
@@ -83,14 +83,15 @@ export default function HeroHome({ properties = [] }: HeroHomeProps) {
                             <div className="container" style={{ position: "relative", zIndex: 2, height: "100vh" }}>
                                 <div style={{ position: "absolute", left: 0, right: 0, bottom: 40, width: "90%", margin: "0 auto" }}>
                                     <div style={{ maxWidth: 880 }}>
-                                        {property.location && (
+                                        
                                             <div
                                                 className="subtitle-properties text-color-white mb-3"
 
                                             >
-                                                {typeof property.location === 'string' ? property.location : property.location?.name || ''}
+                                                {property.location?.name || property.location || ''}
+                                                
                                             </div>
-                                        )}
+                                        
                                         <Link href={`/property/${property.documentId || ""}`} className="text-decoration-none" style={{ color: "inherit" }}>
                                         <h3 className="title-properties text-color-white size-42">
                                                 {property.title} 

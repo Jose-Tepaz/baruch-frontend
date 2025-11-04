@@ -15,6 +15,7 @@ interface Category {
     image?: string;
 }
 
+
 interface PropertyStatus {
     id: number;
     documentId: string;

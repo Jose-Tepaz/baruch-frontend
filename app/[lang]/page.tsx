@@ -108,8 +108,12 @@ export default async function Home({ params }: Props) {
       redirect('/en');
     }
 
+    // Este bloque de código está intentando cargar datos para la página principal del sitio utilizando varias llamadas asíncronas a servicios:
+    // - Realiza múltiples consultas a la vez mediante Promise.all, trayendo propiedades, categorías, estatus de propiedades, amenidades, ubicaciones y testimoniales para el idioma seleccionado.
+    // - Si la petición de ubicaciones o testimoniales falla, simplemente asigna un array vacío para evitar que se rompa la página.
+    // - Una vez recibidos los resultados, obtiene el arreglo de propiedades desde el objeto devuelto por getProperties.
     try {
-        const [propertiesResult, categories, propertyStatuses, amenities, locations, testimonials] = await Promise.all([
+        const [propertiesResult, categories, propertyStatuses, amenities, locations] = await Promise.all([
             getProperties({ locale: lang, onlyPrivate: false }),
             getCategories(lang),
             getPropertyStatuses(lang),

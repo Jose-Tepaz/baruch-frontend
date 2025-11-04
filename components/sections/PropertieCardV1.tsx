@@ -12,7 +12,6 @@ type PropertyCardProps = {
     propertyStatus?: string,
     highlight?: string,
     documentId: string,
-
     location: string | { name: string; slug: string }
   }
   
