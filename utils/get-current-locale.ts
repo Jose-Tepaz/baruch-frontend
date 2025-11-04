@@ -71,7 +71,7 @@ export function updateCurrentLocale(newLocale: string): void {
  * Para usar en servicios que necesitan el locale actual
  */
 export function getCurrentLocale(): string {
-  return currentLocale;
+    return currentLocale;
 }
 
 /**

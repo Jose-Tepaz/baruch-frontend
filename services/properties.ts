@@ -15,7 +15,7 @@ interface StrapiMeta {
   pagination: StrapiPagination
 }
 interface PropertyStatus {
-  id: number 
+  id: number
   documentId: string
   Title: string
 }
@@ -30,7 +30,7 @@ export interface MappedProperty {
   id: number
   documentId: string
   title: string
-  description: string 
+  description: string
   price: number
   address: string
   image: string
@@ -46,7 +46,7 @@ export interface MappedProperty {
     slug: string;
   }>
 }
-    
+
 export interface PropertyListResponse {
   data: MappedProperty[]
   meta: StrapiMeta
