@@ -73,18 +73,18 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
                             <h3 className="vl-offcanvas-sm-title">Contact Us</h3>
                             <div className="space20" />
                             <span>
-                                <Link href="#">
-                                    <i className="fa-regular fa-envelope" /> +57 9954 6476
+                                <Link href="mailto:info@baruchrealestate.com">
+                                    <i className="fa-regular fa-envelope" /> info@baruchrealestate.com
+                                </Link>
+                            </span>
+                            <span>
+                                <Link href="tel:+34951651123">
+                                    <i className="fa-solid fa-phone" /> +34 951 651 123
                                 </Link>
                             </span>
                             <span>
                                 <Link href="#">
-                                    <i className="fa-solid fa-phone" /> hello@baruch.com
-                                </Link>
-                            </span>
-                            <span>
-                                <Link href="#">
-                                    <i className="fa-solid fa-location-dot" /> Bhemeara,Kushtia
+                                    <i className="fa-solid fa-location-dot" /> C. Cam. Viejo de Málaga 28, 29700 Vélez-Málaga
                                 </Link>
                             </span>
                         </div>
@@ -92,16 +92,14 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
                         <div className="vl-offcanvas-social text-color-white">
                             <h3 className="vl-offcanvas-sm-title">Follow Us</h3>
                             <div className="space20" />
-                            <Link href="#">
+                            <Link href="https://www.facebook.com/baruchrealestate.com" target="_blank">
                                 <i className="fab fa-facebook-f" />
                             </Link>
-                            <Link href="#">
-                                <i className="fab fa-twitter" />
-                            </Link>
-                            <Link href="#">
+                        
+                            <Link href="https://www.linkedin.com/company/baruch-real-estate/about" target="_blank">
                                 <i className="fab fa-linkedin-in" />
                             </Link>
-                            <Link href="#">
+                            <Link href="https://www.instagram.com/baruchrealestate" target="_blank">
                                 <i className="fab fa-instagram" />
                             </Link>
                         </div>
