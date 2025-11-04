@@ -42,13 +42,13 @@ export default function PropertyDetails({ property }) {
                         <div className="feature-item">
                             <i className="fas fa-minimize"></i>
 
-                            <span>{property.built_area ? property.built_area.toLocaleString('de-DE') : '2150'}m²  {t("propertyDetails.built_area-text")}</span>
+                            <span>{property.built_area ? property.built_area.toLocaleString('de-DE') : '2150'} m²  {t("propertyDetails.built_area-text")}</span>
 
                         </div>
                         <div className="feature-item">
 
                             <i className="fas fa-expand-arrows-alt"></i>
-                            <span>{property.lot_area ? property.lot_area.toLocaleString('de-DE') : '2150'}m² {t("propertyDetails.lot_area-text")}</span>
+                            <span>{property.lot_area ? property.lot_area.toLocaleString('de-DE') : '2150'} m² {t("propertyDetails.lot_area-text")}</span>
 
                         </div>
                         <div className="feature-item">
@@ -67,7 +67,7 @@ export default function PropertyDetails({ property }) {
                         
                         {property.estimated_completion && 
                         <div className="feature-item">
-                            <i className="fas fa-calendar"></i>
+                            <i className="fas fa-flag-checkered"></i>
                             <span>{property.estimated_completion} {t("propertyDetails.estimated_completion-text")}</span>
                         </div>} 
                     </div>

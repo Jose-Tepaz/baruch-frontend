@@ -1,7 +1,7 @@
 // Configuración de WhatsApp
 export const WHATSAPP_CONFIG = {
   // Número de teléfono de WhatsApp (sin espacios ni caracteres especiales)
-  phoneNumber: '+34628621130', // Número real de la empresa
+  phoneNumber: '+34951651123', // Número real de la empresa
   
   // Nota: Los mensajes ahora se manejan a través del sistema de traducciones
   // en los archivos de idiomas (/public/locales/{idioma}/common.json)

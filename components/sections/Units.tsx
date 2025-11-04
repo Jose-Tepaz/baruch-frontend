@@ -11,15 +11,7 @@ export default function Units({ units }: { units?: Unit[] }) {
     if (!units || !Array.isArray(units) || units.length === 0) {
         return (
             <div className="units-section">
-                <div className="container-fluid">
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="text-center py-4">
-                                <p className="text-muted">{t('propertyDetails.units.no-units')}</p>
-                            </div>  
-                        </div>
-                    </div>
-                </div>
+               
             </div>
         );
     }

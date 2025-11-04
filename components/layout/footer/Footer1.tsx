@@ -84,28 +84,43 @@ export default function Footer1() {
                             <div className="row">
                                 <div className="col-lg-3 col-md-6">
                                     <div className="footer-time-area">
-                                        <img src={logoWhite.src} alt="housa" />
+                                        <img style={{ width: '200px', height: 'auto ' }} src={logoWhite.src} alt="housa" />
                                         <div className="space24" />
                                         <p className="text-white">{t('footer.description-footer')}</p>
+                                        <div className="space16" />
+                                        <div className="d-flex flex-row align-items-center text-color-white no-wrap" >
+                                            <span className="me-2 w-auto"><i className="fa-solid fa-location-dot" /></span>
+                                            <p className="text-white">
+                                            C. Cam. Viejo de Málaga 28, 29700 Vélez-Málaga
+                                            </p>
+                                        </div>
+                                        <div className="space16" />
+                                        <Link href="mailto:info@baruchrealestate.com" className="d-flex flex-row align-items-center text-color-white no-wrap" >
+                                            <span className="me-2 w-auto"><i className="fa-solid fa-envelope" /></span>
+                                            <p className="text-white">
+                                            info@baruchrealestate.com
+                                            </p>
+                                        </Link>
+
                                         <div className="space32" />
                                         <ul>
                                             <li>
-                                                <Link href="#">
+                                                <Link href="https://www.facebook.com/baruchrealestate.com" target="_blank">
                                                     <i className="fa-brands fa-facebook-f" />
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="#">
+                                                <Link href="https://www.linkedin.com/company/baruch-real-estate/about" target="_blank">
                                                     <i className="fa-brands fa-linkedin-in" />
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="#">
+                                                <Link href="https://www.instagram.com/baruchrealestate" target="_blank">
                                                     <i className="fa-brands fa-instagram" />
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link href="#">
+                                                <Link href="" style={{ pointerEvents: 'none', cursor: 'not-allowed' }}>
                                                     <i className="fa-brands fa-youtube" />
                                                 </Link>
                                             </li>

@@ -12,7 +12,7 @@ interface WhatsAppButtonProps {
 }
 
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
-  phoneNumber = '+1234567890', // Número por defecto, debería ser configurado
+  phoneNumber = '+34951651123', // Número por defecto, debería ser configurado
   message,
   className = ''
 }) => {
