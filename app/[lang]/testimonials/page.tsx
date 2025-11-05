@@ -22,7 +22,14 @@ interface Props {
 export default async function TestimonialsPage({ params, searchParams }: Props) {
   const { lang } = await params;
   const { page } = await searchParams;
-  const testimonials: Testimonial[] = await getTestimonials(lang);
+  
+  let testimonials: Testimonial[] = [];
+  try {
+    // Forzar testimoniales en inglés, independientemente del idioma seleccionado
+    testimonials = await getTestimonials('en');
+  } catch (error) {
+    console.error('Error loading testimonials:', error);
+  }
   
   return (
     <Layout>
