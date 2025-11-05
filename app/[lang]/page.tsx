@@ -137,9 +137,10 @@ export default async function Home({ params }: Props) {
                 />
                 <About2  />
                 <PropertyList1 properties={properties || []} />
-                <Category1 categories={categories || []} />
+                
                 
                 <img className="img-landscape" src={imgLandscape.src} alt="baruch" style={{width: '100%', height: 'auto'}} />
+                <Category1 categories={categories || []} />
                   <About3  />
                 
             </Layout>
@@ -158,9 +159,10 @@ export default async function Home({ params }: Props) {
                 />
                 <About2  />
                 <PropertyList1 properties={[]} />
-                <Category1 categories={[]} />
+                
                 
                 <img className="img-landscape" src={imgLandscape.src} alt="baruch"  />
+                <Category1 categories={[]} />
                 <About3  />
                 
             </Layout>

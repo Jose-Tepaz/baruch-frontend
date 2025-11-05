@@ -19,7 +19,7 @@
         "title-cta": "Let's Make Your Dream a Reality",
         "description-cta": "Don’t wait to start your real estate journey. Whether you’re buying, selling, or renting, our expert team is here to guide you every step of the way. Let’s turn your vision into reality with personalized service and a seamless experience.",
         "btn-cta": "Start Your Search Today",
-        "description-footer": "We are committed to making your real estate journey seamless and stress-free. Whether you’re buying, selling, or renting every step the way.",
+        "description-footer": "We make your real estate journey smooth and worry-free. Whether you’re buying, selling, or need legal support – our team is here to guide you every step of the way.",
         "head-title-1": "Menu",
         "head-title-2": "Property Types",
         "head-title-3": "Popular Locations",
@@ -164,6 +164,8 @@
         "card-3": "Renting Property",
         "card-3-description": "Finding the right rental property is easy with Housebox. Whether you're seeking a cozy apartment spacious.",
         "btn-text": "Request quote",
+        "property-services": "Property services",
+        "property-services-description": "By combining these services with our real estate expertise, we make the entire process of buying, owning, and living in Spain more transparent and less stressful. We always try to support you, even long after the purchase has been completed.",
         "modal": {
             "main-title": "THE SERVICES WE OFFER",
             "subtitle": "We are passionate about simplifying the real estate process in Spain. With a deep understanding of the housing market in Spain and a client-first approach, we strive to help buyers, sellers, and renters achieve their property goals.",
@@ -178,7 +180,7 @@
                 "detail4": "Renewals and documentation updates"
             },
             "finance": {
-                "title": "Finance / Mortgage",
+                "title": "Finance/Mortgage",
                 "description": "We help you find the best mortgage financing options for your property. We work with leading financial institutions to secure the most favorable conditions.",
                 "detail1": "Analysis of your financing capacity",
                 "detail2": "Comparison of offers from multiple banks",

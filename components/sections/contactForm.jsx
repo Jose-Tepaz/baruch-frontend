@@ -315,7 +315,7 @@ export default function ContactForm() {
             <div style={{ borderTop: '1px solid #000' }}></div>
             <div className="space16" />
             <div className="d-flex flex-column justify-content-center align-items-center">
-              <h2 className="text-color-black size-16">OR</h2>
+              <p className="text-color-black size-16">{t('contact-form.separator')}</p>
               <div className="space16" />
               <button className="vl-btn1" style={{ width: '100%', backgroundColor: '#25D366', color: '#fff' }} onClick={() => window.open('https://wa.me/34951651123', '_blank')}>
                 <i className="fa-brands fa-whatsapp" style={{ marginRight: '10px' }} />

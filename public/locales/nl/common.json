@@ -150,13 +150,15 @@
     "card-3": "Woning huren",
     "card-3-description": "De juiste huurwoning vinden is eenvoudig met Housebox. Of je nu op zoek bent naar een knus appartement of een ruim huis.",
     "btn-text": "Offerte aanvragen",
+    "property-services": "Vastgoeddiensten",
+    "property-services-description": "Door deze diensten te combineren met onze vastgoedexpertise, maken we het hele proces van kopen, bezitten en wonen in Spanje transparanter en minder stressvol. We proberen je altijd te ondersteunen, zelfs na de aankoop.",
     "modal": {
       "main-title": "ONZE DIENSTEN",
-      "subtitle": "Wij zijn gepassioneerd over het vereenvoudigen van het aankoopproces in Spanje. Met een diepgaand begrip van de woningmarkt en een klantgerichte aanpak helpen we kopers, verkopers en huurders hun vastgoeddoelen te bereiken.",
+      "subtitle": "Wij zijn gepassioneerd over het vereenvoudigen van het vastgoedproces in Spanje. Met een diepgaand begrip van de woningmarkt en een klantgerichte aanpak helpen we kopers, verkopers en huurders hun vastgoeddoelen te bereiken. We proberen je altijd te ondersteunen, zelfs na de aankoop.",
       "what-we-offer": "Wat wij bieden:",
       "btn-text": "Offerte aanvragen",
       "nie": {
-        "title": "NIE/verblijfsvergunning",
+        "title": "NIE/Residency",
         "description": "Wij begeleiden je bij het volledige proces van het verkrijgen van je NIE (buitenlandersidentificatienummer) en verblijf in Spanje. Ons team helpt je met alle benodigde documentatie en administratieve procedures.",
         "detail1": "Volledig advies over vereiste documenten",
         "detail2": "Afspraakbeheer bij immigratiekantoor",
@@ -164,7 +166,7 @@
         "detail4": "Vernieuwingen en updates van documentatie"
       },
       "finance": {
-        "title": "financiering / hypotheek",
+        "title": "Financiering/Hypotheken",
         "description": "Wij helpen je bij het vinden van de beste hypotheekopties voor jouw woning. We werken samen met vooraanstaande financiële instellingen om de gunstigste voorwaarden te krijgen.",
         "detail1": "Analyse van jouw financieringscapaciteit",
         "detail2": "Vergelijking van aanbiedingen van verschillende banken",
@@ -172,7 +174,7 @@
         "detail4": "Begeleiding gedurende het goedkeuringsproces"
       },
       "insurance": {
-        "title": "verzekering",
+        "title": "Verzekering",
         "description": "Wij bieden uitgebreide verzekeringsoplossingen om jouw vastgoedinvestering te beschermen. Van opstalverzekering tot levens- en zorgverzekeringen.",
         "detail1": "Opstal- en inboedelverzekering",
         "detail2": "Levens- en zorgverzekering",
@@ -180,7 +182,7 @@
         "detail4": "Schadeafhandeling en verlengingen"
       },
       "tax": {
-        "title": "belastingaangiftes",
+        "title": "Belastingaangiftes",
         "description": "Ons team van belastingexperts verzorgt al jouw fiscale verplichtingen in Spanje en zorgt voor naleving van alle actuele regelgeving.",
         "detail1": "Jaarlijkse aangifte inkomstenbelasting",
         "detail2": "Vastgoedbelastingen (IBI, vermogenswinstbelasting)",
@@ -188,7 +190,7 @@
         "detail4": "Wettelijke fiscale optimalisatie"
       },
       "legal": {
-        "title": "juridische diensten",
+        "title": "Juridische Diensten",
         "description": "Wij hebben een juridisch team dat gespecialiseerd is in vastgoedrecht en je bijstaat bij alle juridische aspecten van je vastgoedtransactie.",
         "detail1": "Controle van koopovereenkomsten",
         "detail2": "Due diligence van onroerend goed",
@@ -196,7 +198,7 @@
         "detail4": "Oplossen van geschillen en rechtszaken"
       },
       "management": {
-        "title": "Vastgoedbeheer",
+        "title": "Vastgoedbeheerder",
         "description": "Wij beheren jouw woning volledig, van onderhoud tot huurdersbeheer, zodat je zorgeloos kunt genieten van je investering.",
         "detail1": "Zoeken en selecteren van huurders",
         "detail2": "Onderhoud en reparaties",
@@ -279,8 +281,8 @@
   },
   "contact-form": {
     "subtitle": "Klaar voor de volgende stap? ",
-    "title": "Laten we verbinden ",
-    "description": "We zullen graag je helpen en het proces zo soepel mogelijk maken.",
+    "title": "Neem contact met ons op",
+    "description": "We helpen graag om het proces soepel en transparant mogelijk te maken.",
     "btn_text": "Contacteer ons",
     "input-name": "Naam en achternaam",
     "input-email": "E-mailadres",

@@ -10,16 +10,16 @@
         "login-btn": "Login",
         "logout-btn": "Cerrar Sesión",
         "btn-private-properties": "Propiedades",
-        "testimonials": "Testimonios",
+        "testimonials": "Opiniones de clientes",
         "magazine": "Magazine",
         "btn-header-1": "Vender tu Propiedad"
     },
 
 "footer": {
-    "title-cta": "Hagamos tu sueño realidad",
-        "description-cta": "No esperes a empezar tu viaje inmobiliario. Ya sea que estés comprando, vendiendo o alquilando, nuestro equipo de expertos está aquí para guiarte en cada paso del camino. Vamos a convertir tu visión en realidad con un servicio personalizado y una experiencia sin complicaciones.",
+    "title-cta": "Convirtamos tu visión en realidad",
+        "description-cta": "No esperes para dar el siguiente paso en tu viaje inmobiliario. Ya sea que busques comprar, vender o invertir, nuestro equipo de expertos está aquí para acompañarte en cada etapa del proceso. En Baruch Real Estate transformamos tu visión en realidad con un servicio personalizado, transparente y sin complicaciones.",
         "btn-cta": "Comienza tu búsqueda hoy",
-        "description-footer": "Nos comprometemos a hacer tu viaje inmobiliario sin complicaciones y sin estrés. Ya sea que estés comprando, vendiendo o alquilando, estamos aquí para ayudarte en cada paso del camino.",
+        "description-footer": "Nos encargamos de que su experiencia inmobiliaria sea sencilla y sin preocupaciones. Ya sea que compre, venda o necesite asesoramiento legal, le acompañamos en todo momento.",
         "head-title-1": "Menú",
         "head-title-2": "Tipos de Propiedades",
         "head-title-3": "Ubicaciones Populares",
@@ -74,11 +74,11 @@
         "title-about-us": "Acerca de la Empresa",
         "title-2-about-us": "Estamos aquí para ayudarte",
         "title-3-about-us": "Encuentra tu casa soñada en España",
-        "paragraph-about-us": "Estamos apasionados por simplificar la experiencia inmobiliaria. Con un profundo conocimiento del mercado inmobiliario y un enfoque centrado en el cliente, fortalecemos a compradores, vendedores y arrendatarios para avanzar con confianza. Nuestro equipo de profesionales experimentados está dedicado a ofrecer un servicio personalizado, transparencia y asesoría experta.",
+        "paragraph-about-us": "En Baruch Real Estate, estamos dedicados a simplificar la búsqueda de tu hogar ideal en España. \n\nCon una profunda comprensión del mercado inmobiliario y una perspectiva internacional, acompañamos a compradores, vendedores e inversores en cada paso del proceso con transparencia, profesionalismo y atención personalizada. Nuestro equipo combina experiencia local y visión global para ofrecerte una asesoría experta y una experiencia inmobiliaria fluida, segura y sin estrés.",
         "subtitle-list-properties": "Propiedades",
         "title-list-properties": "Descubre Nuestras Últimas Propiedades",
         "subtitle-category": "Category",
-        "title-category": "Selecciona la Casa que Te Encaja",
+        "title-category": "Encuentra la propiedad que encaja contigo",
         "btn-about-section-2": "Más información",
         "subtitle-testimonials-1": "Testimonios",
         "title-testimonials": "Lo Que Nuestros Clientes Dicen",
@@ -87,7 +87,7 @@
         "list1-why-choose-us": "Agentes Expertos",
         "list2-choose-us": "Listados Extensos",
         "list3-why-choose-us": "Satisfacción del Cliente",
-        "paragraph-why-choose-us": "En Baruch Real Estate, creemos que encontrar un hogar es mucho más que conseguir un techo sobre tu cabeza: se trata de descubrir un lugar que encaje perfectamente con tu estilo de vida. Nuestro equipo de expertos, los listados extensos y nuestro compromiso con la satisfacción del cliente nos distinguen para ofrecerte una experiencia inmobiliaria sin complicaciones."
+        "paragraph-why-choose-us": "En Baruch Real Estate entendemos que un hogar no es solo un lugar donde vivir, sino una expresión de tu estilo de vida. Por eso, combinamos una visión internacional con un conocimiento profundo del mercado local para ofrecerte un servicio inmobiliario excepcional. Nuestra selección exclusiva de propiedades, junto con un acompañamiento personalizado y transparente, hacen de Baruch el socio ideal para quienes buscan invertir, vivir o disfrutar del auténtico encanto de la Costa del Sol."
     },
 
     "buttons": {
@@ -162,6 +162,8 @@
         "card-3": "Alquilar Propiedad",
         "card-3-description": "Encontrar la propiedad de alquiler correcta es fácil con Housebox. Ya sea que busques un apartamento acogedor o un hogar amplio.",
         "btn-text": "Solicitar cotización",
+        "property-services": "Servicios Inmobiliarios",
+        "property-services-description": "Al combinar estos servicios con nuestra experiencia en el mercado inmobiliario, hacemos que todo el proceso de comprar, poseer y vivir en España sea más transparente y sin estrés. \n\nNos comprometemos a acompañarte en cada etapa y a seguir ofreciéndote apoyo incluso mucho después de que la compra haya sido completada.",
         "modal": {
             "main-title": "LOS SERVICIOS QUE OFRECEMOS",
             "subtitle": "Estamos apasionados por simplificar el mercado inmobiliario en España. Con un profundo conocimiento del mercado de vivienda en España y un enfoque centrado en el cliente, nos esforzamos por ayudar a compradores, vendedores e inquilinos a alcanzar sus objetivos inmobiliarios.",
@@ -176,7 +178,7 @@
                 "detail4": "Renovaciones y actualizaciones de documentación"
             },
             "finance": {
-                "title": "Financiación / Hipoteca",
+                "title": "Financiación/Hipoteca",
                 "description": "Te ayudamos a encontrar las mejores opciones de financiación hipotecaria para tu propiedad. Trabajamos con las principales entidades financieras para conseguir las condiciones más favorables.",
                 "detail1": "Análisis de tu capacidad de financiación",
                 "detail2": "Comparación de ofertas de múltiples bancos",
@@ -305,26 +307,26 @@
             "description": "Estamos aquí para ayudarte en cada paso del camino en encontrar tu casa soñada en España. No te preocupes por nada, contáctanos en cualquier momento sin obligaciones ni presión. Utiliza el formulario de contacto abajo para comunicarte con nosotros, y te responderemos lo antes posible."
         },
         "title": "Contactanos",
-        "description": "Estamos aquí para ayudarte en cada paso del camino en encontrar tu casa soñada en España. No te preocupes por nada, contáctanos en cualquier momento sin obligaciones ni presión. Utiliza el formulario de contacto abajo para comunicarte con nosotros, y te responderemos lo antes posible.",
-        "btn_text": "sobre nosotros"
+        "description": "Te invitamos a visitarnos en nuestra oficina de Málaga para una reunión personal, o, si lo prefieres, estaremos encantados de acompañarte a una visita de propiedad. \n\nTanto si tienes preguntas sobre la compra, la venta, la financiación o la residencia, nuestro equipo está listo para ayudarte. \n\nHablamos neerlandés, inglés y español, para que disfrutes de una comunicación clara y un acompañamiento completo durante todo el proceso."
     },
     "contact-form": {
-            "subtitle": "¿Listo para el siguiente paso? ",
-        "title": "Conectemos ",  
-        "description": "Te ayudaremos a guiarte y hacer el proceso lo más suave posible.",
+            "subtitle": "",
+        "title": "¿Listo para dar el siguiente paso?",  
+        "description": "Conectemos y hagamos tu proceso inmobiliario más fácil y sin complicaciones. Nuestro equipo está aquí para guiarte y resolver tus dudas en cada etapa.",
         "btn_text": "Contactanos",
-        "input-name": "Nombre",
+        "input-name": "Nombre completo",
         "input-email": "Correo Electrónico",
         "input-phone": "Teléfono",
         "input-city": "Ciudad",
-        "input-preferred_contact_moment": "Momento de Contacto Preferido",
+        "input-preferred_contact_moment": "MMomento ideal para contactarte",
         "input-message": "Mensaje",
-        "input-submit-now": "Enviar Ahora", 
+        "input-submit-now": "Enviar mensaj", 
         "error-message": "Error al enviar el mensaje",
         "success-message": "Mensaje enviado exitosamente!",
         "submitting": "Enviando...",
-        "privacy-statement": "Estoy de acuerdo con la política de privacidad de Baruch Real Estate",
-        "input-click-to-whatsapp": "Click para WhatsApp"
+        "separator": "O contáctanos directamente por WhatsApp",
+        "privacy-statement": "Acepto la política de privacidad de Baruch Real Estate",
+        "input-click-to-whatsapp": "Click para hablar por WhatsApp"
     },
     "testimonials": {
         "title": "Testimonios",

@@ -8,11 +8,12 @@ import { Metadata } from 'next';
 import ContactForm from "@/components/sections/contactForm";
 import Link from "next/link";
 import ContactSectionServices from "@/components/sections/ContactSectionServices";
+import ContactModuleServices from "@/components/sections/ContactModuleServices";
 
 interface ServicesPageProps {
-    params: Promise<{
-        lang: string;
-    }>;
+  params: Promise<{
+    lang: string;
+  }>;
 }
 
 export async function generateMetadata({ params }: ServicesPageProps): Promise<Metadata> {
@@ -76,40 +77,18 @@ export async function generateMetadata({ params }: ServicesPageProps): Promise<M
 }
 
 export default async function ServicesPage({ params }: ServicesPageProps) {
-    const { lang } = await params;
-    return (
-        <>
-            <Layout>
-                <ServicesWithModal />
-                
-               
-                <div className="space30"></div>
-                <div className="">
-                <div className="padding-global" id="contact-form">
-                  <div className="container-large">
-                    <div className="row gap-4 align-items-start justify-content-between">
-                      <div className="col-lg-6  justify-content-center  align-items-start d-flex flex-column">
-                        <div className="space30"></div>
-                        <img src="/assets/img/all-images/service/entrance.webp" className="img-from-services" alt="Property services entrance" />
-                        <div className="space30"></div>
-                        <h2 className="text-color-black text-size-32">Property services</h2>
-                        <div className="space16"></div>
-                        <p className="text-color-black text-size-medium">By combining these services with our real estate expertise, we make the entire process of buying, owning, and living in Spain more transparent and less stressful. We always try to support you, even long after the purchase has been completed.</p>
-                        <div className="space30"></div>
-                        
-                      </div>
-                      <div className="col-lg-5 m-auto d-flex" style={{marginLeft: 'auto'}}>
-                        
+  const { lang } = await params;
+  return (
+    <>
+      <Layout>
+        <ServicesWithModal />
 
-                        <ContactSectionServices />
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
-                </div>
-                
-            </Layout>
-        </>
-    );
+        <div className="space30"></div>
+        <div className="">
+            <ContactModuleServices />
+        </div>
+      </Layout>
+    </>
+  );
 }

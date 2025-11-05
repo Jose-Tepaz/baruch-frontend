@@ -10,7 +10,7 @@
         "login-btn": "Anmelden",
         "logout-btn": "Abmelden",
         "btn-private-properties": "Eigenschaften",
-        "testimonials": "Testimonials",
+        "testimonials": "Kundenbewertungen",
         "magazine": "Magazin",
         "btn-header-1": "Eigentum verkaufen"
     },
@@ -18,7 +18,7 @@
         "title-cta": "Lass uns dein Traum wahr werden",
         "description-cta": "Don’t wait to start your real estate journey. Whether you’re buying, selling, or renting, our expert team is here to guide you every step of the way. Let’s turn your vision into reality with personalized service and a seamless experience.",
         "btn-cta": "Starte deine Suche heute",
-        "description-footer": "Wir sind dafür verpflichtet, deine Immobilienreise nahtlos und stressfrei zu gestalten. Ob du kaufst, verkaufst oder mietest, wir sind hier, um dich bei jedem Schritt zu unterstützen.",
+        "description-footer": "Wir gestalten Ihren Immobilienweg einfach und stressfrei. Egal, ob Sie kaufen, verkaufen oder rechtliche Unterstützung benötigen – wir stehen Ihnen bei jedem Schritt zur Seite.",
         "head-title-1": "Menü",
         "head-title-2": "Eigenschaften",
         "head-title-3": "Beliebte Standorte",
@@ -157,12 +157,14 @@
         "card-3": "Eigentum mieten",
         "card-3-description": "Das Finden des richtigen Mietobjekts ist mit Housebox einfach. Egal, ob Sie nach einem gemütlichen Appartment oder einem großzügigen Haus suchen.",
         "btn-text": "Anfrage stellen",
+        "property-services": "Immobiliendienstleistungen",
+        "property-services-description": "Durch die Kombination dieser Dienstleistungen mit unserer Immobilienexpertise gestalten wir den gesamten Prozess des Kaufs, Besitzes und Lebens in Spanien transparenter und stressfreier. Wir bemühen uns stets, Sie zu unterstützen – auch lange nach dem Abschluss des Kaufs.",
         "modal": {
             "main-title": "DIE DIENSTLEISTUNGEN, DIE WIR ANBIETEN",
             "subtitle": "Wir sind leidenschaftlich daran interessiert, den Immobilienprozess in Spanien zu vereinfachen. Mit einem tiefen Verständnis des Wohnungsmarktes in Spanien und einem kundenorientierten Ansatz bemühen wir uns, Käufern, Verkäufern und Mietern zu helfen, ihre Immobilienziele zu erreichen.",
             "what-we-offer": "Was wir anbieten:",
             "nie": {
-                "title": "NIE/residency",
+                "title": "NIE/Residency",
                 "description": "Wir erleichtern den gesamten Prozess der Erlangung Ihrer NIE (Ausländeridentifikationsnummer) und Ihres Wohnsitzes in Spanien. Unser Team führt Sie durch alle erforderlichen Unterlagen und Verwaltungsverfahren.",
                 "detail1": "Vollständige Beratung zu erforderlichen Unterlagen",
                 "detail2": "Verwaltung von Terminen bei Ausländerbehörden",
@@ -170,7 +172,7 @@
                 "detail4": "Erneuerungen und Aktualisierungen der Unterlagen"
             },
             "finance": {
-                "title": "finance / mortgage",
+                "title": "Finanzierung/Hypotheken",
                 "description": "Wir helfen Ihnen, die besten Hypothekenfinanzierungsoptionen für Ihre Immobilie zu finden. Wir arbeiten mit führenden Finanzinstituten zusammen, um die günstigsten Konditionen zu sichern.",
                 "detail1": "Analyse Ihrer Finanzierungskapazität",
                 "detail2": "Vergleich von Angeboten mehrerer Banken",
@@ -178,7 +180,7 @@
                 "detail4": "Beratung während des gesamten Genehmigungsprozesses"
             },
             "insurance": {
-                "title": "insurance",
+                "title": "Versicherung",
                 "description": "Wir bieten umfassende Versicherungslösungen zum Schutz Ihrer Immobilieninvestition. Von Hausversicherung bis Lebens- und Krankenversicherung.",
                 "detail1": "Immobilien- und Inhaltsversicherung",
                 "detail2": "Lebens- und Krankenversicherung",
@@ -186,7 +188,7 @@
                 "detail4": "Schadensmanagement und Erneuerungen"
             },
             "tax": {
-                "title": "tax returns",
+                "title": "Steuererklärung",
                 "description": "Unser Team von Steuerexperten kümmert sich um alle Ihre Steuerpflichten in Spanien und stellt die Einhaltung aller aktuellen Vorschriften sicher.",
                 "detail1": "Jährliche Einkommensteuererklärung",
                 "detail2": "Grundsteuern (IBI, Wertzuwachssteuer)",
@@ -194,7 +196,7 @@
                 "detail4": "Legale Steueroptimierung"
             },
             "legal": {
-                "title": "legal services",
+                "title": "Rechtsbeistand",
                 "description": "Wir haben ein auf Immobilienrecht spezialisiertes Rechtsteam, das Sie in allen rechtlichen Aspekten Ihrer Immobilientransaktion unterstützt.",
                 "detail1": "Überprüfung von Kaufverträgen",
                 "detail2": "Due Diligence von Immobilien",
@@ -202,7 +204,7 @@
                 "detail4": "Streitbeilegung und Rechtsstreitigkeiten"
             },
             "management": {
-                "title": "Property Management",
+                "title": "Immobilienverwaltung",
                 "description": "Wir verwalten Ihre Immobilie umfassend, von der Wartung bis zur Mieterverwaltung, damit Sie Ihre Investition sorgenfrei genießen können.",
                 "detail1": "Mietersuche und -auswahl",
                 "detail2": "Wartung und Reparaturen",

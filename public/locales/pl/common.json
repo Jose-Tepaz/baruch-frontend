@@ -10,7 +10,7 @@
       "login-btn": "Zaloguj się",
       "logout-btn": "Wyloguj się",
       "btn-private-properties": "Nieruchomości",
-      "testimonials": "Opinie",
+      "testimonials": "Opinie klientów",
       "magazine": "Magazine",
       "btn-header-1": "Sprzedaż nieruchomości"
       
@@ -159,13 +159,15 @@
         "card-3": "Wynajem nieruchomości",
         "card-3-description": "Znalezienie odpowiedniej nieruchomości na wynajem jest proste z Housebox. Niezależnie, czy szukasz przytulnego apartamentu, czy przestronnego domu.",
         "btn-text": "Poproś o wycenę",
+        "property-services": "Usługi nieruchomości",
+        "property-services-description": "Łącząc te usługi z naszą ekspertyzą w nieruchomościach, sprawiamy, że cały proces kupowania, posiadania i życia w Hiszpanii jest bardziej przejrzysty i mniej stresujący. Zawsze staramy się Cię wspierać, nawet po zakupie.",
         "modal": {
             "main-title": "USŁUGI, KTÓRE OFERUJEMY",
             "subtitle": "Z pasją upraszczamy proces nieruchomości w Hiszpanii. Dzięki głębokiej znajomości rynku i podejściu zorientowanemu na klienta pomagamy kupującym, sprzedającym i najemcom realizować ich cele.",
             "what-we-offer": "Co oferujemy:",
             "btn-text": "Poproś o wycenę",
             "nie": {
-                "title": "NIE/rezydencja",
+                "title": "NIE/Rezydencja",
                 "description": "Ułatwiamy cały proces uzyskania Twojego NIE (Numer Identyfikacji Cudzoziemca) oraz rezydencji w Hiszpanii. Poprowadzimy Cię przez wszystkie dokumenty i procedury administracyjne.",
                 "detail1": "Kompleksowe doradztwo dotyczące wymaganych dokumentów",
                 "detail2": "Umawianie wizyt w urzędach imigracyjnych",
@@ -173,7 +175,7 @@
                 "detail4": "Odnowienia i aktualizacje dokumentów"
             },
             "finance": {
-                "title": "finansowanie / kredyt hipoteczny",
+                "title": "Finansowanie/Kredyt hipoteczny",
                 "description": "Pomagamy znaleźć najlepsze opcje finansowania dla Twojej nieruchomości. Współpracujemy z czołowymi instytucjami finansowymi, aby zapewnić najkorzystniejsze warunki.",
                 "detail1": "Analiza Twojej zdolności kredytowej",
                 "detail2": "Porównanie ofert wielu banków",
@@ -181,7 +183,7 @@
                 "detail4": "Opieka na każdym etapie zatwierdzenia kredytu"
             },
             "insurance": {
-                "title": "ubezpieczenia",
+                "title": "Ubezpieczenia",
                 "description": "Oferujemy kompleksowe rozwiązania ubezpieczeniowe, by chronić Twoje inwestycje. Od ubezpieczeń nieruchomości po ubezpieczenie na życie i zdrowotne.",
                 "detail1": "Ubezpieczenie nieruchomości i ruchomości",
                 "detail2": "Ubezpieczenie na życie i zdrowotne",
@@ -189,7 +191,7 @@
                 "detail4": "Obsługa zgłoszeń i odnowień ubezpieczeń"
             },
             "tax": {
-                "title": "rozliczenia podatkowe",
+                "title": "Rozliczenia podatkowe",
                 "description": "Nasz zespół ekspertów podatkowych zajmie się wszystkimi Twoimi zobowiązaniami podatkowymi w Hiszpanii, dbając o zgodność z aktualnymi przepisami.",
                 "detail1": "Roczne zeznania podatkowe",
                 "detail2": "Podatki od nieruchomości (IBI, podatek od zysków kapitałowych)",
@@ -197,7 +199,7 @@
                 "detail4": "Legalna optymalizacja podatkowa"
             },
             "legal": {
-                "title": "usługi prawne",
+                "title": "Usługi prawne",
                 "description": "Nasz zespół prawników specjalizujących się w prawie nieruchomości wesprze Cię we wszystkich formalnościach związanych z transakcją.",
                 "detail1": "Weryfikacja umów kupna-sprzedaży",
                 "detail2": "Due diligence nieruchomości",
@@ -205,7 +207,7 @@
                 "detail4": "Rozwiązywanie sporów i postępowania sądowe"
             },
             "management": {
-                "title": "Zarządzanie nieruchomościami",
+                "title": "Zarządzanie nieruchomością",
                 "description": "Kompleksowo zarządzamy Twoją nieruchomością – od konserwacji po obsługę najemców, abyś mógł cieszyć się swoją inwestycją bez zmartwień.",
                 "detail1": "Poszukiwanie i selekcja najemców",
                 "detail2": "Konserwacja i naprawy",

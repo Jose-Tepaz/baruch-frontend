@@ -10,7 +10,7 @@
       "login-btn": "Logga in",
       "logout-btn": "Logga ut",
       "btn-private-properties": "Fastigheter",
-      "testimonials": "Omdömen",
+      "testimonials": "Kundomdömen",
       "magazine": "Magazine",
       "btn-header-1": "Sälja din fastighet"
   },
@@ -151,6 +151,8 @@
     "card-2-description": "Att sälja din bostad behöver inte vara överväldigande. Med Baruch ser våra engagerade experter till att processen blir smidig.",
     "card-3": "Hyra fastighet",
     "card-3-description": "Att hitta rätt hyresbostad är enkelt med Housebox. Oavsett om du söker en mysig lägenhet eller ett större hem hjälper vi dig.",
+    "property-services": "Fastighetstjänster",  
+    "property-services-description": "Genom att kombinera dessa tjänster med vår fastighetsexpertis gör vi hela processen för att köpa, äga och leva i Spanien mer transparent och mindre stressig. Vi försöker alltid stötta dig, även länge efter köpet har slutförts.",
     "modal": {
         "main-title": "TJÄNSTER VI ERBJUDER",
         "subtitle": "Vi brinner för att göra fastighetsprocessen i Spanien så enkel som möjligt. Med djup förståelse för den spanska bostadsmarknaden och ett kundfokuserat synsätt hjälper vi köpare, säljare och hyresgäster att nå sina fastighetsmål.",
@@ -165,7 +167,7 @@
             "detail4": "Förnyelser och uppdateringar av dokumentation"
         },
         "finance": {
-            "title": "Finansiering / bolån",
+            "title": "Finansiering/Hypotek",
             "description": "Vi hjälper dig att hitta de bästa finansieringsalternativen för din fastighet. Vi samarbetar med ledande banker för att ge dig de mest fördelaktiga villkoren.",
             "detail1": "Analys av din finansieringsförmåga",
             "detail2": "Jämförelse av erbjudanden från flera banker",
@@ -181,7 +183,7 @@
             "detail4": "Hantera skadeanmälningar och förnyelser"
         },
         "tax": {
-            "title": "Skattedeklaration",
+            "title": "Skatte Deklaration",
             "description": "Vårt team av skattexperter hanterar alla dina skatteåtaganden i Spanien och säkerställer att allt är i enlighet med gällande lagar.",
             "detail1": "Årlig inkomstdeklaration",
             "detail2": "Fastighetsskatter (IBI, reavinstskatt)",
@@ -189,7 +191,7 @@
             "detail4": "Legal skatteoptimering"
         },
         "legal": {
-            "title": "Juridiska tjänster",
+            "title": "Juridiska Tjänster",
             "description": "Vi har en juridisk avdelning specialiserad på fastighetsrätt som hjälper dig med alla juridiska aspekter av din fastighetsaffär.",
             "detail1": "Granskning av köpeavtal",
             "detail2": "Due diligence av fastigheter",
@@ -197,7 +199,7 @@
             "detail4": "Tvistlösning och rättstvister"
         },
         "management": {
-            "title": "Fastighetsförvaltning",
+            "title": "Fastighetsförvaltningen",
             "description": "Vi erbjuder helhetsförvaltning av din fastighet, från underhåll till hyresgästadministration, så att du kan njuta av din investering utan bekymmer.",
             "detail1": "Sökning och val av hyresgäster",
             "detail2": "Underhåll och reparationer",
