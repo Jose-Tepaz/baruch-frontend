@@ -321,7 +321,7 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                                                         <div className="form-check">
                                                             <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" required />
                                                             <label className="form-check-label" htmlFor="flexCheckDefault">
-                                                                I agree with the privacy statement of Baruch Real Estate
+                                                             {t("contact-form.privacy-statement")}
                                                             </label>
                                                         </div>
                                                     </div>
@@ -343,7 +343,7 @@ export default function PropertyInner({ block_extend, property }: { block_extend
                                                 <div style={{ borderTop: '1px solid #000' }}></div>
                                                 <div className="space16" />
                                                 <div className="d-flex flex-column justify-content-center align-items-center">
-                                                    <h2 className="text-color-black size-16">OR</h2>
+                                                    <p className="text-color-black size-16">{t("contact-form.separator")}</p>
                                                     <div className="space16" />
                                                     <button className="vl-btn1" style={{ width: '100%', backgroundColor: '#25D366', color: '#fff' }} onClick={() => window.open('https://wa.me/34628621130', '_blank')}>
                                                         <i className="fa-brands fa-whatsapp" style={{ marginRight: '10px' }} />

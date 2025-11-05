@@ -318,7 +318,7 @@
         "input-email": "Correo Electrónico",
         "input-phone": "Teléfono",
         "input-city": "Ciudad",
-        "input-preferred_contact_moment": "MMomento ideal para contactarte",
+        "input-preferred_contact_moment": "Momento ideal para contactarte",
         "input-message": "Mensaje",
         "input-submit-now": "Enviar mensaj", 
         "error-message": "Error al enviar el mensaje",
