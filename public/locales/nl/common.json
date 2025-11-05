@@ -10,7 +10,7 @@
     "login-btn": "Inloggen",
     "logout-btn": "Uitloggen",
     "btn-private-properties": "Eigenschappen",
-    "testimonials": "Getuigenissen",
+    "testimonials": "Testimonials",
     "magazine": "Magazine",
     "btn-header-1": "Verkoop je Eigendom"
   },
@@ -274,9 +274,8 @@
       "title": "Contacteer ons",
       "description": "Wij zijn hier om je te helpen bij elke stap in het vinden van je droomhuis in Spanje. Neem contact op met ons op elk moment, zonder verplichtingen of druk. Gebruik het contactformulier hieronder om in contact te treden, en we zullen zo snel mogelijk reageren."
     },
-    "title": "Contacteer ons",
-    "description": "Je bent uitgenodigd om onze kantoor in Málaga te bezoeken voor een persoonlijke afspraak, of we zouden graag je bij een eigendomsbewaking willen begeleiden. Of je vragen hebt over kopen, verkopen, financiering of residentie, ons team staat klaar om je te helpen. We spreken Nederlands, Engels en Spaans, om een duidelijke communicatie en ondersteuning tijdens het hele proces te garanderen.",
-    "btn_text": "over ons"
+    "title": "Neem contact met ons op",
+    "description": "U bent van harte uitgenodigd om ons kantoor in Málaga te bezoeken voor een persoonlijk gesprek. \n\nOf u nu vragen heeft over de aankoop of verkoop van onroerend goed, financieringsmogelijkheden of het verkrijgen van een residentie, ons team staat klaar om u professioneel te ondersteunen. Wij spreken Nederlands, Engels en Spaans, zodat wij gedurende het gehele proces voor duidelijke communicatie en optimale begeleiding kunnen zorgen."
   },
   "contact-form": {
     "subtitle": "Klaar voor de volgende stap? ",

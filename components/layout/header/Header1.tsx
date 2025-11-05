@@ -95,7 +95,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                                 <ul className={`dropdown-menu ${styles.dropdownMenu} ${aboutDropdownOpen ? styles.show : ''}`}>
                                                     
                                                     <li>
-                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/magazine">{t('navigation.magazine')}</Link>
+                                                        <Link className={`dropdown-item ${styles.dropdownItem }`} style={{ pointerEvents: 'none', cursor: 'not-allowed' }} href="/magazine">{t('navigation.magazine')}</Link>
                                                     </li>
                                                     <li>
                                                         <Link className={`dropdown-item ${styles.dropdownItem}`} href="/testimonials">{t('navigation.testimonials')}</Link>

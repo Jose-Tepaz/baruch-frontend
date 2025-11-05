@@ -4,6 +4,7 @@ import { useTranslation } from "@/utils/i18n-simple";
 import Link from "next/link";
 import Image from "next/image";
 
+
 export default function ContactSectionContact({ imgContact }: { imgContact: string }) {
     const { t } = useTranslation('common');
     return (
@@ -16,9 +17,27 @@ export default function ContactSectionContact({ imgContact }: { imgContact: stri
                         <div className="space30"></div>
                         <h2 className="text-color-black text-size-32">{t('contact.title')}</h2>
                         <div className="space16"></div>
-                        <p className="text-color-black">{t('contact.description')}</p>
+                        <p className="text-color-black" dangerouslySetInnerHTML={{ __html: t('contact.description') }} style={{ whiteSpace: 'pre-line' }} />
                         <div className="space30"></div>
-                        
+                        <a href="https://maps.app.goo.gl/1234567890" target="_blank" className="d-flex gap-2 flex-row align-items-center text-color-black no-wrap">
+                            <span className="text-color-black ms-2 w-auto">
+                                <i className="fa-solid fa-location-dot" />
+                            </span>
+                            <span className="text-color-black ms-2">
+                                C. Cam. Viejo de Málaga 28, 29700 Vélez-Málaga
+                            </span>
+                        </a>
+                        <div className="space16"></div>
+                        <a href="mailto:info@baruchrealestate.com" target="_blank" className="d-flex gap-2 flex-row align-items-center text-color-black no-wrap">
+                            <span className="text-color-black ms-2">
+                                <i className="fa-solid fa-phone" />
+                            </span>
+                            <span className="text-color-black">
+                                +34 951 651 123
+                            </span>
+                        </a>
+
+
                     </div>
                     <div className="col-lg-5 m-auto">
                         <div className="space30"></div>
@@ -34,7 +53,7 @@ export default function ContactSectionContact({ imgContact }: { imgContact: stri
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
