@@ -160,25 +160,25 @@ export default function Footer1() {
                                         <p className="text-white text-size-large text-weight-medium" style={{ marginBottom: '16px' }}>{t('footer.title-services')}</p>
                                         <ul className="text-white">
                                             <li>
-                                                <Link href="/" className="text-white">{t('footer.title-services-1')}</Link>
+                                                <Link href="/" className="text-white" style={{ pointerEvents: 'none', cursor: 'not-allowed' }}>{t('footer.title-services-1')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/" className="text-white">{t('footer.title-services-2')}</Link>
+                                                <Link href="/" className="text-white" style={{ pointerEvents: 'none', cursor: 'not-allowed' }}>{t('footer.title-services-2')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/" className="text-white">{t('footer.title-services-3')}</Link>
+                                                <Link href="/" className="text-white" style={{ pointerEvents: 'none', cursor: 'not-allowed' }}>{t('footer.title-services-3')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/" className="text-white">{t('footer.title-services-4')}</Link>
+                                                <Link href="/" className="text-white" style={{ pointerEvents: 'none', cursor: 'not-allowed' }}>{t('footer.title-services-4')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/" className="text-white">{t('footer.title-services-5')}</Link>
+                                                <Link href="/" className="text-white" style={{ pointerEvents: 'none', cursor: 'not-allowed' }}>{t('footer.title-services-5')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/" className="text-white">{t('footer.title-services-6')}</Link>
+                                                <Link href="/" className="text-white" style={{ pointerEvents: 'none', cursor: 'not-allowed' }}>{t('footer.title-services-6')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/" className="text-white">{t('footer.title-services-7')}</Link>
+                                                <Link href="/" className="text-white" style={{ pointerEvents: 'none', cursor: 'not-allowed' }}>{t('footer.title-services-7')}</Link>
                                             </li>
                                         </ul>
                                     </div>
