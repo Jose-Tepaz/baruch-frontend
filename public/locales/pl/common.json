@@ -69,7 +69,7 @@
         "title-about-us": "O nas",
         "title-2-about-us": "Jesteśmy tutaj, aby Cię pomóc",
         "title-3-about-us": "Znajdź swoją marzenią nieruchomość w Hiszpanii",
-        "paragraph-about-us": "Jesteśmy pasjonatami upraszczania doświadczenia w nieruchomości. Z głębokim zrozumieniem rynku nieruchomości i podejściem klienta, stwarzamy kupującym, sprzedającym i wynajmującym warunki do przodu z pewnością. Nasz zespół doświadczonych profesjonalistów jest poświęcony naoferowaniu indywidualnej usługi, przejrzystości i eksperckiego porady. Oprócz ekspertyzy w dziedzinie nieruchomości, oferujemy również wsparcie prawno-finansowe, aby nasze klienci mogli skorzystać z kompleksowej i niezawodnej usługi pod jednym dachem.",
+        "paragraph-about-us": "Z pasją upraszczamy proces zakupu, sprzedaży i wynajmu nieruchomości. Dzięki dogłębnej znajomości rynku i podejściu skoncentrowanemu na kliencie pomagamy kupującym, sprzedającym i najemcom działać z pewnością siebie. Nasz zespół doświadczonych specjalistów oferuje spersonalizowaną obsługę, przejrzystość i fachowe doradztwo na każdym etapie. \n\nOprócz naszej wiedzy w zakresie nieruchomości oferujemy wsparcie prawne, pomoc w uzyskaniu numeru NIE oraz doradztwo finansowe, zapewniając naszym klientom kompleksową i rzetelną obsługę w jednym miejscu.",
         "subtitle-list-properties": "Nieruchomości",
         "title-list-properties": "Odkryj nasze najnowsze nieruchomości",
         "subtitle-category": "Kategoria",
@@ -180,7 +180,8 @@
                 "detail1": "Analiza Twojej zdolności kredytowej",
                 "detail2": "Porównanie ofert wielu banków",
                 "detail3": "Negocjacje korzystnych warunków",
-                "detail4": "Opieka na każdym etapie zatwierdzenia kredytu"
+                "detail4": "Opieka na każdym etapie zatwierdzenia kredytu",
+                "detail5": "Otwarcie konta bankowego"
             },
             "insurance": {
                 "title": "Ubezpieczenia",
@@ -204,7 +205,10 @@
                 "detail1": "Weryfikacja umów kupna-sprzedaży",
                 "detail2": "Due diligence nieruchomości",
                 "detail3": "Reprezentacja przy aktach notarialnych",
-                "detail4": "Rozwiązywanie sporów i postępowania sądowe"
+                "detail4": "Rozwiązywanie sporów i postępowania sądowe",
+                "detail5": "Założenie spółki SL (spółka z ograniczoną odpowiedzialnością)",
+                "detail6": "Założenie jednoosobowej działalności gospodarczej",
+                "detail7": "Testament"
             },
             "management": {
                 "title": "Zarządzanie nieruchomością",

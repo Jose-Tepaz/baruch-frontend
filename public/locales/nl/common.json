@@ -49,11 +49,11 @@
     "title-popular-locations-9": "Eigenschappen voor verkoop in Malaga"
   },
   "home": {
-    "btn-1-hero": "Bekijk Eigenschappen",
+    "btn-1-hero": "Bekijk Woningen",
     "btn-2-hero": "Meer leren",
     "title-filter": "Vind je Droomhuis",
-    "title-filter-1": "Eigendomstatus",
-    "title-filter-2": "Type eigendom",
+    "title-filter-1": "Woning status",
+    "title-filter-2": "Type woning",
     "bedrooms-filter": "Slaapkamers",
     "bathrooms-filter": "Badkamers",
     "min-price-filter": "Min Prijs",
@@ -69,7 +69,7 @@
     "title-3-about-us": "Vind je droomhuis in Spanje",
     "paragraph-about-us": "Wij zijn gepassioneerd over het vereenvoudigen van de vastgoedervaring. Met een diepgaand begrip van de woningmarkt en een klantgerichte aanpak stellen wij kopers, verkopers en huurders in staat om vol vertrouwen stappen te zetten. Ons toegewijde team van ervaren professionals biedt persoonlijke service, transparantie en deskundige begeleiding bij elke stap. Naast vastgoedexpertise bieden wij ook juridische ondersteuning en financiële hulp, zodat onze klanten profiteren van een complete en betrouwbare service onder één dak.",
     "subtitle-list-properties": "Eigenschappen",
-    "title-list-properties": "Ontdek onze Nieuwste Eigenschappen",
+    "title-list-properties": "Ontdek onze Nieuwste Woningen",
     "subtitle-category": "Categorie",
     "title-category": "Selecteer het huis dat bij je past",
     "btn-about-section-2": "Meer leren",
@@ -138,7 +138,7 @@
     "conatct-section": {
       "title": "Onze Dienstleistingen ",
       "description": "Bij Baruch Real Estate geloven we in het bouwen van langdurige relaties op basis van vertrouwen, transparantie en persoonlijke contact. Voor ons is vastgoed niet alleen over eigendommen, het gaat om mensen. We helpen je stap voor stap door het proces. Met zorg, duidelijkheid en een focus op kwaliteit bij elke stap. En onze ondersteuning stopt niet eenmaal je een eigendom hebt gekocht.",
-      "btn_text": "Alle Dienstleistingen ansehen"
+      "btn_text": "Bekijk onze diensten"
     }
   },
   "services": {
@@ -171,7 +171,8 @@
         "detail1": "Analyse van jouw financieringscapaciteit",
         "detail2": "Vergelijking van aanbiedingen van verschillende banken",
         "detail3": "Onderhandeling over gunstige voorwaarden",
-        "detail4": "Begeleiding gedurende het goedkeuringsproces"
+        "detail4": "Begeleiding gedurende het goedkeuringsproces",
+        "detail5": "Het openen van een bankrekening"
       },
       "insurance": {
         "title": "Verzekering",
@@ -195,7 +196,10 @@
         "detail1": "Controle van koopovereenkomsten",
         "detail2": "Due diligence van onroerend goed",
         "detail3": "Vertegenwoordiging bij notariële akten",
-        "detail4": "Oplossen van geschillen en rechtszaken"
+        "detail4": "Oplossen van geschillen en rechtszaken",
+        "detail5": "Het oprichten  van een SL (bedrijf)",
+        "detail6": "Het oprichten van een eenmanszaak",
+        "detail7": "Testament"
       },
       "management": {
         "title": "Vastgoedbeheerder",

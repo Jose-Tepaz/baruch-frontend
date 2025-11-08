@@ -69,7 +69,7 @@
         "title-about-us": "À propos de l'Entreprise",
         "title-2-about-us": "Nous sommes ici pour vous aider",
         "title-3-about-us": "Trouvez votre maison de rêve en Espagne",
-        "paragraph-about-us": "Nous sommes passionnés par la simplification de l'expérience immobilière. Avec une compréhension profonde du marché immobilier et un approche client-centré, nous fortifions les acheteurs, les vendeurs et les locataires pour avancer avec confiance. Notre équipe de professionnels expérimentés est dédiée à fournir un service personnalisé, une transparence et un conseil expert.",
+        "paragraph-about-us": "Nous sommes passionnés par la simplification de l’expérience immobilière. Grâce à une connaissance approfondie du marché et une approche centrée sur le client, nous aidons acheteurs, vendeurs et locataires à avancer en toute confiance. \n\nNotre équipe dévouée de professionnels expérimentés offre un service personnalisé, une transparence totale et un accompagnement expert à chaque étape. En plus de notre expertise immobilière, nous offrons un soutien juridique, une aide pour l’obtention du NIE et une assistance financière, garantissant à nos clients un service complet et fiable sous un même toit.",
         "subtitle-list-properties": "Propriétés",
         "title-list-properties": "Découvrez Nos Dernières Propriétés",
         "subtitle-category": "Category",
@@ -178,7 +178,8 @@
                 "detail1": "Analyse de votre capacité de financement",
                 "detail2": "Comparaison des offres de plusieurs banques",
                 "detail3": "Négociation de conditions favorables",
-                "detail4": "Conseils tout au long du processus d'approbation"
+                "detail4": "Conseils tout au long du processus d'approbation",
+                "detail5": "Ouverture d’un compte bancaire"
             },
             "insurance": {
                 "title": "Assurance",
@@ -202,7 +203,11 @@
                 "detail1": "Révision des contrats de vente",
                 "detail2": "Due diligence des propriétés",
                 "detail3": "Représentation dans les actes publics",
-                "detail4": "Résolution des conflits et litiges"
+                "detail4": "Résolution des conflits et litiges",
+                "detail5": "Ouverture d’un compte bancaire",
+                "detail6": "Création d’une entreprise individuelle",
+                "detail7": "Testament"
+
             },
             "management": {
                 "title": "Gestion de Propriétés",

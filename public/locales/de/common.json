@@ -67,7 +67,7 @@
         "title-about-us": "Über uns",
         "title-2-about-us": "Wir sind hier, um dir zu helfen",
         "title-3-about-us": "Finde dein Traumhaus in Spanien",
-        "paragraph-about-us": "Wir sind begeistert, das Immobilienerlebnis zu vereinfachen. Mit einem tiefen Verständnis des Immobilienmarktes und einem clientzentrierten Ansatz, stärken wir Käufer, Verkäufer und Mieter, um mit Vertrauen voranzukommen. Unser Team erfahrener Experten ist dafür verpflichtet, persönliche Service, Transparenz und Expertise zu bieten.",
+        "paragraph-about-us": "Wir sind leidenschaftlich darum bemüht, das Immobilienerlebnis zu vereinfachen. Mit einem tiefen Verständnis des Immobilienmarktes und einem kundenorientierten Ansatz ermöglichen wir Käufern, Verkäufern und Mietern, mit Zuversicht voranzugehen. \n\nUnser engagiertes Team erfahrener Fachleute bietet persönlichen Service, Transparenz und fachkundige Beratung in jeder Phase. \n\nNeben unserer Immobilienkompetenz bieten wir rechtliche Unterstützung, Hilfe bei der Beantragung des NIE und finanzielle Beratung an, damit unsere Kunden von einem vollständigen und zuverlässigen Service aus einer Hand profitieren.",
         "subtitle-list-properties": "Eigenschaften",
         "title-list-properties": "Entdecken Sie unsere neuesten Eigenschaften",
         "subtitle-category": "Kategorie",
@@ -177,7 +177,8 @@
                 "detail1": "Analyse Ihrer Finanzierungskapazität",
                 "detail2": "Vergleich von Angeboten mehrerer Banken",
                 "detail3": "Verhandlung günstiger Konditionen",
-                "detail4": "Beratung während des gesamten Genehmigungsprozesses"
+                "detail4": "Beratung während des gesamten Genehmigungsprozesses",
+                "detail5": "Eröffnung eines Bankkontos"
             },
             "insurance": {
                 "title": "Versicherung",
@@ -201,7 +202,10 @@
                 "detail1": "Überprüfung von Kaufverträgen",
                 "detail2": "Due Diligence von Immobilien",
                 "detail3": "Vertretung bei öffentlichen Urkunden",
-                "detail4": "Streitbeilegung und Rechtsstreitigkeiten"
+                "detail4": "Streitbeilegung und Rechtsstreitigkeiten",
+                "detail5": "Eröffnung eines Bankkontos",
+                "detail6": "Gründung eines Einzelunternehmens",  
+                "detail7": "Testament"
             },
             "management": {
                 "title": "Immobilienverwaltung",

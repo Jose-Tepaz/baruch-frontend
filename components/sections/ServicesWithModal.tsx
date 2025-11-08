@@ -37,7 +37,8 @@ export default function ServicesWithModal() {
                 t('services.modal.finance.detail1'),
                 t('services.modal.finance.detail2'),
                 t('services.modal.finance.detail3'),
-                t('services.modal.finance.detail4')
+                t('services.modal.finance.detail4'),
+                t('services.modal.finance.detail5')
             ],
             image: '/assets/img/all-images/service/sell.webp'
         },
@@ -73,7 +74,10 @@ export default function ServicesWithModal() {
                 t('services.modal.legal.detail1'),
                 t('services.modal.legal.detail2'),
                 t('services.modal.legal.detail3'),
-                t('services.modal.legal.detail4')
+                t('services.modal.legal.detail4'),
+                t('services.modal.legal.detail5'),
+                t('services.modal.legal.detail6'),
+                t('services.modal.legal.detail7')
             ],
             image: '/assets/img/all-images/service/legal.webp'
         },
@@ -192,6 +196,7 @@ export default function ServicesWithModal() {
                                         </li>
                                     ))}
                                 </ul>
+                                <div className="space16" />
                             </div>
                             <div className="space30"></div>
                             <Link href="#contact-form" className="vl-btn1 is-primary" onClick={closeModal}>

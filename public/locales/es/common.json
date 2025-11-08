@@ -74,7 +74,7 @@
         "title-about-us": "Acerca de la Empresa",
         "title-2-about-us": "Estamos aquí para ayudarte",
         "title-3-about-us": "Encuentra tu casa soñada en España",
-        "paragraph-about-us": "En Baruch Real Estate, estamos dedicados a simplificar la búsqueda de tu hogar ideal en España. \n\nCon una profunda comprensión del mercado inmobiliario y una perspectiva internacional, acompañamos a compradores, vendedores e inversores en cada paso del proceso con transparencia, profesionalismo y atención personalizada. Nuestro equipo combina experiencia local y visión global para ofrecerte una asesoría experta y una experiencia inmobiliaria fluida, segura y sin estrés.",
+        "paragraph-about-us": "En Baruch Real Estate, estamos dedicados a simplificar la búsqueda de tu hogar ideal en España. Con una profunda comprensión del mercado inmobiliario y una perspectiva internacional, acompañamos a compradores, vendedores e inversores en cada paso del proceso con transparencia, profesionalismo y atención personalizada. \n\nAdemás de nuestra experiencia en bienes raíces, ofrecemos apoyo legal, asistencia para la obtención de su NIE y asesoramiento financiero, garantizando a nuestros clientes un servicio completo y de confianza bajo un mismo techo.",
         "subtitle-list-properties": "Propiedades",
         "title-list-properties": "Descubre Nuestras Últimas Propiedades",
         "subtitle-category": "Category",
@@ -183,7 +183,8 @@
                 "detail1": "Análisis de tu capacidad de financiación",
                 "detail2": "Comparación de ofertas de múltiples bancos",
                 "detail3": "Negociación de condiciones favorables",
-                "detail4": "Asesoramiento durante todo el proceso de aprobación"
+                "detail4": "Asesoramiento durante todo el proceso de aprobación",
+                "detail5": "Abrir una cuenta bancaria"
             },
             "insurance": {
                 "title": "Seguros",
@@ -207,7 +208,10 @@
                 "detail1": "Revisión de contratos de compraventa",
                 "detail2": "Due diligence de propiedades",
                 "detail3": "Representación en escrituras públicas",
-                "detail4": "Resolución de conflictos y litigios"
+                "detail4": "Resolución de conflictos y litigios",
+                "detail5": "Constitución de una SL (Sociedad Limitada)",
+                "detail6": "Constitución de un negocio individual / empresa unipersonal",
+                "detail7": "Testamento"
             },
             "management": {
                 "title": "Gestión de Propiedades",

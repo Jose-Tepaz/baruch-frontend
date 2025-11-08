@@ -77,7 +77,7 @@
         "title-about-us": "About Company",
         "title-2-about-us": "We are here to help you",
         "title-3-about-us": "Find your dream home in spain",
-        "paragraph-about-us": "We are passionate about simplifying the real estate experience. With a deep understanding of the housing market and a client-first approach, we empower buyers, sellers, and renters to move forward with confidence. Our dedicated team of experienced professionals provides personalized service, transparency, and expert guidance at every step. In addition to real estate expertise, we also offer legal support and financial assistance, ensuring our clients benefit from a complete and reliable service under one roof.",
+        "paragraph-about-us": "We are passionate about simplifying the real estate experience. With a deep understanding of the housing market and a client-first approach, we empower buyers, sellers, and renters to move forward with confidence. Our dedicated team of experienced professionals provides personalized service, transparency, and expert guidance at every step. In addition to real estate expertise, we offer legal support, NIE applications, and financial assistance, ensuring our clients benefit from a complete, reliable service under one roof.",
         "subtitle-list-properties": "Properties",
         "title-list-properties": "Discover Our Latest Properties",
         "subtitle-category": "Category",
@@ -185,7 +185,8 @@
                 "detail1": "Analysis of your financing capacity",
                 "detail2": "Comparison of offers from multiple banks",
                 "detail3": "Negotiation of favorable conditions",
-                "detail4": "Guidance throughout the approval process"
+                "detail4": "Guidance throughout the approval process",
+                "detail5": "Opening a bank account"
             },
             "insurance": {
                 "title": "Insurance",
@@ -209,7 +210,10 @@
                 "detail1": "Review of purchase agreements",
                 "detail2": "Property due diligence",
                 "detail3": "Representation in public deeds",
-                "detail4": "Dispute resolution and litigation"
+                "detail4": "Dispute resolution and litigation",
+                "detail5": "Establishing an SL (company)",
+                "detail6": "Establishing a sole proprietorship",
+                "detail7": "Testament"
             },
             "management": {
                 "title": "Property Management",

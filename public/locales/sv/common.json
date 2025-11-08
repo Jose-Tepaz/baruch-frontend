@@ -67,7 +67,7 @@
         "title-about-us": "Om företaget",
         "title-2-about-us": "Vi är här för att hjälpa dig",
         "title-3-about-us": "Hitta din drömfastighet i Spanien",
-        "paragraph-about-us": "Vi är passionerade om att förenkla fastighetserfarenheten. Med en djup förståelse för bostadsmarknaden och ett kundförstärkt tillvägagångssätt, stärker vi köpare, säljare och hyresgäster för att gå framåt med konfidens. Vårt dedikerade team erfarna proffesionister erbjuder personlig service, transparens och expertrådgivning vid varje steg. Oavsett om det gäller fastighetsexpertis, juridiskt stöd eller finansiell hjälp, säkerställer vi att våra kunder får en komplett och pålitlig tjänst under ett tak.",
+        "paragraph-about-us": "Vi brinner för att göra fastighetsaffären enklare. Med en djup förståelse för bostadsmarknaden och ett kundfokuserat arbetssätt hjälper vi köpare, säljare och hyresgäster att ta nästa steg med självförtroende. Vårt dedikerade team av erfarna experter erbjuder personlig service, transparens och professionell vägledning i varje steg. Utöver vår fastighetsexpertis erbjuder vi juridiskt stöd, hjälp med att ansöka om NIE och ekonomisk rådgivning, vilket ger våra kunder en komplett och pålitlig tjänst under ett och samma tak.",
         "subtitle-list-properties": "Fastigheter",
         "title-list-properties": "Upptäck våra senaste fastigheter",
         "subtitle-category": "Kategori",
@@ -172,7 +172,8 @@
             "detail1": "Analys av din finansieringsförmåga",
             "detail2": "Jämförelse av erbjudanden från flera banker",
             "detail3": "Förhandling om förmånliga villkor",
-            "detail4": "Rådgivning under hela godkännandeprocessen"
+            "detail4": "Rådgivning under hela godkännandeprocessen",
+            "detail5": "Öppna ett bankkonto"
         },
         "insurance": {
             "title": "Försäkring",
@@ -196,7 +197,10 @@
             "detail1": "Granskning av köpeavtal",
             "detail2": "Due diligence av fastigheter",
             "detail3": "Representation vid offentliga handlingar",
-            "detail4": "Tvistlösning och rättstvister"
+            "detail4": "Tvistlösning och rättstvister",
+            "detail5": "Starta ett SL-bolag (aktiebolag",
+            "detail6": "Starta en enskild firma", 
+            "detail7": "Testamente"
         },
         "management": {
             "title": "Fastighetsförvaltningen",
