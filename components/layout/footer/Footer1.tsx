@@ -88,19 +88,7 @@ export default function Footer1() {
                                         <div className="space24" />
                                         <p className="text-white">{t('footer.description-footer')}</p>
                                         <div className="space16" />
-                                        <div className="d-flex flex-row align-items-center text-color-white no-wrap" >
-                                            <span className="me-2 w-auto"><i className="fa-solid fa-location-dot" /></span>
-                                            <p className="text-white">
-                                            C. Cam. Viejo de Málaga 28, 29700 Vélez-Málaga
-                                            </p>
-                                        </div>
-                                        <div className="space16" />
-                                        <Link href="mailto:info@baruchrealestate.com" className="d-flex flex-row align-items-center text-color-white no-wrap" >
-                                            <span className="me-2 w-auto"><i className="fa-solid fa-envelope" /></span>
-                                            <p className="text-white">
-                                            info@baruchrealestate.com
-                                            </p>
-                                        </Link>
+                                        
 
                                         <div className="space32" />
                                         <ul>

@@ -309,8 +309,7 @@
             "description": "We’re here to help you every step of the way in finding your dream property in Spain. Feel free to reach out to us anytime with no obligations, no pressure. Use the contact form below to get in touch, and we’ll respond as soon as possible."
         },
         "title": "Get in touch",
-        "description": "You’re welcome to visit our office in Málaga for a personal meeting, or we’d be happy to accompany you on a property visit. Whether you have questions about buying, selling, financing, or residency, our team is ready to assist. We speak Dutch, English, and Spanish, ensuring clear communication and support throughout the process.",
-        "btn_text": "about us"
+        "description": "You’re welcome to visit our office in Málaga for a personal meeting, or we’d be happy to accompany you on a property visit. Whether you have questions about buying, selling, financing, or residency, our team is ready to assist. \n\nWe speak Dutch, English, and Spanish, ensuring clear communication and support throughout the process."
        
     },
     "contact-form": {
@@ -329,6 +328,7 @@
         "success-message": "Message sent successfully!",
         "submitting": "Submitting...",
         "input-click-to-whatsapp": "Click to WhatsApp",
+        "separator": "Or contact us directly on WhatsApp",
         "privacy-statement": "I agree with the privacy statement of Baruch Real Estate"
     },
     "testimonials": {

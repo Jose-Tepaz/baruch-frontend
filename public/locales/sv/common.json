@@ -278,7 +278,7 @@
         "description": "Vi är här för att hjälpa dig på vägen till din drömfastighet i Spanien. Kontakta oss när du vill, utan bindningar eller tryck. Använd kontaktformuläret nedan för att komma i kontakt, och vi kommer att svara så snart som möjligt."
     },
     "title": "Kontakta oss",
-    "description": "Vi är här för att hjälpa dig på vägen till din drömfastighet i Spanien. Kontakta oss när du vill, utan bindningar eller tryck. Använd kontaktformuläret nedan för att komma i kontakt, och vi kommer att svara så snart som möjligt.",
+    "description": "Du är varmt välkommen att besöka vårt kontor i Málaga för ett personligt möte, eller så följer vi gärna med dig på en bostadsvisning. Oavsett om du har frågor om köp, försäljning, finansiering eller uppehållstillstånd, står vårt team redo att hjälpa dig. \n\nVi talar nederländska, engelska och spanska, vilket garanterar tydlig kommunikation och stöd under hela processen.",
     "btn_text": "om oss"
   },
   "contact-form": {
@@ -296,6 +296,7 @@
         "error-message": "Fel vid sändning av meddelande",
         "success-message": "Meddelande skickat framgångsrikt!",
         "submitting": "Skickar...",
+        "separator": "Eller kontakta oss direkt via WhatsApp",
         "privacy-statement": "Jag accepterar sekretesspolicy av Baruch Real Estate",
         "input-click-to-whatsapp": "Klicka på WhatsApp"
     },

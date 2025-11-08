@@ -277,7 +277,8 @@
       "description": "Wij zijn hier om je te helpen bij elke stap in het vinden van je droomhuis in Spanje. Neem contact op met ons op elk moment, zonder verplichtingen of druk. Gebruik het contactformulier hieronder om in contact te treden, en we zullen zo snel mogelijk reageren."
     },
     "title": "Neem contact met ons op",
-    "description": "U bent van harte uitgenodigd om ons kantoor in Málaga te bezoeken voor een persoonlijk gesprek. \n\nOf u nu vragen heeft over de aankoop of verkoop van onroerend goed, financieringsmogelijkheden of het verkrijgen van een residentie, ons team staat klaar om u professioneel te ondersteunen. Wij spreken Nederlands, Engels en Spaans, zodat wij gedurende het gehele proces voor duidelijke communicatie en optimale begeleiding kunnen zorgen."
+    "description": "U bent van harte uitgenodigd om ons kantoor in Málaga te bezoeken voor een persoonlijk gesprek. Een huis samen bezichtigen? Ook dit is geen probleem. Of u nu vragen heeft over de aankoop of verkoop van onroerend goed, financieringsmogelijkheden of het verkrijgen van een residentie, ons team staat klaar om u professioneel te ondersteunen. \n\nWij spreken Nederlands, Engels en Spaans, zodat wij gedurende het gehele proces voor duidelijke communicatie en optimale begeleiding kunnen zorgen."
+
   },
   "contact-form": {
     "subtitle": "Klaar voor de volgende stap? ",
@@ -294,6 +295,7 @@
     "error-message": "Fout bij het verzenden van het bericht",
     "success-message": "Bericht succesvol verzonden!",
     "submitting": "Verzenden...",
+    "separator": "Of contacteer ons direct via WhatsApp",
     "privacy-statement": "Ik ga akkoord met de privacyverklaring van Baruch Real Estate",
     "input-click-to-whatsapp": "Klik voor WhatsApp"
   },

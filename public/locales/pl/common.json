@@ -311,7 +311,7 @@
         "description": "Jesteśmy tutaj, aby Cię pomóc w każdym kroku w znalezieniu Twojego marzenia domu w Hiszpanii. Nie ma obowiązków, nie ma presji. Użyj formularza kontaktowego poniżej, aby skontaktować się z nami, i odpowiemy tak szybko, jak to możliwe."
     },
     "title": "Skontaktuj się z nami",
-    "description": "Jesteśmy tutaj, aby Cię pomóc w każdym kroku w znalezieniu Twojego marzenia domu w Hiszpanii. Nie ma obowiązków, nie ma presji. Użyj formularza kontaktowego poniżej, aby skontaktować się z nami, i odpowiemy tak szybko, jak to możliwe.",
+    "description": "Serdecznie zapraszamy do naszego biura w Maladze na spotkanie osobiste – chętnie również towarzyszymy Ci podczas oglądania nieruchomości. Niezależnie od tego, czy masz pytania dotyczące zakupu, sprzedaży, finansowania czy pobytu, nasz zespół jest gotowy, aby Ci pomóc. \n\nMówimy po niderlandzku, angielsku i hiszpańsku, co zapewnia jasną komunikację i wsparcie na każdym etapie procesu.",
     "btn_text": "o nas"
   },
   "contact-form": {
@@ -329,6 +329,7 @@
         "error-message": "Błąd podczas wysyłania wiadomości",
         "success-message": "Wiadomość wysłana pomyślnie!",
         "submitting": "Wysyłanie...",
+        "separator": "O lub skontaktuj się z nami bezpośrednio na WhatsApp",
         "privacy-statement": "Zgadzam się z polityką prywatności Baruch Real Estate",
         "input-click-to-whatsapp": "Kliknij na WhatsApp"
     },

@@ -282,7 +282,7 @@
             "description": "Wir sind hier, um dir zu helfen, dein Traumhaus in Spanien zu finden. Du kannst uns jederzeit kontaktieren, ohne Verpflichtungen oder Druck. Nutze das Kontaktformular unten, um in Kontakt zu treten, und wir werden uns so schnell wie möglich melden."
         },
         "title": "Kontaktiere uns",
-        "description": "Du bist herzlich eingeladen, unser Büro in Málaga zu besuchen, um eine persönliche Besprechung zu vereinbaren, oder wir freuen uns, dir bei einer Eigentumsbesichtigung zu begleiten. Ob du Fragen zu Kauf, Verkauf, Finanzierung oder Wohnsitz hast, unser Team ist bereit, dir zu helfen. Wir sprechen Deutsch, Englisch und Spanisch, um eine klare Kommunikation und Unterstützung während des gesamten Prozesses zu gewährleisten.",
+        "description": "Du bist herzlich eingeladen, unser Büro in Málaga zu besuchen, um eine persönliche Besprechung zu vereinbaren, oder wir freuen uns, dir bei einer Eigentumsbesichtigung zu begleiten. Ob du Fragen zu Kauf, Verkauf, Finanzierung oder Wohnsitz hast, ist unser Team bereit, dir zu helfen. \n\nWir sprechen Deutsch, Englisch und Spanisch, um eine klare Kommunikation und Unterstützung während des gesamten Prozesses zu gewährleisten.",
         "btn_text": "über uns"
     },
     "contact-form": {
@@ -300,6 +300,7 @@
         "error-message": "Fehler beim Senden der Nachricht",
         "success-message": "Nachricht erfolgreich gesendet!",
         "submitting": "Senden...",
+        "separator": "Oder kontaktiere uns direkt auf WhatsApp",
         "privacy-statement": "Ich stimme der Datenschutzrichtlinie von Baruch Real Estate zu",
         "input-click-to-whatsapp": "Klicken Sie auf WhatsApp"
     },
