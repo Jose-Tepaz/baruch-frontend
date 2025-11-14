@@ -1,0 +1,161 @@
+.cookieBanner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  padding: 20px;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cookieBanner.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cookieContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cookieText {
+  flex: 1;
+  min-width: 300px;
+}
+
+.cookieTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.cookieDescription {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+
+.privacyLink {
+  color: #0066cc;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.privacyLink:hover {
+  color: #0052a3;
+}
+
+.cookieActions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.acceptButton,
+.rejectButton {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.acceptButton {
+  background-color: var(--ztc-bg-blue);
+  color: #ffffff;
+}
+
+.acceptButton:hover {
+  background-color: var(--ztc-bg-blue);
+  transform: translateY(-1px);
+}
+
+.acceptButton:active {
+  transform: translateY(0);
+}
+
+.rejectButton {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.rejectButton:hover {
+  background-color: #e8e8e8;
+  transform: translateY(-1px);
+}
+
+.rejectButton:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cookieBanner {
+    padding: 16px;
+  }
+
+  .cookieContent {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cookieText {
+    min-width: auto;
+    margin-bottom: 16px;
+  }
+
+  .cookieActions {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .acceptButton,
+  .rejectButton {
+    width: 100%;
+  }
+
+  .cookieTitle {
+    font-size: 16px;
+  }
+
+  .cookieDescription {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cookieBanner {
+    padding: 12px;
+  }
+
+  .cookieTitle {
+    font-size: 15px;
+  }
+
+  .cookieDescription {
+    font-size: 12px;
+  }
+
+  .acceptButton,
+  .rejectButton {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+

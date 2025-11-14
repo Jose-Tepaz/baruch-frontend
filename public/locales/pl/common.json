@@ -368,5 +368,12 @@
     "select-option": "Wybierz opcję",
     "select-all": "Wybierz wszystkie",
     "no-results": "Brak wyników"
+  },
+  "cookies": {
+    "banner-title": "Używamy plików cookie",
+    "banner-description": "Używamy plików cookie, aby poprawić Twoje doświadczenia podczas przeglądania i analizować nasz ruch. Klikając 'Akceptuj', wyrażasz zgodę na użycie plików cookie.",
+    "accept": "Akceptuj",
+    "reject": "Odrzuć",
+    "privacy-policy-link": "Polityka Prywatności"
   }
 }

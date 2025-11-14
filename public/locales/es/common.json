@@ -10,7 +10,7 @@
         "login-btn": "Login",
         "logout-btn": "Cerrar Sesión",
         "btn-private-properties": "Propiedades",
-        "testimonials": "Opiniones de clientes",
+        "testimonials": "Testimonios",
         "magazine": "Magazine",
         "btn-header-1": "Vender tu Propiedad"
     },
@@ -363,5 +363,12 @@
         "select-option": "Selecciona una opción",
         "select-all": "Seleccionar todas",
         "no-results": "No se encontraron resultados"
+    },
+    "cookies": {
+        "banner-title": "Utilizamos cookies",
+        "banner-description": "Utilizamos cookies para mejorar tu experiencia de navegación y analizar nuestro tráfico. Al hacer clic en 'Aceptar', consientes el uso de cookies.",
+        "accept": "Aceptar",
+        "reject": "Rechazar",
+        "privacy-policy-link": "Política de Privacidad"
     }
 }

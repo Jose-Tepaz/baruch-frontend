@@ -12,7 +12,7 @@
     "btn-private-properties": "Woningen",
     "testimonials": "Testimonials",
     "magazine": "Magazine",
-    "btn-header-1": "Verkoop je Eigendom"
+    "btn-header-1": "Verkoop je Woning"
   },
   "footer": {
     "title-cta": "Van droom naar realiteit",
@@ -25,7 +25,7 @@
     "head-title-4": "We zijn hier",
     "title-1-footer": "Over ons",
     "title-2-footer": "Magazine",
-    "title-3-footer": "Getuigenissen",
+    "title-3-footer": "Testimonials",
     "title-4-footer": "Contact",
     "title-5-footer": "Terms & Conditions",
     "title-6-footer": "Privacy Policy",
@@ -38,19 +38,19 @@
     "title-services-6": "Belastingen",
     "title-services-7": "Juridische Diensten",
     "title-popular-locations": "Populaire locaties",
-    "title-popular-locations-1": "Eigenschappen voor verkoop in Marbella",
-    "title-popular-locations-2": "Eigenschappen voor verkoop in Mijas",
-    "title-popular-locations-3": "Eigenschappen voor verkoop in Estepona",
-    "title-popular-locations-4": "Eigenschappen voor verkoop in Sotogrande",
-    "title-popular-locations-5": "Eigenschappen voor verkoop in The Golden Mile",
-    "title-popular-locations-6": "Eigenschappen voor verkoop in Benahavís",
-    "title-popular-locations-7": "Eigenschappen voor verkoop in Rincon",
-    "title-popular-locations-8": "Eigenschappen voor verkoop in Torox",
-    "title-popular-locations-9": "Eigenschappen voor verkoop in Malaga"
+    "title-popular-locations-1": "Woningen in Marbella",
+    "title-popular-locations-2": "Woningen in Mijas",
+    "title-popular-locations-3": "Woningen in Estepona",
+    "title-popular-locations-4": "Woningen in Sotogrande",
+    "title-popular-locations-5": "Woningen in The Golden Mile",
+    "title-popular-locations-6": "Woningen in Benahavís",
+    "title-popular-locations-7": "Woningen in Rincon",
+    "title-popular-locations-8": "Woningen in Torox",
+    "title-popular-locations-9": "Woningen in Malaga"
   },
   "home": {
     "btn-1-hero": "Bekijk Woningen",
-    "btn-2-hero": "Meer leren",
+    "btn-2-hero": "Ontdek meer",
     "title-filter": "Vind je Droomhuis",
     "title-filter-1": "Woning status",
     "title-filter-2": "Type woning",
@@ -72,7 +72,7 @@
     "title-list-properties": "Ontdek onze Nieuwste Woningen",
     "subtitle-category": "Categorie",
     "title-category": "Selecteer het huis dat bij je past",
-    "btn-about-section-2": "Meer leren",
+    "btn-about-section-2": "Ontdek meer",
     "subtitle-testimonials-1": "Getuigenissen",
     "title-testimonials": "Wat onze klanten zeggen",
     "subtitle-testimonials": "Getuigenissen",
@@ -80,7 +80,7 @@
     "list1-why-choose-us": "Experts Agents",
     "list2-why-choose-us": "Uitgebreide lijsten",
     "list3-why-choose-us": "Klanttevredenheid",
-    "paragraph-why-choose-us": "Bij Baruch Real Estate geloven we dat het vinden van een huis niet alleen gaat om een dak boven je hoofd – het gaat om het ontdekken van een plek die perfect bij jouw levensstijl past. Ons team van experts, onze uitgebreide lijsten en onze toewijding aan klanttevredenheid onderscheiden ons in het leveren van een zorgeloze vastgoedervaring."
+    "paragraph-why-choose-us": "Bij Baruch Real Estate geloven we dat het vinden van een huis niet alleen gaat om een dak boven je hoofd, het gaat om het ontdekken van een plek die perfect bij jouw levensstijl past. Ons team van experts, onze uitgebreide lijsten en onze toewijding aan klanttevredenheid onderscheiden ons in het leveren van een zorgeloze vastgoedervaring."
   },
   "buttons": {
     "login": "Inloggen",
@@ -334,5 +334,12 @@
     "select-option": "Selecteer een optie",
     "select-all": "Alles selecteren",
     "no-results": "Geen resultaten gevonden"
+  },
+  "cookies": {
+    "banner-title": "Wij gebruiken cookies",
+    "banner-description": "Wij gebruiken cookies om uw surfervaring te verbeteren en ons verkeer te analyseren. Door op 'Accepteren' te klikken, stemt u in met ons gebruik van cookies.",
+    "accept": "Accepteren",
+    "reject": "Weigeren",
+    "privacy-policy-link": "Privacybeleid"
   }
 }

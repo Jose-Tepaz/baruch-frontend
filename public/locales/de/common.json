@@ -80,7 +80,7 @@
         "list1-why-choose-us": "Experten-Agenten",
         "list2-why-choose-us": "Umfangreiche Angebote",
         "list3-why-choose-us": "Kundenzufriedenheit",
-        "paragraph-why-choose-us": "Bei Baruch Real Estate glauben wir, dass das Finden eines Hauses nicht nur darum geht, ein Dach über dem Kopf zu haben – es geht darum, ein Ort zu entdecken, der zu Ihrem einzigartigen Lebensstil passt. Unser Expertenteam, umfangreiche Angebote und unser Engagement für Kundenzufriedenheit heben uns hervor, um Ihnen ein nahtloses Immobilienerlebnis zu bieten."
+        "paragraph-why-choose-us": "Bei Baruch Real Estate glauben wir, dass das Finden eines Hauses nicht nur darum geht, ein Dach über dem Kopf zu haben, es geht darum, ein Ort zu entdecken, der zu Ihrem einzigartigen Lebensstil passt. Unser Expertenteam, umfangreiche Angebote und unser Engagement für Kundenzufriedenheit heben uns hervor, um Ihnen ein nahtloses Immobilienerlebnis zu bieten."
     },
     "buttons": {
         "login": "Anmelden",
@@ -339,5 +339,12 @@
         "select-option": "Wähle eine Option",
         "select-all": "Alles auswählen",
         "no-results": "Keine Ergebnisse gefunden"
+    },
+    "cookies": {
+        "banner-title": "Wir verwenden Cookies",
+        "banner-description": "Wir verwenden Cookies, um Ihr Browsing-Erlebnis zu verbessern und unseren Traffic zu analysieren. Durch Klicken auf 'Akzeptieren' stimmen Sie der Verwendung von Cookies zu.",
+        "accept": "Akzeptieren",
+        "reject": "Ablehnen",
+        "privacy-policy-link": "Datenschutzrichtlinie"
     }
 }

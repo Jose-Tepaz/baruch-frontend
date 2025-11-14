@@ -335,5 +335,12 @@
     "select-option": "Välj en option",
     "select-all": "Välj alla",
     "no-results": "Inga resultat hittades"
+  },
+  "cookies": {
+    "banner-title": "Vi använder cookies",
+    "banner-description": "Vi använder cookies för att förbättra din upplevelse och analysera vår trafik. Genom att klicka på 'Acceptera' samtycker du till vår användning av cookies.",
+    "accept": "Acceptera",
+    "reject": "Avvisa",
+    "privacy-policy-link": "Integritetspolicy"
   }
 }

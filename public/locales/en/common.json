@@ -368,5 +368,12 @@
         "no-results": "No results found"
 
         
+    },
+    "cookies": {
+        "banner-title": "We use cookies",
+        "banner-description": "We use cookies to enhance your browsing experience and analyze our traffic. By clicking 'Accept', you consent to our use of cookies.",
+        "accept": "Accept",
+        "reject": "Reject",
+        "privacy-policy-link": "Privacy Policy"
     }
 }
