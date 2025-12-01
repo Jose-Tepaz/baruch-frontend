@@ -13,7 +13,6 @@
         "testimonials": "Testimonials",
         "magazine": "Magazine",
         "btn-header-1": "Sell your Property"
-        
     },
     "footer": {
         "title-cta": "Let's Make Your Dream a Reality",
@@ -52,7 +51,6 @@
         "category-2": "Apartments",
         "category-3": "New Developments",
         "category-4": "Golf Properties"
-       
     },
     "home": {
         "btn-1-hero": "View Properties",
@@ -127,7 +125,6 @@
                 "list5": "Trusted lawyers in-house for legal support.",
                 "list6": "Financial partners to ensure a smooth transaction."
             },
-            
             "forseellers": "For Sellers",
             "forseellersDescription": {
                 "list1": "Accurate property valuations based on real market data.",
@@ -138,21 +135,19 @@
             }
         },
         "others4": {
-                "subtitle": "Ready for the next step? ",
-                "title": " We’ll be more than happy to guide you and make the process as smooth as possible.",
-                
+            "subtitle": "Ready for the next step? ",
+            "title": " We’ll be more than happy to guide you and make the process as smooth as possible.",
             "btn_text": "Contact Us"
-            },
+        },
         "conatct-section": {
             "title": "Our Services ",
             "description": "At Baruch Real Estate, we believe in building lasting relationships based on trust, transparency, and personal contact. For us, real estate is not just about properties, it’s about people. We guide you through the process step by step. With care, clarity and a focus on quality at every stage. And our support doesn’t stop once you’ve bought a property.",
             "btn_text": "See all services"
         },
-       
         "meet-the-team": {
-        "subtitle": "Ready for the next step?",
-         "title": "Let’s connect",
-         "description": "Please fill in your details below so we can contact you."
+            "subtitle": "Ready for the next step?",
+            "title": "Let’s connect",
+            "description": "Please fill in your details below so we can contact you."
         }
     },
     "services": {
@@ -225,47 +220,89 @@
             }
         }
     },
+    "services-page": {
+        "title": "Services",
+        "description": "Your Trusted Partner When Buying Property in Costa del Sol\nPurchasing a home in Spain is an exciting step, but it can also be complex, especially if you’re not familiar with the local market, language, and legal system.\nAt Baruch Real Estate, we make the process transparent, secure, and fully guided from start to finish.\nOur Buying Representation Service ensures that your interests are always protected. From identifying the right property and arranging viewings to negotiating the best terms and managing the legal process, we handle every detail with real estate and legal support under one roof.",
+        "btn-text": "See all services",
+        "services-list": [
+            {
+                "id": "buying-representation",
+                "title": "Buying Representation",
+                "description": "Your Trusted Partner When Buying Property in Costa del Sol\n\nPurchasing a home in Spain is an exciting step, but it can also be complex, especially if you’re not familiar with the local market, language, and legal system.\n\nAt Baruch Real Estate, we make the process transparent, secure, and fully guided from start to finish.\n\nOur Buying Representation Service ensures that your interests are always protected. From identifying the right property and arranging viewings to negotiating the best terms and managing the legal process, we handle every detail with real estate and legal support under one roof.",
+                "image": "/assets/img/all-images/service/management.webp",
+                "title-list": "The steps to buying your home in Spain",
+                "details": [
+                    {
+                        "title": "1. Understanding Your Goals and Preferences",
+                        "description": "We begin by getting to know you, your needs, budget, lifestyle, and investment goals. Whether you’re looking for a holiday villa, a permanent residence, or an investment property, we tailor our search to match your exact requirements. Our team has in-depth knowledge of Costa del Sol."
+                    },
+                    {
+                        "title": "2. Property Search and Selection",
+                        "description": "Based on your preferences, we present a curated selection of properties that meet your criteria. We search across our own listings as well as through our network of trusted agents and developers, ensuring full market access, not just what’s publicly available. Our focus is on finding the right property, not just any property."
+                    },
+                    {
+                        "title": "3. Property Viewings",
+                        "description": "We organize viewing schedules that fit your visit, whether you’re in Spain or traveling from abroad. We accompany you to each viewing, provide honest insights about each property, and highlight both opportunities and potential concerns. If you cannot travel, we can arrange virtual viewings with video tours and live walkthroughs. Transparency and honest advice are at the heart of what we do. You’ll always know exactly what you’re viewing and what to expect."   
+                    },
+                    {
+                        "title": "4. Due Diligence and Legal Verification",
+                        "description": "Once you find a property you’re interested in, our legal team steps in to perform a full due diligence check. \n\nThis includes verifying: \n\nLegal ownership and registration (Nota Simple) \n\nUrban planning compliance \n\nOutstanding debts, taxes, or community fees \n\nBuilding licenses and certificates. With Baruch Real Estate, you benefit from having legal professionals working closely with your agent, ensuring every property is legally sound before you commit."
+                    }
+                ]
+            },
+            {
+                "id": "selling-representation",
+                "title": "Selling Representation",
+                "description": "We offer a wide range of services to help you buy, sell, and rent properties in Spain. Our team of experts is here to guide you through every step of the process.",
+                "image": "/assets/img/all-images/service/selling-representation.webp",
+                "details": [
+                    "Personalized property searches tailored to your lifestyle and goals.",
+                    "Expert guidance on local neighborhoods, schools, and communities.",
+                    "Hassle-free viewings and curated recommendations.",
+                    "Skilled negotiation to get you the best deal.",
+                    "Trusted lawyers in-house for legal support.",
+                    "Financial partners to ensure a smooth transaction."
+                ]
+            },
+            {
+                "id": "renting-representation",
+                "title": "Renting Representation",
+                "description": "We offer a wide range of services to help you buy, sell, and rent properties in Spain. Our team of experts is here to guide you through every step of the process.",
+                "image": "/assets/img/all-images/service/renting-representation.webp",
+                "details": [
+                    "Personalized property searches tailored to your lifestyle and goals.",
+                    "Expert guidance on local neighborhoods, schools, and communities.",
+                    "Hassle-free viewings and curated recommendations.",
+                    "Skilled negotiation to get you the best deal.",
+                    "Trusted lawyers in-house for legal support.",
+                    "Financial partners to ensure a smooth transaction."
+                ]
+            }
+        ]
+    },
     "faq": {
         "title": "Frequently Asked Question",
-       
-                "question-1": "What services does Baruch Real Estate offer?",
-                "answer-1": "Baruch Real Estate offers buying, selling, and renting services, as well as property management and investment advice on the Costa del Sol.",
-           
-            
-                "question-2": "Why should I choose Baruch Real Estate?",
-                "answer-2": "Baruch Real Estate provides personalized service, expert local knowledge, and a dedicated team to guide you through every step of your real estate journey.",
-           
-                "question-3": "How can Baruch help me find the right property?",
-                "answer-3": "Baruch Real Estate listens to your needs and preferences, then curates a selection of properties that match your lifestyle and goals.",
-            
-            
-                "question-4": "Does Baruch Real Estate assist with legal paperwork?",
-                "answer-4": "Yes, Baruch Real Estate has trusted in-house lawyers to help you with all legal documentation and ensure a smooth transaction.",
-           
-                "question-5": "Can Baruch help me sell my property quickly?",
-                "answer-5": "Baruch Real Estate uses premium marketing strategies and a wide network to attract both local and international buyers, helping you sell efficiently.",
-           
-            
-                "question-6": "What areas does Baruch Real Estate cover?",
-                "answer-6": "Baruch Real Estate specializes in properties across the Costa del Sol, including Marbella, Estepona, Benahavís, and surrounding areas.",
-            
-            
-                "question-7": "Does Baruch offer property management services?",
-                "answer-7": "Yes, Baruch Real Estate provides comprehensive property management to ensure your investment is well cared for, even when you are away.",
-            
-            
-                "question-8": "How does Baruch support international buyers?",
-                "answer-8": "Baruch Real Estate offers multilingual support, guidance on local regulations, and assistance with all aspects of purchasing property from abroad.",
-            
-            
-                "question-9": "What makes Baruch Real Estate different from other agencies?",
-                "answer-9": "Baruch Real Estate stands out for its commitment to client satisfaction, transparency, and a tailored approach to every client’s needs.",
-            
-            
-                "question-10": "How do I contact Baruch Real Estate for a consultation?",
-                "answer-10": "You can contact Baruch Real Estate through our website, by phone, or by visiting our office. Our team is ready to assist you with any questions."
+        "question-1": "What services does Baruch Real Estate offer?",
+        "answer-1": "Baruch Real Estate offers buying, selling, and renting services, as well as property management and investment advice on the Costa del Sol.",
+        "question-2": "Why should I choose Baruch Real Estate?",
+        "answer-2": "Baruch Real Estate provides personalized service, expert local knowledge, and a dedicated team to guide you through every step of your real estate journey.",
+        "question-3": "How can Baruch help me find the right property?",
+        "answer-3": "Baruch Real Estate listens to your needs and preferences, then curates a selection of properties that match your lifestyle and goals.",
+        "question-4": "Does Baruch Real Estate assist with legal paperwork?",
+        "answer-4": "Yes, Baruch Real Estate has trusted in-house lawyers to help you with all legal documentation and ensure a smooth transaction.",
+        "question-5": "Can Baruch help me sell my property quickly?",
+        "answer-5": "Baruch Real Estate uses premium marketing strategies and a wide network to attract both local and international buyers, helping you sell efficiently.",
+        "question-6": "What areas does Baruch Real Estate cover?",
+        "answer-6": "Baruch Real Estate specializes in properties across the Costa del Sol, including Marbella, Estepona, Benahavís, and surrounding areas.",
+        "question-7": "Does Baruch offer property management services?",
+        "answer-7": "Yes, Baruch Real Estate provides comprehensive property management to ensure your investment is well cared for, even when you are away.",
+        "question-8": "How does Baruch support international buyers?",
+        "answer-8": "Baruch Real Estate offers multilingual support, guidance on local regulations, and assistance with all aspects of purchasing property from abroad.",
+        "question-9": "What makes Baruch Real Estate different from other agencies?",
+        "answer-9": "Baruch Real Estate stands out for its commitment to client satisfaction, transparency, and a tailored approach to every client’s needs.",
+        "question-10": "How do I contact Baruch Real Estate for a consultation?",
+        "answer-10": "You can contact Baruch Real Estate through our website, by phone, or by visiting our office. Our team is ready to assist you with any questions."
     },
-            
     "language": {
         "selectLanguage": "Select Language",
         "currentLanguage": "Current Language",
@@ -314,11 +351,10 @@
         },
         "title": "Get in touch",
         "description": "You’re welcome to visit our office in Málaga for a personal meeting, or we’d be happy to accompany you on a property visit. Whether you have questions about buying, selling, financing, or residency, our team is ready to assist. \n\nWe speak Dutch, English, and Spanish, ensuring clear communication and support throughout the process."
-       
     },
     "contact-form": {
         "subtitle": "Ready for the next step? ",
-        "title": "Let’s connect ",  
+        "title": "Let’s connect ",
         "description": "We’ll be more than happy to guide you and make the process as smooth as possible.",
         "btn_text": "Contact Us",
         "input-name": "Name",
@@ -366,8 +402,6 @@
         "select-option": "Select option",
         "select-all": "Select All",
         "no-results": "No results found"
-
-        
     },
     "cookies": {
         "banner-title": "We use cookies",

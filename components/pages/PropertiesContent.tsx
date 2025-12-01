@@ -69,13 +69,13 @@ interface PropertiesContentProps {
     amenities?: Amenity[];
     locations?: Location[];
     searchParams: {
-        category?: string;
-        property_status?: string;
+        category?: string | string[];
+        property_status?: string | string[];
         bedrooms?: string;
         bathrooms?: string;
         min_price?: string;
         max_price?: string;
-        location?: string;
+        location?: string | string[];
         keyword?: string;
         city?: string;
         state?: string;

@@ -14,13 +14,13 @@ interface PropertiesPageProps {
         lang: string;
     }>;
     searchParams: Promise<{
-        category?: string;
-        property_status?: string;
+        category?: string | string[];
+        property_status?: string | string[];
         bedrooms?: string;
         bathrooms?: string;
         min_price?: string;
         max_price?: string;
-        location?: string;
+        location?: string | string[];
         keyword?: string;
         city?: string;
         state?: string;
@@ -80,17 +80,34 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
     const { category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities: searchAmenities } = await searchParams;
     
     // Parse parameters to handle multiple selections
-    const locationParam = location;
-    const locationSlugs = locationParam ? locationParam.split(',').map(loc => loc.trim()).filter(Boolean) : [];
+    // Next.js 15 puede recibir arrays cuando hay múltiples parámetros con el mismo nombre
+    const locationParam = Array.isArray(location) ? location : location;
+    const locationSlugs = locationParam 
+        ? (Array.isArray(locationParam) 
+            ? locationParam.map(loc => String(loc).trim()).filter(Boolean)
+            : String(locationParam).split(',').map(loc => loc.trim()).filter(Boolean))
+        : [];
     
-    const categoryParam = category;
-    const categorySlugs = categoryParam ? categoryParam.split(',').map(cat => cat.trim()).filter(Boolean) : [];
+    const categoryParam = Array.isArray(category) ? category : category;
+    const categorySlugs = categoryParam 
+        ? (Array.isArray(categoryParam)
+            ? categoryParam.map(cat => String(cat).trim()).filter(Boolean)
+            : String(categoryParam).split(',').map(cat => cat.trim()).filter(Boolean))
+        : [];
     
-    const statusParam = property_status;
-    const statusTitles = statusParam ? statusParam.split(',').map(status => status.trim()).filter(Boolean) : [];
+    const statusParam = Array.isArray(property_status) ? property_status : property_status;
+    const statusTitles = statusParam 
+        ? (Array.isArray(statusParam)
+            ? statusParam.map(status => String(status).trim()).filter(Boolean)
+            : String(statusParam).split(',').map(status => status.trim()).filter(Boolean))
+        : [];
     
-    const amenitiesParam = Array.isArray(searchAmenities) ? searchAmenities[0] : searchAmenities;
-    const amenitiesArray = amenitiesParam ? amenitiesParam.split(',').map(amenity => amenity.trim()).filter(Boolean) : [];
+    const amenitiesParam = Array.isArray(searchAmenities) ? searchAmenities : searchAmenities;
+    const amenitiesArray = amenitiesParam 
+        ? (Array.isArray(amenitiesParam)
+            ? amenitiesParam.map(amenity => String(amenity).trim()).filter(Boolean)
+            : String(amenitiesParam).split(',').map(amenity => amenity.trim()).filter(Boolean))
+        : [];
     const sp = await searchParams;
     
     // Verificar autenticación del usuario
@@ -108,15 +125,15 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
        
         
         const { data, meta } = await getProperties({
-            categorySlug: category, // Mantener para compatibilidad
+            categorySlug: Array.isArray(category) ? category[0] : category, // Mantener para compatibilidad
             categories: categorySlugs, // Array de slugs para filtrado múltiple
-            propertyStatus: property_status, // Mantener para compatibilidad
+            propertyStatus: Array.isArray(property_status) ? property_status[0] : property_status, // Mantener para compatibilidad
             statuses: statusTitles, // Array de títulos para filtrado múltiple
             bedrooms: bedrooms,
             bathrooms: bathrooms,
             min_price: min_price,
             max_price: max_price,
-            location: location, // Mantener para compatibilidad con filtros de texto
+            location: Array.isArray(location) ? location[0] : location, // Mantener para compatibilidad con filtros de texto
             locations: locationSlugs, // Array de slugs para filtrado múltiple
             amenities: Array.isArray(searchAmenities) ? searchAmenities[0] : searchAmenities, // Mantener para compatibilidad
             amenitiesArray: amenitiesArray, // Array de nombres para filtrado múltiple

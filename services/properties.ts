@@ -227,14 +227,22 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
   // paginación
   queryString += `&pagination[page]=${encodeURIComponent(String(page))}&pagination[pageSize]=${encodeURIComponent(String(pageSize))}`
 
+  // Contadores para agrupar $or por tipo de filtro usando $and
+  let andIndex = 0;
+  let categoryOrIndex = 0;
+  let statusOrIndex = 0;
+  let locationOrIndex = 0;
+  let amenityOrIndex = 0;
 
   // Aplicar filtro de categoría solo si no hay múltiples categorías seleccionadas
   if (filter.categories && filter.categories.length > 0) {
-    // Para múltiples categorías, usar $or para cada categoría
-    filter.categories.forEach((slug, index) => {
-      queryString += `&filters[\$or][${index}][category][slug][\$eq]=${encodeURIComponent(slug)}`;
+    // Para múltiples categorías, usar $and[$andIndex][$or] para agrupar
+    filter.categories.forEach((slug) => {
+      queryString += `&filters[\$and][${andIndex}][\$or][${categoryOrIndex}][category][slug][\$eq]=${encodeURIComponent(slug)}`;
+      categoryOrIndex++;
     });
-    console.log('Added multiple categories filter:', filter.categories);
+    andIndex++;
+    console.log('Added multiple categories filter (OR):', filter.categories);
   } else if (filter.categorySlug && filter.categorySlug.trim() !== '') {
     // Solo aplicar filtro de texto si no hay múltiples categorías
     queryString += `&filters[category][slug][$contains]=${filter.categorySlug}`
@@ -243,11 +251,13 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
 
   // Aplicar filtro de status solo si no hay múltiples status seleccionados
   if (filter.statuses && filter.statuses.length > 0) {
-    // Para múltiples status, usar $or para cada status
-    filter.statuses.forEach((status, index) => {
-      queryString += `&filters[\$or][${index}][property_status][Title][\$eq]=${encodeURIComponent(status)}`;
+    // Para múltiples status, usar $and[$andIndex][$or] para agrupar
+    filter.statuses.forEach((status) => {
+      queryString += `&filters[\$and][${andIndex}][\$or][${statusOrIndex}][property_status][Title][\$eq]=${encodeURIComponent(status)}`;
+      statusOrIndex++;
     });
-    console.log('Added multiple statuses filter:', filter.statuses);
+    andIndex++;
+    console.log('Added multiple statuses filter (OR):', filter.statuses);
   } else if (filter.propertyStatus && filter.propertyStatus.trim() !== '') {
     // Solo aplicar filtro de texto si no hay múltiples status
     queryString += `&filters[property_status][Title][$eq]=${encodeURIComponent(filter.propertyStatus)}`
@@ -276,11 +286,13 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
 
   // Aplicar filtro de location solo si no hay múltiples locations seleccionadas
   if (filter.locations && filter.locations.length > 0) {
-    // Para múltiples locations, usar $or para cada location
-    filter.locations.forEach((slug, index) => {
-      queryString += `&filters[\$or][${index}][location][slug][\$eq]=${encodeURIComponent(slug)}`;
+    // Para múltiples locations, usar $and[$andIndex][$or] para agrupar
+    filter.locations.forEach((slug) => {
+      queryString += `&filters[\$and][${andIndex}][\$or][${locationOrIndex}][location][slug][\$eq]=${encodeURIComponent(slug)}`;
+      locationOrIndex++;
     });
-    console.log('Added multiple locations filter:', filter.locations);
+    andIndex++;
+    console.log('Added multiple locations filter (OR):', filter.locations);
   } else if (filter.location && filter.location.trim() !== '') {
     // Solo aplicar filtro de texto si no hay múltiples locations
     queryString += `&filters[location][name][$containsi]=${encodeURIComponent(filter.location)}`
@@ -294,11 +306,14 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
 
   // Aplicar filtro de amenities solo si no hay múltiples amenities seleccionadas
   if (filter.amenitiesArray && filter.amenitiesArray.length > 0) {
-    // Para múltiples amenities, usar $or para cada amenity
-    filter.amenitiesArray.forEach((amenity, index) => {
-      queryString += `&filters[\$or][${index}][amenities][Name][\$eq]=${encodeURIComponent(amenity)}`;
+    // Para múltiples amenities, usar $and[$andIndex][$or] para agrupar
+    // Para relaciones many-to-many en Strapi, usamos $or con la estructura correcta
+    filter.amenitiesArray.forEach((amenity) => {
+      queryString += `&filters[\$and][${andIndex}][\$or][${amenityOrIndex}][amenities][Name][\$eq]=${encodeURIComponent(amenity)}`;
+      amenityOrIndex++;
     });
-    console.log('Added multiple amenities filter:', filter.amenitiesArray);
+    andIndex++;
+    console.log('Added multiple amenities filter (OR):', filter.amenitiesArray);
   } else if (filter.amenities && filter.amenities.trim() !== '') {
     // Solo aplicar filtro de texto si no hay múltiples amenities
     queryString += `&filters[amenities][Name][$contains]=${encodeURIComponent(filter.amenities)}`

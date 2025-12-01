@@ -115,55 +115,78 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
     const lang = params.lang as string;
     const { t } = useTranslation('common');
     
-    const [keyword, setKeyword] = useState(searchParams.get('keyword') || '');
+    const [keyword, setKeyword] = useState('');
     const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
     const [selectedStatuses, setSelectedStatuses] = useState<string[]>([]);
     const [selectedAmenities, setSelectedAmenities] = useState<string[]>([]);
-    const [bedrooms, setBedrooms] = useState(searchParams.get('bedrooms') || '');
-    const [bathrooms, setBathrooms] = useState(searchParams.get('bathrooms') || '');
-    const [minPrice, setMinPrice] = useState(searchParams.get('min_price') || '');
-    const [maxPrice, setMaxPrice] = useState(searchParams.get('max_price') || '');
+    const [bedrooms, setBedrooms] = useState('');
+    const [bathrooms, setBathrooms] = useState('');
+    const [minPrice, setMinPrice] = useState('');
+    const [maxPrice, setMaxPrice] = useState('');
     const [showMoreFilters, setShowMoreFilters] = useState(false);
     
     // Ref para manejar el timeout del keyword search
     const keywordTimeoutRef = useRef<NodeJS.Timeout | null>(null);
     const locationTimeoutRef = useRef<NodeJS.Timeout | null>(null);
     
-    // Parse location parameter from URL on component mount
+    // Parse all parameters from URL on component mount
     useEffect(() => {
-        const locationParam = searchParams.get('location');
-        if (locationParam) {
-            // Handle both single location and comma-separated multiple locations
-            const locationsFromUrl = locationParam.split(',').map(loc => loc.trim()).filter(Boolean);
-            setSelectedLocations(locationsFromUrl);
-        }
-    }, [searchParams]);
+        try {
+            // Parse keyword
+            const keywordParam = searchParams.get('keyword');
+            if (keywordParam) setKeyword(keywordParam);
 
-    // Parse category parameter from URL on component mount
-    useEffect(() => {
-        const categoryParam = searchParams.get('category');
-        if (categoryParam) {
-            const categoriesFromUrl = categoryParam.split(',').map(cat => cat.trim()).filter(Boolean);
-            setSelectedCategories(categoriesFromUrl);
-        }
-    }, [searchParams]);
+            // Parse location parameter
+            const locationParam = searchParams.getAll('location');
+            if (locationParam.length > 0) {
+                const locationsFromUrl = locationParam.map(loc => String(loc).trim()).filter(Boolean);
+                setSelectedLocations(locationsFromUrl);
+            } else {
+                setSelectedLocations([]);
+            }
 
-    // Parse property_status parameter from URL on component mount
-    useEffect(() => {
-        const statusParam = searchParams.get('property_status');
-        if (statusParam) {
-            const statusesFromUrl = statusParam.split(',').map(status => status.trim()).filter(Boolean);
-            setSelectedStatuses(statusesFromUrl);
-        }
-    }, [searchParams]);
+            // Parse category parameter
+            const categoryParam = searchParams.getAll('category');
+            if (categoryParam.length > 0) {
+                const categoriesFromUrl = categoryParam.map(cat => String(cat).trim()).filter(Boolean);
+                setSelectedCategories(categoriesFromUrl);
+            } else {
+                setSelectedCategories([]);
+            }
 
-    // Parse amenities parameter from URL on component mount
-    useEffect(() => {
-        const amenitiesParam = searchParams.get('amenities');
-        if (amenitiesParam) {
-            const amenitiesFromUrl = amenitiesParam.split(',').map(amenity => amenity.trim()).filter(Boolean);
-            setSelectedAmenities(amenitiesFromUrl);
+            // Parse property_status parameter
+            const statusParam = searchParams.getAll('property_status');
+            if (statusParam.length > 0) {
+                const statusesFromUrl = statusParam.map(status => String(status).trim()).filter(Boolean);
+                setSelectedStatuses(statusesFromUrl);
+            } else {
+                setSelectedStatuses([]);
+            }
+
+            // Parse amenities parameter
+            const amenitiesParam = searchParams.getAll('amenities');
+            if (amenitiesParam.length > 0) {
+                const amenitiesFromUrl = amenitiesParam.map(amenity => String(amenity).trim()).filter(Boolean);
+                setSelectedAmenities(amenitiesFromUrl);
+            } else {
+                setSelectedAmenities([]);
+            }
+
+            // Parse other single-value parameters
+            const bedroomsParam = searchParams.get('bedrooms');
+            if (bedroomsParam) setBedrooms(bedroomsParam);
+
+            const bathroomsParam = searchParams.get('bathrooms');
+            if (bathroomsParam) setBathrooms(bathroomsParam);
+
+            const minPriceParam = searchParams.get('min_price');
+            if (minPriceParam) setMinPrice(minPriceParam);
+
+            const maxPriceParam = searchParams.get('max_price');
+            if (maxPriceParam) setMaxPrice(maxPriceParam);
+        } catch (error) {
+            console.error('Error parsing search params:', error);
         }
     }, [searchParams]);
 
@@ -273,10 +296,29 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         const finalMaxPrice = newFilters.maxPrice !== undefined ? newFilters.maxPrice : maxPrice;
         
         if (finalKeyword.trim()) params.set('keyword', finalKeyword.trim());
-        if (finalLocations.length > 0) params.set('location', finalLocations.join(','));
-        if (finalCategories.length > 0) params.set('category', finalCategories.join(','));
-        if (finalStatuses.length > 0) params.set('property_status', finalStatuses.join(','));
-        if (finalAmenities.length > 0) params.set('amenities', finalAmenities.join(','));
+        
+        // Usar append para múltiples valores (crea ?category=cat1&category=cat2 en lugar de ?category=cat1,cat2)
+        if (finalLocations.length > 0) {
+            finalLocations.forEach(location => {
+                params.append('location', location);
+            });
+        }
+        if (finalCategories.length > 0) {
+            finalCategories.forEach(category => {
+                params.append('category', category);
+            });
+        }
+        if (finalStatuses.length > 0) {
+            finalStatuses.forEach(status => {
+                params.append('property_status', status);
+            });
+        }
+        if (finalAmenities.length > 0) {
+            finalAmenities.forEach(amenity => {
+                params.append('amenities', amenity);
+            });
+        }
+        
         if (finalBedrooms) params.set('bedrooms', finalBedrooms);
         if (finalBathrooms) params.set('bathrooms', finalBathrooms);
         if (finalMinPrice) params.set('min_price', finalMinPrice);

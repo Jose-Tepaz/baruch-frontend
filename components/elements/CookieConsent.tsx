@@ -77,7 +77,7 @@ export default function CookieConsent() {
           >
             {t('cookies.reject')}
           </button>
-          <button
+          <button 
             onClick={handleAccept}
             className={styles.acceptButton}
             aria-label={t('cookies.accept')}

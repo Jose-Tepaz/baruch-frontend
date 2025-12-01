@@ -1,12 +1,10 @@
 import Layout from "@/components/layout/Layout";
-import InnerHeader from "@/components/layout/InnerHeader";
 import AboutHero from "@/components/sections/AboutHero";
-import Others4 from "@/components/sections/Others4";
 import AboutForSellers from "@/components/sections/AboutForSellers";
 import AboutForBuyers from "@/components/sections/AboutForBuyers";
-import ContactForm from "@/components/sections/contactForm";
+
 import ContactSectionAbout from "@/components/sections/ContactSectionAbout";
-import PropertyList1 from "@/components/sections/PropertieList1";
+
 import { getProperties } from "@/services/get-properties";
 import { Metadata } from 'next';
 import Link from "next/link";
