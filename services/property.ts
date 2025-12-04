@@ -63,7 +63,6 @@ const getPropertyById = async (documentId: string, locale?: string) => {
         const propertyStatus = property_status ? property_status.Title : ''
         
         // Procesar las unidades
-        console.log('Raw units from API:', units);
         const processedUnits = units ? units.map((unit: any) => ({
             id: unit.id,
             housing_number: unit.housing_number,
@@ -85,7 +84,6 @@ const getPropertyById = async (documentId: string, locale?: string) => {
                 size: unit.floor.size
             } : null
         })) : []
-        console.log('Processed units:', processedUnits);
         
         return {
             id,
@@ -112,7 +110,7 @@ const getPropertyById = async (documentId: string, locale?: string) => {
         }
         
     } catch (error) {
-        console.error('Error al obtener la propiedad:', error)
+        // Error silencioso en producción - devolver null
         return null
     }
 }

@@ -6,7 +6,7 @@ export async function GET() {
         const categories = await getCategories();
         return NextResponse.json(categories);
     } catch (error) {
-        console.error('Error fetching categories:', error);
+        // Error silencioso en producción - devolver array vacío
         return NextResponse.json([], { status: 500 });
     }
 }

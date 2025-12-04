@@ -186,7 +186,7 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
             const maxPriceParam = searchParams.get('max_price');
             if (maxPriceParam) setMaxPrice(maxPriceParam);
         } catch (error) {
-            console.error('Error parsing search params:', error);
+            // Error silencioso en producción - los valores por defecto se mantienen
         }
     }, [searchParams]);
 
@@ -216,11 +216,6 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         { value: '', label: t('home.amenities-filter') || 'All Amenities' },
         ...amenities.map(amenity => ({ value: amenity.Name, label: amenity.Name }))
     ];
-
-    // Debug log para verificar que las amenities se están cargando
-    console.log('=== PropertyFilterStatic Amenities Debug ===');
-    console.log('Amenities received:', amenities);
-    console.log('Amenities options:', amenitiesOptions);
 
     const bedroomOptions = [
         { value: '', label: t('home.bedrooms-filter') || 'Bedrooms' },

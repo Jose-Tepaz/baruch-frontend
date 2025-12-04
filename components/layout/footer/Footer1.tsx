@@ -23,20 +23,17 @@ export default function Footer1() {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                console.log('Footer1: Iniciando fetch de categorías...');
                 const response = await fetch('/api/categories');
                 const categoriesData = await response.json();
-
 
                 // Asegurar que categoriesData sea un array
                 if (categoriesData && Array.isArray(categoriesData)) {
                     setCategories(categoriesData);
                 } else {
-                    console.warn('Footer1: categoriesData no es un array válido:', categoriesData);
                     setCategories([]);
                 }
             } catch (error) {
-                console.error('Footer1: Error fetching categories:', error);
+                // Error silencioso en producción - usar array vacío
                 setCategories([]);
             } finally {
                 setLoading(false);

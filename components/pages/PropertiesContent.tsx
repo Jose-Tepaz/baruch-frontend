@@ -3,10 +3,8 @@
 import { useState, useEffect } from 'react'
 import PropertyFilterStatic from "@/components/elements/property-filter-static";
 import PropertieCardV1 from "@/components/sections/PropertieCardV1";
-import LanguageDebug from "@/components/debug/LanguageDebug";
-import StrapiApiTest from "@/components/debug/StrapiApiTest";
 import Pagination from "@/components/elements/Pagination";
-import { t, useTranslation } from "@/utils/i18n-simple"; 
+import { t } from "@/utils/i18n-simple"; 
 interface Category {
     id?: number;
     name: string;
@@ -102,7 +100,6 @@ export default function PropertiesContent({
     useEffect(() => {
 
         if (!initialProperties || !Array.isArray(initialProperties) || initialProperties.length === 0) {
-           
             setFilteredProperties([]);
             return;
         }
@@ -194,7 +191,6 @@ export default function PropertiesContent({
             }
         }
 
-        console.log('=== PropertiesContent: Filtered properties count:', filtered.length);
         setFilteredProperties(filtered);
     }, [initialProperties, searchParams]);
 

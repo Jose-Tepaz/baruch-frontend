@@ -72,25 +72,16 @@ export function getProperties(
     .then(res => {
         // Manejo de respuesta inválida o vacía
         if (!res || !res.data) {
-            if (process.env.NODE_ENV === 'development') {
-                console.log('Invalid response structure:', res);
-            }
             return { properties: [], pagination: res?.meta?.pagination || {} };
         }
         
         // Verifica que la respuesta sea un array
         if (!Array.isArray(res.data)) {
-            if (process.env.NODE_ENV === 'development') {
-                console.log('Response data is not an array:', res.data);
-            }
             return { properties: [], pagination: res?.meta?.pagination || {} };
         }
         
         // Si no hay propiedades, retorna array vacío
         if (res.data.length === 0) {
-            if (process.env.NODE_ENV === 'development') {
-                console.log('No properties found in response');
-            }
             return { properties: [], pagination: res?.meta?.pagination || {} };
         }
         
@@ -149,8 +140,7 @@ export function getProperties(
         }
     })
     .catch(error => {
-        // Manejo de errores en la consulta
-        console.error('=== get-properties.ts Error ===', error);
+        // Error silencioso en producción - devolver array vacío
         return { properties: [], pagination: {} };
     })
 }

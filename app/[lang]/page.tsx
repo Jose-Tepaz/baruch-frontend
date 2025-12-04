@@ -12,13 +12,11 @@ import HeroHome from "@/components/sections/HeroHome";
 
 // Importar componentes del cliente dinámicamente
 const Layout = dynamic(() => import("@/components/layout/Layout"), { ssr: true });
-const Hero2 = dynamic(() => import("@/components/sections/Hero2"), { ssr: true });
 const SearchBox = dynamic(() => import("@/components/sections/SearchBox"), { ssr: true });
 const About2 = dynamic(() => import("@/components/sections/About2"), { ssr: true });
 const PropertyList1 = dynamic(() => import("@/components/sections/PropertieList1"), { ssr: true });
 const Category1 = dynamic(() => import("@/components/sections/Category1"), { ssr: true });
 const About3 = dynamic(() => import("@/components/sections/About3"), { ssr: true });
-const Testimonial2 = dynamic(() => import("@/components/sections/Testimonial2"), { ssr: true });
 
 interface Props {
   params: Promise<{
@@ -124,8 +122,6 @@ export default async function Home({ params }: Props) {
 
         const properties = propertiesResult?.properties || [];
 
-       
-
         return (
             <Layout>
                 <HeroHome properties={properties || []} />
@@ -146,8 +142,7 @@ export default async function Home({ params }: Props) {
             </Layout>
         );
     } catch (error) {
-        console.error('=== Home Page: Error loading data ===', error);
-        
+        // Error silencioso en producción - la página se renderiza con datos vacíos
         return (
             <Layout>
                 <HeroHome properties={[]} />

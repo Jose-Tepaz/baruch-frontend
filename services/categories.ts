@@ -21,18 +21,11 @@ export function getCategories(locale?: string) {
 
     const currentLocale = getLocaleWithFallback(locale);
     const queryString = `categories?fields[0]=name&fields[1]=slug&fields[2]=description&populate[image][fields][0]=url&locale=${encodeURIComponent(currentLocale)}`;
-    
-    console.log('=== getCategories DEBUG ===');
-    console.log('Locale:', currentLocale);
-    console.log('Query string:', queryString);
 
     return query(queryString)
     .then(res => {
-        console.log('Categories API Response:', JSON.stringify(res.data, null, 2));
-        
         // Verificar que res.data existe y es un array
         if (!res.data || !Array.isArray(res.data)) {
-            console.warn('Categories API: res.data no es un array:', res.data);
             return [];
         }
         
@@ -45,7 +38,7 @@ export function getCategories(locale?: string) {
         })
     })
     .catch(error => {
-        console.error('Error in getCategories:', error);
-        return []; // Devolver array vacío en lugar de lanzar error
+        // Error silencioso en producción - devolver array vacío
+        return [];
     });
 }

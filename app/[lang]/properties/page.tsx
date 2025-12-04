@@ -1,6 +1,5 @@
 import SimpleLayout from "@/components/layout/SimpleLayout"
 import { getProperties } from "@/services/properties"
-import InnerHeader from "@/components/layout/InnerHeader";
 import { getCategories } from "@/services/categories";
 import { getPropertyStatuses } from "@/services/property-status";
 import { getAmenities } from "@/services/amenities";
@@ -77,7 +76,7 @@ export async function generateMetadata({ params }: PropertiesPageProps): Promise
 
 export default async function PropertiesPage({ params, searchParams }: PropertiesPageProps) {
     const { lang } = await params;
-    const { category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities: searchAmenities } = await searchParams;
+    const { category, property_status, bedrooms, bathrooms, min_price, max_price, location, keyword, city, state, amenities: searchAmenities, page } = await searchParams;
     
     // Parse parameters to handle multiple selections
     // Next.js 15 puede recibir arrays cuando hay múltiples parámetros con el mismo nombre
@@ -108,8 +107,6 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
             ? amenitiesParam.map(amenity => String(amenity).trim()).filter(Boolean)
             : String(amenitiesParam).split(',').map(amenity => amenity.trim()).filter(Boolean))
         : [];
-    const sp = await searchParams;
-    
     // Verificar autenticación del usuario
     const cookieStore = await cookies();
     const authToken = cookieStore.get('auth_token')?.value;
@@ -119,11 +116,9 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
     let categories = [];
     let properties: any[] = [];
     let propertyStatuses: any[] = [];
-    const currentPage = sp.page ? Math.max(1, Number(sp.page)) : 1;
+    const currentPage = page ? Math.max(1, Number(page)) : 1;
     let pagination = { page: 1, pageSize: 9, pageCount: 0, total: 0 };
     try {
-       
-        
         const { data, meta } = await getProperties({
             categorySlug: Array.isArray(category) ? category[0] : category, // Mantener para compatibilidad
             categories: categorySlugs, // Array de slugs para filtrado múltiple
@@ -150,7 +145,6 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
                 // Solo mostrar propiedades que NO sean privadas o que is_private sea undefined/null/false
                 return !property.is_private;
             });
-            console.log(`Filtered ${data.length - properties.length} private properties (user not authenticated)`);
         }
         
         // Filtrar propiedades localmente por otros criterios si es necesario
@@ -185,11 +179,6 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
                         const hasAnyAmenity = amenityArray.some(amenity => 
                             propertyAmenityNames.includes(amenity)
                         );
-                        console.log('=== Amenities Filter Debug ===');
-                        console.log('Search amenities:', amenityArray);
-                        console.log('Property amenities:', propertyAmenities);
-                        console.log('Property amenity names:', propertyAmenityNames);
-                        console.log('Has any amenity:', hasAnyAmenity);
                         if (!hasAnyAmenity) {
                             return false;
                         }
@@ -199,47 +188,38 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
                 return true;
             });
         }
-        
-
-        
     } catch (error) {
-     
+        // Error silencioso en producción - se usa array vacío
         properties = [];
     }
     
     try {
         categories = await getCategories(lang); // Usar el locale dinámico
     } catch (error) {
-        
+        // Error silencioso en producción - se usa array vacío
         categories = [];
     }
 
     try {
         propertyStatuses = await getPropertyStatuses(lang); // Usar el locale dinámico
     } catch (error) {
-        
+        // Error silencioso en producción - se usa array vacío
         propertyStatuses = [];
     }
 
     let amenities: any[] = [];
     try {
         amenities = await getAmenities(lang); // Usar el locale dinámico
-        console.log('=== Properties Page Amenities Debug ===');
-        console.log('Amenities loaded:', amenities);
-        console.log('Amenities count:', amenities.length);
     } catch (error) {
-        console.error('Error loading amenities:', error);
+        // Error silencioso en producción - se usa array vacío
         amenities = [];
     }
 
     let locations: any[] = [];
     try {
         locations = await getLocations(lang); // Usar el locale dinámico
-        console.log('=== Properties Page Locations Debug ===');
-        console.log('Locations loaded:', locations);
-        console.log('Locations count:', locations.length);
     } catch (error) {
-        console.error('Error loading locations:', error);
+        // Error silencioso en producción - se usa array vacío
         locations = [];
     }
     

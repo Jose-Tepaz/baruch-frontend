@@ -149,12 +149,7 @@ export function getPropertiesByCategory(
 
   return query(`${qs}`)
     .then(res => {
-      console.log('=== getPropertiesByCategory API Response ===');
-      console.log('Response:', res);
-      console.log('Data count:', res.data?.length || 0);
-
       if (!res.data || res.data.length === 0) {
-        console.log('No properties found in getPropertiesByCategory response');
         return [];
       }
       const meta: StrapiMeta | undefined = res?.meta
@@ -242,11 +237,9 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
       categoryOrIndex++;
     });
     andIndex++;
-    console.log('Added multiple categories filter (OR):', filter.categories);
   } else if (filter.categorySlug && filter.categorySlug.trim() !== '') {
     // Solo aplicar filtro de texto si no hay múltiples categorías
     queryString += `&filters[category][slug][$contains]=${filter.categorySlug}`
-    console.log('Added category filter:', filter.categorySlug);
   }
 
   // Aplicar filtro de status solo si no hay múltiples status seleccionados
@@ -257,31 +250,25 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
       statusOrIndex++;
     });
     andIndex++;
-    console.log('Added multiple statuses filter (OR):', filter.statuses);
   } else if (filter.propertyStatus && filter.propertyStatus.trim() !== '') {
     // Solo aplicar filtro de texto si no hay múltiples status
     queryString += `&filters[property_status][Title][$eq]=${encodeURIComponent(filter.propertyStatus)}`
-    console.log('Added property status filter:', filter.propertyStatus);
   }
 
   if (filter.bedrooms && filter.bedrooms.trim() !== '') {
     queryString += `&filters[bedrooms][$gte]=${encodeURIComponent(filter.bedrooms)}`
-    console.log('Added bedrooms filter:', filter.bedrooms);
   }
 
   if (filter.bathrooms && filter.bathrooms.trim() !== '') {
     queryString += `&filters[bathrooms][$gte]=${encodeURIComponent(filter.bathrooms)}`
-    console.log('Added bathrooms filter:', filter.bathrooms);
   }
 
   if (filter.min_price && filter.min_price.trim() !== '') {
     queryString += `&filters[price][$gte]=${encodeURIComponent(filter.min_price)}`
-    console.log('Added min price filter:', filter.min_price);
   }
 
   if (filter.max_price && filter.max_price.trim() !== '') {
     queryString += `&filters[price][$lte]=${encodeURIComponent(filter.max_price)}`
-    console.log('Added max price filter:', filter.max_price);
   }
 
   // Aplicar filtro de location solo si no hay múltiples locations seleccionadas
@@ -292,16 +279,13 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
       locationOrIndex++;
     });
     andIndex++;
-    console.log('Added multiple locations filter (OR):', filter.locations);
   } else if (filter.location && filter.location.trim() !== '') {
     // Solo aplicar filtro de texto si no hay múltiples locations
     queryString += `&filters[location][name][$containsi]=${encodeURIComponent(filter.location)}`
-    console.log('Added location filter:', filter.location);
   }
 
   if (filter.locationSlug && filter.locationSlug.trim() !== '') {
     queryString += `&filters[location][slug][$eq]=${encodeURIComponent(filter.locationSlug)}`
-    console.log('Added location slug filter:', filter.locationSlug);
   }
 
   // Aplicar filtro de amenities solo si no hay múltiples amenities seleccionadas
@@ -313,46 +297,28 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
       amenityOrIndex++;
     });
     andIndex++;
-    console.log('Added multiple amenities filter (OR):', filter.amenitiesArray);
   } else if (filter.amenities && filter.amenities.trim() !== '') {
     // Solo aplicar filtro de texto si no hay múltiples amenities
     queryString += `&filters[amenities][Name][$contains]=${encodeURIComponent(filter.amenities)}`
-    console.log('Added amenities filter:', filter.amenities);
-    console.log('Full query string with amenities:', queryString);
   }
 
 
   return query(`${queryString}`)
     .then(res => {
-      if (process.env.NODE_ENV === 'development') {
-        console.log('=== getProperties API Response ===');
-        console.log('Data count:', res.data?.length || 0);
-        console.log('Sample property:', res.data?.[0]);
-      }
-
       const meta: StrapiMeta | undefined = res?.meta
       const items = Array.isArray(res?.data) ? res.data : []
       const page = typeof filter.page === 'number' && filter.page > 0 ? filter.page : 1
       const pageSize = typeof filter.pageSize === 'number' && filter.pageSize > 0 ? filter.pageSize : 9
 
       if (!res || !res.data) {
-        if (process.env.NODE_ENV === 'development') {
-          console.log('Invalid response structure:', res);
-        }
         return { data: [], meta: { pagination: { page, pageSize, pageCount: 1, total: 0 } } };
       }
 
       if (!Array.isArray(res.data)) {
-        if (process.env.NODE_ENV === 'development') {
-          console.log('Response data is not an array:', res.data);
-        }
         return { data: [], meta: { pagination: { page, pageSize, pageCount: 1, total: 0 } } };
       }
 
       if (res.data.length === 0) {
-        if (process.env.NODE_ENV === 'development') {
-          console.log('No properties found in response');
-        }
         return { data: [], meta: { pagination: { page, pageSize, pageCount: 1, total: 0 } } };
       }
 
@@ -379,16 +345,6 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           ? (rawimage.url.startsWith('http') ? rawimage.url : `${STRAPI_HOST}${rawimage.url}`)
           : ''
         const propertyStatus = property_status ? property_status.Title : ''
-
-        if (process.env.NODE_ENV === 'development') {
-          console.log('=== getProperties Property Mapping ===');
-          console.log('Property title:', title);
-          console.log('Property status:', propertyStatus);
-          console.log('Category:', category);
-          console.log('Location:', location);
-          console.log('Amenities:', amenities);
-          console.log('Is Private:', is_private);
-        }
 
         return {
           id,

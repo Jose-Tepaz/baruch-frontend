@@ -18,19 +18,9 @@ export async function getPropertyStatuses(locale?: string): Promise<PropertyStat
     const currentLocale = getLocaleWithFallback(locale);
     const queryString = `statuses?fields[0]=Title&fields[1]=id&fields[2]=documentId&locale=${encodeURIComponent(currentLocale)}`;
     
-    console.log('=== getPropertyStatuses DEBUG ===');
-    console.log('Locale:', currentLocale);
-    console.log('Making request to:', queryString);
-    
     const response = await query(queryString)
     
-    console.log('=== Property Statuses Response ===');
-    console.log('Response:', response);
-    console.log('Data:', response.data);
-    console.log('Data length:', response.data?.length || 0);
-    
     if (!response.data || !Array.isArray(response.data)) {
-      console.error('Invalid response format:', response);
       return [];
     }
     
@@ -40,7 +30,7 @@ export async function getPropertyStatuses(locale?: string): Promise<PropertyStat
       Title: status.Title
     }))
   } catch (error) {
-    console.error('Error fetching property statuses:', error)
-    throw error; // Re-throw para que el componente maneje el error
+    // Error silencioso en producción - devolver array vacío
+    return [];
   }
 } 
