@@ -57,7 +57,7 @@
         "title-filter": "Encuentra tu Casa Soñada",
         "title-filter-1": "Estado de la Propiedad",
         "title-filter-2": "Tipo de propiedad",
-        "bedrooms-filter": "Habitaciones",
+        "bedrooms-filter": "Dormitorios",
         "bathrooms-filter": "Baños",
         "min-price-filter": "Precio Mínimo",
         "max-price-filter": "Precio Máximo",
@@ -287,6 +287,7 @@
         "email-text": "Correo Electrónico",
         "message-text": "Tu Mensaje",
         "estimated_completion-text": "Fecha de Finalización Estimada",
+        "completion-text": "Listo",
         "units": {
             "title": "Unidades",
             "id-house": "Id Casa",

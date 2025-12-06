@@ -73,9 +73,9 @@
     "subtitle-category": "Categorie",
     "title-category": "Selecteer het huis dat bij je past",
     "btn-about-section-2": "Ontdek meer",
-    "subtitle-testimonials-1": "Getuigenissen",
+    "subtitle-testimonials-1": "Testimonials",
     "title-testimonials": "Wat onze klanten zeggen",
-    "subtitle-testimonials": "Getuigenissen",
+    "subtitle-testimonials": "Testimonials",
     "title-why-choose-us": "Waarom Baruch zich onderscheidt?",
     "list1-why-choose-us": "Experts Agents",
     "list2-why-choose-us": "Uitgebreide lijsten",
@@ -258,6 +258,7 @@
     "email-text": "E-mailadres",
     "message-text": "Jouw bericht",
     "estimated_completion-text": "Voraussichtliche Fertigstellung",
+    "completion-text": "Klaar",
     "units": {
       "title": "Eenheden",
       "id-house": "Huis-ID",
@@ -304,7 +305,7 @@
     "input-click-to-whatsapp": "Klik voor WhatsApp"
   },
   "testimonials": {
-    "title": "Getuigenissen",
+    "title": "Testimonials",
     "contact-title": "Neem contact op",
     "your-name": "Jouw naam",
     "phone-number": "Telefoonnummer",

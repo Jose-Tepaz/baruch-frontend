@@ -327,6 +327,7 @@
         "email-text": "Email Address",
         "message-text": "Your Message",
         "estimated_completion-text": "Estimated completion",
+        "completion-text": "Ready",
         "units": {
             "title": "Units",
             "id-house": "Id House",

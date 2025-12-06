@@ -14,7 +14,7 @@ const getPropertyById = async (documentId: string, locale?: string) => {
     try {
         // Usar documentId en lugar de id y agregar populate=* para obtener todas las relaciones
         const currentLocale = getLocaleWithFallback(locale);
-        const queryString = `properties/${documentId}?populate=main_image&populate=gallery&populate=category&populate=property_status&populate=units&populate=units.floor&locale=${encodeURIComponent(currentLocale)}`;
+        const queryString = `properties/${documentId}?populate=main_image&populate=gallery&populate=category&populate=property_status&populate=location&populate=units&populate=units.floor&locale=${encodeURIComponent(currentLocale)}`;
         
        
         
@@ -47,6 +47,7 @@ const getPropertyById = async (documentId: string, locale?: string) => {
             Map_link,
             highlight,
             property_status,
+            location,
             units,
             estimated_completion,
         } = property
@@ -102,6 +103,7 @@ const getPropertyById = async (documentId: string, locale?: string) => {
             gallery: processedGallery,
             slug,
             category,
+            location,
             is_new,
             Map_link,
             propertyStatus,

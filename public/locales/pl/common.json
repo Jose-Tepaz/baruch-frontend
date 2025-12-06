@@ -1,379 +1,220 @@
 {
-    "welcome": "Witamy w Baruch Real Estate",
-  "navigation": {
-      "home": "Home",
-      "about": "O nas",
-      "properties": "Nieruchomości",
-      "services": "Usługi",
-      "contact": "Contact",
-      "btn-nav-1": "Skontaktuj się z nami",
-      "login-btn": "Zaloguj się",
-      "logout-btn": "Wyloguj się",
-      "btn-private-properties": "Nieruchomości",
-      "testimonials": "Opinie klientów",
-      "magazine": "Magazine",
-      "btn-header-1": "Sprzedaż nieruchomości"
-      
-  },
-  "footer": {
-     "title-cta": "Zróbmy Twoją marzenie realnym",
-        "description-cta": "Nie czekaj na początek Twojej podróży nieruchomościami. Czy kupujesz, sprzedajesz, czy wynajmujesz, nasz ekspercki zespół jest tu, aby Cię kierować każdym krokiem. Zróbmy Twoją wizję realną z osobistą obsługą i bezproblemowym doświadczeniem.",
-        "btn-cta": "Rozpocznij swoją wyszukiwanie dzisiaj",
-        "description-footer": "Jesteśmy zobowiązani do zapewnienia Ci bezproblemowej podróży nieruchomościami i bez stresu. Czy kupujesz, sprzedajesz, czy wynajmujesz, jesteśmy tu, aby Cię kierować każdym krokiem.",
-        "head-title-1": "Menu",
-        "head-title-2": "Typy nieruchomości",
-        "head-title-3": "Popularne lokalizacje",
-        "head-title-4": "Jesteśmy tutaj",
-        "title-1-footer": "O nas",
-        "title-2-footer": "Magazyn",
-        "title-3-footer": "Opinie",
-        "title-4-footer": "Skontaktuj się z nami",
-        "title-5-footer": "Warunki i zasady",
-        "title-6-footer": "Polityka prywatności",
-        "title-services": "Usługi",
-        "title-services-1": "Kupowanie nieruchomości",
-        "title-services-2": "Sprzedaż nieruchomości",
-        "title-services-3": "Rezydencja / NIE",
-        "title-services-4": "Finansowanie / Hipoteka",
-        "title-services-5": "Ubezpieczenie",
-        "title-services-6": "Podatki",
-        "title-services-7": "Usługi prawne",
-        "title-popular-locations": "Popularne lokalizacje",
-        "title-popular-locations-1": "Nieruchomości do sprzedaży w Marbelli",
-        "title-popular-locations-2": "Nieruchomości do sprzedaży w Mijas",
-        "title-popular-locations-3": "Nieruchomości do sprzedaży w Esteponie",
-        "title-popular-locations-4": "Nieruchomości do sprzedaży w Sotogrande",
-        "title-popular-locations-5": "Nieruchomości do sprzedaży w The Golden Mile",
-        "title-popular-locations-6": "Nieruchomości do sprzedaży w Benahavís",
-        "title-popular-locations-7": "Nieruchomości do sprzedaży w Rincon",
-        "title-popular-locations-8": "Nieruchomości do sprzedaży w Torox",
-        "title-popular-locations-9": "Nieruchomości do sprzedaży w Maladze"
-      
-  },
-  "home": {
-        "btn-1-hero": "Zobacz nieruchomości",
-        "btn-2-hero": "Dowiedz się więcej",
-        "title-filter": "Znajdź swoją marzenią dom",
-       "title-filter-1": "Status nieruchomości",
-       "title-filter-2": "Typ nieruchomości",
-        "bedrooms-filter": "Sypialnie",
-        "bathrooms-filter": "Łazienki",
-        "min-price-filter": "Min Cena",
-        "max-price-filter": "Max Cena",
-        "amenities-filter": "Cechy",
-        "location-filter": "Lokalizacja",
-        "show-more": "Pokaż więcej filtrów",    
-        "show-less": "Pokaż mniej filtrów",
-        "btn-filter": "Wyszukaj nieruchomości",
-        "btn-all-properties": "Pokaż wszystkie nieruchomości",  
-        "title-about-us": "O nas",
-        "title-2-about-us": "Jesteśmy tutaj, aby Cię pomóc",
-        "title-3-about-us": "Znajdź swoją marzenią nieruchomość w Hiszpanii",
-        "paragraph-about-us": "Z pasją upraszczamy proces zakupu, sprzedaży i wynajmu nieruchomości. Dzięki dogłębnej znajomości rynku i podejściu skoncentrowanemu na kliencie pomagamy kupującym, sprzedającym i najemcom działać z pewnością siebie. Nasz zespół doświadczonych specjalistów oferuje spersonalizowaną obsługę, przejrzystość i fachowe doradztwo na każdym etapie. \n\nOprócz naszej wiedzy w zakresie nieruchomości oferujemy wsparcie prawne, pomoc w uzyskaniu numeru NIE oraz doradztwo finansowe, zapewniając naszym klientom kompleksową i rzetelną obsługę w jednym miejscu.",
-        "subtitle-list-properties": "Nieruchomości",
-        "title-list-properties": "Odkryj nasze najnowsze nieruchomości",
-        "subtitle-category": "Kategoria",
-        "title-category": "Wybierz dom, który pasuje do Ciebie",
-        "btn-about-section-2": "Dowiedz się więcej",
-        "subtitle-testimonials-1": "Opinie",
-        "title-testimonials": "Co mówią nasze klienci",
-        "subtitle-testimonials": "Opinie",
-        "title-why-choose-us": "Dlaczego wybrać Baruch Real Estate?",
-        "list1-why-choose-us": "Ekspercki zespół",
-        "list2-why-choose-us": "Szeroka oferta",
-        "list3-why-choose-us": "Zadowolenie klienta",       
-        "paragraph-why-choose-us": "W Baruch Real Estate, wierzymy, że znalezienie domu to coś więcej niż tylko zdobycie dachu nad głową. To odkrycie miejsca, które idealnie pasuje do Twojego stylu życia. Nasz zespół ekspertów, szeroka oferta i zaangażowanie w satysfakcję klienta wyróżniają nas w dostarczaniu bezproblemowego doświadczenia na rynku nieruchomości."
-    },
-  "buttons": {
-      "login": "Zaloguj się",
-      "register": "Zarejestruj się",
-      "search": "Wyszukaj",
-      "seeProperties": "Zobacz nieruchomości"
-  },
-  "common": {
-      "loading": "Ładowanie..."
-  },
-  "properties": {
-      "title": "Nasze nieruchomości",
-      "discover_latest": "Odkryj nasze najnowsze nieruchomości",
-      "no_properties": "Brak nieruchomości",
-      "no_properties_description": "Spróbuj zmienić filtry wyszukiwania"
-  },
-  "about": {
-      "company": "O nas",
-      "hero": {
-          "title": "Twój zaufany partner",
-            "description": "W Baruch Real Estate, wierzymy, że nieruchomości są pierwszą i najważniejszą rzeczą w relacjach. Nie tylko sprzedajemy domy. Łączymy ludzi z odpowiednim stylem życia, dzielnicą i przyszłością. Nasz zespół składa się z lokalnych mieszkańców, którzy nie tylko są profesjonalistami w dziedzinie nieruchomości, ale także zafascynowani przez społeczność. Czy jesteś przyciągany przez energię Marbella, przyjazny charakter Fuengiroli, czy spokojna elegancja Benahavís, pomożemy Ci znaleźć idealne dopasowanie. Nie tylko dla Twoich potrzeb, ale także dla Twojego stylu życia.",
-            "btn_text": "Skontaktuj się z nami"
-      },
-      "others3": {
-          "subtitle": "Misja & Wizja",
-          "title": "Dostosowane usługi nieruchomości na Costa del Sol",
-          "forbuyers": "Dla Kupujących",
-          "btn_text": "Zobacz nieruchomości",
-          "forbuyersDescription": {
-              "list1": "Personalizowane wyszukiwania nieruchomości dostosowane do Twojego stylu życia i celów.",
-              "list2": "Eksperckie wskazówki dotyczące lokalnych dzielnic, szkół i społeczności.",
-              "list3": "Bezproblemowe oglądania i zalecenia.",
-              "list4": "Skuteczne negocjacje, aby uzyskać najlepszą ofertę.",
-              "list5": "Zaufani prawnicy w-house dla wsparcia prawnego.",
-              "list6": "Finansowi partnerzy, aby zapewnić płynną transakcję."
-          },
-          
-          "forseellers": "Dla Sprzedających",
-          "forseellersDescription": {
-              "list1": "Dokładne wartościowanie nieruchomości na podstawie rzeczywistych danych rynkowych.",
-              "list2": "Premium marketing z profesjonalną fotografią i przekonującymi opisami.",
-              "list3": "Ekspozycja dla zarówno lokalnych, jak i międzynarodowych kupujących.",
-              "list4": "Eksperckie negocjacje, aby zmaksymalizować cenę sprzedaży.",
-              "list5": "Pełna obsługa od listowania do zamknięcia."
-          }
-      },
-      "others4": {
-        "subtitle": "Czy jesteś gotowy na następny krok? ",
-        "title": "Pomocemy Cię i uczynimy proces tak płynny jak to możliwe.",    
-    "btn_text": "Skontaktuj się z nami"
-          },
-      "meet-the-team": {
-       "title": "Poznaj nasz zespół",
-       "description": "Nasz zespół składa się z lokalnych mieszkańców, którzy nie tylko są profesjonalistami w dziedzinie nieruchomości, ale także zafascynowani przez społeczność. Czy jesteś przyciągany przez energię Marbella, przyjazny charakter Fuengiroli, czy spokojna elegancja Benahavís, pomożemy Ci znaleźć idealne dopasowanie. Nie tylko dla Twoich potrzeb, ale także dla Twojego stylu życia."
-      },
-      "conatct-section": {
-        "title": "Nasze Usługi ",
-        "description": "W Baruch Real Estate, wierzymy w budowanie trwałych relacji opartych na zaufaniu, przejrzystości i osobistym kontakcie. Dla nas, nieruchomości to nie tylko o własnościach, to o ludziach. Pomagamy Ci przejść przez proces krok po kroku. Z zasadnością, przejrzystością i skupieniem na jakości na każdym etapie. I nasze wsparcie nie kończy się, dopiero gdy kupisz nieruchomość.",
-        "btn_text": "Zobacz wszystkie usługi"
-    },
-    "contact-form": {
-        "subtitle": "Czy jesteś gotowy na następny krok? ",
-        "title": "Czy jesteś gotowy na następny krok? ",
-        "description": "Pomocemy Cię i uczynimy proces tak płynny jak to możliwe.",
-        "btn_text": "Skontaktuj się z nami"
-    }   
-  },
-  "services": {
-     "title": "Usługi nieruchomości – dopasowane rozwiązania",
-        "card-1": "Kupno nieruchomości",
-        "card-1-description": "W Baruch wiemy, że zakup domu to jeden z najważniejszych momentów w życiu. Nasz doświadczony zespół jest tutaj, aby Ci pomóc.",
-        "card-2": "Sprzedaż nieruchomości",
-        "card-2-description": "Sprzedaż domu nie musi być przytłaczająca. Z Baruch nasz oddany zespół ekspertów uprości cały proces.",
-        "card-3": "Wynajem nieruchomości",
-        "card-3-description": "Znalezienie odpowiedniej nieruchomości na wynajem jest proste z Housebox. Niezależnie, czy szukasz przytulnego apartamentu, czy przestronnego domu.",
-        "btn-text": "Poproś o wycenę",
-        "property-services": "Usługi nieruchomościowe",
-        "property-services-description": "Łącząc te usługi z naszą wiedzą i doświadczeniem w branży nieruchomości, sprawiamy, że cały proces zakupu, posiadania i życia w Hiszpanii staje się bardziej przejrzysty i mniej stresujący. Zawsze staramy się wspierać Cię, nawet długo po zakończeniu zakupu.",
-        "modal": {
-            "main-title": "USŁUGI, KTÓRE OFERUJEMY",
-            "subtitle": "Z pasją upraszczamy proces nieruchomości w Hiszpanii. Dzięki głębokiej znajomości rynku i podejściu zorientowanemu na klienta pomagamy kupującym, sprzedającym i najemcom realizować ich cele.",
-            "what-we-offer": "Co oferujemy:",
-            "btn-text": "Poproś o wycenę",
-            "nie": {
-                "title": "NIE/Rezydencja",
-                "description": "Ułatwiamy cały proces uzyskania Twojego NIE (Numer Identyfikacji Cudzoziemca) oraz rezydencji w Hiszpanii. Poprowadzimy Cię przez wszystkie dokumenty i procedury administracyjne.",
-                "detail1": "Kompleksowe doradztwo dotyczące wymaganych dokumentów",
-                "detail2": "Umawianie wizyt w urzędach imigracyjnych",
-                "detail3": "Wsparcie przez cały proces",
-                "detail4": "Odnowienia i aktualizacje dokumentów"
-            },
-            "finance": {
-                "title": "Finansowanie/Kredyt hipoteczny",
-                "description": "Pomagamy znaleźć najlepsze opcje finansowania dla Twojej nieruchomości. Współpracujemy z czołowymi instytucjami finansowymi, aby zapewnić najkorzystniejsze warunki.",
-                "detail1": "Analiza Twojej zdolności kredytowej",
-                "detail2": "Porównanie ofert wielu banków",
-                "detail3": "Negocjacje korzystnych warunków",
-                "detail4": "Opieka na każdym etapie zatwierdzenia kredytu",
-                "detail5": "Otwarcie konta bankowego"
-            },
-            "insurance": {
-                "title": "Ubezpieczenia",
-                "description": "Oferujemy kompleksowe rozwiązania ubezpieczeniowe, by chronić Twoje inwestycje. Od ubezpieczeń nieruchomości po ubezpieczenie na życie i zdrowotne.",
-                "detail1": "Ubezpieczenie nieruchomości i ruchomości",
-                "detail2": "Ubezpieczenie na życie i zdrowotne",
-                "detail3": "Ubezpieczenie OC",
-                "detail4": "Obsługa zgłoszeń i odnowień ubezpieczeń"
-            },
-            "tax": {
-                "title": "Rozliczenia podatkowe",
-                "description": "Nasz zespół ekspertów podatkowych zajmie się wszystkimi Twoimi zobowiązaniami podatkowymi w Hiszpanii, dbając o zgodność z aktualnymi przepisami.",
-                "detail1": "Roczne zeznania podatkowe",
-                "detail2": "Podatki od nieruchomości (IBI, podatek od zysków kapitałowych)",
-                "detail3": "Deklaracja zagranicznych aktywów (formularz 720)",
-                "detail4": "Legalna optymalizacja podatkowa"
-            },
-            "legal": {
-                "title": "Usługi prawne",
-                "description": "Nasz zespół prawników specjalizujących się w prawie nieruchomości wesprze Cię we wszystkich formalnościach związanych z transakcją.",
-                "detail1": "Weryfikacja umów kupna-sprzedaży",
-                "detail2": "Due diligence nieruchomości",
-                "detail3": "Reprezentacja przy aktach notarialnych",
-                "detail4": "Rozwiązywanie sporów i postępowania sądowe",
-                "detail5": "Założenie spółki SL (spółka z ograniczoną odpowiedzialnością)",
-                "detail6": "Założenie jednoosobowej działalności gospodarczej",
-                "detail7": "Testament"
-            },
-            "management": {
-                "title": "Zarządzanie nieruchomością",
-                "description": "Kompleksowo zarządzamy Twoją nieruchomością – od konserwacji po obsługę najemców, abyś mógł cieszyć się swoją inwestycją bez zmartwień.",
-                "detail1": "Poszukiwanie i selekcja najemców",
-                "detail2": "Konserwacja i naprawy",
-                "detail3": "Obsługa płatności i rozliczeń",
-                "detail4": "Szczegółowe miesięczne raporty"
-            }
+    "terms": {
+      "title": "Terms & Conditions",
+      "updatedAt": "26 February 2025",
+      "intro": "These Terms & Conditions govern the use of the website www.baruchrealestate.com, operated by BARUCH ENTERPRISE SPAIN S.L., trading as Baruch Real Estate, with registered address at C. Cam. Viejo de Málaga, 28, 29700 Vélez-Málaga, Málaga, Spain, NIF B23896616 , and contact email info@baruchrealestate.com. By accessing or using this website, you agree to comply with and be bound by these Terms.",
+      "sections": [
+        {
+          "heading": "1. Purpose of the Website",
+          "body": [
+            "The purpose of this website is to provide information about Baruch Real Estate’s services, including property listings, real estate advice, and related content. The website may also include contact forms for inquiries and communication with our team."
+          ]
+        },
+        {
+          "heading": "2. Acceptance of Terms",
+          "body": [
+            "By using this website, you confirm that you have read, understood, and agreed to these Terms & Conditions. If you do not agree, please do not use our website."
+          ]
+        },
+        {
+          "heading": "3. Use of the Website",
+          "body": [
+            "Users agree to use the website only for lawful purposes and in a manner that does not infringe the rights or restrict the use and enjoyment of the website by any third party. Prohibited behavior includes transmitting offensive or harmful content and attempting to interfere with the website’s operation."
+          ]
+        },
+        {
+          "heading": "4. Intellectual Property Rights",
+          "body": [
+            "All content, including text, images, graphics, logos, and design elements on this website, are the property of BARUCH ENTERPRISE SPAIN S.L. or licensed third parties. You may not reproduce, distribute, or modify any part of this content without prior written permission."
+          ]
+        },
+        {
+          "heading": "5. Property Listings and Information Accuracy",
+          "body": [
+            "We strive to ensure that all property listings and information displayed on our website are accurate and up to date. However, Baruch Real Estate makes no warranty or representation about the completeness, reliability, or availability of any information, and we reserve the right to modify or remove listings at any time without notice."
+          ]
+        },
+        {
+          "heading": "6. External Links",
+          "body": [
+            "Our website may contain links to third-party websites for additional information or services. We are not responsible for the content, privacy policies, or practices of third-party sites, and access to such sites is at your own risk."
+          ]
+        },
+        {
+          "heading": "7. Limitation of Liability",
+          "body": [
+            "Baruch Real Estate shall not be held liable for any direct, indirect, or consequential damages arising from the use or inability to use this website, including data loss, system errors, or interruptions in service."
+          ]
+        },
+        {
+          "heading": "8. Data Protection and Privacy",
+          "body": [
+            "We handle all personal data in accordance with our Privacy Policy, which forms an integral part of these Terms & Conditions. Please review our Privacy Policy for detailed information on how we collect and process personal data."
+          ]
+        },
+        {
+          "heading": "9. Governing Law and Jurisdiction",
+          "body": [
+            "These Terms & Conditions are governed by the laws of Spain. Any dispute arising in connection with the use of this website shall be subject to the exclusive jurisdiction of the courts of Málaga, Spain."
+          ]
+        },
+        {
+          "heading": "10. Changes to These Terms",
+          "body": [
+            "We may update or revise these Terms & Conditions at any time without prior notice. The latest version will always be available on this page, and continued use of the website after updates constitutes acceptance of the revised Terms."
+          ]
+        },
+        {
+          "heading": "11. Contact Information",
+          "body": [
+            "For any questions or concerns regarding these Terms & Conditions, please contact us at:",
+            "Email: info@baruchrealestate.com",
+            "Address: C. Cam. Viejo de Málaga, 28, 29700 Vélez-Málaga, Málaga, Spain"
+          ]
         }
-  },
-  "faq": {
-      "title": "Często zadawane pytania",
-     
-              "question-1": "Jakie usługi oferuje Baruch Real Estate?",
-              "answer-1": "Baruch Real Estate oferuje usługi kupowania, sprzedaży i wynajmu, a także zarządzanie nieruchomościami i doradztwo inwestycyjne na Costa del Sol.",
-         
-          
-              "question-2": "Dlaczego powinienem wybrać Baruch Real Estate?",
-              "answer-2": "Baruch Real Estate zapewnia osobistą obsługę, ekspercką wiedzę lokalną i zespół dedykowany do kierowania Cię przez każdy krok Twojej podróży nieruchomościami.",
-         
-              "question-3": "Jak Baruch Real Estate może pomóc mi znaleźć odpowiednią nieruchomość?",
-              "answer-3": "Baruch Real Estate nasłuchuje na Twoje potrzeby i preferencje, a następnie tworzy selekcję nieruchomości, które pasują do Twojego stylu życia i celów.",
-          
-          
-              "question-4": "Czy Baruch Real Estate pomaga z legalnymi dokumentami?",
-              "answer-4": "Tak, Baruch Real Estate ma zaufanych prawników w-house, aby pomóc Ci z wszystkimi dokumentami prawnymi i zapewnić płynną transakcję.",
-         
-              "question-5": "Czy Baruch Real Estate pomaga mi sprzedać nieruchomość szybko?",
-              "answer-5": "Baruch Real Estate używa premium marketing strategies and a wide network to attract both local and international buyers, helping you sell efficiently.",
-         
-          
-              "question-6": "Jakie obszary obejmuje Baruch Real Estate?",
-              "answer-6": "Baruch Real Estate specjalizuje się w nieruchomościach na Costa del Sol, w tym w Marbelli, Esteponie, Benahavís i otaczających obszarach.",
-          
-          
-              "question-7": "Czy Baruch Real Estate oferuje usługi zarządzania nieruchomościami?",
-              "answer-7": "Tak, Baruch Real Estate zapewnia kompleksowe zarządzanie nieruchomościami, aby zapewnić, że Twoja inwestycja jest dobrze opiekowana, nawet kiedy jesteś poza domem.",
-          
-          
-              "question-8": "Jak Baruch Real Estate wspiera międzynarodowych kupujących?",
-              "answer-8": "Baruch Real Estate oferuje wsparcie wielojęzyczne, wskazówki dotyczące lokalnych przepisów i pomoc w każdym aspekcie zakupu nieruchomości z zagranicy.",
-          
-          
-              "question-9": "Co sprawia, że Baruch Real Estate różni się od innych agencji?",
-              "answer-9": "Baruch Real Estate wyróżnia się swoim zaangażowaniem w satysfakcję klienta, przejrzystość i dostosowanie do potrzeb każdego klienta.",
-          
-          
-              "question-10": "Jak mogę skontaktować się z Baruch Real Estate o konsultacji?",
-              "answer-10": "Możesz skontaktować się z Baruch Real Estate przez naszą stronę internetową, telefonicznie lub odwiedzając nasze biuro. Nasz zespół jest gotowy do pomocy z każdym pytaniem."
-  },
-          
-  "contact-form": {
-        "subtitle": "Czy jesteś gotowy na następny krok? ",
-        "title": "Låt oss ansluta",
-        "description": "Pomocemy Cię i uczynimy proces tak płynny jak to możliwe.",
-        "btn_text": "Skontaktuj się z nami"
+      ]
     },
-
-  "language": {
-      "selectLanguage": "Wybierz język",
-      "currentLanguage": "Aktualny język",
-      "changing": "Zmieniając język na"
-  },
-  "propertyDetails": {
-      "properti-not-found": "Nieruchomość nie znaleziona",
-      "property-not-found-description": "Nieruchomość, której szukasz, nie istnieje.",
-      "built_area-text": "Użytkowa",
-      "lot_area-text": "Działka",
-      "parking_spaces-text": "Parkingi",
-      "bedrooms-text": "Sypialnie",
-      "bathrooms-text": "Łazienki",
-      "price-text": "Cena",
-      "contact-text": "Skontaktuj się z nami",
-      "map_locations-text": "Mapy lokalizacji",
-      "send_message-text": "Jestem zainteresowany",
-      "send_message-text-description": "Chcesz zaplanować wizytę lub masz pytanie? Wypełnij swoje szczegóły poniżej, abyśmy mogli Cię skontaktować.",
-      "send-btn": "Wyślij",
-      "fullName-text": "Imię i nazwisko",
-      "phoneNumber-text": "Numer telefonu",
-      "email-text": "Adres e-mail",
-      "message-text": "Twoja wiadomość",
-      "estimated_completion-text": "Voraussichtliche Fertigstellung",
-      "units": {
-          "title": "Jednostki",
-          "id-house": "Id domu",
-          "dorms": "Sypialnie",
-          "bathrooms": "Łazienki",
-          "built-area": "Powierzchnia użytkowa",
-          "exterior-area": "Powierzchnia zewnętrzna",
-          "garage": "Garaż",
-          "price": "Cena",
-          "storage_room": "Pokój magazynowy",
-          "floor": "Zobacz plan piętra",  
-          "unavailable": "Na zamówienie",
-          "no-units": "Brak jednostek dostępnych dla tej nieruchomości.",
-          "is_available": "tak",
-          "is_not_available": "nie"
-      }
-  },
-  "contact": {
-    "hero": {
-        "title": "Skontaktuj się z nami",
-        "description": "Jesteśmy tutaj, aby Cię pomóc w każdym kroku w znalezieniu Twojego marzenia domu w Hiszpanii. Nie ma obowiązków, nie ma presji. Użyj formularza kontaktowego poniżej, aby skontaktować się z nami, i odpowiemy tak szybko, jak to możliwe."
+    "privacy": {
+      "title": "Privacy Policy",
+      "updatedAt": "26 February 2025",
+      "intro": "This Privacy Policy is issued by BARUCH ENTERPRISE SPAIN S.L., operating under the commercial name Baruch Real Estate, with registered address at C. Cam. Viejo de Málaga, 28, 29700 Vélez-Málaga, Málaga, Spain, NIF B23896616 and contact email info@baruchrealestate.com. At Baruch Real Estate, protecting your privacy is our top priority. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information when you interact with our website (www.baruchrealestate.com) and our services. We are committed to ensuring that your data is handled in compliance with the EU General Data Protection Regulation (GDPR) and the Spanish Data Protection Law (LSSI-CE).",
+      "sections": [
+        {
+          "heading": "1. Information We Collect",
+          "body": [
+            "We collect the following types of information to provide and improve our services:",
+            "• Personal Information: Name, email address, phone number, mailing address, and payment details.",
+            "• Property Information: Details about properties you list or inquire about.",
+            "• Usage Data: IP address, browser type, pages visited, and analytics data.",
+            "• Cookies: Small files stored on your device to enhance functionality and remember preferences."
+          ]
+        },
+        {
+          "heading": "2. How We Use Your Information",
+          "body": [
+            "We use the collected information to:",
+            "• Provide, manage, and improve our real estate services.",
+            "• Process transactions and manage listings or inquiries.",
+            "• Communicate updates, offers, and personalized recommendations.",
+            "• Ensure website security and prevent fraud.",
+            "• Comply with legal obligations."
+          ]
+        },
+        {
+          "heading": "3. Information Sharing",
+          "body": [
+            "We do not sell or rent your personal information. However, we may share data with:",
+            "• Trusted partners (e.g., payment processors, IT service providers) to facilitate transactions.",
+            "• Law enforcement or government authorities when required by law.",
+            "• Potential buyers, sellers, or tenants—with your consent—to complete real estate transactions."
+          ]
+        },
+        {
+          "heading": "4. Data Security",
+          "body": [
+            "We apply industry-standard security measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. However, no online system is entirely secure, and we cannot guarantee absolute protection."
+          ]
+        },
+        {
+          "heading": "5. Your Data Protection Rights",
+          "body": [
+            "Under GDPR, you have the right to:",
+            "• Access, correct, or delete your personal data.",
+            "• Withdraw consent at any time.",
+            "• Object to or restrict processing.",
+            "• Request data portability.",
+            "• Lodge a complaint with the Spanish Data Protection Agency (AEPD)."
+          ]
+        },
+        {
+          "heading": "6. Cookies and Tracking Technologies",
+          "body": [
+            "We use cookies to enhance your experience and analyze website performance. For more details, please see our Cookie Policy at www.baruchrealestate.com/cookie-policy."
+          ]
+        },
+        {
+          "heading": "7. Third-Party Links",
+          "body": [
+            "Our website may contain links to third-party websites. We are not responsible for their privacy practices or content, and we encourage you to review their privacy policies independently."
+          ]
+        },
+        {
+          "heading": "8. Changes to This Policy",
+          "body": [
+            "We may update this Privacy Policy from time to time. The latest version will always be available on our website with the effective date clearly indicated."
+          ]
+        },
+        {
+          "heading": "9. Contact Us",
+          "body": [
+            "If you have any questions about this Privacy Policy or wish to exercise your data protection rights, please contact us at:",
+            "Email: info@baruchrealestate.com",
+            "Address: C. Cam. Viejo de Málaga, 28, 29700 Vélez-Málaga, Málaga, Spain"
+          ]
+        }
+      ]
     },
-    "title": "Skontaktuj się z nami",
-    "description": "Serdecznie zapraszamy do naszego biura w Maladze na spotkanie osobiste – chętnie również towarzyszymy Ci podczas oglądania nieruchomości. Niezależnie od tego, czy masz pytania dotyczące zakupu, sprzedaży, finansowania czy pobytu, nasz zespół jest gotowy, aby Ci pomóc. \n\nMówimy po niderlandzku, angielsku i hiszpańsku, co zapewnia jasną komunikację i wsparcie na każdym etapie procesu.",
-    "btn_text": "o nas"
-  },
-  "contact-form": {
-        "subtitle": "Gotowy na następny krok? ",    
-        "title": "Połączmy się ",  
-        "description": "Będziemy bardzo zadowoleni, aby Ci pomóc i uczynić proces tak płynny, jak to możliwe.",
-        "btn_text": "Skontaktuj się z nami",
-        "input-name": "Imię i nazwisko",    
-        "input-email": "Email",
-        "input-phone": "Telefon",
-        "input-city": "Miasto",
-        "input-preferred_contact_moment": "Preferowany moment kontaktu",
-        "input-message": "Wiadomość",
-        "input-submit-now": "Wyślij teraz",
-        "error-message": "Błąd podczas wysyłania wiadomości",
-        "success-message": "Wiadomość wysłana pomyślnie!",
-        "submitting": "Wysyłanie...",
-        "separator": "O lub skontaktuj się z nami bezpośrednio na WhatsApp",
-        "privacy-statement": "Zgadzam się z polityką prywatności Baruch Real Estate",
-        "input-click-to-whatsapp": "Kliknij na WhatsApp"
-    },
-  "testimonials": {
-      "title": "Opinie",
-      "contact-title": "Skontaktuj się z nami",
-      "your-name": "Twoje imię",
-      "phone-number": "Numer telefonu",
-      "email-address": "Adres e-mail",
-      "message": "Twoja wiadomość",
-      "submit-now": "Wyślij",
-      "error-message": "Błąd podczas wysyłania wiadomości",
-      "success-message": "Wiadomość wysłana pomyślnie!",
-      "service-type": "Typ usługi",
-      "service-type-1": "Sprzedaż nieruchomości",
-      "service-type-2": "Kupowanie nieruchomości",
-      "service-type-3": "Wynajem nieruchomości",
-      "submitting": "Wysyłanie..."
-  },
-  "whatsapp": {
-    "tooltip": "Napisz do nas na WhatsApp!",
-    "messages": {
-      "default": "Cześć, jestem zainteresowany Twoimi nieruchomościami",
-      "home": "Cześć, jestem zainteresowany Twoimi nieruchomościami",
-      "properties": "Cześć, jestem zainteresowany dostępnymi nieruchomościami",
-      "contact": "Cześć, mam pytanie dotyczące Twoich usług",
-      "about": "Cześć, chciałbym dowiedzieć się więcej o Twojej firmie",
-      "services": "Cześć, jestem zainteresowany Twoimi usługami nieruchomościowymi"
+    "cookies": {
+      "title": "Cookie Policy",
+      "updatedAt": "26 February 2025",
+      "intro": "This Cookie Policy is issued by BARUCH ENTERPRISE SPAIN S.L., operating under the commercial name Baruch Real Estate, with registered address at C. Cam. Viejo de Málaga, 28, 29700 Vélez-Málaga, Málaga, Spain, NIF B23896616 and contact email info@baruchrealestate.com. This Cookie Policy explains how Baruch Real Estate uses cookies and similar technologies on its website (www.baruchrealestate.com). Please read this policy together with our Privacy Policy for full transparency on how we collect, use, and safeguard personal data.",
+      "sections": [
+        {
+          "heading": "1. What Are Cookies?",
+          "body": [
+            "Cookies are small text files that are stored on your device when you visit a website. They help improve user experience by remembering preferences, enabling essential functionality, and providing analytical insights about site usage."
+          ]
+        },
+        {
+          "heading": "2. Types of Cookies We Use",
+          "body": [
+            "• Essential Cookies: Required for website functionality and navigation.",
+            "• Analytical Cookies: Help us understand how visitors use our site to improve performance and usability.",
+            "• Functional Cookies: Allow the website to remember user preferences (language, location, etc.).",
+            "• Advertising Cookies: Used to deliver relevant advertisements and measure campaign performance (if applicable)."
+          ]
+        },
+        {
+          "heading": "3. Third-Party Cookies",
+          "body": [
+            "Some cookies on our website are placed by third-party services such as Google Analytics or social media plugins. These providers may collect and process data according to their own privacy policies. We encourage you to review their terms directly for more information."
+          ]
+        },
+        {
+          "heading": "4. Managing and Disabling Cookies",
+          "body": [
+            "You can manage your cookie preferences or disable cookies at any time by adjusting your browser settings. Please note that disabling cookies may affect the functionality and performance of our website.",
+            "",
+            "Instructions for popular browsers:",
+            "• Google Chrome: Settings → Privacy and security → Cookies and other site data",
+            "• Mozilla Firefox: Options → Privacy & Security → Cookies and Site Data",
+            "• Safari: Preferences → Privacy → Manage Website Data",
+            "• Microsoft Edge: Settings → Cookies and site permissions"
+          ]
+        },
+        {
+          "heading": "5. Consent",
+          "body": [
+            "When you visit our website for the first time, a cookie banner appears requesting your consent. By continuing to browse or selecting 'Accept', you agree to the use of cookies as described in this policy."
+          ]
+        },
+        {
+          "heading": "6. Updates to This Cookie Policy",
+          "body": [
+            "We may update this Cookie Policy periodically to reflect changes in our practices or for legal reasons. Any updates will be posted on this page with the revised effective date."
+          ]
+        },
+        {
+          "heading": "7. Contact Us",
+          "body": [
+            "If you have any questions or concerns regarding this Cookie Policy, please contact us at:",
+            "Email: info@baruchrealestate.com",
+            "Address: C. Cam. Viejo de Málaga, 28, 29700 Vélez-Málaga, Málaga, Spain"
+          ]
+        }
+      ]
     }
-  },
-  "filters": {
-    "select-option": "Wybierz opcję",
-    "select-all": "Wybierz wszystkie",
-    "no-results": "Brak wyników"
-  },
-  "cookies": {
-    "banner-title": "Używamy plików cookie",
-    "banner-description": "Używamy plików cookie, aby poprawić Twoje doświadczenia podczas przeglądania i analizować nasz ruch. Klikając 'Akceptuj', wyrażasz zgodę na użycie plików cookie.",
-    "accept": "Akceptuj",
-    "reject": "Odrzuć",
-    "privacy-policy-link": "Polityka Prywatności"
   }
-}
+  
+  
+  

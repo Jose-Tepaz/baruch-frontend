@@ -29,6 +29,7 @@ interface Property {
     is_private?: boolean;
     units?: Unit[];
     estimated_completion: string;
+    location: any; 
 }
 
 export default function PropertyInner({ block_extend, property }: { block_extend: string, property: Property }) {

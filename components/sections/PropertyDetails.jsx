@@ -29,8 +29,11 @@ export default function PropertyDetails({ property }) {
                         {/* Dirección con icono */}
                         <div className="property-location d-flex align-items-center gap-2">
                             <i className="fas fa-map-marker-alt text-color-blue"></i>
-                            <span className="">{property.address}</span>
-                        </div>
+                            <span className="">
+                                
+                                {property.location?.name && ` - ${property.location.name}`}
+                            </span>
+                        </div> 
 
                         
 
@@ -68,7 +71,9 @@ export default function PropertyDetails({ property }) {
                         {property.estimated_completion && 
                         <div className="feature-item">
                             <i className="fas fa-flag-checkered"></i>
-                            <span>{property.estimated_completion} {t("propertyDetails.estimated_completion-text")}</span>
+                            <span>
+                                {property.estimated_completion == 'Ready' ? t("propertyDetails.completion-text") : ''}
+                                {property.estimated_completion != 'Ready' ? property.estimated_completion : ''} </span>
                         </div>} 
                     </div>
 

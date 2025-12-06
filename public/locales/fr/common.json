@@ -26,7 +26,7 @@
         "head-title-4": "Nous sommes ici",
         "title-1-footer": "À propos de nous",
         "title-2-footer": "Magazine",
-        "title-3-footer": "Témoignages",
+        "title-3-footer": "Avis clients",
         "title-4-footer": "Contactez-nous",
         "title-5-footer": "Conditions d'Utilisation",
         "title-6-footer": "Politique de Confidentialité",
@@ -75,9 +75,9 @@
         "subtitle-category": "Category",
         "title-category": "Sélectionnez la Maison qui Vous Convient",
         "btn-about-section-2": "En savoir plus",
-        "subtitle-testimonials-1": "Témoignages",
+        "subtitle-testimonials-1": "Avis clients",
         "title-testimonials": "Ce Que Nos Clients Disent",
-        "subtitle-testimonials": "Témoignages",
+        "subtitle-testimonials": "Avis clients",
         "title-why-choose-us": "Pourquoi Baruch Se Démarque?",      
         "list1-why-choose-us": "Agents Experts",
         "list2-why-choose-us": "Listes Extensives",
@@ -283,6 +283,7 @@
         "email-text": "Email",
         "message-text": "Votre Message",
         "estimated_completion-text": "Voraussichtliche Fertigstellung",
+        "completion-text": "Prêt",
         "units": {
             "title": "Unités",
             "id-house": "Id Maison",
@@ -328,7 +329,7 @@
         "input-click-to-whatsapp": "Cliquer pour WhatsApp"
     },
     "testimonials": {
-        "title": "Témoignages",
+        "title": "Avis clients",
         "contact-title": "Contactez-nous",
         "your-name": "Votre Nom",
         "phone-number": "Numéro de Téléphone",
