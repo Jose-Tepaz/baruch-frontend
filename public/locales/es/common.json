@@ -16,6 +16,10 @@
     },
 
 "footer": {
+    "subscribe-text": "Suscribirse",
+    "success-text": "Gracias por suscribirse a nuestro newsletter!",
+    "error-text": "Por favor, ingrese una dirección de correo electrónico válida",
+    "placeholder-text": "Ingrese su dirección de correo electrónico",
     "title-cta": "Convirtamos tu visión en realidad",
         "description-cta": "No esperes para dar el siguiente paso en tu viaje inmobiliario. Ya sea que busques comprar, vender o invertir, nuestro equipo de expertos está aquí para acompañarte en cada etapa del proceso. En Baruch Real Estate transformamos tu visión en realidad con un servicio personalizado, transparente y sin complicaciones.",
         "btn-cta": "Comienza tu búsqueda hoy",

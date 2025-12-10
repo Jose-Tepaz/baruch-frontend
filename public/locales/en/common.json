@@ -15,6 +15,10 @@
         "btn-header-1": "Sell your Property"
     },
     "footer": {
+        "subscribe-text": "Subscribe",
+        "success-text": "Thank you for subscribing to our newsletter!",
+        "error-text": "Please enter a valid email address",
+        "placeholder-text": "Enter your email address",
         "title-cta": "Let's Make Your Dream a Reality",
         "description-cta": "Don’t wait to start your real estate journey. Whether you’re buying, selling, or renting, our expert team is here to guide you every step of the way. Let’s turn your vision into reality with personalized service and a seamless experience.",
         "btn-cta": "Start Your Search Today",

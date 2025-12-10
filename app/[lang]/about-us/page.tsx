@@ -46,11 +46,11 @@ export async function generateMetadata({ params }: AboutUsPageProps): Promise<Me
       description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
       type: 'website',
       locale: lang,
-      url: `https://baruch.com/${lang}/about-us`,
+      url: `https://baruchrealestate.com/${lang}/about-us`,
       siteName: 'Baruch Real Estate',
       images: [
         {
-          url: 'https://baruch.com/about-us-og.jpg',
+          url: 'https://baruchrealestate.com/about-us-og.jpg',
           width: 1200,
           height: 630,
           alt: 'About Baruch Real Estate'
@@ -61,10 +61,10 @@ export async function generateMetadata({ params }: AboutUsPageProps): Promise<Me
       card: 'summary_large_image',
       title: titles[lang as keyof typeof titles] || titles.en,
       description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
-      images: ['https://baruch.com/about-us-og.jpg']
+      images: ['https://baruchrealestate.com/about-us-og.jpg']
     },
     alternates: {
-      canonical: `https://baruch.com/${lang}/about-us`, //eslint-disable-line
+      canonical: `https://baruchrealestate.com/${lang}/about-us`, //eslint-disable-line
       languages: {
         'en': '/en/about-us',
         'es': '/es/about-us',

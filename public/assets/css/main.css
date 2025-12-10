@@ -5914,7 +5914,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
 
 .wrapp-float-component-footer {
     background: var(--ztc-bg-bg-1);
-    padding: 60px 0 60px;
+    padding: 20px 0 60px;
     border-radius: 16px;
     width: 100%;
     max-width: 1376px;

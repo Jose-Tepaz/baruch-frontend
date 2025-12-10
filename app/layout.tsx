@@ -55,14 +55,14 @@ export const metadata: Metadata = {
         address: false,
         telephone: false,
     },
-    metadataBase: new URL('https://baruch.com'),
+    metadataBase: new URL('https://baruchrealestate.com'),
     alternates: {
         canonical: '/',
     },
     openGraph: {
         type: 'website',
         locale: 'en_US',
-        url: 'https://baruch.com',
+        url: 'https://baruchrealestate.com',
         siteName: 'Baruch Real Estate',
         title: 'Baruch Real Estate - Find Your Dream Property',
         description: 'Discover the best properties in your area. Browse houses, apartments, and commercial properties with Baruch Real Estate.',

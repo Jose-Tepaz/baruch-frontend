@@ -3,7 +3,7 @@ import { getProperties } from '@/services/get-properties'
 import { getCategories } from '@/services/categories'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://baruch.com'
+  const baseUrl = 'https://baruchrealestate.com'
   const locales = ['en', 'es', 'fr', 'de', 'pl', 'sv', 'nl']
   
   const sitemap: MetadataRoute.Sitemap = []

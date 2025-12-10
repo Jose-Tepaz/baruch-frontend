@@ -23,7 +23,11 @@ export default function LegalContent({ policyType, title, updatedAt, intro }: Le
     return (
         <div className="policy-details">
             <div className="heading1">
-                <h2>{hasContent ? finalTitle : `${policyType.charAt(0).toUpperCase() + policyType.slice(1)} Policy`}</h2>
+                <h2>
+                    {policyType === 'terms' && 'Terms & Conditions'}
+                    {policyType === 'privacy' && 'Privacy Policy'}
+                    {policyType === 'cookies' && 'Cookie Policy'}
+                </h2>
                 <div className="space24" />
                 <h4>Effective Date: {hasContent ? finalUpdatedAt : ''}</h4>
                 <div className="space16" />

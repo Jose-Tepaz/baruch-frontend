@@ -56,11 +56,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
       type: 'website',
       locale: lang,
-      url: `https://baruch.com/${lang}`,
+      url: `https://baruchrealestate.com/${lang}`,
       siteName: 'Baruch Real Estate',
       images: [
         {
-          url: 'https://baruch.com/og-image.jpg',
+          url: 'https://baruchrealestate.com/og-image.jpg',
           width: 1200,
           height: 630,
           alt: 'Baruch Real Estate'
@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: titles[lang as keyof typeof titles] || titles.en,
       description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
-      images: ['https://baruch.com/og-image.jpg']
+      images: ['https://baruchrealestate.com/og-image.jpg']
     },
     robots: {
       index: true,
@@ -85,7 +85,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     alternates: {
-      canonical: `https://baruch.com/${lang}`,
+      canonical: `https://baruchrealestate.com/${lang}`,
       languages: {
         'en': '/en',
         'es': '/es',

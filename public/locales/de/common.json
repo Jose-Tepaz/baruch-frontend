@@ -15,6 +15,10 @@
         "btn-header-1": "Eigentum verkaufen"
     },
     "footer": {
+        "subscribe-text": "Abonnieren",
+        "success-text": "Danke für Ihre Anmeldung zur Newsletter!",
+        "error-text": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "placeholder-text": "Geben Sie Ihre E-Mail-Adresse ein",
         "title-cta": "Lass uns dein Traum wahr werden",
         "description-cta": "Don’t wait to start your real estate journey. Whether you’re buying, selling, or renting, our expert team is here to guide you every step of the way. Let’s turn your vision into reality with personalized service and a seamless experience.",
         "btn-cta": "Starte deine Suche heute",
