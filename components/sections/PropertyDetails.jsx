@@ -31,7 +31,7 @@ export default function PropertyDetails({ property }) {
                             <i className="fas fa-map-marker-alt text-color-blue"></i>
                             <span className="">
                                 
-                                {property.location?.name && ` - ${property.location.name}`}
+                                {property.location?.name && `${property.location.name}`}
                             </span>
                         </div> 
 
