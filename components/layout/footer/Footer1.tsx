@@ -315,29 +315,29 @@ export default function Footer1() {
                                         <p className="text-white text-size-large text-weight-medium" style={{ marginBottom: '16px' }}>{t('footer.head-title-3')}</p>
                                         <ul className="text-white">
                                             <li>
-                                                <Link href="/en/properties?location=Marbella" className="text-white">{t('footer.title-popular-locations-1')}</Link>
+                                                <Link href="/en/properties?location=marbella" className="text-white">{t('footer.title-popular-locations-1')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/en/properties?location=Mijas" className="text-white">{t('footer.title-popular-locations-2')}</Link>
+                                                <Link href="/en/properties?location=mijas" className="text-white">{t('footer.title-popular-locations-2')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/en/properties?location=Estepona" className="text-white">{t('footer.title-popular-locations-3')}</Link>
+                                                <Link href="/en/properties?location=estepona" className="text-white">{t('footer.title-popular-locations-3')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/en/properties?location=Sotogrande" className="text-white">{t('footer.title-popular-locations-4')}</Link>
+                                                <Link href="/en/properties?location=sotogrande" className="text-white">{t('footer.title-popular-locations-4')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/en/properties?location=The Golden Mile" className="text-white">{t('footer.title-popular-locations-5')}</Link>
+                                                <Link href="/en/properties?location=the+golden+mile" className="text-white">{t('footer.title-popular-locations-5')}</Link>
                                             </li>
 
                                             <li>
-                                                <Link href="/en/properties?location=Rincon" className="text-white">{t('footer.title-popular-locations-7')}</Link>
+                                                <Link href="/en/properties?location=rincon" className="text-white">{t('footer.title-popular-locations-7')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/en/properties?location=Torox" className="text-white">{t('footer.title-popular-locations-8')}</Link>
+                                                <Link href="/en/properties?location=torrox" className="text-white">{t('footer.title-popular-locations-8')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/en/properties?location=Malaga" className="text-white">{t('footer.title-popular-locations-9')}</Link>
+                                                <Link href="/en/properties?location=malaga" className="text-white">{t('footer.title-popular-locations-9')}</Link>
                                             </li>
                                         </ul>
                                     </div>
