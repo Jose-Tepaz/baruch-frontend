@@ -351,23 +351,20 @@ export default function Footer1() {
                                         <ul className="text-white">
 
                                             <li>
-                                                <Link href={`/${locale}/properties?category=villas`} className="text-white">{t('footer.category-1')}</Link>
+                                                <Link href={`/en/properties?category=villas`} className="text-white">{t('footer.category-1')}</Link>
                                             </li>
                                             <li>
-                                                <Link href={`/${locale}/properties?category=apartments`} className="text-white">{t('footer.category-2')}</Link>
+                                                <Link href={`/en/properties?category=apartments`} className="text-white">{t('footer.category-2')}</Link>
                                             </li>
                                             <li>
-                                                <Link href={`/${locale}/properties?property_status=New+Developments`} className="text-white">{t('footer.category-3')}</Link>
+                                                <Link href={`/en/properties?property_status=New+Developments`} className="text-white">{t('footer.category-3')}</Link>
                                             </li>
                                             <li>
-                                                <Link href={`/${locale}/properties?category=golf-properties`} className="text-white">{t('footer.category-4')}</Link>
+                                                <Link href={`/en/properties?category=golf-properties`} className="text-white">{t('footer.category-4')}</Link>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
-
-
-
                             </div>
                             <div className="space24" />
                             <div >
