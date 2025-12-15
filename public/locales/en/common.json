@@ -232,8 +232,8 @@
             {
                 "id": "buying-representation",
                 "title": "Buying Representation",
-                "description": "Your Trusted Partner When Buying Property in Costa del Sol\n\nPurchasing a home in Spain is an exciting step, but it can also be complex, especially if you’re not familiar with the local market, language, and legal system.\n\nAt Baruch Real Estate, we make the process transparent, secure, and fully guided from start to finish.\n\nOur Buying Representation Service ensures that your interests are always protected. From identifying the right property and arranging viewings to negotiating the best terms and managing the legal process, we handle every detail with real estate and legal support under one roof.",
-                "image": "/assets/img/all-images/service/management.webp",
+                "description": "Your Trusted Partner When Buying Property in Costa del Sol.\n\nPurchasing a home in Spain is an exciting step, but it can also be complex, especially if you’re not familiar with the local market, language, and legal system.\n\nAt Baruch Real Estate, we make the process transparent, secure, and fully guided from start to finish.\nOur Buying Representation Service ensures that your interests are always protected. From identifying the right property and arranging viewings to negotiating the best terms and managing the legal process, we handle every detail with real estate and legal support under one roof.",
+                "image": "/assets/img/all-images/service/buying-representation_result.webp",
                 "title-list": "The steps to buying your home in Spain",
                 "details": [
                     {
@@ -250,38 +250,299 @@
                     },
                     {
                         "title": "4. Due Diligence and Legal Verification",
-                        "description": "Once you find a property you’re interested in, our legal team steps in to perform a full due diligence check. \n\nThis includes verifying: \n\nLegal ownership and registration (Nota Simple) \n\nUrban planning compliance \n\nOutstanding debts, taxes, or community fees \n\nBuilding licenses and certificates. With Baruch Real Estate, you benefit from having legal professionals working closely with your agent, ensuring every property is legally sound before you commit."
+                        "description": "Once you find a property you’re interested in, our legal team steps in to perform a full due diligence check.\nThis includes verifying:\n\n- Legal ownership and registration (Nota Simple)\n- Urban planning compliance\n- Outstanding debts, taxes, or community fees\n- Building licenses and certificates\n\nWith Baruch Real Estate, you benefit from having legal professionals working closely with your agent, ensuring every property is legally sound before you commit."
+                    },
+                    {
+                        "title": "5. Negotiation and Offer Handling",
+                        "description": "We represent your interests during the negotiation phase, aiming to secure the best possible price and terms.\nOur experience in the Costa del Sol market allows us to guide you with realistic expectations and solid data on property values.\nWe handle the communication with the seller’s agent and ensure that every offer is clear, written, and compliant with Spanish law."
+                    },
+                    {
+                        "title": "6. Reservation and Deposit",
+                        "description": "When an offer is accepted, a reservation contract (Contrato de Reserva) is signed and a small deposit is paid to remove the property from the market.\nOur legal team ensures the terms protect your interests and that all payments are made safely through secure client accounts."
+                    },
+                    {
+                        "title": "7. Private Purchase Contract (Contrato de Arras)",
+                        "description": "After the reservation, the next step is the private purchase contract.\nThis legally binding agreement outlines the conditions of the sale, payment schedule, and completion date.\nOur legal partners review or draft this document to ensure it fully represents your rights as the buyer."
+                    },
+                    {
+                        "title": "8. Final Signing at the Notary",
+                        "description": "The purchase is completed with the Escritura de Compraventa (title deed) signed before a Spanish notary.\nWe accompany you to the notary, ensure that all documents are correct, and verify that payment and property transfer are executed safely.\nIf you are unable to attend in person, we can arrange a power of attorney so that your purchase can be completed remotely."
+                    },
+                    {
+                        "title": "9. Post-Completion Services",
+                        "description": "After completion, we continue to assist with:\n• Utility transfers and registrations\n• Property insurance\n• Tax registration (NIE, IBI, etc.)\n• Banking and payment setup\n\nOur goal is to make your transition as seamless as possible, so you can start enjoying your new home right away."
+                    },
+                    {
+                        "title": "Why Work with a Buying Representative",
+                        "description": "Having a buying representative means having someone on your side. Someone who represents you, not the seller.\n\nAt Baruch Real Estate, we offer:\n• Full transparency in every step\n• Access to all properties on the market, not just our own\n• Legal support from trusted professionals under one roof\n• Guidance in your own language\n• Safe, structured, and efficient handling from first contact to notary\n\nWhether you are buying your first home in Spain or adding to your investment portfolio, our expertise ensures your purchase is secure and stress-free."
+                    },
+                    {
+                        "title": "Ready to Find Your Property in Costa del Sol?",
+                        "description": "If you’re planning to buy a property in Málaga, Marbella, Estepona, or anywhere along the Costa del Sol, we’d be happy to guide you through every step.\n\nContact us today to schedule a consultation or property search meeting.\n\nLet’s find your dream home with clarity, confidence, and complete support from start to finish."
                     }
                 ]
             },
             {
-                "id": "selling-representation",
-                "title": "Selling Representation",
-                "description": "We offer a wide range of services to help you buy, sell, and rent properties in Spain. Our team of experts is here to guide you through every step of the process.",
-                "image": "/assets/img/all-images/service/selling-representation.webp",
+                "id": "finance",
+                "title": "Finance & Mortgage Services in Spain",
+                "description": "Your Guide to Mortgages, Bank Accounts, and Financing in Costa del Sol.\n\nBuying a property in Spain often involves securing a mortgage or arranging financing.\n\nNavigating the Spanish banking system can be complex, especially for foreign buyers. From mortgage options to bank accounts, understanding rates, terms, and requirements is essential.\n\nAt Baruch Real Estate, we make financing simple. Leveraging our extensive network of banking and finance partners, we help you find suitable mortgage solutions, assist with the application process, and guide you from start to finish, ensuring your financing process is smooth and transparent.",
+                "image": "/assets/img/all-images/service/finance_result.webp",
+                "title-list": "Our Mortgage & Finance Services",
                 "details": [
-                    "Personalized property searches tailored to your lifestyle and goals.",
-                    "Expert guidance on local neighborhoods, schools, and communities.",
-                    "Hassle-free viewings and curated recommendations.",
-                    "Skilled negotiation to get you the best deal.",
-                    "Trusted lawyers in-house for legal support.",
-                    "Financial partners to ensure a smooth transaction."
+                    {
+                        "title": "1. Quick Mortgage Scan",
+                        "description": "We start by assessing your financial situation and goals:\n\n• Income and affordability check\n• Property price and loan amount analysis\n• Initial eligibility assessment\n\nThis allows us to quickly identify banks and mortgage products that fit your needs, saving time and avoiding unnecessary applications."
+                    },
+                    {
+                        "title": "2. Mortgage Comparison with Our Partners",
+                        "description": "Through our trusted network of banks and finance partners, we can compare a wide range of mortgage options:\n\n• Fixed-rate mortgages\n• Variable-rate mortgages\n• Mixed-rate mortgages\n• Non-resident mortgage solutions\n\nOur goal is to help you find competitive rates and flexible terms, with full transparency. The mortgage agreement itself is always between the client and the bank, but we guide and coordinate the process for you."
+                    },
+                    {
+                        "title": "3. Mortgage Application Support",
+                        "description": "We assist with the preparation and submission of your application to our banking partners, including:\n\n• Collecting necessary documents (proof of income, tax returns, property details)\n• Submitting the application to selected banks\n• Coordinating with the bank until the mortgage is approved\n\nWhile the mortgage contract is signed between you and the bank, our team ensures the process is smooth and correctly documented."
+                    },
+                    {
+                        "title": "4. Bank Account Opening",
+                        "description": "A Spanish bank account is often required for mortgage payments, property management, and utilities.\n\nWe help you:\n• Select the bank that suits your needs\n• Open a Spanish bank account efficiently\n• Set up payments and transfers related to your property\n\nThis service is available for both residents and non-residents, making your financial setup seamless."
+                    },
+                    {
+                        "title": "5. Mortgage Completion & Coordination",
+                        "description": "Once your mortgage is approved, we coordinate with your lawyer and notary to ensure funds are ready for signing the Escritura de Compraventa.\n\nWe manage the scheduling and documentation so you can focus on your property purchase, while the mortgage itself remains fully between you and the bank."
+                    },
+                    {
+                        "title": "Why Work with Baruch Real Estate for Financing",
+                        "description": "• Quick mortgage scan to determine what you qualify for\n• Access to an extensive network of banks and finance partners\n• Guidance on documentation, applications, and approvals\n• Support with Spanish bank account setup\n• Transparent coordination from first contact until mortgage approval\n\nWe provide a full-service approach, helping you navigate the financing process efficiently and safely; while keeping you informed every step of the way."
+                    },
+                    {
+                        "title": "Request Rates & Prices",
+                        "description": "If you would like to explore mortgage options or arrange a financing scan for your property purchase, we can provide tailored information from our partner banks.\n\nContact us today to discuss your mortgage options, request current rates, and start your financing journey in Costa del Sol; Benalmadena, Estepona, Málaga, Marbella, Torrox, Alhaurín or elsewhere in Spain."
+                    }
                 ]
             },
             {
-                "id": "renting-representation",
-                "title": "Renting Representation",
-                "description": "We offer a wide range of services to help you buy, sell, and rent properties in Spain. Our team of experts is here to guide you through every step of the process.",
-                "image": "/assets/img/all-images/service/renting-representation.webp",
+                "id": "insurance-services",
+                "title": "Insurance Services in Spain",
+                "description": "Comprehensive Insurance Solutions for Residents and Property Owners\n\nLiving or investing in Spain comes with responsibilities, including protecting yourself, your family, and your property. From home insurance to life, health, and car insurance, having the right coverage is essential for peace of mind.\n\nAt Baruch Real Estate, we connect our clients with a network of trusted insurance providers to find the best solutions tailored to your needs. We guide you through the process, explain your options, and make sure you get the coverage that fits your situation all in your language.",
+                "image": "/assets/img/all-images/service/Insurance_result.webp",
+                "title-list": "Our Insurance Services",
                 "details": [
-                    "Personalized property searches tailored to your lifestyle and goals.",
-                    "Expert guidance on local neighborhoods, schools, and communities.",
-                    "Hassle-free viewings and curated recommendations.",
-                    "Skilled negotiation to get you the best deal.",
-                    "Trusted lawyers in-house for legal support.",
-                    "Financial partners to ensure a smooth transaction."
+                    {
+                        "title": "1. Home Insurance",
+                        "description": "Protecting your property in Spain is crucial. Home insurance can cover:\n\n• Fire, water damage, and natural disasters\n• Theft and vandalism\n• Liability in case of accidents on your property\n\nWe work with providers who understand both residences and holiday homes in the Costa del Sol, Málaga, and surrounding areas, ensuring you get comprehensive coverage at competitive rates."
+                    },
+                    {
+                        "title": "2. Life Insurance",
+                        "description": "Life insurance provides financial security for your family in case of unforeseen events.\n\nDepending on your needs, life insurance can include:\n\n• Standard coverage for death\n• Mortgage protection\n• Income protection for dependents\n\nOur partners offer flexible policies that are suitable for residents and non-residents in Spain."
+                    },
+                    {
+                        "title": "3. Health Insurance",
+                        "description": "Healthcare in Spain can be accessed via the public system, but many expats prefer private health insurance for faster access, choice of doctors, and coverage for international care.\n\nWe can arrange plans for:\n\n• Individuals or families\n• EU and non-EU citizens\n• Long-term or short-term coverage\n\nThis ensures you and your loved ones are protected and have access to high-quality healthcare."
+                    },
+                    {
+                        "title": "4. Car Insurance",
+                        "description": "Car ownership in Spain requires mandatory motor insurance, but additional coverage can provide extra protection.\n\nWe can help you find policies that cover:\n\n• Third-party liability (mandatory)\n• Fully comprehensive coverage\n• Roadside assistance\n• Coverage for multiple drivers or leased vehicles\n\nWhether you own a family car, luxury vehicle, or rental property vehicle, our partners offer tailored solutions."
+                    },
+                    {
+                        "title": "5. Other Insurance Options",
+                        "description": "Depending on your situation, additional insurance may be relevant:\n\n• Travel insurance for holidays or temporary stays\n• Rental protection insurance for holiday homes\n• Business or professional liability insurance\n• Pet insurance\n\nOur network allows us to find the most suitable provider for any type of insurance, ensuring you’re fully covered without unnecessary costs."
+                    },
+                    {
+                        "title": "Why Choose Baruch Real Estate for Insurance Services",
+                        "description": "• Trusted network of insurance partners with expertise in Spain\n• Tailored solutions for residents, non-residents, and property investors\n• Assistance in your own language\n• Transparent explanations of coverage, terms, and pricing\n• Guidance through the application and claims process\n\nWe aim to make insurance simple, accessible, and reliable, giving you confidence that you and your assets are protected."
+                    },
+                    {
+                        "title": "Get Your Insurance Solutions Today",
+                        "description": "Whether you need home, life, health, or car insurance, our team can connect you with the right provider and arrange a plan that suits your needs.\n\nContact us today to discuss your insurance options and receive tailored solutions through our trusted network of partners in Spain."
+                    }
                 ]
-            }
+            },
+        {
+            "id": "legal-services",
+            "title": "Legal Services in Spain",
+            "description": "Comprehensive Legal Support for Residents and Property Owners\n\nNavigating Spanish legal processes can be complex, especially if you are buying or selling property, applying for residency, or setting up a business. At Baruch Real Estate, we work with a network of trusted lawyers and notaries to provide fast, professional, and reliable legal services.\n\nOur team coordinates with these legal experts to ensure your transactions and procedures are compliant with Spanish law, giving you peace of mind and saving you time.",
+            "image": "/assets/img/all-images/service/legal_result.webp",
+            "title-list": "Our Legal Services",
+            "details": [
+                {
+                    "title": "1. Legal Support for Buying a Property",
+                    "description": "When purchasing a property in Spain, legal guidance is essential. Our services include:\n\n• Verification of property ownership and registration\n• Due diligence checks for debts, liens, and community fees\n• Reviewing or drafting reservation and purchase contracts\n• Coordination with notaries for the Escritura de Compraventa\n• Assistance with mortgage contracts and bank documentation\n\nWe ensure that every step of your property purchase is secure, transparent, and legally compliant."
+                },
+                {
+                    "title": "2. Legal Support for Selling a Property",
+                    "description": "Selling a property also requires legal oversight. Our lawyers can:\n\n• Review your property documentation and ownership\n• Advise on contract terms and obligations\n• Handle communication with the buyer’s legal representatives\n• Coordinate the notary signing and completion process\n\nThis ensures that your sale is carried out efficiently and securely, with minimal risk."
+                },
+                {
+                    "title": "3. NIE Applications & Residency Legal Assistance",
+                    "description": "We assist with legal procedures related to foreign identification and residency, including:\n\n• Applying for your NIE (Número de Identidad de Extranjero)\n• Handling Power of Attorney (POA) if you cannot apply in person\n• Supporting residency applications for EU and non-EU citizens\n\nOur legal partners ensure your identification and residency documents are processed correctly and efficiently."
+                },
+                {
+                    "title": "4. Company Formation (SL)",
+                    "description": "If you want to set up a company in Spain, we can guide you through:\n\n• Establishing a Sociedad Limitada (SL)\n• Drafting articles of association\n• Registering with the Commercial Registry (Registro Mercantil)\n• Opening bank accounts for the company\n• Obtaining tax identification numbers and permits\n\nWe coordinate with trusted legal and accounting partners to make company setup fast and compliant."
+                },
+                {
+                    "title": "5. Notary Connections & Coordination",
+                    "description": "Our network includes reliable notaries for:\n\n• Property signings (Escritura de Compraventa)\n• Company formation\n• Powers of Attorney\n• Wills and testaments (Testamento)\n\nWe can schedule appointments quickly and ensure that all documents and procedures are ready for your notary visit."
+                },
+                {
+                    "title": "6. Wills and Testament Services",
+                    "description": "Planning your estate is important for residents and property owners. Our legal partners can help you:\n\n• Draft a Spanish will (Testamento)\n• Ensure your property and assets are properly distributed\n• Coordinate inheritance processes to avoid complications\n\nThis ensures your estate and family matters are handled legally and clearly."
+                },
+                {
+                    "title": "7. Quick Response & Personalized Service",
+                    "description": "We understand that legal matters often require fast and reliable support.\n\nOur team coordinates with our legal network to provide:\n\n• Quick responses to queries\n• Guidance in English, Dutch, German, or Spanish\n• Clear explanations of all procedures and costs\n\nWith Baruch Real Estate, you have professional legal support under one roof, ensuring your property, residency, and business matters are handled efficiently."
+                },
+                {
+                    "title": "Why Work With Us for Legal Services",
+                    "description": "• Access to a network of trusted lawyers and notaries\n• Full support for property, residency, company, and personal legal matters\n• Quick, efficient, and clear communication\n• Guidance in multiple languages\n• Coordination with all parties involved, so your processes are streamlined and stress-free"
+                },
+                {
+                    "title": "Get Professional Legal Assistance",
+                    "description": "Whether you are buying or selling a property, applying for NIE, setting up a company, or planning your testament, we can connect you with experienced legal professionals who provide fast, reliable, and tailored support.\n\nContact us today to discuss your legal needs and arrange assistance from our network of trusted lawyers and notaries in Costa del Sol, Málaga, Marbella, or anywhere in Spain."
+                }
+            ]
+        },
+        {
+            "id": "residency-nie",
+            "title": "Residency / NIE in Spain",
+            "description": "Everything You Need to Know About Getting a NIE or Residency in Spain\n\nIf you plan to buy a property, open a bank account, work, or live in Spain, you’ll need an NIE number (Número de Identidad de Extranjero). This number is essential for almost any official, legal, or financial process in Spain — whether you are a resident or a non-resident property owner.\n\nAt Baruch Real Estate, we make it easy. We assist our clients with the NIE application process and can also arrange it on your behalf via Power of Attorney (POA), saving you time, stress, and travel.",
+            "image": "/assets/img/all-images/service/residency_result.webp",
+            "title-list": "Our Residency & NIE Services",
+            "details": [
+                {
+                    "title": "What Is a NIE?",
+                    "description": "The NIE is your foreigner identification number in Spain. It’s issued by the Spanish authorities (Policía Nacional) and used for all administrative and legal matters.\n\nYou’ll need an NIE if you plan to:\n\n• Buy or sell property\n• Sign at the notary\n• Open a Spanish bank account\n• Connect utilities (electricity, water, internet)\n• Pay taxes in Spain\n• Register a car\n• Start a business or work legally\n\nThe NIE itself is not a residency permit; it’s simply your tax and identification number as a foreigner. However, it’s a first and necessary step if you plan to live, invest, or stay long-term in Spain."
+                },
+                {
+                    "title": "NIE vs. Residency — What’s the Difference?",
+                    "description": "• NIE (Número de Identidad de Extranjero):\nA personal identification number issued to foreigners for tax and legal purposes. You can have an NIE without being a resident.\n\n• Residency (Residencia):\nA legal status that allows you to live in Spain for more than 90 days per year. Depending on your nationality, this can be obtained through EU Residency Registration or a Non-Lucrative / Golden Visa application.\n\nMost of our international clients start with the NIE, especially when buying property, and then decide later whether to apply for residency."
+                },
+                {
+                    "title": "The NIE Application Process",
+                    "description": "Step 1: Determine How You Will Apply\nYou can apply for a NIE:\n1. In person at a Spanish police station (Comisaría de Policía) with a foreigners’ office (Oficina de Extranjería).\n2. Through Power of Attorney (POA), we can handle the entire process on your behalf without you needing to travel.\n\nStep 2: Prepare the Required Documents\nThe documentation typically includes:\n• Completed EX-15 application form\n• Copy of your passport (and original if applying in person)\n• Proof of why you need the NIE (e.g., property purchase, work contract)\n• Appointment confirmation (Cita Previa)\n• Payment of the NIE tax fee (Tasa 790, Code 012)\n\nIf you use Baruch Real Estate’s NIE service, we prepare all required documents and ensure everything is filled in correctly, avoiding the common errors that can delay approval."
+                },
+                {
+                    "title": "Power of Attorney (POA) Option",
+                    "description": "If you’re outside Spain or prefer not to visit the police station yourself, you can authorize our legal partner to apply for the NIE on your behalf.\n\nThis is done through a Power of Attorney (Poder Notarial), which can be signed:\n• At a notary in Spain, or\n• At a notary in your home country, and then legalized with an Apostille of The Hague.\n\nOnce the POA is received, we submit the NIE application and collect the document once issued. This is a fast, secure, and convenient option, ideal for foreign buyers or investors."
+                },
+                {
+                    "title": "Collecting Your NIE Certificate",
+                    "description": "Once approved, the NIE certificate is issued by the Spanish authorities and contains your name, nationality, and unique NIE number.\n\nWe send it directly to you (or your lawyer) securely. The number is permanent and valid for life — you’ll use it for all official transactions in Spain."
+                },
+                {
+                    "title": "Residency Options in Spain",
+                    "description": "If you plan to live in Spain permanently or for more than 90 days per year, you’ll need to apply for Residency. There are several options depending on your nationality and situation:\n\nEU Citizens:\n• Apply for Residency Certificate (Certificado de Registro de Ciudadano de la Unión Europea).\n• You’ll need proof of income, health insurance, and a Spanish address.\n\nNon-EU Citizens:\nYou may qualify for one of the following:\n• Non-Lucrative Visa: For individuals who wish to live in Spain without working, supported by sufficient financial means.\n• Golden Visa: For those investing €500,000 or more in Spanish property.\n• Work or Business Visa: For those employed or self-employed in Spain.\n\nWe can connect you with trusted legal partners to assist in choosing and processing the right residency application for your case."
+                },
+                {
+                    "title": "Why Apply Through Baruch Real Estate",
+                    "description": "• Fast, professional NIE and residency assistance\n• Legal and real estate services under one roof\n• We handle the paperwork and appointments for you\n• Clear communication and updates in your own language\n• Option to complete the process remotely via Power of Attorney\n\nOur goal is to make your start in Spain — whether for property ownership or living — as smooth and stress-free as possible."
+                },
+                {
+                    "title": "Need a NIE Number? We Can Help",
+                    "description": "Are you planning to buy property, open a bank account, or move to Spain?\n\nYou’ll need a valid NIE and we can arrange it for you quickly and professionally.\n\nDo you want to apply for your NIE? Contact us today for details and pricing.\n\nWe’ll guide you through every step and ensure your application is handled correctly from start to finish."
+                }
+            ]
+        },
+        {
+            "id": "sell-your-house-in-costa-del-sol",
+            "title": "Sell Your House in Costa del Sol",
+            "description": "Make Selling Your Property in Spain a Smooth and Secure Experience\n\nSelling a property in Spain? Especially in popular areas such as Málaga, Marbella, or the Costa\ndel Sol, the process involves a series of legal and administrative steps that can feel\noverwhelming without proper guidance. From determining the right asking price to preparing documents and signing at the notary, each stage requires precision and professional handling.\n\nAt Baruch Real Estate, we simplify the process for you.\n\nOur experienced team combines real estate and legal support under one roof, ensuring your sale is handled smoothly, transparently, and with complete confidence. Whether you live in Spain or abroad.",
+            "image":"/assets/img/all-images/service/sell_your_house_result.webp",
+            "title-list": "The Steps to Selling Your Home",
+            "details": [
+                {
+                    "title": "1. Property Evaluation and Market Analysis",
+                    "description": "We start with a professional valuation of your property.\n\nUsing up-to-date local market data, comparable sales, and the unique features of your home, we determine a realistic asking price that attracts qualified buyers and maximizes your return.\n\nOur knowledge of the Costa del Sol property market allows us to position your home\neffectively from day one."
+                },
+                {
+                    "title": "2. Legal Review and Documentation",
+                    "description": "Before listing, our legal team reviews all essential documents to make sure your property is ready for sale. This includes:\n\n- Title deed (Escritura de Propiedad)\n- Nota Simple from the land registry\n- Energy Performance Certificate (CEE)\n- IBI (property tax) and recent utility bills\n\nThis step ensures your sale is legally sound and prevents any complications later in the process.\n\nWith Baruch Real Estate, you benefit from having real estate and legal experts working together, making everything clear and efficient."
+                },
+                {
+                    "title": "3. Preparing Your Home for Sale",
+                    "description": "First impressions matter. We help you present your home in the best possible way, from professional photography to home staging and small improvements.\n\nIf needed, we can connect you with trusted local partners for cleaning, repairs, or decoration. We will ensure your property looks its best for potential buyers."
+                },
+                {
+                    "title": "4. Marketing and Promotion",
+                    "description": "Once your home is ready, we launch a targeted marketing campaign focused on both local and international buyers.\n\nThis includes:\n\n- Listings on major real estate portals in Spain and Europe\n- High-quality images, videos, and drone footage\n- Social media campaigns and email marketing\n- Collaboration with partner agents across Europe\n\nOur marketing strategy ensures your property reaches the right audience all over the world.\n\nIncluding buyers from the Netherlands, Belgium, Germany, Poland, Sweden, UK and the United States, who are actively searching for homes in southern Spain."
+                },
+                {   
+                    "title": "5. Viewings and Buyer Communication",
+                    "description": "We handle all buyer enquiries, visits, and feedback for you.\n\nEach potential buyer is pre-qualified before viewing your property to ensure serious interest.\n\nYou receive regular updates, so you’re always informed about progress and buyer reactions."
+                },
+                {
+                    "title": "6. Negotiation and Offer Handling",
+                    "description": "When offers are received, we guide you through the negotiation process.\n\nOur goal is to achieve the best possible price and terms while protecting your interests.\n\nWith legal support integrated into our process, every agreement and deposit is properly managed and compliant with Spanish property law."
+                },
+                {
+                    "title": "7. Signing the Reservation Contract",
+                    "description": "After an offer is accepted, we prepare the reservation contract (Contrato de Reserva).\n\nThis document removes your property from the market and confirms the buyer’s commitment.\n\nOur legal team reviews and drafts the contract to ensure your rights as the seller are fully safeguarded."
+                },
+                {
+                    "title": "8. Preparation for the Notary",
+                    "description": "Before the completion date, we coordinate with the notary, the buyer’s legal representative, and banks to make sure everything is ready.\n\nThis includes arranging all documents, tax clearances, and certificates so that the sale can be completed without issues."
+                },
+                {
+                    "title": "9. Signing the Deed of Sale (Escritura de Compraventa)",
+                    "description": "The final signing takes place at the notary’s office, where ownership officially transfers to the buyer.\n\nOur real estate and legal teams are present to oversee the transaction, ensure secure payment, and confirm that all legal steps are followed."
+                },
+                {
+                    "title": "10. After-Sales Support",
+                    "description": "After completion, we assist with utility transfers, tax declarations, and any remaining administrative matters.\n\nOur support doesn’t end at the notary.\n\nWe’re here to make the entire process seamless from start to finish."
+                },
+                {
+                    "title": "Why Sell with Baruch Real Estate",
+                    "description": "At Baruch Real Estate, we provide everything you need under one roof, from valuation and marketing to full legal assistance.\n\nThis structure allows us to handle every step efficiently and with clear communication between all parties.\n\nOur team has extensive experience in the Costa del Sol real estate market, ensuring your sale is handled professionally and with a deep understanding of local property regulations."
+                },
+                {
+                    "title": "Ready to Sell Your Property in Spain?",
+                    "description": "Would you like to know how much your home is worth or what steps are needed to start selling?\n\nWe’d be happy to guide you through the process.\n\nContact us today to receive a free property evaluation or to discuss your selling plans in Málaga, Marbella, Estepona, or anywhere along the Costa del Sol.\n\nLet’s make your property sale simple, secure, and successful together."
+                }
+            ]
+        },
+        {
+            "id": "taxes",
+            "title": "Taxes & Tax Return in Spain",
+            "description": "Everything You Need to Know About Taxes in Spain\n\nWhether you’re living in Spain, buying property, or earning income from Spanish sources, understanding the tax system is crucial. Taxes can vary depending on your residency status, type of income, and property ownership.\n\nAt Baruch Real Estate, we work with trusted accountants and tax advisors to ensure your taxes are filed correctly, efficiently, and in compliance with Spanish law, giving you peace of mind and avoiding costly mistakes.",
+            "image": "/assets/img/all-images/service/taxes_result.webp",
+            "title-list": "Resident vs. Non-Resident Taxes",
+            "details": [
+            
+                {
+                    "title": "1. Resident in Spain",
+                    "description": "You are generally considered a resident for tax purposes if you live in Spain for more than 183 days per year or have your main economic interests in the country.\n\nResidents are required to declare:\n\n• Worldwide income\n• Property, investments, and assets in Spain and abroad\n• Capital gains, dividends, and rental income"
+                },
+                {
+                    "title": "2. Non-Resident in Spain",
+                    "description": "Non-residents only pay taxes on income and assets located in Spain. This includes:\n\n• Rental income from Spanish property\n• Capital gains from the sale of Spanish property\n• Spanish-sourced pensions or investments\n\nUnderstanding your status is crucial because tax rates, deductions, and obligations differ significantly."
+                },
+                {
+                    "title": "Main Taxes You May Encounter in Spain",
+                    "description": "1. Income Tax (IRPF for residents / IRNR for non-residents)\n• Residents (IRPF): Taxed progressively on worldwide income (up to ~47%).\n• Non-Residents (IRNR): Flat tax rate on Spanish income (typically 19–24%).\n\n2. Property Taxes\n• IBI (Impuesto sobre Bienes Inmuebles): Annual local property tax.\n• Plusvalía Municipal: Tax on increase in land value when selling property.\n• Wealth Tax (Impuesto sobre el Patrimonio): Applies to residents and sometimes non-residents with high-value assets.\n\n3. Capital Gains Tax\n• Applies to gains from the sale of property or investments in Spain.\n• Rates differ for residents and non-residents.\n\n4. Inheritance & Gift Tax\n• Applicable if you receive property, assets, or money in Spain.\n• Rates depend on region and relationship to the donor.\n\n5. VAT / Transfer Tax on Property\n• New properties: Subject to VAT (IVA) ~10%\n• Resale properties: Subject to Transfer Tax (ITP), varies by region (typically 7–10%)."
+                },
+                {
+                    "title": "Filing a Tax Return in Spain",
+                    "description": "Filing taxes in Spain involves several steps:\n\n1. Collect all documentation: income statements, property details, bank statements, etc.\n2. Determine residency status: resident or non-resident.\n3. Calculate taxable income: including deductions and allowances.\n4. Submit your declaration to the Spanish tax authorities (Agencia Tributaria) within the deadlines.\n\nFor most people, working with a local accountant or tax advisor is essential. They can help optimize deductions, avoid penalties, and ensure compliance."
+                },
+                {
+                    "title": "How Baruch Real Estate Can Help",
+                    "description": "While we are not accountants ourselves, we work with trusted accounting partners who:\n\n• Advise on tax obligations for residents and non-residents\n• Handle Spanish tax returns (IRPF/IRNR) and declarations\n• Support property-related taxes (IBI, Plusvalía, Transfer Tax)\n• Provide guidance on inheritance, gift, and wealth tax\n\nWe coordinate with these accountants to ensure that your real estate transactions, income, and property ownership are fully compliant with Spanish tax law, making the process smooth and stress-free."
+                },
+                {
+                    "title": "Why Work With Our Accountants",
+                    "description": "• Expertise in Spanish tax law for residents and non-residents\n• Guidance in your own language\n• Optimized filings to avoid overpayment\n• Full support for property purchases, sales, and rental income\n• Assistance with all tax deadlines and communications with authorities"
+                },
+                {
+                    "title": "Get Professional Tax Assistance",
+                    "description": "Whether you live in Spain or own property as a non-resident, filing your taxes correctly is essential.\n\nOur trusted accountants can guide you through the process, making sure everything is accurate, optimized, and on time.\n\nContact us today to arrange professional assistance with your Spanish taxes and tax returns, tailored to your situation in Costa del Sol, Málaga, Marbella, or anywhere in Spain."
+                }
+            
+            ]
+        }
+
+        
+
+
+        
         ]
     },
     "faq": {
