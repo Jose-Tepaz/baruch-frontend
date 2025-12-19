@@ -2,7 +2,7 @@
 import Link from "next/link";
 import logoWhite from '@/public/assets/img/logo/logo-baruch-white.svg';
 import { useTranslation } from "@/utils/i18n-simple";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Fragment } from "react";
 import { useParams } from "next/navigation";
 
 interface Category {
@@ -112,6 +112,142 @@ export default function Footer1() {
             loadMailchimpScript();
         }
     }, []);
+
+    const handleMailchimpSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        console.log('Form submitted');
+        
+        const form = e.currentTarget;
+        const emailInput = form.querySelector('input[type="email"]') as HTMLInputElement;
+        const emailValue = emailInput?.value?.trim() || '';
+        
+        console.log('Email value:', emailValue);
+        
+        // Validar email manualmente usando el valor del input
+        if (!emailValue || !emailValue.includes('@') || !emailValue.includes('.')) {
+            const errorResponse = document.getElementById('mce-error-response');
+            const successResponse = document.getElementById('mce-success-response');
+            if (errorResponse) {
+                errorResponse.innerHTML = t('footer.error-text');
+                errorResponse.style.display = 'block';
+            }
+            if (successResponse) successResponse.style.display = 'none';
+            return;
+        }
+
+        // Ocultar mensajes anteriores
+        const errorResponse = document.getElementById('mce-error-response');
+        const successResponse = document.getElementById('mce-success-response');
+        if (errorResponse) errorResponse.style.display = 'none';
+        if (successResponse) successResponse.style.display = 'none';
+
+        // Usar el método tradicional de Mailchimp con iframe oculto
+        // Crear un iframe oculto para enviar el formulario sin recargar la página
+        const iframe = document.createElement('iframe');
+        iframe.name = 'mailchimp_iframe_' + Math.round(100000 * Math.random());
+        iframe.style.display = 'none';
+        iframe.style.width = '0';
+        iframe.style.height = '0';
+        iframe.style.border = 'none';
+        
+        // Configurar el callback cuando el iframe carga
+        iframe.onload = function() {
+            try {
+                // Intentar leer la respuesta del iframe (puede estar bloqueado por CORS)
+                const iframeDoc = (iframe.contentDocument || iframe.contentWindow?.document);
+                if (iframeDoc) {
+                    const bodyText = iframeDoc.body?.innerText || iframeDoc.body?.textContent || '';
+                    console.log('Mailchimp iframe response:', bodyText);
+                    
+                    // Buscar indicadores de éxito o error en el contenido
+                    if (bodyText.includes('success') || bodyText.includes('Thank you') || bodyText.includes('Gracias')) {
+                        if (successResponse) {
+                            successResponse.innerHTML = t('footer.success-text');
+                            successResponse.style.display = 'block';
+                        }
+                        if (errorResponse) errorResponse.style.display = 'none';
+                        setEmail('');
+                    } else if (bodyText.includes('error') || bodyText.includes('invalid') || bodyText.includes('válida')) {
+                        if (errorResponse) {
+                            errorResponse.innerHTML = t('footer.error-text');
+                            errorResponse.style.display = 'block';
+                        }
+                        if (successResponse) successResponse.style.display = 'none';
+                    } else {
+                        // Si no podemos leer el contenido, asumir éxito después de un tiempo
+                        setTimeout(() => {
+                            if (successResponse) {
+                                successResponse.innerHTML = t('footer.success-text');
+                                successResponse.style.display = 'block';
+                            }
+                            if (errorResponse) errorResponse.style.display = 'none';
+                            setEmail('');
+                        }, 1000);
+                    }
+                } else {
+                    // Si no podemos acceder al contenido del iframe, asumir éxito
+                    setTimeout(() => {
+                        if (successResponse) {
+                            successResponse.innerHTML = t('footer.success-text');
+                            successResponse.style.display = 'block';
+                        }
+                        if (errorResponse) errorResponse.style.display = 'none';
+                        setEmail('');
+                    }, 1000);
+                }
+            } catch (e) {
+                // CORS puede bloquear el acceso, asumir éxito
+                console.log('Cannot read iframe content (CORS), assuming success');
+                if (successResponse) {
+                    successResponse.innerHTML = t('footer.success-text');
+                    successResponse.style.display = 'block';
+                }
+                if (errorResponse) errorResponse.style.display = 'none';
+                setEmail('');
+            }
+            
+            // Limpiar el iframe después de un tiempo
+            setTimeout(() => {
+                if (iframe.parentNode) {
+                    iframe.parentNode.removeChild(iframe);
+                }
+            }, 5000);
+        };
+        
+        document.body.appendChild(iframe);
+        
+        // Crear un formulario temporal y enviarlo al iframe
+        const tempForm = document.createElement('form');
+        tempForm.method = 'post';
+        tempForm.action = 'https://gmail.us20.list-manage.com/subscribe/post?u=801951f17b12d427872e2ac56&id=ce8812881a&f_id=004162eef0';
+        tempForm.target = iframe.name;
+        tempForm.style.display = 'none';
+        
+        // Agregar campos al formulario
+        const tempEmailInput = document.createElement('input');
+        tempEmailInput.type = 'email';
+        tempEmailInput.name = 'EMAIL';
+        tempEmailInput.value = emailValue;
+        tempForm.appendChild(tempEmailInput);
+        
+        const botInput = document.createElement('input');
+        botInput.type = 'text';
+        botInput.name = 'b_801951f17b12d427872e2ac56_ce8812881a';
+        botInput.value = '';
+        botInput.tabIndex = -1;
+        tempForm.appendChild(botInput);
+        
+        document.body.appendChild(tempForm);
+        tempForm.submit();
+        
+        // Limpiar el formulario temporal después de enviarlo
+        setTimeout(() => {
+            if (tempForm.parentNode) {
+                tempForm.parentNode.removeChild(tempForm);
+            }
+        }, 1000);
+    };
+
     return (
         <>
             <div className="wrapper-footer">
@@ -124,20 +260,25 @@ export default function Footer1() {
                                         <div className="heading1 text-center">
                                             <h2 className=" text-color-blue">{t('footer.title-cta')}</h2>
                                             <div className="space16" />
-                                            <p className="text-white">
-                                                {t('footer.description-cta')}
+                                            <p className="text-white"  >
+                                                {t('footer.description-cta').split('\n').map((line, idx) => (
+                                                    <Fragment key={idx}>
+                                                        {line}
+                                                        {idx < t('footer.description-cta').split('\n').length - 1 && <br />}
+                                                    </Fragment>
+
+                                                ))}
                                             </p>
                                             <div className="space32" />
                                             
                                             {/* Formulario de Mailchimp */}
                                             <div id="mc_embed_signup" style={{ background: 'transparent', clear: 'left', font: '14px Helvetica,Arial,sans-serif', width: '100%', maxWidth: '600px', margin: '0 auto', padding: '0px' }}>
                                                 <form 
-                                                    action="https://gmail.us20.list-manage.com/subscribe/post?u=801951f17b12d427872e2ac56&amp;id=ce8812881a&amp;f_id=004162eef0" 
+                                                    onSubmit={handleMailchimpSubmit}
                                                     method="post" 
                                                     id="mc-embedded-subscribe-form" 
                                                     name="mc-embedded-subscribe-form" 
-                                                    className="validate" 
-                                                    target="_blank"
+                                                    className="validate"
                                                     noValidate
                                                 >
                                                     <div id="mc_embed_signup_scroll">
@@ -167,12 +308,22 @@ export default function Footer1() {
                                                                 />
                                                             </div>
                                                             <div className="optionalParent" style={{ flexShrink: 0 }}>
-                                                                <input 
-                                                                    type="submit" 
+                                                                <button 
+                                                                    type="button" 
                                                                     name="subscribe" 
-                                                                    id="mc-embedded-subscribe" 
-                                                                  
-                                                                    value={t('footer.subscribe-text')}
+                                                                    id="mc-embedded-subscribe"
+                                                                    onClick={(e) => {
+                                                                        e.preventDefault();
+                                                                        console.log('Button clicked directly');
+                                                                        // Crear un evento de submit sintético para el formulario
+                                                                        const form = (e.target as HTMLElement).closest('form') as HTMLFormElement;
+                                                                        if (form) {
+                                                                            handleMailchimpSubmit({
+                                                                                preventDefault: () => {},
+                                                                                currentTarget: form
+                                                                            } as React.FormEvent<HTMLFormElement>);
+                                                                        }
+                                                                    }}
                                                                     style={{ 
                                                                         margin: '0',
                                                                         backgroundColor: 'var(--ztc-bg-bg-3)',
@@ -189,7 +340,9 @@ export default function Footer1() {
                                                                         padding: '12px 24px',
                                                                         height: 'auto'
                                                                     }}
-                                                                />
+                                                                >
+                                                                    {t('footer.btn-subscribe')}
+                                                                </button>
                                                             </div>
                                                         </div>
                                                         <div id="mce-responses"  style={{ marginTop: '12px' }}>

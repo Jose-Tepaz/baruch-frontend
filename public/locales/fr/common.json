@@ -14,18 +14,18 @@
         "magazine": "Magazine",
         "btn-header-1": "Vendre votre Propriété"
     },
-
-"footer": {
-    "subscribe-text": "S'abonner",
-    "success-text": "Merci pour votre inscription à notre newsletter!",
-    "error-text": "Veuillez entrer une adresse email valide",
-    "placeholder-text": "Entrez votre adresse email",
-   "title-cta": "Faisons de ton rêve une réalité",
+    "footer": {
+        "subscribe-text": "S'abonner",
+        "success-text": "Merci pour votre inscription à notre newsletter!",
+        "error-text": "Veuillez entrer une adresse email valide",
+        "placeholder-text": "Votre adresse e-mail",
+        "btn-subscribe": "S’abonner",
+        "title-cta": "Faisons de ton rêve une réalité",
         "description-cta": "Ne t'attend pas à commencer ton voyage immobilier. Que tu achètes, vendes ou loues, notre équipe d'experts est là pour t'aider à chaque étape du chemin. Transformons ton vision en réalité avec un service personnalisé et une expérience sans complication.",
         "btn-cta": "Commence ta recherche aujourd'hui",
-        "description-footer": "Nous faisons en sorte que votre parcours immobilier soit simple et serein. Que vous achetiez, vendiez ou ayez besoin d’un accompagnement juridique, nous sommes à vos côtés à chaque étape.",
+        "description-footer": "Restez informé et recevez des mises à jour sur de nouvelles propriétés, les projets à venir et les développements pertinents du marché. \n\nAbonnez-vous à notre newsletter mensuelle.",
         "head-title-1": "Menu",
-            "head-title-2": "Types de Propriétés",
+        "head-title-2": "Types de Propriétés",
         "head-title-3": "Emplacements Populaires",
         "head-title-4": "Nous sommes ici",
         "title-1-footer": "À propos de nous",
@@ -52,9 +52,8 @@
         "title-popular-locations-7": "Propriétés à vendre à Rincon",
         "title-popular-locations-8": "Propriétés à vendre à Torrox",
         "title-popular-locations-9": "Propriétés à vendre à Malaga"
-   
-},  
-   "home": {
+    },
+    "home": {
         "btn-1-hero": "Voir les Propriétés",
         "btn-2-hero": "En savoir plus",
         "title-filter": "Trouvez votre Maison de Rêve",
@@ -82,13 +81,12 @@
         "subtitle-testimonials-1": "Avis clients",
         "title-testimonials": "Ce Que Nos Clients Disent",
         "subtitle-testimonials": "Avis clients",
-        "title-why-choose-us": "Pourquoi Baruch Se Démarque?",      
+        "title-why-choose-us": "Pourquoi Baruch Se Démarque?",
         "list1-why-choose-us": "Agents Experts",
         "list2-why-choose-us": "Listes Extensives",
         "list3-why-choose-us": "Satisfaction Client",
         "paragraph-why-choose-us": "Chez Baruch Real Estate, nous croyons que trouver une maison est plus que de simplement avoir un toit au-dessus de sa tête. C'est sur la découverte d'un lieu qui correspond parfaitement à votre style de vie. Notre équipe d'experts, nos listes étendues et notre engagement envers la satisfaction client nous distinguent pour vous offrir une expérience immobilière sans faille."
     },
-
     "buttons": {
         "login": "Connexion",
         "register": "Inscription",
@@ -105,9 +103,9 @@
         "no_properties_description": "Essayez de changer les filtres de recherche"
     },
     "about": {
-            "company": "À propos de l'Entreprise",
+        "company": "À propos de l'Entreprise",
         "hero": {
-           "title": "Ton Partenaire de Confiance",
+            "title": "Ton Partenaire de Confiance",
             "description": "En Baruch Real Estate, nous croyons à la construction de relations durables basées sur la confiance, la transparence et le contact personnel. Pour nous, l'immobilier n'est pas seulement sur les propriétés, c'est sur les personnes. Nous vous guidons étape par étape à travers le processus. Avec soin, clarté et un focus sur la qualité à chaque étape. Et notre support ne s'arrête pas une fois que vous avez acheté une propriété. Nous sommes ici pour répondre à vos questions et vous aider même après que les clés soient dans vos mains.",
             "btn_text": "Contactez-nous"
         },
@@ -124,7 +122,6 @@
                 "list5": "Avocats dans l'entreprise pour le support juridique",
                 "list6": "Partenaires financiers pour garantir une transaction sans problèmes"
             },
-            
             "forseellers": "Pour les Vendeurs",
             "forseellersDescription": {
                 "list1": "Évaluations de propriétés précises basées sur des données du marché",
@@ -137,8 +134,7 @@
         "others4": {
             "subtitle": "Prêt pour le prochain pas? ",
             "title": "Nous serons heureux de vous guider et de rendre le processus aussi fluide que possible.",
-            
-        "btn_text": "Contactez-nous"
+            "btn_text": "Contactez-nous"
         },
         "conatct-section": {
             "title": "Nos Services ",
@@ -211,7 +207,6 @@
                 "detail5": "Ouverture d’un compte bancaire",
                 "detail6": "Création d’une entreprise individuelle",
                 "detail7": "Testament"
-
             },
             "management": {
                 "title": "Gestion de Propriétés",
@@ -225,54 +220,37 @@
     },
     "faq": {
         "title": "Questions Fréquemment Posées",
-       
-                "question-1": "Quels services propose Baruch Real Estate?",
-                "answer-1": "Baruch Real Estate offre des services d'achat, de vente et de location, ainsi que la gestion de propriétés et l'aide à l'investissement sur la Costa del Sol.",
-           
-            
-                "question-2": "Pourquoi devrais-je choisir Baruch Real Estate?",
-                "answer-2": "Baruch Real Estate offre un service personnalisé, des connaissances locales expertes et un équipe dévoué pour vous guider à chaque étape de votre voyage immobilier.",
-           
-                "question-3": "Comment Baruch peut-il m'aider à trouver la propriété correcte?",
-                "answer-3": "Baruch Real Estate écoute vos besoins et préférences, puis sélectionne une sélection de propriétés qui correspondent à votre style de vie et à vos objectifs.",
-            
-            
-                "question-4": "Baruch Real Estate aide-t-il avec les documents légaux?",
-                "answer-4": "Oui, Baruch Real Estate a des avocats de confiance dans l'entreprise pour vous aider avec tous les documents légaux et garantir une transaction sans complication.",
-           
-                "question-5": "Baruch peut-il m'aider à vendre ma propriété rapidement?",
-                "answer-5": "Baruch Real Estate utilise des stratégies de marketing premium et un réseau large pour attirer à la fois les acheteurs locaux et internationaux, vous aidant à vendre efficacement.",
-           
-            
-                "question-6": "Quelles zones couvre Baruch Real Estate?",
-                "answer-6": "Baruch Real Estate se spécialise dans les propriétés sur la Costa del Sol, y compris Marbella, Estepona, Benahavís et les zones environnantes.",
-            
-            
-                "question-7": "Baruch offre-t-il des services de gestion de propriétés?",
-                "answer-7": "Oui, Baruch Real Estate offre une gestion de propriétés complète pour s'assurer que votre investissement est bien entretenu, même lorsque vous êtes absent.",
-            
-            
-                "question-8": "Comment Baruch aide les acheteurs internationaux?",
-                "answer-8": "Baruch Real Estate offre un support multilingue, des conseils sur les réglementations locales et de l'assistance avec tous les aspects de l'achat de propriétés à l'étranger.",
-            
-            
-                "question-9": "Qu'est-ce qui fait de Baruch Real Estate différent des autres agences?",
-                "answer-9": "Baruch Real Estate se distingue par son engagement envers la satisfaction du client, la transparence et un approche personnalisée à chaque client.",
-            
-            
-                "question-10": "Comment puis-je contacter Baruch Real Estate pour une consultation?",
-                "answer-10": "Vous pouvez contacter Baruch Real Estate via notre site web, par téléphone ou en visitant notre bureau. Notre équipe est prête à vous aider avec toutes vos questions."
+        "question-1": "Quels services propose Baruch Real Estate?",
+        "answer-1": "Baruch Real Estate offre des services d'achat, de vente et de location, ainsi que la gestion de propriétés et l'aide à l'investissement sur la Costa del Sol.",
+        "question-2": "Pourquoi devrais-je choisir Baruch Real Estate?",
+        "answer-2": "Baruch Real Estate offre un service personnalisé, des connaissances locales expertes et un équipe dévoué pour vous guider à chaque étape de votre voyage immobilier.",
+        "question-3": "Comment Baruch peut-il m'aider à trouver la propriété correcte?",
+        "answer-3": "Baruch Real Estate écoute vos besoins et préférences, puis sélectionne une sélection de propriétés qui correspondent à votre style de vie et à vos objectifs.",
+        "question-4": "Baruch Real Estate aide-t-il avec les documents légaux?",
+        "answer-4": "Oui, Baruch Real Estate a des avocats de confiance dans l'entreprise pour vous aider avec tous les documents légaux et garantir une transaction sans complication.",
+        "question-5": "Baruch peut-il m'aider à vendre ma propriété rapidement?",
+        "answer-5": "Baruch Real Estate utilise des stratégies de marketing premium et un réseau large pour attirer à la fois les acheteurs locaux et internationaux, vous aidant à vendre efficacement.",
+        "question-6": "Quelles zones couvre Baruch Real Estate?",
+        "answer-6": "Baruch Real Estate se spécialise dans les propriétés sur la Costa del Sol, y compris Marbella, Estepona, Benahavís et les zones environnantes.",
+        "question-7": "Baruch offre-t-il des services de gestion de propriétés?",
+        "answer-7": "Oui, Baruch Real Estate offre une gestion de propriétés complète pour s'assurer que votre investissement est bien entretenu, même lorsque vous êtes absent.",
+        "question-8": "Comment Baruch aide les acheteurs internationaux?",
+        "answer-8": "Baruch Real Estate offre un support multilingue, des conseils sur les réglementations locales et de l'assistance avec tous les aspects de l'achat de propriétés à l'étranger.",
+        "question-9": "Qu'est-ce qui fait de Baruch Real Estate différent des autres agences?",
+        "answer-9": "Baruch Real Estate se distingue par son engagement envers la satisfaction du client, la transparence et un approche personnalisée à chaque client.",
+        "question-10": "Comment puis-je contacter Baruch Real Estate pour une consultation?",
+        "answer-10": "Vous pouvez contacter Baruch Real Estate via notre site web, par téléphone ou en visitant notre bureau. Notre équipe est prête à vous aider avec toutes vos questions."
     },
     "language": {
         "selectLanguage": "Sélectionner la Langue",
         "currentLanguage": "Langue Actuelle",
         "changing": "Changement de langue en"
-    },  
+    },
     "propertyDetails": {
         "properti-not-found": "Propriété non trouvée",
         "property-not-found-description": "La propriété que vous recherchez n'existe pas.",
         "built_area-text": "Construite",
-        "lot_area-text": "Terrain", 
+        "lot_area-text": "Terrain",
         "parking_spaces-text": "Espaces de Stationnement",
         "bedrooms-text": "Chambres",
         "bathrooms-text": "Salles de Bains",
@@ -312,10 +290,10 @@
         },
         "title": "Contactez-nous",
         "description": "Vous êtes invité à visiter notre bureau à Málaga pour une rencontre personnelle, ou nous serions heureux de vous accompagner lors d'une visite de propriété. Que vous ayez des questions sur l'achat, la vente, le financement ou la résidence, notre équipe est prête à vous aider.\n\nNous parlons français, anglais et espagnol, pour assurer une communication claire et un support tout au long du processus."
-    } ,
+    },
     "contact-form": {
-        "subtitle": "Prêt pour le prochain pas?",     
-        "title": "Connectons-nous ",  
+        "subtitle": "Prêt pour le prochain pas?",
+        "title": "Connectons-nous ",
         "description": "Nous serons heureux de vous guider et de rendre le processus aussi fluide que possible.",
         "btn_text": "Contactez-nous",
         "input-name": "Nom",
@@ -349,7 +327,7 @@
         "submitting": "Envoi..."
     },
     "whatsapp": {
-        "tooltip": "Écrivez-nous sur WhatsApp !",   
+        "tooltip": "Écrivez-nous sur WhatsApp !",
         "messages": {
             "default": "Bonjour, je suis intéressé par vos propriétés immobilières",
             "home": "Bonjour, je suis intéressé par vos propriétés immobilières",

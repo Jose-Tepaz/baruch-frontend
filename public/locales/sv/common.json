@@ -1,26 +1,27 @@
 {
-  "welcome": "Välkommen till Baruch Real Estate",
-  "navigation": {
-      "home": "Hem",
-      "about": "Om oss",
-      "properties": "Fastigheter",
-      "services": "Tjänster",
-      "contact": "Kontakt",
-      "btn-nav-1": "Kontakta oss",
-      "login-btn": "Logga in",
-      "logout-btn": "Logga ut",
-      "btn-private-properties": "Fastigheter",
-      "testimonials": "Kundomdömen",
-      "magazine": "Magazine",
-      "btn-header-1": "Sälja din fastighet"
-  },
-  "footer": {
-    "subscribe-text": "Prenumerera",
-    "success-text": "Tack för att du prenumererar på vårt nyhetsbrev!",
-    "error-text": "Vänligen ange en giltig e-postadress",
-    "placeholder-text": "Ange din e-postadress",
-     "title-cta": "Låt oss göra din dröm en verklighet",         
-        "description-cta": "Vänta inte på att starta din fastighetsresa. Oavsett om du köper, säljer eller hyr, är vårt expertteam här för att guida dig steg för steg. Låt oss göra din vision till en verklighet med personlig service och en smidig upplevelse.",
+    "welcome": "Välkommen till Baruch Real Estate",
+    "navigation": {
+        "home": "Hem",
+        "about": "Om oss",
+        "properties": "Fastigheter",
+        "services": "Tjänster",
+        "contact": "Kontakt",
+        "btn-nav-1": "Kontakta oss",
+        "login-btn": "Logga in",
+        "logout-btn": "Logga ut",
+        "btn-private-properties": "Fastigheter",
+        "testimonials": "Kundomdömen",
+        "magazine": "Magazine",
+        "btn-header-1": "Sälja din fastighet"
+    },
+    "footer": {
+        "subscribe-text": "Prenumerera",
+        "success-text": "Tack för att du prenumererar på vårt nyhetsbrev!",
+        "error-text": "Vänligen ange en giltig e-postadress",
+        "placeholder-text": "Din e-postadress",
+        "btn-subscribe": "Prenumerera",
+        "title-cta": "Låt oss göra din dröm en verklighet",
+        "description-cta": "Håll dig uppdaterad och få nyheter om nya bostäder, kommande projekt och relevanta marknadsutvecklingar. \n\nPrenumerera på vårt månatliga nyhetsbrev.",
         "btn-cta": "Starta din sökning idag",
         "description-footer": "Vi gör din bostadsresa enkel och trygg. Oavsett om du köper, säljer eller behöver juridisk rådgivning – vi finns här för dig hela vägen.",
         "head-title-1": "Menu",
@@ -45,14 +46,14 @@
         "title-popular-locations-1": "Fastigheter till salu i Marbella",
         "title-popular-locations-2": "Fastigheter till salu i Mijas",
         "title-popular-locations-3": "Fastigheter till salu i Estepona",
-        "title-popular-locations-4": "Fastigheter till salu i Sotogrande", 
+        "title-popular-locations-4": "Fastigheter till salu i Sotogrande",
         "title-popular-locations-5": "Fastigheter till salu i The Golden Mile",
         "title-popular-locations-6": "Fastigheter till salu i Benahavís",
         "title-popular-locations-7": "Fastigheter till salu i Rincon",
         "title-popular-locations-8": "Fastigheter till salu i Torrox",
         "title-popular-locations-9": "Fastigheter till salu i Malaga"
-  },
-  "home": {
+    },
+    "home": {
         "btn-1-hero": "Se fastigheter",
         "btn-2-hero": "Lär dig mer",
         "title-filter": "Hitta din drömdom",
@@ -63,8 +64,8 @@
         "min-price-filter": "Min Pris",
         "max-price-filter": "Max Pris",
         "amenities-filter": "Egenskaper",
-        "location-filter": "Plats",     
-        "show-more": "Visa fler filter",    
+        "location-filter": "Plats",
+        "show-more": "Visa fler filter",
         "show-less": "Visa färre filter",
         "btn-filter": "Sök fastigheter",
         "btn-all-properties": "Visa alla fastigheter",
@@ -81,217 +82,216 @@
         "title-testimonials": "Vad våra kunder säger",
         "subtitle-testimonials": "Omdömen",
         "title-why-choose-us": "Varför välja Baruch Real Estate?",
-        "list1-why-choose-us": "Erfarna mäklare",   
+        "list1-why-choose-us": "Erfarna mäklare",
         "list2-why-choose-us": "Utgående listor",
         "list3-why-choose-us": "Kundnöjdhet",
         "paragraph-why-choose-us": "Vid Baruch Real Estate, vi tror att att hitta ett hem är mer än bara att hitta ett tak över huvudet. Det handlar om att upptäcka en plats som perfekt passar din livsstil. Vårt expertteam, vårt omfattande utbud och vårt engagemang för kundnöjdhet gör att vi sticker ut genom att erbjuda en sömlös fastighetsupplevelse."
     },
-  "buttons": {
-      "login": "Logga in",
-      "register": "Registrera",
-      "search": "Sök",
-      "seeProperties": "Se fastigheter"
-  },
-  "common": {
-      "loading": "Laddar..."
-  },
-  "properties": {
-      "title": "Våra fastigheter",
-      "discover_latest": "Upptäck våra senaste fastigheter",
-      "no_properties": "Inga fastigheter tillgängliga",
-      "no_properties_description": "Försök ändra sökfiltren"
-  },
-  "about": {
-      "company": "Om företaget",
-      "hero": {
-          "title": "Din pålitliga partner",
+    "buttons": {
+        "login": "Logga in",
+        "register": "Registrera",
+        "search": "Sök",
+        "seeProperties": "Se fastigheter"
+    },
+    "common": {
+        "loading": "Laddar..."
+    },
+    "properties": {
+        "title": "Våra fastigheter",
+        "discover_latest": "Upptäck våra senaste fastigheter",
+        "no_properties": "Inga fastigheter tillgängliga",
+        "no_properties_description": "Försök ändra sökfiltren"
+    },
+    "about": {
+        "company": "Om företaget",
+        "hero": {
+            "title": "Din pålitliga partner",
             "description": "På Baruch Real Estate tror vi att fastigheter i första hand handlar om relationer. Vi säljer inte bara hus. Vi kopplar människor till rätt livsstil, område och framtid. Vårt team består av lokala invånare som känner Costa del Sol inte bara som fastighetsproffs, utan som stolta medlemmar av samhället. Oavsett om du dras till Marbellas energi, Fuengirolas familjevänliga charm eller Benahavís lugna elegans, hjälper vi dig att hitta den perfekta matchen. Inte bara för dina behov, utan för din livsstil.",
             "btn_text": "Kontakta oss"
-      },
-      "others3": {
-          "subtitle": "Mission & Vision",
-          "title": "Skräddarsydda fastighetstjänster på Costa del Sol",
-          "forbuyers": "För köpare",
-          "btn_text": "Se fastigheter",
-          "forbuyersDescription": {
-              "list1": "Personliga fastighetssökningar anpassade efter din livsstil och dina mål.",
-              "list2": "Expertis om lokala områden, skolor och samhällen.",
-              "list3": "Smidiga visningar och utvalda rekommendationer.",
-              "list4": "Professionell förhandling för att få bästa möjliga affär.",
-              "list5": "Pålitliga interna jurister för juridiskt stöd.",
-              "list6": "Finansiella partners för att säkerställa en smidig transaktion."
-          },
-          "forseellers": "För säljare",
-          "forseellersDescription": {
-              "list1": "Noggranna fastighetsvärderingar baserade på verkliga marknadsdata.",
-              "list2": "Premium marknadsföring med professionell fotografering och övertygande beskrivningar.",
-              "list3": "Exponering för både lokala och internationella köpare.",
-              "list4": "Förhandlingsexpertis för att maximera ditt försäljningspris.",
-              "list5": "Fullt stöd från annonsering till avslut."
-          }
-      },
-      "others4": {
-        "subtitle": "Är du redo för nästa steg? ",
-        "title": "Vi hjälper dig och gör processen så smidig som möjligt.",
-        
-    "btn_text": "Kontakta oss"
-      },
-      "meet-the-team": {
-          "title": "Möt teamet",
-          "description": "Vårt team består av lokala invånare som känner Costa del Sol inte bara som fastighetsproffs, utan som stolta medlemmar av samhället. Oavsett om du dras till Marbellas energi, Fuengirolas familjevänliga charm eller Benahavís lugna elegans, hjälper vi dig att hitta den bästa matchen. Inte bara för dina behov, utan för ditt liv."
-      },
-      "conatct-section": {
-        "title": "Våra tjänster ",
-        "description": "Vid Baruch Real Estate, vi tror in att bygga långvariga relationer baserade på förtroende, transparens och personligt kontakt. För oss är fastigheter inte bara om egendom, det handlar om människor. Vi hjälper dig steg för steg genom processen. Med omsorg, tydlighet och en fokus på kvalitet vid varje steg. Och vårt stöd slutar inte en gång du har köpt en fastighet.",
-        "btn_text": "Se våra tjänster"
-      }
-  },
-  "services": {
-    "title": "Skräddarsydda fastighetstjänster",
-    "btn-text": "Begär offert",
-    "card-1": "Köpa fastighet",
-    "card-1-description": "På Baruch vet vi att att köpa en bostad är en av livets största milstolpar. Vårt erfarna team finns här för att guida dig.",
-    "card-2": "Sälja fastighet",
-    "card-2-description": "Att sälja din bostad behöver inte vara överväldigande. Med Baruch ser våra engagerade experter till att processen blir smidig.",
-    "card-3": "Hyra fastighet",
-    "card-3-description": "Att hitta rätt hyresbostad är enkelt med Housebox. Oavsett om du söker en mysig lägenhet eller ett större hem hjälper vi dig.",
-    "property-services": "Fastighetstjänster",  
-    "property-services-description": "Genom att kombinera dessa tjänster med vår fastighetsexpertis gör vi hela processen att köpa, äga och bo i Spanien mer transparent och mindre stressande. Vi strävar alltid efter att stötta dig, även långt efter att köpet har slutförts.",
-    "modal": {
-        "main-title": "TJÄNSTER VI ERBJUDER",
-        "subtitle": "Vi brinner för att göra fastighetsprocessen i Spanien så enkel som möjligt. Med djup förståelse för den spanska bostadsmarknaden och ett kundfokuserat synsätt hjälper vi köpare, säljare och hyresgäster att nå sina fastighetsmål.",
-        "what-we-offer": "Vad vi erbjuder:",
-        "btn-text": "Begär offert",
-        "nie": {
-            "title": "NIE/Uppehållstillstånd",
-            "description": "Vi hjälper dig genom hela processen att erhålla ditt NIE (utländskt identitetsnummer) och uppehållstillstånd i Spanien. Vårt team guidar dig genom all nödvändig dokumentation och administrativa procedurer.",
-            "detail1": "Full rådgivning om nödvändig dokumentation",
-            "detail2": "Bokning av tider hos migrationsmyndigheter",
-            "detail3": "Stöd under hela processen",
-            "detail4": "Förnyelser och uppdateringar av dokumentation"
         },
-        "finance": {
-            "title": "Finansiering/Hypotek",
-            "description": "Vi hjälper dig att hitta de bästa finansieringsalternativen för din fastighet. Vi samarbetar med ledande banker för att ge dig de mest fördelaktiga villkoren.",
-            "detail1": "Analys av din finansieringsförmåga",
-            "detail2": "Jämförelse av erbjudanden från flera banker",
-            "detail3": "Förhandling om förmånliga villkor",
-            "detail4": "Rådgivning under hela godkännandeprocessen",
-            "detail5": "Öppna ett bankkonto"
+        "others3": {
+            "subtitle": "Mission & Vision",
+            "title": "Skräddarsydda fastighetstjänster på Costa del Sol",
+            "forbuyers": "För köpare",
+            "btn_text": "Se fastigheter",
+            "forbuyersDescription": {
+                "list1": "Personliga fastighetssökningar anpassade efter din livsstil och dina mål.",
+                "list2": "Expertis om lokala områden, skolor och samhällen.",
+                "list3": "Smidiga visningar och utvalda rekommendationer.",
+                "list4": "Professionell förhandling för att få bästa möjliga affär.",
+                "list5": "Pålitliga interna jurister för juridiskt stöd.",
+                "list6": "Finansiella partners för att säkerställa en smidig transaktion."
+            },
+            "forseellers": "För säljare",
+            "forseellersDescription": {
+                "list1": "Noggranna fastighetsvärderingar baserade på verkliga marknadsdata.",
+                "list2": "Premium marknadsföring med professionell fotografering och övertygande beskrivningar.",
+                "list3": "Exponering för både lokala och internationella köpare.",
+                "list4": "Förhandlingsexpertis för att maximera ditt försäljningspris.",
+                "list5": "Fullt stöd från annonsering till avslut."
+            }
         },
-        "insurance": {
-            "title": "Försäkring",
-            "description": "Vi erbjuder heltäckande försäkringslösningar för att skydda din fastighetsinvestering. Från hemförsäkring till liv- och sjukförsäkring.",
-            "detail1": "Hem- och egendomsförsäkring",
-            "detail2": "Liv- och sjukförsäkring",
-            "detail3": "Ansvarsförsäkring",
-            "detail4": "Hantera skadeanmälningar och förnyelser"
+        "others4": {
+            "subtitle": "Är du redo för nästa steg? ",
+            "title": "Vi hjälper dig och gör processen så smidig som möjligt.",
+            "btn_text": "Kontakta oss"
         },
-        "tax": {
-            "title": "Skatte Deklaration",
-            "description": "Vårt team av skattexperter hanterar alla dina skatteåtaganden i Spanien och säkerställer att allt är i enlighet med gällande lagar.",
-            "detail1": "Årlig inkomstdeklaration",
-            "detail2": "Fastighetsskatter (IBI, reavinstskatt)",
-            "detail3": "Deklaration av tillgångar utomlands (Formulär 720)",
-            "detail4": "Legal skatteoptimering"
+        "meet-the-team": {
+            "title": "Möt teamet",
+            "description": "Vårt team består av lokala invånare som känner Costa del Sol inte bara som fastighetsproffs, utan som stolta medlemmar av samhället. Oavsett om du dras till Marbellas energi, Fuengirolas familjevänliga charm eller Benahavís lugna elegans, hjälper vi dig att hitta den bästa matchen. Inte bara för dina behov, utan för ditt liv."
         },
-        "legal": {
-            "title": "Juridiska Tjänster",
-            "description": "Vi har en juridisk avdelning specialiserad på fastighetsrätt som hjälper dig med alla juridiska aspekter av din fastighetsaffär.",
-            "detail1": "Granskning av köpeavtal",
-            "detail2": "Due diligence av fastigheter",
-            "detail3": "Representation vid offentliga handlingar",
-            "detail4": "Tvistlösning och rättstvister",
-            "detail5": "Starta ett SL-bolag (aktiebolag",
-            "detail6": "Starta en enskild firma", 
-            "detail7": "Testamente"
-        },
-        "management": {
-            "title": "Fastighetsförvaltningen",
-            "description": "Vi erbjuder helhetsförvaltning av din fastighet, från underhåll till hyresgästadministration, så att du kan njuta av din investering utan bekymmer.",
-            "detail1": "Sökning och val av hyresgäster",
-            "detail2": "Underhåll och reparationer",
-            "detail3": "Hantering av in- och utbetalningar",
-            "detail4": "Detaljerade månadsrapporter"
+        "conatct-section": {
+            "title": "Våra tjänster ",
+            "description": "Vid Baruch Real Estate, vi tror in att bygga långvariga relationer baserade på förtroende, transparens och personligt kontakt. För oss är fastigheter inte bara om egendom, det handlar om människor. Vi hjälper dig steg för steg genom processen. Med omsorg, tydlighet och en fokus på kvalitet vid varje steg. Och vårt stöd slutar inte en gång du har köpt en fastighet.",
+            "btn_text": "Se våra tjänster"
         }
-    }
-  },
-  "faq": {
-      "title": "Vanliga frågor",
-      "question-1": "Vilka tjänster erbjuder Baruch Real Estate?",
-      "answer-1": "Baruch Real Estate erbjuder köp-, sälj- och uthyrningstjänster samt fastighetsförvaltning och investeringsrådgivning på Costa del Sol.",
-      "question-2": "Varför ska jag välja Baruch Real Estate?",
-      "answer-2": "Baruch Real Estate erbjuder personlig service, expertkunskap om det lokala området och ett dedikerat team som guidar dig genom hela din fastighetsresa.",
-      "question-3": "Hur kan Baruch hjälpa mig att hitta rätt fastighet?",
-      "answer-3": "Baruch Real Estate lyssnar på dina önskemål och preferenser och presenterar sedan ett urval av fastigheter som passar din livsstil och dina mål.",
-      "question-4": "Hjälper Baruch Real Estate med juridiska dokument?",
-      "answer-4": "Ja, Baruch Real Estate har pålitliga interna jurister som hjälper dig med all juridisk dokumentation och säkerställer en smidig transaktion.",
-      "question-5": "Kan Baruch hjälpa mig att sälja min fastighet snabbt?",
-      "answer-5": "Baruch Real Estate använder premium marknadsföringsstrategier och ett brett nätverk för att nå både lokala och internationella köpare, så att du kan sälja effektivt.",
-      "question-6": "Vilka områden täcker Baruch Real Estate?",
-      "answer-6": "Baruch Real Estate är specialiserade på fastigheter på Costa del Sol, inklusive Marbella, Estepona, Benahavís och omgivande områden.",
-      "question-7": "Erbjuder Baruch fastighetsförvaltning?",
-      "answer-7": "Ja, Baruch Real Estate erbjuder omfattande fastighetsförvaltning för att säkerställa att din investering tas om hand, även när du inte är där.",
-      "question-8": "Hur stöttar Baruch internationella köpare?",
-      "answer-8": "Baruch Real Estate erbjuder flerspråkigt stöd, vägledning kring lokala regler och hjälp med alla aspekter av att köpa fastighet från utlandet.",
-      "question-9": "Vad gör Baruch Real Estate annorlunda än andra mäklare?",
-      "answer-9": "Baruch Real Estate utmärker sig genom sitt engagemang för kundnöjdhet, transparens och ett skräddarsytt tillvägagångssätt för varje kunds behov.",
-      "question-10": "Hur kontaktar jag Baruch Real Estate för en konsultation?",
-      "answer-10": "Du kan kontakta Baruch Real Estate via vår webbplats, telefon eller genom att besöka vårt kontor. Vårt team står redo att hjälpa dig med alla dina frågor."
-  },
-  "language": {
-      "selectLanguage": "Välj språk",
-      "currentLanguage": "Nuvarande språk",
-      "changing": "Byter språk till"
-  },
-  "propertyDetails": {
-      "properti-not-found": "Fastighet hittades inte",
-      "property-not-found-description": "Fastigheten du söker finns inte.",
-      "built_area-text": "Boarea",
-      "lot_area-text": "Tomtarea",
-      "parking_spaces-text": "Parkeringsplatser",
-      "bedrooms-text": "Sovrum",
-      "bathrooms-text": "Badrum",
-      "price-text": "Pris",
-      "contact-text": "Kontakta oss",
-      "map_locations-text": "Kartplatser",
-      "send_message-text": "Jag är intresserad av",
-      "send_message-text-description": "Vill du planera en visning eller har du en fråga? Fyll i dina detaljer nedan så att vi kan kontakta dig.",
-      "send-btn": "Skicka",
-      "fullName-text": "Fullständigt namn",
-      "phoneNumber-text": "Telefonnummer",      
-      "email-text": "E-postadress",
-      "message-text": "Ditt meddelande",
-      "estimated_completion-text": "Voraussichtliche Fertigstellung",  
-      "units": {
-          "title": "Enheter",
-          "id-house": "Hus-ID",
-          "dorms": "Sovrum",
-          "bathrooms": "Badrum",
-          "built-area": "Boarea",
-          "exterior-area": "Utearea",
-          "garage": "Garage",
-          "price": "Pris",
-          "storage_room": "Förråd",
-          "floor": "Visa planritning",
-          "unavailable": "På begäran",
-          "no-units": "Inga enheter tillgängliga för denna fastighet.",
-          "is_available": "ja",
-          "is_not_available": "nej"
-      }
-  },
-  "contact": {
-    "hero": {
-        "title": "Kontakta oss",
-        "description": "Vi är här för att hjälpa dig på vägen till din drömfastighet i Spanien. Kontakta oss när du vill, utan bindningar eller tryck. Använd kontaktformuläret nedan för att komma i kontakt, och vi kommer att svara så snart som möjligt."
     },
-    "title": "Kontakta oss",
-    "description": "Du är varmt välkommen att besöka vårt kontor i Málaga för ett personligt möte, eller så följer vi gärna med dig på en bostadsvisning. Oavsett om du har frågor om köp, försäljning, finansiering eller uppehållstillstånd, står vårt team redo att hjälpa dig. \n\nVi talar nederländska, engelska och spanska, vilket garanterar tydlig kommunikation och stöd under hela processen.",
-    "btn_text": "om oss"
-  },
-  "contact-form": {
+    "services": {
+        "title": "Skräddarsydda fastighetstjänster",
+        "btn-text": "Begär offert",
+        "card-1": "Köpa fastighet",
+        "card-1-description": "På Baruch vet vi att att köpa en bostad är en av livets största milstolpar. Vårt erfarna team finns här för att guida dig.",
+        "card-2": "Sälja fastighet",
+        "card-2-description": "Att sälja din bostad behöver inte vara överväldigande. Med Baruch ser våra engagerade experter till att processen blir smidig.",
+        "card-3": "Hyra fastighet",
+        "card-3-description": "Att hitta rätt hyresbostad är enkelt med Housebox. Oavsett om du söker en mysig lägenhet eller ett större hem hjälper vi dig.",
+        "property-services": "Fastighetstjänster",
+        "property-services-description": "Genom att kombinera dessa tjänster med vår fastighetsexpertis gör vi hela processen att köpa, äga och bo i Spanien mer transparent och mindre stressande. Vi strävar alltid efter att stötta dig, även långt efter att köpet har slutförts.",
+        "modal": {
+            "main-title": "TJÄNSTER VI ERBJUDER",
+            "subtitle": "Vi brinner för att göra fastighetsprocessen i Spanien så enkel som möjligt. Med djup förståelse för den spanska bostadsmarknaden och ett kundfokuserat synsätt hjälper vi köpare, säljare och hyresgäster att nå sina fastighetsmål.",
+            "what-we-offer": "Vad vi erbjuder:",
+            "btn-text": "Begär offert",
+            "nie": {
+                "title": "NIE/Uppehållstillstånd",
+                "description": "Vi hjälper dig genom hela processen att erhålla ditt NIE (utländskt identitetsnummer) och uppehållstillstånd i Spanien. Vårt team guidar dig genom all nödvändig dokumentation och administrativa procedurer.",
+                "detail1": "Full rådgivning om nödvändig dokumentation",
+                "detail2": "Bokning av tider hos migrationsmyndigheter",
+                "detail3": "Stöd under hela processen",
+                "detail4": "Förnyelser och uppdateringar av dokumentation"
+            },
+            "finance": {
+                "title": "Finansiering/Hypotek",
+                "description": "Vi hjälper dig att hitta de bästa finansieringsalternativen för din fastighet. Vi samarbetar med ledande banker för att ge dig de mest fördelaktiga villkoren.",
+                "detail1": "Analys av din finansieringsförmåga",
+                "detail2": "Jämförelse av erbjudanden från flera banker",
+                "detail3": "Förhandling om förmånliga villkor",
+                "detail4": "Rådgivning under hela godkännandeprocessen",
+                "detail5": "Öppna ett bankkonto"
+            },
+            "insurance": {
+                "title": "Försäkring",
+                "description": "Vi erbjuder heltäckande försäkringslösningar för att skydda din fastighetsinvestering. Från hemförsäkring till liv- och sjukförsäkring.",
+                "detail1": "Hem- och egendomsförsäkring",
+                "detail2": "Liv- och sjukförsäkring",
+                "detail3": "Ansvarsförsäkring",
+                "detail4": "Hantera skadeanmälningar och förnyelser"
+            },
+            "tax": {
+                "title": "Skatte Deklaration",
+                "description": "Vårt team av skattexperter hanterar alla dina skatteåtaganden i Spanien och säkerställer att allt är i enlighet med gällande lagar.",
+                "detail1": "Årlig inkomstdeklaration",
+                "detail2": "Fastighetsskatter (IBI, reavinstskatt)",
+                "detail3": "Deklaration av tillgångar utomlands (Formulär 720)",
+                "detail4": "Legal skatteoptimering"
+            },
+            "legal": {
+                "title": "Juridiska Tjänster",
+                "description": "Vi har en juridisk avdelning specialiserad på fastighetsrätt som hjälper dig med alla juridiska aspekter av din fastighetsaffär.",
+                "detail1": "Granskning av köpeavtal",
+                "detail2": "Due diligence av fastigheter",
+                "detail3": "Representation vid offentliga handlingar",
+                "detail4": "Tvistlösning och rättstvister",
+                "detail5": "Starta ett SL-bolag (aktiebolag",
+                "detail6": "Starta en enskild firma",
+                "detail7": "Testamente"
+            },
+            "management": {
+                "title": "Fastighetsförvaltningen",
+                "description": "Vi erbjuder helhetsförvaltning av din fastighet, från underhåll till hyresgästadministration, så att du kan njuta av din investering utan bekymmer.",
+                "detail1": "Sökning och val av hyresgäster",
+                "detail2": "Underhåll och reparationer",
+                "detail3": "Hantering av in- och utbetalningar",
+                "detail4": "Detaljerade månadsrapporter"
+            }
+        }
+    },
+    "faq": {
+        "title": "Vanliga frågor",
+        "question-1": "Vilka tjänster erbjuder Baruch Real Estate?",
+        "answer-1": "Baruch Real Estate erbjuder köp-, sälj- och uthyrningstjänster samt fastighetsförvaltning och investeringsrådgivning på Costa del Sol.",
+        "question-2": "Varför ska jag välja Baruch Real Estate?",
+        "answer-2": "Baruch Real Estate erbjuder personlig service, expertkunskap om det lokala området och ett dedikerat team som guidar dig genom hela din fastighetsresa.",
+        "question-3": "Hur kan Baruch hjälpa mig att hitta rätt fastighet?",
+        "answer-3": "Baruch Real Estate lyssnar på dina önskemål och preferenser och presenterar sedan ett urval av fastigheter som passar din livsstil och dina mål.",
+        "question-4": "Hjälper Baruch Real Estate med juridiska dokument?",
+        "answer-4": "Ja, Baruch Real Estate har pålitliga interna jurister som hjälper dig med all juridisk dokumentation och säkerställer en smidig transaktion.",
+        "question-5": "Kan Baruch hjälpa mig att sälja min fastighet snabbt?",
+        "answer-5": "Baruch Real Estate använder premium marknadsföringsstrategier och ett brett nätverk för att nå både lokala och internationella köpare, så att du kan sälja effektivt.",
+        "question-6": "Vilka områden täcker Baruch Real Estate?",
+        "answer-6": "Baruch Real Estate är specialiserade på fastigheter på Costa del Sol, inklusive Marbella, Estepona, Benahavís och omgivande områden.",
+        "question-7": "Erbjuder Baruch fastighetsförvaltning?",
+        "answer-7": "Ja, Baruch Real Estate erbjuder omfattande fastighetsförvaltning för att säkerställa att din investering tas om hand, även när du inte är där.",
+        "question-8": "Hur stöttar Baruch internationella köpare?",
+        "answer-8": "Baruch Real Estate erbjuder flerspråkigt stöd, vägledning kring lokala regler och hjälp med alla aspekter av att köpa fastighet från utlandet.",
+        "question-9": "Vad gör Baruch Real Estate annorlunda än andra mäklare?",
+        "answer-9": "Baruch Real Estate utmärker sig genom sitt engagemang för kundnöjdhet, transparens och ett skräddarsytt tillvägagångssätt för varje kunds behov.",
+        "question-10": "Hur kontaktar jag Baruch Real Estate för en konsultation?",
+        "answer-10": "Du kan kontakta Baruch Real Estate via vår webbplats, telefon eller genom att besöka vårt kontor. Vårt team står redo att hjälpa dig med alla dina frågor."
+    },
+    "language": {
+        "selectLanguage": "Välj språk",
+        "currentLanguage": "Nuvarande språk",
+        "changing": "Byter språk till"
+    },
+    "propertyDetails": {
+        "properti-not-found": "Fastighet hittades inte",
+        "property-not-found-description": "Fastigheten du söker finns inte.",
+        "built_area-text": "Boarea",
+        "lot_area-text": "Tomtarea",
+        "parking_spaces-text": "Parkeringsplatser",
+        "bedrooms-text": "Sovrum",
+        "bathrooms-text": "Badrum",
+        "price-text": "Pris",
+        "contact-text": "Kontakta oss",
+        "map_locations-text": "Kartplatser",
+        "send_message-text": "Jag är intresserad av",
+        "send_message-text-description": "Vill du planera en visning eller har du en fråga? Fyll i dina detaljer nedan så att vi kan kontakta dig.",
+        "send-btn": "Skicka",
+        "fullName-text": "Fullständigt namn",
+        "phoneNumber-text": "Telefonnummer",
+        "email-text": "E-postadress",
+        "message-text": "Ditt meddelande",
+        "estimated_completion-text": "Voraussichtliche Fertigstellung",
+        "units": {
+            "title": "Enheter",
+            "id-house": "Hus-ID",
+            "dorms": "Sovrum",
+            "bathrooms": "Badrum",
+            "built-area": "Boarea",
+            "exterior-area": "Utearea",
+            "garage": "Garage",
+            "price": "Pris",
+            "storage_room": "Förråd",
+            "floor": "Visa planritning",
+            "unavailable": "På begäran",
+            "no-units": "Inga enheter tillgängliga för denna fastighet.",
+            "is_available": "ja",
+            "is_not_available": "nej"
+        }
+    },
+    "contact": {
+        "hero": {
+            "title": "Kontakta oss",
+            "description": "Vi är här för att hjälpa dig på vägen till din drömfastighet i Spanien. Kontakta oss när du vill, utan bindningar eller tryck. Använd kontaktformuläret nedan för att komma i kontakt, och vi kommer att svara så snart som möjligt."
+        },
+        "title": "Kontakta oss",
+        "description": "Du är varmt välkommen att besöka vårt kontor i Málaga för ett personligt möte, eller så följer vi gärna med dig på en bostadsvisning. Oavsett om du har frågor om köp, försäljning, finansiering eller uppehållstillstånd, står vårt team redo att hjälpa dig. \n\nVi talar nederländska, engelska och spanska, vilket garanterar tydlig kommunikation och stöd under hela processen.",
+        "btn_text": "om oss"
+    },
+    "contact-form": {
         "subtitle": "Är du redo för nästa steg? ",
-        "title": "Låt oss ansluta ",  
+        "title": "Låt oss ansluta ",
         "description": "Vi kommer att vara glada att guida dig och göra processen så smidig som möjligt.",
         "btn_text": "Kontakta oss",
         "input-name": "Namn",
@@ -308,43 +308,43 @@
         "privacy-statement": "Jag accepterar sekretesspolicy av Baruch Real Estate",
         "input-click-to-whatsapp": "Klicka på WhatsApp"
     },
-  "testimonials": {
-      "title": "Omdömen",
-      "contact-title": "Kontakta oss",
-      "your-name": "Ditt namn",
-      "phone-number": "Telefonnummer",
-      "email-address": "E-postadress",
-      "message": "Ditt meddelande",
-      "submit-now": "Skicka nu",
-      "error-message": "Fel vid sändning av meddelande",
-      "success-message": "Meddelandet skickades framgångsrikt!",
-      "service-type": "Typ av tjänst",
-      "service-type-1": "Sälja fastighet",
-      "service-type-2": "Köpa fastighet",
-      "service-type-3": "Hyra fastighet",
-      "submitting": "Skickar..."
-  },
-  "whatsapp": {
-    "tooltip": "Skriv till oss på WhatsApp!",
-    "messages": {
-      "default": "Hej, jag är intresserad av dina fastigheter",
-      "home": "Hej, jag är intresserad av dina fastigheter",
-      "properties": "Hej, jag är intresserad av tillgängliga fastigheter",
-      "contact": "Hej, jag har en fråga om dina tjänster",
-      "about": "Hej, jag skulle vilja veta mer om ditt företag",
-      "services": "Hej, jag är intresserad av dina fastighetstjänster"
+    "testimonials": {
+        "title": "Omdömen",
+        "contact-title": "Kontakta oss",
+        "your-name": "Ditt namn",
+        "phone-number": "Telefonnummer",
+        "email-address": "E-postadress",
+        "message": "Ditt meddelande",
+        "submit-now": "Skicka nu",
+        "error-message": "Fel vid sändning av meddelande",
+        "success-message": "Meddelandet skickades framgångsrikt!",
+        "service-type": "Typ av tjänst",
+        "service-type-1": "Sälja fastighet",
+        "service-type-2": "Köpa fastighet",
+        "service-type-3": "Hyra fastighet",
+        "submitting": "Skickar..."
+    },
+    "whatsapp": {
+        "tooltip": "Skriv till oss på WhatsApp!",
+        "messages": {
+            "default": "Hej, jag är intresserad av dina fastigheter",
+            "home": "Hej, jag är intresserad av dina fastigheter",
+            "properties": "Hej, jag är intresserad av tillgängliga fastigheter",
+            "contact": "Hej, jag har en fråga om dina tjänster",
+            "about": "Hej, jag skulle vilja veta mer om ditt företag",
+            "services": "Hej, jag är intresserad av dina fastighetstjänster"
+        }
+    },
+    "filters": {
+        "select-option": "Välj en option",
+        "select-all": "Välj alla",
+        "no-results": "Inga resultat hittades"
+    },
+    "cookies": {
+        "banner-title": "Vi använder cookies",
+        "banner-description": "Vi använder cookies för att förbättra din upplevelse och analysera vår trafik. Genom att klicka på 'Acceptera' samtycker du till vår användning av cookies.",
+        "accept": "Acceptera",
+        "reject": "Avvisa",
+        "privacy-policy-link": "Integritetspolicy"
     }
-  },
-  "filters": {
-    "select-option": "Välj en option",
-    "select-all": "Välj alla",
-    "no-results": "Inga resultat hittades"
-  },
-  "cookies": {
-    "banner-title": "Vi använder cookies",
-    "banner-description": "Vi använder cookies för att förbättra din upplevelse och analysera vår trafik. Genom att klicka på 'Acceptera' samtycker du till vår användning av cookies.",
-    "accept": "Acceptera",
-    "reject": "Avvisa",
-    "privacy-policy-link": "Integritetspolicy"
-  }
 }
