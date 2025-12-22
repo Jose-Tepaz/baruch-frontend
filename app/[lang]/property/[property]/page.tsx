@@ -3,7 +3,7 @@ import InnerHeader from "@/components/layout/InnerHeader";
 import Properties2Details from "@/components/sections/Properties2Details";
 import PropertyInner from "@/components/sections/PropertyInner";
 import PropertyBottom from "@/components/sections/PropertyBottom";
-import getPropertyById from "@/services/property";
+import { getPropertyBySlug } from "@/services/property";
 import PropertyDetails from "@/components/sections/PropertyDetails";
 import { Metadata } from 'next';
 
@@ -19,7 +19,7 @@ interface PropertyPageProps {
 export async function generateMetadata({ params }: PropertyPageProps): Promise<Metadata> {
   const { lang, property } = await params;
   // Obtener datos de la propiedad para metadata dinámica
-  const propertyData = await getPropertyById(property, lang);
+  const propertyData = await getPropertyBySlug(property, lang);
   
   if (!propertyData) {
     return {
@@ -92,7 +92,7 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
     
 
     
-    const propertyData = await getPropertyById(property, lang);
+    const propertyData = await getPropertyBySlug(property, lang);
     
     if (!propertyData) {
         return (

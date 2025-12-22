@@ -66,8 +66,10 @@ export default function CategoryContent({ categoryId, initialProperties }: Categ
                                 price={property.price}
                                 imageUrl={property.image}
                                 documentId={property.documentId}
+                                slug={property.slug}
                                 propertyStatus={property.propertyStatus}
                                 isNew={property.is_new}
+                                highlight={property.highlight}
                                 location={typeof property.location === 'string' ? property.location : property.location?.name || ''}
                             />
                         </div>

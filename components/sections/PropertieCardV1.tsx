@@ -12,6 +12,7 @@ type PropertyCardProps = {
     propertyStatus?: string,
     highlight?: string,
     documentId: string,
+    slug: string,
     location: string | { name: string; slug: string }
   }
   
@@ -24,6 +25,7 @@ type PropertyCardProps = {
     propertyStatus,
     highlight,
     documentId,
+    slug,
     location,
   }: PropertyCardProps) {
     // Validación de seguridad para la URL
@@ -47,7 +49,7 @@ type PropertyCardProps = {
           
         `}</style>
        
-        <Link href={`/property/${documentId}`} className="text-decoration-none">
+        <Link href={`/property/${slug}`} className="text-decoration-none">
           <div className="property-card property-card-hover border-0 shadow-sm overflow-hidden d-flex flex-column justify-content-between">
           <div className="position-absolute top-0 start-0 p-3 d-flex gap-2 z-3" style={{zIndex: 10}}>
                 {highlight && <span className="badge bg-light text-dark px-3 py-2">{highlight}</span>}  

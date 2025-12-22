@@ -92,7 +92,7 @@ export default function HeroHome({ properties = [] }: HeroHomeProps) {
                                                 
                                             </div>
                                         
-                                        <Link href={`/property/${property.documentId || ""}`} className="text-decoration-none" style={{ color: "inherit" }}>
+                                        <Link href={`/property/${property.slug || ""}`} className="text-decoration-none" style={{ color: "inherit" }}>
                                         <h3 className="title-properties text-color-white size-42">
                                                 {property.title} 
                                         </h3>

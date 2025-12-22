@@ -37,7 +37,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       
       for (const property of properties) {
         sitemap.push({
-          url: `${baseUrl}/${locale}/property/${property.documentId}`,
+          url: `${baseUrl}/${locale}/property/${property.slug}`,
           lastModified: new Date(),
           changeFrequency: 'monthly',
           priority: 0.6,

@@ -78,6 +78,7 @@ export default function PropertyList1({ properties }: { properties: any[] }) {
                 highlight={property.highlight}
                 propertyStatus={property.propertyStatus}
                 documentId={property.documentId}
+                slug={property.slug}
                 category={property.category}
                 locale={currentLanguage}
                 isPrivate={property.is_private || false}

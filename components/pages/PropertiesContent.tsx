@@ -233,6 +233,7 @@ export default function PropertiesContent({
                                             price={property.price}
                                             imageUrl={property.image}
                                             documentId={property.documentId}
+                                            slug={property.slug}
                                             propertyStatus={property.propertyStatus || property.status}
                                             isNew={property.status === 'new'}
                                             location={typeof property.location === 'string' ? property.location : property.location?.name || ''}
