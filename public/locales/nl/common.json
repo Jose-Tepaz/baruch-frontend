@@ -215,6 +215,320 @@
       }
     }
   },
+  "services-page": {
+    "title": "Nuestros Servicios",
+    "description": "Tu Socio de Confianza Cuando Compra una Propiedad en la Costa del Sol\nComprar una casa en España es un paso emocionante, pero también puede ser complejo, especialmente si no estás familiarizado con el mercado local, el idioma y el sistema legal.\nEn Baruch Real Estate, hacemos el proceso transparente, seguro y guiado desde el inicio hasta el final.\nNuestro Servicio de Representación de Compras garantiza que tus intereses estén siempre protegidos. Desde identificar la propiedad correcta y organizar visitas hasta negociar los mejores términos y gestionar el proceso legal, manejamos cada detalle con soporte inmobiliario y legal bajo un mismo techo.",
+    "btn-text": "Ver todos los servicios",
+    "services-list": [
+      {
+        "id": "buying-representation",
+        "title": "Aankoopbegeleiding",
+        "description": "Uw Betrouwbare Partner bij het Kopen van Vastgoed aan de Costa del Sol.\n\nHet kopen van een woning in Spanje is een spannende stap, maar kan ook complex zijn, vooral wanneer u niet bekend bent met de lokale markt, de taal en het juridische systeem.\n\nBij Baruch Real Estate maken wij het proces transparant, veilig en volledig begeleid van begin tot eind.\nOnze Aankoopbegeleiding zorgt ervoor dat uw belangen altijd worden beschermd. Van het vinden van de juiste woning en het organiseren van bezichtigingen tot het onderhandelen over de beste voorwaarden en het begeleiden van het juridische traject, wij regelen elk detail met vastgoed- en juridische expertise onder één dak.",
+        "image": "/assets/img/all-images/service/buying-representation_result.webp",
+        "title-list": "De Stappen voor het Kopen van Uw Woning in Spanje",
+        "details": [
+          {
+            "title": "1. Uw Doelen en Wensen Begrijpen",
+            "description": "Wij starten met het leren kennen van uw wensen, budget, levensstijl en investeringsdoelen. Of u nu op zoek bent naar een vakantiewoning, permanente woning of investering, wij stemmen de zoektocht volledig af op uw behoeften. Ons team heeft diepgaande kennis van de Costa del Sol."
+          },
+          {
+            "title": "2. Vastgoedzoektocht en Selectie",
+            "description": "Op basis van uw voorkeuren presenteren wij een zorgvuldig geselecteerd aanbod dat aan uw criteria voldoet. Wij zoeken binnen ons eigen aanbod en via ons netwerk van betrouwbare makelaars en ontwikkelaars, zodat u toegang heeft tot de volledige markt. Onze focus ligt op de juiste woning."
+          },
+          {
+            "title": "3. Bezichtigingen",
+            "description": "Wij organiseren bezichtigingen die passen bij uw planning, of u nu in Spanje bent of vanuit het buitenland reist. Wij begeleiden u bij elke bezichtiging, geven eerlijk advies en wijzen op kansen en aandachtspunten. Kunt u niet reizen, dan verzorgen wij virtuele bezichtigingen met video en live rondleidingen. Transparantie en eerlijkheid staan centraal."
+          },
+          {
+            "title": "4. Due Diligence en Juridische Controle",
+            "description": "Zodra u een woning heeft gevonden, voert ons juridisch team een volledige controle uit.\nDit omvat:\n\n- Eigendom en registratie (Nota Simple)\n- Naleving van bouw en bestemmingsregels\n- Openstaande schulden, belastingen of gemeenschapskosten\n- Bouwvergunningen en certificaten\n\nBij Baruch Real Estate werken juristen nauw samen met uw makelaar voor maximale zekerheid."
+          },
+          {
+            "title": "5. Onderhandeling en Afhandeling van het Bod",
+            "description": "Wij behartigen uw belangen tijdens de onderhandelingen om de beste prijs en voorwaarden te realiseren.\nOnze kennis van de Costa del Sol markt zorgt voor realistische begeleiding.\nWij verzorgen de communicatie met de verkopende partij en zorgen voor juridisch correcte biedingen."
+          },
+          {
+            "title": "6. Reservering en Aanbetaling",
+            "description": "Na acceptatie van het bod wordt een reserveringscontract (Contrato de Reserva) getekend en een aanbetaling gedaan om de woning van de markt te halen.\nOns juridisch team waarborgt veilige voorwaarden en betalingen."
+          },
+          {
+            "title": "7. Particuliere Koopovereenkomst (Contrato de Arras)",
+            "description": "Na de reservering volgt de particuliere koopovereenkomst.\nDit bindende document beschrijft de voorwaarden, betalingsplanning en overdrachtsdatum.\nOnze juridische partners controleren of stellen het contract op ter bescherming van uw rechten."
+          },
+          {
+            "title": "8. Definitieve Ondertekening bij de Notaris",
+            "description": "De aankoop wordt afgerond met de ondertekening van de Escritura de Compraventa bij de notaris.\nWij begeleiden u, controleren alle documenten en waarborgen een veilige betaling en eigendomsoverdracht.\nIndien nodig kan dit via een volmacht plaatsvinden."
+          },
+          {
+            "title": "9. Diensten na de Aankoop",
+            "description": "Ook na afronding ondersteunen wij bij:\n• Overzetten van nutsvoorzieningen\n• Woningverzekering\n• Fiscale registraties (NIE, IBI, etc.)\n• Bankzaken en betalingen\n\nOns doel is een soepele overgang zodat u direct van uw nieuwe woning kunt genieten."
+          },
+          {
+            "title": "Waarom Werken met een Aankoopbegeleider",
+            "description": "Een aankoopbegeleider staat volledig aan uw kant en vertegenwoordigt alleen uw belangen.\n\nBij Baruch Real Estate bieden wij:\n• Volledige transparantie in elke stap\n• Toegang tot het volledige woningaanbod\n• Juridische ondersteuning onder één dak\n• Begeleiding in uw eigen taal\n• Veilige en gestructureerde afhandeling tot aan de notaris\n\nOf u nu voor het eerst koopt of investeert, wij zorgen voor een veilige en zorgeloze aankoop."
+          },
+          {
+            "title": "Klaar om Uw Woning aan de Costa del Sol te Vinden?",
+            "description": "Bent u van plan een woning te kopen in Málaga, Marbella, Estepona of elders aan de Costa del Sol, dan begeleiden wij u graag.\n\nNeem vandaag nog contact met ons op voor een kennismaking of zoekgesprek.\n\nSamen vinden we uw droomwoning met helderheid, vertrouwen en volledige ondersteuning van begin tot eind."
+          }
+        ]
+      },
+      {
+        "id": "finance",
+        "title": "Financierings- & Hypotheekdiensten in Spanje",
+        "description": "Jouw Gids voor Hypotheken, Bankrekeningen en Financiering aan de Costa del Sol.\n\nHet kopen van een woning in Spanje gaat vaak gepaard met het afsluiten van een hypotheek of het regelen van financiering.\n\nHet Spaanse banksysteem kan complex zijn, vooral voor buitenlandse kopers. Van hypotheekopties tot bankrekeningen — het is essentieel om inzicht te hebben in rentetarieven, voorwaarden en vereisten.\n\nBij Baruch Real Estate maken wij financiering eenvoudig. Dankzij ons uitgebreide netwerk van bank- en financiële partners helpen wij je bij het vinden van geschikte hypotheekoplossingen, ondersteunen wij je tijdens het aanvraagproces en begeleiden wij je van begin tot eind, zodat jouw financiering soepel en transparant verloopt.",
+        "image": "/assets/img/all-images/service/finance_result.webp",
+        "title-list": "Onze Hypotheek- & Financieringsdiensten",
+        "details": [
+          {
+            "title": "1. Snelle Hypotheekscan",
+            "description": "We beginnen met het beoordelen van je financiële situatie en doelen:\n• Controle van inkomen en betaalcapaciteit\n• Analyse van de vastgoedprijs en leningbedrag\n• Initiële geschiktheidsbeoordeling\n\nHiermee kunnen we snel banken en hypotheekproducten identificeren die bij je behoeften passen, tijd besparen en onnodige aanvragen vermijden."
+          },
+          {
+            "title": "2. Hypotheekvergelijking met Onze Partners",
+            "description": "Via ons netwerk van vertrouwde banken en financiële partners kunnen we een breed scala aan hypotheekopties vergelijken:\n• Hypotheken met vaste rente\n• Hypotheken met variabele rente\n• Gemengde hypotheken\n• Hypotheekoplossingen voor niet-residenten\n\nOns doel is je te helpen concurrerende tarieven en flexibele voorwaarden te vinden met volledige transparantie. De hypotheekovereenkomst zelf is altijd tussen de klant en de bank, maar wij begeleiden en coördineren het proces voor jou."
+          },
+          {
+            "title": "3. Ondersteuning bij Hypotheekaanvraag",
+            "description": "We helpen bij het voorbereiden en indienen van je aanvraag bij onze bankpartners, inclusief:\n• Verzamelen van benodigde documenten (inkomensbewijs, belastingaangiften, eigendomsinformatie)\n• Indienen van de aanvraag bij geselecteerde banken\n• Coördinatie met de bank totdat de hypotheek is goedgekeurd\n\nHoewel het hypotheekcontract wordt ondertekend tussen jou en de bank, zorgt ons team ervoor dat het proces soepel verloopt en correct wordt gedocumenteerd."
+          },
+          {
+            "title": "4. Opening van een Bankrekening",
+            "description": "Een Spaanse bankrekening is vaak vereist voor hypotheekbetalingen, vastgoedbeheer en nutsvoorzieningen.\n\nWe helpen je:\n• De bank te kiezen die het beste bij je past\n• Efficiënt een Spaanse bankrekening te openen\n• Betalingen en overboekingen voor je eigendom in te stellen\n\nDeze dienst is beschikbaar voor zowel residents als non-residents, zodat je financiële setup soepel verloopt."
+          },
+          {
+            "title": "5. Afronding & Coördinatie van de Hypotheek",
+            "description": "Zodra je hypotheek is goedgekeurd, coördineren we met je advocaat en notaris om ervoor te zorgen dat de middelen klaarstaan voor ondertekening van de Escritura de Compraventa.\n\nWij beheren planning en documentatie, zodat jij je kunt concentreren op de aankoop van je woning, terwijl de hypotheek volledig tussen jou en de bank blijft."
+          },
+          {
+            "title": "Waarom Werken met Baruch Real Estate voor Financiering",
+            "description": "• Snelle hypotheekscan om te bepalen waar je voor in aanmerking komt\n• Toegang tot een uitgebreid netwerk van banken en financiële partners\n• Begeleiding bij documentatie, aanvragen en goedkeuringen\n• Ondersteuning bij het openen van een Spaanse bankrekening\n• Transparante coördinatie van eerste contact tot hypotheekgoedkeuring\n\nWij bieden een full-service aanpak, waardoor het financieringsproces efficiënt en veilig verloopt, terwijl je op de hoogte wordt gehouden van elke stap."
+          },
+          {
+            "title": "Vraag Tarieven & Prijzen Aan",
+            "description": "Als je hypotheekopties wilt verkennen of een financieringsscan wilt laten uitvoeren voor je woningkoop, kunnen wij op maat gemaakte informatie van onze partnerbanken verstrekken.\n\nNeem vandaag nog contact met ons op om je hypotheekopties te bespreken, actuele tarieven op te vragen en je financiering te starten aan de Costa del Sol; Benalmádena, Estepona, Málaga, Marbella, Torrox, Alhaurín of elders in Spanje."
+          }
+        ]
+      },
+      {
+        "id": "insurance-services",
+        "title": "Verzekeringsdiensten in Spanje",
+        "description": "Uitgebreide Verzekeringsoplossingen voor Inwoners en Vastgoedeigenaren\n\nWonen of investeren in Spanje brengt verantwoordelijkheden met zich mee, waaronder het beschermen van uzelf, uw gezin en uw eigendom. Van woonverzekeringen tot levens-, gezondheids- en autoverzekeringen: de juiste dekking is essentieel voor gemoedsrust.\n\nBij Baruch Real Estate brengen wij onze klanten in contact met een netwerk van betrouwbare verzekeringsmaatschappijen om de beste oplossingen te vinden die aansluiten bij hun behoeften. Wij begeleiden u gedurende het hele proces, leggen de mogelijkheden duidelijk uit en zorgen ervoor dat u een verzekering krijgt die past bij uw persoonlijke situatie, volledig in uw eigen taal.",
+        "image": "/assets/img/all-images/service/Insurance_result.webp",
+        "title-list": "Onze Verzekeringsdiensten",
+        "details": [
+          {
+            "title": "1. Woonverzekering",
+            "description": "Het beschermen van uw woning in Spanje is van groot belang. Een woonverzekering kan het volgende dekken:\n• Brand, waterschade en natuurrampen\n• Diefstal en vandalisme\n• Aansprakelijkheid bij ongevallen op uw eigendom\n\nWij werken samen met verzekeraars die ervaring hebben met zowel permanente woningen als vakantiewoningen aan de Costa del Sol, in Málaga en omgeving, zodat u verzekerd bent van een uitgebreide dekking tegen concurrerende tarieven."
+          },
+          {
+            "title": "2. Levensverzekering",
+            "description": "Een levensverzekering biedt financiële zekerheid voor uw familie in geval van onverwachte gebeurtenissen.\n\nAfhankelijk van uw situatie kan een levensverzekering het volgende omvatten:\n• Standaard dekking bij overlijden\n• Hypotheekbescherming\n• Inkomensbescherming voor nabestaanden\n\nOnze partners bieden flexibele polissen die geschikt zijn voor zowel inwoners als niet inwoners van Spanje."
+          },
+          {
+            "title": "3. Zorgverzekering",
+            "description": "In Spanje is zorg beschikbaar via het openbare zorgstelsel, maar veel expats kiezen voor een particuliere zorgverzekering vanwege snellere toegang, vrije artsenkeuze en internationale dekking.\n\nWij kunnen verzekeringen regelen voor:\n• Individuen of gezinnen\n• EU burgers en niet EU burgers\n• Lange of korte termijn dekking\n\nDit zorgt ervoor dat u en uw dierbaren goed beschermd zijn en toegang hebben tot hoogwaardige gezondheidszorg."
+          },
+          {
+            "title": "4. Autoverzekering",
+            "description": "Het bezitten van een auto in Spanje vereist een verplichte verzekering, maar aanvullende dekkingen bieden extra bescherming.\n\nWij helpen u bij het vinden van verzekeringen die het volgende dekken:\n• Wettelijke aansprakelijkheid tegenover derden\n• Allrisk dekking\n• Pechhulp\n• Dekking voor meerdere bestuurders of leasevoertuigen\n\nOf u nu een gezinsauto, luxe voertuig of een auto gekoppeld aan een verhuurobject bezit, onze partners bieden oplossingen op maat."
+          },
+          {
+            "title": "5. Overige Verzekeringsmogelijkheden",
+            "description": "Afhankelijk van uw situatie kunnen aanvullende verzekeringen relevant zijn:\n• Reisverzekering voor vakanties of tijdelijke verblijven\n• Huurders of verhuurbescherming voor vakantiewoningen\n• Bedrijfs of beroepsaansprakelijkheidsverzekering\n• Huisdierenverzekering\n\nDankzij ons netwerk vinden wij voor elk type verzekering de meest geschikte aanbieder, zonder onnodige kosten."
+          },
+          {
+            "title": "Waarom Kiezen voor Baruch Real Estate voor Verzekeringsdiensten",
+            "description": "• Betrouwbaar netwerk van verzekeringspartners met expertise in Spanje\n• Oplossingen op maat voor inwoners, niet inwoners en vastgoedinvesteerders\n• Ondersteuning in uw eigen taal\n• Transparante uitleg over dekking, voorwaarden en prijzen\n• Begeleiding bij aanvraag en schadeafhandeling\n\nWij streven ernaar verzekeringen eenvoudig, toegankelijk en betrouwbaar te maken, zodat u erop kunt vertrouwen dat u en uw bezittingen goed beschermd zijn."
+          },
+          {
+            "title": "Ontvang Uw Verzekeringsoplossingen Vandaag",
+            "description": "Of u nu een woon, levens, zorg of autoverzekering nodig heeft, ons team brengt u in contact met de juiste aanbieder en regelt een oplossing die past bij uw behoeften.\n\nNeem vandaag nog contact met ons op om uw verzekeringsmogelijkheden te bespreken en ontvang oplossingen op maat via ons netwerk van betrouwbare partners in Spanje."
+          }
+        ]
+      },
+      {
+        "id": "legal-services",
+        "title": "Juridische Diensten in Spanje",
+        "description": "Uitgebreide Juridische Ondersteuning voor Residenten en Vastgoedeigenaren\n\nHet navigeren door Spaanse juridische procedures kan complex zijn, vooral bij het kopen of verkopen van vastgoed, het aanvragen van een verblijfsvergunning of het opzetten van een onderneming. Bij Baruch Real Estate werken wij samen met een netwerk van betrouwbare advocaten en notarissen om snelle, professionele en betrouwbare juridische diensten te bieden.\n\nOns team coördineert met deze juridische experts om ervoor te zorgen dat al je transacties en procedures voldoen aan de Spaanse wetgeving, zodat je met een gerust hart tijd bespaart.",
+        "image": "/assets/img/all-images/service/legal_result.webp",
+        "title-list": "Onze Juridische Diensten",
+        "details": [
+          {
+            "title": "1. Juridische Begeleiding bij de Aankoop van Vastgoed",
+            "description": "• Controle eigendom en registratie\n• Juridische due diligence\n• Contracten\n• Notariële coördinatie\n• Hypotheekdocumentatie"
+          },
+          {
+            "title": "2. Juridische Begeleiding bij Verkoop",
+            "description": "• Documentcontrole\n• Contractadvies\n• Communicatie met koper\n• Notariële afhandeling"
+          },
+          {
+            "title": "3. NIE & Verblijfsrecht",
+            "description": "• NIE-aanvraag\n• Volmachten\n• EU / niet-EU"
+          },
+          {
+            "title": "4. Bedrijfsoprichting (SL)",
+            "description": "• Oprichting\n• Statuten\n• Handelsregister\n• Bankrekening\n• Fiscale nummers"
+          },
+          {
+            "title": "5. Notarissen",
+            "description": "• Vastgoed\n• Bedrijven\n• Volmachten\n• Testamenten"
+          },
+          {
+            "title": "6. Testamenten",
+            "description": "• Opstellen\n• Vermogensverdeling\n• Erfplanning"
+          },
+          {
+            "title": "7. Snelle en Persoonlijke Service",
+            "description": "• Snelle reacties\n• Meertalige begeleiding\n• Transparante kosten"
+          },
+          {
+            "title": "Waarom Baruch Real Estate",
+            "description": "• Betrouwbaar netwerk van juristen\n• Volledige ondersteuning\n• Heldere communicatie"
+          },
+          {
+            "title": "Professionele Juridische Ondersteuning",
+            "description": "Neem contact met ons op voor juridische ondersteuning in Spanje."
+          }
+        ]
+      },
+      {
+        "id": "residency-nie",
+        "title": "Residentie / NIE in Spanje",
+        "description": "Alles Wat Je Moet Weten over het Verkrijgen van een NIE of Residentie in Spanje\n\nAls je van plan bent een woning te kopen, een bankrekening te openen, te werken of in Spanje te wonen, heb je een NIE-nummer nodig (Número de Identidad de Extranjero). Dit nummer is essentieel voor vrijwel elke officiële, juridische of financiële handeling in Spanje — zowel voor residenten als voor niet-residente vastgoedeigenaren.\n\nBij Baruch Real Estate maken we het eenvoudig. Wij begeleiden onze cliënten bij de NIE-aanvraag en kunnen dit ook namens jou regelen via een volmacht (Power of Attorney, POA), waardoor je tijd, stress en reizen bespaart.",
+        "image": "/assets/img/all-images/service/residency_result.webp",
+        "title-list": "Onze Residentie- & NIE-diensten",
+        "details": [
+          {
+            "title": "Wat is een NIE?",
+            "description": "De NIE is je identificatienummer voor buitenlanders in Spanje, uitgegeven door de Policía Nacional.\n\nJe hebt een NIE nodig als je van plan bent om:\n• Een woning te kopen of verkopen\n• Bij de notaris te tekenen\n• Een Spaanse bankrekening te openen\n• Nutsvoorzieningen aan te sluiten\n• Belasting te betalen in Spanje\n• Een auto te registreren\n• Een bedrijf te starten of legaal te werken\n\nDe NIE is geen verblijfsvergunning, maar je fiscale en identificatienummer als buitenlander."
+          },
+          {
+            "title": "NIE vs. Residentie — Wat is het Verschil?",
+            "description": "• NIE: Identificatienummer\n• Residentie: Verblijfsstatus"
+          },
+          {
+            "title": "NIE-aanvraagproces",
+            "description": "Stap 1: Persoonlijk of via volmacht\n\nStap 2: Benodigde documenten\n• EX-15 formulier\n• Paspoort\n• Reden van aanvraag\n• Afspraak\n• Betaling van de leges"
+          },
+          {
+            "title": "Volmacht (POA)",
+            "description": "Een snelle en veilige oplossing."
+          },
+          {
+            "title": "Ontvangst van je NIE-certificaat",
+            "description": "Levenslang geldig."
+          },
+          {
+            "title": "Residentie-opties in Spanje",
+            "description": "• EU-registratie\n• Non-Lucrative Visum\n• Golden Visa"
+          },
+          {
+            "title": "Waarom Baruch Real Estate",
+            "description": "• Professioneel\n• Meertalig\n• Alles onder één dak"
+          },
+          {
+            "title": "Een NIE nodig? Wij helpen je graag",
+            "description": "Neem vandaag nog contact met ons op voor details en tarieven."
+          }
+        ]
+      },
+      {
+        "id": "sell-your-house-in-costa-del-sol",
+        "title": "Verkoop Uw Huis aan de Costa del Sol",
+        "description": "Maak de Verkoop van Uw Woning in Spanje tot een Soepele en Veilige Ervaring\n\nWilt u een woning verkopen in Spanje? Vooral in populaire gebieden zoals Málaga, Marbella of de Costa del Sol omvat het verkoopproces een reeks juridische en administratieve stappen die zonder de juiste begeleiding overweldigend kunnen zijn. Van het bepalen van de juiste vraagprijs tot het voorbereiden van documenten en het tekenen bij de notaris, elke fase vereist nauwkeurigheid en professionele afhandeling.\n\nBij Baruch Real Estate vereenvoudigen wij dit proces voor u.\n\nOns ervaren team combineert vastgoedexpertise en juridische ondersteuning onder één dak en zorgt ervoor dat uw verkoop soepel, transparant en met volledige zekerheid wordt afgehandeld. Of u nu in Spanje woont of in het buitenland.",
+        "image": "/assets/img/all-images/service/sell_your_house_result.webp",
+        "title-list": "De Stappen voor het Verkopen van Uw Woning",
+        "details": [
+          {
+            "title": "1. Waardebepaling en Marktanalyse",
+            "description": "We starten met een professionele waardebepaling van uw woning.\n\nOp basis van actuele lokale marktgegevens, vergelijkbare verkopen en de unieke kenmerken van uw woning bepalen wij een realistische vraagprijs die serieuze kopers aantrekt en uw rendement maximaliseert.\n\nDankzij onze kennis van de vastgoedmarkt aan de Costa del Sol positioneren wij uw woning vanaf dag één effectief."
+          },
+          {
+            "title": "2. Juridische Controle en Documentatie",
+            "description": "Voordat de woning in de verkoop gaat, controleert ons juridisch team alle essentiële documenten om te zorgen dat alles verkoopklaar is. Dit omvat:\n\n- Eigendomsakte (Escritura de Propiedad)\n- Nota Simple uit het kadaster\n- Energieprestatiecertificaat (CEE)\n- IBI onroerendezaakbelasting en recente energierekeningen\n\nDeze stap garandeert een juridisch correcte verkoop en voorkomt problemen later in het traject.\n\nBij Baruch Real Estate werken vastgoed- en juridische experts nauw samen voor een helder en efficiënt proces."
+          },
+          {
+            "title": "3. Voorbereiding van de Woning",
+            "description": "De eerste indruk telt. Wij helpen u uw woning optimaal te presenteren met professionele fotografie, home staging en kleine verbeteringen.\n\nIndien nodig brengen wij u in contact met betrouwbare lokale partners voor schoonmaak, onderhoud of styling."
+          },
+          {
+            "title": "4. Marketing en Promotie",
+            "description": "Zodra de woning klaar is, starten wij een gerichte marketingcampagne voor zowel lokale als internationale kopers.\n\nDit omvat:\n\n- Plaatsing op toonaangevende vastgoedportalen in Spanje en Europa\n- Hoogwaardige foto's, video's en dronebeelden\n- Socialmediacampagnes en e-mailmarketing\n- Samenwerking met partneragenten door heel Europa\n\nOnze marketingstrategie zorgt voor maximale zichtbaarheid bij de juiste doelgroep wereldwijd.\n\nInclusief kopers uit Nederland, België, Duitsland, Polen, Zweden, het Verenigd Koninkrijk en de Verenigde Staten."
+          },
+          {
+            "title": "5. Bezichtigingen en Communicatie",
+            "description": "Wij verzorgen alle aanvragen, bezichtigingen en feedback van potentiële kopers.\n\nElke geïnteresseerde wordt vooraf gescreend op serieuze intentie.\n\nU ontvangt regelmatige updates over de voortgang."
+          },
+          {
+            "title": "6. Onderhandeling en Afhandeling van Biedingen",
+            "description": "Wanneer er biedingen binnenkomen, begeleiden wij u tijdens het volledige onderhandelingsproces.\n\nOns doel is het behalen van de beste prijs en voorwaarden met bescherming van uw belangen.\n\nDankzij geïntegreerde juridische ondersteuning is elke overeenkomst correct vastgelegd."
+          },
+          {
+            "title": "7. Ondertekening van het Reserveringscontract",
+            "description": "Na acceptatie van een bod stellen wij het reserveringscontract op (Contrato de Reserva).\n\nDit document haalt de woning van de markt en bevestigt de koopintentie.\n\nOnze juridische specialisten bewaken uw rechten als verkoper."
+          },
+          {
+            "title": "8. Voorbereiding voor de Notaris",
+            "description": "Voor de overdracht coördineren wij alles met de notaris, de juridisch vertegenwoordiger van de koper en de banken.\n\nAlle documenten en verklaringen worden tijdig geregeld."
+          },
+          {
+            "title": "9. Ondertekening van de Koopakte",
+            "description": "De definitieve ondertekening vindt plaats bij de notaris, waar de eigendom officieel wordt overgedragen.\n\nOnze teams zijn aanwezig om de transactie te begeleiden en de betaling te waarborgen."
+          },
+          {
+            "title": "10. Nazorg",
+            "description": "Na afronding helpen wij met het overzetten van nutsvoorzieningen, belastingaangiften en overige administratieve zaken.\n\nOnze dienstverlening stopt niet bij de notaris.\n\nWij begeleiden u van begin tot eind."
+          },
+          {
+            "title": "Waarom Verkopen met Baruch Real Estate",
+            "description": "Bij Baruch Real Estate vindt u alles onder één dak, van waardebepaling en marketing tot volledige juridische begeleiding.\n\nDeze aanpak zorgt voor efficiëntie en duidelijke communicatie.\n\nOns team heeft uitgebreide ervaring op de Costa del Sol en diepgaande kennis van lokale regelgeving."
+          },
+          {
+            "title": "Klaar om Uw Woning in Spanje te Verkopen?",
+            "description": "Wilt u weten wat uw woning waard is of welke stappen u kunt nemen?\n\nWij helpen u graag verder.\n\nNeem vandaag nog contact met ons op voor een gratis waardebepaling of om uw verkoopplannen te bespreken in Málaga, Marbella, Estepona of elders aan de Costa del Sol.\n\nSamen maken we uw verkoop eenvoudig, veilig en succesvol."
+          }
+        ]
+      },
+      {
+        "id": "taxes",
+        "title": "Belastingen en Belastingaangifte in Spanje",
+        "description": "Alles Wat Je Moet Weten over Belastingen in Spanje\n\nOf je nu in Spanje woont, een woning koopt of inkomsten uit Spaanse bronnen ontvangt, het is essentieel om het belastingstelsel te begrijpen. Belastingen kunnen variëren afhankelijk van je residentiestatus, het type inkomen en het bezit van onroerend goed.\n\nBij Baruch Real Estate werken we samen met betrouwbare accountants en belastingadviseurs om ervoor te zorgen dat je belastingaangifte correct, efficiënt en volgens de Spaanse wetgeving wordt ingediend, zodat je gemoedsrust hebt en kostbare fouten voorkomt.",
+        "image": "/assets/img/all-images/service/taxes_result.webp",
+        "title-list": "Belastingen voor Residenten en Niet-Residenten",
+        "details": [
+            {
+                "title": "1. Resident in Spanje",
+                "description": "Je wordt doorgaans als fiscaal resident beschouwd als je meer dan 183 dagen per jaar in Spanje verblijft of als je belangrijkste economische belangen zich in Spanje bevinden.\n\nResidenten zijn verplicht om aan te geven:\n\n• Wereldwijd inkomen\n• Onroerend goed, investeringen en bezittingen in Spanje en het buitenland\n• Vermogenswinsten, dividenden en huurinkomsten"
+            },
+            {
+                "title": "2. Niet-Resident in Spanje",
+                "description": "Niet-residenten betalen alleen belasting over inkomsten en bezittingen die zich in Spanje bevinden. Dit omvat:\n\n• Huurinkomsten uit Spaans onroerend goed\n• Vermogenswinsten uit de verkoop van Spaans vastgoed\n• Pensioenen of investeringen met een Spaanse bron\n\nHet is essentieel om je status te begrijpen, aangezien belastingtarieven, aftrekposten en verplichtingen sterk verschillen."
+            },
+            {
+                "title": "Belangrijkste Belastingen in Spanje",
+                "description": "1. Inkomstenbelasting (IRPF voor residenten / IRNR voor niet-residenten)\n• Residenten (IRPF): Progressieve belasting op wereldwijd inkomen (tot ca. 47%).\n• Niet-residenten (IRNR): Vast tarief op inkomsten uit Spanje (meestal 19–24%).\n\n2. Vastgoedbelastingen\n• IBI (Impuesto sobre Bienes Inmuebles): Jaarlijkse gemeentelijke onroerendgoedbelasting.\n• Plusvalía Municipal: Belasting op de waardestijging van de grond bij verkoop.\n• Vermogensbelasting: Van toepassing op residenten en soms niet-residenten met hoge vermogens.\n\n3. Vermogenswinstbelasting\n• Van toepassing op winst uit verkoop van vastgoed of investeringen in Spanje.\n• Tarieven verschillen per residentiestatus.\n\n4. Erf- en Schenkbelasting\n• Van toepassing bij ontvangst van vastgoed, bezittingen of geld in Spanje.\n• Tarieven zijn afhankelijk van regio en familieband.\n\n5. BTW / Overdrachtsbelasting\n• Nieuwbouw: BTW (IVA) ~10%\n• Bestaande bouw: Overdrachtsbelasting (ITP), regionaal bepaald (meestal 7–10%)."
+            },
+            {
+                "title": "Belastingaangifte Doen in Spanje",
+                "description": "Het indienen van een belastingaangifte omvat meerdere stappen:\n\nVerzamelen van alle documentatie.\n\nVaststellen van residentiestatus.\n\nBerekenen van belastbaar inkomen.\n\nTijdig indienen bij de Agencia Tributaria.\n\nVoor de meeste mensen is samenwerking met een lokale accountant of belastingadviseur essentieel."
+            },
+            {
+                "title": "Hoe Baruch Real Estate Kan Helpen",
+                "description": "Hoewel wij zelf geen accountants zijn, werken wij samen met betrouwbare partners die:\n\n• Adviseren over fiscale verplichtingen\n• Spaanse belastingaangiften verzorgen\n• Ondersteunen bij vastgoedbelastingen\n• Begeleiden bij erf-, schenk- en vermogensbelasting"
+            },
+            {
+                "title": "Waarom Werken met Onze Accountants",
+                "description": "• Expertise in Spaanse belastingwetgeving\n• Begeleiding in je eigen taal\n• Geoptimaliseerde aangiften\n• Volledige ondersteuning bij vastgoedtransacties\n• Hulp bij deadlines en communicatie met autoriteiten"
+            },
+            {
+                "title": "Professionele Fiscale Ondersteuning",
+                "description": "Of je nu in Spanje woont of er vastgoed bezit als niet-resident, een correcte belastingaangifte is essentieel.\n\nNeem vandaag nog contact met ons op voor professionele fiscale ondersteuning, afgestemd op jouw situatie in Spanje."
+            }
+        ]
+    }
+    ]
+  },
   "faq": {
     "title": "Veelgestelde vragen",
     "question-1": "Welke diensten biedt Baruch Real Estate aan?",
@@ -287,7 +601,6 @@
     },
     "title": "Neem contact met ons op",
     "description": "U bent van harte uitgenodigd om ons kantoor in Málaga te bezoeken voor een persoonlijk gesprek. Een huis samen bezichtigen? Ook dit is geen probleem. Of u nu vragen heeft over de aankoop of verkoop van onroerend goed, financieringsmogelijkheden of het verkrijgen van een residentie, ons team staat klaar om u professioneel te ondersteunen. \n\nWij spreken Nederlands, Engels en Spaans, zodat wij gedurende het gehele proces voor duidelijke communicatie en optimale begeleiding kunnen zorgen."
-
   },
   "contact-form": {
     "subtitle": "Klaar voor de volgende stap? ",

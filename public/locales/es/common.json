@@ -228,6 +228,320 @@
             }
         }
     },
+    "services-page": {
+        "title": "Nuestros Servicios",
+        "description": "Tu Socio de Confianza Cuando Compra una Propiedad en la Costa del Sol\nComprar una casa en España es un paso emocionante, pero también puede ser complejo, especialmente si no estás familiarizado con el mercado local, el idioma y el sistema legal.\nEn Baruch Real Estate, hacemos el proceso transparente, seguro y guiado desde el inicio hasta el final.\nNuestro Servicio de Representación de Compras garantiza que tus intereses estén siempre protegidos. Desde identificar la propiedad correcta y organizar visitas hasta negociar los mejores términos y gestionar el proceso legal, manejamos cada detalle con soporte inmobiliario y legal bajo un mismo techo.",
+        "btn-text": "Ver todos los servicios",
+        "services-list": [
+            {
+                "id": "buying-representation",
+                "title": "Representación de Compradores",
+                "description": "Tu Socio de Confianza al Comprar una Propiedad en la Costa del Sol.\n\nComprar una vivienda en España es un paso emocionante, pero también puede ser complejo, especialmente si no estás familiarizado con el mercado local, el idioma y el sistema legal.\n\nEn Baruch Real Estate hacemos que el proceso sea transparente, seguro y totalmente guiado de principio a fin.\nNuestro Servicio de Representación de Compradores garantiza que tus intereses estén siempre protegidos. Desde la identificación de la propiedad adecuada y la organización de visitas hasta la negociación de las mejores condiciones y la gestión del proceso legal, nos ocupamos de cada detalle con apoyo inmobiliario y legal bajo un mismo techo.",
+                "image": "/assets/img/all-images/service/buying-representation_result.webp",
+                "title-list": "Los Pasos para Comprar tu Vivienda en España",
+                "details": [
+                    {
+                        "title": "1. Comprender tus Objetivos y Preferencias",
+                        "description": "Comenzamos conociéndote a ti, tus necesidades, presupuesto, estilo de vida y objetivos de inversión. Tanto si buscas una villa vacacional, una residencia permanente o una propiedad para inversión, adaptamos la búsqueda a tus requisitos exactos. Nuestro equipo cuenta con un profundo conocimiento de la Costa del Sol."
+                    },
+                    {
+                        "title": "2. Búsqueda y Selección de Propiedades",
+                        "description": "Según tus preferencias, te presentamos una selección cuidada de propiedades que cumplen tus criterios. Buscamos tanto en nuestra propia cartera como a través de nuestra red de agentes y promotores de confianza, garantizando acceso al mercado completo y no solo a lo que es visible públicamente. Nuestro enfoque es encontrar la propiedad adecuada, no cualquier propiedad."
+                    },
+                    {
+                        "title": "3. Visitas a las Propiedades",
+                        "description": "Organizamos las visitas de acuerdo con tu disponibilidad, tanto si estás en España como si viajas desde el extranjero. Te acompañamos a cada visita, ofrecemos una visión honesta de cada propiedad y señalamos tanto las oportunidades como los posibles puntos de atención. Si no puedes viajar, organizamos visitas virtuales con recorridos en vídeo y visitas en directo. La transparencia y el asesoramiento honesto son la base de nuestro trabajo. Siempre sabrás exactamente qué estás viendo y qué puedes esperar."
+                    },
+                    {
+                        "title": "4. Due Diligence y Verificación Legal",
+                        "description": "Una vez que encuentras una propiedad de tu interés, nuestro equipo legal realiza una revisión completa.\nEsto incluye la verificación de:\n\n- Propiedad legal y registro (Nota Simple)\n- Cumplimiento urbanístico\n- Deudas pendientes, impuestos o cuotas de comunidad\n- Licencias de obra y certificados\n\nCon Baruch Real Estate, cuentas con profesionales legales que trabajan estrechamente con tu agente, asegurando que la propiedad sea legalmente correcta antes de comprometerte."
+                    },
+                    {
+                        "title": "5. Negociación y Gestión de la Oferta",
+                        "description": "Representamos tus intereses durante la fase de negociación, con el objetivo de conseguir el mejor precio y condiciones posibles.\nNuestra experiencia en la Costa del Sol nos permite asesorarte con expectativas realistas y datos sólidos sobre el valor de mercado.\nGestionamos toda la comunicación con el agente vendedor y garantizamos que cada oferta sea clara, por escrito y conforme a la legislación española."
+                    },
+                    {
+                        "title": "6. Reserva y Depósito",
+                        "description": "Cuando se acepta una oferta, se firma un contrato de reserva (Contrato de Reserva) y se abona un pequeño depósito para retirar la propiedad del mercado.\nNuestro equipo legal garantiza que las condiciones protejan tus intereses y que los pagos se realicen de forma segura a través de cuentas de clientes protegidas."
+                    },
+                    {
+                        "title": "7. Contrato Privado de Compraventa (Contrato de Arras)",
+                        "description": "Tras la reserva, el siguiente paso es el contrato privado de compraventa.\nEste acuerdo legalmente vinculante define las condiciones de la venta, el calendario de pagos y la fecha de finalización.\nNuestros asesores legales revisan o redactan este documento para asegurar que tus derechos como comprador estén plenamente protegidos."
+                    },
+                    {
+                        "title": "8. Firma Final ante Notario",
+                        "description": "La compra se completa con la firma de la Escritura de Compraventa ante notario.\nTe acompañamos a la notaría, verificamos que toda la documentación sea correcta y confirmamos que el pago y la transferencia de la propiedad se realicen de forma segura.\nSi no puedes asistir personalmente, podemos organizar un poder notarial para completar la compra a distancia."
+                    },
+                    {
+                        "title": "9. Servicios Posteriores a la Compra",
+                        "description": "Después de la compra, seguimos ayudándote con:\n• Cambios y altas de suministros\n• Seguro de la vivienda\n• Gestiones fiscales (NIE, IBI, etc.)\n• Apertura bancaria y configuración de pagos\n\nNuestro objetivo es que la transición sea lo más fluida posible para que puedas disfrutar de tu nueva vivienda desde el primer momento."
+                    },
+                    {
+                        "title": "Por Qué Trabajar con un Representante del Comprador",
+                        "description": "Contar con un representante del comprador significa tener a alguien de tu lado. Alguien que te representa a ti, no al vendedor.\n\nEn Baruch Real Estate ofrecemos:\n• Transparencia total en cada paso\n• Acceso a todas las propiedades del mercado, no solo a las nuestras\n• Soporte legal de profesionales de confianza bajo un mismo techo\n• Asesoramiento en tu propio idioma\n• Gestión segura, estructurada y eficiente desde el primer contacto hasta el notario\n\nTanto si compras tu primera vivienda en España como si amplías tu cartera de inversión, nuestra experiencia garantiza una compra segura y sin estrés."
+                    },
+                    {
+                        "title": "¿Listo para Encontrar tu Propiedad en la Costa del Sol?",
+                        "description": "Si estás pensando en comprar una propiedad en Málaga, Marbella, Estepona o en cualquier punto de la Costa del Sol, estaremos encantados de acompañarte en cada paso.\n\nContacta con nosotros hoy mismo para programar una consulta o una reunión de búsqueda de propiedades.\n\nEncontremos tu hogar ideal con claridad, confianza y apoyo total de principio a fin."
+                    }
+                ]
+            },
+            {
+                "id": "finance",
+                "title": "Finance & Mortgage Services in Spain",
+                "description": "Your Guide to Mortgages, Bank Accounts, and Financing in Costa del Sol.\n\nBuying a property in Spain often involves securing a mortgage or arranging financing.\n\nNavigating the Spanish banking system can be complex, especially for foreign buyers. From mortgage options to bank accounts, understanding rates, terms, and requirements is essential.\n\nAt Baruch Real Estate, we make financing simple. Leveraging our extensive network of banking and finance partners, we help you find suitable mortgage solutions, assist with the application process, and guide you from start to finish, ensuring your financing process is smooth and transparent.",
+                "image": "/assets/img/all-images/service/finance_result.webp",
+                "title-list": "Our Mortgage & Finance Services",
+                "details": [
+                    {
+                        "title": "1. Quick Mortgage Scan",
+                        "description": "We start by assessing your financial situation and goals:\n\n• Income and affordability check\n• Property price and loan amount analysis\n• Initial eligibility assessment\n\nThis allows us to quickly identify banks and mortgage products that fit your needs, saving time and avoiding unnecessary applications."
+                    },
+                    {
+                        "title": "2. Mortgage Comparison with Our Partners",
+                        "description": "Through our trusted network of banks and finance partners, we can compare a wide range of mortgage options:\n\n• Fixed-rate mortgages\n• Variable-rate mortgages\n• Mixed-rate mortgages\n• Non-resident mortgage solutions\n\nOur goal is to help you find competitive rates and flexible terms, with full transparency. The mortgage agreement itself is always between the client and the bank, but we guide and coordinate the process for you."
+                    },
+                    {
+                        "title": "3. Mortgage Application Support",
+                        "description": "We assist with the preparation and submission of your application to our banking partners, including:\n\n• Collecting necessary documents (proof of income, tax returns, property details)\n• Submitting the application to selected banks\n• Coordinating with the bank until the mortgage is approved\n\nWhile the mortgage contract is signed between you and the bank, our team ensures the process is smooth and correctly documented."
+                    },
+                    {
+                        "title": "4. Bank Account Opening",
+                        "description": "A Spanish bank account is often required for mortgage payments, property management, and utilities.\n\nWe help you:\n• Select the bank that suits your needs\n• Open a Spanish bank account efficiently\n• Set up payments and transfers related to your property\n\nThis service is available for both residents and non-residents, making your financial setup seamless."
+                    },
+                    {
+                        "title": "5. Mortgage Completion & Coordination",
+                        "description": "Once your mortgage is approved, we coordinate with your lawyer and notary to ensure funds are ready for signing the Escritura de Compraventa.\n\nWe manage the scheduling and documentation so you can focus on your property purchase, while the mortgage itself remains fully between you and the bank."
+                    },
+                    {
+                        "title": "Why Work with Baruch Real Estate for Financing",
+                        "description": "• Quick mortgage scan to determine what you qualify for\n• Access to an extensive network of banks and finance partners\n• Guidance on documentation, applications, and approvals\n• Support with Spanish bank account setup\n• Transparent coordination from first contact until mortgage approval\n\nWe provide a full-service approach, helping you navigate the financing process efficiently and safely; while keeping you informed every step of the way."
+                    },
+                    {
+                        "title": "Request Rates & Prices",
+                        "description": "If you would like to explore mortgage options or arrange a financing scan for your property purchase, we can provide tailored information from our partner banks.\n\nContact us today to discuss your mortgage options, request current rates, and start your financing journey in Costa del Sol; Benalmadena, Estepona, Málaga, Marbella, Torrox, Alhaurín or elsewhere in Spain."
+                    }
+                ]
+            }, 
+            {
+                "id": "insurance-services",
+                "title": "Servicios de Seguros en España",
+                "description": "Soluciones Integrales de Seguros para Residentes y Propietarios\n\nVivir o invertir en España conlleva responsabilidades, entre ellas protegerse a uno mismo, a su familia y a su propiedad. Desde seguros de hogar hasta seguros de vida, salud y coche, contar con la cobertura adecuada es esencial para su tranquilidad.\n\nEn Baruch Real Estate, ponemos a nuestros clientes en contacto con una red de proveedores de seguros de confianza para encontrar las mejores soluciones adaptadas a sus necesidades. Le guiamos durante todo el proceso, le explicamos las opciones disponibles y nos aseguramos de que obtenga la cobertura que mejor se adapte a su situación, todo en su propio idioma.",
+                "image": "/assets/img/all-images/service/Insurance_result.webp",
+                "title-list": "Nuestros Servicios de Seguros",
+                "details": [
+                    {
+                        "title": "1. Seguro de Hogar",
+                        "description": "Proteger su propiedad en España es fundamental. El seguro de hogar puede cubrir:\n• Incendios, daños por agua y desastres naturales\n• Robo y vandalismo\n• Responsabilidad civil en caso de accidentes en su propiedad\n\nTrabajamos con proveedores que comprenden tanto viviendas habituales como casas vacacionales en la Costa del Sol, Málaga y zonas cercanas, garantizando una cobertura completa a tarifas competitivas."
+                    },
+                    {
+                        "title": "2. Seguro de Vida",
+                        "description": "El seguro de vida ofrece seguridad financiera a su familia en caso de acontecimientos imprevistos.\n\nSegún sus necesidades, el seguro de vida puede incluir:\n• Cobertura estándar por fallecimiento\n• Protección hipotecaria\n• Protección de ingresos para personas a cargo\n\nNuestros socios ofrecen pólizas flexibles adecuadas tanto para residentes como para no residentes en España."
+                    },
+                    {
+                        "title": "3. Seguro de Salud",
+                        "description": "En España se puede acceder a la sanidad pública, pero muchos expatriados prefieren un seguro de salud privado por un acceso más rápido, mayor libertad de elección de médicos y cobertura internacional.\n\nPodemos organizar planes para:\n• Personas individuales o familias\n• Ciudadanos de la UE y de fuera de la UE\n• Cobertura a largo o corto plazo\n\nEsto garantiza que usted y sus seres queridos estén protegidos y tengan acceso a una atención sanitaria de alta calidad."
+                    },
+                    {
+                        "title": "4. Seguro de Coche",
+                        "description": "La propiedad de un vehículo en España requiere un seguro obligatorio, pero una cobertura adicional puede ofrecer mayor protección.\n\nPodemos ayudarle a encontrar pólizas que cubran:\n• Responsabilidad civil a terceros obligatoria\n• Cobertura a todo riesgo\n• Asistencia en carretera\n• Cobertura para varios conductores o vehículos en leasing\n\nTanto si posee un coche familiar, un vehículo de lujo o un vehículo vinculado a una propiedad de alquiler, nuestros socios ofrecen soluciones a medida."
+                    },
+                    {
+                        "title": "5. Otras Opciones de Seguro",
+                        "description": "Dependiendo de su situación, pueden ser relevantes otros seguros:\n• Seguro de viaje para vacaciones o estancias temporales\n• Seguro de protección de alquiler para viviendas vacacionales\n• Seguro de responsabilidad civil profesional o empresarial\n• Seguro para mascotas\n\nNuestra red nos permite encontrar el proveedor más adecuado para cualquier tipo de seguro, asegurando una cobertura completa sin costes innecesarios."
+                    },
+                    {
+                        "title": "Por Qué Elegir Baruch Real Estate para Servicios de Seguros",
+                        "description": "• Red de socios aseguradores de confianza con experiencia en España\n• Soluciones personalizadas para residentes, no residentes e inversores inmobiliarios\n• Asistencia en su propio idioma\n• Explicaciones claras y transparentes sobre coberturas, condiciones y precios\n• Acompañamiento durante el proceso de contratación y gestión de siniestros\n\nNuestro objetivo es hacer que los seguros sean sencillos, accesibles y fiables, ofreciéndole la tranquilidad de saber que usted y sus bienes están protegidos."
+                    },
+                    {
+                        "title": "Obtenga Sus Soluciones de Seguro Hoy",
+                        "description": "Tanto si necesita un seguro de hogar, vida, salud o coche, nuestro equipo puede ponerle en contacto con el proveedor adecuado y organizar un plan que se adapte a sus necesidades.\n\nPóngase en contacto con nosotros hoy mismo para analizar sus opciones de seguro y recibir soluciones personalizadas a través de nuestra red de socios de confianza en España."
+                    }
+                ]
+            },
+            {
+                "id": "legal-services",
+                "title": "Servicios Legales en España",
+                "description": "Asesoramiento Legal Integral para Residentes y Propietarios\n\nNavegar por los procesos legales en España puede ser complejo, especialmente si estás comprando o vendiendo una propiedad, solicitando la residencia o estableciendo un negocio. En Baruch Real Estate, trabajamos con una red de abogados y notarios de confianza para ofrecer servicios legales rápidos, profesionales y fiables.\n\nNuestro equipo se coordina con estos expertos legales para garantizar que tus transacciones y trámites cumplan con la legislación española, brindándote tranquilidad y ahorrándote tiempo.",
+                "image": "/assets/img/all-images/service/legal_result.webp",
+                "title-list": "Nuestros Servicios Legales",
+                "details": [
+                    {
+                        "title": "1. Asesoramiento Legal para la Compra de una Propiedad",
+                        "description": "Al comprar una propiedad en España, el asesoramiento legal es esencial. Nuestros servicios incluyen:\n• Verificación de la titularidad y el registro de la propiedad\n• Comprobaciones legales de deudas, cargas y cuotas de comunidad\n• Revisión o redacción de contratos de reserva y compraventa\n• Coordinación con notarios para la Escritura de Compraventa\n• Asistencia con contratos hipotecarios y documentación bancaria\n\nNos aseguramos de que cada paso de la compra de tu propiedad sea seguro, transparente y conforme a la ley."
+                    },
+                    {
+                        "title": "2. Asesoramiento Legal para la Venta de una Propiedad",
+                        "description": "La venta de una propiedad también requiere supervisión legal. Nuestros abogados pueden:\n• Revisar la documentación y titularidad de tu propiedad\n• Asesorar sobre las condiciones contractuales y obligaciones\n• Gestionar la comunicación con los representantes legales del comprador\n• Coordinar la firma ante notario y el proceso de finalización\n\nEsto garantiza que la venta se realice de forma eficiente y segura, con un riesgo mínimo."
+                    },
+                    {
+                        "title": "3. Solicitudes de NIE y Asistencia Legal para la Residencia",
+                        "description": "Ayudamos con los procedimientos legales relacionados con identificación extranjera y residencia, incluyendo:\n• Solicitud del NIE (Número de Identidad de Extranjero)\n• Gestión de Poder Notarial si no puedes solicitarlo personalmente\n• Apoyo en solicitudes de residencia para ciudadanos de la UE y no UE\n\nNuestros socios legales garantizan que tus documentos se tramiten correctamente y de manera eficiente."
+                    },
+                    {
+                        "title": "4. Constitución de Empresas (SL)",
+                        "description": "Si deseas crear una empresa en España, te guiamos en:\n• Constitución de una Sociedad Limitada (SL)\n• Redacción de los estatutos sociales\n• Inscripción en el Registro Mercantil\n• Apertura de cuentas bancarias para la empresa\n• Obtención de números de identificación fiscal y licencias\n\nCoordinamos con socios legales y contables de confianza para que el proceso sea rápido y conforme a la normativa."
+                    },
+                    {
+                        "title": "5. Conexiones y Coordinación con Notarios",
+                        "description": "Nuestra red incluye notarios de confianza para:\n• Firmas de compraventa\n• Constitución de empresas\n• Poderes notariales\n• Testamentos\n\nPodemos concertar citas rápidamente y asegurarnos de que toda la documentación esté preparada."
+                    },
+                    {
+                        "title": "6. Servicios de Testamentos",
+                        "description": "La planificación sucesoria es importante para residentes y propietarios. Nuestros socios legales pueden ayudarte a:\n• Redactar un testamento español\n• Garantizar la correcta distribución de bienes y propiedades\n• Coordinar procesos sucesorios para evitar complicaciones\n\nEsto asegura que tus asuntos familiares y patrimoniales se gestionen de forma clara y legal."
+                    },
+                    {
+                        "title": "7. Respuesta Rápida y Servicio Personalizado",
+                        "description": "Entendemos que los asuntos legales requieren rapidez y fiabilidad.\n\nNuestro equipo ofrece:\n• Respuestas rápidas a tus consultas\n• Asesoramiento en inglés, neerlandés, alemán o español\n• Explicaciones claras de procedimientos y costes\n\nCon Baruch Real Estate, tienes apoyo legal profesional bajo un mismo techo."
+                    },
+                    {
+                        "title": "Por Qué Trabajar con Nosotros para Servicios Legales",
+                        "description": "• Acceso a una red de abogados y notarios de confianza\n• Apoyo completo en asuntos inmobiliarios, de residencia, empresariales y personales\n• Comunicación clara, rápida y eficiente\n• Asesoramiento en varios idiomas\n• Coordinación total para procesos fluidos y sin estrés"
+                    },
+                    {
+                        "title": "Obtén Asistencia Legal Profesional",
+                        "description": "Tanto si compras o vendes una propiedad, solicitas un NIE, constituyes una empresa o planificas tu testamento, te conectamos con profesionales legales experimentados.\n\nContáctanos hoy para hablar sobre tus necesidades legales y organizar asistencia en la Costa del Sol, Málaga, Marbella o en cualquier lugar de España."
+                    }
+                ]
+            },
+            {
+                "id": "residency-nie",
+                "title": "Residencia / NIE en España",
+                "description": "Todo lo que Necesitas Saber sobre la Obtención del NIE o la Residencia en España\n\nSi planeas comprar una propiedad, abrir una cuenta bancaria, trabajar o vivir en España, necesitarás un número NIE (Número de Identidad de Extranjero). Este número es esencial para casi cualquier trámite oficial, legal o financiero en España, tanto si eres residente como propietario no residente.\n\nEn Baruch Real Estate, lo hacemos fácil. Asistimos a nuestros clientes en el proceso de solicitud del NIE y también podemos gestionarlo en tu nombre mediante un Poder Notarial (POA), ahorrándote tiempo, estrés y desplazamientos.",
+                "image": "/assets/img/all-images/service/residency_result.webp",
+                "title-list": "Nuestros Servicios de Residencia y NIE",
+                "details": [
+                    {
+                        "title": "¿Qué es el NIE?",
+                        "description": "El NIE es tu número de identificación de extranjero en España. Es emitido por las autoridades españolas (Policía Nacional) y se utiliza para todos los trámites administrativos y legales.\n\nNecesitarás un NIE si planeas:\n• Comprar o vender una propiedad\n• Firmar ante notario\n• Abrir una cuenta bancaria en España\n• Dar de alta suministros (electricidad, agua, internet)\n• Pagar impuestos en España\n• Matricular un vehículo\n• Iniciar un negocio o trabajar legalmente\n\nEl NIE en sí no es un permiso de residencia; es simplemente tu número fiscal y de identificación como extranjero. Sin embargo, es un primer paso imprescindible si planeas vivir, invertir o permanecer a largo plazo en España."
+                    },
+                    {
+                        "title": "NIE vs. Residencia — ¿Cuál es la Diferencia?",
+                        "description": "• NIE (Número de Identidad de Extranjero):\nNúmero de identificación personal emitido a extranjeros con fines fiscales y legales. Puedes tener un NIE sin ser residente.\n\n• Residencia:\nEstatus legal que te permite vivir en España más de 90 días al año. Dependiendo de tu nacionalidad, se obtiene mediante el Certificado de Registro de Ciudadano de la UE o mediante un visado No Lucrativo / Golden Visa.\n\nLa mayoría de nuestros clientes internacionales comienzan con el NIE, especialmente al comprar una propiedad, y más adelante deciden si solicitan la residencia."
+                    },
+                    {
+                        "title": "Proceso de Solicitud del NIE",
+                        "description": "Paso 1: Determinar Cómo Solicitarlo\nPuedes solicitar el NIE:\nEn persona en una comisaría de policía con Oficina de Extranjería.\nMediante Poder Notarial (POA); nosotros gestionamos todo el proceso sin que tengas que viajar.\n\nPaso 2: Preparar la Documentación Necesaria\nLa documentación suele incluir:\n• Formulario EX-15 cumplimentado\n• Copia del pasaporte (y original si es presencial)\n• Justificante del motivo de la solicitud\n• Cita previa\n• Pago de la tasa (Modelo 790, Código 012)\n\nSi utilizas el servicio de NIE de Baruch Real Estate, preparamos toda la documentación y evitamos errores comunes que retrasan la aprobación."
+                    },
+                    {
+                        "title": "Opción de Poder Notarial (POA)",
+                        "description": "Si te encuentras fuera de España o prefieres no acudir personalmente, puedes autorizar a nuestro socio legal.\n\nEl poder puede firmarse:\n• Ante notario en España, o\n• Ante notario en tu país de origen con Apostilla de La Haya\n\nUna vez recibido el poder, presentamos la solicitud y recogemos el NIE. Es una opción rápida, segura y cómoda."
+                    },
+                    {
+                        "title": "Recogida del Certificado NIE",
+                        "description": "Una vez aprobado, el certificado NIE incluye tu nombre, nacionalidad y número NIE único.\n\nTe lo enviamos de forma segura. El NIE es permanente y válido de por vida."
+                    },
+                    {
+                        "title": "Opciones de Residencia en España",
+                        "description": "Ciudadanos de la UE:\n• Certificado de Registro de Ciudadano de la UE\n• Requiere ingresos, seguro médico y dirección en España\n\nCiudadanos No UE:\n• Visado No Lucrativo\n• Golden Visa\n• Visado de Trabajo o Negocios\n\nTe conectamos con socios legales de confianza para gestionar la mejor opción."
+                    },
+                    {
+                        "title": "Por Qué Solicitarlo a Través de Baruch Real Estate",
+                        "description": "• Asistencia rápida y profesional\n• Servicios legales e inmobiliarios en un solo lugar\n• Gestión completa de trámites\n• Comunicación clara en tu idioma\n• Opción de trámite a distancia mediante poder\n\nNuestro objetivo es que tu inicio en España sea sencillo y sin estrés."
+                    },
+                    {
+                        "title": "¿Necesitas un NIE? Podemos Ayudarte",
+                        "description": "Si planeas comprar una propiedad, abrir una cuenta bancaria o mudarte a España, necesitarás un NIE válido.\n\nContáctanos hoy mismo para información y precios."
+                    }
+                ]
+            },
+            {
+                "id": "sell-your-house-in-costa-del-sol",
+                "title": "Vende Tu Casa en la Costa del Sol",
+                "description": "Haz que la Venta de tu Propiedad en España Sea una Experiencia Fluida y Segura\n\n¿Vendes una propiedad en España? Especialmente en zonas populares como Málaga, Marbella o la Costa del Sol, el proceso implica una serie de pasos legales y administrativos que pueden resultar abrumadores sin la orientación adecuada. Desde determinar el precio de venta correcto hasta preparar la documentación y firmar ante notario, cada etapa requiere precisión y una gestión profesional.\n\nEn Baruch Real Estate, simplificamos el proceso para ti.\n\nNuestro equipo experimentado combina servicios inmobiliarios y apoyo legal bajo un mismo techo, garantizando que tu venta se gestione de manera fluida, transparente y con total confianza. Tanto si resides en España como en el extranjero.",
+                "image": "/assets/img/all-images/service/sell_your_house_result.webp",
+                "title-list": "Los Pasos para Vender tu Vivienda",
+                "details": [
+                    {
+                        "title": "1. Valoración de la Propiedad y Análisis de Mercado",
+                        "description": "Comenzamos con una valoración profesional de tu propiedad.\n\nUtilizando datos actualizados del mercado local, ventas comparables y las características únicas de tu vivienda, determinamos un precio de venta realista que atrae a compradores cualificados y maximiza tu rentabilidad.\n\nNuestro conocimiento del mercado inmobiliario de la Costa del Sol nos permite posicionar tu vivienda de forma eficaz desde el primer día."
+                    },
+                    {
+                        "title": "2. Revisión Legal y Documentación",
+                        "description": "Antes de publicar la propiedad, nuestro equipo legal revisa toda la documentación esencial para garantizar que tu vivienda esté lista para la venta. Esto incluye:\n\n- Título de propiedad (Escritura de Propiedad)\n- Nota Simple del Registro de la Propiedad\n- Certificado de Eficiencia Energética (CEE)\n- IBI (impuesto sobre bienes inmuebles) y facturas recientes de suministros\n\nEste paso garantiza que la venta sea legalmente sólida y evita complicaciones más adelante.\n\nCon Baruch Real Estate, te beneficias de contar con expertos inmobiliarios y legales trabajando juntos, haciendo que todo sea claro y eficiente."
+                    },
+                    {
+                        "title": "3. Preparación de la Vivienda para la Venta",
+                        "description": "La primera impresión es clave. Te ayudamos a presentar tu vivienda de la mejor manera posible, desde fotografía profesional hasta home staging y pequeñas mejoras.\n\nSi es necesario, te ponemos en contacto con colaboradores locales de confianza para limpieza, reparaciones o decoración. Nos aseguramos de que tu propiedad luzca perfecta para los compradores potenciales."
+                    },
+                    {
+                        "title": "4. Marketing y Promoción",
+                        "description": "Una vez que la vivienda está lista, lanzamos una campaña de marketing dirigida tanto a compradores locales como internacionales.\n\nEsto incluye:\n\n- Publicación en los principales portales inmobiliarios de España y Europa\n- Imágenes de alta calidad, vídeos y tomas con dron\n- Campañas en redes sociales y email marketing\n- Colaboración con agentes asociados en toda Europa\n\nNuestra estrategia de marketing garantiza que tu propiedad llegue al público adecuado en todo el mundo.\n\nIncluyendo compradores de Países Bajos, Bélgica, Alemania, Polonia, Suecia, Reino Unido y Estados Unidos, que buscan activamente viviendas en el sur de España."
+                    },
+                    {
+                        "title": "5. Visitas y Comunicación con Compradores",
+                        "description": "Gestionamos todas las consultas, visitas y comentarios de los compradores.\n\nCada comprador potencial es previamente cualificado para asegurar un interés real.\n\nRecibes actualizaciones periódicas para que siempre estés informado sobre el progreso y las reacciones de los compradores."
+                    },
+                    {
+                        "title": "6. Negociación y Gestión de Ofertas",
+                        "description": "Cuando se reciben ofertas, te guiamos durante todo el proceso de negociación.\n\nNuestro objetivo es lograr el mejor precio y las mejores condiciones, protegiendo siempre tus intereses.\n\nCon el apoyo legal integrado, cada acuerdo y depósito se gestiona correctamente y conforme a la legislación inmobiliaria española."
+                    },
+                    {
+                        "title": "7. Firma del Contrato de Reserva",
+                        "description": "Tras aceptar una oferta, preparamos el contrato de reserva (Contrato de Reserva).\n\nEste documento retira la propiedad del mercado y confirma el compromiso del comprador.\n\nNuestro equipo legal revisa y redacta el contrato para garantizar que tus derechos como vendedor estén plenamente protegidos."
+                    },
+                    {
+                        "title": "8. Preparación para el Notario",
+                        "description": "Antes de la fecha de finalización, coordinamos con el notario, el representante legal del comprador y los bancos para que todo esté listo.\n\nEsto incluye la preparación de todos los documentos, certificados y liquidaciones fiscales para que la venta se complete sin inconvenientes."
+                    },
+                    {
+                        "title": "9. Firma de la Escritura de Compraventa",
+                        "description": "La firma final se realiza en la notaría, donde la propiedad se transfiere oficialmente al comprador.\n\nNuestros equipos inmobiliario y legal están presentes para supervisar la operación, garantizar el pago seguro y confirmar que se cumplen todos los pasos legales."
+                    },
+                    {
+                        "title": "10. Soporte Postventa",
+                        "description": "Tras la finalización, ayudamos con los cambios de titularidad de suministros, declaraciones fiscales y cualquier gestión administrativa pendiente.\n\nNuestro apoyo no termina en la notaría.\n\nEstamos aquí para que todo el proceso sea fluido de principio a fin."
+                    },
+                    {
+                        "title": "Por Qué Vender con Baruch Real Estate",
+                        "description": "En Baruch Real Estate ofrecemos todo bajo un mismo techo, desde la valoración y el marketing hasta el asesoramiento legal completo.\n\nEsta estructura nos permite gestionar cada paso de forma eficiente y con una comunicación clara entre todas las partes.\n\nNuestro equipo cuenta con una amplia experiencia en el mercado inmobiliario de la Costa del Sol, garantizando una venta profesional y con un profundo conocimiento de la normativa local."
+                    },
+                    {
+                        "title": "¿Listo para Vender tu Propiedad en España?",
+                        "description": "¿Te gustaría saber cuánto vale tu vivienda o qué pasos debes seguir para empezar a vender?\n\nEstaremos encantados de guiarte durante todo el proceso.\n\nContacta con nosotros hoy mismo para recibir una valoración gratuita o para hablar sobre tus planes de venta en Málaga, Marbella, Estepona o cualquier punto de la Costa del Sol.\n\nHagamos que la venta de tu propiedad sea sencilla, segura y exitosa."
+                    }
+                ]
+            },
+            {
+                "id": "taxes",
+                "title": "Impuestos y Declaración de la Renta en España",
+                "description": "Todo lo que Necesitas Saber sobre los Impuestos en España\n\nTanto si vives en España, compras una propiedad o generas ingresos de fuentes españolas, comprender el sistema fiscal es fundamental. Los impuestos pueden variar según tu situación de residencia, el tipo de ingresos y la propiedad de bienes inmuebles.\n\nEn Baruch Real Estate, trabajamos con contables y asesores fiscales de confianza para garantizar que tus impuestos se presenten de forma correcta, eficiente y conforme a la legislación española, ofreciéndote tranquilidad y evitando errores costosos.",
+                "image": "/assets/img/all-images/service/taxes_result.webp",
+                "title-list": "Impuestos para Residentes y No Residentes",
+                "details": [
+                    {
+                        "title": "1. Residente en España",
+                        "description": "Generalmente se considera residente a efectos fiscales si vives en España más de 183 días al año o si tienes en el país tu principal centro de intereses económicos.\n\nLos residentes están obligados a declarar:\n\n• Ingresos mundiales\n• Propiedades, inversiones y activos en España y en el extranjero\n• Ganancias patrimoniales, dividendos e ingresos por alquiler"
+                    },
+                    {
+                        "title": "2. No Residente en España",
+                        "description": "Los no residentes solo pagan impuestos sobre los ingresos y activos situados en España. Esto incluye:\n\n• Ingresos por alquiler de propiedades en España\n• Ganancias patrimoniales por la venta de propiedades en España\n• Pensiones o inversiones de origen español\n\nComprender tu estatus es fundamental, ya que los tipos impositivos, deducciones y obligaciones varían significativamente."
+                    },
+                    {
+                        "title": "Principales Impuestos que Puedes Encontrar en España",
+                        "description": "1. Impuesto sobre la Renta (IRPF para residentes / IRNR para no residentes)\n• Residentes (IRPF): Tributación progresiva sobre los ingresos mundiales (hasta ~47%).\n• No Residentes (IRNR): Tipo impositivo fijo sobre los ingresos en España (normalmente 19–24%).\n\n2. Impuestos sobre la Propiedad\n• IBI (Impuesto sobre Bienes Inmuebles): Impuesto local anual sobre la propiedad.\n• Plusvalía Municipal: Impuesto sobre el incremento del valor del suelo al vender una propiedad.\n• Impuesto sobre el Patrimonio: Aplica a residentes y, en algunos casos, a no residentes con activos de alto valor.\n\n3. Impuesto sobre las Ganancias Patrimoniales\n• Se aplica a las ganancias obtenidas por la venta de propiedades o inversiones en España.\n• Los tipos impositivos difieren entre residentes y no residentes.\n\n4. Impuesto sobre Sucesiones y Donaciones\n• Aplicable si recibes propiedades, activos o dinero en España.\n• Los tipos dependen de la región y del grado de parentesco.\n\n5. IVA / Impuesto de Transmisiones Patrimoniales\n• Propiedades nuevas: Sujetas a IVA ~10%\n• Propiedades de segunda mano: Sujetas al ITP, que varía según la región (normalmente 7–10%)."
+                    },
+                    {
+                        "title": "Presentar la Declaración de la Renta en España",
+                        "description": "La presentación de impuestos en España implica varios pasos:\n\nReunir toda la documentación: justificantes de ingresos, datos de propiedades, extractos bancarios, etc.\n\nDeterminar el estatus de residencia: residente o no residente.\n\nCalcular la base imponible: incluyendo deducciones y reducciones aplicables.\n\nPresentar la declaración ante la Agencia Tributaria dentro de los plazos establecidos.\n\nPara la mayoría de las personas, trabajar con un contable o asesor fiscal local es esencial. Ellos pueden ayudarte a optimizar deducciones, evitar sanciones y garantizar el cumplimiento legal."
+                    },
+                    {
+                        "title": "Cómo Puede Ayudar Baruch Real Estate",
+                        "description": "Aunque no somos contables, trabajamos con socios contables de confianza que:\n\n• Asesoran sobre obligaciones fiscales para residentes y no residentes\n• Gestionan declaraciones fiscales en España (IRPF/IRNR)\n• Apoyan en impuestos relacionados con la propiedad (IBI, Plusvalía, ITP)\n• Ofrecen orientación sobre sucesiones, donaciones e impuesto sobre el patrimonio\n\nCoordinamos con estos contables para garantizar que tus transacciones inmobiliarias, ingresos y propiedades cumplan plenamente con la legislación fiscal española, haciendo el proceso sencillo y sin estrés."
+                    },
+                    {
+                        "title": "Por Qué Trabajar con Nuestros Contables",
+                        "description": "• Experiencia en fiscalidad española para residentes y no residentes\n• Asesoramiento en tu propio idioma\n• Declaraciones optimizadas para evitar pagos excesivos\n• Apoyo completo en la compra, venta y alquiler de propiedades\n• Asistencia con plazos fiscales y comunicación con las autoridades"
+                    },
+                    {
+                        "title": "Obtén Asistencia Fiscal Profesional",
+                        "description": "Tanto si vives en España como si posees una propiedad como no residente, presentar correctamente tus impuestos es esencial.\n\nNuestros contables de confianza pueden guiarte durante todo el proceso, asegurando que todo sea correcto, optimizado y presentado a tiempo.\n\nContacta con nosotros hoy mismo para organizar asistencia profesional con tus impuestos y declaraciones fiscales en España, adaptadas a tu situación en la Costa del Sol, Málaga, Marbella o en cualquier lugar de España."
+                    }
+                ]
+            }
+        ]
+    },
     "faq": {
         "title": "Preguntas Frecuentes",
        

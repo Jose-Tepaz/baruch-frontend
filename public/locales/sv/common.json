@@ -216,6 +216,320 @@
             }
         }
     },
+    "services-page": {
+        "title": "Nuestros Servicios",
+        "description": "Tu Socio de Confianza Cuando Compra una Propiedad en la Costa del Sol\nComprar una casa en España es un paso emocionante, pero también puede ser complejo, especialmente si no estás familiarizado con el mercado local, el idioma y el sistema legal.\nEn Baruch Real Estate, hacemos el proceso transparente, seguro y guiado desde el inicio hasta el final.\nNuestro Servicio de Representación de Compras garantiza que tus intereses estén siempre protegidos. Desde identificar la propiedad correcta y organizar visitas hasta negociar los mejores términos y gestionar el proceso legal, manejamos cada detalle con soporte inmobiliario y legal bajo un mismo techo.",
+        "btn-text": "Ver todos los servicios",
+        "services-list": [
+            {
+                "id": "buying-representation",
+                "title": "Köparrepresentation",
+                "description": "Din Trygga Partner vid Köp av Bostad på Costa del Sol.\n\nAtt köpa en bostad i Spanien är ett spännande steg, men processen kan vara komplex, särskilt om du inte är bekant med den lokala marknaden, språket och det juridiska systemet.\n\nPå Baruch Real Estate gör vi processen transparent, säker och fullt guidad från början till slutet.\nVår köparrepresentation säkerställer att dina intressen alltid skyddas. Från att identifiera rätt bostad och boka visningar till att förhandla fram bästa villkor och hantera den juridiska processen tar vi hand om varje detalj med fastighets- och juridisk expertis under ett och samma tak.",
+                "image": "/assets/img/all-images/service/buying-representation_result.webp",
+                "title-list": "Stegen för att Köpa Din Bostad i Spanien",
+                "details": [
+                    {
+                        "title": "1. Förstå Dina Mål och Preferenser",
+                        "description": "Vi börjar med att lära känna dig, dina behov, din budget, livsstil och investeringsmål. Oavsett om du söker ett semesterboende, permanent boende eller en investering anpassar vi sökningen efter dina önskemål. Vårt team har djup kunskap om Costa del Sol."
+                    },
+                    {
+                        "title": "2. Bostadssökning och Urval",
+                        "description": "Utifrån dina preferenser presenterar vi ett noggrant urval av bostäder som matchar dina kriterier. Vi söker både i vårt eget utbud och via vårt nätverk av pålitliga mäklare och utvecklare, vilket ger full marknadstäckning. Vårt mål är att hitta rätt bostad."
+                    },
+                    {
+                        "title": "3. Visningar",
+                        "description": "Vi planerar visningar utifrån din resa och tillgänglighet, oavsett om du är i Spanien eller utomlands. Vi följer med på visningarna, ger ärliga bedömningar och pekar på både möjligheter och eventuella risker. Om du inte kan resa ordnar vi virtuella visningar med video och live rundvandringar. Transparens och ärlighet är grunden i vårt arbete."
+                    },
+                    {
+                        "title": "4. Due Diligence och Juridisk Kontroll",
+                        "description": "När du hittat en bostad av intresse genomför vårt juridiska team en fullständig granskning.\nDetta inkluderar:\n\n- Äganderätt och registrering (Nota Simple)\n- Plan och byggnadsefterlevnad\n- Utestående skulder, skatter eller avgifter\n- Bygglov och certifikat\n\nHos Baruch Real Estate arbetar jurister nära din mäklare för att säkerställa juridisk trygghet."
+                    },
+                    {
+                        "title": "5. Förhandling och Budhantering",
+                        "description": "Vi företräder dina intressen under förhandlingarna för att uppnå bästa möjliga pris och villkor.\nVår erfarenhet av Costa del Sol ger realistisk rådgivning baserad på marknadsdata.\nVi hanterar all kommunikation med säljaren och säkerställer korrekta och juridiskt giltiga bud."
+                    },
+                    {
+                        "title": "6. Reservation och Deposition",
+                        "description": "När budet accepteras skrivs ett reservationsavtal (Contrato de Reserva) och en deposition betalas för att ta bort bostaden från marknaden.\nVårt juridiska team säkerställer trygga villkor och säkra betalningar."
+                    },
+                    {
+                        "title": "7. Privat Köpekontrakt (Contrato de Arras)",
+                        "description": "Efter reservationen följer det privata köpekontraktet.\nDetta bindande avtal reglerar villkor, betalningsplan och tillträdesdatum.\nVåra jurister granskar eller upprättar avtalet till ditt fulla skydd."
+                    },
+                    {
+                        "title": "8. Slutlig Signering hos Notarie",
+                        "description": "Köpet slutförs genom undertecknande av Escritura de Compraventa hos notarie.\nVi är med och kontrollerar dokument samt säkerställer trygg betalning och ägarövergång.\nOm du inte kan närvara ordnar vi fullmakt."
+                    },
+                    {
+                        "title": "9. Tjänster efter Köpet",
+                        "description": "Efter avslut hjälper vi till med:\n• Överföring av el och vatten\n• Försäkring av bostaden\n• Skatteregistrering (NIE, IBI, etc.)\n• Bankkonton och betalningar\n\nVårt mål är att göra övergången smidig så att du kan njuta av ditt nya hem direkt."
+                    },
+                    {
+                        "title": "Varför Arbeta med Köparrepresentation",
+                        "description": "En köparrepresentant står på din sida och företräder endast dina intressen.\n\nHos Baruch Real Estate erbjuder vi:\n• Full transparens i varje steg\n• Tillgång till hela bostadsmarknaden\n• Juridiskt stöd under ett tak\n• Rådgivning på ditt eget språk\n• Trygg och strukturerad process fram till notarie\n\nOavsett om det är ditt första köp eller en investering garanterar vi en säker och stressfri upplevelse."
+                    },
+                    {
+                        "title": "Redo att Hitta Din Bostad på Costa del Sol?",
+                        "description": "Planerar du att köpa i Málaga, Marbella, Estepona eller längs hela Costa del Sol hjälper vi dig gärna.\n\nKontakta oss idag för rådgivning eller ett möte om bostadssökning.\n\nLåt oss hitta ditt drömboende med trygghet och fullt stöd från början till slut."
+                    }
+                ]
+            },
+            {
+                "id": "finance",
+                "title": "Finans- och Bolånetjänster i Spanien",
+                "description": "Din Guide till Bolån, Bankkonton och Finansiering på Costa del Sol.\n\nAtt köpa en fastighet i Spanien innebär ofta att man behöver ordna bolån eller annan finansiering.\n\nDet spanska banksystemet kan vara komplicerat, särskilt för utländska köpare. Från bolånealternativ till bankkonton är det viktigt att förstå räntor, villkor och krav.\n\nPå Baruch Real Estate gör vi finansiering enkelt. Med hjälp av vårt omfattande nätverk av bank- och finanspartners hjälper vi dig att hitta lämpliga bolånelösningar, assisterar i ansökningsprocessen och guidar dig från start till mål, så att din finansiering blir smidig och transparent.",
+                "image": "/assets/img/all-images/service/finance_result.webp",
+                "title-list": "Våra Bolåne- & Finansieringstjänster",
+                "details": [
+                    {
+                        "title": "1. Snabb Bolånescan",
+                        "description": "Vi börjar med att bedöma din ekonomiska situation och dina mål:\n• Kontroll av inkomster och betalningsförmåga\n• Analys av fastighetspris och lånebelopp\n• Initial bedömning av behörighet\n\nDetta gör att vi snabbt kan identifiera banker och bolåneprodukter som passar dina behov, vilket sparar tid och undviker onödiga ansökningar."
+                    },
+                    {
+                        "title": "2. Bolånejämförelse med Våra Partner",
+                        "description": "Genom vårt nätverk av pålitliga banker och finanspartners kan vi jämföra ett brett utbud av bolånealternativ:\n• Fast ränta\n• Rörlig ränta\n• Blandad ränta\n• Bolån för icke-residenter\n\nVårt mål är att hjälpa dig hitta konkurrenskraftiga räntor och flexibla villkor med full transparens. Själva låneavtalet är alltid mellan klienten och banken, men vi guidar och koordinerar processen åt dig."
+                    },
+                    {
+                        "title": "3. Stöd vid Bolåneansökan",
+                        "description": "Vi hjälper till med förberedelse och inlämning av din ansökan till våra bankpartners, inklusive:\n• Insamling av nödvändiga dokument (inkomstbevis, deklarationer, fastighetsinformation)\n• Inlämning av ansökan till utvalda banker\n• Koordination med banken tills lånet blir godkänt\n\nÄven om låneavtalet signeras mellan dig och banken, säkerställer vårt team att processen är smidig och korrekt dokumenterad."
+                    },
+                    {
+                        "title": "4. Öppnande av Bankkonto",
+                        "description": "Ett spanskt bankkonto krävs ofta för bolånebetalningar, fastighetshantering och tjänster.\n\nVi hjälper dig att:\n• Välja den bank som passar dina behov\n• Öppna ett spanskt bankkonto effektivt\n• Ställa in betalningar och överföringar relaterade till din fastighet\n\nDenna tjänst finns för både boende och icke-boende, vilket gör din ekonomiska hantering enkel."
+                    },
+                    {
+                        "title": "5. Bolåneavslut & Koordination",
+                        "description": "När ditt bolån är godkänt koordinerar vi med din advokat och notarie för att säkerställa att medlen är redo för undertecknande av Escritura de Compraventa.\n\nVi hanterar schemaläggning och dokumentation så att du kan fokusera på fastighetsköpet, medan lånet förblir helt mellan dig och banken."
+                    },
+                    {
+                        "title": "Varför Arbeta med Baruch Real Estate för Finansiering",
+                        "description": "• Snabb bolånescan för att avgöra vad du är berättigad till\n• Tillgång till ett omfattande nätverk av banker och finanspartners\n• Vägledning om dokumentation, ansökningar och godkännanden\n• Stöd vid öppnande av spanskt bankkonto\n• Transparent koordinering från första kontakt till lånegodkännande\n\nVi erbjuder en helhetslösning som gör finansieringsprocessen effektiv och säker, samtidigt som du hålls informerad under hela processen."
+                    },
+                    {
+                        "title": "Begär Räntor & Priser",
+                        "description": "Om du vill utforska bolånealternativ eller ordna en finansieringsscan för ditt fastighetsköp, kan vi ge skräddarsydd information från våra partnerbanker.\n\nKontakta oss idag för att diskutera dina bolånealternativ, begära aktuella räntor och starta din finansieringsresa på Costa del Sol; Benalmádena, Estepona, Málaga, Marbella, Torrox, Alhaurín eller någon annanstans i Spanien."
+                    }
+                ]
+            },
+            {
+                "id": "insurance-services",
+                "title": "Försäkringstjänster i Spanien",
+                "description": "Omfattande Försäkringslösningar för Boende och Fastighetsägare\n\nAtt bo eller investera i Spanien innebär ansvar, inklusive att skydda dig själv, din familj och din egendom. Från hemförsäkring till liv-, hälso- och bilförsäkring är rätt försäkringsskydd avgörande för sinnesro.\n\nPå Baruch Real Estate förmedlar vi kontakt mellan våra kunder och ett nätverk av pålitliga försäkringsbolag för att hitta de bästa lösningarna anpassade efter dina behov. Vi guidar dig genom hela processen, förklarar dina alternativ och ser till att du får ett försäkringsskydd som passar din situation, allt på ditt eget språk.",
+                "image": "/assets/img/all-images/service/Insurance_result.webp",
+                "title-list": "Våra Försäkringstjänster",
+                "details": [
+                    {
+                        "title": "1. Hemförsäkring",
+                        "description": "Att skydda din bostad i Spanien är avgörande. En hemförsäkring kan omfatta:\n• Brand, vattenskador och naturkatastrofer\n• Stöld och skadegörelse\n• Ansvarsskydd vid olyckor på din fastighet\n\nVi samarbetar med försäkringsbolag som har erfarenhet av både permanentboenden och semesterbostäder på Costa del Sol, i Málaga och närliggande områden, vilket säkerställer ett omfattande skydd till konkurrenskraftiga villkor."
+                    },
+                    {
+                        "title": "2. Livförsäkring",
+                        "description": "En livförsäkring ger ekonomisk trygghet för din familj vid oförutsedda händelser.\n\nBeroende på dina behov kan livförsäkringen inkludera:\n• Grundläggande skydd vid dödsfall\n• Bolåneskydd\n• Inkomstskydd för anhöriga\n\nVåra partners erbjuder flexibla försäkringar för både bosatta och icke bosatta i Spanien."
+                    },
+                    {
+                        "title": "3. Sjukförsäkring",
+                        "description": "Sjukvård i Spanien finns tillgänglig via det offentliga systemet, men många utlandsboende föredrar privat sjukförsäkring för snabbare tillgång, valfrihet av läkare och internationell täckning.\n\nVi kan ordna försäkringar för:\n• Enskilda personer eller familjer\n• EU medborgare och icke EU medborgare\n• Lång eller kortsiktig täckning\n\nDetta säkerställer att du och dina närstående har tillgång till högkvalitativ sjukvård och ett tryggt skydd."
+                    },
+                    {
+                        "title": "4. Bilförsäkring",
+                        "description": "Bilägande i Spanien kräver obligatorisk försäkring, men extra skydd kan ge ökad trygghet.\n\nVi hjälper dig att hitta försäkringar som omfattar:\n• Trafikförsäkring enligt lagkrav\n• Helförsäkring\n• Vägassistans\n• Skydd för flera förare eller leasingfordon\n\nOavsett om du äger en familjebil, lyxbil eller ett fordon kopplat till en uthyrningsfastighet erbjuder våra partners skräddarsydda lösningar."
+                    },
+                    {
+                        "title": "5. Andra Försäkringsalternativ",
+                        "description": "Beroende på din situation kan ytterligare försäkringar vara relevanta:\n• Reseförsäkring för semester eller tillfälliga vistelser\n• Uthyrningsskydd för semesterbostäder\n• Företags eller yrkesansvarsförsäkring\n• Husdjursförsäkring\n\nVårt nätverk gör det möjligt att hitta rätt försäkringsgivare för varje behov, utan onödiga kostnader."
+                    },
+                    {
+                        "title": "Varför Välja Baruch Real Estate för Försäkringstjänster",
+                        "description": "• Pålitligt nätverk av försäkringspartners med expertis i Spanien\n• Skräddarsydda lösningar för boende, icke boende och fastighetsinvesterare\n• Support på ditt eget språk\n• Tydliga och transparenta förklaringar av villkor, omfattning och priser\n• Vägledning genom ansöknings och skadeprocessen\n\nVårt mål är att göra försäkringar enkla, tillgängliga och pålitliga, så att du känner dig trygg med att du och dina tillgångar är skyddade."
+                    },
+                    {
+                        "title": "Få Dina Försäkringslösningar Idag",
+                        "description": "Oavsett om du behöver hem, liv, sjuk eller bilförsäkring kan vårt team koppla dig till rätt leverantör och ordna en lösning som passar dina behov.\n\nKontakta oss idag för att diskutera dina försäkringsalternativ och få skräddarsydda lösningar genom vårt nätverk av betrodda partners i Spanien."
+                    }
+                ]
+            },
+            {
+                "id": "legal-services",
+                "title": "Juridiska Tjänster i Spanien",
+                "description": "Omfattande Juridiskt Stöd för Bosatta och Fastighetsägare\n\nAtt navigera genom spanska juridiska processer kan vara komplext, särskilt vid köp eller försäljning av fastigheter, ansökan om uppehållstillstånd eller vid etablering av företag. På Baruch Real Estate samarbetar vi med ett nätverk av pålitliga advokater och notarier för att erbjuda snabba, professionella och tillförlitliga juridiska tjänster.\n\nVårt team samordnar arbetet med dessa juridiska experter för att säkerställa att dina transaktioner och ärenden följer spansk lagstiftning, vilket ger dig trygghet och sparar tid.",
+                "image": "/assets/img/all-images/service/legal_result.webp",
+                "title-list": "Våra Juridiska Tjänster",
+                "details": [
+                    {
+                        "title": "1. Juridiskt Stöd vid Fastighetsköp",
+                        "description": "• Ägarverifiering\n• Juridisk kontroll\n• Avtal\n• Notariesamordning\n• Bolån"
+                    },
+                    {
+                        "title": "2. Juridiskt Stöd vid Försäljning",
+                        "description": "• Dokumentkontroll\n• Avtalsrådgivning\n• Köparens juridiska ombud\n• Notarieprocess"
+                    },
+                    {
+                        "title": "3. NIE & Uppehållstillstånd",
+                        "description": "• NIE-ansökan\n• Fullmakter\n• EU / icke-EU"
+                    },
+                    {
+                        "title": "4. Företagsbildning (SL)",
+                        "description": "• Bolagsregistrering\n• Bolagsordning\n• Handelsregister\n• Bankkonton\n• Skattenummer"
+                    },
+                    {
+                        "title": "5. Notarier",
+                        "description": "• Fastigheter\n• Företag\n• Fullmakter\n• Testamenten"
+                    },
+                    {
+                        "title": "6. Testamenten",
+                        "description": "• Upprättande\n• Tillgångsfördelning\n• Arvsplanering"
+                    },
+                    {
+                        "title": "7. Snabb och Personlig Service",
+                        "description": "• Snabba svar\n• Flerspråkig hjälp\n• Tydliga kostnader"
+                    },
+                    {
+                        "title": "Varför Baruch Real Estate",
+                        "description": "• Pålitligt nätverk av jurister\n• Omfattande stöd\n• Tydlig kommunikation"
+                    },
+                    {
+                        "title": "Professionell Juridisk Hjälp",
+                        "description": "Kontakta oss för juridisk hjälp i Spanien."
+                    }
+                ]
+            },
+            {
+                "id": "residency-nie",
+                "title": "Uppehållstillstånd / NIE i Spanien",
+                "description": "Allt du Behöver Veta om att Få NIE eller Uppehållstillstånd i Spanien\n\nOm du planerar att köpa en fastighet, öppna ett bankkonto, arbeta eller bo i Spanien behöver du ett NIE-nummer (Número de Identidad de Extranjero). Detta nummer är nödvändigt för nästan alla officiella, juridiska och finansiella processer i Spanien — oavsett om du är bosatt eller äger fastighet som icke-bosatt.\n\nPå Baruch Real Estate gör vi processen enkel. Vi hjälper våra kunder med NIE-ansökan och kan även ordna den åt dig genom fullmakt (Power of Attorney, POA), vilket sparar tid, minskar stress och eliminerar onödiga resor.",
+                "image": "/assets/img/all-images/service/residency_result.webp",
+                "title-list": "Våra Tjänster för Uppehållstillstånd & NIE",
+                "details": [
+                    {
+                        "title": "Vad är ett NIE?",
+                        "description": "NIE är ditt identifikationsnummer för utlänningar i Spanien. Det utfärdas av de spanska myndigheterna (Policía Nacional) och används för alla administrativa och juridiska ärenden.\n\nDu behöver ett NIE om du planerar att:\n• Köpa eller sälja en fastighet\n• Skriva under handlingar hos notarie\n• Öppna ett spanskt bankkonto\n• Ansluta el, vatten och internet\n• Betala skatt i Spanien\n• Registrera ett fordon\n• Starta företag eller arbeta lagligt\n\nNIE-numret är inte ett uppehållstillstånd; det är endast ditt skatte- och identifikationsnummer som utlänning. Det är dock ett första och nödvändigt steg om du planerar att bo, investera eller vistas långsiktigt i Spanien."
+                    },
+                    {
+                        "title": "NIE vs. Uppehållstillstånd — Vad är Skillnaden?",
+                        "description": "• NIE (Número de Identidad de Extranjero):\nEtt personligt identifikationsnummer som utfärdas till utlänningar för skatte- och juridiska ändamål. Du kan ha ett NIE utan att vara bosatt i Spanien.\n\n• Uppehållstillstånd (Residencia):\nEn juridisk status som ger dig rätt att bo i Spanien mer än 90 dagar per år. Beroende på din nationalitet kan detta erhållas genom EU-registrering eller via ansökan om Non-Lucrative Visa eller Golden Visa.\n\nDe flesta av våra internationella klienter börjar med att ansöka om NIE, särskilt vid köp av fastighet, och beslutar senare om de vill ansöka om uppehållstillstånd."
+                    },
+                    {
+                        "title": "Ansökningsprocess för NIE",
+                        "description": "Steg 1: Bestäm Hur Du Vill Ansöka\nDu kan ansöka om NIE:\nPersonligen på en spansk polisstation (Comisaría de Policía) med utlänningskontor (Oficina de Extranjería).\nVia fullmakt (Power of Attorney, POA) — vi hanterar hela processen åt dig utan att du behöver resa till Spanien.\n\nSteg 2: Förbered Nödvändiga Dokument\nDokumentationen inkluderar vanligtvis:\n• Ifylld ansökningsblankett EX-15\n• Kopia av ditt pass (och original om du ansöker personligen)\n• Bevis på varför du behöver NIE (t.ex. fastighetsköp eller arbetsavtal)\n• Bekräftelse på bokad tid (Cita Previa)\n• Betalning av NIE-avgiften (Tasa 790, Kod 012)\n\nOm du använder Baruch Real Estates NIE-tjänst förbereder vi alla dokument och säkerställer att allt är korrekt ifyllt, vilket minskar risken för förseningar."
+                    },
+                    {
+                        "title": "Alternativ med Fullmakt (POA)",
+                        "description": "Om du befinner dig utanför Spanien eller föredrar att inte besöka polisstationen själv kan du ge vårt juridiska ombud fullmakt att ansöka om NIE åt dig.\n\nFullmakten kan undertecknas:\n• Hos notarie i Spanien, eller\n• Hos notarie i ditt hemland och därefter legaliseras med Haagapostille.\n\nNär fullmakten har mottagits lämnar vi in NIE-ansökan och hämtar dokumentet när det har utfärdats. Detta är ett snabbt, säkert och bekvämt alternativ, särskilt för utländska köpare och investerare."
+                    },
+                    {
+                        "title": "Mottagande av ditt NIE-certifikat",
+                        "description": "När ansökan godkänts utfärdas NIE-certifikatet av de spanska myndigheterna och innehåller ditt namn, din nationalitet och ditt unika NIE-nummer.\n\nVi skickar dokumentet säkert direkt till dig (eller din advokat). Numret är permanent och giltigt livet ut och används vid alla officiella ärenden i Spanien."
+                    },
+                    {
+                        "title": "Alternativ för Uppehållstillstånd i Spanien",
+                        "description": "Om du planerar att bo i Spanien permanent eller mer än 90 dagar per år måste du ansöka om uppehållstillstånd.\n\nEU-medborgare:\n• Ansökan om registreringsintyg för EU-medborgare (Certificado de Registro de Ciudadano de la Unión Europea)\n• Krav på inkomst, sjukförsäkring och spansk adress\n\nIcke EU-medborgare:\nDu kan kvalificera dig för något av följande:\n• Non-Lucrative Visa: För personer som vill bo i Spanien utan att arbeta\n• Golden Visa: För investeringar om minst 500 000 € i spansk fastighet\n• Arbets- eller Företagarvisum: För anställda eller egenföretagare i Spanien\n\nVi kan sätta dig i kontakt med pålitliga juridiska partners som hjälper dig att välja och genomföra rätt ansökan."
+                    },
+                    {
+                        "title": "Varför Ansöka via Baruch Real Estate",
+                        "description": "• Snabb och professionell hjälp med NIE och uppehållstillstånd\n• Juridiska och fastighetstjänster under samma tak\n• Vi hanterar all dokumentation och bokningar åt dig\n• Tydlig kommunikation och uppdateringar på ditt språk\n• Möjlighet att genomföra processen på distans via fullmakt\n\nVårt mål är att göra din start i Spanien — oavsett om det gäller fastighetsköp eller bosättning — så smidig och stressfri som möjligt."
+                    },
+                    {
+                        "title": "Behöver du ett NIE-nummer? Vi kan hjälpa dig",
+                        "description": "Planerar du att köpa fastighet, öppna bankkonto eller flytta till Spanien?\n\nDu behöver ett giltigt NIE — och vi kan ordna det snabbt och professionellt.\n\nVill du ansöka om NIE? Kontakta oss idag för information och priser.\n\nVi guidar dig genom varje steg och ser till att din ansökan hanteras korrekt från början till slut."
+                    }
+                ]
+            },
+            {
+                "id": "sell-your-house-in-costa-del-sol",
+                "title": "Sälj Ditt Hus på Costa del Sol",
+                "description": "Gör Försäljningen av Din Bostad i Spanien till en Smidig och Trygg Upplevelse\n\nSäljer du en bostad i Spanien? Särskilt i populära områden som Málaga, Marbella eller Costa del Sol innebär processen flera juridiska och administrativa steg som kan kännas överväldigande utan rätt vägledning. Från att fastställa rätt utgångspris till att förbereda dokument och skriva under hos notarien kräver varje steg noggrannhet och professionell hantering.\n\nPå Baruch Real Estate förenklar vi processen för dig.\n\nVårt erfarna team kombinerar fastighetsförmedling och juridiskt stöd under ett och samma tak, vilket säkerställer att din försäljning hanteras smidigt, transparent och med full trygghet. Oavsett om du bor i Spanien eller utomlands.",
+                "image": "/assets/img/all-images/service/sell_your_house_result.webp",
+                "title-list": "Stegen för att Sälja Din Bostad",
+                "details": [
+                    {
+                        "title": "1. Värdering och Marknadsanalys",
+                        "description": "Vi börjar med en professionell värdering av din bostad.\n\nMed hjälp av aktuell lokal marknadsdata, jämförbara försäljningar och din bostads unika egenskaper fastställer vi ett realistiskt utgångspris som lockar seriösa köpare och maximerar din avkastning.\n\nVår kunskap om fastighetsmarknaden på Costa del Sol gör att vi kan positionera din bostad effektivt från dag ett."
+                    },
+                    {
+                        "title": "2. Juridisk Granskning och Dokumentation",
+                        "description": "Innan bostaden läggs ut till försäljning granskar vårt juridiska team all nödvändig dokumentation för att säkerställa att allt är i ordning. Detta inkluderar:\n\n- Lagfart (Escritura de Propiedad)\n- Nota Simple från fastighetsregistret\n- Energicertifikat (CEE)\n- IBI fastighetsskatt och aktuella räkningar\n\nDetta steg säkerställer en juridiskt korrekt försäljning och förhindrar framtida komplikationer.\n\nMed Baruch Real Estate arbetar fastighetsmäklare och jurister tillsammans för en tydlig och effektiv process."
+                    },
+                    {
+                        "title": "3. Förberedelse av Bostaden",
+                        "description": "Första intrycket är avgörande. Vi hjälper dig att presentera din bostad på bästa sätt genom professionell fotografering, styling och mindre förbättringar.\n\nVid behov förmedlar vi pålitliga lokala samarbetspartners för städning, reparationer eller inredning."
+                    },
+                    {
+                        "title": "4. Marknadsföring och Exponering",
+                        "description": "När bostaden är redo lanserar vi en riktad marknadsföringskampanj för både lokala och internationella köpare.\n\nDetta omfattar:\n\n- Annonsering på ledande fastighetsportaler i Spanien och Europa\n- Högkvalitativa bilder, videor och drönarfilmer\n- Kampanjer i sociala medier och via e-post\n- Samarbete med partneragenter i hela Europa\n\nVår strategi säkerställer global räckvidd till rätt målgrupp.\n\nInklusive köpare från Nederländerna, Belgien, Tyskland, Polen, Sverige, Storbritannien och USA."
+                    },
+                    {
+                        "title": "5. Visningar och Kommunikation",
+                        "description": "Vi hanterar alla förfrågningar, visningar och återkoppling från köpare.\n\nAlla spekulanter förkvalificeras för att säkerställa seriöst intresse.\n\nDu får regelbundna uppdateringar om processen."
+                    },
+                    {
+                        "title": "6. Förhandling och Budgivning",
+                        "description": "När bud kommer in vägleder vi dig genom hela förhandlingsprocessen.\n\nVårt mål är att uppnå bästa möjliga pris och villkor med fullt skydd för dina intressen.\n\nJuridiskt stöd är integrerat i varje avtal."
+                    },
+                    {
+                        "title": "7. Undertecknande av Reservationsavtal",
+                        "description": "Efter accepterat bud upprättar vi reservationsavtalet (Contrato de Reserva).\n\nAvtalet tar bostaden bort från marknaden och bekräftar köparens åtagande.\n\nVårt juridiska team säkerställer att dina rättigheter är fullt skyddade."
+                    },
+                    {
+                        "title": "8. Förberedelse inför Notarie",
+                        "description": "Inför tillträdet samordnar vi notarie, köparens juridiska ombud och banker.\n\nAlla dokument och certifikat förbereds för en smidig affär."
+                    },
+                    {
+                        "title": "9. Undertecknande av Köpebrev",
+                        "description": "Slutlig signering sker hos notarien där äganderätten officiellt övergår till köparen.\n\nVåra team närvarar för att säkerställa korrekt betalning och juridisk trygghet."
+                    },
+                    {
+                        "title": "10. Eftermarknadsservice",
+                        "description": "Efter avslutad affär hjälper vi till med överföring av abonnemang, skattedeklarationer och administrativa ärenden.\n\nVårt stöd fortsätter även efter notariesigneringen."
+                    },
+                    {
+                        "title": "Varför Sälja med Baruch Real Estate",
+                        "description": "Hos Baruch Real Estate erbjuder vi allt under ett tak, från värdering och marknadsföring till full juridisk service.\n\nDetta ger en effektiv process med tydlig kommunikation.\n\nVårt team har gedigen erfarenhet av fastighetsmarknaden på Costa del Sol och lokal lagstiftning."
+                    },
+                    {
+                        "title": "Redo att Sälja Din Bostad i Spanien?",
+                        "description": "Vill du veta vad din bostad är värd eller hur du kommer igång?\n\nVi hjälper dig gärna.\n\nKontakta oss idag för en kostnadsfri värdering eller för att diskutera dina planer i Málaga, Marbella, Estepona eller längs hela Costa del Sol.\n\nLåt oss göra din bostadsförsäljning enkel, trygg och framgångsrik."
+                    }
+                ]
+            },
+            {
+                "id": "taxes",
+                "title": "Skatter och Deklaration i Spanien",
+                "description": "Allt du Behöver Veta om Skatter i Spanien\n\nOavsett om du bor i Spanien, köper en bostad eller har inkomster från spanska källor är det avgörande att förstå skattesystemet. Skatterna kan variera beroende på din bosättningsstatus, typ av inkomst och fastighetsägande.\n\nPå Baruch Real Estate samarbetar vi med pålitliga revisorer och skatterådgivare för att säkerställa att dina skatter deklareras korrekt, effektivt och i enlighet med spansk lag, vilket ger dig trygghet och hjälper dig att undvika kostsamma misstag.",
+                "image": "/assets/img/all-images/service/taxes_result.webp",
+                "title-list": "Skatter för Bosatta och Icke-Bosatta",
+                "details": [
+                    {
+                        "title": "1. Bosatt i Spanien",
+                        "description": "Du anses normalt vara skattemässigt bosatt i Spanien om du vistas i landet mer än 183 dagar per år eller om dina huvudsakliga ekonomiska intressen finns där.\n\nBosatta är skyldiga att deklarera:\n\n• Globala inkomster\n• Fastigheter, investeringar och tillgångar i Spanien och utomlands\n• Kapitalvinster, utdelningar och hyresintäkter"
+                    },
+                    {
+                        "title": "2. Icke-Bosatt i Spanien",
+                        "description": "Icke-bosatta betalar endast skatt på inkomster och tillgångar som finns i Spanien, inklusive:\n\n• Hyresintäkter från fastigheter i Spanien\n• Kapitalvinster vid försäljning av spansk fastighet\n• Pensioner eller investeringar med ursprung i Spanien\n\nDet är avgörande att förstå din status eftersom skattesatser, avdrag och skyldigheter skiljer sig avsevärt."
+                    },
+                    {
+                        "title": "Viktigaste Skatterna i Spanien",
+                        "description": "1. Inkomstskatt (IRPF för bosatta / IRNR för icke-bosatta)\n• Bosatta (IRPF): Progressiv beskattning av globala inkomster (upp till ca 47 %).\n• Icke-bosatta (IRNR): Fast skattesats på inkomster från Spanien (vanligtvis 19–24 %).\n\n2. Fastighetsskatter\n• IBI: Årlig kommunal fastighetsskatt.\n• Plusvalía Municipal: Skatt på värdeökning av mark vid försäljning.\n• Förmögenhetsskatt: Gäller bosatta och i vissa fall icke-bosatta med höga tillgångsvärden.\n\n3. Kapitalvinstskatt\n• Gäller vinster från försäljning av fastigheter eller investeringar i Spanien.\n• Skattesatserna skiljer sig beroende på bosättningsstatus.\n\n4. Arvs- och Gåvoskatt\n• Gäller vid mottagande av fastigheter, tillgångar eller pengar i Spanien.\n• Skattesatserna beror på region och släktskap.\n\n5. Moms / Överlåtelseskatt\n• Nyproduktion: Moms (IVA) ~10 %\n• Begagnade fastigheter: Överlåtelseskatt (ITP), varierar per region (vanligtvis 7–10 %)."
+                    },
+                    {
+                        "title": "Att Lämna In Skattedeklaration i Spanien",
+                        "description": "Skattedeklarationen omfattar flera steg:\n\nSamla all dokumentation.\n\nFastställ skattemässig status.\n\nBeräkna beskattningsbar inkomst.\n\nLämna in deklarationen till Agencia Tributaria i tid.\n\nAtt arbeta med en lokal revisor eller skatterådgivare är i de flesta fall avgörande."
+                    },
+                    {
+                        "title": "Hur Baruch Real Estate Kan Hjälpa",
+                        "description": "Vi samarbetar med pålitliga redovisnings- och skatteexperter som:\n\n• Rådgör bosatta och icke-bosatta\n• Hanterar spanska skattedeklarationer\n• Stödjer fastighetsrelaterade skatter\n• Ger vägledning kring arv, gåvor och förmögenhetsskatt"
+                    },
+                    {
+                        "title": "Varför Arbeta med Våra Skatterådgivare",
+                        "description": "• Djup kunskap om spansk skattelagstiftning\n• Rådgivning på ditt eget språk\n• Optimerade deklarationer\n• Fullt stöd vid fastighetsaffärer\n• Hjälp med alla skattefrister"
+                    },
+                    {
+                        "title": "Professionell Skattehjälp",
+                        "description": "Oavsett om du bor i Spanien eller äger fastighet som icke-bosatt är korrekt deklaration avgörande.\n\nKontakta oss för professionell skattehjälp anpassad efter din situation i Spanien."
+                    }
+                ]
+            }
+        ]
+    },
     "faq": {
         "title": "Vanliga frågor",
         "question-1": "Vilka tjänster erbjuder Baruch Real Estate?",

@@ -218,6 +218,320 @@
             }
         }
     },
+    "services-page": {
+        "title": "Nuestros Servicios",
+        "description": "Tu Socio de Confianza Cuando Compra una Propiedad en la Costa del Sol\nComprar una casa en España es un paso emocionante, pero también puede ser complejo, especialmente si no estás familiarizado con el mercado local, el idioma y el sistema legal.\nEn Baruch Real Estate, hacemos el proceso transparente, seguro y guiado desde el inicio hasta el final.\nNuestro Servicio de Representación de Compras garantiza que tus intereses estén siempre protegidos. Desde identificar la propiedad correcta y organizar visitas hasta negociar los mejores términos y gestionar el proceso legal, manejamos cada detalle con soporte inmobiliario y legal bajo un mismo techo.",
+        "btn-text": "Ver todos los servicios",
+        "services-list": [
+            {
+                "id": "buying-representation",
+                "title": "Représentation de l'Acheteur",
+                "description": "Votre Partenaire de Confiance pour l'Achat d'un Bien sur la Costa del Sol.\n\nAcheter un bien immobilier en Espagne est une étape passionnante, mais le processus peut être complexe, surtout si vous ne connaissez pas le marché local, la langue et le système juridique.\n\nChez Baruch Real Estate, nous rendons le processus transparent, sécurisé et entièrement accompagné du début à la fin.\nNotre Service de Représentation de l'Acheteur veille à ce que vos intérêts soient toujours protégés. De la recherche du bien idéal et l'organisation des visites à la négociation des meilleures conditions et à la gestion du processus juridique, nous prenons en charge chaque détail grâce à une expertise immobilière et juridique réunie sous un même toit.",
+                "image": "/assets/img/all-images/service/buying-representation_result.webp",
+                "title-list": "Les Étapes pour Acheter Votre Bien en Espagne",
+                "details": [
+                    {
+                        "title": "1. Comprendre Vos Objectifs et Préférences",
+                        "description": "Nous commençons par apprendre à vous connaître, vos besoins, votre budget, votre style de vie et vos objectifs d'investissement. Que vous recherchiez une villa de vacances, une résidence principale ou un bien d'investissement, nous adaptons la recherche à vos critères précis. Notre équipe possède une connaissance approfondie de la Costa del Sol."
+                    },
+                    {
+                        "title": "2. Recherche et Sélection de Biens",
+                        "description": "Sur la base de vos préférences, nous vous présentons une sélection ciblée de biens correspondant à vos attentes. Nous recherchons dans notre propre portefeuille ainsi qu'au sein de notre réseau d'agents et de promoteurs de confiance, offrant un accès complet au marché. Notre priorité est de trouver le bon bien, pas simplement un bien."
+                    },
+                    {
+                        "title": "3. Visites des Biens",
+                        "description": "Nous organisons les visites selon votre disponibilité, que vous soyez en Espagne ou à l'étranger. Nous vous accompagnons à chaque visite, partageons une analyse honnête et soulignons aussi bien les opportunités que les points d'attention. Si vous ne pouvez pas vous déplacer, nous proposons des visites virtuelles avec vidéos et visites en direct. La transparence et le conseil honnête sont au cœur de notre approche."
+                    },
+                    {
+                        "title": "4. Due Diligence et Vérification Juridique",
+                        "description": "Une fois un bien sélectionné, notre équipe juridique effectue une vérification complète.\nCela comprend la vérification de :\n\n- Propriété légale et enregistrement (Nota Simple)\n- Conformité urbanistique\n- Dettes, taxes ou charges de copropriété en cours\n- Licences de construction et certificats\n\nAvec Baruch Real Estate, les juristes travaillent en étroite collaboration avec votre agent afin de garantir la sécurité juridique avant tout engagement."
+                    },
+                    {
+                        "title": "5. Négociation et Gestion de l'Offre",
+                        "description": "Nous défendons vos intérêts lors de la négociation afin d'obtenir le meilleur prix et les meilleures conditions.\nNotre connaissance du marché de la Costa del Sol permet une approche réaliste basée sur des données fiables.\nNous gérons les échanges avec l'agent vendeur et veillons à ce que chaque offre soit claire, écrite et conforme au droit espagnol."
+                    },
+                    {
+                        "title": "6. Réservation et Dépôt",
+                        "description": "Une fois l'offre acceptée, un contrat de réservation (Contrato de Reserva) est signé et un dépôt est versé pour retirer le bien du marché.\nNotre équipe juridique s'assure que les conditions protègent vos intérêts et que les paiements soient effectués de manière sécurisée."
+                    },
+                    {
+                        "title": "7. Contrat de Vente Privé (Contrato de Arras)",
+                        "description": "Après la réservation vient le contrat de vente privé.\nCe contrat juridiquement contraignant précise les conditions de la vente, le calendrier des paiements et la date de finalisation.\nNos conseillers juridiques le rédigent ou le vérifient afin de garantir la protection totale de vos droits."
+                    },
+                    {
+                        "title": "8. Signature Finale chez le Notaire",
+                        "description": "L'achat est finalisé par la signature de l'Escritura de Compraventa devant notaire.\nNous vous accompagnons, vérifions les documents et confirmons la sécurité du paiement et du transfert de propriété.\nSi vous ne pouvez pas être présent, une procuration peut être organisée."
+                    },
+                    {
+                        "title": "9. Services Après l'Achat",
+                        "description": "Après la signature, nous vous assistons pour :\n• Transferts et abonnements de services\n• Assurance du bien\n• Formalités fiscales (NIE, IBI, etc.)\n• Mise en place bancaire et paiements\n\nNotre objectif est une transition fluide afin que vous puissiez profiter immédiatement de votre nouveau bien."
+                    },
+                    {
+                        "title": "Pourquoi Travailler avec un Représentant de l'Acheteur",
+                        "description": "Un représentant de l'acheteur agit exclusivement dans votre intérêt.\n\nChez Baruch Real Estate, nous offrons :\n• Une transparence totale à chaque étape\n• Un accès à l'ensemble du marché immobilier\n• Un accompagnement juridique de confiance sous un même toit\n• Un service dans votre langue\n• Une gestion sécurisée et structurée jusqu'au notaire\n\nQue ce soit pour un premier achat ou un investissement, nous assurons une expérience sûre et sereine."
+                    },
+                    {
+                        "title": "Prêt à Trouver Votre Bien sur la Costa del Sol ?",
+                        "description": "Si vous envisagez d'acheter à Málaga, Marbella, Estepona ou ailleurs sur la Costa del Sol, nous serons ravis de vous accompagner.\n\nContactez-nous dès aujourd'hui pour organiser une consultation ou une recherche personnalisée.\n\nTrouvons ensemble votre bien idéal avec clarté, confiance et accompagnement complet."
+                    }
+                ]
+            },
+            {
+                "id": "finance",
+                "title": "Services de Financement et de Crédit Immobilier en Espagne",
+                "description": "Votre Guide des Hypothèques, Comptes Bancaires et Solutions de Financement sur la Costa del Sol.\n\nL'achat d'un bien immobilier en Espagne implique souvent l'obtention d'un prêt hypothécaire ou la mise en place d'un financement.\n\nLe système bancaire espagnol peut être complexe, en particulier pour les acheteurs étrangers. Des options de crédit immobilier aux comptes bancaires, il est essentiel de comprendre les taux, les conditions et les exigences.\n\nChez Baruch Real Estate, nous simplifions le financement. Grâce à notre vaste réseau de partenaires bancaires et financiers, nous vous aidons à trouver des solutions hypothécaires adaptées, vous accompagnons dans le processus de demande et vous guidons de bout en bout, afin de garantir un financement fluide et transparent.",
+                "image": "/assets/img/all-images/service/finance_result.webp",
+                "title-list": "Nos Services de Crédit Immobilier et Financement",
+                "details": [
+                    {
+                        "title": "1. Analyse Rapide de Crédit",
+                        "description": "Nous commençons par évaluer votre situation financière et vos objectifs :\n• Vérification des revenus et de la capacité de remboursement\n• Analyse du prix du bien et du montant du prêt\n• Évaluation initiale de l'éligibilité\n\nCela nous permet d'identifier rapidement les banques et les produits hypothécaires adaptés à vos besoins, économisant du temps et évitant les demandes inutiles."
+                    },
+                    {
+                        "title": "2. Comparaison de Crédits avec Nos Partenaires",
+                        "description": "Grâce à notre réseau de banques et partenaires financiers de confiance, nous comparons une large gamme de solutions hypothécaires :\n• Prêts à taux fixe\n• Prêts à taux variable\n• Prêts mixtes\n• Solutions pour non-résidents\n\nNotre objectif est de vous aider à trouver des taux compétitifs et des conditions flexibles en toute transparence. Le contrat de prêt est toujours entre le client et la banque, mais nous guidons et coordonnons le processus pour vous."
+                    },
+                    {
+                        "title": "3. Assistance à la Demande de Crédit",
+                        "description": "Nous aidons à la préparation et la soumission de votre demande auprès de nos partenaires bancaires, notamment :\n• Collecte des documents nécessaires (revenus, déclarations fiscales, détails du bien)\n• Soumission de la demande aux banques sélectionnées\n• Coordination avec la banque jusqu'à l'approbation du prêt\n\nBien que le contrat de crédit soit signé entre vous et la banque, notre équipe veille à ce que le processus se déroule sans problème et soit correctement documenté."
+                    },
+                    {
+                        "title": "4. Ouverture de Compte Bancaire",
+                        "description": "Un compte bancaire espagnol est souvent requis pour les paiements hypothécaires, la gestion du bien et les services.\n\nNous vous aidons à :\n• Choisir la banque qui correspond à vos besoins\n• Ouvrir un compte bancaire espagnol efficacement\n• Mettre en place les paiements et transferts liés à votre propriété\n\nCe service est disponible pour les résidents et non-résidents, simplifiant votre gestion financière."
+                    },
+                    {
+                        "title": "5. Finalisation et Coordination de la Hypothèque",
+                        "description": "Une fois votre prêt approuvé, nous coordonnons avec votre avocat et notaire pour que les fonds soient prêts à la signature de l'Escritura de Compraventa.\n\nNous gérons la planification et la documentation afin que vous puissiez vous concentrer sur l'achat de votre bien, le prêt restant entièrement entre vous et la banque."
+                    },
+                    {
+                        "title": "Pourquoi Travailler avec Baruch Real Estate pour le Financement",
+                        "description": "• Analyse rapide pour déterminer votre éligibilité\n• Accès à un large réseau de banques et partenaires financiers\n• Assistance pour la documentation, les demandes et les approbations\n• Aide à l'ouverture de comptes bancaires espagnols\n• Coordination transparente du premier contact à l'approbation du prêt\n\nNous offrons un service complet, vous aidant à naviguer dans le processus de financement de manière efficace et sûre, tout en vous tenant informé à chaque étape."
+                    },
+                    {
+                        "title": "Demander Taux et Tarifs",
+                        "description": "Si vous souhaitez explorer les options de prêt ou organiser une analyse de financement pour votre achat immobilier, nous pouvons vous fournir des informations personnalisées auprès de nos banques partenaires.\n\nContactez-nous dès aujourd'hui pour discuter de vos options hypothécaires, demander les taux actuels et commencer votre processus de financement sur la Costa del Sol; Benalmádena, Estepona, Málaga, Marbella, Torrox, Alhaurín ou ailleurs en Espagne."
+                    }
+                ]
+            },
+            {
+                "id": "insurance-services",
+                "title": "Services d'Assurance en Espagne",
+                "description": "Solutions d'Assurance Complètes pour Résidents et Propriétaires\n\nVivre ou investir en Espagne implique certaines responsabilités, notamment la protection de vous-même, de votre famille et de vos biens. Qu'il s'agisse d'une assurance habitation, vie, santé ou automobile, disposer d'une couverture adaptée est essentiel pour votre tranquillité d'esprit.\n\nChez Baruch Real Estate, nous mettons nos clients en relation avec un réseau de prestataires d'assurance fiables afin de trouver les solutions les mieux adaptées à leurs besoins. Nous vous accompagnons à chaque étape, vous expliquons les différentes options et veillons à ce que vous bénéficiez d'une couverture parfaitement adaptée à votre situation, le tout dans votre langue.",
+                "image": "/assets/img/all-images/service/Insurance_result.webp",
+                "title-list": "Nos Services d'Assurance",
+                "details": [
+                    {
+                        "title": "1. Assurance Habitation",
+                        "description": "La protection de votre bien immobilier en Espagne est essentielle. L'assurance habitation peut couvrir:\n• Incendie, dégâts des eaux et catastrophes naturelles\n• Vol et vandalisme\n• Responsabilité civile en cas d'accidents sur votre propriété\n\nNous collaborons avec des assureurs qui comprennent aussi bien les résidences principales que les maisons de vacances sur la Costa del Sol, à Málaga et dans les environs, afin de vous garantir une couverture complète à des tarifs compétitifs."
+                    },
+                    {
+                        "title": "2. Assurance Vie",
+                        "description": "L'assurance vie offre une sécurité financière à votre famille en cas d'événements imprévus.\n\nSelon vos besoins, l'assurance vie peut inclure:\n• Couverture standard en cas de décès\n• Protection hypothécaire\n• Protection des revenus pour les personnes à charge\n\nNos partenaires proposent des contrats flexibles adaptés aux résidents comme aux non résidents en Espagne."
+                    },
+                    {
+                        "title": "3. Assurance Santé",
+                        "description": "Le système de santé public est accessible en Espagne, mais de nombreux expatriés préfèrent une assurance santé privée pour un accès plus rapide, le libre choix des médecins et une couverture internationale.\n\nNous pouvons organiser des formules pour:\n• Les particuliers ou les familles\n• Les citoyens de l'UE et hors UE\n• Une couverture à long ou court terme\n\nCela garantit que vous et vos proches bénéficiez d'une protection et d'un accès à des soins de santé de haute qualité."
+                    },
+                    {
+                        "title": "4. Assurance Automobile",
+                        "description": "La détention d'un véhicule en Espagne nécessite une assurance obligatoire, mais des garanties supplémentaires offrent une protection renforcée.\n\nNous pouvons vous aider à trouver des polices couvrant:\n• Responsabilité civile obligatoire\n• Assurance tous risques\n• Assistance routière\n• Couverture pour plusieurs conducteurs ou véhicules en leasing\n\nQue vous possédiez une voiture familiale, un véhicule de luxe ou un véhicule lié à une propriété locative, nos partenaires proposent des solutions sur mesure."
+                    },
+                    {
+                        "title": "5. Autres Options d'Assurance",
+                        "description": "Selon votre situation, d'autres assurances peuvent être pertinentes:\n• Assurance voyage pour les vacances ou séjours temporaires\n• Assurance protection locative pour maisons de vacances\n• Assurance responsabilité professionnelle ou commerciale\n• Assurance pour animaux de compagnie\n\nNotre réseau nous permet de trouver l'assureur le plus adapté à chaque situation, afin de garantir une couverture optimale sans coûts inutiles."
+                    },
+                    {
+                        "title": "Pourquoi Choisir Baruch Real Estate pour les Services d'Assurance",
+                        "description": "• Réseau de partenaires assureurs fiables avec expertise en Espagne\n• Solutions personnalisées pour résidents, non résidents et investisseurs immobiliers\n• Assistance dans votre langue\n• Explications transparentes des garanties, conditions et tarifs\n• Accompagnement lors de la souscription et en cas de sinistre\n\nNotre objectif est de rendre l'assurance simple, accessible et fiable, afin que vous ayez la certitude que vous et vos biens êtes protégés."
+                    },
+                    {
+                        "title": "Obtenez Vos Solutions d'Assurance Dès Aujourd'hui",
+                        "description": "Que vous ayez besoin d'une assurance habitation, vie, santé ou automobile, notre équipe vous met en relation avec le bon prestataire et organise une solution adaptée à vos besoins.\n\nContactez nous dès aujourd'hui pour discuter de vos options d'assurance et recevoir des solutions personnalisées grâce à notre réseau de partenaires de confiance en Espagne."
+                    }
+                ]
+            },
+            {
+                "id": "legal-services",
+                "title": "Services Juridiques en Espagne",
+                "description": "Accompagnement Juridique Complet pour Résidents et Propriétaires\n\nNaviguer dans les démarches juridiques en Espagne peut être complexe, notamment lors de l'achat ou de la vente d'un bien immobilier, d'une demande de résidence ou de la création d'une entreprise. Chez Baruch Real Estate, nous travaillons avec un réseau d'avocats et de notaires de confiance afin d'offrir des services juridiques rapides, professionnels et fiables.\n\nNotre équipe coordonne ces experts juridiques afin de garantir que vos transactions et procédures soient conformes au droit espagnol, vous apportant tranquillité d'esprit et gain de temps.",
+                "image": "/assets/img/all-images/service/legal_result.webp",
+                "title-list": "Nos Services Juridiques",
+                "details": [
+                    {
+                        "title": "1. Assistance Juridique pour l'Achat d'un Bien Immobilier",
+                        "description": "Lors de l'achat d'un bien en Espagne, un accompagnement juridique est essentiel. Nos services comprennent :\n• Vérification de la propriété et de l'enregistrement\n• Contrôles de dettes, charges et frais de copropriété\n• Révision ou rédaction des contrats de réservation et d'achat\n• Coordination avec le notaire pour l'Escritura de Compraventa\n• Assistance pour les contrats hypothécaires et documents bancaires\n\nNous garantissons une acquisition sécurisée, transparente et conforme à la loi."
+                    },
+                    {
+                        "title": "2. Assistance Juridique pour la Vente d'un Bien Immobilier",
+                        "description": "• Analyse de la documentation et de la propriété\n• Conseil sur les obligations contractuelles\n• Communication avec les représentants légaux de l'acheteur\n• Coordination de la signature notariale"
+                    },
+                    {
+                        "title": "3. Demandes de NIE et Assistance à la Résidence",
+                        "description": "• Demande de NIE\n• Gestion des procurations\n• Assistance pour citoyens UE et hors UE"
+                    },
+                    {
+                        "title": "4. Création de Société (SL)",
+                        "description": "• Constitution d'une SL\n• Statuts\n• Registre du commerce\n• Comptes bancaires\n• Numéros fiscaux"
+                    },
+                    {
+                        "title": "5. Notaires & Coordination",
+                        "description": "• Actes immobiliers\n• Création de sociétés\n• Procurations\n• Testaments"
+                    },
+                    {
+                        "title": "6. Testaments",
+                        "description": "• Rédaction\n• Transmission du patrimoine\n• Succession"
+                    },
+                    {
+                        "title": "7. Service Personnalisé et Réactif",
+                        "description": "• Réponses rapides\n• Accompagnement multilingue\n• Transparence des coûts"
+                    },
+                    {
+                        "title": "Pourquoi Nous Choisir",
+                        "description": "• Réseau fiable\n• Support complet\n• Communication claire"
+                    },
+                    {
+                        "title": "Assistance Juridique Professionnelle",
+                        "description": "Contactez-nous pour un accompagnement juridique en Espagne."
+                    }
+                ]
+            },
+            {
+                "id": "residency-nie",
+                "title": "Résidence / NIE en Espagne",
+                "description": "Tout Ce Que Vous Devez Savoir pour Obtenir un NIE ou la Résidence en Espagne\n\nSi vous prévoyez d'acheter un bien immobilier, d'ouvrir un compte bancaire, de travailler ou de vivre en Espagne, vous aurez besoin d'un numéro NIE (Número de Identidad de Extranjero). Ce numéro est indispensable pour presque toute démarche officielle, juridique ou financière en Espagne, que vous soyez résident ou propriétaire non résident.\n\nChez Baruch Real Estate, nous simplifions le processus. Nous accompagnons nos clients dans la demande de NIE et pouvons également l'obtenir en votre nom grâce à une procuration (POA), vous faisant gagner du temps et évitant stress et déplacements.",
+                "image": "/assets/img/all-images/service/residency_result.webp",
+                "title-list": "Nos Services de Résidence & NIE",
+                "details": [
+                    {
+                        "title": "Qu'est-ce qu'un NIE ?",
+                        "description": "Le NIE est votre numéro d'identification d'étranger en Espagne. Il est délivré par les autorités espagnoles (Policía Nacional) et utilisé pour toutes les démarches administratives et juridiques.\n\nVous aurez besoin d'un NIE si vous prévoyez de :\n• Acheter ou vendre un bien immobilier\n• Signer chez le notaire\n• Ouvrir un compte bancaire espagnol\n• Raccorder les services publics (électricité, eau, internet)\n• Payer des impôts en Espagne\n• Immatriculer un véhicule\n• Créer une entreprise ou travailler légalement\n\nLe NIE n'est pas un permis de résidence ; il s'agit uniquement de votre numéro fiscal et d'identification en tant qu'étranger. Toutefois, il constitue une première étape indispensable si vous souhaitez vivre, investir ou séjourner à long terme en Espagne."
+                    },
+                    {
+                        "title": "NIE vs. Résidence — Quelle est la Différence ?",
+                        "description": "• NIE (Número de Identidad de Extranjero) :\nNuméro d'identification personnel délivré aux étrangers à des fins fiscales et légales. Il est possible d'avoir un NIE sans être résident.\n\n• Résidence (Residencia) :\nStatut légal permettant de vivre en Espagne plus de 90 jours par an. Selon votre nationalité, cela peut se faire via l'enregistrement de résident UE ou une demande de visa Non Lucratif / Golden Visa.\n\nLa majorité de nos clients internationaux commencent par obtenir un NIE, notamment lors de l'achat d'un bien, puis décident ultérieurement de demander la résidence."
+                    },
+                    {
+                        "title": "Procédure de Demande du NIE",
+                        "description": "Étape 1 : Déterminer la Méthode de Demande\nVous pouvez demander un NIE :\nEn personne dans un commissariat de police disposant d'un bureau des étrangers (Oficina de Extranjería).\nPar Procuration (POA) — nous gérons l'intégralité de la procédure pour vous, sans déplacement.\n\nÉtape 2 : Préparer les Documents Requis\nLa documentation comprend généralement :\n• Formulaire EX-15 complété\n• Copie du passeport (et original en cas de demande en personne)\n• Justificatif du motif de la demande\n• Confirmation de rendez-vous (Cita Previa)\n• Paiement de la taxe NIE (Tasa 790, Code 012)\n\nEn utilisant le service NIE de Baruch Real Estate, nous préparons tous les documents et évitons les erreurs courantes pouvant retarder l'approbation."
+                    },
+                    {
+                        "title": "Option de Procuration (POA)",
+                        "description": "Si vous êtes hors d'Espagne ou préférez ne pas vous rendre au commissariat, vous pouvez autoriser notre partenaire juridique à effectuer la demande en votre nom.\n\nLa procuration peut être signée :\n• Devant un notaire en Espagne, ou\n• Devant un notaire dans votre pays d'origine, puis légalisée par une Apostille de La Haye.\n\nUne fois la procuration reçue, nous déposons la demande et récupérons le NIE. C'est une option rapide, sûre et pratique, idéale pour les acheteurs ou investisseurs étrangers."
+                    },
+                    {
+                        "title": "Réception de votre Certificat NIE",
+                        "description": "Une fois approuvé, le certificat NIE est délivré par les autorités espagnoles et indique votre nom, nationalité et numéro NIE unique.\n\nNous vous l'envoyons de manière sécurisée. Le numéro est permanent et valable à vie."
+                    },
+                    {
+                        "title": "Options de Résidence en Espagne",
+                        "description": "Si vous prévoyez de vivre en Espagne de manière permanente ou plus de 90 jours par an, vous devrez demander la résidence.\n\nCitoyens de l'UE :\n• Certificat d'enregistrement de citoyen de l'Union européenne\n• Preuve de revenus, assurance santé et adresse en Espagne requises\n\nCitoyens hors UE :\n• Visa Non Lucratif\n• Golden Visa\n• Visa de Travail ou d'Entreprise\n\nNous vous mettons en relation avec des partenaires juridiques de confiance pour choisir et gérer la meilleure option."
+                    },
+                    {
+                        "title": "Pourquoi Passer par Baruch Real Estate",
+                        "description": "• Assistance rapide et professionnelle pour le NIE et la résidence\n• Services juridiques et immobiliers sous un même toit\n• Gestion complète des documents et rendez-vous\n• Communication claire dans votre langue\n• Possibilité de procédure à distance via procuration\n\nNotre objectif est de rendre votre installation en Espagne simple et sans stress."
+                    },
+                    {
+                        "title": "Besoin d'un NIE ? Nous Pouvons Vous Aider",
+                        "description": "Vous souhaitez acheter un bien, ouvrir un compte bancaire ou vous installer en Espagne ?\n\nUn NIE valide est indispensable — nous pouvons l'organiser rapidement et efficacement.\n\nContactez-nous dès aujourd'hui pour connaître les détails et les tarifs."
+                    }
+                ]
+            },
+            {
+                "id": "sell-your-house-in-costa-del-sol",
+                "title": "Vendez Votre Maison sur la Costa del Sol",
+                "description": "Faites de la Vente de Votre Bien en Espagne une Expérience Fluide et Sécurisée\n\nVous vendez un bien immobilier en Espagne ? Surtout dans des zones prisées comme Málaga, Marbella ou la Costa del Sol, le processus comprend une série d'étapes juridiques et administratives qui peuvent sembler complexes sans un accompagnement approprié. De la détermination du juste prix de vente à la préparation des documents et à la signature chez le notaire, chaque étape exige précision et professionnalisme.\n\nChez Baruch Real Estate, nous simplifions le processus pour vous.\n\nNotre équipe expérimentée réunit expertise immobilière et accompagnement juridique sous un même toit, afin de garantir une vente fluide, transparente et en toute confiance. Que vous viviez en Espagne ou à l'étranger.",
+                "image": "/assets/img/all-images/service/sell_your_house_result.webp",
+                "title-list": "Les Étapes pour Vendre Votre Bien",
+                "details": [
+                    {
+                        "title": "1. Évaluation du Bien et Analyse du Marché",
+                        "description": "Nous commençons par une évaluation professionnelle de votre propriété.\n\nEn utilisant des données de marché locales actualisées, des ventes comparables et les caractéristiques uniques de votre bien, nous déterminons un prix de vente réaliste qui attire des acheteurs qualifiés et maximise votre rendement.\n\nNotre connaissance du marché immobilier de la Costa del Sol nous permet de positionner votre bien efficacement dès le premier jour."
+                    },
+                    {
+                        "title": "2. Vérification Juridique et Documentation",
+                        "description": "Avant la mise en vente, notre équipe juridique vérifie tous les documents essentiels afin de s'assurer que votre bien est prêt à être vendu. Cela comprend :\n\n- Titre de propriété (Escritura de Propiedad)\n- Nota Simple du registre foncier\n- Certificat de performance énergétique (CEE)\n- IBI (taxe foncière) et factures récentes de services publics\n\nCette étape garantit une vente juridiquement solide et évite toute complication ultérieure.\n\nAvec Baruch Real Estate, vous bénéficiez de l'expertise immobilière et juridique réunie en un seul endroit, pour un processus clair et efficace."
+                    },
+                    {
+                        "title": "3. Préparation de Votre Bien à la Vente",
+                        "description": "La première impression est essentielle. Nous vous aidons à présenter votre bien sous son meilleur jour, grâce à des photos professionnelles, au home staging et à de petites améliorations.\n\nSi nécessaire, nous vous mettons en relation avec des partenaires locaux de confiance pour le nettoyage, les réparations ou la décoration. Nous veillons à ce que votre bien soit parfaitement présenté."
+                    },
+                    {
+                        "title": "4. Marketing et Promotion",
+                        "description": "Une fois le bien prêt, nous lançons une campagne marketing ciblée destinée aux acheteurs locaux et internationaux.\n\nCela comprend :\n\n- Diffusion sur les principaux portaux immobiliers en Espagne et en Europe\n- Images de haute qualité, vidéos et prises de vue par drone\n- Campagnes sur les réseaux sociaux et par email\n- Collaboration avec des agents partenaires dans toute l'Europe\n\nNotre stratégie marketing garantit une visibilité mondiale auprès du bon public.\n\nNotamment auprès d'acheteurs des Pays-Bas, de Belgique, d'Allemagne, de Pologne, de Suède, du Royaume-Uni et des États-Unis."
+                    },
+                    {
+                        "title": "5. Visites et Communication avec les Acheteurs",
+                        "description": "Nous gérons toutes les demandes, visites et retours des acheteurs.\n\nChaque acheteur potentiel est préqualifié afin d'assurer un intérêt sérieux.\n\nVous recevez des mises à jour régulières pour rester informé de l'avancement et des réactions."
+                    },
+                    {
+                        "title": "6. Négociation et Gestion des Offres",
+                        "description": "Lorsque des offres sont reçues, nous vous accompagnons tout au long du processus de négociation.\n\nNotre objectif est d'obtenir le meilleur prix et les meilleures conditions, tout en protégeant vos intérêts.\n\nGrâce à l'intégration du support juridique, chaque accord et acompte est géré conformément au droit immobilier espagnol."
+                    },
+                    {
+                        "title": "7. Signature du Contrat de Réservation",
+                        "description": "Après acceptation de l'offre, nous préparons le contrat de réservation (Contrato de Reserva).\n\nCe document retire le bien du marché et confirme l'engagement de l'acheteur.\n\nNotre équipe juridique rédige et vérifie le contrat afin de protéger pleinement vos droits de vendeur."
+                    },
+                    {
+                        "title": "8. Préparation chez le Notaire",
+                        "description": "Avant la date de finalisation, nous coordonnons avec le notaire, le représentant juridique de l'acheteur et les banques.\n\nTous les documents, certificats et autorisations fiscales sont préparés pour garantir une vente sans problème."
+                    },
+                    {
+                        "title": "9. Signature de l'Acte de Vente",
+                        "description": "La signature finale a lieu chez le notaire, où la propriété est officiellement transférée à l'acheteur.\n\nNos équipes immobilière et juridique sont présentes pour superviser la transaction, sécuriser le paiement et assurer le respect de toutes les obligations légales."
+                    },
+                    {
+                        "title": "10. Service Après-Vente",
+                        "description": "Après la vente, nous aidons pour les changements de contrats de services, les déclarations fiscales et les formalités administratives restantes.\n\nNotre accompagnement ne s'arrête pas chez le notaire.\n\nNous sommes là pour assurer un processus fluide du début à la fin."
+                    },
+                    {
+                        "title": "Pourquoi Vendre avec Baruch Real Estate",
+                        "description": "Chez Baruch Real Estate, nous offrons un service complet sous un même toit, de l'évaluation au marketing, avec un accompagnement juridique total.\n\nCette organisation nous permet de gérer chaque étape efficacement et avec une communication claire.\n\nNotre équipe possède une grande expérience du marché immobilier de la Costa del Sol et une connaissance approfondie de la réglementation locale."
+                    },
+                    {
+                        "title": "Prêt à Vendre Votre Bien en Espagne ?",
+                        "description": "Souhaitez-vous connaître la valeur de votre bien ou les étapes pour commencer la vente ?\n\nNous serons ravis de vous accompagner.\n\nContactez-nous dès aujourd'hui pour une estimation gratuite ou pour discuter de votre projet à Málaga, Marbella, Estepona ou sur toute la Costa del Sol.\n\nEnsemble, rendons votre vente simple, sécurisée et réussie."
+                    }
+                ]
+            },
+            {
+                "id": "taxes",
+                "title": "Impôts et Déclaration Fiscale en Espagne",
+                "description": "Tout Ce Que Vous Devez Savoir sur la Fiscalité en Espagne\n\nQue vous viviez en Espagne, achetiez un bien immobilier ou perceviez des revenus de sources espagnoles, il est essentiel de comprendre le système fiscal. Les impôts peuvent varier en fonction de votre statut de résidence, du type de revenus et de la propriété immobilière.\n\nChez Baruch Real Estate, nous travaillons avec des comptables et conseillers fiscaux de confiance afin de garantir que vos impôts soient déclarés correctement, efficacement et en conformité avec la législation espagnole, vous offrant ainsi tranquillité d'esprit et évitant des erreurs coûteuses.",
+                "image": "/assets/img/all-images/service/taxes_result.webp",
+                "title-list": "Impôts pour Résidents et Non-Résidents",
+                "details": [
+                    {
+                        "title": "1. Résident en Espagne",
+                        "description": "Vous êtes généralement considéré comme résident fiscal si vous vivez en Espagne plus de 183 jours par an ou si vous y avez votre principal centre d'intérêts économiques.\n\nLes résidents doivent déclarer :\n\n• Revenus mondiaux\n• Biens immobiliers, investissements et actifs en Espagne et à l'étranger\n• Plus-values, dividendes et revenus locatifs"
+                    },
+                    {
+                        "title": "2. Non-Résident en Espagne",
+                        "description": "Les non-résidents ne paient des impôts que sur les revenus et actifs situés en Espagne. Cela inclut :\n\n• Revenus locatifs provenant de biens immobiliers en Espagne\n• Plus-values issues de la vente de biens immobiliers en Espagne\n• Pensions ou investissements de source espagnole\n\nComprendre votre statut est essentiel, car les taux d'imposition, déductions et obligations varient considérablement."
+                    },
+                    {
+                        "title": "Principaux Impôts en Espagne",
+                        "description": "1. Impôt sur le Revenu (IRPF pour les résidents / IRNR pour les non-résidents)\n• Résidents (IRPF) : Imposition progressive sur les revenus mondiaux (jusqu'à ~47 %).\n• Non-résidents (IRNR) : Taux forfaitaire sur les revenus de source espagnole (généralement 19–24 %).\n\n2. Impôts Fonciers\n• IBI : Impôt local annuel sur les biens immobiliers.\n• Plusvalía Municipale : Impôt sur l'augmentation de la valeur du terrain lors de la vente.\n• Impôt sur la Fortune : Applicable aux résidents et parfois aux non-résidents disposant d'actifs de grande valeur.\n\n3. Impôt sur les Plus-Values\n• Applicable aux gains issus de la vente de biens ou d'investissements en Espagne.\n• Les taux diffèrent selon le statut de résidence.\n\n4. Droits de Succession et de Donation\n• Applicables si vous recevez des biens, des actifs ou de l'argent en Espagne.\n• Les taux dépendent de la région et du lien de parenté.\n\n5. TVA / Droits de Mutation\n• Biens neufs : Soumis à la TVA ~10 %\n• Biens de revente : Soumis aux droits de mutation (ITP), variables selon la région (généralement 7–10 %)."
+                    },
+                    {
+                        "title": "Déclaration Fiscale en Espagne",
+                        "description": "La déclaration fiscale en Espagne comprend plusieurs étapes :\n\nRassembler toute la documentation nécessaire.\n\nDéterminer le statut fiscal.\n\nCalculer le revenu imposable et les déductions.\n\nSoumettre la déclaration à l'Agencia Tributaria dans les délais.\n\nFaire appel à un comptable ou conseiller fiscal local est essentiel pour optimiser les déclarations et éviter les pénalités."
+                    },
+                    {
+                        "title": "Comment Baruch Real Estate Peut Vous Aider",
+                        "description": "Bien que nous ne soyons pas comptables, nous collaborons avec des partenaires de confiance qui :\n\n• Conseillent résidents et non-résidents\n• Gèrent les déclarations fiscales espagnoles\n• Accompagnent les taxes immobilières\n• Conseillent sur successions, donations et impôt sur la fortune\n\nNous coordonnons l'ensemble pour garantir une conformité totale avec la législation fiscale espagnole."
+                    },
+                    {
+                        "title": "Pourquoi Travailler avec Nos Comptables",
+                        "description": "• Expertise en fiscalité espagnole\n• Accompagnement dans votre langue\n• Déclarations optimisées\n• Soutien complet pour l'immobilier\n• Assistance avec les autorités fiscales"
+                    },
+                    {
+                        "title": "Obtenez une Assistance Fiscale Professionnelle",
+                        "description": "Que vous soyez résident ou non-résident, une déclaration correcte est essentielle.\n\nContactez-nous pour une assistance fiscale professionnelle adaptée à votre situation en Espagne."
+                    }
+                ]
+            }
+        ]
+    },
     "faq": {
         "title": "Questions Fréquemment Posées",
         "question-1": "Quels services propose Baruch Real Estate?",

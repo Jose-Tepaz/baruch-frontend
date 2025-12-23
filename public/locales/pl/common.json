@@ -222,6 +222,320 @@
             }
         }
     },
+    "services-page": {
+        "title": "Nuestros Servicios",
+        "description": "Tu Socio de Confianza Cuando Compra una Propiedad en la Costa del Sol\nComprar una casa en España es un paso emocionante, pero también puede ser complejo, especialmente si no estás familiarizado con el mercado local, el idioma y el sistema legal.\nEn Baruch Real Estate, hacemos el proceso transparente, seguro y guiado desde el inicio hasta el final.\nNuestro Servicio de Representación de Compras garantiza que tus intereses estén siempre protegidos. Desde identificar la propiedad correcta y organizar visitas hasta negociar los mejores términos y gestionar el proceso legal, manejamos cada detalle con soporte inmobiliario y legal bajo un mismo techo.",
+        "btn-text": "Ver todos los servicios",
+        "services-list": [
+            {
+                "id": "buying-representation",
+                "title": "Reprezentacja Kupującego",
+                "description": "Twój Zaufany Partner przy Zakupie Nieruchomości na Costa del Sol.\n\nZakup nieruchomości w Hiszpanii to ekscytujący krok, jednak może być skomplikowany, zwłaszcza jeśli nie znasz lokalnego rynku, języka i systemu prawnego.\n\nW Baruch Real Estate sprawiamy, że cały proces jest przejrzysty, bezpieczny i w pełni prowadzony od początku do końca.\nNasza usługa reprezentacji kupującego gwarantuje, że Twoje interesy są zawsze chronione. Od znalezienia odpowiedniej nieruchomości i organizacji prezentacji, po negocjacje najlepszych warunków i obsługę prawną, zajmujemy się każdym szczegółem, oferując wsparcie nieruchomościowe i prawne w jednym miejscu.",
+                "image": "/assets/img/all-images/service/buying-representation_result.webp",
+                "title-list": "Etapy Zakupu Nieruchomości w Hiszpanii",
+                "details": [
+                    {
+                        "title": "1. Poznanie Twoich Celów i Preferencji",
+                        "description": "Zaczynamy od poznania Twoich potrzeb, budżetu, stylu życia oraz celów inwestycyjnych. Niezależnie od tego, czy szukasz domu wakacyjnego, stałego miejsca zamieszkania czy inwestycji, dostosowujemy wyszukiwanie do Twoich oczekiwań. Nasz zespół posiada dogłębną wiedzę o Costa del Sol."
+                    },
+                    {
+                        "title": "2. Wyszukiwanie i Selekcja Nieruchomości",
+                        "description": "Na podstawie Twoich preferencji przedstawiamy starannie dobrane oferty. Korzystamy zarówno z własnych zasobów, jak i sieci zaufanych agentów oraz deweloperów, zapewniając pełny dostęp do rynku. Naszym celem jest znalezienie właściwej nieruchomości."
+                    },
+                    {
+                        "title": "3. Prezentacje Nieruchomości",
+                        "description": "Organizujemy prezentacje dopasowane do Twojej dostępności. Towarzyszymy Ci, przekazujemy rzetelne informacje oraz wskazujemy zalety i potencjalne ryzyka. Jeśli nie możesz podróżować, oferujemy wirtualne prezentacje z wideo i transmisją na żywo. Uczciwość i przejrzystość są podstawą naszej pracy."
+                    },
+                    {
+                        "title": "4. Due Diligence i Weryfikacja Prawna",
+                        "description": "Po wyborze nieruchomości nasz zespół prawny przeprowadza pełną analizę.\nObejmuje ona:\n\n- Własność i rejestrację (Nota Simple)\n- Zgodność urbanistyczną\n- Zaległości finansowe, podatki lub opłaty wspólnotowe\n- Pozwolenia budowlane i certyfikaty\n\nW Baruch Real Estate prawnicy współpracują bezpośrednio z agentem, gwarantując bezpieczeństwo prawne."
+                    },
+                    {
+                        "title": "5. Negocjacje i Obsługa Oferty",
+                        "description": "Reprezentujemy Twoje interesy w negocjacjach, dążąc do najlepszej ceny i warunków.\nNasza znajomość rynku Costa del Sol pozwala na realistyczne doradztwo.\nProwadzimy komunikację ze sprzedającym i dbamy o zgodność prawną ofert."
+                    },
+                    {
+                        "title": "6. Rezerwacja i Zaliczka",
+                        "description": "Po zaakceptowaniu oferty podpisywana jest umowa rezerwacyjna (Contrato de Reserva) oraz wpłacana zaliczka.\nZespół prawny czuwa nad bezpieczeństwem warunków i płatności."
+                    },
+                    {
+                        "title": "7. Prywatna Umowa Kupna (Contrato de Arras)",
+                        "description": "Kolejnym krokiem jest prywatna umowa kupna.\nDokument ten określa warunki sprzedaży, harmonogram płatności oraz termin finalizacji.\nPrawnicy dbają o pełną ochronę Twoich praw."
+                    },
+                    {
+                        "title": "8. Finalizacja u Notariusza",
+                        "description": "Zakup zostaje sfinalizowany poprzez podpisanie Escritura de Compraventa u notariusza.\nNadzorujemy dokumenty, płatności oraz przeniesienie własności.\nMożliwa jest finalizacja na podstawie pełnomocnictwa."
+                    },
+                    {
+                        "title": "9. Usługi Po Zakupie",
+                        "description": "Po zakończeniu transakcji pomagamy w:\n• Przepisaniu mediów\n• Ubezpieczeniu nieruchomości\n• Rejestracji podatkowej (NIE, IBI, etc.)\n• Sprawach bankowych i płatnościach\n\nNaszym celem jest płynne przejście do nowego domu."
+                    },
+                    {
+                        "title": "Dlaczego Warto Mieć Reprezentanta Kupującego",
+                        "description": "Reprezentant kupującego działa wyłącznie w Twoim interesie.\n\nW Baruch Real Estate oferujemy:\n• Pełną przejrzystość na każdym etapie\n• Dostęp do całego rynku nieruchomości\n• Wsparcie prawne w jednym miejscu\n• Obsługę w Twoim języku\n• Bezpieczny i uporządkowany proces aż do notariusza\n\nNiezależnie od celu zakupu zapewniamy bezpieczeństwo i spokój."
+                    },
+                    {
+                        "title": "Gotowy na Zakup Nieruchomości na Costa del Sol?",
+                        "description": "Jeśli planujesz zakup w Málaga, Marbella, Estepona lub na Costa del Sol, chętnie Ci pomożemy.\n\nSkontaktuj się z nami, aby umówić konsultację lub rozpocząć wyszukiwanie.\n\nZnajdźmy Twój idealny dom z pełnym wsparciem od początku do końca."
+                    }
+                ]
+            },
+            {
+                "id": "finance",
+                "title": "Usługi Finansowe i Kredytowe w Hiszpanii",
+                "description": "Twój Przewodnik po Kredytach Hipotecznych, Kontach Bankowych i Finansowaniu na Costa del Sol.\n\nZakup nieruchomości w Hiszpanii często wiąże się z koniecznością uzyskania kredytu hipotecznego lub zorganizowania finansowania.\n\nPoruszanie się po hiszpańskim systemie bankowym może być skomplikowane, szczególnie dla zagranicznych nabywców. Od ofert kredytów hipotecznych po konta bankowe — zrozumienie oprocentowania, warunków i wymagań jest kluczowe.\n\nW Baruch Real Estate upraszczamy proces finansowania. Dzięki naszej szerokiej sieci partnerów bankowych i finansowych pomagamy znaleźć odpowiednie rozwiązania hipoteczne, wspieramy w procesie aplikacyjnym i prowadzimy Cię od początku do końca, zapewniając przejrzysty i bezproblemowy proces finansowania.",
+                "image": "/assets/img/all-images/service/finance_result.webp",
+                "title-list": "Nasze Usługi Hipoteczne i Finansowe",
+                "details": [
+                    {
+                        "title": "1. Szybki Przegląd Hipoteki",
+                        "description": "Zaczynamy od oceny Twojej sytuacji finansowej i celów:\n• Sprawdzenie dochodów i zdolności kredytowej\n• Analiza ceny nieruchomości i kwoty kredytu\n• Wstępna ocena kwalifikacji\n\nPozwala to szybko zidentyfikować banki i produkty hipoteczne odpowiadające Twoim potrzebom, oszczędzając czas i unikając niepotrzebnych wniosków."
+                    },
+                    {
+                        "title": "2. Porównanie Hipotek z Naszymi Partnerami",
+                        "description": "Dzięki naszemu sieci zaufanych banków i partnerów finansowych możemy porównać szeroki wachlarz opcji hipotecznych:\n• Kredyty o stałym oprocentowaniu\n• Kredyty o zmiennym oprocentowaniu\n• Kredyty mieszane\n• Rozwiązania hipoteczne dla nierezydentów\n\nNaszym celem jest pomóc Ci znaleźć konkurencyjne stawki i elastyczne warunki z pełną przejrzystością. Sam kontrakt hipoteczny zawsze zawierany jest między klientem a bankiem, ale my prowadzimy i koordynujemy proces w Twoim imieniu."
+                    },
+                    {
+                        "title": "3. Wsparcie przy Wniosku Hipotecznym",
+                        "description": "Pomagamy w przygotowaniu i złożeniu wniosku do naszych partnerów bankowych, w tym:\n• Zebranie niezbędnych dokumentów (dowód dochodów, zeznania podatkowe, dane nieruchomości)\n• Złożenie wniosku do wybranych banków\n• Koordynacja z bankiem aż do zatwierdzenia kredytu\n\nChoć umowa hipoteczna podpisywana jest między Tobą a bankiem, nasz zespół zapewnia, że proces przebiega sprawnie i jest prawidłowo udokumentowany."
+                    },
+                    {
+                        "title": "4. Otwarcie Konta Bankowego",
+                        "description": "Hiszpańskie konto bankowe jest często wymagane do płatności hipotecznych, zarządzania nieruchomością i mediów.\n\nPomagamy:\n• Wybrać bank odpowiedni dla Twoich potrzeb\n• Sprawnie otworzyć konto bankowe w Hiszpanii\n• Ustawić płatności i przelewy związane z nieruchomością\n\nUsługa dostępna jest zarówno dla rezydentów, jak i nierezydentów, co ułatwia zarządzanie finansami."
+                    },
+                    {
+                        "title": "5. Zakończenie Hipoteki i Koordynacja",
+                        "description": "Po zatwierdzeniu kredytu hipotecznego koordynujemy z prawnikiem i notariuszem, aby środki były gotowe do podpisania Escritura de Compraventa.\n\nZarządzamy harmonogramem i dokumentacją, abyś mógł skupić się na zakupie nieruchomości, podczas gdy hipoteka pozostaje całkowicie między Tobą a bankiem."
+                    },
+                    {
+                        "title": "Dlaczego Współpracować z Baruch Real Estate w Zakresie Finansowania",
+                        "description": "• Szybki przegląd hipoteczny, aby określić Twoją kwalifikację\n• Dostęp do szerokiej sieci banków i partnerów finansowych\n• Wsparcie w dokumentacji, wnioskach i zatwierdzeniach\n• Pomoc przy otwarciu konta bankowego w Hiszpanii\n• Przejrzysta koordynacja od pierwszego kontaktu do zatwierdzenia kredytu\n\nOferujemy kompleksowe podejście, pomagając w sprawnym i bezpiecznym przejściu przez proces finansowania, informując Cię na każdym etapie."
+                    },
+                    {
+                        "title": "Zapytaj o Stawki i Ceny",
+                        "description": "Jeśli chcesz poznać opcje hipoteczne lub przeprowadzić przegląd finansowania dla zakupu nieruchomości, możemy dostarczyć dopasowane informacje od naszych banków partnerskich.\n\nSkontaktuj się z nami już dziś, aby omówić opcje kredytowe, sprawdzić aktualne stawki i rozpocząć finansowanie na Costa del Sol; Benalmádena, Estepona, Málaga, Marbella, Torrox, Alhaurín lub gdziekolwiek w Hiszpanii."
+                    }
+                ]
+            },
+            {
+                "id": "insurance-services",
+                "title": "Usługi Ubezpieczeniowe w Hiszpanii",
+                "description": "Kompleksowe Rozwiązania Ubezpieczeniowe dla Mieszkańców i Właścicieli Nieruchomości\n\nŻycie lub inwestowanie w Hiszpanii wiąże się z odpowiedzialnością, w tym z ochroną siebie, swojej rodziny oraz posiadanej nieruchomości. Od ubezpieczenia domu po ubezpieczenie na życie, zdrowotne i samochodowe – odpowiednia ochrona jest kluczowa dla spokoju ducha.\n\nW Baruch Real Estate łączymy naszych klientów z siecią sprawdzonych firm ubezpieczeniowych, aby znaleźć najlepsze rozwiązania dopasowane do indywidualnych potrzeb. Prowadzimy Cię przez cały proces, wyjaśniamy dostępne opcje i dbamy o to, abyś otrzymał ubezpieczenie najlepiej odpowiadające Twojej sytuacji, wszystko w Twoim języku.",
+                "image": "/assets/img/all-images/service/Insurance_result.webp",
+                "title-list": "Nasze Usługi Ubezpieczeniowe",
+                "details": [
+                    {
+                        "title": "1. Ubezpieczenie Nieruchomości",
+                        "description": "Ochrona Twojej nieruchomości w Hiszpanii jest niezwykle ważna. Ubezpieczenie nieruchomości może obejmować:\n• Pożar, szkody wodne i klęski żywiołowe\n• Kradzież i wandalizm\n• Odpowiedzialność cywilną w przypadku wypadków na Twojej posesji\n\nWspółpracujemy z firmami, które rozumieją specyfikę zarówno domów stałego zamieszkania, jak i domów wakacyjnych na Costa del Sol, w Maladze i okolicach, zapewniając kompleksową ochronę w konkurencyjnych cenach."
+                    },
+                    {
+                        "title": "2. Ubezpieczenie na Życie",
+                        "description": "Ubezpieczenie na życie zapewnia bezpieczeństwo finansowe Twojej rodzinie w przypadku nieprzewidzianych zdarzeń.\n\nW zależności od potrzeb ubezpieczenie może obejmować:\n• Podstawową ochronę na wypadek śmierci\n• Ochronę kredytu hipotecznego\n• Zabezpieczenie dochodów dla osób zależnych\n\nNasi partnerzy oferują elastyczne polisy odpowiednie dla rezydentów i nierezydentów w Hiszpanii."
+                    },
+                    {
+                        "title": "3. Ubezpieczenie Zdrowotne",
+                        "description": "W Hiszpanii dostępna jest publiczna opieka zdrowotna, jednak wielu obcokrajowców wybiera prywatne ubezpieczenie zdrowotne ze względu na szybszy dostęp do leczenia, możliwość wyboru lekarzy oraz opiekę międzynarodową.\n\nMożemy zorganizować ubezpieczenia dla:\n• Osób indywidualnych lub rodzin\n• Obywateli UE i spoza UE\n• Ochrony krótko lub długoterminowej\n\nZapewnia to Tobie i Twoim bliskim dostęp do wysokiej jakości opieki medycznej."
+                    },
+                    {
+                        "title": "4. Ubezpieczenie Samochodu",
+                        "description": "Posiadanie samochodu w Hiszpanii wymaga obowiązkowego ubezpieczenia, jednak dodatkowe opcje zwiększają zakres ochrony.\n\nPomagamy znaleźć polisy obejmujące:\n• Odpowiedzialność cywilną wobec osób trzecich\n• Pełne ubezpieczenie\n• Pomoc drogową\n• Ochronę dla wielu kierowców lub pojazdów leasingowych\n\nNiezależnie od tego, czy posiadasz samochód rodzinny, luksusowy czy pojazd związany z wynajmem nieruchomości, nasi partnerzy oferują dopasowane rozwiązania."
+                    },
+                    {
+                        "title": "5. Inne Opcje Ubezpieczeniowe",
+                        "description": "W zależności od sytuacji mogą być potrzebne dodatkowe ubezpieczenia:\n• Ubezpieczenie podróżne na wakacje lub pobyty czasowe\n• Ubezpieczenie ochrony wynajmu dla domów wakacyjnych\n• Ubezpieczenie odpowiedzialności zawodowej lub biznesowej\n• Ubezpieczenie zwierząt domowych\n\nNasza sieć umożliwia znalezienie najlepszego ubezpieczyciela dla każdego rodzaju ochrony, bez zbędnych kosztów."
+                    },
+                    {
+                        "title": "Dlaczego Warto Wybrać Baruch Real Estate w Zakresie Ubezpieczeń",
+                        "description": "• Zaufana sieć partnerów ubezpieczeniowych z doświadczeniem w Hiszpanii\n• Indywidualne rozwiązania dla rezydentów, nierezydentów i inwestorów\n• Obsługa w Twoim języku\n• Jasne i przejrzyste wyjaśnienia warunków, zakresu i cen\n• Wsparcie w procesie zawierania umów i likwidacji szkód\n\nNaszym celem jest uproszczenie ubezpieczeń i zapewnienie pełnej ochrony Tobie oraz Twojemu majątkowi."
+                    },
+                    {
+                        "title": "Uzyskaj Swoje Rozwiązania Ubezpieczeniowe Już Dziś",
+                        "description": "Niezależnie od tego, czy potrzebujesz ubezpieczenia domu, życia, zdrowia czy samochodu, nasz zespół połączy Cię z odpowiednim dostawcą i przygotuje ofertę dopasowaną do Twoich potrzeb.\n\nSkontaktuj się z nami już dziś, aby omówić dostępne opcje i otrzymać indywidualne rozwiązania dzięki naszej sieci zaufanych partnerów w Hiszpanii."
+                    }
+                ]
+            },
+            {
+                "id": "legal-services",
+                "title": "Usługi Prawne w Hiszpanii",
+                "description": "Kompleksowe Wsparcie Prawne dla Rezydentów i Właścicieli Nieruchomości\n\nPoruszanie się po hiszpańskich procedurach prawnych może być skomplikowane, zwłaszcza przy zakupie lub sprzedaży nieruchomości, ubieganiu się o rezydencję lub zakładaniu działalności gospodarczej. W Baruch Real Estate współpracujemy z siecią zaufanych prawników i notariuszy, aby zapewnić szybkie, profesjonalne i rzetelne usługi prawne.\n\nNasz zespół koordynuje działania z tymi ekspertami prawnymi, aby zagwarantować zgodność wszystkich transakcji i procedur z hiszpańskim prawem, zapewniając spokój ducha i oszczędność czasu.",
+                "image": "/assets/img/all-images/service/legal_result.webp",
+                "title-list": "Nasze Usługi Prawne",
+                "details": [
+                    {
+                        "title": "1. Obsługa Prawna Zakupu Nieruchomości",
+                        "description": "• Weryfikacja własności\n• Kontrola zobowiązań\n• Umowy\n• Notariusz\n• Kredyty"
+                    },
+                    {
+                        "title": "2. Obsługa Prawna Sprzedaży",
+                        "description": "• Dokumentacja\n• Warunki umowy\n• Kontakt z kupującym\n• Finalizacja"
+                    },
+                    {
+                        "title": "3. NIE i Rezydencja",
+                        "description": "• Wniosek NIE\n• Pełnomocnictwa\n• UE / poza UE"
+                    },
+                    {
+                        "title": "4. Zakładanie Spółki (SL)",
+                        "description": "• Rejestracja\n• Statut\n• Rejestr handlowy\n• Konto bankowe\n• Numery podatkowe"
+                    },
+                    {
+                        "title": "5. Notariusze",
+                        "description": "• Nieruchomości\n• Spółki\n• Pełnomocnictwa\n• Testamenty"
+                    },
+                    {
+                        "title": "6. Testamenty",
+                        "description": "• Sporządzenie\n• Podział majątku\n• Spadki"
+                    },
+                    {
+                        "title": "7. Szybka Obsługa",
+                        "description": "• Szybkie odpowiedzi\n• Obsługa językowa\n• Przejrzyste koszty"
+                    },
+                    {
+                        "title": "Dlaczego Baruch Real Estate",
+                        "description": "• Zaufana sieć prawników\n• Kompleksowe wsparcie\n• Skuteczna komunikacja"
+                    },
+                    {
+                        "title": "Profesjonalna Pomoc Prawna",
+                        "description": "Skontaktuj się z nami w sprawie pomocy prawnej w Hiszpanii."
+                    }
+                ]
+            },
+            {
+                "id": "residency-nie",
+                "title": "Rezydencja / NIE w Hiszpanii",
+                "description": "Wszystko, Co Musisz Wiedzieć o Uzyskaniu NIE lub Rezydencji w Hiszpanii\n\nJeśli planujesz zakup nieruchomości, otwarcie konta bankowego, podjęcie pracy lub zamieszkanie w Hiszpanii, będziesz potrzebować numeru NIE (Número de Identidad de Extranjero). Jest on niezbędny do niemal wszystkich oficjalnych, prawnych i finansowych czynności w Hiszpanii — zarówno dla rezydentów, jak i właścicieli nieruchomości niebędących rezydentami.\n\nW Baruch Real Estate upraszczamy ten proces. Pomagamy naszym klientom w procedurze uzyskania NIE, a także możemy załatwić go w Twoim imieniu na podstawie pełnomocnictwa (POA), oszczędzając Twój czas, stres i konieczność podróży.",
+                "image": "/assets/img/all-images/service/residency_result.webp",
+                "title-list": "Nasze Usługi Rezydencji i NIE",
+                "details": [
+                    {
+                        "title": "Czym jest NIE?",
+                        "description": "NIE to numer identyfikacyjny cudzoziemca w Hiszpanii, wydawany przez Policía Nacional.\n\nBędziesz potrzebować NIE, jeśli planujesz:\n• Kupić lub sprzedać nieruchomość\n• Podpisać dokumenty u notariusza\n• Otworzyć konto bankowe w Hiszpanii\n• Podłączyć media\n• Płacić podatki\n• Zarejestrować samochód\n• Założyć firmę lub pracować legalnie\n\nNIE nie jest pozwoleniem na pobyt, lecz numerem identyfikacyjnym i podatkowym."
+                    },
+                    {
+                        "title": "NIE a Rezydencja — Jaka jest różnica?",
+                        "description": "• NIE: Numer identyfikacyjny\n• Rezydencja: Status pobytu"
+                    },
+                    {
+                        "title": "Proces Uzyskania NIE",
+                        "description": "Krok 1: Osobiście lub przez pełnomocnika\n\nKrok 2: Dokumenty\n• EX-15\n• Paszport\n• Uzasadnienie\n• Wizyta\n• Opłata"
+                    },
+                    {
+                        "title": "Pełnomocnictwo (POA)",
+                        "description": "Szybka i bezpieczna opcja."
+                    },
+                    {
+                        "title": "Certyfikat NIE",
+                        "description": "Ważny dożywotnio."
+                    },
+                    {
+                        "title": "Opcje Rezydencji",
+                        "description": "• UE\n• Non-Lucrative\n• Golden Visa"
+                    },
+                    {
+                        "title": "Dlaczego Baruch Real Estate",
+                        "description": "• Profesjonalna obsługa\n• Wsparcie językowe\n• Kompleksowa pomoc"
+                    },
+                    {
+                        "title": "Potrzebujesz NIE?",
+                        "description": "Skontaktuj się z nami."
+                    }
+                ]
+            },
+            {
+                "id": "sell-your-house-in-costa-del-sol",
+                "title": "Sprzedaj Swój Dom na Costa del Sol",
+                "description": "Spraw, aby Sprzedaż Twojej Nieruchomości w Hiszpanii Była Prosta i Bezpieczna\n\nSprzedajesz nieruchomość w Hiszpanii? Szczególnie w popularnych lokalizacjach takich jak Málaga, Marbella czy Costa del Sol proces ten obejmuje szereg kroków prawnych i administracyjnych, które bez odpowiedniego wsparcia mogą być przytłaczające. Od ustalenia właściwej ceny sprzedaży, przez przygotowanie dokumentów, aż po podpisanie aktu u notariusza, każdy etap wymaga precyzji i profesjonalnego podejścia.\n\nW Baruch Real Estate upraszczamy ten proces dla Ciebie.\n\nNasz doświadczony zespół łączy obsługę nieruchomości i wsparcie prawne w jednym miejscu, zapewniając płynną, przejrzystą i w pełni bezpieczną sprzedaż. Niezależnie od tego, czy mieszkasz w Hiszpanii, czy za granicą.",
+                "image": "/assets/img/all-images/service/sell_your_house_result.webp",
+                "title-list": "Etapy Sprzedaży Nieruchomości",
+                "details": [
+                    {
+                        "title": "1. Wycena Nieruchomości i Analiza Rynku",
+                        "description": "Rozpoczynamy od profesjonalnej wyceny Twojej nieruchomości.\n\nNa podstawie aktualnych danych rynkowych, porównywalnych transakcji oraz unikalnych cech nieruchomości ustalamy realistyczną cenę sprzedaży, która przyciąga poważnych kupujących i maksymalizuje zysk.\n\nNasza znajomość rynku Costa del Sol pozwala skutecznie wypozycjonować nieruchomość od pierwszego dnia."
+                    },
+                    {
+                        "title": "2. Weryfikacja Prawna i Dokumentacja",
+                        "description": "Przed wystawieniem nieruchomości na sprzedaż nasz zespół prawny sprawdza wszystkie niezbędne dokumenty, w tym:\n\n- Akt własności (Escritura de Propiedad)\n- Nota Simple z rejestru nieruchomości\n- Certyfikat energetyczny (CEE)\n- Podatek IBI oraz aktualne rachunki\n\nTen etap zapewnia bezpieczeństwo prawne transakcji i zapobiega późniejszym problemom.\n\nW Baruch Real Estate eksperci nieruchomości i prawa współpracują ze sobą w jednym miejscu."
+                    },
+                    {
+                        "title": "3. Przygotowanie Nieruchomości do Sprzedaży",
+                        "description": "Pierwsze wrażenie ma ogromne znaczenie. Pomagamy zaprezentować nieruchomość w najlepszym świetle poprzez profesjonalne zdjęcia, home staging i drobne ulepszenia.\n\nW razie potrzeby polecamy sprawdzonych lokalnych wykonawców."
+                    },
+                    {
+                        "title": "4. Marketing i Promocja",
+                        "description": "Po przygotowaniu nieruchomości uruchamiamy ukierunkowaną kampanię marketingową.\n\nObejmuje ona:\n\n- Oferty na głównych portalach nieruchomości w Hiszpanii i Europie\n- Profesjonalne zdjęcia, filmy i ujęcia z drona\n- Kampanie w mediach społecznościowych i mailingi\n- Współpracę z agentami partnerskimi w całej Europie\n\nStrategia zapewnia globalny zasięg.\n\nW tym kupujących z Holandii, Belgii, Niemiec, Polski, Szwecji, Wielkiej Brytanii i USA."
+                    },
+                    {
+                        "title": "5. Prezentacje i Kontakt z Klientami",
+                        "description": "Zajmujemy się wszystkimi zapytaniami, prezentacjami i opiniami kupujących.\n\nKażdy klient jest wcześniej weryfikowany.\n\nRegularnie informujemy Cię o postępach."
+                    },
+                    {
+                        "title": "6. Negocjacje i Obsługa Ofert",
+                        "description": "Prowadzimy Cię przez cały proces negocjacji.\n\nDążymy do uzyskania najlepszej ceny i warunków przy pełnej ochronie Twoich interesów.\n\nWsparcie prawne jest integralną częścią procesu."
+                    },
+                    {
+                        "title": "7. Podpisanie Umowy Rezerwacyjnej",
+                        "description": "Po akceptacji oferty przygotowujemy umowę rezerwacyjną (Contrato de Reserva).\n\nUmowa potwierdza zaangażowanie kupującego i wycofuje nieruchomość z rynku.\n\nDbamy o pełną ochronę praw sprzedającego."
+                    },
+                    {
+                        "title": "8. Przygotowanie do Notariusza",
+                        "description": "Koordynujemy wszystkie formalności z notariuszem, prawnikiem kupującego i bankami.\n\nDokumenty i certyfikaty są przygotowane na czas."
+                    },
+                    {
+                        "title": "9. Podpisanie Aktu Notarialnego",
+                        "description": "Finalizacja następuje u notariusza, gdzie następuje przeniesienie własności.\n\nNasi specjaliści nadzorują transakcję i płatności."
+                    },
+                    {
+                        "title": "10. Obsługa Posprzedażowa",
+                        "description": "Po sprzedaży pomagamy w przepisaniu mediów i rozliczeniach podatkowych.\n\nNasze wsparcie trwa od początku do końca."
+                    },
+                    {
+                        "title": "Dlaczego Baruch Real Estate",
+                        "description": "Oferujemy kompleksową obsługę w jednym miejscu, od wyceny po pełne wsparcie prawne.\n\nZapewniamy sprawną realizację i jasną komunikację.\n\nPosiadamy bogate doświadczenie na rynku Costa del Sol i znajomość lokalnych przepisów."
+                    },
+                    {
+                        "title": "Gotowy Sprzedać Nieruchomość w Hiszpanii?",
+                        "description": "Chcesz poznać wartość swojej nieruchomości lub kolejne kroki?\n\nChętnie pomożemy.\n\nSkontaktuj się z nami, aby otrzymać bezpłatną wycenę lub omówić sprzedaż w Málaga, Marbella, Estepona lub na Costa del Sol.\n\nZróbmy tę sprzedaż prostą, bezpieczną i skuteczną."
+                    }
+                ]
+            },
+            {
+                "id": "taxes",
+                "title": "Podatki i Rozliczenie Podatkowe w Hiszpanii",
+                "description": "Wszystko, Co Musisz Wiedzieć o Podatkach w Hiszpanii\n\nNiezależnie od tego, czy mieszkasz w Hiszpanii, kupujesz nieruchomość czy osiągasz dochody ze źródeł hiszpańskich, zrozumienie systemu podatkowego jest kluczowe. Podatki mogą się różnić w zależności od statusu rezydencji, rodzaju dochodu oraz posiadania nieruchomości.\n\nW Baruch Real Estate współpracujemy z zaufanymi księgowymi i doradcami podatkowymi, aby zapewnić prawidłowe, sprawne i zgodne z hiszpańskim prawem rozliczenie podatków, dając Ci spokój ducha i chroniąc przed kosztownymi błędami.",
+                "image": "/assets/img/all-images/service/taxes_result.webp",
+                "title-list": "Podatki dla Rezydentów i Nierezydentów",
+                "details": [
+                    {
+                        "title": "1. Rezydent w Hiszpanii",
+                        "description": "Zazwyczaj jesteś uznawany za rezydenta podatkowego, jeśli mieszkasz w Hiszpanii przez ponad 183 dni w roku lub jeśli znajduje się tam Twoje główne centrum interesów gospodarczych.\n\nRezydenci są zobowiązani do deklarowania:\n\n• Dochodów uzyskiwanych na całym świecie\n• Nieruchomości, inwestycji i aktywów w Hiszpanii i za granicą\n• Zysków kapitałowych, dywidend oraz dochodów z wynajmu"
+                    },
+                    {
+                        "title": "2. Nierezydent w Hiszpanii",
+                        "description": "Nierezydenci płacą podatki wyłącznie od dochodów i aktywów zlokalizowanych w Hiszpanii. Obejmuje to:\n\n• Dochody z wynajmu nieruchomości w Hiszpanii\n• Zyski kapitałowe ze sprzedaży nieruchomości w Hiszpanii\n• Emerytury lub inwestycje pochodzące z Hiszpanii\n\nZrozumienie swojego statusu jest kluczowe, ponieważ stawki podatkowe, ulgi i obowiązki znacznie się różnią."
+                    },
+                    {
+                        "title": "Główne Podatki, z Którymi Możesz Spotkać się w Hiszpanii",
+                        "description": "1. Podatek Dochodowy (IRPF dla rezydentów / IRNR dla nierezydentów)\n• Rezydenci (IRPF): Progresywne opodatkowanie dochodów światowych (do ok. 47%).\n• Nierezydenci (IRNR): Stała stawka podatku od dochodów hiszpańskich (zazwyczaj 19–24%).\n\n2. Podatki od Nieruchomości\n• IBI (Impuesto sobre Bienes Inmuebles): Roczny lokalny podatek od nieruchomości.\n• Plusvalía Municipal: Podatek od wzrostu wartości gruntu przy sprzedaży nieruchomości.\n• Podatek Majątkowy (Impuesto sobre el Patrimonio): Dotyczy rezydentów oraz czasami nierezydentów posiadających aktywa o wysokiej wartości.\n\n3. Podatek od Zysków Kapitałowych\n• Dotyczy zysków ze sprzedaży nieruchomości lub inwestycji w Hiszpanii.\n• Stawki różnią się dla rezydentów i nierezydentów.\n\n4. Podatek od Spadków i Darowizn\n• Obowiązuje przy otrzymaniu nieruchomości, aktywów lub środków pieniężnych w Hiszpanii.\n• Stawki zależą od regionu oraz stopnia pokrewieństwa.\n\n5. VAT / Podatek od Przeniesienia Własności\n• Nowe nieruchomości: Podlegają VAT (IVA) ~10%\n• Nieruchomości z rynku wtórnego: Podlegają podatkowi ITP, zależnemu od regionu (zazwyczaj 7–10%)."
+                    },
+                    {
+                        "title": "Składanie Deklaracji Podatkowej w Hiszpanii",
+                        "description": "Proces składania deklaracji podatkowej obejmuje kilka etapów:\n\nZebranie całej dokumentacji: zaświadczeń o dochodach, danych nieruchomości, wyciągów bankowych itp.\n\nUstalenie statusu podatkowego: rezydent lub nierezydent.\n\nObliczenie dochodu podlegającego opodatkowaniu: z uwzględnieniem ulg i odliczeń.\n\nZłożenie deklaracji w hiszpańskim urzędzie skarbowym (Agencia Tributaria) w obowiązujących terminach.\n\nDla większości osób współpraca z lokalnym księgowym lub doradcą podatkowym jest niezbędna."
+                    },
+                    {
+                        "title": "Jak Baruch Real Estate Może Pomóc",
+                        "description": "Chociaż sami nie jesteśmy księgowymi, współpracujemy z zaufanymi partnerami, którzy:\n\n• Doradzają w zakresie obowiązków podatkowych dla rezydentów i nierezydentów\n• Obsługują hiszpańskie deklaracje podatkowe (IRPF/IRNR)\n• Wspierają w podatkach związanych z nieruchomościami (IBI, Plusvalía, ITP)\n• Doradzają w sprawach spadków, darowizn i podatku majątkowego\n\nKoordynujemy działania, aby Twoje transakcje nieruchomościowe i dochody były w pełni zgodne z hiszpańskim prawem podatkowym."
+                    },
+                    {
+                        "title": "Dlaczego Warto Współpracować z Naszymi Księgowymi",
+                        "description": "• Doświadczenie w hiszpańskim prawie podatkowym\n• Obsługa w Twoim języku\n• Zoptymalizowane rozliczenia podatkowe\n• Kompleksowe wsparcie przy zakupie, sprzedaży i wynajmie nieruchomości\n• Pomoc w terminach i kontaktach z urzędami"
+                    },
+                    {
+                        "title": "Profesjonalna Pomoc Podatkowa",
+                        "description": "Niezależnie od tego, czy mieszkasz w Hiszpanii, czy jesteś właścicielem nieruchomości jako nierezydent, prawidłowe rozliczenie podatków jest kluczowe.\n\nSkontaktuj się z nami, aby uzyskać profesjonalną pomoc podatkową dostosowaną do Twojej sytuacji w Hiszpanii."
+                    }
+                ]
+            }
+        ]
+    },
     "faq": {
         "title": "Często zadawane pytania",
         "question-1": "Jakie usługi oferuje Baruch Real Estate?",
