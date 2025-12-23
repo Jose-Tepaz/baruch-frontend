@@ -8,6 +8,7 @@ interface CategoryData {
     name: string;
     slug: string;
     description?: string;
+    is_visible: boolean; // true if the category is visible, false if it is not
     image?: {
         url: string;
     };
@@ -20,7 +21,7 @@ export function getCategories(locale?: string) {
     }
 
     const currentLocale = getLocaleWithFallback(locale);
-    const queryString = `categories?fields[0]=name&fields[1]=slug&fields[2]=description&populate[image][fields][0]=url&locale=${encodeURIComponent(currentLocale)}`;
+    const queryString = `categories?fields[0]=name&fields[1]=slug&fields[2]=description&fields[3]=is_visible&populate[image][fields][0]=url&locale=${encodeURIComponent(currentLocale)}`;
 
     return query(queryString)
     .then(res => {
@@ -30,11 +31,11 @@ export function getCategories(locale?: string) {
         }
         
         return res.data.map((category: CategoryData) => {
-            const {name, slug, description, image: rawimage} = category;
+            const {name, slug, description, is_visible, image: rawimage} = category;
             const image = rawimage
                 ? (rawimage.url.startsWith('http') ? rawimage.url : `${STRAPI_HOST}${rawimage.url}`)
                 : '';
-            return {name, slug, description, image}
+            return {name, slug, description, is_visible, image}
         })
     })
     .catch(error => {
