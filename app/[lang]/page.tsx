@@ -9,6 +9,8 @@ import imgLandscape from "@/public/assets/img/all-images/home/hp-6.webp"
 import { Metadata } from 'next';
 import { getTestimonials } from "@/services/testimonials";
 import HeroHome from "@/components/sections/HeroHome";
+import JsonLd from "@/components/elements/JsonLd";
+import { Organization } from "schema-dts";
 
 // Importar componentes del cliente dinámicamente
 const Layout = dynamic(() => import("@/components/layout/Layout"), { ssr: true });
@@ -124,6 +126,32 @@ export default async function Home({ params }: Props) {
 
         return (
             <Layout>
+                <JsonLd<Organization>
+                    data={{
+                        '@context': 'https://schema.org',
+                        '@type': 'RealEstateAgent',
+                        name: 'Baruch Real Estate',
+                        url: 'https://baruchrealestate.com',
+                        logo: 'https://baruchrealestate.com/assets/img/logo/logo.png',
+                        description: 'Find your dream property with Baruch Real Estate. We offer the best houses, apartments, and commercial properties.',
+                        address: {
+                            '@type': 'PostalAddress',
+                            addressLocality: 'Your City',
+                            addressRegion: 'Your Region', 
+                            addressCountry: 'Your Country'
+                        },
+                        contactPoint: {
+                            '@type': 'ContactPoint',
+                            telephone: '+1-234-567-8900',
+                            contactType: 'customer service'
+                        },
+                        sameAs: [
+                            'https://www.facebook.com/baruchrealestate',
+                            'https://www.instagram.com/baruchrealestate',
+                            'https://twitter.com/baruchrealestate'
+                        ]
+                    }}
+                />
                 <HeroHome properties={properties || []} />
                 <SearchBox 
                     categories={categories || []}
