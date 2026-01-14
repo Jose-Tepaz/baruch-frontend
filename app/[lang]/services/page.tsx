@@ -45,11 +45,11 @@ export async function generateMetadata({ params }: ServicesPageProps): Promise<M
       description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
       type: 'website',
       locale: lang,
-      url: `https://baruchrealestate.com/${lang}/services`,
+      url: `https://www.baruchrealestate.com/${lang}/services`,
       siteName: 'Baruch Real Estate',
       images: [
         {
-          url: 'https://baruchrealestate.com/services-og.jpg',
+          url: 'https://www.baruchrealestate.com/services-og.jpg',
           width: 1200,
           height: 630,
           alt: 'Baruch Real Estate Services'
@@ -60,10 +60,10 @@ export async function generateMetadata({ params }: ServicesPageProps): Promise<M
       card: 'summary_large_image',
       title: titles[lang as keyof typeof titles] || titles.en,
       description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
-      images: ['https://baruchrealestate.com/services-og.jpg']
+      images: ['https://www.baruchrealestate.com/services-og.jpg']
     },
     alternates: {
-      canonical: `https://baruchrealestate.com/${lang}/services`,
+      canonical: `https://www.baruchrealestate.com/${lang}/services`,
       languages: {
         'en': '/en/services',
         'es': '/es/services',
