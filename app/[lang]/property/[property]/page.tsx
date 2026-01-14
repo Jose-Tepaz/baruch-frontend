@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: PropertyPageProps): Promise<M
       description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
       type: 'website',
       locale: lang,
-      url: `https://baruchrealestate.com/${lang}/property/${property}`,
+      url: `https://www.baruchrealestate.com/${lang}/property/${property}`,
       siteName: 'Baruch Real Estate',
       images: propertyData.main_image ? [
         {
@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: PropertyPageProps): Promise<M
       images: propertyData.main_image ? [propertyData.main_image] : undefined
     },
     alternates: {
-      canonical: `https://baruchrealestate.com/${lang}/property/${property}`,
+      canonical: `https://www.baruchrealestate.com/${lang}/property/${property}`,
       languages: {
         'en': `/en/property/${property}`,
         'es': `/es/property/${property}`,

@@ -58,11 +58,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
       type: 'website',
       locale: lang,
-      url: `https://baruchrealestate.com/${lang}`,
+      url: `https://www.baruchrealestate.com/${lang}`,
       siteName: 'Baruch Real Estate',
       images: [
         {
-          url: 'https://baruchrealestate.com/og-image.jpg',
+          url: 'https://www.baruchrealestate.com/og-image.jpg',
           width: 1200,
           height: 630,
           alt: 'Baruch Real Estate'
@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: titles[lang as keyof typeof titles] || titles.en,
       description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
-      images: ['https://baruchrealestate.com/og-image.jpg']
+      images: ['https://www.baruchrealestate.com/og-image.jpg']
     },
     robots: {
       index: true,
@@ -87,7 +87,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     alternates: {
-      canonical: `https://baruchrealestate.com/${lang}`,
+      canonical: `https://www.baruchrealestate.com/${lang}`,
       languages: {
         'en': '/en',
         'es': '/es',
@@ -131,8 +131,8 @@ export default async function Home({ params }: Props) {
                         '@context': 'https://schema.org',
                         '@type': 'RealEstateAgent',
                         name: 'Baruch Real Estate',
-                        url: 'https://baruchrealestate.com',
-                        logo: 'https://baruchrealestate.com/assets/img/logo/logo.png',
+                        url: 'https://www.baruchrealestate.com',
+                        logo: 'https://www.baruchrealestate.com/assets/img/logo/logo.png',
                         description: 'Find your dream property with Baruch Real Estate. We offer the best houses, apartments, and commercial properties.',
                         address: {
                             '@type': 'PostalAddress',

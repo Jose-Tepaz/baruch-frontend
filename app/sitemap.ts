@@ -3,9 +3,9 @@ import { getProperties } from '@/services/get-properties'
 import { getCategories } from '@/services/categories'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://baruchrealestate.com'
+  const baseUrl = 'https://www.baruchrealestate.com'
   const locales = ['en', 'es', 'fr', 'de', 'pl', 'sv', 'nl']
-  
+
   const sitemap: MetadataRoute.Sitemap = []
 
   // Páginas estáticas principales
@@ -14,7 +14,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/properties',
     '/about-us',
     '/services',
-    '/contact'
+    '/contact',
+    '/testimonials',
+    '/privacy-policy'
   ]
 
   // Agregar páginas estáticas para todos los idiomas
@@ -34,7 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const locale of locales) {
       const result = await getProperties({ locale })
       const properties = result?.properties || []
-      
+
       for (const property of properties) {
         sitemap.push({
           url: `${baseUrl}/${locale}/property/${property.slug}`,
@@ -52,7 +54,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   try {
     for (const locale of locales) {
       const categories = await getCategories(locale)
-      
+
       for (const category of categories) {
         sitemap.push({
           url: `${baseUrl}/${locale}/categories/${category.slug}`,

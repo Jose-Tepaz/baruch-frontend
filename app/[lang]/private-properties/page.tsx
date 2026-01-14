@@ -49,11 +49,11 @@ export async function generateMetadata({ params }: PropertiesPageProps): Promise
       description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
       type: 'website',
       locale: lang,
-      url: `https://baruchrealestate.com/${lang}/private-properties`,
+      url: `https://www.baruchrealestate.com/${lang}/private-properties`,
       siteName: 'Baruch Real Estate',
     },
     alternates: {
-      canonical: `https://baruchrealestate.com/${lang}/private-properties`,
+      canonical: `https://www.baruchrealestate.com/${lang}/private-properties`,
       languages: {
         'en': '/en/private-properties',
         'es': '/es/private-properties',
