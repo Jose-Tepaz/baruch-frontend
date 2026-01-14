@@ -14,18 +14,29 @@ interface StrapiPagination {
 interface StrapiMeta {
   pagination: StrapiPagination
 }
+
+/**
+ * Representa el estado de una propiedad (ej. Venta, Renta).
+ */
 interface PropertyStatus {
   id: number
   documentId: string
   Title: string
 }
 
+/**
+ * Representa la ubicación geográfica de la propiedad.
+ */
 interface Location {
   id: number
   documentId: string
   name: string
   slug: string
 }
+/**
+ * Estructura de una propiedad mapeada para uso en el frontend.
+ * Esta es la versión "limpia" de los datos que usan los componentes.
+ */
 export interface MappedProperty {
   id: number
   documentId: string
@@ -53,6 +64,7 @@ export interface PropertyListResponse {
 }
 
 // Definir la interfaz para la propiedad
+// Definir la interfaz para la propiedad cruda que viene de Strapi
 interface PropertyData {
   id: number
   title: string
@@ -80,6 +92,11 @@ interface PropertyData {
 }
 
 // Función para verificar si el usuario está autenticado (lado servidor)
+/**
+ * Verifica si el usuario está autenticado.
+ * Funciona tanto en el lado del servidor (revisando cookies) como en el cliente (revisando localStorage).
+ * Utilizado para determinar si se deben mostrar propiedades privadas.
+ */
 function isUserAuthenticated(): boolean {
   // En servidor, verificar el token desde cookies o headers
   if (typeof window === 'undefined') {
@@ -99,23 +116,27 @@ function isUserAuthenticated(): boolean {
   return false;
 }
 
+/**
+ * Tipos de filtros disponibles para la búsqueda de propiedades.
+ * Permite filtrar por múltiples criterios simultáneamente.
+ */
 export type getPropertiesFilter = {
-  categorySlug?: string
-  categories?: string[]
-  propertyStatus?: string
-  statuses?: string[]
-  bedrooms?: string
-  bathrooms?: string
-  min_price?: string
-  max_price?: string
-  location?: string
-  locations?: string[]
-  locationSlug?: string
-  amenities?: string
-  amenitiesArray?: string[]
-  locale?: string
-  page?: number
-  pageSize?: number
+  categorySlug?: string      // Slug de una categoría única
+  categories?: string[]      // Array de slugs de categorías (filtro múltiple)
+  propertyStatus?: string    // Título de un estado único
+  statuses?: string[]        // Array de títulos de estados (filtro múltiple)
+  bedrooms?: string          // Número mínimo de habitaciones
+  bathrooms?: string         // Número mínimo de baños
+  min_price?: string         // Precio mínimo
+  max_price?: string         // Precio máximo
+  location?: string          // Nombre parcial de ubicación
+  locations?: string[]       // Array de slugs de ubicación (filtro múltiple)
+  locationSlug?: string      // Slug de ubicación única
+  amenities?: string         // Nombre parcial de amenidad
+  amenitiesArray?: string[]  // Array de nombres de amenidades (filtro múltiple)
+  locale?: string           // Idioma
+  page?: number             // Número de página
+  pageSize?: number         // Tamaño de página
   [key: string]: any
 }
 
@@ -123,6 +144,16 @@ export type getPropertiesFilter = {
 ///properties?populate[main_image][fields][0]=url&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&filters[category][slug][$contains]=apartaments 
 
 // Función para obtener propiedades filtradas por categoría
+/**
+ * Obtiene propiedades filtradas por una categoría específica.
+ * Esta función es más simple y específica que getProperties.
+ * 
+ * @param categorySlug - El slug de la categoría a filtrar
+ * @param propertyStatus - (Opcional) El estado de la propiedad (ej. Venta)
+ * @param locale - Idioma actual
+ * @param page - Número de página para paginación
+ * @param pageSize - Cantidad de items por página
+ */
 export function getPropertiesByCategory(
   categorySlug: string,
   propertyStatus?: string,
@@ -203,84 +234,95 @@ export function getPropertiesByCategory(
         data: mapped,
         meta: meta ?? { pagination: { page, pageSize, pageCount: Math.ceil(mapped.length / pageSize) || 1, total: mapped.length } }
       }
-      
+
     })
 }
 
+/**
+ * Función principal para obtener propiedades con filtros avanzados.
+ * Soporta filtrado múltiple (OR dentro de la misma categoría, AND entre categorías distintas).
+ * 
+ * @param filter - Objeto con los criterios de filtrado
+ * @returns Promise con la lista de propiedades y metadata de paginación
+ */
 export function getProperties(filter: getPropertiesFilter = {}): Promise<PropertyListResponse> {
   const currentLocale = getLocaleWithFallback(filter.locale)
 
   const page = typeof filter.page === 'number' && filter.page > 0 ? filter.page : 1
   const pageSize = typeof filter.pageSize === 'number' && filter.pageSize > 0 ? filter.pageSize : 9
 
-  // Arreglar la query para populizar correctamente los campos
+  // Construcción de la query base: populamos todas las relaciones necesarias
   let queryString = 'properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[amenities][fields][0]=Name&populate[amenities][fields][1]=slug&populate[location][fields][0]=name&populate[location][fields][1]=slug'
 
   // Agregar parámetro locale
   queryString += `&locale=${encodeURIComponent(currentLocale)}`
 
-  // paginación
+  // Agregar paginación
   queryString += `&pagination[page]=${encodeURIComponent(String(page))}&pagination[pageSize]=${encodeURIComponent(String(pageSize))}`
 
-  // Contadores para agrupar $or por tipo de filtro usando $and
+  // Contadores para agrupar filtros complejos en Strapi
+  // AND se usa para combinar diferentes tipos de filtros (ej. Categoría Y Precio)
+  // OR se usa dentro de un mismo tipo cuando hay múltiples selecciones (ej. Categoría A O Categoría B)
   let andIndex = 0;
   let categoryOrIndex = 0;
   let statusOrIndex = 0;
   let locationOrIndex = 0;
   let amenityOrIndex = 0;
 
-  // Aplicar filtro de categoría solo si no hay múltiples categorías seleccionadas
+  // 1. FILTRO DE CATEGORÍAS
   if (filter.categories && filter.categories.length > 0) {
-    // Para múltiples categorías, usar $and[$andIndex][$or] para agrupar
+    // Si hay múltiples categorías, usamos lógica OR entre ellas
     filter.categories.forEach((slug) => {
       queryString += `&filters[\$and][${andIndex}][\$or][${categoryOrIndex}][category][slug][\$eq]=${encodeURIComponent(slug)}`;
       categoryOrIndex++;
     });
     andIndex++;
   } else if (filter.categorySlug && filter.categorySlug.trim() !== '') {
-    // Solo aplicar filtro de texto si no hay múltiples categorías
+    // Filtro simple por una sola categoría
     queryString += `&filters[category][slug][$contains]=${filter.categorySlug}`
   }
 
-  // Aplicar filtro de status solo si no hay múltiples status seleccionados
+  // 2. FILTRO DE ESTADO (Venta/Renta)
   if (filter.statuses && filter.statuses.length > 0) {
-    // Para múltiples status, usar $and[$andIndex][$or] para agrupar
+    // Si hay múltiples estados, lógica OR entre ellos
     filter.statuses.forEach((status) => {
       queryString += `&filters[\$and][${andIndex}][\$or][${statusOrIndex}][property_status][Title][\$eq]=${encodeURIComponent(status)}`;
       statusOrIndex++;
     });
     andIndex++;
   } else if (filter.propertyStatus && filter.propertyStatus.trim() !== '') {
-    // Solo aplicar filtro de texto si no hay múltiples status
+    // Filtro simple por un solo estado
     queryString += `&filters[property_status][Title][$eq]=${encodeURIComponent(filter.propertyStatus)}`
   }
 
+  // 3. FILTROS NUMÉRICOS (Habitaciones, Baños, Precio)
+  // 3. FILTROS NUMÉRICOS (Habitaciones, Baños, Precio) - AHORA CONSULTAN A LAS UNIDADES
   if (filter.bedrooms && filter.bedrooms.trim() !== '') {
-    queryString += `&filters[bedrooms][$gte]=${encodeURIComponent(filter.bedrooms)}`
+    queryString += `&filters[units][bedrooms][$gte]=${encodeURIComponent(filter.bedrooms)}`
   }
 
   if (filter.bathrooms && filter.bathrooms.trim() !== '') {
-    queryString += `&filters[bathrooms][$gte]=${encodeURIComponent(filter.bathrooms)}`
+    queryString += `&filters[units][bathrooms][$gte]=${encodeURIComponent(filter.bathrooms)}`
   }
 
   if (filter.min_price && filter.min_price.trim() !== '') {
-    queryString += `&filters[price][$gte]=${encodeURIComponent(filter.min_price)}`
+    queryString += `&filters[units][price][$gte]=${encodeURIComponent(filter.min_price)}`
   }
 
   if (filter.max_price && filter.max_price.trim() !== '') {
-    queryString += `&filters[price][$lte]=${encodeURIComponent(filter.max_price)}`
+    queryString += `&filters[units][price][$lte]=${encodeURIComponent(filter.max_price)}`
   }
 
-  // Aplicar filtro de location solo si no hay múltiples locations seleccionadas
+  // 4. FILTRO DE UBICACIÓN
   if (filter.locations && filter.locations.length > 0) {
-    // Para múltiples locations, usar $and[$andIndex][$or] para agrupar
+    // Múltiples ubicaciones: lógica OR
     filter.locations.forEach((slug) => {
       queryString += `&filters[\$and][${andIndex}][\$or][${locationOrIndex}][location][slug][\$eq]=${encodeURIComponent(slug)}`;
       locationOrIndex++;
     });
     andIndex++;
   } else if (filter.location && filter.location.trim() !== '') {
-    // Solo aplicar filtro de texto si no hay múltiples locations
+    // Búsqueda por nombre parcial
     queryString += `&filters[location][name][$containsi]=${encodeURIComponent(filter.location)}`
   }
 
@@ -288,17 +330,16 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
     queryString += `&filters[location][slug][$eq]=${encodeURIComponent(filter.locationSlug)}`
   }
 
-  // Aplicar filtro de amenities solo si no hay múltiples amenities seleccionadas
+  // 5. FILTRO DE AMENIDADES
   if (filter.amenitiesArray && filter.amenitiesArray.length > 0) {
-    // Para múltiples amenities, usar $and[$andIndex][$or] para agrupar
-    // Para relaciones many-to-many en Strapi, usamos $or con la estructura correcta
+    // Múltiples amenidades: lógica OR (Trae propiedades que tengan AL MENOS UNA de las amenidades seleccionadas)
     filter.amenitiesArray.forEach((amenity) => {
       queryString += `&filters[\$and][${andIndex}][\$or][${amenityOrIndex}][amenities][Name][\$eq]=${encodeURIComponent(amenity)}`;
       amenityOrIndex++;
     });
     andIndex++;
   } else if (filter.amenities && filter.amenities.trim() !== '') {
-    // Solo aplicar filtro de texto si no hay múltiples amenities
+    // Filtro simple por texto en amenidades
     queryString += `&filters[amenities][Name][$contains]=${encodeURIComponent(filter.amenities)}`
   }
 
@@ -383,6 +424,10 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
 }
 
 // Función para obtener una propiedad específica por documentId
+/**
+ * Busca una propiedad individual usando su ID de documento.
+ * Popula todas las relaciones necesarias para la vista de detalle (galería, categoría, amenidades, etc).
+ */
 export function getPropertyByDocumentId(documentId: string, locale?: string) {
   const currentLocale = getLocaleWithFallback(locale)
   const queryString = `properties/${documentId}?populate[main_image][fields][0]=url&populate[gallery][fields][0]=url&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[property_status][fields][0]=Title&populate[location][fields][0]=name&populate[location][fields][1]=slug&populate[amenities][fields][0]=Name&populate[amenities][fields][1]=slug&locale=${encodeURIComponent(currentLocale)}`
