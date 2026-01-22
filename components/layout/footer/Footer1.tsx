@@ -522,7 +522,7 @@ export default function Footer1() {
                             <div className="space24" />
                             <div >
                                 <div className="copyright-area" style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-                                    <p className="text-white">© 2025 Baruch Real Estate All Rights Reserved.</p>
+                                    <p className="text-white">© {new Date().getFullYear()} Baruch Real Estate All Rights Reserved.</p>
 
                                 </div>
                             </div>
