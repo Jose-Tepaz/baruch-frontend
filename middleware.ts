@@ -2,31 +2,6 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 const locales = ['en', 'es', 'fr', 'de', 'pl', 'sv', 'nl'];
-const defaultLocale = 'en';
-
-// Función para obtener el idioma preferido del usuario
-function getPreferredLocale(request: NextRequest): string {
-  // Intentar obtener el idioma de la cookie
-  const localeCookie = request.cookies.get('NEXT_LOCALE');
-  if (localeCookie?.value && locales.includes(localeCookie.value)) {
-    return localeCookie.value;
-  }
-
-  // Intentar obtener el idioma del navegador
-  const acceptLanguage = request.headers.get('accept-language');
-  if (acceptLanguage) {
-    const preferredLocale = acceptLanguage
-      .split(',')[0]
-      .split('-')[0]
-      .toLowerCase();
-    
-    if (locales.includes(preferredLocale)) {
-      return preferredLocale;
-    }
-  }
-
-  return defaultLocale;
-}
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
@@ -42,21 +17,31 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Si es la ruta raíz, redirigir al idioma preferido
+  // Permitir la ruta raíz sin redirección (servirá contenido en inglés)
   if (pathname === '/') {
-    const preferredLocale = getPreferredLocale(request);
-    return NextResponse.redirect(new URL(`/${preferredLocale}`, request.url));
+    return NextResponse.next();
   }
 
   // Obtener el primer segmento de la ruta
   const firstSegment = pathname.split('/')[1];
 
-  // Si el primer segmento no es un idioma válido, redirigir
-  if (!locales.includes(firstSegment)) {
-    const preferredLocale = getPreferredLocale(request);
-    return NextResponse.redirect(new URL(`/${preferredLocale}${pathname}`, request.url));
+  // Si el primer segmento es 'en', redirigir a la versión sin prefijo (excepto si es solo '/en')
+  if (firstSegment === 'en') {
+    const restOfPath = pathname.substring(3); // Remover '/en'
+    if (restOfPath === '') {
+      // Si es solo '/en', redirigir a '/'
+      return NextResponse.redirect(new URL('/', request.url));
+    }
+    // Redirigir a la ruta sin el prefijo '/en'
+    return NextResponse.redirect(new URL(restOfPath, request.url));
   }
 
+  // Si el primer segmento parece ser un código de idioma pero no es válido, redirigir a raíz
+  if (firstSegment && firstSegment.length === 2 && !locales.includes(firstSegment)) {
+    return NextResponse.redirect(new URL('/', request.url));
+  }
+
+  // Permitir todas las demás rutas (con o sin prefijo de idioma)
   return NextResponse.next();
 }
 

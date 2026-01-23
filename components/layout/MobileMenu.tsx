@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 import AuthButtons from "@/components/auth/AuthButtons";
 import { useTranslation } from "@/utils/i18n-simple";
 
@@ -8,6 +9,8 @@ import { useTranslation } from "@/utils/i18n-simple";
 export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
     const [isAccordion, setIsAccordion] = useState(0);
     const { t } = useTranslation('common');
+    const getLocalizedPath = useLocalizedPath();
+    
     const handleAccordion = (key: any) => {
         setIsAccordion((prevState) => (prevState === key ? null : key));
     };
@@ -19,7 +22,7 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
                     <div className="vl-offcanvas-wrapper">
                         <div className="vl-offcanvas-header d-flex justify-content-between align-items-center mb-90">
                             <div className="vl-offcanvas-logo">
-                                <Link href="/">
+                                <Link href={getLocalizedPath('/')}>
                                     <img src="/assets/img/logo/logo1.png" alt="housa" />
                                 </Link>
                             </div>
@@ -41,26 +44,26 @@ export default function MobileMenu({ isMobileMenu, handleMobileMenu }: any) {
                                     
                                     
                                     <li>
-                                        <Link href="/properties" className="options-mobile-menu" >
+                                        <Link href={getLocalizedPath('/properties')} className="options-mobile-menu" >
                                             {t('navigation.properties')}
                                         </Link>
                                     </li>
                                     <li>
                                         <div className={`mobile-dropdown ${isAccordion === 1 ? 'open' : ''}`}>
-                                            <Link href="/about-us" className="options-mobile-menu">
+                                            <Link href={getLocalizedPath('/about-us')} className="options-mobile-menu">
                                                 {t('navigation.about')}
                                             </Link>
-                                            <Link href="/magazine" className="options-mobile-menu">
+                                            <Link href={getLocalizedPath('/magazine')} className="options-mobile-menu">
                                                 {t('footer.title-2-footer')}
                                             </Link>
-                                            <Link href="/testimonials" className="options-mobile-menu">
+                                            <Link href={getLocalizedPath('/testimonials')} className="options-mobile-menu">
                                                 {t('footer.title-3-footer')}
                                             </Link>
                                             
                                         </div>
                                         </li>
                                     <li>
-                                        <Link href="/services" className="options-mobile-menu">
+                                        <Link href={getLocalizedPath('/services')} className="options-mobile-menu">
                                             {t('navigation.services')}
                                         </Link>
                                     </li>

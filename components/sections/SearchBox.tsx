@@ -60,9 +60,11 @@ const fallbackCategories: Category[] = [
 export default function SearchBox({ categories = fallbackCategories, propertyStatuses = [], amenities = [], locations = [] }: SearchBoxProps) {
     const router = useRouter();
     const params = useParams();
-    const lang = params.lang as string;
     const { t, i18n } = useTranslation('common');
     const [showMoreFilters, setShowMoreFilters] = useState(false);
+    
+    // Detectar el idioma actual - si no hay params.lang, estamos en la raíz (inglés)
+    const lang = (params.lang as string) || 'en';
     
     // Estados para filtros multi-select
     const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
@@ -116,7 +118,10 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
             });
         }
 
-        const finalUrl = `/${lang}/properties?${params.toString()}`;
+        // Construir URL correctamente - sin prefijo para inglés, con prefijo para otros idiomas
+        const finalUrl = lang === 'en' 
+            ? `/properties?${params.toString()}`
+            : `/${lang}/properties?${params.toString()}`;
         // Navigate to properties page with query parameters
         router.push(finalUrl);
     };

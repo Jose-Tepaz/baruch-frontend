@@ -2,6 +2,7 @@
 import Link from "next/link";
 import logoWhite from '@/public/assets/img/logo/logo-baruch-white.svg';
 import { useTranslation } from "@/utils/i18n-simple";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 import { useEffect, useState, Fragment } from "react";
 import { useParams } from "next/navigation";
 
@@ -15,8 +16,10 @@ interface Category {
 
 export default function Footer1() {
     const { t } = useTranslation('common')
+    const getLocalizedPath = useLocalizedPath();
     const params = useParams();
-    const locale = params.lang as string;
+    // Detectar el idioma actual - si no hay params.lang, estamos en la raíz (inglés)
+    const locale = (params.lang as string) || 'en';
     const [categories, setCategories] = useState<Category[]>([]);
     const [loading, setLoading] = useState(true);
     const [email, setEmail] = useState('');
@@ -411,22 +414,22 @@ export default function Footer1() {
                                         <p className="text-white text-size-large text-weight-medium" style={{ marginBottom: '16px' }}>{t('footer.head-title-1')}</p>
                                         <ul className="text-white">
                                             <li>
-                                                <Link href="/" className="text-white">{t('footer.title-1-footer')}</Link>
+                                                <Link href={getLocalizedPath('/')} className="text-white">{t('footer.title-1-footer')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/about-us" className="text-white">{t('footer.title-2-footer')}</Link>
+                                                <Link href={getLocalizedPath('/about-us')} className="text-white">{t('footer.title-2-footer')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/testimonials" className="text-white">{t('footer.title-3-footer')}</Link>
+                                                <Link href={getLocalizedPath('/testimonials')} className="text-white">{t('footer.title-3-footer')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/contact" className="text-white">{t('footer.title-4-footer')}</Link>
+                                                <Link href={getLocalizedPath('/contact')} className="text-white">{t('footer.title-4-footer')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/privacy-policy" className="text-white">{t('footer.title-5-footer')}</Link>
+                                                <Link href={getLocalizedPath('/privacy-policy')} className="text-white">{t('footer.title-5-footer')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/privacy-policy" className="text-white">{t('footer.title-6-footer')}</Link>
+                                                <Link href={getLocalizedPath('/privacy-policy')} className="text-white">{t('footer.title-6-footer')}</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -438,25 +441,25 @@ export default function Footer1() {
                                         <p className="text-white text-size-large text-weight-medium" style={{ marginBottom: '16px' }}>{t('footer.title-services')}</p>
                                         <ul className="text-white">
                                             <li>
-                                                <Link href={`/${locale}/services/buying-representation`} className="text-white" >{t('footer.title-services-1')}</Link>
+                                                <Link href={getLocalizedPath('/services/buying-representation')} className="text-white" >{t('footer.title-services-1')}</Link>
                                             </li>
                                             <li>
-                                                <Link href={`/${locale}/services/sell-your-house-in-costa-del-sol`} className="text-white" >{t('footer.title-services-2')}</Link>
+                                                <Link href={getLocalizedPath('/services/sell-your-house-in-costa-del-sol')} className="text-white" >{t('footer.title-services-2')}</Link>
                                             </li>
                                             <li>
-                                                <Link href={`/${locale}/services/residency-nie`} className="text-white" >{t('footer.title-services-3')}</Link>
+                                                <Link href={getLocalizedPath('/services/residency-nie')} className="text-white" >{t('footer.title-services-3')}</Link>
                                             </li>
                                             <li>
-                                                <Link href={`/${locale}/services/finance`} className="text-white" >{t('footer.title-services-4')}</Link>
+                                                <Link href={getLocalizedPath('/services/finance')} className="text-white" >{t('footer.title-services-4')}</Link>
                                             </li>
                                             <li>
-                                                <Link href={`/${locale}/services/insurance-services`} className="text-white" >{t('footer.title-services-5')}</Link>
+                                                <Link href={getLocalizedPath('/services/insurance-services')} className="text-white" >{t('footer.title-services-5')}</Link>
                                             </li>
                                             <li>
-                                                <Link href={`/${locale}/services/taxes`} className="text-white" >{t('footer.title-services-6')}</Link>
+                                                <Link href={getLocalizedPath('/services/taxes')} className="text-white" >{t('footer.title-services-6')}</Link>
                                             </li>
                                             <li>
-                                                <Link href={`/${locale}/services/legal-services`} className="text-white" >{t('footer.title-services-7')}</Link>
+                                                <Link href={getLocalizedPath('/services/legal-services')} className="text-white" >{t('footer.title-services-7')}</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -468,29 +471,29 @@ export default function Footer1() {
                                         <p className="text-white text-size-large text-weight-medium" style={{ marginBottom: '16px' }}>{t('footer.head-title-3')}</p>
                                         <ul className="text-white">
                                             <li>
-                                                <Link href="/en/properties?location=marbella" className="text-white">{t('footer.title-popular-locations-1')}</Link>
+                                                <Link href={getLocalizedPath('/properties?location=marbella')} className="text-white">{t('footer.title-popular-locations-1')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/en/properties?location=mijas" className="text-white">{t('footer.title-popular-locations-2')}</Link>
+                                                <Link href={getLocalizedPath('/properties?location=mijas')} className="text-white">{t('footer.title-popular-locations-2')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/en/properties?location=estepona" className="text-white">{t('footer.title-popular-locations-3')}</Link>
+                                                <Link href={getLocalizedPath('/properties?location=estepona')} className="text-white">{t('footer.title-popular-locations-3')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/en/properties?location=sotogrande" className="text-white">{t('footer.title-popular-locations-4')}</Link>
+                                                <Link href={getLocalizedPath('/properties?location=sotogrande')} className="text-white">{t('footer.title-popular-locations-4')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/en/properties?location=the+golden+mile" className="text-white">{t('footer.title-popular-locations-5')}</Link>
+                                                <Link href={getLocalizedPath('/properties?location=the+golden+mile')} className="text-white">{t('footer.title-popular-locations-5')}</Link>
                                             </li>
 
                                             <li>
-                                                <Link href="/en/properties?location=rincon" className="text-white">{t('footer.title-popular-locations-7')}</Link>
+                                                <Link href={getLocalizedPath('/properties?location=rincon')} className="text-white">{t('footer.title-popular-locations-7')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/en/properties?location=torrox" className="text-white">{t('footer.title-popular-locations-8')}</Link>
+                                                <Link href={getLocalizedPath('/properties?location=torrox')} className="text-white">{t('footer.title-popular-locations-8')}</Link>
                                             </li>
                                             <li>
-                                                <Link href="/en/properties?location=malaga" className="text-white">{t('footer.title-popular-locations-9')}</Link>
+                                                <Link href={getLocalizedPath('/properties?location=malaga')} className="text-white">{t('footer.title-popular-locations-9')}</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -504,16 +507,16 @@ export default function Footer1() {
                                         <ul className="text-white">
 
                                             <li>
-                                                <Link href={`/en/properties?category=villas`} className="text-white">{t('footer.category-1')}</Link>
+                                                <Link href={getLocalizedPath('/properties?category=villas')} className="text-white">{t('footer.category-1')}</Link>
                                             </li>
                                             <li>
-                                                <Link href={`/en/properties?category=apartments`} className="text-white">{t('footer.category-2')}</Link>
+                                                <Link href={getLocalizedPath('/properties?category=apartments')} className="text-white">{t('footer.category-2')}</Link>
                                             </li>
                                             <li>
-                                                <Link href={`/en/properties?property_status=New+Developments`} className="text-white">{t('footer.category-3')}</Link>
+                                                <Link href={getLocalizedPath('/properties?property_status=New+Developments')} className="text-white">{t('footer.category-3')}</Link>
                                             </li>
                                             <li>
-                                                <Link href={`/en/properties?category=golf-properties`} className="text-white">{t('footer.category-4')}</Link>
+                                                <Link href={getLocalizedPath('/properties?category=golf-properties')} className="text-white">{t('footer.category-4')}</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -530,8 +533,6 @@ export default function Footer1() {
                     </div>
                 </div>
             </div>
-
-
         </>
     );
 }

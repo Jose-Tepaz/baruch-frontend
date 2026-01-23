@@ -112,8 +112,10 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
     const router = useRouter();
     const searchParams = useSearchParams();
     const params = useParams();
-    const lang = params.lang as string;
     const { t } = useTranslation('common');
+    
+    // Detectar el idioma actual - si no hay params.lang, estamos en la raíz (inglés)
+    const lang = (params.lang as string) || 'en';
     
     const [keyword, setKeyword] = useState('');
     const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
@@ -320,7 +322,11 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         if (finalMaxPrice) params.set('max_price', finalMaxPrice);
         
         const queryString = params.toString();
-        const newUrl = `/${lang}/properties${queryString ? `?${queryString}` : ''}`;
+        
+        // Construir URL correctamente - sin prefijo para inglés, con prefijo para otros idiomas
+        const newUrl = lang === 'en' 
+            ? `/properties${queryString ? `?${queryString}` : ''}`
+            : `/${lang}/properties${queryString ? `?${queryString}` : ''}`;
         
         router.push(newUrl);
     };
@@ -340,7 +346,10 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
         setBathrooms('');
         setMinPrice('');
         setMaxPrice('');
-        router.push(`/${lang}/properties`);
+        
+        // Construir URL correctamente - sin prefijo para inglés, con prefijo para otros idiomas
+        const resetUrl = lang === 'en' ? '/properties' : `/${lang}/properties`;
+        router.push(resetUrl);
     };
     
     // Handlers para aplicar filtros inmediatamente

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 import LanguageSelector from "@/components/elements/LanguageSelector";
 import AuthButtons from "@/components/auth/AuthButtons";
 import { useTranslation } from "@/utils/i18n-simple";
@@ -9,6 +10,8 @@ import styles from "./Header1.module.css";
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any) {
     const { t } = useTranslation('common')
+    const getLocalizedPath = useLocalizedPath();
+    
     const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
     const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
     const aboutDropdownRef = useRef<HTMLLIElement>(null);
@@ -63,7 +66,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                     <div className="row align-items-center">
                         <div className="col-lg-3 col-md-6 col-6">
                             <div className="vl-logo">
-                                <Link href="/">
+                                <Link href={getLocalizedPath('/')}>
                                     <img src="/assets/img/logo/logo1.png" alt="housa" />
                                 </Link>
                             </div>
@@ -74,7 +77,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                     <ul>
                                         
                                             <li>
-                                                <Link href="/properties">{t('navigation.properties')}</Link>
+                                                <Link href={getLocalizedPath('/properties')}>{t('navigation.properties')}</Link>
                                             </li>
                                             
                                             <li
@@ -84,7 +87,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                                 onMouseLeave={() => setAboutDropdownOpen(false)}
                                             >
                                                 <Link
-                                                    href="/about-us"
+                                                    href={getLocalizedPath('/about-us')}
                                                     className={`dropdown-toggle ${styles.dropdownToggle}`}
                                                     tabIndex={0}
                                                     onFocus={() => setAboutDropdownOpen(true)}
@@ -95,21 +98,21 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                                 <ul className={`dropdown-menu ${styles.dropdownMenu} ${aboutDropdownOpen ? styles.show : ''}`}>
                                                     
                                                     <li>
-                                                        <Link className={`dropdown-item ${styles.dropdownItem }`} style={{ pointerEvents: 'none', cursor: 'not-allowed' }} href="/magazine">{t('navigation.magazine')}</Link>
+                                                        <Link className={`dropdown-item ${styles.dropdownItem }`} style={{ pointerEvents: 'none', cursor: 'not-allowed' }} href={getLocalizedPath('/magazine')}>{t('navigation.magazine')}</Link>
                                                     </li>
                                                     <li>
-                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href="/testimonials">{t('navigation.testimonials')}</Link>
+                                                        <Link className={`dropdown-item ${styles.dropdownItem}`} href={getLocalizedPath('/testimonials')}>{t('navigation.testimonials')}</Link>
                                                     </li>
                                                     
                                                 </ul>
                                             </li>
                                             <li>
-                                                <Link href="/services">{t('navigation.services')}</Link>
+                                                <Link href={getLocalizedPath('/services')}>{t('navigation.services')}</Link>
                                             </li>
                                             
 
                                             <li>    
-                                                <Link href="/contact">{t('navigation.contact')}</Link>
+                                                <Link href={getLocalizedPath('/contact')}>{t('navigation.contact')}</Link>
                                             </li>
                                         
                                     </ul>
@@ -123,7 +126,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu }: any)
                                     <AuthButtons />
 
                                     <div className="btn-area1" style={{ marginTop: '0px' }}>
-                                    <Link href="/contact" className="vl-btn1" style={{ padding: '12px 4px 12px 16px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                    <Link href={getLocalizedPath('/contact')} className="vl-btn1" style={{ padding: '12px 4px 12px 16px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                         {t('navigation.btn-header-1')}
                                         <span className="arrow1 ms-2">
                                             <i className="fa-solid fa-arrow-right" />

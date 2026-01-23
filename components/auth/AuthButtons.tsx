@@ -3,16 +3,16 @@
 import { useAuth } from '@/context/AuthContext'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { getCurrentLocale } from '@/utils/get-current-locale'
+import { useLocalizedPath } from '@/hooks/useLocalizedPath'
 import { useTranslation } from '@/utils/i18n-simple'
 export default function AuthButtons() {
   const { user, isAuthenticated, logout } = useAuth()
   const router = useRouter()
-  const currentLocale = getCurrentLocale()
+  const getLocalizedPath = useLocalizedPath()
   const { t } = useTranslation('common')
   const handleLogout = () => {
     logout()
-    router.push(`/${currentLocale}`)
+    router.push(getLocalizedPath('/'))
   }
 
   if (isAuthenticated) {
@@ -30,7 +30,7 @@ export default function AuthButtons() {
           </button>
           <ul className="dropdown-menu">
             <li>
-              <Link className="dropdown-item" href={`/${currentLocale}/private-properties`}>
+              <Link className="dropdown-item" href={getLocalizedPath('/private-properties')}>
                 <i className="fa-solid fa-lock me-2"></i>
                 {t('navigation.btn-private-properties')}
               </Link>
@@ -53,7 +53,7 @@ export default function AuthButtons() {
 
   return (
     <div className="wrapp-login-btn">
-      <Link href={`/${currentLocale}/login`} className="login-btn">
+      <Link href={getLocalizedPath('/login')} className="login-btn">
         <i className="fa-solid fa-sign-in-alt me-2"></i>
        Login
       </Link>

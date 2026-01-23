@@ -28,6 +28,15 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
         };
     }
 
+    // Construir URLs según el idioma (inglés sin prefijo, otros con prefijo)
+    const canonicalPath = lang === 'en' 
+        ? `/services/${id}`
+        : `/${lang}/services/${id}`;
+    
+    const ogUrl = lang === 'en'
+        ? `https://www.baruchrealestate.com/services/${id}`
+        : `https://www.baruchrealestate.com/${lang}/services/${id}`;
+
     return {
         title: `${service.title} - Baruch Real Estate`,
         description: service.description?.substring(0, 160) || '',
@@ -35,17 +44,28 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
             title: `${service.title} - Baruch Real Estate`,
             description: service.description?.substring(0, 160) || '',
             images: service.image ? [{ url: service.image }] : undefined,
-            url: `https://www.baruchrealestate.com/${lang}/services/${id}`,
+            url: ogUrl,
+            locale: lang === 'en' ? 'en_US' : `${lang}_${lang.toUpperCase()}`,
+            type: 'website',
+            siteName: 'Baruch Real Estate',
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: `${service.title} - Baruch Real Estate`,
+            description: service.description?.substring(0, 160) || '',
+            images: service.image ? [service.image] : undefined,
         },
         alternates: {
-            canonical: `https://www.baruchrealestate.com/${lang}/services/${id}`,
+            canonical: `https://www.baruchrealestate.com${canonicalPath}`,
             languages: {
-                'en': `/en/services/${id}`,
+                'en': `/services/${id}`,
                 'es': `/es/services/${id}`,
                 'fr': `/fr/services/${id}`,
                 'de': `/de/services/${id}`,
-                'it': `/it/services/${id}`,
-                'pt': `/pt/services/${id}`,
+                'pl': `/pl/services/${id}`,
+                'sv': `/sv/services/${id}`,
+                'nl': `/nl/services/${id}`,
+                'x-default': `/services/${id}`
             }
         }
     };

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo } from "react";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Navigation } from "swiper/modules";
 
@@ -39,6 +40,8 @@ function formatPrice(value?: number): string {
 }
 
 export default function HeroHome({ properties = [] }: HeroHomeProps) {
+    const getLocalizedPath = useLocalizedPath();
+    
     const slides = useMemo(() => {
         const featured = properties.filter((p) => p.is_featured === true);
         return featured.slice(0, 10);
@@ -105,7 +108,7 @@ export default function HeroHome({ properties = [] }: HeroHomeProps) {
                                                 
                                             </div>
                                         
-                                        <Link href={`/property/${property.slug || ""}`} className="text-decoration-none" style={{ color: "inherit" }}>
+                                        <Link href={getLocalizedPath(`/property/${property.slug || ""}`)} className="text-decoration-none" style={{ color: "inherit" }}>
                                         <h3 className="title-properties text-color-white size-42">
                                                 {property.title} 
                                         </h3>

@@ -2,6 +2,7 @@
 "use client";
 
 import Link from 'next/link'
+import { useLocalizedPath } from '@/hooks/useLocalizedPath'
 
 type PropertyCardProps = {
     title: string
@@ -28,6 +29,8 @@ type PropertyCardProps = {
     slug,
     location,
   }: PropertyCardProps) {
+    const getLocalizedPath = useLocalizedPath();
+    
     // Validación de seguridad para la URL
     //const sanitizedUrl = documentId && typeof documentId === 'string' ? documentId.replace(/[^a-zA-Z0-9-_]/g, '') : ''
     
@@ -49,7 +52,7 @@ type PropertyCardProps = {
           
         `}</style>
        
-        <Link href={`/property/${slug}`} className="text-decoration-none">
+        <Link href={getLocalizedPath(`/property/${slug}`)} className="text-decoration-none">
           <div className="property-card property-card-hover border-0 shadow-sm overflow-hidden d-flex flex-column justify-content-between">
           <div className="position-absolute top-0 start-0 p-3 d-flex gap-2 z-3" style={{zIndex: 10}}>
                 {highlight && <span className="badge bg-light text-dark px-3 py-2">{highlight}</span>}  

@@ -1,6 +1,8 @@
 'use client'
 import Link from "next/link";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 import { useTranslation } from "@/utils/i18n-simple";
+
 interface Category {
     slug: string;
     name: string;
@@ -15,6 +17,7 @@ interface Category1Props {
 
 export default function Category1({ categories }: Category1Props) {
     const { t } = useTranslation('common');
+    const getLocalizedPath = useLocalizedPath();
 
     if (!categories || categories.length === 0) {
         return null;
@@ -51,7 +54,7 @@ export default function Category1({ categories }: Category1Props) {
                                 <div className="wrapper-category">
                                     { visibleCategories.map((category: Category, index: number) => (
                                         <div className="card-category" key={category.slug || index}>
-                                            <Link href={`/categories/${category.slug}`}>
+                                            <Link href={getLocalizedPath(`/categories/${category.slug}`)}>
                                                 <div className="" >
                                                     <div className="category-boxarea">
 
@@ -76,7 +79,7 @@ export default function Category1({ categories }: Category1Props) {
                                 </div>
 
                                 <div className="btn-area1" style={{ margin:'auto' }}>
-                                    <Link href="/properties" className="vl-btn1">
+                                    <Link href={getLocalizedPath('/properties')} className="vl-btn1">
                                         {t('home.btn-1-hero')}
                                         <span className="arrow1 ms-2">
                                             <i className="fa-solid fa-arrow-right" />

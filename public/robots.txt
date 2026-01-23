@@ -1,21 +1,63 @@
+# robots.txt for Baruch Real Estate
+# https://www.baruchrealestate.com
+
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://baruchrealestate.com/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
-
-# Disallow admin areas
+# Disallow admin and system areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
+Disallow: /login
+Disallow: /private-properties
 
-# Allow important pages
+# Sitemap location
+Sitemap: https://www.baruchrealestate.com/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
+
+# Allow important pages (English - root)
 Allow: /
 Allow: /properties
-Allow: /categories
-Allow: /about
-Allow: /contact 
+Allow: /categories/
+Allow: /property/
+Allow: /about-us
+Allow: /contact
+Allow: /services
+Allow: /services/
+Allow: /testimonials
+Allow: /privacy-policy
+
+# Allow language-specific pages
+Allow: /es/
+Allow: /es/properties
+Allow: /es/categories/
+Allow: /es/property/
+Allow: /es/services/
+Allow: /fr/
+Allow: /fr/properties
+Allow: /fr/categories/
+Allow: /fr/property/
+Allow: /fr/services/
+Allow: /de/
+Allow: /de/properties
+Allow: /de/categories/
+Allow: /de/property/
+Allow: /de/services/
+Allow: /pl/
+Allow: /pl/properties
+Allow: /pl/categories/
+Allow: /pl/property/
+Allow: /pl/services/
+Allow: /sv/
+Allow: /sv/properties
+Allow: /sv/categories/
+Allow: /sv/property/
+Allow: /sv/services/
+Allow: /nl/
+Allow: /nl/properties
+Allow: /nl/categories/
+Allow: /nl/property/
+Allow: /nl/services/ 

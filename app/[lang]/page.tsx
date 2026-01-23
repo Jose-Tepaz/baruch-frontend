@@ -87,15 +87,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       },
     },
     alternates: {
-      canonical: `https://www.baruchrealestate.com/${lang}`,
+      canonical: lang === 'en' 
+        ? 'https://www.baruchrealestate.com/'
+        : `https://www.baruchrealestate.com/${lang}`,
       languages: {
-        'en': '/en',
+        'en': '/',
         'es': '/es',
         'fr': '/fr',
         'de': '/de',
         'pl': '/pl',
         'sv': '/sv',
-        'nl': '/nl'
+        'nl': '/nl',
+        'x-default': '/'
       }
     }
   };

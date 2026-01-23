@@ -56,12 +56,27 @@ export default function LanguageSelector() {
         let newPath = pathname;
         const currentLocalePattern = /^\/[a-z]{2}(?:\/|$)/;
         
-        if (currentLocalePattern.test(pathname)) {
-            // Reemplazar locale existente
-            newPath = pathname.replace(currentLocalePattern, `/${langCode}/`);
+        if (langCode === 'en') {
+            // Si es inglés, ir a raíz sin prefijo
+            if (currentLocalePattern.test(pathname)) {
+                // Remover el prefijo de idioma existente
+                newPath = pathname.replace(/^\/[a-z]{2}/, '') || '/';
+            }
+            // Si ya está sin prefijo, mantener la ruta
         } else {
-            // Agregar nuevo locale
-            newPath = `/${langCode}${pathname === '/' ? '' : pathname}`;
+            // Para otros idiomas, agregar/reemplazar prefijo
+            if (currentLocalePattern.test(pathname)) {
+                // Reemplazar locale existente
+                newPath = pathname.replace(/^\/[a-z]{2}/, `/${langCode}`);
+            } else {
+                // Agregar nuevo locale (la ruta actual no tiene prefijo)
+                newPath = `/${langCode}${pathname === '/' ? '' : pathname}`;
+            }
+        }
+
+        // Asegurar que siempre haya al menos una barra
+        if (!newPath.startsWith('/')) {
+            newPath = '/' + newPath;
         }
 
         // Eliminar doble slash si existe

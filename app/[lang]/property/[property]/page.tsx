@@ -7,6 +7,27 @@ import { getPropertyBySlug } from "@/services/property";
 import PropertyDetails from "@/components/sections/PropertyDetails";
 import { Metadata } from 'next';
 
+// Helper para extraer texto plano de bloques de Strapi
+function extractTextFromBlocks(blocks: any): string {
+  if (!blocks || !Array.isArray(blocks)) {
+    return '';
+  }
+  
+  return blocks
+    .map((block: any) => {
+      if (block.children && Array.isArray(block.children)) {
+        return block.children
+          .map((child: any) => child.text || '')
+          .join(' ');
+      }
+      return '';
+    })
+    .filter((text: string) => text.trim())
+    .join(' ')
+    .trim()
+    .substring(0, 160); // Limitar a 160 caracteres para SEO
+}
+
 
 
 interface PropertyPageProps {
@@ -37,14 +58,27 @@ export async function generateMetadata({ params }: PropertyPageProps): Promise<M
     pt: `${propertyData.title} - Baruch Imobiliária`
   };
 
+  // Extraer texto de la descripción (que es un array de bloques)
+  const descriptionText = extractTextFromBlocks(propertyData.description) || 
+    `Discover ${propertyData.title} with Baruch Real Estate.`;
+
   const descriptions = {
-    en: propertyData.description,
-    es: propertyData.description,
-    fr: propertyData.description,
-    de: propertyData.description,
-    it: propertyData.description,
-    pt: propertyData.description
+    en: descriptionText,
+    es: descriptionText,
+    fr: descriptionText,
+    de: descriptionText,
+    it: descriptionText,
+    pt: descriptionText
   };
+
+  // Construir URLs según el idioma (inglés sin prefijo, otros con prefijo)
+  const canonicalPath = lang === 'en' 
+    ? `/property/${property}`
+    : `/${lang}/property/${property}`;
+  
+  const ogUrl = lang === 'en'
+    ? `https://www.baruchrealestate.com/property/${property}`
+    : `https://www.baruchrealestate.com/${lang}/property/${property}`;
 
   return {
     title: titles[lang as keyof typeof titles] || titles.en,
@@ -54,8 +88,8 @@ export async function generateMetadata({ params }: PropertyPageProps): Promise<M
       title: titles[lang as keyof typeof titles] || titles.en,
       description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
       type: 'website',
-      locale: lang,
-      url: `https://www.baruchrealestate.com/${lang}/property/${property}`,
+      locale: lang === 'en' ? 'en_US' : `${lang}_${lang.toUpperCase()}`,
+      url: ogUrl,
       siteName: 'Baruch Real Estate',
       images: propertyData.main_image ? [
         {
@@ -73,14 +107,16 @@ export async function generateMetadata({ params }: PropertyPageProps): Promise<M
       images: propertyData.main_image ? [propertyData.main_image] : undefined
     },
     alternates: {
-      canonical: `https://www.baruchrealestate.com/${lang}/property/${property}`,
+      canonical: `https://www.baruchrealestate.com${canonicalPath}`,
       languages: {
-        'en': `/en/property/${property}`,
+        'en': `/property/${property}`,
         'es': `/es/property/${property}`,
         'fr': `/fr/property/${property}`,
         'de': `/de/property/${property}`,
-        'it': `/it/property/${property}`,
-        'pt': `/pt/property/${property}`
+        'pl': `/pl/property/${property}`,
+        'sv': `/sv/property/${property}`,
+        'nl': `/nl/property/${property}`,
+        'x-default': `/property/${property}`
       }
     }
   };

@@ -1,5 +1,6 @@
 'use client';
 import Link from "next/link";
+import { useLocalizedPath } from "@/hooks/useLocalizedPath";
 import { useTranslation } from "@/utils/i18n-simple";
 import img_1 from '@/public/assets/img/all-images/home/hp-7.webp'
 
@@ -7,6 +8,7 @@ import img_1 from '@/public/assets/img/all-images/home/hp-7.webp'
 // Este componente ya no recibe datos de la API, solo usa traducciones de common.json
 export default function About3() {
     const { t } = useTranslation('common');
+    const getLocalizedPath = useLocalizedPath();
 
     return (
         <>
@@ -31,7 +33,7 @@ export default function About3() {
 
                                 <div className="space30" />
                                 <div className="btn-area1">
-                                    <Link href="/about-us" className="vl-btn1 ">
+                                    <Link href={getLocalizedPath('/about-us')} className="vl-btn1 ">
                                         {t('home.btn-about-section-2')}
                                         <span className="arrow1 ms-2">
                                             <i className="fa-solid fa-arrow-right" />
