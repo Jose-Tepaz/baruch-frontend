@@ -10,6 +10,53 @@ export default function TrackingScripts() {
     // Verificar si los scripts ya fueron cargados
     if (typeof window === 'undefined') return;
 
+    // Cargar Google Tag Manager
+    const loadGoogleTagManager = () => {
+      // Verificar si ya existe
+      if ((window as any).google_tag_manager) {
+        return;
+      }
+
+      // Verificar si el script ya está en el head
+      const existingScript = document.querySelector('script[src*="googletagmanager.com/gtm.js"]');
+      if (existingScript) {
+        return;
+      }
+
+      // Inicializar dataLayer para GTM
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+
+      // Cargar el script de Google Tag Manager
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KDZZH4B2';
+      
+      const firstScript = document.getElementsByTagName('script')[0];
+      if (firstScript && firstScript.parentNode) {
+        firstScript.parentNode.insertBefore(script, firstScript);
+      } else {
+        document.head.appendChild(script);
+      }
+
+      // Agregar noscript para GTM solo si no existe
+      const existingNoscript = document.querySelector('noscript iframe[src*="googletagmanager.com/ns.html"]');
+      if (!existingNoscript) {
+        const noscript = document.createElement('noscript');
+        const iframe = document.createElement('iframe');
+        iframe.src = 'https://www.googletagmanager.com/ns.html?id=GTM-KDZZH4B2';
+        iframe.height = '0';
+        iframe.width = '0';
+        iframe.style.display = 'none';
+        iframe.style.visibility = 'hidden';
+        noscript.appendChild(iframe);
+        document.body.insertBefore(noscript, document.body.firstChild);
+      }
+    };
+
     // Cargar Google Analytics
     const loadGoogleAnalytics = () => {
       // Verificar si ya existe
@@ -83,12 +130,14 @@ export default function TrackingScripts() {
 
     // Solo cargar scripts si hay consentimiento
     if (hasConsent) {
+      loadGoogleTagManager();
       loadGoogleAnalytics();
       loadMetaPixel();
     }
 
     // También escuchar el evento personalizado por si se acepta después
     const handleConsentAccepted = () => {
+      loadGoogleTagManager();
       loadGoogleAnalytics();
       loadMetaPixel();
     };
@@ -111,6 +160,7 @@ declare global {
     gtag: (...args: any[]) => void;
     fbq: (...args: any[]) => void;
     _fbq: any;
+    google_tag_manager: any;
   }
 }
 
