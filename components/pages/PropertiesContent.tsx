@@ -254,7 +254,7 @@ export default function PropertiesContent({
                                 page={pagination.page}
                                 pageCount={pagination.pageCount}
                                 searchParams={searchParams}
-                                basePath={`/${(lang || 'en')}/properties`}
+                                basePath={lang === 'en' ? '/properties' : `/${lang}/properties`}
                             />
                         </div>
                         <div className="space30"></div>

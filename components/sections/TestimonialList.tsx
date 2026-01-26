@@ -88,7 +88,7 @@ export default function TestimonialList({
                       page={currentPagination.page}
                       pageCount={currentPagination.pageCount}
                       searchParams={searchParams}
-                      basePath={`/${lang}/testimonials`}
+                      basePath={lang === 'en' ? '/testimonials' : `/${lang}/testimonials`}
                     />
                   </div>
                 )}
