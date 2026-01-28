@@ -43,6 +43,7 @@ interface Property {
     highlight?: string;
     is_private?: boolean;
     location?: string | { name: string; slug: string };
+    sold?: boolean;
 }
 
 interface Amenity {
@@ -238,6 +239,7 @@ export default function PropertiesContent({
                                             isNew={property.status === 'new'}
                                             location={typeof property.location === 'string' ? property.location : property.location?.name || ''}
                                             highlight={property.highlight}
+                                            sold={property.sold}
                                         />
                                     </div>
                                 ))}

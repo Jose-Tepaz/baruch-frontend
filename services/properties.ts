@@ -51,6 +51,7 @@ export interface MappedProperty {
   category: any
   location: Location
   is_private?: boolean
+  sold?: boolean
   amenities: Array<{
     id: number;
     Name: string;
@@ -89,6 +90,7 @@ interface PropertyData {
     slug: string;
   }>
   is_private?: boolean
+  sold?: boolean
 }
 
 // Función para verificar si el usuario está autenticado (lado servidor)
@@ -203,7 +205,8 @@ export function getPropertiesByCategory(
           type,
           city,
           state,
-          amenities
+          amenities,
+          sold
         } = property
 
         const image = rawimage
@@ -227,7 +230,8 @@ export function getPropertiesByCategory(
           type,
           city,
           state,
-          amenities: amenities || []
+          amenities: amenities || [],
+          sold
         }
       })
       return {
@@ -378,7 +382,8 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           category,
           location,
           amenities,
-          is_private
+          is_private,
+          sold
 
         } = property
 
@@ -401,6 +406,7 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           category,
           location,
           is_private,
+          sold,
           amenities: amenities || []
         }
       })
@@ -461,7 +467,8 @@ export function getPropertyByDocumentId(documentId: string, locale?: string) {
         category,
         location,
         is_new,
-        is_private
+        is_private,
+        sold
       } = property
 
       const main_image = rawMainImage
@@ -494,6 +501,7 @@ export function getPropertyByDocumentId(documentId: string, locale?: string) {
         location,
         is_new,
         is_private,
+        sold,
         propertyStatus,
       }
     })

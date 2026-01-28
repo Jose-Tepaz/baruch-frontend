@@ -71,6 +71,7 @@ export default function CategoryContent({ categoryId, initialProperties }: Categ
                                 isNew={property.is_new}
                                 highlight={property.highlight}
                                 location={typeof property.location === 'string' ? property.location : property.location?.name || ''}
+                                sold={property.sold}
                             />
                         </div>
                     ))}

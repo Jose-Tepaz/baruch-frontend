@@ -14,7 +14,8 @@ type PropertyCardProps = {
     highlight?: string,
     documentId: string,
     slug: string,
-    location: string | { name: string; slug: string }
+    location: string | { name: string; slug: string },
+    sold?: boolean
   }
   
   export default function PropertieCardV1({
@@ -28,6 +29,7 @@ type PropertyCardProps = {
     documentId,
     slug,
     location,
+    sold = false
   }: PropertyCardProps) {
     const getLocalizedPath = useLocalizedPath();
     
@@ -49,11 +51,28 @@ type PropertyCardProps = {
           .property-card-hover:hover img {
             transform: scale(1.05);
           }
-          
+           .sold-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
+          }
+          .sold-text {
+            border: 3px solid white;
+            padding: 5px 15px;
+            transform: rotate(-15deg);
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 1.5rem;
+          }
         `}</style>
        
-        <Link href={getLocalizedPath(`/property/${slug}`)} className="text-decoration-none">
-          <div className="property-card property-card-hover border-0 shadow-sm overflow-hidden d-flex flex-column justify-content-between">
+        <Link 
+          href={sold ? "#" : getLocalizedPath(`/property/${slug}`)} 
+          className="text-decoration-none"
+          style={sold ? { pointerEvents: 'none' } : {}}
+        >
+          <div className="property-card property-card-hover border-0 shadow-sm overflow-hidden d-flex flex-column justify-content-between position-relative">
           <div className="position-absolute top-0 start-0 p-3 d-flex gap-2 z-3" style={{zIndex: 10}}>
                 {highlight && <span className="badge bg-light text-dark px-3 py-2">{highlight}</span>}  
               
@@ -69,12 +88,18 @@ type PropertyCardProps = {
                   height: '350px', 
                   objectFit: 'cover', 
                  
-                  border: '1px solid #eaeaea'
+                  border: '1px solid #eaeaea',
+                  filter: sold ? 'grayscale(100%)' : 'none'
                 }}
               />
             ) : (
               <div style={{ height: '100%', backgroundColor: '#eaeaea', borderRadius: '10px', border: '1px solid #eaeaea' }} />
             )}
+             {sold && (
+                <div className="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center sold-overlay" style={{ zIndex: 5 }}>
+                  <div className="sold-text">SOLD</div>
+                </div>
+              )}
             </div>
             <div className="card-body-property text-white h-100 z-3 h-auto p-4">
               <p> {typeof location === 'string' ? location : location?.name || ''}</p>
