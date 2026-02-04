@@ -438,7 +438,7 @@
         ]
       },
       {
-        "id": "sell-your-house-in-costa-del-sol",
+        "id": "sell-your-house",
         "title": "Verkoop Uw Huis aan de Costa del Sol",
         "description": "Maak de Verkoop van Uw Woning in Spanje tot een Soepele en Veilige Ervaring\n\nWilt u een woning verkopen in Spanje? Vooral in populaire gebieden zoals Málaga, Marbella of de Costa del Sol omvat het verkoopproces een reeks juridische en administratieve stappen die zonder de juiste begeleiding overweldigend kunnen zijn. Van het bepalen van de juiste vraagprijs tot het voorbereiden van documenten en het tekenen bij de notaris, elke fase vereist nauwkeurigheid en professionele afhandeling.\n\nBij Baruch Real Estate vereenvoudigen wij dit proces voor u.\n\nOns ervaren team combineert vastgoedexpertise en juridische ondersteuning onder één dak en zorgt ervoor dat uw verkoop soepel, transparant en met volledige zekerheid wordt afgehandeld. Of u nu in Spanje woont of in het buitenland.",
         "image": "/assets/img/all-images/service/sell_your_house_result.webp",
@@ -501,36 +501,36 @@
         "image": "/assets/img/all-images/service/taxes_result.webp",
         "title-list": "Belastingen voor Residenten en Niet-Residenten",
         "details": [
-            {
-                "title": "1. Resident in Spanje",
-                "description": "Je wordt doorgaans als fiscaal resident beschouwd als je meer dan 183 dagen per jaar in Spanje verblijft of als je belangrijkste economische belangen zich in Spanje bevinden.\n\nResidenten zijn verplicht om aan te geven:\n\n• Wereldwijd inkomen\n• Onroerend goed, investeringen en bezittingen in Spanje en het buitenland\n• Vermogenswinsten, dividenden en huurinkomsten"
-            },
-            {
-                "title": "2. Niet-Resident in Spanje",
-                "description": "Niet-residenten betalen alleen belasting over inkomsten en bezittingen die zich in Spanje bevinden. Dit omvat:\n\n• Huurinkomsten uit Spaans onroerend goed\n• Vermogenswinsten uit de verkoop van Spaans vastgoed\n• Pensioenen of investeringen met een Spaanse bron\n\nHet is essentieel om je status te begrijpen, aangezien belastingtarieven, aftrekposten en verplichtingen sterk verschillen."
-            },
-            {
-                "title": "Belangrijkste Belastingen in Spanje",
-                "description": "1. Inkomstenbelasting (IRPF voor residenten / IRNR voor niet-residenten)\n• Residenten (IRPF): Progressieve belasting op wereldwijd inkomen (tot ca. 47%).\n• Niet-residenten (IRNR): Vast tarief op inkomsten uit Spanje (meestal 19–24%).\n\n2. Vastgoedbelastingen\n• IBI (Impuesto sobre Bienes Inmuebles): Jaarlijkse gemeentelijke onroerendgoedbelasting.\n• Plusvalía Municipal: Belasting op de waardestijging van de grond bij verkoop.\n• Vermogensbelasting: Van toepassing op residenten en soms niet-residenten met hoge vermogens.\n\n3. Vermogenswinstbelasting\n• Van toepassing op winst uit verkoop van vastgoed of investeringen in Spanje.\n• Tarieven verschillen per residentiestatus.\n\n4. Erf- en Schenkbelasting\n• Van toepassing bij ontvangst van vastgoed, bezittingen of geld in Spanje.\n• Tarieven zijn afhankelijk van regio en familieband.\n\n5. BTW / Overdrachtsbelasting\n• Nieuwbouw: BTW (IVA) ~10%\n• Bestaande bouw: Overdrachtsbelasting (ITP), regionaal bepaald (meestal 7–10%)."
-            },
-            {
-                "title": "Belastingaangifte Doen in Spanje",
-                "description": "Het indienen van een belastingaangifte omvat meerdere stappen:\n\nVerzamelen van alle documentatie.\n\nVaststellen van residentiestatus.\n\nBerekenen van belastbaar inkomen.\n\nTijdig indienen bij de Agencia Tributaria.\n\nVoor de meeste mensen is samenwerking met een lokale accountant of belastingadviseur essentieel."
-            },
-            {
-                "title": "Hoe Baruch Real Estate Kan Helpen",
-                "description": "Hoewel wij zelf geen accountants zijn, werken wij samen met betrouwbare partners die:\n\n• Adviseren over fiscale verplichtingen\n• Spaanse belastingaangiften verzorgen\n• Ondersteunen bij vastgoedbelastingen\n• Begeleiden bij erf-, schenk- en vermogensbelasting"
-            },
-            {
-                "title": "Waarom Werken met Onze Accountants",
-                "description": "• Expertise in Spaanse belastingwetgeving\n• Begeleiding in je eigen taal\n• Geoptimaliseerde aangiften\n• Volledige ondersteuning bij vastgoedtransacties\n• Hulp bij deadlines en communicatie met autoriteiten"
-            },
-            {
-                "title": "Professionele Fiscale Ondersteuning",
-                "description": "Of je nu in Spanje woont of er vastgoed bezit als niet-resident, een correcte belastingaangifte is essentieel.\n\nNeem vandaag nog contact met ons op voor professionele fiscale ondersteuning, afgestemd op jouw situatie in Spanje."
-            }
+          {
+            "title": "1. Resident in Spanje",
+            "description": "Je wordt doorgaans als fiscaal resident beschouwd als je meer dan 183 dagen per jaar in Spanje verblijft of als je belangrijkste economische belangen zich in Spanje bevinden.\n\nResidenten zijn verplicht om aan te geven:\n\n• Wereldwijd inkomen\n• Onroerend goed, investeringen en bezittingen in Spanje en het buitenland\n• Vermogenswinsten, dividenden en huurinkomsten"
+          },
+          {
+            "title": "2. Niet-Resident in Spanje",
+            "description": "Niet-residenten betalen alleen belasting over inkomsten en bezittingen die zich in Spanje bevinden. Dit omvat:\n\n• Huurinkomsten uit Spaans onroerend goed\n• Vermogenswinsten uit de verkoop van Spaans vastgoed\n• Pensioenen of investeringen met een Spaanse bron\n\nHet is essentieel om je status te begrijpen, aangezien belastingtarieven, aftrekposten en verplichtingen sterk verschillen."
+          },
+          {
+            "title": "Belangrijkste Belastingen in Spanje",
+            "description": "1. Inkomstenbelasting (IRPF voor residenten / IRNR voor niet-residenten)\n• Residenten (IRPF): Progressieve belasting op wereldwijd inkomen (tot ca. 47%).\n• Niet-residenten (IRNR): Vast tarief op inkomsten uit Spanje (meestal 19–24%).\n\n2. Vastgoedbelastingen\n• IBI (Impuesto sobre Bienes Inmuebles): Jaarlijkse gemeentelijke onroerendgoedbelasting.\n• Plusvalía Municipal: Belasting op de waardestijging van de grond bij verkoop.\n• Vermogensbelasting: Van toepassing op residenten en soms niet-residenten met hoge vermogens.\n\n3. Vermogenswinstbelasting\n• Van toepassing op winst uit verkoop van vastgoed of investeringen in Spanje.\n• Tarieven verschillen per residentiestatus.\n\n4. Erf- en Schenkbelasting\n• Van toepassing bij ontvangst van vastgoed, bezittingen of geld in Spanje.\n• Tarieven zijn afhankelijk van regio en familieband.\n\n5. BTW / Overdrachtsbelasting\n• Nieuwbouw: BTW (IVA) ~10%\n• Bestaande bouw: Overdrachtsbelasting (ITP), regionaal bepaald (meestal 7–10%)."
+          },
+          {
+            "title": "Belastingaangifte Doen in Spanje",
+            "description": "Het indienen van een belastingaangifte omvat meerdere stappen:\n\nVerzamelen van alle documentatie.\n\nVaststellen van residentiestatus.\n\nBerekenen van belastbaar inkomen.\n\nTijdig indienen bij de Agencia Tributaria.\n\nVoor de meeste mensen is samenwerking met een lokale accountant of belastingadviseur essentieel."
+          },
+          {
+            "title": "Hoe Baruch Real Estate Kan Helpen",
+            "description": "Hoewel wij zelf geen accountants zijn, werken wij samen met betrouwbare partners die:\n\n• Adviseren over fiscale verplichtingen\n• Spaanse belastingaangiften verzorgen\n• Ondersteunen bij vastgoedbelastingen\n• Begeleiden bij erf-, schenk- en vermogensbelasting"
+          },
+          {
+            "title": "Waarom Werken met Onze Accountants",
+            "description": "• Expertise in Spaanse belastingwetgeving\n• Begeleiding in je eigen taal\n• Geoptimaliseerde aangiften\n• Volledige ondersteuning bij vastgoedtransacties\n• Hulp bij deadlines en communicatie met autoriteiten"
+          },
+          {
+            "title": "Professionele Fiscale Ondersteuning",
+            "description": "Of je nu in Spanje woont of er vastgoed bezit als niet-resident, een correcte belastingaangifte is essentieel.\n\nNeem vandaag nog contact met ons op voor professionele fiscale ondersteuning, afgestemd op jouw situatie in Spanje."
+          }
         ]
-    }
+      }
     ]
   },
   "faq": {
@@ -571,6 +571,7 @@
     "bathrooms-text": "Badkamers",
     "price-text": "Prijs",
     "contact-text": "Neem contact op",
+    "on_request": "Op aanvraag",
     "map_locations-text": "Locaties op de kaart",
     "send_message-text": "Ik ben geïnteresseerd in",
     "send_message-text-description": "Wil je een bezoek plannen of heb je een vraag? Vul je details hieronder in zodat we je kunnen contacteren.",

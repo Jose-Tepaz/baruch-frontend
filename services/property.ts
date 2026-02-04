@@ -69,6 +69,7 @@ const getPropertyById = async (documentId: string, locale?: string) => {
             location,
             units,
             estimated_completion,
+            sold,
         } = property
 
 
@@ -128,6 +129,7 @@ const getPropertyById = async (documentId: string, locale?: string) => {
             propertyStatus,
             units: processedUnits,
             estimated_completion,
+            sold,
         }
 
     } catch (error) {
@@ -185,6 +187,7 @@ const getPropertyBySlug = async (slug: string, locale?: string) => {
             location,
             units,
             estimated_completion,
+            sold,
         } = property
 
         // Procesar las imágenes
@@ -242,6 +245,7 @@ const getPropertyBySlug = async (slug: string, locale?: string) => {
             propertyStatus,
             units: processedUnits,
             estimated_completion,
+            sold,
         }
 
     } catch (error) {

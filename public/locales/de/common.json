@@ -213,7 +213,7 @@
                 "detail3": "Vertretung bei öffentlichen Urkunden",
                 "detail4": "Streitbeilegung und Rechtsstreitigkeiten",
                 "detail5": "Eröffnung eines Bankkontos",
-                "detail6": "Gründung eines Einzelunternehmens",  
+                "detail6": "Gründung eines Einzelunternehmens",
                 "detail7": "Testament"
             },
             "management": {
@@ -445,7 +445,7 @@
                 ]
             },
             {
-                "id": "sell-your-house-in-costa-del-sol",
+                "id": "sell-your-house",
                 "title": "Verkaufen Sie Ihr Haus an der Costa del Sol",
                 "description": "Machen Sie den Verkauf Ihrer Immobilie in Spanien zu einer Reibungslosen und Sicheren Erfahrung\n\nMöchten Sie eine Immobilie in Spanien verkaufen? Besonders in beliebten Regionen wie Málaga, Marbella oder der Costa del Sol umfasst der Verkaufsprozess eine Reihe rechtlicher und administrativer Schritte, die ohne die richtige Unterstützung schnell überwältigend wirken können. Von der Festlegung des richtigen Verkaufspreises über die Vorbereitung der Unterlagen bis hin zur Unterzeichnung beim Notar erfordert jede Phase Präzision und professionelle Begleitung.\n\nBei Baruch Real Estate vereinfachen wir diesen Prozess für Sie.\n\nUnser erfahrenes Team vereint Immobilienkompetenz und rechtliche Unterstützung unter einem Dach und sorgt dafür, dass Ihr Verkauf reibungslos, transparent und mit voller Sicherheit abgewickelt wird. Ganz gleich, ob Sie in Spanien oder im Ausland leben.",
                 "image": "/assets/img/all-images/service/sell_your_house_result.webp",
@@ -578,6 +578,7 @@
         "bathrooms-text": "Badezimmer",
         "price-text": "Preis",
         "contact-text": "Kontaktiere uns",
+        "on_request": "Auf Anfrage",
         "map_locations-text": "Karte",
         "send_message-text": "Ich bin interessiert an",
         "send_message-text-description": "Möchten Sie eine Ansicht planen oder haben Sie eine Frage? Bitte füllen Sie Ihre Details unten aus, damit wir Sie kontaktieren können.",
@@ -589,7 +590,7 @@
         "estimated_completion-text": "Voraussichtliche Fertigstellung",
         "completion-text": "Bereit",
         "units": {
-            "title": "Einheiten",   
+            "title": "Einheiten",
             "id-house": "Haus-ID",
             "dorms": "Schlafzimmer",
             "bathrooms": "Badezimmer",

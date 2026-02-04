@@ -8,8 +8,9 @@ export default function PropertyDetails({ property }) {
     const { t } = useTranslation('common');
     // Formatear el precio con separadores de miles
     const formatPrice = (price) => {
+        if (price === 0) return t('propertyDetails.on_request');
         if (!price) return '';
-        return `$${price.toLocaleString()}`;
+        return `€ ${price.toLocaleString('es-ES')}`;
     };
 
     return (
@@ -83,7 +84,16 @@ export default function PropertyDetails({ property }) {
                 <div style={{width: '250px', minWidth: '250px', marginTop: 'autos'}} className="d-flex flex-column gap-4 mt-auto justify-content-center align-items-end mobile-justify-content-left mobile-align-items-leftr">
                      {/* Precio con icono */}
                      <div className="property-price">
-                            {property.price ? `€ ${property.price.toLocaleString('es-ES')}` : ''}
+                            {property.sold ? (
+                                <div className="d-flex align-items-center gap-2">
+                                    <span style={{ textDecoration: 'line-through', color: '#999' }}>
+                                        {formatPrice(property.price)}
+                                    </span>
+                                    <span className="text-danger fw-bold" style={{ color: '#ff0000' }}>SOLD</span>
+                                </div>
+                            ) : (
+                                formatPrice(property.price)
+                            )}
                         </div>
                     {/* Precio y botón de contacto */}
                     <div className="property-price-section d-flex justify-content-end align-items-soace-between mobile-justify-content-left mobile-align-items-left" >

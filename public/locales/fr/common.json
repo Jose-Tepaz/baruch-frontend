@@ -441,7 +441,7 @@
                 ]
             },
             {
-                "id": "sell-your-house-in-costa-del-sol",
+                "id": "sell-your-house",
                 "title": "Vendez Votre Maison sur la Costa del Sol",
                 "description": "Faites de la Vente de Votre Bien en Espagne une Expérience Fluide et Sécurisée\n\nVous vendez un bien immobilier en Espagne ? Surtout dans des zones prisées comme Málaga, Marbella ou la Costa del Sol, le processus comprend une série d'étapes juridiques et administratives qui peuvent sembler complexes sans un accompagnement approprié. De la détermination du juste prix de vente à la préparation des documents et à la signature chez le notaire, chaque étape exige précision et professionnalisme.\n\nChez Baruch Real Estate, nous simplifions le processus pour vous.\n\nNotre équipe expérimentée réunit expertise immobilière et accompagnement juridique sous un même toit, afin de garantir une vente fluide, transparente et en toute confiance. Que vous viviez en Espagne ou à l'étranger.",
                 "image": "/assets/img/all-images/service/sell_your_house_result.webp",
@@ -574,6 +574,7 @@
         "bathrooms-text": "Salles de Bains",
         "price-text": "Prix",
         "contact-text": "Contactez-nous",
+        "on_request": "Sur demande",
         "map_locations-text": "Localisation sur la Carte",
         "send_message-text": "Je suis intéressé par",
         "send_message-text-description": "Voulez-vous planifier une visite ou avez-vous une question? Veuillez remplir vos détails ci-dessous pour que nous puissions vous contacter.",

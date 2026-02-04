@@ -445,7 +445,7 @@
                 ]
             },
             {
-                "id": "sell-your-house-in-costa-del-sol",
+                "id": "sell-your-house",
                 "title": "Sprzedaj Swój Dom na Costa del Sol",
                 "description": "Spraw, aby Sprzedaż Twojej Nieruchomości w Hiszpanii Była Prosta i Bezpieczna\n\nSprzedajesz nieruchomość w Hiszpanii? Szczególnie w popularnych lokalizacjach takich jak Málaga, Marbella czy Costa del Sol proces ten obejmuje szereg kroków prawnych i administracyjnych, które bez odpowiedniego wsparcia mogą być przytłaczające. Od ustalenia właściwej ceny sprzedaży, przez przygotowanie dokumentów, aż po podpisanie aktu u notariusza, każdy etap wymaga precyzji i profesjonalnego podejścia.\n\nW Baruch Real Estate upraszczamy ten proces dla Ciebie.\n\nNasz doświadczony zespół łączy obsługę nieruchomości i wsparcie prawne w jednym miejscu, zapewniając płynną, przejrzystą i w pełni bezpieczną sprzedaż. Niezależnie od tego, czy mieszkasz w Hiszpanii, czy za granicą.",
                 "image": "/assets/img/all-images/service/sell_your_house_result.webp",
@@ -563,12 +563,6 @@
         "question-10": "Jak mogę skontaktować się z Baruch Real Estate o konsultacji?",
         "answer-10": "Możesz skontaktować się z Baruch Real Estate przez naszą stronę internetową, telefonicznie lub odwiedzając nasze biuro. Nasz zespół jest gotowy do pomocy z każdym pytaniem."
     },
-    "contact-form": {
-        "subtitle": "Czy jesteś gotowy na następny krok? ",
-        "title": "Låt oss ansluta",
-        "description": "Pomocemy Cię i uczynimy proces tak płynny jak to możliwe.",
-        "btn_text": "Skontaktuj się z nami"
-    },
     "language": {
         "selectLanguage": "Wybierz język",
         "currentLanguage": "Aktualny język",
@@ -584,6 +578,7 @@
         "bathrooms-text": "Łazienki",
         "price-text": "Cena",
         "contact-text": "Skontaktuj się z nami",
+        "on_request": "Na życzenie",
         "map_locations-text": "Mapy lokalizacji",
         "send_message-text": "Jestem zainteresowany",
         "send_message-text-description": "Chcesz zaplanować wizytę lub masz pytanie? Wypełnij swoje szczegóły poniżej, abyśmy mogli Cię skontaktować.",

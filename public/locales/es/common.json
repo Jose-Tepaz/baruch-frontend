@@ -1,8 +1,8 @@
 {
     "welcome": "Welcome to Baruch Real Estate",
     "navigation": {
-            "home": "Inicio",
-            "about": "Sobre Nosotros",
+        "home": "Inicio",
+        "about": "Sobre Nosotros",
         "properties": "Propiedades",
         "services": "Servicios",
         "contact": "Contacto",
@@ -14,14 +14,13 @@
         "magazine": "Magazine",
         "btn-header-1": "Vender tu Propiedad"
     },
-
-"footer": {
-    "subscribe-text": "Suscribirse",
-    "success-text": "Gracias por suscribirse a nuestro newsletter!",
-    "error-text": "Por favor, ingrese una dirección de correo electrónico válida",
-    "placeholder-text": "Tu dirección de correo electrónico",
-    "btn-subscribe": "Suscríbete",
-    "title-cta": "Convirtamos tu visión en realidad",
+    "footer": {
+        "subscribe-text": "Suscribirse",
+        "success-text": "Gracias por suscribirse a nuestro newsletter!",
+        "error-text": "Por favor, ingrese una dirección de correo electrónico válida",
+        "placeholder-text": "Tu dirección de correo electrónico",
+        "btn-subscribe": "Suscríbete",
+        "title-cta": "Convirtamos tu visión en realidad",
         "description-cta": "Mantente informado y recibe actualizaciones sobre nuevas propiedades, próximos proyectos y desarrollos relevantes del mercado. \n\nSuscríbete a nuestro boletín mensual.",
         "btn-cta": "Comienza tu búsqueda hoy",
         "description-footer": "Nos encargamos de que su experiencia inmobiliaria sea sencilla y sin preocupaciones. Ya sea que compre, venda o necesite asesoramiento legal, le acompañamos en todo momento.",
@@ -45,7 +44,7 @@
         "title-services-7": "Asesoría Legal",
         "title-popular-locations": "Ubicaciones Populares",
         "title-popular-locations-1": "Propiedades para venta en Marbella",
-        "title-popular-locations-2": "Propiedades para venta en Mijas",  
+        "title-popular-locations-2": "Propiedades para venta en Mijas",
         "title-popular-locations-3": "Propiedades para venta en Estepona",
         "title-popular-locations-4": "Propiedades para venta en Sotogrande",
         "title-popular-locations-5": "Propiedades para venta en The Golden Mile",
@@ -57,10 +56,8 @@
         "category-2": "Apartamentos",
         "category-3": "Nuevos Desarrollos",
         "category-4": "Propiedades Golf"
-    
-   
-},  
-   "home": {
+    },
+    "home": {
         "btn-1-hero": "Ver Propiedades",
         "btn-2-hero": "Más información",
         "title-filter": "Encuentra tu Casa Soñada",
@@ -98,7 +95,6 @@
         "list3-why-choose-us": "Satisfacción del Cliente",
         "paragraph-why-choose-us": "En Baruch Real Estate entendemos que un hogar no es solo un lugar donde vivir, sino una expresión de tu estilo de vida. Por eso, combinamos una visión internacional con un conocimiento profundo del mercado local para ofrecerte un servicio inmobiliario excepcional. Nuestra selección exclusiva de propiedades, junto con un acompañamiento personalizado y transparente, hacen de Baruch el socio ideal para quienes buscan invertir, vivir o disfrutar del auténtico encanto de la Costa del Sol."
     },
-
     "buttons": {
         "login": "Iniciar Sesión",
         "register": "Registrarse",
@@ -117,7 +113,7 @@
     "about": {
         "company": "Acerca de la Empresa",
         "hero": {
-            "title": "Tu Socio de Confianza", 
+            "title": "Tu Socio de Confianza",
             "description": "En Baruch Real Estate, creemos en construir relaciones duraderas basadas en confianza, transparencia y contacto personal. Para nosotros, la inmobiliaria no es solo sobre propiedades, es sobre personas. Te guiamos paso a paso a través del proceso. Con cuidado, claridad y un enfoque en la calidad en cada etapa. Y nuestro soporte no termina una vez que has comprado una propiedad. Estamos aquí para responder tus preguntas y asistirte incluso después de que las llaves estén en tus manos.",
             "btn_text": "Contactanos"
         },
@@ -134,7 +130,6 @@
                 "list5": "Abogados en la empresa para soporte legal",
                 "list6": "Socios financieros para garantizar una transacción sin problemas"
             },
-            
             "forseellers": "Para Vendedores",
             "forseellersDescription": {
                 "list1": "Valuaciones de propiedades precisas basadas en datos del mercado",
@@ -147,13 +142,12 @@
         "others4": {
             "subtitle": "¿Listo para el siguiente paso? ",
             "title": "Te ayudaremos a guiarte y hacer el proceso lo más suave posible.",
-            
-        "btn_text": "Contactanos"
+            "btn_text": "Contactanos"
         },
         "conatct-section": {
             "title": "Nuestros Servicios ",
             "description": "En Baruch Real Estate, creemos en construir relaciones duraderas basadas en confianza, transparencia y contacto personal. Para nosotros, la inmobiliaria no es solo sobre propiedades, es sobre personas. Te guiamos paso a paso a través del proceso. Con cuidado, claridad y un enfoque en la calidad en cada etapa. Y nuestro soporte no termina una vez que has comprado una propiedad.",
-            "btn_text": "Ver todos los servicios" 
+            "btn_text": "Ver todos los servicios"
         },
         "contact-form": {
             "subtitle": "¿Listo para el siguiente paso? ",
@@ -326,7 +320,7 @@
                         "description": "If you would like to explore mortgage options or arrange a financing scan for your property purchase, we can provide tailored information from our partner banks.\n\nContact us today to discuss your mortgage options, request current rates, and start your financing journey in Costa del Sol; Benalmadena, Estepona, Málaga, Marbella, Torrox, Alhaurín or elsewhere in Spain."
                     }
                 ]
-            }, 
+            },
             {
                 "id": "insurance-services",
                 "title": "Servicios de Seguros en España",
@@ -451,7 +445,7 @@
                 ]
             },
             {
-                "id": "sell-your-house-in-costa-del-sol",
+                "id": "sell-your-house",
                 "title": "Vende Tu Casa en la Costa del Sol",
                 "description": "Haz que la Venta de tu Propiedad en España Sea una Experiencia Fluida y Segura\n\n¿Vendes una propiedad en España? Especialmente en zonas populares como Málaga, Marbella o la Costa del Sol, el proceso implica una serie de pasos legales y administrativos que pueden resultar abrumadores sin la orientación adecuada. Desde determinar el precio de venta correcto hasta preparar la documentación y firmar ante notario, cada etapa requiere precisión y una gestión profesional.\n\nEn Baruch Real Estate, simplificamos el proceso para ti.\n\nNuestro equipo experimentado combina servicios inmobiliarios y apoyo legal bajo un mismo techo, garantizando que tu venta se gestione de manera fluida, transparente y con total confianza. Tanto si resides en España como en el extranjero.",
                 "image": "/assets/img/all-images/service/sell_your_house_result.webp",
@@ -548,43 +542,26 @@
     },
     "faq": {
         "title": "Preguntas Frecuentes",
-       
-                "question-1": "¿Qué servicios ofrece Baruch Real Estate?",
-                "answer-1": "Baruch Real Estate ofrece servicios de compra, venta y alquiler, así como gestión de propiedades y asesoría de inversión en la Costa del Sol.",
-           
-            
-                "question-2": "¿Por qué debería elegir Baruch Real Estate?",
-                "answer-2": "Baruch Real Estate ofrece servicio personalizado, conocimiento local experto y un equipo dedicado para guiarte en cada paso de tu viaje inmobiliario.",
-           
-                "question-3": "¿Cómo puede Baruch ayudarme a encontrar la propiedad correcta?",
-                "answer-3": "Baruch Real Estate escucha tus necesidades y preferencias, luego selecciona una selección de propiedades que coincidan con tu estilo de vida y objetivos.",
-            
-            
-                "question-4": "¿Ayuda Baruch Real Estate con papeleo legal?",
-                "answer-4": "Sí, Baruch Real Estate tiene abogados de confianza en la empresa para ayudarte con todos los documentos legales y garantizar una transacción sin complicaciones.",
-           
-                "question-5": "¿Puede Baruch ayudarme a vender mi propiedad rápidamente?",
-                "answer-5": "Baruch Real Estate utiliza estrategias de marketing premium y una red amplia para atraer tanto compradores locales como internacionales, ayudándote a vender de manera eficiente.",
-           
-            
-                "question-6": "¿Qué áreas cubre Baruch Real Estate?",
-                "answer-6": "Baruch Real Estate se especializa en propiedades en la Costa del Sol, incluyendo Marbella, Estepona, Benahavís y áreas circundantes.",
-            
-            
-                "question-7": "¿Ofrece Baruch servicios de gestión de propiedades?",
-                "answer-7": "Sí, Baruch Real Estate ofrece gestión de propiedades integral para garantizar que tu inversión esté bien cuidada, incluso cuando estés ausente.",
-            
-            
-                "question-8": "¿Cómo ayuda Baruch a compradores internacionales?",
-                "answer-8": "Baruch Real Estate ofrece soporte multilingüe, orientación sobre regulaciones locales y asistencia con todos los aspectos de la compra de propiedades desde el extranjero.",
-            
-            
-                "question-9": "¿Qué hace que Baruch Real Estate sea diferente de otras agencias?",
-                "answer-9": "Baruch Real Estate destaca por su compromiso con la satisfacción del cliente, transparencia y un enfoque personalizado a las necesidades de cada cliente.",
-            
-            
-                "question-10": "¿Cómo puedo contactar a Baruch Real Estate para una consulta?",
-                "answer-10": "Puedes contactar a Baruch Real Estate a través de nuestro sitio web, por teléfono o visitando nuestro oficina. Nuestro equipo está listo para ayudarte con cualquier pregunta."
+        "question-1": "¿Qué servicios ofrece Baruch Real Estate?",
+        "answer-1": "Baruch Real Estate ofrece servicios de compra, venta y alquiler, así como gestión de propiedades y asesoría de inversión en la Costa del Sol.",
+        "question-2": "¿Por qué debería elegir Baruch Real Estate?",
+        "answer-2": "Baruch Real Estate ofrece servicio personalizado, conocimiento local experto y un equipo dedicado para guiarte en cada paso de tu viaje inmobiliario.",
+        "question-3": "¿Cómo puede Baruch ayudarme a encontrar la propiedad correcta?",
+        "answer-3": "Baruch Real Estate escucha tus necesidades y preferencias, luego selecciona una selección de propiedades que coincidan con tu estilo de vida y objetivos.",
+        "question-4": "¿Ayuda Baruch Real Estate con papeleo legal?",
+        "answer-4": "Sí, Baruch Real Estate tiene abogados de confianza en la empresa para ayudarte con todos los documentos legales y garantizar una transacción sin complicaciones.",
+        "question-5": "¿Puede Baruch ayudarme a vender mi propiedad rápidamente?",
+        "answer-5": "Baruch Real Estate utiliza estrategias de marketing premium y una red amplia para atraer tanto compradores locales como internacionales, ayudándote a vender de manera eficiente.",
+        "question-6": "¿Qué áreas cubre Baruch Real Estate?",
+        "answer-6": "Baruch Real Estate se especializa en propiedades en la Costa del Sol, incluyendo Marbella, Estepona, Benahavís y áreas circundantes.",
+        "question-7": "¿Ofrece Baruch servicios de gestión de propiedades?",
+        "answer-7": "Sí, Baruch Real Estate ofrece gestión de propiedades integral para garantizar que tu inversión esté bien cuidada, incluso cuando estés ausente.",
+        "question-8": "¿Cómo ayuda Baruch a compradores internacionales?",
+        "answer-8": "Baruch Real Estate ofrece soporte multilingüe, orientación sobre regulaciones locales y asistencia con todos los aspectos de la compra de propiedades desde el extranjero.",
+        "question-9": "¿Qué hace que Baruch Real Estate sea diferente de otras agencias?",
+        "answer-9": "Baruch Real Estate destaca por su compromiso con la satisfacción del cliente, transparencia y un enfoque personalizado a las necesidades de cada cliente.",
+        "question-10": "¿Cómo puedo contactar a Baruch Real Estate para una consulta?",
+        "answer-10": "Puedes contactar a Baruch Real Estate a través de nuestro sitio web, por teléfono o visitando nuestro oficina. Nuestro equipo está listo para ayudarte con cualquier pregunta."
     },
     "language": {
         "selectLanguage": "Seleccionar Idioma",
@@ -601,6 +578,7 @@
         "bathrooms-text": "Baños",
         "price-text": "Precio",
         "contact-text": "Contactanos",
+        "on_request": "Consultar precio",
         "map_locations-text": "Ubicación en el Mapa",
         "send_message-text": "Estoy interesado en",
         "send_message-text-description": "¿Te gustaría programar una visita o tienes alguna pregunta? Por favor, rellena tus detalles abajo para que podamos contactarte.",
@@ -627,7 +605,6 @@
             "is_available": "Sí",
             "is_not_available": "No"
         }
-        
     },
     "contact": {
         "hero": {
@@ -638,8 +615,8 @@
         "description": "Te invitamos a visitarnos en nuestra oficina de Málaga para una reunión personal, o, si lo prefieres, estaremos encantados de acompañarte a una visita de propiedad. \n\nTanto si tienes preguntas sobre la compra, la venta, la financiación o la residencia, nuestro equipo está listo para ayudarte. \n\nHablamos neerlandés, inglés y español, para que disfrutes de una comunicación clara y un acompañamiento completo durante todo el proceso."
     },
     "contact-form": {
-            "subtitle": "",
-        "title": "¿Listo para dar el siguiente paso?",  
+        "subtitle": "",
+        "title": "¿Listo para dar el siguiente paso?",
         "description": "Conectemos y hagamos tu proceso inmobiliario más fácil y sin complicaciones. Nuestro equipo está aquí para guiarte y resolver tus dudas en cada etapa.",
         "btn_text": "Contactanos",
         "input-name": "Nombre completo",
@@ -648,7 +625,7 @@
         "input-city": "Ciudad",
         "input-preferred_contact_moment": "Momento ideal para contactarte",
         "input-message": "Mensaje",
-        "input-submit-now": "Enviar mensaj", 
+        "input-submit-now": "Enviar mensaj",
         "error-message": "Error al enviar el mensaje",
         "success-message": "Mensaje enviado exitosamente!",
         "submitting": "Enviando...",
