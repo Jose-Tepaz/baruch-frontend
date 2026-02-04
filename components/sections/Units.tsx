@@ -101,7 +101,7 @@ export default function Units({ units }: { units?: Unit[] }) {
                         </td>
                         <td className="plan-cell">
                           <button
-                            className={`btn btn-sm ${!unit.floor || !unit.is_available ? "btn-sold" : "btn-dark"}`}
+                            className={`btn btn-sm ${!unit.floor || !unit.is_available ? "btn-sold" : "btn-avialable"}`}
                             onClick={() => handleViewPlan(unit)}
                             disabled={!unit.floor || !unit.is_available}
                           >
@@ -149,7 +149,7 @@ export default function Units({ units }: { units?: Unit[] }) {
                             </strong>
                           </h6>
                           <button
-                            className={`btn btn-sm ${!unit.floor || !unit.is_available ? "btn-sold" : "btn-dark"}`}
+                            className={`btn btn-sm ${!unit.floor || !unit.is_available ? "btn-sold" : "btn-avialable"}`}
                             onClick={() => handleViewPlan(unit)}
                             disabled={!unit.floor || !unit.is_available}
                           >
@@ -215,6 +215,12 @@ export default function Units({ units }: { units?: Unit[] }) {
 
         .btn-sold {
           background: #c22a2aff;
+          color: #fff;
+          width: 100%;
+        }
+
+        .btn-avialable {
+          background: #203644;
           color: #fff;
           width: 100%;
         }

@@ -116,6 +116,20 @@
     text-align: right;
 }
 
+.wrapp-price-and-btn{
+       width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.text-property-price{
+   display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
 
 .contact-btn {
     background: #2c3e50;
@@ -204,6 +218,16 @@
     .wrapp-card-details-propertie{
         padding: 0px!important;
     }
+
+.property-price{
+    font-size: 24px;
+}
+
+.text-property-price{
+   
+    justify-content: flex-start;
+}
+
     .main-img-property {
         height: 300px!important;
     }
@@ -239,10 +263,7 @@
        
         align-items: flex-start;
     }
-    .property-price {
-        font-size: 2.5rem;
-        text-align: left;
-    }
+    
     .contact-btn {
         width: 100%;
         justify-content: center;

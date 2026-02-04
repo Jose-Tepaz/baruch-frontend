@@ -81,11 +81,11 @@ export default function PropertyDetails({ property }) {
                 </div>
 
                 {/* Contenedor principal con información y precio */}
-                <div style={{width: '250px', minWidth: '250px', marginTop: 'autos'}} className="d-flex flex-column gap-4 mt-auto justify-content-center align-items-end mobile-justify-content-left mobile-align-items-leftr">
+                <div className="wrapp-price-and-btn">
                      {/* Precio con icono */}
                      <div className="property-price">
                             {property.sold ? (
-                                <div className="d-flex align-items-center gap-2">
+                                <div className="text-property-price">
                                     <span style={{ textDecoration: 'line-through', color: '#999' }}>
                                         {formatPrice(property.price)}
                                     </span>
