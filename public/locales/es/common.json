@@ -600,7 +600,7 @@
             "price": "Precio",
             "storage_room": "Trastero",
             "floor": "Ver Plano",
-            "unavailable": "A petición",
+            "unavailable": "Vendido",
             "no-units": "No hay unidades disponibles para esta propiedad.",
             "is_available": "Sí",
             "is_not_available": "No"

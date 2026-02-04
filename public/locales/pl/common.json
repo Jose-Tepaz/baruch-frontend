@@ -599,7 +599,7 @@
             "price": "Cena",
             "storage_room": "Pokój magazynowy",
             "floor": "Zobacz plan piętra",
-            "unavailable": "Na zamówienie",
+            "unavailable": "Sprzedane",
             "no-units": "Brak jednostek dostępnych dla tej nieruchomości.",
             "is_available": "tak",
             "is_not_available": "nie"

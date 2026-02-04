@@ -599,7 +599,7 @@
             "price": "Price",
             "storage_room": "Storage Room",
             "floor": "View Floor Plan",
-            "unavailable": "On Request",
+            "unavailable": "Sold",
             "no-units": "No units available for this property.",
             "is_available": "yes",
             "is_not_available": "no"

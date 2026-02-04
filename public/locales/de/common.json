@@ -600,7 +600,7 @@
             "price": "Preis",
             "storage_room": "Abstellraum",
             "floor": "Pläne ansehen",
-            "unavailable": "Auf Anfrage",
+            "unavailable": "Verkauft",
             "no-units": "Keine Einheiten verfügbar für diese Immobilie.",
             "is_available": "Ja",
             "is_not_available": "Nein"
