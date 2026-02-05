@@ -40,13 +40,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         if (locale === 'en') {
           // Inglés va en la raíz sin prefijo
           url = route.path 
-            ? `${BASE_URL}/${route.path}`
-            : BASE_URL;
+            ? `${BASE_URL}/${route.path}/`
+            : `${BASE_URL}/`;
         } else {
           // Otros idiomas tienen prefijo
           url = route.path 
-            ? `${BASE_URL}/${locale}/${route.path}`
-            : `${BASE_URL}/${locale}`;
+            ? `${BASE_URL}/${locale}/${route.path}/`
+            : `${BASE_URL}/${locale}/`;
         }
 
         sitemapEntries.push({
@@ -73,9 +73,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             let url: string;
             
             if (locale === 'en') {
-              url = `${BASE_URL}/property/${property.slug}`;
+              url = `${BASE_URL}/property/${property.slug}/`;
             } else {
-              url = `${BASE_URL}/${locale}/property/${property.slug}`;
+              url = `${BASE_URL}/${locale}/property/${property.slug}/`;
             }
 
             sitemapEntries.push({
@@ -104,9 +104,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
               let url: string;
               
               if (locale === 'en') {
-                url = `${BASE_URL}/categories/${category.slug}`;
+                url = `${BASE_URL}/categories/${category.slug}/`;
               } else {
-                url = `${BASE_URL}/${locale}/categories/${category.slug}`;
+                url = `${BASE_URL}/${locale}/categories/${category.slug}/`;
               }
 
               sitemapEntries.push({
@@ -129,9 +129,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         let url: string;
         
         if (locale === 'en') {
-          url = `${BASE_URL}/services/${serviceId}`;
+          url = `${BASE_URL}/services/${serviceId}/`;
         } else {
-          url = `${BASE_URL}/${locale}/services/${serviceId}`;
+          url = `${BASE_URL}/${locale}/services/${serviceId}/`;
         }
 
         sitemapEntries.push({
