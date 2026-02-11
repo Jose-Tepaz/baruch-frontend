@@ -101,13 +101,21 @@ export default function Units({ units }: { units?: Unit[] }) {
                         </td>
                         <td className="plan-cell">
                           <button
-                            className={`btn btn-sm ${!unit.floor || !unit.is_available ? "btn-sold" : "btn-avialable"}`}
+                            className={`btn btn-sm ${
+                              !unit.is_available
+                                ? "btn-sold"
+                                : !unit.floor
+                                  ? "btn-on-request"
+                                  : "btn-avialable"
+                            }`}
                             onClick={() => handleViewPlan(unit)}
                             disabled={!unit.floor || !unit.is_available}
                           >
-                            {!unit.floor || !unit.is_available
+                            {!unit.is_available
                               ? t("propertyDetails.units.unavailable")
-                              : t("propertyDetails.units.floor")}
+                              : !unit.floor
+                                ? t("propertyDetails.units.floor_on_request")
+                                : t("propertyDetails.units.floor")}
                           </button>
                         </td>
                       </tr>
@@ -149,13 +157,21 @@ export default function Units({ units }: { units?: Unit[] }) {
                             </strong>
                           </h6>
                           <button
-                            className={`btn btn-sm ${!unit.floor || !unit.is_available ? "btn-sold" : "btn-avialable"}`}
+                            className={`btn btn-sm ${
+                              !unit.is_available
+                                ? "btn-sold"
+                                : !unit.floor
+                                  ? "btn-on-request"
+                                  : "btn-avialable"
+                            }`}
                             onClick={() => handleViewPlan(unit)}
                             disabled={!unit.floor || !unit.is_available}
                           >
-                            {!unit.floor || !unit.is_available
+                            {!unit.is_available
                               ? t("propertyDetails.units.unavailable")
-                              : t("propertyDetails.units.floor")}
+                              : !unit.floor
+                                ? t("propertyDetails.units.floor_on_request")
+                                : t("propertyDetails.units.floor")}
                           </button>
                         </div>
                       </div>
@@ -238,6 +254,12 @@ export default function Units({ units }: { units?: Unit[] }) {
         .badge-unavailable {
           background-color: #6c757d !important;
           color: white !important;
+        }
+
+        .btn-on-request {
+          background-color: #6c757d;
+          color: white;
+          width: 100%;
         }
 
         .units-table-wrapper {

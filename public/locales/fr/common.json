@@ -599,7 +599,8 @@
             "unavailable": "Vendu",
             "no-units": "Aucune unité disponible pour cette propriété.",
             "is_available": "Oui",
-            "is_not_available": "Non"
+            "is_not_available": "Non",
+            "floor_on_request": "Sur demande"
         }
     },
     "contact": {

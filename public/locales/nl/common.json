@@ -596,7 +596,8 @@
       "unavailable": "Verkocht",
       "no-units": "Geen eenheden beschikbaar voor dit eigendom.",
       "is_available": "ja",
-      "is_not_available": "nee"
+      "is_not_available": "nee",
+      "floor_on_request": "Op aanvraag"
     }
   },
   "contact": {

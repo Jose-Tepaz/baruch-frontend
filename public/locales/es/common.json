@@ -603,7 +603,8 @@
             "unavailable": "Vendido",
             "no-units": "No hay unidades disponibles para esta propiedad.",
             "is_available": "Sí",
-            "is_not_available": "No"
+            "is_not_available": "No",
+            "floor_on_request": "Consultar"
         }
     },
     "contact": {

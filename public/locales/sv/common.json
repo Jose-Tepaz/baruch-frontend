@@ -596,7 +596,8 @@
             "unavailable": "Såld",
             "no-units": "Inga enheter tillgängliga för denna fastighet.",
             "is_available": "ja",
-            "is_not_available": "nej"
+            "is_not_available": "nej",
+            "floor_on_request": "På begäran"
         }
     },
     "contact": {

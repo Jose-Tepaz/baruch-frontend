@@ -602,7 +602,8 @@
             "unavailable": "Sold",
             "no-units": "No units available for this property.",
             "is_available": "yes",
-            "is_not_available": "no"
+            "is_not_available": "no",
+            "floor_on_request": "On Request"
         }
     },
     "contact": {
