@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import { useCookieConsent } from '@/hooks/useCookieConsent';
+import { useEffect } from "react";
+import { useCookieConsent } from "@/hooks/useCookieConsent";
 
 export default function TrackingScripts() {
   const { hasConsent } = useCookieConsent();
 
   useEffect(() => {
     // Verificar si los scripts ya fueron cargados
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     // Cargar Google Tag Manager
     const loadGoogleTagManager = () => {
@@ -18,7 +18,9 @@ export default function TrackingScripts() {
       }
 
       // Verificar si el script ya está en el head
-      const existingScript = document.querySelector('script[src*="googletagmanager.com/gtm.js"]');
+      const existingScript = document.querySelector(
+        'script[src*="googletagmanager.com/gtm.js"]',
+      );
       if (existingScript) {
         return;
       }
@@ -26,16 +28,16 @@ export default function TrackingScripts() {
       // Inicializar dataLayer para GTM
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        'gtm.start': new Date().getTime(),
-        event: 'gtm.js'
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js",
       });
 
       // Cargar el script de Google Tag Manager
-      const script = document.createElement('script');
+      const script = document.createElement("script");
       script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KDZZH4B2';
-      
-      const firstScript = document.getElementsByTagName('script')[0];
+      script.src = "https://www.googletagmanager.com/gtm.js?id=GTM-KDZZH4B2";
+
+      const firstScript = document.getElementsByTagName("script")[0];
       if (firstScript && firstScript.parentNode) {
         firstScript.parentNode.insertBefore(script, firstScript);
       } else {
@@ -43,46 +45,20 @@ export default function TrackingScripts() {
       }
 
       // Agregar noscript para GTM solo si no existe
-      const existingNoscript = document.querySelector('noscript iframe[src*="googletagmanager.com/ns.html"]');
+      const existingNoscript = document.querySelector(
+        'noscript iframe[src*="googletagmanager.com/ns.html"]',
+      );
       if (!existingNoscript) {
-        const noscript = document.createElement('noscript');
-        const iframe = document.createElement('iframe');
-        iframe.src = 'https://www.googletagmanager.com/ns.html?id=GTM-KDZZH4B2';
-        iframe.height = '0';
-        iframe.width = '0';
-        iframe.style.display = 'none';
-        iframe.style.visibility = 'hidden';
+        const noscript = document.createElement("noscript");
+        const iframe = document.createElement("iframe");
+        iframe.src = "https://www.googletagmanager.com/ns.html?id=GTM-KDZZH4B2";
+        iframe.height = "0";
+        iframe.width = "0";
+        iframe.style.display = "none";
+        iframe.style.visibility = "hidden";
         noscript.appendChild(iframe);
         document.body.insertBefore(noscript, document.body.firstChild);
       }
-    };
-
-    // Cargar Google Analytics
-    const loadGoogleAnalytics = () => {
-      // Verificar si ya existe
-      if (window.dataLayer && (window as any).gtag) {
-        return;
-      }
-
-      // Verificar si el script ya está en el head
-      const existingScript = document.querySelector('script[src*="googletagmanager.com/gtag/js"]');
-      if (existingScript) {
-        return;
-      }
-
-      // Cargar el script de Google Analytics
-      const script1 = document.createElement('script');
-      script1.async = true;
-      script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-3T8ZDQF1LN';
-      document.head.appendChild(script1);
-
-      // Inicializar gtag
-      window.dataLayer = window.dataLayer || [];
-      (window as any).gtag = function() {
-        window.dataLayer.push(arguments);
-      };
-      (window as any).gtag('js', new Date());
-      (window as any).gtag('config', 'G-3T8ZDQF1LN');
     };
 
     // Cargar Meta Pixel
@@ -93,12 +69,14 @@ export default function TrackingScripts() {
       }
 
       // Verificar si el script ya está en el head
-      const existingScript = document.querySelector('script[src*="connect.facebook.net"]');
+      const existingScript = document.querySelector(
+        'script[src*="connect.facebook.net"]',
+      );
       if (existingScript) {
         return;
       }
 
-      const script2 = document.createElement('script');
+      const script2 = document.createElement("script");
       script2.innerHTML = `
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -114,15 +92,18 @@ export default function TrackingScripts() {
       document.head.appendChild(script2);
 
       // Agregar noscript para Meta Pixel solo si no existe
-      const existingNoscript = document.querySelector('noscript img[src*="facebook.com/tr"]');
+      const existingNoscript = document.querySelector(
+        'noscript img[src*="facebook.com/tr"]',
+      );
       if (!existingNoscript) {
-        const noscript = document.createElement('noscript');
-        const img = document.createElement('img');
+        const noscript = document.createElement("noscript");
+        const img = document.createElement("img");
         img.height = 1;
         img.width = 1;
-        img.style.display = 'none';
-        img.src = 'https://www.facebook.com/tr?id=2279246495831999&ev=PageView&noscript=1';
-        img.alt = '';
+        img.style.display = "none";
+        img.src =
+          "https://www.facebook.com/tr?id=2279246495831999&ev=PageView&noscript=1";
+        img.alt = "";
         noscript.appendChild(img);
         document.body.appendChild(noscript);
       }
@@ -131,21 +112,24 @@ export default function TrackingScripts() {
     // Solo cargar scripts si hay consentimiento
     if (hasConsent) {
       loadGoogleTagManager();
-      loadGoogleAnalytics();
+
       loadMetaPixel();
     }
 
     // También escuchar el evento personalizado por si se acepta después
     const handleConsentAccepted = () => {
       loadGoogleTagManager();
-      loadGoogleAnalytics();
+
       loadMetaPixel();
     };
 
-    window.addEventListener('cookie-consent-accepted', handleConsentAccepted);
+    window.addEventListener("cookie-consent-accepted", handleConsentAccepted);
 
     return () => {
-      window.removeEventListener('cookie-consent-accepted', handleConsentAccepted);
+      window.removeEventListener(
+        "cookie-consent-accepted",
+        handleConsentAccepted,
+      );
     };
   }, [hasConsent]);
 
@@ -163,4 +147,3 @@ declare global {
     google_tag_manager: any;
   }
 }
-
