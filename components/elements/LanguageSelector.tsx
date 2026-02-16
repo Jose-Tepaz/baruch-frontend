@@ -11,12 +11,13 @@ import type { Language } from "@/utils/i18n-simple";
 
 const languages: Array<{ code: Language; name: string; flag: string }> = [
   { code: "en", name: "English", flag: "🇺🇸" },
+  { code: "nl", name: "Nederlands", flag: "🇳🇱" },
   { code: "es", name: "Español", flag: "🇪🇸" },
   { code: "fr", name: "Français", flag: "🇫🇷" },
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
   { code: "pl", name: "Polski", flag: "🇵🇱" },
   { code: "sv", name: "Svenska", flag: "🇸🇪" },
-  { code: "nl", name: "Nederlands", flag: "🇳🇱" },
+ 
 ];
 
 export default function LanguageSelector() {

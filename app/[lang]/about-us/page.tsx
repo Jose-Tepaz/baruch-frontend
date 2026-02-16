@@ -7,8 +7,6 @@ import ContactSectionAbout from "@/components/sections/ContactSectionAbout";
 
 import { getProperties } from "@/services/get-properties";
 import { Metadata } from 'next';
-import Link from "next/link";
-  import { useTranslation } from "@/utils/i18n-simple";
 
 
 interface AboutUsPageProps {

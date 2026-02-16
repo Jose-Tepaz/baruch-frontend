@@ -43,6 +43,12 @@ export default function PropertyListSlide({
   const { t } = useTranslation("common");
   const getLocalizedPath = useLocalizedPath();
 
+  const formatPrice = (price: number) => {
+    if (price === 0) return t("propertyDetails.on_request");
+    if (!price) return "";
+    return `€ ${price.toLocaleString("es-ES")}`;
+  };
+
   // Validación de seguridad para la URL
   //const sanitizedUrl = documentId && typeof documentId === 'string' ? documentId.replace(/[^a-zA-Z0-9-_]/g, '') : ''
 
@@ -60,6 +66,10 @@ export default function PropertyListSlide({
         }
         .property-card-hover:hover img {
           transform: scale(1.05);
+        }
+        .wrapp-img-card-properties-featured {
+          position: absolute !important;
+          height: 100%;
         }
         .sold-overlay {
           background: rgba(0, 0, 0, 0.5);
@@ -81,7 +91,7 @@ export default function PropertyListSlide({
         href={getLocalizedPath(`/property/${slug}`)}
         className="text-decoration-none"
       >
-        <div className="property-card property-card-hover border-0 shadow-sm  overflow-hidden d-flex flex-column justify-content-between">
+        <div className="property-card property-card-hover border-0 shadow-sm overflow-hidden d-flex flex-column justify-content-between position-relative">
           <div
             className="position-absolute top-0 start-0 p-3 d-flex gap-2 z-3"
             style={{ zIndex: 10 }}
@@ -92,7 +102,9 @@ export default function PropertyListSlide({
               </span>
             )}
           </div>
-          <div className="wrapp-img-card-properties">
+          <div 
+            className="wrapp-img-card-properties wrapp-img-card-properties-featured"
+          >
             {safeImageUrl ? (
               <img
                 src={safeImageUrl}
@@ -101,7 +113,7 @@ export default function PropertyListSlide({
                 style={{
                   height: "350px",
                   objectFit: "cover",
-                  borderRadius: "0px",
+
                   border: "1px solid #eaeaea",
                   filter: sold ? "grayscale(100%)" : "none",
                 }}
@@ -126,16 +138,18 @@ export default function PropertyListSlide({
             )}
           </div>
           <div className="card-body-property text-white h-100 z-3 h-auto p-4">
-            <p className="card-text mb-2">
-              <i className="bi bi-geo-alt-fill me-1 text-white"></i>
+            <p>
+              {" "}
               {typeof location === "string" ? location : location?.name || ""}
             </p>
             <h3 className="title-properties text-color-white size-20">
               {title || "Property"}
             </h3>
+
             <div className="d-flex justify-content-between align-items-center">
               <span className="fw-bold fs-5">
-                € {formattedPrice.toLocaleString("es-ES")}
+                {formatPrice(formattedPrice)}
+                <span className="fs-6 "></span>
               </span>
               <span
                 className="btn btn-outline-light rounded-circle p-0 border-0"
