@@ -49,18 +49,20 @@ export async function generateMetadata({ params }: PropertiesPageProps): Promise
       description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
       type: 'website',
       locale: lang,
-      url: `https://www.baruchrealestate.com/${lang}/private-properties`,
+      url: lang === 'en' ? 'https://www.baruchrealestate.com/private-properties/' : `https://www.baruchrealestate.com/${lang}/private-properties/`,
       siteName: 'Baruch Real Estate',
     },
     alternates: {
-      canonical: `https://www.baruchrealestate.com/${lang}/private-properties`,
+      canonical: lang === 'en' ? 'https://www.baruchrealestate.com/private-properties/' : `https://www.baruchrealestate.com/${lang}/private-properties/`,
       languages: {
-        'en': '/en/private-properties',
-        'es': '/es/private-properties',
-        'fr': '/fr/private-properties',
-        'de': '/de/private-properties',
-        'it': '/it/private-properties',
-        'pt': '/pt/private-properties'
+        'en': '/private-properties/',
+        'es': '/es/private-properties/',
+        'fr': '/fr/private-properties/',
+        'de': '/de/private-properties/',
+        'pl': '/pl/private-properties/',
+        'sv': '/sv/private-properties/',
+        'nl': '/nl/private-properties/',
+        'x-default': '/private-properties/'
       }
     }
   };

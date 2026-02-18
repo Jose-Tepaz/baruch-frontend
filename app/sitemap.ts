@@ -14,7 +14,6 @@ const STATIC_ROUTES = [
   { path: 'services', priority: 0.7, changeFrequency: 'monthly' as const },
   { path: 'testimonials', priority: 0.6, changeFrequency: 'weekly' as const },
   { path: 'privacy-policy', priority: 0.3, changeFrequency: 'yearly' as const },
-  { path: 'private-properties', priority: 0.8, changeFrequency: 'daily' as const },
 ];
 
 // IDs de servicios estáticos (definidos en translations)

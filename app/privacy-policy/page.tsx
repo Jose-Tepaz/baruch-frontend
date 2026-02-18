@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: 'Read our privacy policy to understand how we protect your personal information.',
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.baruchrealestate.com/privacy-policy',
+    url: 'https://www.baruchrealestate.com/privacy-policy/',
     siteName: 'Baruch Real Estate',
   },
   twitter: {
@@ -20,16 +20,16 @@ export const metadata: Metadata = {
     description: 'Read our privacy policy to understand how we protect your personal information.',
   },
   alternates: {
-    canonical: 'https://www.baruchrealestate.com/privacy-policy',
+    canonical: 'https://www.baruchrealestate.com/privacy-policy/',
     languages: {
-      'en': '/privacy-policy',
-      'es': '/es/privacy-policy',
-      'fr': '/fr/privacy-policy',
-      'de': '/de/privacy-policy',
-      'pl': '/pl/privacy-policy',
-      'sv': '/sv/privacy-policy',
-      'nl': '/nl/privacy-policy',
-      'x-default': '/privacy-policy'
+      'en': '/privacy-policy/',
+      'es': '/es/privacy-policy/',
+      'fr': '/fr/privacy-policy/',
+      'de': '/de/privacy-policy/',
+      'pl': '/pl/privacy-policy/',
+      'sv': '/sv/privacy-policy/',
+      'nl': '/nl/privacy-policy/',
+      'x-default': '/privacy-policy/'
     }
   }
 };

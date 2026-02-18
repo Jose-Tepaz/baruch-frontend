@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: 'Get in touch with Baruch Real Estate. Contact our team for inquiries about properties and services.',
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.baruchrealestate.com/contact',
+    url: 'https://www.baruchrealestate.com/contact/',
     siteName: 'Baruch Real Estate',
   },
   twitter: {
@@ -20,16 +20,16 @@ export const metadata: Metadata = {
     description: 'Get in touch with Baruch Real Estate. Contact our team for inquiries about properties and services.',
   },
   alternates: {
-    canonical: 'https://www.baruchrealestate.com/contact',
+    canonical: 'https://www.baruchrealestate.com/contact/',
     languages: {
-      'en': '/contact',
-      'es': '/es/contact',
-      'fr': '/fr/contact',
-      'de': '/de/contact',
-      'pl': '/pl/contact',
-      'sv': '/sv/contact',
-      'nl': '/nl/contact',
-      'x-default': '/contact'
+      'en': '/contact/',
+      'es': '/es/contact/',
+      'fr': '/fr/contact/',
+      'de': '/de/contact/',
+      'pl': '/pl/contact/',
+      'sv': '/sv/contact/',
+      'nl': '/nl/contact/',
+      'x-default': '/contact/'
     }
   }
 };

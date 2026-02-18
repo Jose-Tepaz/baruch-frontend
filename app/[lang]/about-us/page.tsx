@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: AboutUsPageProps): Promise<Me
       description: descriptions[lang as keyof typeof descriptions] || descriptions.en,
       type: 'website',
       locale: lang,
-      url: `https://www.baruchrealestate.com/${lang}/about-us`,
+      url: lang === 'en' ? 'https://www.baruchrealestate.com/about-us/' : `https://www.baruchrealestate.com/${lang}/about-us/`,
       siteName: 'Baruch Real Estate',
       images: [
         {
@@ -62,14 +62,16 @@ export async function generateMetadata({ params }: AboutUsPageProps): Promise<Me
       images: ['https://www.baruchrealestate.com/about-us-og.jpg']
     },
     alternates: {
-      canonical: `https://www.baruchrealestate.com/${lang}/about-us`, //eslint-disable-line
+      canonical: lang === 'en' ? 'https://www.baruchrealestate.com/about-us/' : `https://www.baruchrealestate.com/${lang}/about-us/`,
       languages: {
-        'en': '/en/about-us',
-        'es': '/es/about-us',
-        'fr': '/fr/about-us',
-        'de': '/de/about-us',
-        'it': '/it/about-us',
-        'pt': '/pt/about-us'
+        'en': '/about-us/',
+        'es': '/es/about-us/',
+        'fr': '/fr/about-us/',
+        'de': '/de/about-us/',
+        'pl': '/pl/about-us/',
+        'sv': '/sv/about-us/',
+        'nl': '/nl/about-us/',
+        'x-default': '/about-us/'
       }
     }
   };

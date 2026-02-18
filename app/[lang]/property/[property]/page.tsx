@@ -6,6 +6,9 @@ import PropertyBottom from "@/components/sections/PropertyBottom";
 import { getPropertyBySlug } from "@/services/property";
 import PropertyDetails from "@/components/sections/PropertyDetails";
 import { Metadata } from "next";
+import JsonLd from "@/components/elements/JsonLd";
+import { Product, WithContext } from "schema-dts";
+import { COMPANY_SEO } from "@/config/company-seo";
 
 // Helper para extraer texto plano de bloques de Strapi
 function extractTextFromBlocks(blocks: any): string {
@@ -146,11 +149,41 @@ export default async function PropertyPage({ params }: PropertyPageProps) {
     );
   }
 
-  console.log("Property data loaded:", propertyData);
+  const canonicalPath =
+    lang === "en" ? `/property/${property}/` : `/${lang}/property/${property}/`;
+  const propertyUrl = `${COMPANY_SEO.url}${canonicalPath}`;
+  const descriptionText =
+    extractTextFromBlocks(propertyData.description) ||
+    `Discover ${propertyData.title} with Baruch Real Estate.`;
+
+  // Schema.org Product - address included for real estate (valid but not in schema-dts Product type)
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: propertyData.title,
+    description: descriptionText,
+    url: propertyUrl,
+    image: propertyData.main_image || undefined,
+    ...(propertyData.address && {
+      address: {
+        "@type": "PostalAddress" as const,
+        streetAddress: propertyData.address,
+      },
+    }),
+    offers: {
+      "@type": "Offer" as const,
+      price: Number(propertyData.price),
+      priceCurrency: "EUR",
+      availability: propertyData.sold
+        ? "https://schema.org/SoldOut"
+        : "https://schema.org/InStock",
+    },
+  } as WithContext<Product>;
 
   return (
     <>
       <Layout>
+        <JsonLd<Product> data={productSchema} />
         <Properties2Details property={propertyData} />
         <PropertyInner property={propertyData} block_extend="d-none" />
         <div className="space30"></div>

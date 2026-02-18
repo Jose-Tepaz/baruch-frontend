@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     description: 'Read what our clients say about their experience with Baruch Real Estate.',
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.baruchrealestate.com/testimonials',
+    url: 'https://www.baruchrealestate.com/testimonials/',
     siteName: 'Baruch Real Estate',
   },
   twitter: {
@@ -20,16 +20,16 @@ export const metadata: Metadata = {
     description: 'Read what our clients say about their experience with Baruch Real Estate.',
   },
   alternates: {
-    canonical: 'https://www.baruchrealestate.com/testimonials',
+    canonical: 'https://www.baruchrealestate.com/testimonials/',
     languages: {
-      'en': '/testimonials',
-      'es': '/es/testimonials',
-      'fr': '/fr/testimonials',
-      'de': '/de/testimonials',
-      'pl': '/pl/testimonials',
-      'sv': '/sv/testimonials',
-      'nl': '/nl/testimonials',
-      'x-default': '/testimonials'
+      'en': '/testimonials/',
+      'es': '/es/testimonials/',
+      'fr': '/fr/testimonials/',
+      'de': '/de/testimonials/',
+      'pl': '/pl/testimonials/',
+      'sv': '/sv/testimonials/',
+      'nl': '/nl/testimonials/',
+      'x-default': '/testimonials/'
     }
   }
 };

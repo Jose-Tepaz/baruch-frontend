@@ -15,9 +15,6 @@ Disallow: /private-properties
 # Sitemap location
 Sitemap: https://www.baruchrealestate.com/sitemap.xml
 
-# Crawl-delay (optional, helps prevent server overload)
-Crawl-delay: 1
-
 # Allow important pages (English - root)
 Allow: /
 Allow: /properties/

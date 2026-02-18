@@ -103,8 +103,9 @@ export function getProperties(
                 is_private,
                 location,
                 is_featured,
-                sold
-            } = property as PropertyData & { sold?: boolean }
+                sold,
+                updatedAt
+            } = property as PropertyData & { sold?: boolean; updatedAt?: string }
 
             // Procesa la URL de la imagen principal
             const image = rawimage
@@ -131,7 +132,8 @@ export function getProperties(
                 is_private,
                 location,
                 is_featured,
-                sold: sold || false
+                sold: sold || false,
+                updatedAt: updatedAt || undefined
             }
         })
 
