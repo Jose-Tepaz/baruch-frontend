@@ -7,6 +7,7 @@ import { AuthProvider } from "@/context/AuthContext";
 import { Work_Sans, Libre_Baskerville } from "next/font/google";
 import CookieConsent from "@/components/elements/CookieConsent";
 import TrackingScripts from "@/components/elements/TrackingScripts";
+import HtmlLangUpdate from "@/components/elements/HtmlLangUpdate";
 import type { Metadata } from "next";
 
 // Styles
@@ -163,6 +164,7 @@ export default async function RootLayout({ children }: Props) {
         {/* Tracking Scripts - Solo se cargan si hay consentimiento */}
         <TrackingScripts />
         <CookieConsent />
+        <HtmlLangUpdate />
       </body>
     </html>
   );
