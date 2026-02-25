@@ -1,44 +1,5 @@
 import { ReactNode } from "react";
-import WhatsAppButton from "@/components/elements/WhatsAppButton";
-import { WHATSAPP_CONFIG } from "@/config/whatsapp";
-import StoreProvider from "@/features/StoreProvider";
-import { AuthProvider } from "@/context/AuthContext";
-import { Inter } from "next/font/google";
-import { Work_Sans, Libre_Baskerville } from "next/font/google";
-import CookieConsent from "@/components/elements/CookieConsent";
-import TrackingScripts from "@/components/elements/TrackingScripts";
 import type { Metadata } from "next";
-
-// Styles
-import "../../public/assets/css/plugins/aos.css";
-import "../../public/assets/css/plugins/bootstrap.min.css";
-import "../../public/assets/css/plugins/fontawesome.css";
-import "../../public/assets/css/plugins/magnific-popup.css";
-import "../../public/assets/css/plugins/mobile.css";
-import "../../public/assets/css/plugins/odometer.css";
-import "../../public/assets/css/plugins/owlcarousel.min.css";
-import "../../public/assets/css/plugins/sidebar.css";
-import "../../public/assets/css/plugins/slick-slider.css";
-import "../../public/assets/css/plugins/swiper-slider.css";
-import "../../public/assets/css/main.css";
-import "../../public/assets/css/custom-fonts.css";
-import "../../public/assets/css/whatsapp-button.css";
-import "intl-tel-input/build/css/intlTelInput.css";
-
-const workSans = Work_Sans({
-  weight: ["300", "400", "500", "600", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-work-sans",
-});
-
-const libreBaskerville = Libre_Baskerville({
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-libre-baskerville",
-});
 
 // Metadata dinámica basada en el idioma
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -133,45 +94,6 @@ interface Props {
   }>;
 }
 
-export default async function LocaleLayout({ children, params }: Props) {
-  const { lang } = await params;
-  return (
-    <html lang={lang} suppressHydrationWarning>
-      <head>
-        {/* Favicon links */}
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
-      </head>
-      <body
-        className={`${workSans.variable} ${libreBaskerville.variable} ${workSans.className} homepage1-body body1`}
-      >
-        <StoreProvider>
-          <AuthProvider>{children}</AuthProvider>
-        </StoreProvider>
-        <WhatsAppButton phoneNumber={WHATSAPP_CONFIG.phoneNumber} />
-        {/* Tracking Scripts - Solo se cargan si hay consentimiento */}
-        <TrackingScripts />
-        <CookieConsent />
-      </body>
-    </html>
-  );
+export default async function LocaleLayout({ children }: Props) {
+  return <>{children}</>;
 }

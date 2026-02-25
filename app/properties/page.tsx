@@ -1,5 +1,5 @@
-import PropertiesPage from '../[lang]/properties/page';
-import { Metadata } from 'next';
+import PropertiesPage from "../[lang]/properties/page";
+import { Metadata } from "next";
 
 interface RootPropertiesPageProps {
   searchParams?: Promise<{
@@ -20,41 +20,47 @@ interface RootPropertiesPageProps {
 
 // Metadata específica para Properties en inglés
 export const metadata: Metadata = {
-  title: 'Properties for Sale - Baruch Real Estate',
-  description: 'Browse our extensive collection of properties for sale. Find houses, apartments, and commercial properties with Baruch Real Estate.',
-  keywords: 'properties for sale, real estate, houses, apartments, commercial properties, Baruch',
+  title: "Properties for Sale - Baruch Real Estate",
+  description:
+    "Browse our extensive collection of properties for sale. Find houses, apartments, and commercial properties with Baruch Real Estate.",
+  keywords:
+    "properties for sale, real estate, houses, apartments, commercial properties, Baruch",
   openGraph: {
-    title: 'Properties for Sale - Baruch Real Estate',
-    description: 'Browse our extensive collection of properties for sale. Find your perfect property today.',
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://www.baruchrealestate.com/properties',
-    siteName: 'Baruch Real Estate',
+    title: "Properties for Sale - Baruch Real Estate",
+    description:
+      "Browse our extensive collection of properties for sale. Find your perfect property today.",
+    type: "website",
+    locale: "en_US",
+    url: "https://www.baruchrealestate.com/properties/",
+    siteName: "Baruch Real Estate",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Properties for Sale - Baruch Real Estate',
-    description: 'Browse our extensive collection of properties for sale. Find your perfect property today.',
+    card: "summary_large_image",
+    title: "Properties for Sale - Baruch Real Estate",
+    description:
+      "Browse our extensive collection of properties for sale. Find your perfect property today.",
   },
   alternates: {
-    canonical: 'https://www.baruchrealestate.com/properties',
+    canonical: "https://www.baruchrealestate.com/properties/",
     languages: {
-      'en': '/properties',
-      'es': '/es/properties',
-      'fr': '/fr/properties',
-      'de': '/de/properties',
-      'pl': '/pl/properties',
-      'sv': '/sv/properties',
-      'nl': '/nl/properties',
-      'x-default': '/properties'
-    }
-  }
+      en: "/properties/",
+      es: "/es/properties/",
+      fr: "/fr/properties/",
+      de: "/de/properties/",
+      pl: "/pl/properties/",
+      sv: "/sv/properties/",
+      nl: "/nl/properties/",
+      "x-default": "/properties/",
+    },
+  },
 };
 
 // Wrapper que pasa lang='en' y searchParams
-export default async function RootPropertiesPage({ searchParams }: RootPropertiesPageProps) {
-  return PropertiesPage({ 
-    params: Promise.resolve({ lang: 'en' }),
-    searchParams: searchParams || Promise.resolve({})
+export default async function RootPropertiesPage({
+  searchParams,
+}: RootPropertiesPageProps) {
+  return PropertiesPage({
+    params: Promise.resolve({ lang: "en" }),
+    searchParams: searchParams || Promise.resolve({}),
   });
 }

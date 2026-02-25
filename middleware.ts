@@ -3,6 +3,14 @@ import type { NextRequest } from 'next/server';
 
 const locales = ['en', 'es', 'fr', 'de', 'pl', 'sv', 'nl'];
 
+function getLocaleFromPathname(pathname: string): string {
+  const firstSegment = pathname.split('/')[1];
+  if (firstSegment && locales.includes(firstSegment) && firstSegment !== 'en') {
+    return firstSegment;
+  }
+  return 'en';
+}
+
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   
@@ -17,9 +25,19 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // Detectar el idioma desde la URL
+  const locale = getLocaleFromPathname(pathname);
+
+  // Crear headers del request con el locale inyectado
+  // (headers() en server components lee request headers, no response headers)
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set('x-locale', locale);
+
   // Permitir la ruta raíz sin redirección (servirá contenido en inglés)
   if (pathname === '/') {
-    return NextResponse.next();
+    return NextResponse.next({
+      request: { headers: requestHeaders },
+    });
   }
 
   // Obtener el primer segmento de la ruta
@@ -41,8 +59,10 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/', request.url));
   }
 
-  // Permitir todas las demás rutas (con o sin prefijo de idioma)
-  return NextResponse.next();
+  // Permitir todas las demás rutas (con o sin prefijo de idioma) — incluir header de idioma
+  return NextResponse.next({
+    request: { headers: requestHeaders },
+  });
 }
 
 export const config = {
