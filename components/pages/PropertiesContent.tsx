@@ -152,12 +152,12 @@ export default function PropertiesContent({
                     const propertyLocation = property.location;
                     if (!propertyLocation) return false;
                     
-                    const locationName = typeof propertyLocation === 'string' 
+                    const locationSlug = typeof propertyLocation === 'string' 
                         ? propertyLocation 
-                        : propertyLocation.name;
+                        : (propertyLocation.slug ?? propertyLocation.name);
                     
                     return locationArray.some(loc => 
-                        locationName?.toLowerCase().includes(loc.toLowerCase())
+                        locationSlug === loc
                     );
                 });
             }
