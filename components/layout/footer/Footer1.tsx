@@ -467,7 +467,7 @@ export default function Footer1() {
                     <ul>
                       <li>
                         <Link
-                          href="https://www.facebook.com/baruchrealestate.com"
+                          href="https://www.facebook.com/baruchrealestate"
                           target="_blank"
                         >
                           <i className="fa-brands fa-facebook-f" />

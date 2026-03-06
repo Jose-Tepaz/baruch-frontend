@@ -57,6 +57,7 @@ export interface MappedProperty {
     Name: string;
     slug: string;
   }>
+  unitPrices?: number[]
 }
 
 export interface PropertyListResponse {
@@ -91,6 +92,7 @@ interface PropertyData {
   }>
   is_private?: boolean
   sold?: boolean
+  units?: Array<{ price: number }>
 }
 
 // Función para verificar si el usuario está autenticado (lado servidor)
@@ -256,7 +258,7 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
   const pageSize = typeof filter.pageSize === 'number' && filter.pageSize > 0 ? filter.pageSize : 9
 
   // Construcción de la query base: populamos todas las relaciones necesarias
-  let queryString = 'properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[amenities][fields][0]=Name&populate[amenities][fields][1]=slug&populate[location][fields][0]=name&populate[location][fields][1]=slug'
+  let queryString = 'properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[amenities][fields][0]=Name&populate[amenities][fields][1]=slug&populate[location][fields][0]=name&populate[location][fields][1]=slug&populate[units][fields][0]=price'
 
   // Agregar parámetro locale
   queryString += `&locale=${encodeURIComponent(currentLocale)}`
@@ -309,13 +311,9 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
     queryString += `&filters[units][bathrooms][$gte]=${encodeURIComponent(filter.bathrooms)}`
   }
 
-  if (filter.min_price && filter.min_price.trim() !== '') {
-    queryString += `&filters[units][price][$gte]=${encodeURIComponent(filter.min_price)}`
-  }
-
-  if (filter.max_price && filter.max_price.trim() !== '') {
-    queryString += `&filters[units][price][$lte]=${encodeURIComponent(filter.max_price)}`
-  }
+  // Filtros de precio desactivados en servidor: Strapi solo devuelve las unidades que
+  // coinciden con el filtro, ocultando el resto. El filtrado correcto se hace en cliente
+  // con todos los precios de unidades disponibles (ver PropertiesContent.tsx).
 
   // 4. FILTRO DE UBICACIÓN
   if (filter.locations && filter.locations.length > 0) {
@@ -383,7 +381,8 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           location,
           amenities,
           is_private,
-          sold
+          sold,
+          units
 
         } = property
 
@@ -391,6 +390,10 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           ? (rawimage.url.startsWith('http') ? rawimage.url : `${STRAPI_HOST}${rawimage.url}`)
           : ''
         const propertyStatus = property_status ? property_status.Title : ''
+        const unitPrices = units && units.length > 0
+          ? units.map((u) => Number(u.price)).filter((p) => !isNaN(p) && p > 0)
+          : undefined
+
 
         return {
           id,
@@ -407,7 +410,8 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
           location,
           is_private,
           sold,
-          amenities: amenities || []
+          amenities: amenities || [],
+          unitPrices
         }
       })
 

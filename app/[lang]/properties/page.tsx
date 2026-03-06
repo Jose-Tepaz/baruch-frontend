@@ -149,6 +149,29 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
             });
         }
         
+        // Filtrar por precio usando los precios de las unidades (server-side)
+        if (properties && (max_price || min_price)) {
+            properties = properties.filter((property: any) => {
+                const unitPrices: number[] = property.unitPrices && property.unitPrices.length > 0
+                    ? property.unitPrices
+                    : (typeof property.price === 'number' ? [property.price] : []);
+
+                if (unitPrices.length === 0) return true;
+
+                if (max_price) {
+                    const maxNum = Number(max_price);
+                    // Ocultar si ALGUNA unidad supera el máximo
+                    if (!unitPrices.every((p: number) => p <= maxNum)) return false;
+                }
+                if (min_price) {
+                    const minNum = Number(min_price);
+                    // Ocultar si NINGUNA unidad alcanza el mínimo
+                    if (!unitPrices.some((p: number) => p >= minNum)) return false;
+                }
+                return true;
+            });
+        }
+
         // Filtrar propiedades localmente por otros criterios si es necesario
         if (properties && (keyword || city || state || searchAmenities)) {
             properties = properties.filter((property: any) => {

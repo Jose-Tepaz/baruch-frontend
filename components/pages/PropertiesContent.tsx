@@ -44,6 +44,7 @@ interface Property {
     is_private?: boolean;
     location?: string | { name: string; slug: string };
     sold?: boolean;
+    unitPrices?: number[];
 }
 
 interface Amenity {
@@ -108,7 +109,7 @@ export default function PropertiesContent({
         let filtered = [...initialProperties];
 
         // Aplicar filtros locales
-        const { keyword, city, state, amenities, category, property_status, location } = searchParams;
+        const { keyword, city, state, amenities, category, property_status, location, min_price, max_price } = searchParams;
 
         if (keyword) {
             const searchTerm = keyword.toLowerCase();
@@ -190,6 +191,30 @@ export default function PropertiesContent({
                     );
                 });
             }
+        }
+
+        // Filtro por precio usando unidades
+        // Si tiene unidades: se usan sus precios; si no, se usa el precio raíz de la propiedad
+        if (max_price && max_price.trim() !== '') {
+            const maxPriceNum = Number(max_price);
+            filtered = filtered.filter(property => {
+                const prices = property.unitPrices && property.unitPrices.length > 0
+                    ? property.unitPrices
+                    : [property.price];
+                // Ocultar si ALGUNA unidad supera el precio máximo
+                return prices.every(p => p <= maxPriceNum);
+            });
+        }
+
+        if (min_price && min_price.trim() !== '') {
+            const minPriceNum = Number(min_price);
+            filtered = filtered.filter(property => {
+                const prices = property.unitPrices && property.unitPrices.length > 0
+                    ? property.unitPrices
+                    : [property.price];
+                // Mostrar si AL MENOS UNA unidad alcanza el precio mínimo
+                return prices.some(p => p >= minPriceNum);
+            });
         }
 
         setFilteredProperties(filtered);
