@@ -258,7 +258,7 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
   const pageSize = typeof filter.pageSize === 'number' && filter.pageSize > 0 ? filter.pageSize : 9
 
   // Construcción de la query base: populamos todas las relaciones necesarias
-  let queryString = 'properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[amenities][fields][0]=Name&populate[amenities][fields][1]=slug&populate[location][fields][0]=name&populate[location][fields][1]=slug&populate[units][fields][0]=price'
+  let queryString = 'properties?sort[0]=createdAt:desc&populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[amenities][fields][0]=Name&populate[amenities][fields][1]=slug&populate[location][fields][0]=name&populate[location][fields][1]=slug&populate[units][fields][0]=price'
 
   // Agregar parámetro locale
   queryString += `&locale=${encodeURIComponent(currentLocale)}`
