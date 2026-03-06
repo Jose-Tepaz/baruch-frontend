@@ -52,7 +52,7 @@ export function getProperties(
     const currentLocale = getLocaleWithFallback(locale);
    
     // Construye el query string base para la consulta a Strapi
-    let queryString = `properties?populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[location][fields][0]=name&populate[location][fields][1]&pagination[limit]=100&locale=${encodeURIComponent(currentLocale)}`;
+    let queryString = `properties?sort[0]=createdAt:desc&populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[location][fields][0]=name&populate[location][fields][1]&pagination[limit]=100&locale=${encodeURIComponent(currentLocale)}`;
     
     // Agrega filtro de categoría si se proporciona categoryId
     if (categoryId && categoryId.trim() !== '') {
