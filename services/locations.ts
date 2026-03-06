@@ -15,12 +15,16 @@ export async function getLocations(locale: string = 'en'): Promise<Location[]> {
     const response = await query(queryString);
     
     if (response && response.data && Array.isArray(response.data)) {
-      return response.data.map((location: any) => ({
-        id: location.id,
-        documentId: location.documentId,
-        name: location.name,
-        slug: location.slug
-      }));
+      return response.data
+        .map((location: any) => ({
+          id: location.id,
+          documentId: location.documentId,
+          name: location.name,
+          slug: location.slug
+        }))
+        .sort((a: Location, b: Location) =>
+          a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
+        );
     }
     
     return [];
