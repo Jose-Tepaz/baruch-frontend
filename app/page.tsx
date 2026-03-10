@@ -1,6 +1,8 @@
 import HomePage from "./[lang]/page";
 import { Metadata } from "next";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Baruch Real Estate - Find Your Dream Property",
