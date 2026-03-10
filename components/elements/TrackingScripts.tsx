@@ -84,12 +84,28 @@ export default function TrackingScripts() {
       loadMetaPixel();
     };
 
+    const handleConsentRejected = () => {
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("consent", "update", {
+          ad_storage: "denied",
+          analytics_storage: "denied",
+          ad_user_data: "denied",
+          ad_personalization: "denied",
+        });
+      }
+    };
+
     window.addEventListener("cookie-consent-accepted", handleConsentAccepted);
+    window.addEventListener("cookie-consent-rejected", handleConsentRejected);
 
     return () => {
       window.removeEventListener(
         "cookie-consent-accepted",
         handleConsentAccepted,
+      );
+      window.removeEventListener(
+        "cookie-consent-rejected",
+        handleConsentRejected,
       );
     };
   }, [hasConsent]);
