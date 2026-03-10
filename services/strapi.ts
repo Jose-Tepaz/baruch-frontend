@@ -9,7 +9,7 @@ export function query(url: string) {
             'Content-Type': 'application/json',
             'Accept-Language': url.includes('locale=') ? url.split('locale=')[1].split('&')[0] : 'en',
         },
-        cache: 'no-store', // Deshabilitar caché para asegurar contenido fresco
+        next: { revalidate: 60 },
     }).then(res => {
         if (!res.ok) {
             throw new Error(`HTTP error! status: ${res.status} - ${res.statusText}`);
