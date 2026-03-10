@@ -75,7 +75,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         descriptions[lang as keyof typeof descriptions] || descriptions.en,
       type: "website",
       locale: lang,
-      url: `https://www.baruchrealestate.com/${lang}/`,
+      url:
+        lang === "en"
+          ? "https://www.baruchrealestate.com/"
+          : `https://www.baruchrealestate.com/${lang}/`,
       siteName: "Baruch Real Estate",
       images: [
         {
