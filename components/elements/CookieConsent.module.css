@@ -1,3 +1,265 @@
+.privacyLink {
+  color: #1d2f3d;
+  text-decoration: underline;
+}
+
+.privacyLink:hover {
+  color: #0e1f2f;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(18, 23, 29, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.preferencesModal {
+  width: min(1400px, 100%);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.28);
+  border: 1px solid #ececec;
+}
+
+.modalHeader {
+  padding: 22px 24px 0;
+}
+
+.modalTitle {
+  margin: 0;
+  color: #1f1f1f;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.modalContent {
+  padding: 12px 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.modalDescription {
+  margin: 0;
+  color: #30343b;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.cookieCategory {
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 162px;
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.categoryTitle {
+  font-size: 28px;
+  line-height: 1;
+  color: #1f1f1f;
+  text-transform: uppercase;
+}
+
+.alwaysOn {
+  background: #ebeff2;
+  color: #5f6a73;
+  border-radius: 999px;
+  font-size: 14px;
+  padding: 6px 14px;
+  white-space: nowrap;
+}
+
+.categoryDescription {
+  margin: 16px 0 0;
+  color: #2f3740;
+  font-size: 18px;
+  line-height: 1.24;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 68px;
+  height: 38px;
+  margin-top: 2px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #d8d8d8;
+  border-radius: 999px;
+  transition: 0.2s;
+}
+
+.slider::before {
+  position: absolute;
+  content: '';
+  height: 30px;
+  width: 30px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.2s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.switch input:checked + .slider {
+  background-color: #0b6f3c;
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(30px);
+}
+
+.modalActions {
+  border-top: 1px solid #efefef;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 12px 24px 24px;
+}
+
+.acceptButton,
+.preferencesButton,
+.rejectButton {
+  border: none;
+  border-radius: 8px;
+  height: 60px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.acceptButton:hover,
+.preferencesButton:hover,
+.rejectButton:hover {
+  transform: translateY(-1px);
+}
+
+.rejectButton {
+  background-color: #f3f3f3;
+  color: #111;
+}
+
+.preferencesButton {
+  background-color: #203242;
+  color: #fff;
+}
+
+.acceptButton {
+  background-color: #2f80ed;
+  color: #fff;
+}
+
+.floatingButton {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9998;
+  border: none;
+  border-radius: 999px;
+  background-color: #0b6f3c;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  padding: 12px 18px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.floatingButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.24);
+}
+
+@media (max-width: 1200px) {
+  .modalTitle {
+    font-size: 28px;
+  }
+
+  .modalDescription {
+    font-size: 18px;
+  }
+
+  .categoriesGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .categoryTitle {
+    font-size: 24px;
+  }
+
+  .alwaysOn {
+    font-size: 14px;
+  }
+
+  .categoryDescription {
+    font-size: 17px;
+  }
+
+  .acceptButton,
+  .preferencesButton,
+  .rejectButton {
+    font-size: 18px;
+    height: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modalOverlay {
+    padding: 12px;
+  }
+
+  .modalHeader,
+  .modalContent,
+  .modalActions {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .modalActions {
+    grid-template-columns: 1fr ;
+  }
+
+  .floatingButton {
+    bottom: 12px;
+    right: 12px;
+  }
+}
 .cookieBanner {
   position: fixed;
   bottom: 24px;
@@ -130,8 +392,8 @@
 }
 
 .preferencesModal {
-  width: 560px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1200px;
   max-height: 88vh;
   overflow: auto;
   background: #ffffff;
@@ -265,7 +527,7 @@
 .modalActions {
   border-top: 1px solid #e4e4e4;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 12px;
   padding: 18px 24px 24px;
 }
@@ -303,6 +565,10 @@
     bottom: 12px;
     max-width: none;
     padding: 20px;
+  }
+
+  .categoriesGrid {
+    grid-template-columns: 1fr;
   }
 
   .cookieTitle {

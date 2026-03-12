@@ -2,22 +2,9 @@
 
 import { useEffect } from "react";
 import Script from "next/script";
-import { useCookieConsent } from "@/hooks/useCookieConsent";
 
 export default function TrackingScripts() {
-  const { hasConsent } = useCookieConsent();
-
   useEffect(() => {
-    // Si la página se hidrata y detectamos el consentimiento, disparamos el update de nuevo
-    if (hasConsent && typeof window !== "undefined" && window.gtag) {
-      window.gtag("consent", "update", {
-        ad_storage: "granted",
-        analytics_storage: "granted",
-        ad_user_data: "granted",
-        ad_personalization: "granted",
-      });
-    }
-
     // Cargar Meta Pixel
     const loadMetaPixel = () => {
       // Verificar si ya existe
@@ -66,49 +53,50 @@ export default function TrackingScripts() {
       }
     };
 
-    // Solo cargar Meta Pixel si hay consentimiento
-    if (hasConsent) {
-      loadMetaPixel();
-    }
-
-    // También escuchar el evento personalizado por si se acepta después
-    const handleConsentAccepted = () => {
+    const applyConsent = (analytics: boolean, marketing: boolean) => {
       if (typeof window !== "undefined" && window.gtag) {
         window.gtag("consent", "update", {
-          ad_storage: "granted",
-          analytics_storage: "granted",
-          ad_user_data: "granted",
-          ad_personalization: "granted",
+          ad_storage: marketing ? "granted" : "denied",
+          analytics_storage: analytics ? "granted" : "denied",
+          ad_user_data: marketing ? "granted" : "denied",
+          ad_personalization: marketing ? "granted" : "denied",
         });
       }
-      loadMetaPixel();
-    };
 
-    const handleConsentRejected = () => {
-      if (typeof window !== "undefined" && window.gtag) {
-        window.gtag("consent", "update", {
-          ad_storage: "denied",
-          analytics_storage: "denied",
-          ad_user_data: "denied",
-          ad_personalization: "denied",
-        });
+      if (marketing) {
+        loadMetaPixel();
       }
     };
 
-    window.addEventListener("cookie-consent-accepted", handleConsentAccepted);
-    window.addEventListener("cookie-consent-rejected", handleConsentRejected);
+    const syncConsentFromStorage = () => {
+      if (typeof window === "undefined") return;
+      const analytics = localStorage.getItem("cookie-analytics-enabled") === "true";
+      const marketing = localStorage.getItem("cookie-marketing-enabled") === "true";
+      applyConsent(analytics, marketing);
+    };
+
+    syncConsentFromStorage();
+
+    const handleConsentUpdated = (
+      event: Event,
+    ) => {
+      const customEvent = event as CustomEvent<{ analytics: boolean; marketing: boolean }>;
+      if (customEvent.detail) {
+        applyConsent(customEvent.detail.analytics, customEvent.detail.marketing);
+      } else {
+        syncConsentFromStorage();
+      }
+    };
+
+    window.addEventListener("cookie-consent-updated", handleConsentUpdated);
 
     return () => {
       window.removeEventListener(
-        "cookie-consent-accepted",
-        handleConsentAccepted,
-      );
-      window.removeEventListener(
-        "cookie-consent-rejected",
-        handleConsentRejected,
+        "cookie-consent-updated",
+        handleConsentUpdated,
       );
     };
-  }, [hasConsent]);
+  }, []);
 
   return (
     <>
@@ -130,12 +118,14 @@ export default function TrackingScripts() {
             'wait_for_update': 500
           });
 
-          if (typeof localStorage !== 'undefined' && localStorage.getItem('cookie-consent') === 'accepted') {
+          if (typeof localStorage !== 'undefined') {
+            const analytics = localStorage.getItem('cookie-analytics-enabled') === 'true';
+            const marketing = localStorage.getItem('cookie-marketing-enabled') === 'true';
             gtag('consent', 'update', {
-              'ad_storage': 'granted',
-              'analytics_storage': 'granted',
-              'ad_user_data': 'granted',
-              'ad_personalization': 'granted'
+              'ad_storage': marketing ? 'granted' : 'denied',
+              'analytics_storage': analytics ? 'granted' : 'denied',
+              'ad_user_data': marketing ? 'granted' : 'denied',
+              'ad_personalization': marketing ? 'granted' : 'denied'
             });
           }
         `}
