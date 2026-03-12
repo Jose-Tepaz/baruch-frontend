@@ -221,7 +221,7 @@ img {
     overflow: hidden;
 
     border: 1px solid #eaeaea;
-    height: 450px;
+   aspect-ratio: 4/3;
     justify-content: flex-end !important;
 }
 
@@ -17542,6 +17542,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
     border-radius: 20px;
     position: relative;
     top: 0px;
+    border: 1px solid #eaebeb;
 }
 
 .property-mapgrid-area .sidebar1-area .amenity-item {
@@ -23131,7 +23132,39 @@ a.text-primary {
     padding: 0 .25rem;
 }
 
-/*============= LISTING CSS AREA ===============*/
+/*============= filters CSS AREA ===============*/
+.filter-area-properties {
+    border: 1px solid #eaebeb;
+    border-radius: 0px;
+    overflow: hidden;
+    padding: 24px;
+    background-color: #fff;
+ 
+}
 
+.grid-filters-properties {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.wrapp-list-properties {
+   display: grid!important;
+   grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+   gap: 1rem;
+}
+
+@media (max-width: 767px) {
+    .grid-filters-properties {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .filter-area-properties {
+        margin-top: 1rem;
+    }
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -227,9 +227,9 @@ export default function PropertiesContent({
 
 
             <div className="container">
-                <div className="row">
+                <div className="col-12 d-flex flex-column gap-4">
                     {/* Sidebar con filtros */}
-                    <div className="col-lg-3">
+                    <div className="col-lg-12">
                         <PropertyFilterStatic
                             categories={categories}
                             propertyStatuses={propertyStatuses}
@@ -239,7 +239,7 @@ export default function PropertiesContent({
                     </div>
 
                     {/* Lista de propiedades */}
-                    <div className="col-lg-9 wrapp-content--properties-list" >
+                    <div className="col-lg-12 wrapp-content--properties-list" >
 
 
                         {isLoading ? (
@@ -250,9 +250,9 @@ export default function PropertiesContent({
                                 <p className="mt-3">{t('properties.loading')}</p>
                             </div>
                         ) : (filteredProperties && filteredProperties.length > 0) ? (
-                            <div className="row g-4">
+                            <div className="wrapp-list-properties">
                                 {filteredProperties.map((property: Property) => (
-                                    <div key={property.slug} className="col-md-6 col-lg-4">
+                                    <div key={property.slug} className=" ">
                                         <PropertieCardV1
                                             title={property.title}
                                             address={property.address}

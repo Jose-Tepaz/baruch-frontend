@@ -441,15 +441,15 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
                     margin-top: 4px;
                 }
             `}</style>
-            <div className="sidebar1-area">
+            <div className="filter-area-properties">
                 <div className="tab-content" id="pills-tabContent">
                     <form onSubmit={handleSubmit}>
                         <div className="row">
-                            <div className="col-lg-12">
+                            <div className="grid-filters-properties">
                                 
 
                                 {/* Location multi-select */}
-                                <div className="input-area filter-group mb-3" style={{ position: 'relative' }}>
+                                <div className=" input-area filter-group mb-3" style={{ position: 'relative' }}>
                                     <label htmlFor="location-multi-select" className="filter-label">
                                         {t('home.location-filter') || 'Location'}
                                     </label>
