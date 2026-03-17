@@ -70,8 +70,8 @@ export default function TrackingScripts() {
 
     const syncConsentFromStorage = () => {
       if (typeof window === "undefined") return;
-      const analytics = localStorage.getItem("cookie-analytics-enabled") === "true";
-      const marketing = localStorage.getItem("cookie-marketing-enabled") === "true";
+      const analytics = sessionStorage.getItem("cookie-analytics-enabled") === "true";
+      const marketing = sessionStorage.getItem("cookie-marketing-enabled") === "true";
       applyConsent(analytics, marketing);
     };
 
@@ -118,9 +118,9 @@ export default function TrackingScripts() {
             'wait_for_update': 500
           });
 
-          if (typeof localStorage !== 'undefined') {
-            const analytics = localStorage.getItem('cookie-analytics-enabled') === 'true';
-            const marketing = localStorage.getItem('cookie-marketing-enabled') === 'true';
+          if (typeof sessionStorage !== 'undefined') {
+            const analytics = sessionStorage.getItem('cookie-analytics-enabled') === 'true';
+            const marketing = sessionStorage.getItem('cookie-marketing-enabled') === 'true';
             gtag('consent', 'update', {
               'ad_storage': marketing ? 'granted' : 'denied',
               'analytics_storage': analytics ? 'granted' : 'denied',

@@ -17,7 +17,7 @@ export function useCookieConsent() {
     if (typeof window === 'undefined') return;
 
     // Verificar si hay consentimiento guardado
-    const consent = localStorage.getItem(COOKIE_CONSENT_KEY) as ConsentStatus;
+    const consent = sessionStorage.getItem(COOKIE_CONSENT_KEY) as ConsentStatus;
     
     if (consent === 'accepted') {
       setHasConsent(true);
@@ -31,9 +31,9 @@ export function useCookieConsent() {
   const acceptCookies = () => {
     if (typeof window === 'undefined') return;
     
-    localStorage.setItem(COOKIE_CONSENT_KEY, 'accepted');
-    localStorage.setItem(COOKIE_ANALYTICS_KEY, 'true');
-    localStorage.setItem(COOKIE_MARKETING_KEY, 'true');
+    sessionStorage.setItem(COOKIE_CONSENT_KEY, 'accepted');
+    sessionStorage.setItem(COOKIE_ANALYTICS_KEY, 'true');
+    sessionStorage.setItem(COOKIE_MARKETING_KEY, 'true');
     setHasConsent(true);
     
     // Disparar evento personalizado para que los scripts se carguen
@@ -48,9 +48,9 @@ export function useCookieConsent() {
   const rejectCookies = () => {
     if (typeof window === 'undefined') return;
     
-    localStorage.setItem(COOKIE_CONSENT_KEY, 'rejected');
-    localStorage.setItem(COOKIE_ANALYTICS_KEY, 'false');
-    localStorage.setItem(COOKIE_MARKETING_KEY, 'false');
+    sessionStorage.setItem(COOKIE_CONSENT_KEY, 'rejected');
+    sessionStorage.setItem(COOKIE_ANALYTICS_KEY, 'false');
+    sessionStorage.setItem(COOKIE_MARKETING_KEY, 'false');
     setHasConsent(false);
     window.dispatchEvent(
       new CustomEvent('cookie-consent-updated', {
@@ -63,12 +63,12 @@ export function useCookieConsent() {
   const savePreferences = (analyticsEnabled: boolean, marketingEnabled: boolean) => {
     if (typeof window === 'undefined') return;
 
-    localStorage.setItem(COOKIE_ANALYTICS_KEY, analyticsEnabled ? 'true' : 'false');
-    localStorage.setItem(COOKIE_MARKETING_KEY, marketingEnabled ? 'true' : 'false');
+    sessionStorage.setItem(COOKIE_ANALYTICS_KEY, analyticsEnabled ? 'true' : 'false');
+    sessionStorage.setItem(COOKIE_MARKETING_KEY, marketingEnabled ? 'true' : 'false');
 
     const hasAnyOptionalConsent = analyticsEnabled || marketingEnabled;
 
-    localStorage.setItem(COOKIE_CONSENT_KEY, hasAnyOptionalConsent ? 'accepted' : 'rejected');
+    sessionStorage.setItem(COOKIE_CONSENT_KEY, hasAnyOptionalConsent ? 'accepted' : 'rejected');
     setHasConsent(hasAnyOptionalConsent);
     window.dispatchEvent(
       new CustomEvent('cookie-consent-updated', {
@@ -86,22 +86,22 @@ export function useCookieConsent() {
 
   const getAnalyticsConsent = (): boolean => {
     if (typeof window === 'undefined') return false;
-    return localStorage.getItem(COOKIE_ANALYTICS_KEY) === 'true';
+    return sessionStorage.getItem(COOKIE_ANALYTICS_KEY) === 'true';
   };
 
   const getMarketingConsent = (): boolean => {
     if (typeof window === 'undefined') return false;
-    return localStorage.getItem(COOKIE_MARKETING_KEY) === 'true';
+    return sessionStorage.getItem(COOKIE_MARKETING_KEY) === 'true';
   };
 
   const hasConsentBeenGiven = (): boolean => {
     if (typeof window === 'undefined') return false;
-    return localStorage.getItem(COOKIE_CONSENT_KEY) === 'accepted';
+    return sessionStorage.getItem(COOKIE_CONSENT_KEY) === 'accepted';
   };
 
   const hasConsentBeenSet = (): boolean => {
     if (typeof window === 'undefined') return false;
-    const consent = localStorage.getItem(COOKIE_CONSENT_KEY);
+    const consent = sessionStorage.getItem(COOKIE_CONSENT_KEY);
     return consent === 'accepted' || consent === 'rejected';
   };
 
