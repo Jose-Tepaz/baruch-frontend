@@ -69,6 +69,8 @@
         "max-price-filter": "Max Preis",
         "amenities-filter": "Wohnungen",
         "location-filter": "Standort",
+        "keyword-filter": "Suchen",
+        "keyword-placeholder": "Nach Name, Referenz suchen...",
         "show-more": "Mehr Filter anzeigen",
         "show-less": "Weniger Filter anzeigen",
         "btn-filter": "Wohnungen suchen",

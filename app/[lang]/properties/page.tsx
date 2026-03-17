@@ -134,6 +134,7 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
             locations: locationSlugs, // Array de slugs para filtrado múltiple
             amenities: Array.isArray(searchAmenities) ? searchAmenities[0] : searchAmenities, // Mantener para compatibilidad
             amenitiesArray: amenitiesArray, // Array de nombres para filtrado múltiple
+            keyword: keyword, // Búsqueda por título y descripción en Strapi
             locale: lang, // Usar el locale dinámico
             page: currentPage, 
             pageSize: 9  
@@ -172,44 +173,15 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
             });
         }
 
-        // Filtrar propiedades localmente por otros criterios si es necesario
-        if (properties && (keyword || city || state || searchAmenities)) {
+        // Filtrar propiedades localmente por city/state si es necesario
+        if (properties && (city || state)) {
             properties = properties.filter((property: any) => {
-                // Filtrar por keyword (en título o descripción)
-                if (keyword) {
-                    const searchTerm = keyword.toLowerCase();
-                    const title = property.title?.toLowerCase() || '';
-                    const description = property.description?.toLowerCase() || '';
-                    if (!title.includes(searchTerm) && !description.includes(searchTerm)) {
-                        return false;
-                    }
-                }
-                
-                // Filtrar por city
                 if (city && !property.address?.toLowerCase().includes(city.toLowerCase())) {
                     return false;
                 }
-                
-                // Filtrar por state
                 if (state && !property.address?.toLowerCase().includes(state.toLowerCase())) {
                     return false;
                 }
-                
-                // Filtrar por amenities (OR)
-                if (searchAmenities) {
-                    const amenityArray = Array.isArray(searchAmenities) ? searchAmenities : [searchAmenities];
-                    if (amenityArray.length > 0) {
-                        const propertyAmenities = property.amenities || [];
-                        const propertyAmenityNames = propertyAmenities.map((amenity: any) => amenity.Name);
-                        const hasAnyAmenity = amenityArray.some(amenity => 
-                            propertyAmenityNames.includes(amenity)
-                        );
-                        if (!hasAnyAmenity) {
-                            return false;
-                        }
-                    }
-                }
-                
                 return true;
             });
         }

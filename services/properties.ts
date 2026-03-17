@@ -138,6 +138,7 @@ export type getPropertiesFilter = {
   locationSlug?: string      // Slug de ubicación única
   amenities?: string         // Nombre parcial de amenidad
   amenitiesArray?: string[]  // Array de nombres de amenidades (filtro múltiple)
+  keyword?: string           // Texto libre: busca en título y descripción
   locale?: string           // Idioma
   page?: number             // Número de página
   pageSize?: number         // Tamaño de página
@@ -332,7 +333,15 @@ export function getProperties(filter: getPropertiesFilter = {}): Promise<Propert
     queryString += `&filters[location][slug][$eq]=${encodeURIComponent(filter.locationSlug)}`
   }
 
-  // 5. FILTRO DE AMENIDADES
+  // 5. FILTRO DE KEYWORD (título o descripción)
+  if (filter.keyword && filter.keyword.trim() !== '') {
+    const kw = encodeURIComponent(filter.keyword.trim())
+    queryString += `&filters[$and][${andIndex}][$or][0][title][$containsi]=${kw}`
+    queryString += `&filters[$and][${andIndex}][$or][1][description][$containsi]=${kw}`
+    andIndex++
+  }
+
+  // 6. FILTRO DE AMENIDADES
   if (filter.amenitiesArray && filter.amenitiesArray.length > 0) {
     // Múltiples amenidades: lógica OR (Trae propiedades que tengan AL MENOS UNA de las amenidades seleccionadas)
     filter.amenitiesArray.forEach((amenity) => {

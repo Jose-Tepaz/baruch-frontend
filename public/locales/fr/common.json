@@ -69,6 +69,8 @@
         "max-price-filter": "Prix Max",
         "amenities-filter": "Caractéristiques",
         "location-filter": "Emplacement",
+        "keyword-filter": "Rechercher",
+        "keyword-placeholder": "Rechercher par nom, référence...",
         "show-more": "Afficher plus de filtres",
         "show-less": "Afficher moins de filtres",
         "btn-filter": "Rechercher les Propriétés",

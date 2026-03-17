@@ -446,7 +446,34 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
                     <form onSubmit={handleSubmit}>
                         <div className="row">
                             <div className="grid-filters-properties">
-                                
+
+                                {/* Keyword search input */}
+                                <div className="input-area filter-group mb-3">
+                                    <label htmlFor="keyword-search" className="filter-label">
+                                        {t('home.keyword-filter') || 'Search'}
+                                    </label>
+                                    <div className={styles.searchInputWrapper}>
+                                       
+                                        <input
+                                            id="keyword-search"
+                                            type="text"
+                                            className={styles.searchInput}
+                                            value={keyword}
+                                            onChange={(e) => handleKeywordChange(e.target.value)}
+                                            placeholder={t('home.keyword-placeholder') || 'Search by name, reference...'}
+                                            
+                                        />
+                                        {keyword && (
+                                            <button
+                                                type="button"
+                                                className={styles.searchClearBtn}
+                                                onClick={() => handleKeywordChange('')}
+                                            >
+                                                <i className="fa-solid fa-xmark"></i>
+                                            </button>
+                                        )}
+                                    </div>
+                                </div>
 
                                 {/* Location multi-select */}
                                 <div className=" input-area filter-group mb-3" style={{ position: 'relative' }}>
@@ -579,18 +606,13 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
                                         <i className={`fa-solid fa-chevron-${showMoreFilters ? 'up' : 'down'} ms-2`} />
                                     </button>
                                 </div>
-                            </div>
-                        </div>
 
-                        <div className="space32" />
-                        <button type="submit" className="vl-btn1">
+                                <button type="submit" className="vl-btn1">
                             {t('home.btn-filter') || 'Search Property'}
                             <span className="arrow1 ms-2">
                                 <i className="fa-solid fa-arrow-right" />
                             </span>
-                            <span className="arrow2 ms-2">
-                                <i className="fa-solid fa-arrow-right" />
-                            </span>
+                            
                         </button>
                         
                         <div className="d-flex justify-content-between align-items-center mt-4">
@@ -604,6 +626,11 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
                             </button>
                             
                         </div>
+                            </div>
+                        </div>
+
+                        <div className="space32" />
+                        
                     </form>
                 </div>
             </div>

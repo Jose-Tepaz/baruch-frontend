@@ -69,6 +69,8 @@
         "max-price-filter": "Max Pris",
         "amenities-filter": "Egenskaper",
         "location-filter": "Plats",
+        "keyword-filter": "Sök",
+        "keyword-placeholder": "Sök efter namn, referens...",
         "show-more": "Visa fler filter",
         "show-less": "Visa färre filter",
         "btn-filter": "Sök fastigheter",

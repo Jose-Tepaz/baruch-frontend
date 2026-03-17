@@ -68,6 +68,8 @@
     "max-price-filter": "Max Prijs",
     "amenities-filter": "Eigenschappen",
     "location-filter": "Locatie",
+    "keyword-filter": "Zoeken",
+    "keyword-placeholder": "Zoeken op naam, referentie...",
     "show-more": "Meer filters tonen",
     "show-less": "Minder filters tonen",
     "btn-filter": "Woningen zoeken",

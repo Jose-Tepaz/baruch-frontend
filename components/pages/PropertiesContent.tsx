@@ -115,7 +115,10 @@ export default function PropertiesContent({
             const searchTerm = keyword.toLowerCase();
             filtered = filtered.filter(property => {
                 const title = property.title?.toLowerCase() || '';
-                const description = property.description?.toLowerCase() || '';
+                const rawDesc = property.description;
+                const description = typeof rawDesc === 'string'
+                    ? rawDesc.toLowerCase()
+                    : JSON.stringify(rawDesc ?? '').toLowerCase();
                 return title.includes(searchTerm) || description.includes(searchTerm);
             });
         }
