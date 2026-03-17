@@ -515,7 +515,7 @@ export default function Footer1() {
                     <ul className="text-white">
                       <li>
                         <Link
-                          href={getLocalizedPath("/")}
+                          href={getLocalizedPath("/about-us/")}
                           className="text-white"
                         >
                           {t("footer.title-1-footer")}
@@ -523,7 +523,11 @@ export default function Footer1() {
                       </li>
                       <li>
                         <Link
-                          href={getLocalizedPath("/about-us")}
+                          href="#"
+                          style={{
+                            pointerEvents: "none",
+                            cursor: "not-allowed",
+                          }}
                           className="text-white"
                         >
                           {t("footer.title-2-footer")}

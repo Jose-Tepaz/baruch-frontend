@@ -31,7 +31,8 @@ interface PropertyData {
   category: any
   is_private?: boolean,
   location?: any,
-  is_featured?: boolean
+  is_featured?: boolean,
+  units?: Array<{ price: number }>
 }
 
 /**
@@ -52,7 +53,7 @@ export function getProperties(
     const currentLocale = getLocaleWithFallback(locale);
    
     // Construye el query string base para la consulta a Strapi
-    let queryString = `properties?sort[0]=createdAt:desc&populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[location][fields][0]=name&populate[location][fields][1]&pagination[limit]=100&locale=${encodeURIComponent(currentLocale)}`;
+    let queryString = `properties?sort[0]=createdAt:desc&populate[main_image][fields][0]=url&populate[property_status][fields][0]=Title&populate[category][fields][0]=name&populate[category][fields][1]=slug&populate[location][fields][0]=name&populate[location][fields][1]&populate[units][fields][0]=price&pagination[limit]=100&locale=${encodeURIComponent(currentLocale)}`;
     
     // Agrega filtro de categoría si se proporciona categoryId
     if (categoryId && categoryId.trim() !== '') {
@@ -104,7 +105,8 @@ export function getProperties(
                 location,
                 is_featured,
                 sold,
-                updatedAt
+                updatedAt,
+                units
             } = property as PropertyData & { sold?: boolean; updatedAt?: string }
 
             // Procesa la URL de la imagen principal
@@ -113,8 +115,10 @@ export function getProperties(
                 : ''
             // Obtiene el título del estado de la propiedad
             const propertyStatus = property_status?.Title || ''
-            
-           
+
+            const unitPrices = units && units.length > 0
+                ? units.map((u) => Number(u.price)).filter((p) => !isNaN(p) && p > 0)
+                : undefined
 
             // Retorna el objeto propiedad procesado
             return {
@@ -133,7 +137,8 @@ export function getProperties(
                 location,
                 is_featured,
                 sold: sold || false,
-                updatedAt: updatedAt || undefined
+                updatedAt: updatedAt || undefined,
+                unitPrices
             }
         })
 
