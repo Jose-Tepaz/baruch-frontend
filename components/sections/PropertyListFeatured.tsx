@@ -21,6 +21,7 @@ type PropertyCardProps = {
   isPrivate: boolean;
   location?: string | { name: string; slug: string };
   sold?: boolean;
+  unitPrices?: number[];
 };
 
 export default function PropertyListSlide({
@@ -39,6 +40,7 @@ export default function PropertyListSlide({
   location,
   highlight,
   sold = false,
+  unitPrices,
 }: PropertyCardProps) {
   const { t } = useTranslation("common");
   const getLocalizedPath = useLocalizedPath();
@@ -148,7 +150,9 @@ export default function PropertyListSlide({
 
             <div className="d-flex justify-content-between align-items-center">
               <span className="fw-bold fs-5">
-                {formatPrice(formattedPrice)}
+                {unitPrices && unitPrices.length > 0 && formattedPrice !== 0
+                  ? `${t("propertyDetails.price_from")} ${formatPrice(formattedPrice)}`
+                  : formatPrice(formattedPrice)}
                 <span className="fs-6 "></span>
               </span>
               <span

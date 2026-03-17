@@ -581,6 +581,7 @@
         "price-text": "Precio",
         "contact-text": "Contactanos",
         "on_request": "Consultar precio",
+        "price_from": "Desde",
         "map_locations-text": "Ubicación en el Mapa",
         "send_message-text": "Estoy interesado en",
         "send_message-text-description": "¿Te gustaría programar una visita o tienes alguna pregunta? Por favor, rellena tus detalles abajo para que podamos contactarte.",

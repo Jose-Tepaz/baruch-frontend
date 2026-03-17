@@ -17,6 +17,7 @@ type PropertyCardProps = {
   slug: string;
   location: string | { name: string; slug: string };
   sold?: boolean;
+  unitPrices?: number[];
 };
 
 export default function PropertieCardV1({
@@ -31,6 +32,7 @@ export default function PropertieCardV1({
   slug,
   location,
   sold = false,
+  unitPrices,
 }: PropertyCardProps) {
   const { t } = useTranslation("common");
   const getLocalizedPath = useLocalizedPath();
@@ -135,7 +137,9 @@ export default function PropertieCardV1({
 
             <div className="d-flex justify-content-between align-items-center">
               <span className="fw-bold fs-5">
-                {formatPrice(formattedPrice)}
+                {unitPrices && unitPrices.length > 0 && formattedPrice !== 0
+                  ? `${t("propertyDetails.price_from")} ${formatPrice(formattedPrice)}`
+                  : formatPrice(formattedPrice)}
                 <span className="fs-6 "></span>
               </span>
               <span

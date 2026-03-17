@@ -92,7 +92,9 @@ export default function PropertyDetails({ property }) {
                                     <span className="text-danger fw-bold" style={{ color: '#ff0000' }}>SOLD</span>
                                 </div>
                             ) : (
-                                formatPrice(property.price)
+                                property.units && property.units.length > 0 && property.price !== 0
+                                    ? `${t('propertyDetails.price_from')} ${formatPrice(property.price)}`
+                                    : formatPrice(property.price)
                             )}
                         </div>
                     {/* Precio y botón de contacto */}

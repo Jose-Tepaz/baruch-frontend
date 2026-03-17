@@ -268,6 +268,7 @@ export default function PropertiesContent({
                                             location={typeof property.location === 'string' ? property.location : property.location?.name || ''}
                                             highlight={property.highlight}
                                             sold={property.sold}
+                                            unitPrices={property.unitPrices}
                                         />
                                     </div>
                                 ))}

@@ -88,6 +88,7 @@ export default function PropertyList1({ properties }: { properties: any[] }) {
                     : property.location?.name || ""
                 }
                 sold={property.sold}
+                unitPrices={property.unitPrices}
               />
             </div>
           ))}

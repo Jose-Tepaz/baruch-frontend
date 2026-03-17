@@ -580,6 +580,7 @@
         "price-text": "Price",
         "contact-text": "Contact Us",
         "on_request": "On Request",
+        "price_from": "From",
         "map_locations-text": "Map Locations",
         "send_message-text": "I'm interested in",
         "send_message-text-description": "Would you like to plan a viewing or do you have a question? Please fill in your details below so we can contact you.",
