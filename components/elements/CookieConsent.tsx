@@ -81,7 +81,10 @@ export default function CookieConsent() {
     <>
       {isPopupOpen && (
         <div className={styles.modalOverlay} role="dialog" aria-modal="true">
-          <div className={styles.preferencesModal}>
+          <div
+            className={styles.preferencesModal}
+         
+          >
             <div className={styles.modalHeader}>
               <h4 className={styles.modalTitle}>
                 {getText('cookies.settings-title', 'Valoramos tu privacidad', 'We respect your privacy')}

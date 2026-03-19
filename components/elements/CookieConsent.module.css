@@ -393,8 +393,8 @@
 
 .preferencesModal {
   width: 100%;
-  max-width: 1200px;
-  max-height: 88vh;
+  max-width: 960px;
+  max-height: 80vh;
   overflow: auto;
   background: #ffffff;
   border-radius: 10px;
@@ -461,8 +461,10 @@
 }
 
 .categoryTitle {
-  font-size: 24px;
+  font-size: 18px;
   color: #1f1f1f;
+  font-family: "Work Sans", serif !important;
+ font-weight: 500!important;
 }
 
 .alwaysOn {
