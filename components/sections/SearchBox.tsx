@@ -9,6 +9,7 @@ import LocationMultiSelect from "@/components/elements/LocationMultiSelect";
 import CategoryMultiSelect from "@/components/elements/CategoryMultiSelect";
 import PropertyStatusMultiSelect from "@/components/elements/PropertyStatusMultiSelect";
 import AmenitiesMultiSelect from "@/components/elements/AmenitiesMultiSelect";
+import SingleSelect from "@/components/elements/SingleSelect";
 
 interface Category {
     id?: number;
@@ -71,19 +72,25 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
     const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
     const [selectedStatuses, setSelectedStatuses] = useState<string[]>([]);
     const [selectedAmenities, setSelectedAmenities] = useState<string[]>([]);
+
+    // Estados para filtros single-select
+    const [selectedBedrooms, setSelectedBedrooms] = useState('');
+    const [selectedBathrooms, setSelectedBathrooms] = useState('');
+    const [selectedMinPrice, setSelectedMinPrice] = useState('');
+    const [selectedMaxPrice, setSelectedMaxPrice] = useState('');
     // Handle form submission
     const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const form = e.currentTarget;
         const formData = new FormData(form);
 
-        // Get search criteria from form and multi-select states
+        // Get search criteria from form and states
         const searchCriteria = {
             keyword: formData.get("keyword") as string,
-            bedrooms: formData.get("bedrooms") as string,
-            bathrooms: formData.get("bathrooms") as string,
-            min_price: formData.get("min_price") as string,
-            max_price: formData.get("max_price") as string,
+            bedrooms: selectedBedrooms,
+            bathrooms: selectedBathrooms,
+            min_price: selectedMinPrice,
+            max_price: selectedMaxPrice,
         };
 
         // Build query string
@@ -129,22 +136,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
     return (
         <>
             <style jsx>{`
-                .filter-group select {
-                    width: 100%;
-                    height: 48px;
-                    padding: 0 16px;
-                    border: 1px solid #E7E7E7;
-                    border-radius: 8px;
-                    background-color: #fff;
-                    font-size: 14px;
-                    color: #1B1B1B;
-                    cursor: pointer;
-                    appearance: none;
-                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%231B1B1B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-                    background-repeat: no-repeat;
-                    background-position: right 16px center;
-                }
-
+                
                 /* Estilos para componentes multi-select */
                 .filter-group .location-multi-select,
                 .filter-group .category-multi-select,
@@ -198,34 +190,8 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                     margin-top: 4px;
                 }
 
-                .filter-group select:hover {
-                    border-color: #D1D1D1;
-                }
-
-                .filter-group select:focus {
-                    outline: none;
-                    border-color: #1B1B1B;
-                }
-
-                .filter-group label {
-                    display: block;
-                    margin-bottom: 8px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    color: #1B1B1B;
-                }
-
                 .filter-group {
                     margin-bottom: 16px;
-                }
-
-                .filter-group select option {
-                    padding: 8px 16px;
-                    font-size: 14px;
-                }
-
-                .filter-group select option:checked {
-                    background-color: #F5F5F5;
                 }
 
                 .filter-group input {
@@ -359,7 +325,7 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                         <div className="others-section-area-filters ">
 
                             <div className="property-tab-section ">
-                                <form onSubmit={handleSearch}>
+                                <form onSubmit={handleSearch} noValidate>
                                     <div className="">
                                         <div className=" mb-4 is-center">
                                             <h3 className="text-align-center size-32">{t('home.title-filter')}</h3>
@@ -369,29 +335,27 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
 
                                         {/* Primera fila: Location, categoría y estatus multi-select */}
                                         <div className="filters z-1 position-relative mb-3">
-                                            <div className="d-flex flex-lg-nowrap flex-wrap gap-2 justify-content-between w-100">
+                                            <div className="grid-filters-properties">
                                                 <div className="filter-group flex-grow-1">
-                                                    <label htmlFor="location">{t('home.location-filter')}</label>
+                                                   
                                                     <LocationMultiSelect
                                                         locations={locations}
                                                         selectedLocations={selectedLocations}
                                                         onChange={setSelectedLocations}
-                                                        placeholder={t('home.location-filter') || "Select locations"}
+                                                        placeholder={t('home.location-filter') || t('home.location-filter')}
                                                         name="location"
                                                     />
                                                 </div>
                                                 <div className="filter-group">
-                                                    <label htmlFor="category">{t('home.title-filter-2')}</label>
                                                     <CategoryMultiSelect
                                                         categories={categories}
                                                         selectedCategories={selectedCategories}
                                                         onChange={setSelectedCategories}
-                                                        placeholder={t('home.title-filter-2') || "Select property types"}
+                                                        placeholder={t('home.title-filter-2') || t('home.title-filter-2')}
                                                         name="category"
                                                     />
                                                 </div>
                                                 <div className="filter-group">
-                                                    <label htmlFor="property_status">{t('home.title-filter-1')}</label>
                                                     <PropertyStatusMultiSelect
                                                         propertyStatuses={propertyStatuses}
                                                         selectedStatuses={selectedStatuses}
@@ -400,79 +364,87 @@ export default function SearchBox({ categories = fallbackCategories, propertySta
                                                         name="property_status"
                                                     />
                                                 </div>
-                                            </div>
-                                        </div>
+                                         
 
-                                        {/* Segunda fila: Filtros adicionales */}
-                                        <div className="filters z-1 position-relative mb-3">
-                                            <div className="d-flex flex-lg-nowrap flex-wrap gap-2 justify-content-between w-100">
+                                       
 
                                                 {/* Filtros siempre visibles en mobile */}
                                                 <div className="filter-group">
-                                                    <label htmlFor="bedrooms">{t('home.bedrooms-filter')}</label>
-                                                    <select name="bedrooms" defaultValue="">
-                                                        <option value="">{t('filters.select-option')}</option>
-                                                        <option value="1">Min 1</option>
-                                                        <option value="2">Min 2</option>
-                                                        <option value="3">Min 3</option>
-                                                        <option value="4">Min 4</option>
-
-                                                    </select>
+                                                    <SingleSelect
+                                                        name="bedrooms"
+                                                        value={selectedBedrooms}
+                                                        onChange={setSelectedBedrooms}
+                                                        placeholder={t('home.bedrooms-filter') || 'Bedrooms'}
+                                                        options={[
+                                                            { value: '1', label: 'Min 1' },
+                                                            { value: '2', label: 'Min 2' },
+                                                            { value: '3', label: 'Min 3' },
+                                                            { value: '4', label: 'Min 4' },
+                                                        ]}
+                                                    />
                                                 </div>
 
                                                 {/* Filtros ocultos en mobile */}
                                                 <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
-                                                    <label htmlFor="bathrooms">{t('home.bathrooms-filter')}</label>
-                                                    <select name="bathrooms" defaultValue="">
-                                                        <option value="">{t('filters.select-option')}</option>
-                                                        <option value="1">Min 1</option>
-                                                        <option value="2">Min 2</option>
-                                                        <option value="3">Min 3</option>
-
-                                                    </select>
+                                                    <SingleSelect
+                                                        name="bathrooms"
+                                                        value={selectedBathrooms}
+                                                        onChange={setSelectedBathrooms}
+                                                        placeholder={t('home.bathrooms-filter') || 'Bathrooms'}
+                                                        options={[
+                                                            { value: '1', label: 'Min 1' },
+                                                            { value: '2', label: 'Min 2' },
+                                                            { value: '3', label: 'Min 3' },
+                                                        ]}
+                                                    />
                                                 </div>
 
                                                 <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
-                                                    <label htmlFor="min_price">{t('home.min-price-filter')}</label>
-                                                    <select name="min_price" defaultValue="">
-                                                        <option value="">{t('filters.select-option')}</option>
-
-                                                        <option value="100000">€100.000</option>
-                                                        <option value="150000">€150.000</option>
-                                                        <option value="200000">€200.000</option>
-                                                        <option value="250000">€250.000</option>
-                                                        <option value="300000">€300.000</option>
-                                                        <option value="400000">€400.000</option>
-                                                        <option value="500000">€500.000</option>
-                                                        <option value="750000">€750.000</option>
-                                                        <option value="1000000">€1,000.000</option>
-                                                        <option value="1500000">€1,500.000</option>
-                                                        <option value="2000000">€2,000.000</option>
-                                                    </select>
+                                                    <SingleSelect
+                                                        name="min_price"
+                                                        value={selectedMinPrice}
+                                                        onChange={setSelectedMinPrice}
+                                                        placeholder={t('home.min-price-filter') || 'Min Price'}
+                                                        options={[
+                                                            { value: '100000', label: '€100.000' },
+                                                            { value: '150000', label: '€150.000' },
+                                                            { value: '200000', label: '€200.000' },
+                                                            { value: '250000', label: '€250.000' },
+                                                            { value: '300000', label: '€300.000' },
+                                                            { value: '400000', label: '€400.000' },
+                                                            { value: '500000', label: '€500.000' },
+                                                            { value: '750000', label: '€750.000' },
+                                                            { value: '1000000', label: '€1,000.000' },
+                                                            { value: '1500000', label: '€1,500.000' },
+                                                            { value: '2000000', label: '€2,000.000' },
+                                                        ]}
+                                                    />
                                                 </div>
 
                                                 <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
-                                                    <label htmlFor="max_price">{t('home.max-price-filter')}</label>
-                                                    <select name="max_price" defaultValue="">
-                                                        <option value="">{t('filters.select-option')}</option>
-
-                                                        <option value="150000">€150.000</option>
-                                                        <option value="200000">€200.000</option>
-                                                        <option value="250000">€250.000</option>
-                                                        <option value="300000">€300.000</option>
-                                                        <option value="400000">€400.000</option>
-                                                        <option value="500000">€500.000</option>
-                                                        <option value="750000">€750.000</option>
-                                                        <option value="1000000">€1,000.000</option>
-                                                        <option value="1500000">€1,500.000</option>
-                                                        <option value="2000000">€2,000.000</option>
-                                                        <option value="5000000">€5,000.000</option>
-                                                        <option value="10000000">€10,000.000</option>
-                                                    </select>
+                                                    <SingleSelect
+                                                        name="max_price"
+                                                        value={selectedMaxPrice}
+                                                        onChange={setSelectedMaxPrice}
+                                                        placeholder={t('home.max-price-filter') || 'Max Price'}
+                                                        options={[
+                                                            { value: '150000', label: '€150.000' },
+                                                            { value: '200000', label: '€200.000' },
+                                                            { value: '250000', label: '€250.000' },
+                                                            { value: '300000', label: '€300.000' },
+                                                            { value: '400000', label: '€400.000' },
+                                                            { value: '500000', label: '€500.000' },
+                                                            { value: '750000', label: '€750.000' },
+                                                            { value: '1000000', label: '€1,000.000' },
+                                                            { value: '1500000', label: '€1,500.000' },
+                                                            { value: '2000000', label: '€2,000.000' },
+                                                            { value: '5000000', label: '€5,000.000' },
+                                                            { value: '10000000', label: '€10,000.000' },
+                                                        ]}
+                                                    />
                                                 </div>
 
                                                 <div className={`filter-group ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
-                                                    <label htmlFor="amenities">{t('home.amenities-filter')}</label>
                                                     <AmenitiesMultiSelect
                                                         amenities={amenities}
                                                         selectedAmenities={selectedAmenities}

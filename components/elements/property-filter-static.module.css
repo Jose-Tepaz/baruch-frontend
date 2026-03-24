@@ -5,27 +5,27 @@
 
 .customDropdownButton {
     width: 100%;
-    padding: 12px 16px;
+    height: 48px;
+    padding: 0 16px;
     background: #fff;
-    border: 2px solid #e9ecef;
+    border: 1px solid #E7E7E7;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: border-color 0.2s ease;
     font-size: 14px;
-    color: #495057;
+    color: #1B1B1B;
+    text-align: left;
 }
 
 .customDropdownButton:hover {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    border-color: #D1D1D1;
 }
 
 .customDropdownButton.open {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    border-color: #D1D1D1;
 }
 
 .dropdownText {
@@ -38,8 +38,9 @@
 
 .dropdownArrow {
     margin-left: 8px;
-    transition: transform 0.3s ease;
-    color: #6c757d;
+    transition: transform 0.2s ease;
+    color: #1B1B1B;
+    font-size: 13px;
 }
 
 .dropdownArrow.rotated {
@@ -52,14 +53,13 @@
     left: 0;
     right: 0;
     background: #fff;
-    border: 2px solid #e9ecef;
-    border-top: none;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #E7E7E7;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    max-height: 200px;
+    max-height: 300px;
     overflow-y: auto;
-    /* Custom scrollbar */
+    margin-top: 4px;
     scrollbar-width: thin;
     scrollbar-color: #cbd5e0 #f7fafc;
 }
@@ -76,7 +76,6 @@
 .customDropdownMenu::-webkit-scrollbar-thumb {
     background: #cbd5e0;
     border-radius: 3px;
-    transition: background 0.2s ease;
 }
 
 .customDropdownMenu::-webkit-scrollbar-thumb:hover {
@@ -85,34 +84,30 @@
 
 .dropdownItem {
     width: 100%;
-    padding: 12px 16px;
+    padding: 10px 16px;
     border: none;
-    background: none;
+    background: #fff;
     text-align: left;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.15s ease;
     font-size: 14px;
-    color: #495057;
-    border-bottom: 1px solid #f8f9fa;
-}
-
-.dropdownItem:last-child {
-    border-bottom: none;
+    color: #1B1B1B;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .dropdownItem:hover {
-    background-color: #f8f9fa;
+    background-color: #F5F5F5;
 }
 
 .dropdownItem.selected {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #F5F5F5;
 }
 
-.dropdownItem.selected:hover {
-    background-color: #0056b3;
+.dropdownItem.placeholder {
+    color: #888;
 }
-
 
 /* Reset button styles */
 
@@ -139,19 +134,6 @@
     color: #dc3545;
 }
 
-@media (max-width: 768px) {
-    .customDropdownMenu {
-        max-height: 150px;
-    }
-    .dropdownItem {
-        padding: 10px 14px;
-        font-size: 13px;
-    }
-    .resetButton {
-        font-size: 12px;
-    }
-}
-
 /* Search input */
 
 .searchInputWrapper {
@@ -161,39 +143,29 @@
     align-items: center;
 }
 
-.searchIcon {
-    position: absolute;
-    left: 14px;
-    color: #6c757d;
-    font-size: 14px;
-    pointer-events: none;
-    z-index: 1;
-}
-
 .searchInput {
     width: 100%;
-    padding: 12px 40px 12px 38px;
+    height: 48px;
+    padding: 0 40px 0 16px;
     background: #fff;
-    border: 2px solid #e9ecef;
+    border: 1px solid #E7E7E7;
     border-radius: 8px;
     font-size: 14px;
-    color: #495057;
-    transition: all 0.3s ease;
+    color: #1B1B1B;
+    transition: border-color 0.2s ease;
     outline: none;
 }
 
 .searchInput::placeholder {
-    color: #adb5bd;
+    color: #888;
 }
 
 .searchInput:hover {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    border-color: #D1D1D1;
 }
 
 .searchInput:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    border-color: #D1D1D1;
 }
 
 .searchClearBtn {
@@ -214,11 +186,4 @@
 
 .searchClearBtn:hover {
     color: #495057;
-}
-
-@media (max-width: 768px) {
-    .searchInput {
-        padding: 10px 36px 10px 36px;
-        font-size: 13px;
-    }
 }

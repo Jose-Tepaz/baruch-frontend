@@ -61,7 +61,7 @@ export default function AmenitiesMultiSelect({
 
   const getDisplayText = () => {
     if (selectedAmenities.length === 0) {
-      return t('filters.select-option') || 'Select option';
+      return placeholder;
     }
     if (selectedAmenities.length === 1) {
       return getCleanAmenityName(selectedAmenities[0]);
@@ -73,7 +73,7 @@ export default function AmenitiesMultiSelect({
   };
   
   return (
-    <div className="amenities-multi-select" ref={dropdownRef}>
+    <div className="amenities-multi-select" ref={dropdownRef} style={{ position: 'relative', width: '100%' }}>
       <button 
         type="button"
         id={id}
@@ -99,7 +99,8 @@ export default function AmenitiesMultiSelect({
           overflow: 'hidden', 
           textOverflow: 'ellipsis', 
           whiteSpace: 'nowrap',
-          flex: 1
+          flex: 1,
+          color: selectedAmenities.length === 0 ? '#888' : '#1B1B1B'
         }}>
           {getDisplayText()}
         </span>
@@ -115,7 +116,7 @@ export default function AmenitiesMultiSelect({
         <div className="amenities-dropdown-menu"
              style={{
                position: 'absolute',
-              
+               top: '100%',
                left: 0,
                right: 0,
                backgroundColor: '#fff',

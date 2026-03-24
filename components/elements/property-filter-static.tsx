@@ -70,8 +70,9 @@ function CustomDropdown({ value, options, placeholder, onChange, name, id }: Cus
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
     
-    const selectedOption = options.find(opt => opt.value === value);
+    const selectedOption = options.find(opt => opt.value === value && opt.value !== '');
     const displayValue = selectedOption ? selectedOption.label : placeholder;
+    const isPlaceholder = !value;
     
     return (
         <div className={styles.customDropdown} ref={dropdownRef}>
@@ -81,23 +82,31 @@ function CustomDropdown({ value, options, placeholder, onChange, name, id }: Cus
                 className={`${styles.customDropdownButton} ${isOpen ? styles.open : ''}`}
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <span className={styles.dropdownText}>{displayValue}</span>
+                <span
+                    className={styles.dropdownText}
+                    style={{ color: isPlaceholder ? '#888' : '#1B1B1B' }}
+                >
+                    {displayValue}
+                </span>
                 <i className={`fa-solid fa-chevron-down ${styles.dropdownArrow} ${isOpen ? styles.rotated : ''}`}></i>
             </button>
             
             {isOpen && (
                 <div className={styles.customDropdownMenu}>
-                    {options.map((option) => (
+                    {options.filter(opt => opt.value !== '').map((option) => (
                         <button
                             key={option.value}
                             type="button"
                             className={`${styles.dropdownItem} ${value === option.value ? styles.selected : ''}`}
                             onClick={() => {
-                                onChange(option.value);
+                                onChange(value === option.value ? '' : option.value);
                                 setIsOpen(false);
                             }}
                         >
-                            {option.label}
+                            <span>{option.label}</span>
+                            {value === option.value && (
+                                <i className="fa-solid fa-check" style={{ fontSize: '12px', color: 'var(--ztc-bg-bg-3)' }} />
+                            )}
                         </button>
                     ))}
                 </div>
@@ -418,30 +427,7 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
     
     return (
         <>
-            <style jsx>{`
-                .filter-label {
-                    display: block;
-                    margin-bottom: 8px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    color: #1B1B1B;
-                    line-height: 1.2;
-                }
-
-                .filter-label:hover {
-                    color: var(--ztc-bg-bg-3);
-                }
-
-                .input-area.filter-group {
-                    margin-bottom: 16px;
-                }
-
-                .input-area.filter-group input,
-                .input-area.filter-group .customDropdown {
-                    margin-top: 4px;
-                }
-            `}</style>
-            <div className="filter-area-properties">
+            <div className="others-section-area-filters">
                 <div className="tab-content" id="pills-tabContent">
                     <form onSubmit={handleSubmit}>
                         <div className="row">
@@ -449,9 +435,6 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
 
                                 {/* Keyword search input */}
                                 <div className="input-area filter-group mb-3">
-                                    <label htmlFor="keyword-search" className="filter-label">
-                                        {t('home.keyword-filter') || 'Search'}
-                                    </label>
                                     <div className={styles.searchInputWrapper}>
                                        
                                         <input
@@ -476,10 +459,7 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
                                 </div>
 
                                 {/* Location multi-select */}
-                                <div className=" input-area filter-group mb-3" style={{ position: 'relative' }}>
-                                    <label htmlFor="location-multi-select" className="filter-label">
-                                        {t('home.location-filter') || 'Location'}
-                                    </label>
+                                <div className=" input-area filter-group mb-3">
                                     <LocationMultiSelect
                                         id="location-multi-select"
                                         locations={locations}
@@ -491,10 +471,7 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
                                 </div>
 
                                 {/* Category multi-select */}
-                                <div className="input-area filter-group mb-3" style={{ position: 'relative' }}>
-                                    <label htmlFor="category-multi-select" className="filter-label">
-                                        {t('home.title-filter-2') || 'Property Type'}
-                                    </label>
+                                <div className="input-area filter-group mb-3">
                                     <CategoryMultiSelect
                                         id="category-multi-select"
                                         categories={categories}
@@ -506,10 +483,7 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
                                 </div>
 
                                 {/* Status multi-select */}
-                                <div className="input-area filter-group mb-3" style={{ position: 'relative' }}>
-                                    <label htmlFor="status-multi-select" className="filter-label">
-                                        {t('home.title-filter-1') || 'Property Status'}
-                                    </label>
+                                <div className="input-area filter-group mb-3">
                                     <PropertyStatusMultiSelect
                                         id="status-multi-select"
                                         propertyStatuses={propertyStatuses}
@@ -521,10 +495,7 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
                                 </div>
 
                                 {/* Amenities multi-select */}
-                                <div className="input-area filter-group mb-3" style={{ position: 'relative' }}>
-                                    <label htmlFor="amenities-multi-select" className="filter-label">
-                                        {t('home.amenities-filter') || 'Amenities'}
-                                    </label>
+                                <div className="input-area filter-group mb-3">
                                     <AmenitiesMultiSelect
                                         id="amenities-multi-select"
                                         amenities={amenities}
@@ -537,9 +508,6 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
 
                                 {/* Bedrooms dropdown */}
                                 <div className="input-area filter-group mb-3">
-                                    <label htmlFor="bedrooms-dropdown" className="filter-label">
-                                        {t('home.bedrooms-filter') || 'Bedrooms'}
-                                    </label>
                                     <CustomDropdown
                                         id="bedrooms-dropdown"
                                         value={bedrooms}
@@ -552,9 +520,6 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
 
                                 {/* Bathrooms dropdown - hidden on mobile unless showMoreFilters is true */}
                                 <div className={`input-area filter-group mb-3 ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
-                                    <label htmlFor="bathrooms-dropdown" className="filter-label">
-                                        {t('home.bathrooms-filter') || 'Bathrooms'}
-                                    </label>
                                     <CustomDropdown
                                         id="bathrooms-dropdown"
                                         value={bathrooms}
@@ -567,9 +532,6 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
 
                                 {/* Min Price dropdown - hidden on mobile unless showMoreFilters is true */}
                                 <div className={`input-area filter-group mb-3 ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
-                                    <label htmlFor="min-price-dropdown" className="filter-label">
-                                        {t('home.min-price-filter') || 'Min Price'}
-                                    </label>
                                     <CustomDropdown
                                         id="min-price-dropdown"
                                         value={minPrice}
@@ -582,9 +544,6 @@ export default function PropertyFilterStatic({ categories, propertyStatuses = []
 
                                 {/* Max Price dropdown - hidden on mobile unless showMoreFilters is true */}
                                 <div className={`input-area filter-group mb-3 ${!showMoreFilters ? 'd-none d-lg-block' : ''}`}>
-                                    <label htmlFor="max-price-dropdown" className="filter-label">
-                                        {t('home.max-price-filter') || 'Max Price'}
-                                    </label>
                                     <CustomDropdown
                                         id="max-price-dropdown"
                                         value={maxPrice}

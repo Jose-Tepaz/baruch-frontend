@@ -61,7 +61,7 @@ export default function CategoryMultiSelect({
 
   const getDisplayText = () => {
     if (selectedCategories.length === 0) {
-      return t('filters.select-option') || 'Select option';
+      return placeholder;
     }
     if (selectedCategories.length === 1) {
       const category = categories.find(cat => cat.slug === selectedCategories[0]);
@@ -74,7 +74,7 @@ export default function CategoryMultiSelect({
   };
   
   return (
-    <div className="category-multi-select" ref={dropdownRef}>
+    <div className="category-multi-select" ref={dropdownRef} style={{ position: 'relative', width: '100%' }}>
       <button 
         type="button"
         id={id}
@@ -100,7 +100,8 @@ export default function CategoryMultiSelect({
           overflow: 'hidden', 
           textOverflow: 'ellipsis', 
           whiteSpace: 'nowrap',
-          flex: 1
+          flex: 1,
+          color: selectedCategories.length === 0 ? '#888' : '#1B1B1B'
         }}>
           {getDisplayText()}
         </span>
@@ -116,7 +117,7 @@ export default function CategoryMultiSelect({
         <div className="category-dropdown-menu"
              style={{
                position: 'absolute',
-              
+               top: '100%',
                left: 0,
                right: 0,
                backgroundColor: '#fff',

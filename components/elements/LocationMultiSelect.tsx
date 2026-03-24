@@ -60,7 +60,7 @@ export default function LocationMultiSelect({
 
   const getDisplayText = () => {
     if (selectedLocations.length === 0) {
-      return t('filters.select-option') || 'Select option'; 
+      return placeholder;
     }
     if (selectedLocations.length === 1) {
       const location = locations.find(loc => loc.slug === selectedLocations[0]);
@@ -73,7 +73,7 @@ export default function LocationMultiSelect({
   };
   
   return (
-    <div className="location-multi-select" ref={dropdownRef}>
+    <div className="location-multi-select" ref={dropdownRef} style={{ position: 'relative', width: '100%' }}>
       <button 
         type="button"
         id={id}
@@ -99,7 +99,8 @@ export default function LocationMultiSelect({
           overflow: 'hidden', 
           textOverflow: 'ellipsis', 
           whiteSpace: 'nowrap',
-          flex: 1
+          flex: 1,
+          color: selectedLocations.length === 0 ? '#888' : '#1B1B1B'
         }}>
           {getDisplayText()}
         </span>
@@ -115,7 +116,7 @@ export default function LocationMultiSelect({
         <div className="location-dropdown-menu"
              style={{
                position: 'absolute',
-             
+               top: '100%',
                left: 0,
                right: 0,
                backgroundColor: '#fff',

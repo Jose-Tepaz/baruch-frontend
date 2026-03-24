@@ -59,7 +59,7 @@ export default function PropertyStatusMultiSelect({
 
   const getDisplayText = () => {
     if (selectedStatuses.length === 0) {
-      return t('filters.select-option') || 'Select option';
+      return placeholder;
     }
     if (selectedStatuses.length === 1) {
       return selectedStatuses[0];
@@ -71,7 +71,7 @@ export default function PropertyStatusMultiSelect({
   };
   
   return (
-    <div className="property-status-multi-select" ref={dropdownRef}>
+    <div className="property-status-multi-select" ref={dropdownRef} style={{ position: 'relative', width: '100%' }}>
       <button 
         type="button"
         id={id}
@@ -97,7 +97,8 @@ export default function PropertyStatusMultiSelect({
           overflow: 'hidden', 
           textOverflow: 'ellipsis', 
           whiteSpace: 'nowrap',
-          flex: 1
+          flex: 1,
+          color: selectedStatuses.length === 0 ? '#888' : '#1B1B1B'
         }}>
           {getDisplayText()}
         </span>
@@ -113,7 +114,7 @@ export default function PropertyStatusMultiSelect({
         <div className="status-dropdown-menu"
              style={{
                position: 'absolute',
-               
+               top: '100%',
                left: 0,
                right: 0,
                backgroundColor: '#fff',

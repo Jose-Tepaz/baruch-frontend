@@ -218,7 +218,7 @@ img {
 
 .property-card {
     position: relative;
-    overflow: hidden;
+  
 
     border: 1px solid #eaeaea;
    aspect-ratio: 4/3;
@@ -9728,7 +9728,7 @@ only screen and (min-width: 768px) and (max-width: 991px),
     font-size: 14px !important;
     font-weight: 400 !important;
     line-height: 22px !important;
-    height: 52px !important;
+   
 }
 
 .search-button-filters {
@@ -23136,7 +23136,7 @@ a.text-primary {
 .filter-area-properties {
     border: 1px solid #eaebeb;
     border-radius: 0px;
-    overflow: hidden;
+  
     padding: 24px;
     background-color: #fff;
  
