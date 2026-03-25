@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from 'react'
 import PropertyFilterStatic from "@/components/elements/property-filter-static";
 import PropertieCardV1 from "@/components/sections/PropertieCardV1";
 import Pagination from "@/components/elements/Pagination";
 import { t } from "@/utils/i18n-simple"; 
+
 interface Category {
     id?: number;
     name: string;
@@ -12,7 +12,6 @@ interface Category {
     description?: string;
     image?: string;
 }
-
 
 interface PropertyStatus {
     id: number;
@@ -96,142 +95,11 @@ export default function PropertiesContent({
     lang
 }: PropertiesContentProps) {
 
-    // Filtros adicionales (los que no se pueden hacer en el servidor)
-    const [filteredProperties, setFilteredProperties] = useState<Property[]>([]);
-
-    useEffect(() => {
-
-        if (!initialProperties || !Array.isArray(initialProperties) || initialProperties.length === 0) {
-            setFilteredProperties([]);
-            return;
-        }
-
-        let filtered = [...initialProperties];
-
-        // Aplicar filtros locales
-        const { keyword, city, state, amenities, category, property_status, location, min_price, max_price } = searchParams;
-
-        if (keyword) {
-            const searchTerm = keyword.toLowerCase();
-            filtered = filtered.filter(property => {
-                const title = property.title?.toLowerCase() || '';
-                const rawDesc = property.description;
-                const description = typeof rawDesc === 'string'
-                    ? rawDesc.toLowerCase()
-                    : JSON.stringify(rawDesc ?? '').toLowerCase();
-                return title.includes(searchTerm) || description.includes(searchTerm);
-            });
-        }
-
-        if (city) {
-            filtered = filtered.filter(property => property.address?.toLowerCase().includes(city.toLowerCase()));
-        }
-
-        if (state) {
-            filtered = filtered.filter(property => property.address?.toLowerCase().includes(state.toLowerCase()));
-        }
-
-        // Filtro por categorías (OR)
-        if (category) {
-            const categoryArray = Array.isArray(category) ? category : [category];
-            if (categoryArray.length > 0) {
-                filtered = filtered.filter(property => {
-                    const propertyCategory = property.category;
-                    if (!propertyCategory) return false;
-                    
-                    const categorySlug = propertyCategory.slug || propertyCategory.name?.toLowerCase();
-                    return categoryArray.some(cat => 
-                        categorySlug === cat.toLowerCase() || 
-                        propertyCategory.name?.toLowerCase() === cat.toLowerCase()
-                    );
-                });
-            }
-        }
-
-        // Filtro por ubicaciones (OR)
-        if (location) {
-            const locationArray = Array.isArray(location) ? location : [location];
-            if (locationArray.length > 0) {
-                filtered = filtered.filter(property => {
-                    const propertyLocation = property.location;
-                    if (!propertyLocation) return false;
-                    
-                    const locationSlug = typeof propertyLocation === 'string' 
-                        ? propertyLocation 
-                        : (propertyLocation.slug ?? propertyLocation.name);
-                    
-                    return locationArray.some(loc => 
-                        locationSlug === loc
-                    );
-                });
-            }
-        }
-
-        // Filtro por estados de propiedad (OR)
-        if (property_status) {
-            const statusArray = Array.isArray(property_status) ? property_status : [property_status];
-            if (statusArray.length > 0) {
-                filtered = filtered.filter(property => {
-                    const propertyStatus = property.propertyStatus || property.status;
-                    if (!propertyStatus) return false;
-                    
-                    return statusArray.some(status => 
-                        propertyStatus.toLowerCase() === status.toLowerCase()
-                    );
-                });
-            }
-        }
-
-        // Filtro por amenities (OR)
-        if (amenities) {
-            const amenityArray = Array.isArray(amenities) ? amenities : [amenities];
-            if (amenityArray.length > 0) {
-                filtered = filtered.filter(property => {
-                    const propertyAmenities = property.amenities || [];
-                    const propertyAmenityNames = propertyAmenities.map((amenity: any) => amenity.Name);
-                    return amenityArray.some(amenity => 
-                        propertyAmenityNames.includes(amenity)
-                    );
-                });
-            }
-        }
-
-        // Filtro por precio usando unidades
-        // Si tiene unidades: se usan sus precios; si no, se usa el precio raíz de la propiedad
-        if (max_price && max_price.trim() !== '') {
-            const maxPriceNum = Number(max_price);
-            filtered = filtered.filter(property => {
-                const prices = property.unitPrices && property.unitPrices.length > 0
-                    ? property.unitPrices
-                    : [property.price];
-                // Ocultar si ALGUNA unidad supera el precio máximo
-                return prices.every(p => p <= maxPriceNum);
-            });
-        }
-
-        if (min_price && min_price.trim() !== '') {
-            const minPriceNum = Number(min_price);
-            filtered = filtered.filter(property => {
-                const prices = property.unitPrices && property.unitPrices.length > 0
-                    ? property.unitPrices
-                    : [property.price];
-                // Mostrar si AL MENOS UNA unidad alcanza el precio mínimo
-                return prices.some(p => p >= minPriceNum);
-            });
-        }
-
-        setFilteredProperties(filtered);
-    }, [initialProperties, searchParams]);
-
-    const isLoading = false; // Ya no hay loading porque usamos datos del servidor
-
     return (
         <div className="property-inner-section-find">
 
-
             <div className="container">
                 <div className="col-12 d-flex flex-column gap-4">
-                    {/* Sidebar con filtros */}
                     <div className="col-lg-12">
                         <PropertyFilterStatic
                             categories={categories}
@@ -241,20 +109,10 @@ export default function PropertiesContent({
                         />
                     </div>
 
-                    {/* Lista de propiedades */}
-                    <div className="col-lg-12 wrapp-content--properties-list" >
-
-
-                        {isLoading ? (
-                            <div className="text-center py-5">
-                                <div className="spinner-border" role="status">
-                                    <span className="visually-hidden">{t('properties.loading')}</span>
-                                </div>
-                                <p className="mt-3">{t('properties.loading')}</p>
-                            </div>
-                        ) : (filteredProperties && filteredProperties.length > 0) ? (
+                    <div className="col-lg-12 wrapp-content--properties-list">
+                        {initialProperties && initialProperties.length > 0 ? (
                             <div className="wrapp-list-properties">
-                                {filteredProperties.map((property: Property) => (
+                                {initialProperties.map((property: Property) => (
                                     <div key={property.slug} className=" ">
                                         <PropertieCardV1
                                             title={property.title}
@@ -277,7 +135,6 @@ export default function PropertiesContent({
                             <div className="text-center py-5">
                                 <h4>{t('properties.no_properties')}</h4>
                                 <p>{t('properties.no_properties_description')}</p>
-                                
                             </div>
                         )}
                         <div className="mt-5 col-12 mt-4 d-flex justify-content-center">
@@ -294,4 +151,4 @@ export default function PropertiesContent({
             </div>
         </div>
     );
-} 
+}

@@ -119,38 +119,37 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
     let properties: any[] = [];
     let propertyStatuses: any[] = [];
     const currentPage = page ? Math.max(1, Number(page)) : 1;
-    let pagination = { page: 1, pageSize: 9, pageCount: 0, total: 0 };
+    const PAGE_SIZE = 9;
+    let pagination = { page: 1, pageSize: PAGE_SIZE, pageCount: 0, total: 0 };
+
+    const hasPostStrapiFilters = !!(min_price || max_price || city || state);
+
     try {
         const { data, meta } = await getProperties({
-            categorySlug: Array.isArray(category) ? category[0] : category, // Mantener para compatibilidad
-            categories: categorySlugs, // Array de slugs para filtrado múltiple
-            propertyStatus: Array.isArray(property_status) ? property_status[0] : property_status, // Mantener para compatibilidad
-            statuses: statusTitles, // Array de títulos para filtrado múltiple
+            categorySlug: Array.isArray(category) ? category[0] : category,
+            categories: categorySlugs,
+            propertyStatus: Array.isArray(property_status) ? property_status[0] : property_status,
+            statuses: statusTitles,
             bedrooms: bedrooms,
             bathrooms: bathrooms,
             min_price: min_price,
             max_price: max_price,
-            location: Array.isArray(location) ? location[0] : location, // Mantener para compatibilidad con filtros de texto
-            locations: locationSlugs, // Array de slugs para filtrado múltiple
-            amenities: Array.isArray(searchAmenities) ? searchAmenities[0] : searchAmenities, // Mantener para compatibilidad
-            amenitiesArray: amenitiesArray, // Array de nombres para filtrado múltiple
-            keyword: keyword, // Búsqueda por título y descripción en Strapi
-            locale: lang, // Usar el locale dinámico
-            page: currentPage, 
-            pageSize: 9  
+            location: Array.isArray(location) ? location[0] : location,
+            locations: locationSlugs,
+            amenities: Array.isArray(searchAmenities) ? searchAmenities[0] : searchAmenities,
+            amenitiesArray: amenitiesArray,
+            keyword: keyword,
+            locale: lang,
+            page: hasPostStrapiFilters ? 1 : currentPage,
+            pageSize: hasPostStrapiFilters ? 1000 : PAGE_SIZE
         });
         properties = data;
         pagination = meta.pagination;
         
-        // Filtrar propiedades privadas si el usuario no está autenticado
         if (!isAuthenticated && properties) {
-            properties = properties.filter((property: any) => {
-                // Solo mostrar propiedades que NO sean privadas o que is_private sea undefined/null/false
-                return !property.is_private;
-            });
+            properties = properties.filter((property: any) => !property.is_private);
         }
         
-        // Filtrar por precio usando los precios de las unidades (server-side)
         if (properties && (max_price || min_price)) {
             properties = properties.filter((property: any) => {
                 const unitPrices: number[] = property.unitPrices && property.unitPrices.length > 0
@@ -161,19 +160,16 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
 
                 if (max_price) {
                     const maxNum = Number(max_price);
-                    // Ocultar si ALGUNA unidad supera el máximo
                     if (!unitPrices.every((p: number) => p <= maxNum)) return false;
                 }
                 if (min_price) {
                     const minNum = Number(min_price);
-                    // Ocultar si NINGUNA unidad alcanza el mínimo
                     if (!unitPrices.some((p: number) => p >= minNum)) return false;
                 }
                 return true;
             });
         }
 
-        // Filtrar propiedades localmente por city/state si es necesario
         if (properties && (city || state)) {
             properties = properties.filter((property: any) => {
                 if (city && !property.address?.toLowerCase().includes(city.toLowerCase())) {
@@ -185,8 +181,19 @@ export default async function PropertiesPage({ params, searchParams }: Propertie
                 return true;
             });
         }
+
+        if (hasPostStrapiFilters) {
+            const totalFiltered = properties.length;
+            const start = (currentPage - 1) * PAGE_SIZE;
+            properties = properties.slice(start, start + PAGE_SIZE);
+            pagination = {
+                page: currentPage,
+                pageSize: PAGE_SIZE,
+                pageCount: Math.ceil(totalFiltered / PAGE_SIZE) || 1,
+                total: totalFiltered
+            };
+        }
     } catch (error) {
-        // Error silencioso en producción - se usa array vacío
         properties = [];
     }
     
