@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Script from "next/script";
 import WhatsAppButton from "@/components/elements/WhatsAppButton";
 import { WHATSAPP_CONFIG } from "@/config/whatsapp";
 import StoreProvider from "@/features/StoreProvider";
@@ -127,14 +128,66 @@ interface Props {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Google Consent Mode v2 — Default (must run before GTM) */}
+        <Script id="google-consent-mode" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+
+            if (!window.gtag) {
+              window.gtag = gtag;
+            }
+
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'analytics_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'wait_for_update': 500
+            });
+
+            if (typeof sessionStorage !== 'undefined') {
+              var analytics = sessionStorage.getItem('cookie-analytics-enabled') === 'true';
+              var marketing = sessionStorage.getItem('cookie-marketing-enabled') === 'true';
+              gtag('consent', 'update', {
+                'ad_storage': marketing ? 'granted' : 'denied',
+                'analytics_storage': analytics ? 'granted' : 'denied',
+                'ad_user_data': marketing ? 'granted' : 'denied',
+                'ad_personalization': marketing ? 'granted' : 'denied'
+              });
+            }
+          `}
+        </Script>
+
+        {/* Google Tag Manager — Head Script */}
+        <Script id="google-tag-manager" strategy="beforeInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KDZZH4B2');
+          `}
+        </Script>
+      </head>
       <body
         className={`${workSans.variable} ${libreBaskerville.variable} ${workSans.className} homepage1-body body1`}
       >
+        {/* Google Tag Manager (noscript) — immediately after <body> */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KDZZH4B2"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
         <StoreProvider>
           <AuthProvider>{children}</AuthProvider>
         </StoreProvider>
         <WhatsAppButton phoneNumber={WHATSAPP_CONFIG.phoneNumber} />
-        {/* Tracking Scripts - Solo se cargan si hay consentimiento */}
         <TrackingScripts />
         <CookieConsent />
         <HtmlLangUpdate />
